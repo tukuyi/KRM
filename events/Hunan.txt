@@ -19,7 +19,36 @@ add_namespace = hnnzhili
 add_namespace = hnnwar
 add_namespace = hnnelection
 add_namespace = hnntanyankai
+add_namespace = hnndebug
 
+
+country_event = {#创建CSP
+	id = hnndebug.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hnndebug.1" }
+	title = hnndebug.1.t
+	desc = hnndebug.1.d
+
+	is_triggered_only = yes
+	immediate ={
+		set_politics = {
+			ruling_party = syndicalist
+		}
+		HNN_Daibiaodahui ={
+			set_variable = { china_alignment = token:CHNsyndicalist }
+			add_country_leader_trait = CHN_CHNsyndicalist_aligned
+		}
+	}
+	option = {#同意
+		name = hnndebug.1.a
+		set_potential_national_government = yes
+				china_enable_all_demand_submission_decisions = yes
+				custom_effect_tooltip = tooltip_white_line
+				china_enable_alliances_decisions = yes
+				custom_effect_tooltip = tooltip_white_line
+				custom_effect_tooltip = china_can_core_through_compliance
+	}
+	
+}
 
 country_event = {#湖南的谈判申请
 	id = hunbao.40
@@ -213,6 +242,7 @@ country_event = {#革命成功
 	is_triggered_only = yes
 	fire_only_once = yes
 
+
 	option = {#革命成功
 		name = hungong.7.a
 		ai_chance = {
@@ -225,13 +255,11 @@ country_event = {#革命成功
 				}
 			}
 		}
+		CSP_set_leader_effect = yes
 		set_country_flag = HNN_gong_tuan_victory_flag
 		load_focus_tree = { tree = Hunan_Red }
-		create_country_leader = {
-			name = "湖南代表大会"
-			desc = "POLITICS_KONG_LINGYI_DESC"
-			picture = "gfx/leaders/HNN/Portrait_RUS_Workers.png"
-			expire = "1965.1.1"
+		promote_character = {
+			character = HNN_Daibiaodahui
 			ideology = syndicalist_subtype
 		}
 		remove_all_ministers = yes
@@ -245,6 +273,7 @@ country_event = {#革命成功
 			ruling_party = syndicalist
 		}
 		leave_faction = yes
+		china_break_puppet_effect = yes
 		show_unit_leaders_tooltip = HNN_peng_dehuai
 		show_unit_leaders_tooltip = HNN_he_long
 		show_unit_leaders_tooltip = HNN_Teng_Daiyuan

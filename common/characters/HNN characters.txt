@@ -2512,4 +2512,24 @@ characters = {
 			logistics_skill = 1
 		}
 	}	
+
+
+#####################
+#####CSP#############
+#####################
+	HNN_Daibiaodahui = {
+		name = HNN_Daibiaodahui
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_HNN_Daibiaodahui
+				large = "gfx/leaders/HNN/Portrait_RUS_Workers.png"
+			}
+		}
+		country_leader = {
+			desc = HNN_Daibiaodahui_desc
+			ideology = syndicalist_subtype
+			traits = { CHN_CHNsyndicalist_aligned }
+		}
+	}	
+
 }

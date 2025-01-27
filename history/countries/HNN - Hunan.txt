@@ -79,6 +79,7 @@ recruit_character = HNN_ren_bishi #not real leader
 recruit_character = HNN_huang_yanpei #not real leader
 recruit_character = HNN_zhou_shizhao #not real leader
 recruit_character = HNN_assorted_leaders #not real leader
+recruit_character = HNN_Daibiaodahui
 
 ### Generals ###
 recruit_character = HNN_tang_shengming #Recruited in Mil Tree
@@ -161,47 +162,17 @@ recruit_character = HNN_Wan_Xi_Xian
 
 ## Federalists
 HNN_He_Su_Heng = {
-	set_variable = { china_alignment = token:Syndicalists }
+	set_variable = { china_alignment = token:CHNsyndicalist }
 	retire = yes
 }
 HNN_Dong_Bi_Wu = {
-	set_variable = { china_alignment = token:Syndicalists }
+	set_variable = { china_alignment = token:CHNsyndicalist }
 	retire = yes
 }
 HNN_Teng_Daiyuan = {
 	retire = yes
 }
 GXC_Wan_Dan_Ping = {
-	retire = yes
-}
-HNN_Chen_Yi = {
-	retire = yes
-}
-HNN_Xiao_Ke = {
-	retire = yes
-}
-HNN_mao_ze_dong = {
-	retire = yes
-}
-HNN_wang_zhen = {
-	retire = yes
-}
-HNN_Tan_Zhen_Lin = {
-	retire = yes
-}
-HNN_Yuan_Wen_Cai = {
-	retire = yes
-}
-HNN_Long_Chao_Qing = {
-	retire = yes
-}
-HNN_Wan_Xi_Xian = {
-	retire = yes
-}
-HNN_Tan_zheng = {
-	retire = yes
-}
-HNN_Chen_Yun = {
 	retire = yes
 }
 HNN_zhao_hengti = {
@@ -386,6 +357,78 @@ HNN_zhao_yusong = {
 HNN_zuo_shunsheng = {
 	set_character_flag = HNN_zhili_loyalist_flag
 }
+
+
+
+
+#CSP#
+HNN_Daibiaodahui = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_Chen_Yi = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_Xiao_Ke = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_mao_ze_dong = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_wang_zhen = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_Tan_Zhen_Lin = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_Yuan_Wen_Cai = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_Long_Chao_Qing = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_Wan_Xi_Xian = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_Tan_zheng = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_Chen_Yun = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+
+
 
 ## Apolitical
 HNN_assorted_leaders = { set_variable = { china_alignment = token:chinese_southern_republican } }
