@@ -6278,29 +6278,28 @@ country_event = {#中华人民共和国
 			}
 		}
 	}
-}
 
-country_event = {#中华人民共和国第一次人民代表大会开幕式
-	id = hungong.38
-	immediate = { log = "[GetDateText]: [Root.GetName]: event hungong.38" }
-	picture = GFX_report_event_HNN_zheng_xie
-	title = hungong.38.t
-	desc = hungong.38.d
+	country_event = {#中华人民共和国第一次人民代表大会开幕式
+		id = hungong.38
+		immediate = { log = "[GetDateText]: [Root.GetName]: event hungong.38" }
+		picture = GFX_report_event_HNN_zheng_xie
+		title = hungong.38.t
+		desc = hungong.38.d
 
-	is_triggered_only = yes
+		is_triggered_only = yes
 
-	fire_only_once = yes
+		fire_only_once = yes
 
-	option = {
-		name = hungong.38.a
-		add_stability = 0.02
-		HNN_da_hui_zhi_ci_du = yes
-		country_event = { 
-			id = hungong.48
-			days = 2
+		option = {
+			name = hungong.38.a
+			add_stability = 0.02
+			HNN_da_hui_zhi_ci_du = yes
+			country_event = { 
+				id = hungong.48
+				days = 2
+			}
 		}
 	}
-}
 
 #中华人民共和国选举
 	country_event = {#第一次政治协商会议：第一次投票日
@@ -6328,8 +6327,6 @@ country_event = {#中华人民共和国第一次人民代表大会开幕式
 				days = 2
 			}
 		}
-	}
-
 		option = {#联邦共和制
 			name = hungong.48.b
 			set_country_flag = HNN_di_fang_victory
