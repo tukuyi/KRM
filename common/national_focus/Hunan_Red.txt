@@ -10059,6 +10059,10 @@ focus_tree = {
 		}
 
 		available = {
+			OR = {
+				has_country_flag = HNN_PROC_victory
+				has_country_flag = HNN_ROC_victory
+			}
 			owns_state = 608
 		}
 
@@ -10068,30 +10072,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HNN_cheng_jie_bu_zong_de_sheng_fen"
-			create_wargoal = {
-				type = annex_everything
-				target = var:604.owner
-		 	}
-			create_wargoal = {
-				type = annex_everything
-				target = var:617.owner
-		 	}
-			create_wargoal = {
-				type = annex_everything
-				target = var:1083.owner
-		 	}
-			create_wargoal = {
-				type = annex_everything
-				target = var:619.owner
-		 	}
-			create_wargoal = {
-				type = annex_everything
-				target = var:322.owner
-		 	}
-			create_wargoal = {
-				type = annex_everything
-				target = var:330.owner
-		 	}
+			china_enable_outskirts_decisions = yes
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -10116,6 +10097,10 @@ focus_tree = {
 		}
 
 		available = {
+			OR = {
+				has_country_flag = HNN_PROC_victory
+				has_country_flag = HNN_ROC_victory
+			}
 			owns_state = 608
 		}
 
@@ -10125,16 +10110,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HNN_chu_li_ri_kou_kui_lei"
-			country_event = {
-				id = hnn.114
-				days = 5
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = var:716.owner
-		 	}
+			china_enable_concession_decisions = yes
 		}
-
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
@@ -10143,8 +10120,8 @@ focus_tree = {
 		icon = GFX_goal_LEP_kmt_encirclement
 		relative_position_id = HNN_chong_fan_zhong_guo_zheng_zhi_wu_tai
 		cost = 1
-		x = 0
-		y = 4
+		x = -1
+		y = 3
 
 		ai_will_do = {
 			base = 10
@@ -10157,7 +10134,6 @@ focus_tree = {
 		}
 
 		available = {
-			owns_state = 608
 			if = {
 				limit = { 
 					has_country_flag = HNN_gong_tuan_victory_flag
@@ -10193,6 +10169,59 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HNN_song_hua_jiang_shang
+		icon = GFX_goal_generic_attack_fengtian
+		relative_position_id = HNN_chong_fan_zhong_guo_zheng_zhi_wu_tai
+		cost = 1
+		x = 1
+		y = 3
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 20
+				has_army_manpower = {
+					size > 60000
+				}
+			}
+		}
+
+		available = {
+			if = {
+				limit = { 
+					has_country_flag = HNN_gong_tuan_victory_flag
+				}
+				FNG = {
+					exists = yes 
+				}
+			}
+		}
+		bypass = {
+			if = {
+				limit = { 
+					has_country_flag = HNN_gong_tuan_victory_flag
+				}
+				FNG = {
+					exists = no 
+				}
+			}
+		}
+		prerequisite = {
+			focus = HNN_bei_fa
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus HNN_dui_guo_ming_dang_de_tai_du"
+			create_wargoal = {
+				type = annex_everything
+				target = var:716.owner
+		 	}
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
 		id = HNN_mai_ke_ma_hong_tan_pam
 		icon = GFX_goal_JAP_target_india
 		relative_position_id = HNN_chong_fan_zhong_guo_zheng_zhi_wu_tai
@@ -10221,6 +10250,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = HNN_chu_li_ri_kou_kui_lei
+		}
+		prerequisite = {
+			focus = HNN_song_hua_jiang_shang
 		}
 
 		completion_reward = {
@@ -10263,6 +10295,9 @@ focus_tree = {
 		prerequisite = {
 			focus = HNN_chu_li_ri_kou_kui_lei
 		}
+		prerequisite = {
+			focus = HNN_song_hua_jiang_shang
+		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HNN_fei_chu_dui_e_bu_ping_deng"
@@ -10303,6 +10338,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = HNN_chu_li_ri_kou_kui_lei
+		}
+		prerequisite = {
+			focus = HNN_song_hua_jiang_shang
 		}
 
 		completion_reward = {

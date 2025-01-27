@@ -50,6 +50,83 @@ country_event = {#创建CSP
 	
 }
 
+country_event = {#enlai
+	id = hnndebug.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hnndebug.1" }
+	title = hnndebug.1.t
+	desc = hnndebug.1.d
+
+	is_triggered_only = yes
+	option = {#同意
+		name = hnndebug.1.a
+		CHI = {
+			CHI_zhou_enlai = {
+				HNN_recruit_character_effect = yes
+			}
+			CHI_lin_biao = {
+				HNN_recruit_character_effect = yes
+			}
+		}
+		GXC = {
+			GXC_ye_jianying = {
+				HNN_recruit_character_effect = yes
+			}
+		}
+		recruit_character = CHI_zhou_enlai
+		recruit_character = GXC_ye_jianying
+		recruit_character = CHI_lin_biao
+		add_country_leader_role = {
+			character = CHI_zhou_enlai
+			promote_leader = yes
+			country_leader = {
+				ideology = radical_socialist_subtype
+				expire = "1965.1.1.1"
+				traits = { CHN_CHNsyndicalist_aligned }
+			}
+		}
+		CHI_zhou_enlai = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
+			set_portraits = {
+				civilian = {
+					large = "gfx/leaders/HNN/Portrait_CHI_Zhou_Enlai_CIV.png"
+          			small = GFX_portrait_CHI_zhou_enlai_army_small
+				}
+			}
+		}
+	}
+	
+}
+
+country_event = {#enlai
+	id = hnndebug.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event hnndebug.1" }
+	title = hnndebug.1.t
+	desc = hnndebug.1.d
+
+	is_triggered_only = yes
+	option = {#同意
+		name = hnndebug.1.a
+		
+		promote_character = {
+			character = CHI_zhou_enlai
+			ideology = radical_socialist_subtype		
+		}
+		
+		CHI_zhou_enlai = {
+			swap_country_leader_traits = {
+				remove = CHN_lkmt_aligned
+				add = CHN_CHNsyndicalist_aligned
+			}
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
+		}
+	}
+	
+}
+
 country_event = {#湖南的谈判申请
 	id = hunbao.40
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hunbao.40" }
@@ -1886,7 +1963,7 @@ country_event = {#放权
 		}
 		CHI_zhou_enlai = {
 			set_portraits = {
-				civil = {
+				civilian = {
 					large = "gfx/leaders/HNN/Portrait_CHI_Zhou_Enlai_CIV.png"
           			small = GFX_portrait_CHI_zhou_enlai_army_small
 				}
@@ -4732,9 +4809,14 @@ country_event = {#叶剑英的胜利
 
 	option = { #yes
 		name = hunarmy.6.a
-		promote_character = {
+		add_country_leader_role = {
 			character = GXC_ye_jianying
-			ideology = paternal_autocrat_subtype
+			promote_leader = yes
+			country_leader = {
+				ideology = paternal_autocrat_subtype
+				expire = "1965.1.1.1"
+				traits = { CHN_CHNsyndicalist_aligned }
+			}
 		}
 		GXC_ye_jianying = {
 			swap_country_leader_traits = {
@@ -6146,15 +6228,16 @@ country_event = {#中华人民共和国
 					large = "gfx/leaders/HNN/Portrait_HNN_Deng_Xiao_Ping_civ.png"
 				}
 			}
-			promote_character = {
+			add_country_leader_role = {
 				character = CHI_zhou_enlai
-				ideology = radical_socialist_subtype
+				promote_leader = yes
+				country_leader = {
+					ideology = radical_socialist_subtype
+					expire = "1965.1.1.1"
+					traits = { CHN_CHNsyndicalist_aligned }
+				}
 			}
 			CHI_zhou_enlai = {
-				swap_country_leader_traits = {
-					remove = CHN_lkmt_aligned
-					add = CHN_CHNsyndicalist_aligned
-				}
 				set_variable = {
 					china_alignment = token:CHNsyndicalist
 				}
@@ -6278,29 +6361,28 @@ country_event = {#中华人民共和国
 			}
 		}
 	}
-}
 
-country_event = {#中华人民共和国第一次人民代表大会开幕式
-	id = hungong.38
-	immediate = { log = "[GetDateText]: [Root.GetName]: event hungong.38" }
-	picture = GFX_report_event_HNN_zheng_xie
-	title = hungong.38.t
-	desc = hungong.38.d
+	country_event = {#中华人民共和国第一次人民代表大会开幕式
+		id = hungong.38
+		immediate = { log = "[GetDateText]: [Root.GetName]: event hungong.38" }
+		picture = GFX_report_event_HNN_zheng_xie
+		title = hungong.38.t
+		desc = hungong.38.d
 
-	is_triggered_only = yes
+		is_triggered_only = yes
 
-	fire_only_once = yes
+		fire_only_once = yes
 
-	option = {
-		name = hungong.38.a
-		add_stability = 0.02
-		HNN_da_hui_zhi_ci_du = yes
-		country_event = { 
-			id = hungong.48
-			days = 2
+		option = {
+			name = hungong.38.a
+			add_stability = 0.02
+			HNN_da_hui_zhi_ci_du = yes
+			country_event = { 
+				id = hungong.48
+				days = 2
+			}
 		}
 	}
-}
 
 #中华人民共和国选举
 	country_event = {#第一次政治协商会议：第一次投票日
@@ -6328,7 +6410,6 @@ country_event = {#中华人民共和国第一次人民代表大会开幕式
 				days = 2
 			}
 		}
-
 		option = {#联邦共和制
 			name = hungong.48.b
 			set_country_flag = HNN_di_fang_victory
@@ -7685,6 +7766,9 @@ country_event = {###国民党左派革命失败
 			}
 			CHI = {
 				every_character = {
+					limit = {
+						always = yes
+					}
 					HNN_recruit_character_effect = yes
 				}
 			}
@@ -7703,14 +7787,17 @@ country_event = {###国民党左派革命失败
 					HNN_recruit_character_effect = yes
 				}
 			}
-			GXC_ye_jianying = {
-				HNN_recruit_character_effect = yes
+			GXC = {
+				GXC_ye_jianying = {
+					HNN_recruit_character_effect = yes
+				}
 			}
 			recruit_character = SHX_bo_yibo
 			recruit_character = SHX_deng_xiaoping
 			recruit_character = HNN_gao_gang
 			recruit_character = GXC_ye_jianying
 			recruit_character = CHI_lin_biao
+			recruit_character = CHI_zhou_enlai
 			set_party_name = {
 				ideology = radical_socialist
 				long_name =  HNN_radical_socialist_party_dbw_long
