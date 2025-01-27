@@ -81,6 +81,17 @@ recruit_character = HNN_zhou_shizhao #not real leader
 recruit_character = HNN_assorted_leaders #not real leader
 recruit_character = HNN_Daibiaodahui
 
+#CSPBLABLABLA
+recruit_character = HNN_gao_gang
+recruit_character = HNN_hu_yaobang
+recruit_character = HNN_xi_zhongxun
+recruit_character = HNN_liu_shaoqi
+recruit_character = HNN_lin_boqu
+recruit_character = HNN_qian_xuesen
+recruit_character = HNN_guo_moruo
+recruit_character = HNN_li_lisan
+recruit_character = HNN_ren_bishi
+
 ### Generals ###
 recruit_character = HNN_tang_shengming #Recruited in Mil Tree
 recruit_character = HNN_peng_dehuai #starts in exile
@@ -432,6 +443,16 @@ HNN_Tan_zheng = {
 }
 HNN_Chen_Yun = {
 	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_li_lisan = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_ren_bishi = {
 	set_variable = {
 		china_alignment = token:CHNsyndicalist
 	}

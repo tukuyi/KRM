@@ -2662,6 +2662,36 @@ characters = {
 			traits = { CHN_CHNsyndicalist_aligned }
 		}
 	}	
+	#李立三
+	HNN_li_lisan = {
+		name = HNN_li_lisan
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_HNN_Daibiaodahui
+				large = "gfx/leaders/HNN/Portrait_HNN_Li_li_san.png"
+			}
+		}
+		country_leader = {
+			desc =  POLITICS_HNN_LI_LISAN_DESC
+			ideology = syndicalist_subtype
+			traits = { CHN_CHNsyndicalist_aligned }
+		}
+	}	
+	#任弼时
+	HNN_ren_bishi = {
+		name = HNN_ren_bishi
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_HNN_Daibiaodahui
+				large = "gfx/leaders/HNN/Portrait_HNN_Ren_Bi_Shi.png"
+			}
+		}
+		country_leader = {
+			desc =  POLITICS_HNN_Ren_Bi_Shi_DESC
+			ideology = totalist_subtype
+			traits = { CHN_CHNsyndicalist_aligned }
+		}
+	}	
 	HNN_Daibiaodahui = {
 		name = HNN_Daibiaodahui
 		portraits = {

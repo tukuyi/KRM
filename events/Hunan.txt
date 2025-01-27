@@ -255,7 +255,6 @@ country_event = {#革命成功
 				}
 			}
 		}
-		CSP_set_leader_effect = yes
 		set_country_flag = HNN_gong_tuan_victory_flag
 		load_focus_tree = { tree = Hunan_Red }
 		promote_character = {
@@ -7685,27 +7684,32 @@ country_event = {###国民党左派革命失败
 			}
 			CHI = {
 				every_character = {
-					set_nationality = ROOT
+					HNN_recruit_character_effect = yes
 				}
 			}
 			SHX = {
 				SHX_deng_xiaoping = {
-					set_nationality = ROOT
+					HNN_recruit_character_effect = yes
 				}
 			}
 			SHX = {
 				SHX_bo_yibo = {
-					set_nationality = ROOT
+					HNN_recruit_character_effect = yes
 				}
 			}
 			SHX = {
 				SHX_deng_xiaoping = {
-					set_nationality = ROOT
+					HNN_recruit_character_effect = yes
 				}
+			}
+			GXC_ye_jianying = {
+				HNN_recruit_character_effect = yes
 			}
 			recruit_character = SHX_bo_yibo
 			recruit_character = SHX_deng_xiaoping
 			recruit_character = HNN_gao_gang
+			recruit_character = GXC_ye_jianying
+			recruit_character = CHI_lin_biao
 			set_party_name = {
 				ideology = radical_socialist
 				long_name =  HNN_radical_socialist_party_dbw_long

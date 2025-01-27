@@ -3112,11 +3112,8 @@ focus_tree = {
 				add_ideas = HNN_su_wei_ai_gong_tuan
 				set_cosmetic_tag = HNN_PROC_G
 				hidden_effect = {
-					create_country_leader = {
-						name = "高岗"
-						desc = "POLITICS_HNN_GAO_GANG_DESC"
-						picture = "gfx/leaders/HNN/Portrait_HNN_Gao_gang.png"
-						expire = "1965.1.1"
+					promote_character = {
+						character = HNN_gao_gang
 						ideology = totalist_subtype
 					}
 				}
@@ -7725,23 +7722,26 @@ focus_tree = {
 					limit = {
 						has_completed_focus = HNN_san_ming_zhu_lu
 					}
-					create_country_leader = {
-						name = "宋庆龄"
-						desc = "POLITICS_CHI_SONG_QINGLING_DESC"
-						picture = "gfx/leaders/CHI/Portrait_CHI_Song_Qingling.png"
-						expire = "1.1.1"
+					promote_character = {
+						character = CHI_song_qingling
 						ideology = radical_socialist_subtype
+					}
+					CHI_song_qingling = {
+						swap_country_leader_traits = {
+							remove = CHN_lkmt_aligned
+							add = CHN_CHNsyndicalist_aligned
+						}
+						set_variable = {
+							china_alignment = token:CHNsyndicalist
+						}
 					}
 				}
 				else_if = {
 					limit = { 
 						has_completed_focus = HNN_gong_tuan_zhi_dao_ii_hua
 					}
-					create_country_leader = {
-						name = "李立三 "
-						desc = "POLITICS_HNN_LI_LISAN_DESC"
-						picture = "gfx/leaders/HNN/Portrait_HNN_Li_li_san.png"
-						expire = "1965.1.1"
+					promote_character = {
+						character = HNN_li_lisan
 						ideology = syndicalist_subtype
 					}
 					set_cosmetic_tag = HNN_PROC_LL
@@ -7750,11 +7750,8 @@ focus_tree = {
 					limit = { 
 						has_completed_focus = HNN_shi_chang_gong_tuan
 					}
-					create_country_leader = {
-						name = "董必武"
-						desc = "POLITICS_HNN_DONG_BIWU_DESC"
-						picture = "gfx/leaders/HNN/Portrait_HNN_Dong_Bi_Wu.png"
-						expire = "1965.1.1"
+					promote_character = {
+						character = HNN_Dong_Bi_Wu
 						ideology = syndicalist_subtype
 					}
 				}
@@ -7762,11 +7759,8 @@ focus_tree = {
 					limit = { 
 						has_completed_focus = HNN_bu_ha_Lin
 					}
-					create_country_leader = {
-						name = "任弼时"
-						desc = "POLITICS_HNN_Ren_Bi_Shi_DESC"
-						picture = "gfx/leaders/HNN/Portrait_HNN_Ren_Bi_Shi.png"
-						expire = "1965.1.1"
+					promote_character = {
+						character = HNN_ren_bishi
 						ideology = totalist_subtype
 					}
 				}
@@ -9964,182 +9958,25 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus HNN_chong_fan_zhong_guo_zheng_zhi_wu_tai"
 			add_political_power = 50
 			set_potential_national_government = yes
+			china_enable_all_demand_submission_decisions = yes
+			custom_effect_tooltip = tooltip_white_line
+			china_enable_alliances_decisions = yes
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = china_can_core_through_compliance
+
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 	}
 
-	focus = {
-		id = HNN_xi_zheng
-		icon = GFX_goal_CHI_plan_western
-		relative_position_id = HNN_chong_fan_zhong_guo_zheng_zhi_wu_tai
-		cost = 1
-		x = -1
-		y = 1
 
-		ai_will_do = {
-			base = 10
-			modifier = {
-				factor = 2
-				has_army_manpower = {
-					size > 60000
-				}
-			}
-			modifier = {
-				factor = 0
-				has_completed_focus = HNN_nan_zheng
-				GXC = {
-					NOT = {
-						is_puppet_of = ROOT
-						exists = no
-					}
-				}
-			}
-		}
-
-		prerequisite = {
-			focus = HNN_chong_fan_zhong_guo_zheng_zhi_wu_tai
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HNN_xi_zheng"
-			create_wargoal = {
-				type = annex_everything
-				target = var:650.owner
-		 	}
-			if = {
-				limit = { 
-					NOT = {
-						YUN = {
-							is_puppet_of = HNN
-						}
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = var:325.owner
-				 }
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-
-	focus = {
-		id = HNN_nan_zheng
-		icon = GFX_goal_generic_controlled_board
-		relative_position_id = HNN_chong_fan_zhong_guo_zheng_zhi_wu_tai
-		cost = 1
-		x = 1
-		y = 1
-
-		ai_will_do = {
-			base = 10
-			modifier = {
-				factor = 2
-				has_army_manpower = {
-					size > 60000
-				}
-			}
-			modifier = {
-				factor = 0
-				has_completed_focus = HNN_xi_zheng
-				var:650.owner = {
-					NOT = {
-						is_puppet_of = ROOT
-						exists = no
-					}
-				}
-			}
-		}
-		bypass = {
-			GXC = {
-				is_puppet_of = HNN
-			}
-		}
-
-		prerequisite = {
-			focus = HNN_chong_fan_zhong_guo_zheng_zhi_wu_tai
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HNN_nan_zheng"
-			create_wargoal = {
-				type = annex_everything
-				target = var:592.owner
-		 	}
-			 create_wargoal = {
-				type = annex_everything
-				target = var:594.owner
-		 	}
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-
-	focus = {
-		id = HNN_dong_zheng
-		icon = GFX_focus_ETH_freedom_at_gunpoint
-		relative_position_id = HNN_chong_fan_zhong_guo_zheng_zhi_wu_tai
-		cost = 1
-		x = 0
-		y = 2
-
-		ai_will_do = {
-			base = 10
-			modifier = {
-				factor = 20
-				has_army_manpower = {
-					size > 60000
-				}
-			}
-		}
-
-		available = {
-			if = {
-				limit = { 
-					has_country_flag = HNN_gong_tuan_victory_flag
-				}
-				CHI = {
-					exists = no 
-				}
-			}
-		}
-
-		bypass = {
-			if = {
-				limit = { 
-					has_country_flag = HNN_gong_tuan_victory_flag
-				}
-				CHI = {
-					exists = yes
-				}
-			}
-		}
-
-		prerequisite = {
-			focus = HNN_nan_zheng
-			focus = HNN_xi_zheng
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus HNN_dong_zheng"
-			create_wargoal = {
-				type = annex_everything
-				target = var:613.owner
-		 	}
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-	
 	focus = {
 		id = HNN_bei_fa
 		icon = GFX_goal_generic_attack_qing
 		relative_position_id = HNN_chong_fan_zhong_guo_zheng_zhi_wu_tai
 		cost = 1
 		x = 0
-		y = 3
+		y = 2
 
 		ai_will_do = {
 			base = 10
@@ -10170,7 +10007,7 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = HNN_dong_zheng
+			focus = HNN_chong_fan_zhong_guo_zheng_zhi_wu_tai
 		}
 
 		completion_reward = {
