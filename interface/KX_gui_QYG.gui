@@ -1,0 +1,18 @@
+guiTypes = {
+	containerWindowType = {
+		name = "fen_quan_ji_quan_gui_window"
+		position = {x=2 y=0}
+		size = { width=100% height= 150 }
+
+		instantTextboxType = {
+			name = "fen_quan_ji_quan_gui_textbox_morale"
+			position = { x = 1 y = 125 }
+			font = "hoi_24header"
+			text = "fen_quan_ji_quan_gui_text_morale"
+			format = centre
+			maxWidth = 490
+			maxHeight = 340
+			fixedsize = yes
+		}
+	}
+}
