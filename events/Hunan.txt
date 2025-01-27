@@ -743,6 +743,15 @@ country_event = {#并入国民党
 			long_name =  HNN_syndicalist_party_helong
 			name =  HNN_syndicalist_party_he
 		}
+		HNN_He_Su_Heng = {
+			set_variable = {
+				china_alignment = token:left_kuomintang
+			}
+			swap_country_leader_traits = {
+				remove = CHN_CHNsyndicalist_aligned
+				add = CHN_lkmt_aligned
+			}
+		}
 	}
 }
 
@@ -1804,12 +1813,14 @@ country_event = {#放权
 		trigger = {
 			has_country_flag = qian_victory
 		}
-		create_country_leader = {
-			name = "钱学森"
-			desc = "Qian_Xue_DESC"
-			picture = "gfx/leaders/HNN/Portrait_HNN_Qian_Xuesen.png"
-			expire = "1.1.1"
+		promote_character = {
+			character = HNN_qian_xuesen
 			ideology = totalist_subtype
+		}
+		HNN_qian_xuesen = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
 		}
 		HNN_fcations_change = yes 
 		add_ideas = {
@@ -1828,12 +1839,14 @@ country_event = {#放权
 		trigger = {
 			has_country_flag = guo_victory
 		}
-		create_country_leader = {
-			name = "郭沫若"
-			desc = "Guo_Mo_DESC"
-			picture = "gfx/leaders/HNN/Portrait_HNN_Guo_Mo_Ruo.png"
-			expire = "1.1.1"
+		promote_character = {
+			character = HNN_guo_moruo
 			ideology = totalist_subtype
+		}
+		HNN_guo_moruo = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
 		}
 		set_party_name = {
 			ideology = totalist
@@ -1851,15 +1864,9 @@ country_event = {#放权
 		trigger = {
 			has_country_flag = chen_victory
 		}
-		create_country_leader = {
-			name = "陈毅"
-			desc = "POLITICS_HNN_Chen_Yi_DESC"
-			picture = "gfx/leaders/HNN/Portrait_HNN_Chen_Yi.png"
-			expire = "1965.1.1"
+		promote_character = {
+			character = HNN_Chen_Yi
 			ideology = totalist_subtype
-			traits = {  
-
-			}
 		}
 		set_party_name = {
 			ideology = totalist
@@ -1874,13 +1881,25 @@ country_event = {#放权
 
 	option = {#周恩来
 		name = hungong.78.e
-		create_country_leader = {
-			name = "周恩来"
-			desc = "POLITICS_HNN_ZHOU_ENLAI_DESC"
-			picture = "gfx/leaders/HNN/Portrait_CHI_Zhou_Enlai_CIV.png"
-			expire = "1965.1.1"
+		promote_character = {
+			character = CHI_zhou_enlai
 			ideology = totalist_subtype
-			traits = { LEC_ming_yu_ling_xiu }
+		}
+		CHI_zhou_enlai = {
+			set_portraits = {
+				civil = {
+					large = "gfx/leaders/HNN/Portrait_CHI_Zhou_Enlai_CIV.png"
+          			small = GFX_portrait_CHI_zhou_enlai_army_small
+				}
+			}
+			swap_ruler_traits = {
+				remove = CHN_lkmt_aligned
+				add = CHN_CHNsyndicalist_aligned
+			}
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
+			add_country_leader_trait = CHN_syndicalist_aligned
 		}
 		set_party_name = {
 			ideology = totalist
@@ -1927,12 +1946,17 @@ country_event = {#肃反之夜
 
 	option = {#戴笠
 		name = hungong.79.b
-		create_country_leader = {
-			name = "戴笠"
-			desc = "POLITICS_DAI_CHUNFENG_DESC"
-			picture = "gfx/leaders/CHI/Portrait_CHI_Dai_Chunfeng.png"
-			expire = "1.1.1"
+		promote_character = {
+			character = CHI_dai_chunfeng
 			ideology = totalist_subtype
+		}
+		CHI_dai_chunfeng = {
+			add_country_leader_trait = {
+				CHN_CHNsyndicalist_aligned
+			}
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
 		}
 		set_party_name = {
 			ideology = totalist
@@ -4498,11 +4522,8 @@ country_event = {#军队开始行动
 	option = {#
 		name = hunqingxi.18.a
 		complete_national_focus = HNN_hong_jun_de_san_tou_tong_meng 
-		create_country_leader = {
-			name = "贺龙"
-			desc = "POLITICS_HNN_HE_LONG_DESC"
-			picture = "gfx/leaders/HNN/Portrait_Hunan_He_Long.png"
-			expire = "1965.1.1"
+		promote_character = {
+			character = HNN_he_long
 			ideology = syndicalist_subtype
 		}
 		set_politics = {
@@ -4657,15 +4678,23 @@ country_event = {#林彪的胜利
 
 	fire_only_once = yes
 	is_triggered_only = yes
-
+	immediate = {
+		recruit_character = CHI_lin_biao
+	}
 	option = { #yes
 		name = hunarmy.5.a
-		create_country_leader = {
-			name = "林彪"
-			desc = "POLITICS_HNN_LIN_BIAO_DESC"
-			picture = "gfx/leaders/HNN/Portrait_HNN_lin_biao.png"
-			expire = "1965.1.1"
+		promote_character = {
+			character = CHI_lin_biao
 			ideology = totalist_subtype
+		}
+		CHI_lin_biao = {
+			swap_country_leader_traits = {
+				remove = CHN_lkmt_aligned
+				add = CHN_CHNsyndicalist_aligned
+			}
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
 		}
 		set_politics = {
 			ruling_party = totalist
@@ -4697,15 +4726,24 @@ country_event = {#叶剑英的胜利
 
 	fire_only_once = yes
 	is_triggered_only = yes
+	immediate = {
+		recruit_character = GXC_ye_jianying
+	}
 
 	option = { #yes
 		name = hunarmy.6.a
-		create_country_leader = {
-			name = "叶剑英"
-			desc = "POLITICS_HNN_YE_JIAN_YING_DESC"
-			picture = "gfx/leaders/GXC/Portrait_GXC_Ye_Jianying_LKMT.png"
-			expire = "1965.1.1"
-			ideology = totalist_subtype
+		promote_character = {
+			character = GXC_ye_jianying
+			ideology = paternal_autocrat_subtype
+		}
+		GXC_ye_jianying = {
+			swap_country_leader_traits = {
+				remove = CHN_lkmt_aligned
+				add = CHN_CHNsyndicalist_aligned
+			}
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
 		}
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -4905,11 +4943,8 @@ country_event = {#贺龙的胜利
 
 	option = { #yes
 		name = hunarmy.15.a
-		create_country_leader = {
-			name = "贺龙"
-			desc = "POLITICS_HNN_HE_LONG_DESC"
-			picture = "gfx/leaders/HNN/Portrait_Hunan_He_Long.png"
-			expire = "1965.1.1"
+		promote_character = {
+			character = HNN_he_long
 			ideology = radical_socialist_subtype
 		}
 		set_politics = {
@@ -4943,11 +4978,8 @@ country_event = {#怎么办？
 
 	option = { #yes
 		name = hunarmy.16.a
-		create_country_leader = {
-			name = "贺龙 "
-			desc = "POLITICS_HNN_HE_LONG_DESC"
-			picture = "gfx/leaders/HNN/Portrait_Hunan_He_Long.png"
-			expire = "1965.1.1"
+		promote_character = {
+			character = HNN_he_long
 			ideology = syndicalist_subtype
 		}
 		set_politics = {
@@ -4965,11 +4997,8 @@ country_event = {#怎么办？
 
 	option = { #yes
 		name = hunarmy.16.b
-		create_country_leader = {
-			name = "贺龙 "
-			desc = "POLITICS_HNN_HE_LONG_DESC"
-			picture = "gfx/leaders/HNN/Portrait_Hunan_He_Long.png"
-			expire = "1965.1.1"
+		promote_character = {
+			character = HNN_he_long
 			ideology = syndicalist_subtype
 		}
 		set_politics = {
@@ -5749,18 +5778,22 @@ country_event = {#向首都进军
 
 	fire_only_once = yes
 	is_triggered_only = yes
+	immediate = {
+		recruit_character = HNN_mao_ze_dong
+	}
 
 	option = { #yes
 		name = hunmao.4.a
 		complete_national_focus = HNN_mao_zhe_dong_zhu_xi
-		create_country_leader = {
-			name = "毛泽东"
-			desc = "POLITICS_HNN_MAO_ZHE_DONG_DESC"
-			picture = "gfx/leaders/HNN/Portrait_HNN_Mao_zedong.png"
-			expire = "1965.1.1"
+		promote_character = {
+			character = HNN_mao_ze_dong
 			ideology = radical_socialist_subtype
-			traits = {
-				HNN_jiao_yuan
+		}
+		HNN_mao_ze_dong = {
+			add_country_leader_trait = HNN_jiao_yuan
+			add_country_leader_trait = CHN_CHNsyndicalist_aligned
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
 			}
 		}
 		set_politics = {
@@ -6083,6 +6116,9 @@ country_event = {#中华人民共和国
 			}
 		}
 		hidden_effect = {
+			CHI_dai_chunfeng = {
+				HNN_recruit_character_effect = yes
+			}
 			country_event = { 
 				id = hungong.37
 				days = 10
@@ -6091,33 +6127,62 @@ country_event = {#中华人民共和国
 				id = hungong.55
 				days = 180
 			}
-			create_country_leader = {
-				name = "邓小平"
-				desc = "POLITICS_HNN_DENG_XIAOPING_DESC"
-				picture = "gfx/leaders/HNN/Portrait_HNN_Deng_Xiao_Ping_civ.png"
-				expire = "1965.1.1"
+			promote_character = {
+				character = SHX_deng_xiaoping
 				ideology = totalist_subtype
 			}
-			create_country_leader = {
-				name = "周恩来"
-				desc = "POLITICS_HNN_ZHOU_ENLAI_DESC"
-				picture = "gfx/leaders/HNN/Portrait_CHI_Zhou_Enlai.png"
-				expire = "1965.1.1"
+			SHX_deng_xiaoping = {
+				swap_country_leader_traits = {
+					remove = CHN_lkmt_aligned
+					add = CHN_CHNsyndicalist_aligned
+				}
+				set_variable = {
+					china_alignment = token:CHNsyndicalist
+				}
+			}
+			set_portraits = {
+				character = SHX_deng_xiaoping
+				civilian = {
+					large = "gfx/leaders/HNN/Portrait_HNN_Deng_Xiao_Ping_civ.png"
+				}
+			}
+			promote_character = {
+				character = CHI_zhou_enlai
 				ideology = syndicalist_subtype
 			}
-			create_country_leader = {
-				name = "胡耀邦"
-				desc = "POLITICS_HNN_HU_YAOBANG_DESC"
-				picture = "gfx/leaders/HNN/Portrait_HNN_Hu_Yao_Bang.png"
-				expire = "1965.1.1"
+			CHI_zhou_enlai = {
+				swap_country_leader_traits = {
+					remove = CHN_lkmt_aligned
+					add = CHN_CHNsyndicalist_aligned
+				}
+				set_variable = {
+					china_alignment = token:CHNsyndicalist
+				}
+			}
+			set_portraits = {
+				character = CHI_zhou_enlai
+				civilian = {
+					large = "gfx/leaders/HNN/Portrait_CHI_Zhou_Enlai_CIV.png"
+				}
+			}
+			recruit_character = HNN_hu_yaobang
+			promote_character = {
+				character = HNN_hu_yaobang
 				ideology = radical_socialist_subtype
 			}
-			create_country_leader = {
-				name = "习仲勋"
-				desc = "POLITICS_HNN_Xi_Zhongxun_DESC"
-				picture = "gfx/leaders/HNN/Portrait_HNN_Xi_Zhong_Xun.png"
-				expire = "1965.1.1"
+			HNN_hu_yaobang = {
+				set_variable = {
+					china_alignment = token:CHNsyndicalist
+				}
+			}
+			recruit_character = HNN_xi_zhongxun
+				character = HNN_xi_zhongxun
 				ideology = social_democrat_subtype
+			}
+			HNN_xi_zhongxun = {
+				set_variable = {
+					china_alignment = token:CHNsyndicalist
+				}
 			}
 			create_country_leader = {
 				name = "彭冲"
@@ -6126,24 +6191,26 @@ country_event = {#中华人民共和国
 				expire = "1965.1.1"
 				ideology = social_liberal_subtype
 			}
-			create_country_leader = {
-				name = "王震"
-				desc = "POLITICS_HNN_WANG_ZHEN_DESC"
-				picture = "gfx/leaders/HNN/Portrait_HNN_wang_zhen.png"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
+			promote_character = {
+				character = HNN_wang_zhen
+				ideology = national_populist
+			}
+			HNN_wang_zhen = {
+				set_variable = {
+					china_alignment = token:CHNsyndicalist
+				}
 			}
 			create_country_leader = {
 				name = "阎锡山"
 				desc = "POLITICS_HNN_WANG_ZHEN_DESC"
-				picture = "gfx/leaders/HNN/Portrait_HNN_wang_zhen.png"
+				picture = "gfx/leaders/SHX/Portrait_SHX_yan_xishan.png"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
 			}
 			create_country_leader = {
 				name = "陈果夫"
 				desc = "POLITICS_HNN_WANG_ZHEN_DESC"
-				picture = "gfx/leaders/HNN/Portrait_HNN_wang_zhen.png"
+				picture = "gfx/leaders/yun/Portrait_YUN_chen_guofu.png"
 				expire = "1965.1.1"
 				ideology =  authoritarian_democrat_subtype
 			}
@@ -6624,12 +6691,14 @@ country_event = {#中华人民共和国第一次人民代表大会开幕式
 					}
 				}
 			}
-			create_country_leader = {
-				name = "刘少奇"
-				desc = "POLITICS_HNN_LIU_SHAO_QI_DESC"
-				picture = "gfx/leaders/HNN/Portrait_HNN_Liu_Shao_Qi.png"
-				expire = "1965.1.1"
-				ideology = democratic_syndicalism_subtype
+			promote_character = {
+				character = HNN_liu_shaoqi
+				ideology = syndicalist_subtype
+			}
+			HNN_liu_shaoqi = {
+				set_variable = {
+					china_alignment = token:CHNsyndicalist
+				}
 			}
 			set_politics = {
 				ruling_party = syndicalist
@@ -6669,12 +6738,14 @@ country_event = {#中华人民共和国第一次人民代表大会开幕式
 					}
 				}
 			}
-			create_country_leader = {
-				name = "高岗"
-				desc = "POLITICS_HNN_GAO_GANG_DESC"
-				picture = "gfx/leaders/HNN/Portrait_HNN_Gao_gang.png"
-				expire = "1965.1.1"
+			promote_character = {
+				character = HNN_gao_gang
 				ideology = syndicalist_subtype
+			}
+			HNN_gao_gang = {
+				set_variable = {
+					china_alignment = token:CHNsyndicalist
+				}
 			}
 			set_politics = {
 				ruling_party = syndicalist
@@ -6752,12 +6823,14 @@ country_event = {#中华人民共和国第一次人民代表大会开幕式
 					}
 				}
 			}
-			create_country_leader = {
-				name = "陈云"
-				desc = "POLITICS_HNN_CHEN_YUN_DESC"
-				picture = "gfx/leaders/HNN/Portrait_HNN_Chen_Yun.png"
-				expire = "1965.1.1"
+			promote_character = {
+				character = HNN_chen_yun
 				ideology = radical_socialist_subtype
+			}
+			HNN_chen_yun = {
+				set_variable = {
+					china_alignment = token:CHNsyndicalist
+				}
 			}
 			set_politics = {
 				ruling_party = radical_socialist
@@ -6889,12 +6962,14 @@ country_event = {#中华人民共和国第一次人民代表大会开幕式
 					}
 				}
 			}
-			create_country_leader = {
-				name = "林伯渠"
-				desc = "POLITICS_HNN_LIN_Bo_Qu_DESC"
-				picture = "gfx/leaders/HNN/Portrait_HNN_Lin_Bo_Qu.png"
-				expire = "1965.1.1"
+			promote_character = {
+				character = HNN_lin_boqu
 				ideology = syndicalist_subtype
+			}
+			HNN_lin_boqu = {
+				set_variable = {
+					china_alignment = token:CHNsyndicalist
+				}
 			}
 			set_politics = {
 				ruling_party = syndicalist
@@ -7383,13 +7458,15 @@ country_event = {#选举结果
 		add_ideas = {
 			HNN_Dong_Biwu_hog
 		}
-		create_country_leader = {
-	name = "董必武 "
-	desc = "POLITICS_HNN_DONG_BIWU_DESC"
-	picture = "gfx/leaders/HNN/Portrait_HNN_Dong_Bi_Wu.png"
-	expire = "1965.1.1"
-	ideology = syndicalist_subtype
-}
+		promote_character = {
+			character = HNN_Dong_Bi_Wu
+			ideology = syndicalist_subtype
+		}
+		HNN_Dong_Bi_Wu = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
+		}
 		set_politics = {
 			ruling_party = syndicalist
 		}
@@ -7430,14 +7507,15 @@ country_event = {#选举结果
 		add_ideas = {
 			HNN_Pong_Dehuai_hog
 		}
-		create_country_leader = {
-	name = "彭德怀 "
-	desc = "POLITICS_HNN_PENG_DEHUAI_DESC"
-	picture = "gfx/leaders/HNN/Portrait_Hunan_Peng_De.png"
-	expire = "1965.1.1"
-	ideology = syndicalist_subtype
-}
-		
+		promote_character = {
+			character = HNN_peng_dehuai
+			ideology = syndicalist
+		}
+		HNN_peng_dehuai = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
+		}
 		set_politics = {
 			ruling_party = syndicalist
 		}
@@ -7512,12 +7590,14 @@ country_event = {#选举结果
 		}
 		set_country_flag = HNN_tang_victory
 		set_cosmetic_tag = HNN_GTA
-		create_country_leader = {
-			name = "唐生明"
-			desc = "POLITICS_HNN_TANG_SHENGMING_DESC"
-			picture = "gfx/leaders/HNN/Portrait_Hunan_Tang_Shengming.png"
-			expire = "1965.1.1"
+		promote_character = {
+			character = HNN_tang_shengming
 			ideology = totalist_subtype
+		}
+		HNN_tang_shengming = {
+			set_variable = {
+				china_alignment = CHN_syndicalist_aligned
+			}
 		}
 		set_politics = {
 			ruling_party = totalist
@@ -7608,39 +7688,24 @@ country_event = {###国民党左派革命失败
 					set_nationality = ROOT
 				}
 			}
-			create_corps_commander = {
-				name = "邓小平 "
-				desc = "POLITICS_HNN_DENG_XIAO_PING_ARMY_DESC"
-				portrait_path = "gfx/leaders/HNN/Portrait_HNN_Deng_Xiao_Ping.png"
-				traits = { skilled_staffer }
-				skill = 2
-				attack_skill = 2
-				defense_skill = 1
-				planning_skill = 3
-				logistics_skill = 2
+			SHX = {
+				SHX_deng_xiaoping = {
+					set_nationality = ROOT
+				}
 			}
-			create_corps_commander = {
-				name = "高岗"
-				desc = "POLITICS_HNN_GAO_GANG_ARMY_DESC"
-				portrait_path = "gfx/leaders/HNN/Portrait_HNN_Gao_gang.png"
-				traits = { skilled_staffer }
-				skill = 2
-				attack_skill = 2
-				defense_skill = 1
-				planning_skill = 3
-				logistics_skill = 2
+			SHX = {
+				SHX_bo_yibo = {
+					set_nationality = ROOT
+				}
 			}
-			create_corps_commander = {
-				name = "薄一波"
-				desc = "POLITICS_HNN_BO_YI_BO_ARMY_DESC"
-				portrait_path = "gfx/leaders/HNN/Portrait_HNN_Bo_Yi_Bo.png"
-				traits = { politically_connected }
-				skill = 1
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 1
+			SHX = {
+				SHX_deng_xiaoping = {
+					set_nationality = ROOT
+				}
 			}
+			recruit_character = SHX_bo_yibo
+			recruit_character = SHX_deng_xiaoping
+			recruit_character = HNN_gao_gang
 			set_party_name = {
 				ideology = radical_socialist
 				long_name =  HNN_radical_socialist_party_dbw_long

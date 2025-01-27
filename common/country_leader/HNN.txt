@@ -1,0 +1,162 @@
+leader_traits = {
+
+	HNN_yusan_shuai = {
+		random = no
+		compliance_gain = 0.05
+		experience_gain_army_factor = 0.05
+	}
+	HNN_shen_pan_zhe = {
+		random = no
+		stability_factor = 0.05
+		experience_gain_army_factor = 0.05
+	}
+	HNN_fu_jia_weng = {
+		random = no
+		political_power_gain = 0.10
+	}
+	HNN_tian_gou = {
+		random = no
+		war_support_factor = 0.02
+	}
+	HNN_tian_cai = {
+		random = no
+		generate_wargoal_tension = -0.10
+		war_support_factor = 0.05
+	}
+	HNN_ge_ming_ji = {
+		random = no
+		stability_factor = 0.05
+		political_power_gain = 0.05
+		paternal_autocrat_drift = 0.05
+	}
+	HNN_ge_ming_de_shou_hu_zhe = {
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.05
+	}
+	HNN_ge_ming_zong_si_ling = {
+		random = no
+		totalist_drift = 0.05
+		war_support_factor = 0.05		
+		justify_war_goal_time = -0.10		
+	}
+	HNN_jiao_yuan = {
+		random = no
+		radical_socialist_drift = 0.01
+		war_support_factor = 0.05				
+	}
+	HNN_zhuan_shi = {
+		random = no
+		political_power_gain = 0.05
+		national_populist_drift = 0.05			
+	}
+	HNN_civilian_governor = {
+		random = no
+		political_power_gain = 0.15
+		stability_factor = 0.10
+	}
+	HNN_commander_in_chief = { 
+		random = no
+		conscription_factor = 0.05
+		war_support_factor = 0.10
+	}
+	HNN_first_son_of_the_revolution = { #Tang Shengzhi
+		random = no
+		skill_bonus_factor = 0.05
+		experience_loss_factor = -0.10
+		ai_focus_aggressive_factor = 0.5
+	}
+
+	HNN_old_guard_revolutionary = { #Cheng Qian
+		random = no
+		experience_gain_factor = 0.05
+		out_of_supply_factor = -0.10
+		pocket_penalty = -0.10
+	}
+	LEC_wu_mian_zhi_wang = {
+		random = no
+		stability_factor = 0.10
+	}
+	LEC_di_guo_zong_du = {
+		random = no
+		stability_factor = 0.10
+	}
+	LEC_ming_yu_ling_xiu = {
+		random = no
+		stability_factor = 0.10
+		political_power_gain = 0.10
+	}
+	LEC_bu_mu_zi_wei = {
+		random = no
+		stability_factor = 0.10
+		political_power_gain = 0.10
+	}
+	LEC_ren_ming = {
+		random = no
+		stability_weekly = 0.005
+		radical_socialist_drift = 0.05
+	}
+	SHC_hong_se_li_Lun = {
+		random = no
+		stability_factor = 0.05
+		research_speed_factor = 0.05
+		party_popularity_stability_factor = 0.05
+	}
+	SHX_model_governor = {  #Yan Xishan
+		random = no
+		command_power_gain_mult = 0.25
+	}
+	SHX_christian_general = { #Feng Yuxiang
+		random = no
+		war_stability_factor = 0.15
+		resistance_damage_to_garrison = -0.10
+	}
+	SHX_bu_yi_general = { #傅作义
+		random = no
+		mobilization_speed = 0.05
+		war_stability_factor = 0.10
+		resistance_damage_to_garrison = -0.10
+	}
+	ETS_tian_shan_de_ying = { #天山雄鹰
+		random = no
+		totalist_drift = 0.01
+		surrender_limit = 0.10
+		stability_factor = 0.10
+		war_support_factor = 0.10
+	}
+	ETS_tian_shan_de_ying2 = { #伟大领袖
+		random = no
+		totalist_drift = 0.05
+		weekly_manpower = 200
+		surrender_limit = 0.10
+		stability_factor = 0.10
+		war_support_factor = 0.10
+		party_popularity_stability_factor = 0.50
+	}
+	ETS_xin_yang_de_rong_yao = { #信仰的荣誉
+		random = no
+		monthly_population = 0.05
+		army_core_attack_factor = 0.10
+		army_core_defence_factor = 0.10
+	}
+	ETS_xin_yang_de_rong_yao2 = { #信仰的荣誉
+		random = no
+		stability_weekly = 0.005
+		monthly_population = 0.05
+		radical_socialist_drift = 0.05
+		army_core_attack_factor = 0.10
+		army_core_defence_factor = 0.10
+		industrial_capacity_dockyard = 0.05
+	}
+	ETS_hong_se_tie_mu_er = { #红色帖木儿
+		random = no
+		weekly_manpower = -150
+		army_org_factor = 0.10
+		army_org_regain = -0.10
+		army_speed_factor = 0.10
+		stability_factor = -0.20
+		army_attack_factor = 0.05
+		breakthrough_factor = 0.05
+	}
+}
+	

@@ -1,0 +1,523 @@
+defined_text = {
+	name = GetHNN_ThreeWinner
+	text = {#林彪
+		trigger = {
+			check_variable = { HNN_triumvirs_LIN > HNN_triumvirs_HE }
+			check_variable = { HNN_triumvirs_LIN > HNN_triumvirs_YE }
+		}
+		localization_key = HNN_three_LIN
+	}
+	text = {#贺龙
+		trigger = {
+			check_variable = { HNN_triumvirs_HE > HNN_triumvirs_YE }
+			check_variable = { HNN_triumvirs_HE > HNN_triumvirs_LIN }
+		}
+		localization_key = HNN_three_HE
+	}
+	text = {#叶剑英
+		trigger = {
+			check_variable = { HNN_triumvirs_YE > HNN_triumvirs_HE }
+			check_variable = { HNN_triumvirs_YE > HNN_triumvirs_LIN }
+		}
+		localization_key = HNN_three_YE
+	}
+	text = {
+		localization_key = HNN_three_NO
+	}
+}
+
+defined_text = {
+	name = HNN_southern_heir_to_beiyang_loc
+	text = {
+		trigger = { is_subject = yes }
+		localization_key = HNN_southern_heir_to_beiyang_puppet
+	}
+	text = {
+		trigger = { is_subject = no }
+		localization_key = HNN_southern_heir_to_beiyang_independent
+	}
+}
+
+defined_text = {
+	name = HNN_southern_heir_to_beiyang_desc_loc
+	text = {
+		trigger = { is_subject = yes }
+		localization_key = HNN_southern_heir_to_beiyang_puppet_desc
+	}
+	text = {
+		trigger = { is_subject = no }
+		localization_key = HNN_southern_heir_to_beiyang_independent_desc
+	}
+}
+
+defined_text = {
+	name = HNN_a_petition_from_changsha_loc_desc
+	text = {
+		trigger = {
+			has_event_target = HNN_attack_GXC
+			NOT = {
+				has_global_flag = QIE_manchu_restoration
+			}
+		}
+		localization_key = HNN_a_petition_from_changsha_loc_desc_qie_gxc
+	}
+	text = {
+		trigger = {
+			has_event_target = HNN_attack_GXC
+			has_global_flag = QIE_manchu_restoration
+			SZC = {
+				SZC_zhili_in_exile = yes
+			}
+		}
+		localization_key = HNN_a_petition_from_changsha_loc_desc_szc_gxc
+	}
+	text = {
+		trigger = {
+			has_event_target = HNN_attack_SZC
+		}
+		localization_key = HNN_a_petition_from_changsha_loc_desc_qie_szc
+	}
+	text = {
+		trigger = {
+			has_event_target = HNN_attack_YUN
+			NOT = {
+				has_global_flag = QIE_manchu_restoration
+			}
+		}
+		localization_key = HNN_a_petition_from_changsha_loc_desc_qie_yun
+	}
+	text = {
+		trigger = {
+			has_event_target = HNN_attack_GXC
+			has_global_flag = QIE_manchu_restoration
+			SZC = {
+				SZC_zhili_in_exile = yes
+			}
+		}
+		localization_key = HNN_a_petition_from_changsha_loc_desc_szc_yun
+	}
+}
+
+defined_text = {
+	name = HNN_petition_accepted_loc_desc
+	text = {
+		trigger = {
+			has_event_target = HNN_attack_GXC
+		}
+		localization_key = HNN_petition_accepted_loc_desc_gxc
+	}
+	text = {
+		trigger = {
+			has_event_target = HNN_attack_SZC
+		}
+		localization_key = HNN_petition_accepted_loc_desc_szc
+	}
+	text = {
+		trigger = {
+			has_event_target = HNN_attack_YUN
+		}
+		localization_key = HNN_petition_accepted_loc_desc_yun
+	}
+}
+
+defined_text = {
+	name = HNN_petition_accepted_loc_option
+	text = {
+		trigger = {
+			has_event_target = HNN_attack_GXC
+		}
+		localization_key = HNN_petition_accepted_loc_option_gxc
+	}
+	text = {
+		trigger = {
+			has_event_target = HNN_attack_SZC
+		}
+		localization_key = HNN_petition_accepted_loc_option_szc
+	}
+	text = {
+		trigger = {
+			has_event_target = HNN_attack_YUN
+		}
+		localization_key = HNN_petition_accepted_loc_option_yun
+	}
+}
+
+defined_text = {
+	name = HNN_zhili_home_base
+	text = {
+		trigger = {
+			NOT = { has_global_flag = QIE_manchu_restoration }
+		}
+		localization_key = HNN_zhili_home_base_qing
+	}
+	text = {
+		trigger = {
+			has_global_flag = QIE_manchu_restoration
+			SZC = {
+				has_government = authoritarian_democrat
+			}
+		}
+		localization_key = HNN_zhili_home_base_sichuan
+	}
+}
+
+defined_text = {
+	name = HNN_opposition_strength_variable_loc
+	text = {
+		trigger = {
+			check_variable = { HNN_opposition_strength < 30 }
+		}
+		localization_key = HNN_opposition_strength_low
+	}
+	text = {
+		trigger = {
+			check_variable = { HNN_opposition_strength < 60 }
+		}
+		localization_key = HNN_opposition_strength_moderate
+	}
+	text = {
+		localization_key = HNN_opposition_strength_high
+	}
+}
+
+defined_text = {
+	name = HNN_repudiate_the_canton_squatters_loc
+	text = {
+		trigger = { is_subject = yes }
+		localization_key = HNN_repudiate_the_canton_squatters_puppet
+	}
+	text = {
+		trigger = { is_subject = no }
+		localization_key = HNN_repudiate_the_canton_squatters_independent
+	}
+}
+
+defined_text = {
+	name = HNN_repudiate_the_canton_squatters_desc_loc
+	text = {
+		trigger = { is_subject = yes }
+		localization_key = HNN_repudiate_the_canton_squatters_puppet_desc
+	}
+	text = {
+		trigger = { is_subject = no }
+		localization_key = HNN_repudiate_the_canton_squatters_independent_desc
+	}
+}
+defined_text = {
+	name = HNN_construct_rural_autonomy_decision_loc
+	text = {
+		trigger = { FROM = { state = 1013 } } 
+		localization_key = HNN_rural_autonomies_chenyuan
+	}
+	text = {
+		trigger = { FROM = { state = 1049 } } 
+		localization_key = HNN_rural_autonomies_shihe
+	}
+	text = {
+		trigger = { FROM = { state = 602 } } 
+		localization_key = HNN_rural_autonomies_xiangjiang
+	}
+	text = {
+		trigger = { FROM = { state = 1052 } }
+		localization_key = HNN_rural_autonomies_guizhou
+	}
+}
+defined_text = {
+	name = HNN_expand_local_elections_decision_loc
+	text = {
+		trigger = { FROM = { state = 1013 } } #Chenyuan
+		localization_key = HNN_local_elections_chenyuan
+	}
+	text = {
+		trigger = { FROM = { state = 1049 } } 
+		localization_key = HNN_local_elections_shihe
+	}
+	text = {
+		trigger = { FROM = { state = 602 } } #Xiangjiang
+		localization_key = HNN_local_elections_xiangjiang
+	}
+	text = {
+		trigger = { FROM = { state = 1052 } }
+		localization_key = HNN_local_elections_guizhou
+	}
+}
+
+defined_text = {
+	name = HNN_fostering_national_reconstruction_loc
+	text = {
+		trigger = { 
+			CHI = {
+				exists = yes
+			}
+			ROOT = {
+				OR = {
+					has_country_leader = { name = "唐生明" ruling_only = yes }
+					has_country_leader = { name = "彭德怀" ruling_only = yes }
+					has_country_leader = { name = "贺龙" ruling_only = yes }
+					has_country_leader = { name = "唐生智" ruling_only = yes }
+					has_country_leader = { name = "程潜" ruling_only = yes }
+					has_country_leader = { name = "何键" ruling_only = yes }
+					has_country_leader = { name = "陈立三" ruling_only = yes }
+					has_country_leader = { name = "鲁涤平" ruling_only = yes }
+				}
+				OR = {
+					has_country_leader = { name = "谭延闿" ruling_only = yes }
+					has_government = social_conservative
+				}
+			}
+		}
+		localization_key = HNN_fostering_national_reconstruction_kmt
+	}
+	text = {
+		localization_key = HNN_fostering_national_reconstruction_nokmt
+	}
+}
+
+defined_text = {
+	name = HNN_fostering_national_reconstruction_loc_desc
+	text = {
+		trigger = { 
+			CHI = {
+				exists = yes
+			}
+			ROOT = {
+				OR = {
+					has_country_leader = { name = "唐生明" ruling_only = yes }
+					has_country_leader = { name = "彭德怀" ruling_only = yes }
+					has_country_leader = { name = "贺龙" ruling_only = yes }
+					has_country_leader = { name = "唐生智" ruling_only = yes }
+					has_country_leader = { name = "程潜" ruling_only = yes }
+					has_country_leader = { name = "何键" ruling_only = yes }
+					has_country_leader = { name = "陈立三" ruling_only = yes }
+					has_country_leader = { name = "鲁涤平" ruling_only = yes }
+				}
+				OR = {
+					has_country_leader = { name = "谭延闿" ruling_only = yes }
+					has_government = social_conservative
+				}
+			}
+		}
+		localization_key = HNN_fostering_national_reconstruction_loc_desc_kmt
+	}
+	text = {
+		localization_key = HNN_fostering_national_reconstruction_loc_desc_nokmt
+	}
+}
+
+defined_text = {
+	name = HNN_strike_against_landowners_desc_loc
+	text = {
+		trigger = { 
+			ROOT = {
+				OR = {
+					has_country_leader = { name = "唐生明" ruling_only = yes }
+					has_country_leader = { name = "彭德怀" ruling_only = yes }
+					has_country_leader = { name = "贺龙" ruling_only = yes }
+					has_country_leader = { name = "唐生智" ruling_only = yes }
+					has_country_leader = { name = "程潜" ruling_only = yes }
+					has_country_leader = { name = "何键" ruling_only = yes }
+					has_country_leader = { name = "陈立三" ruling_only = yes }
+					has_country_leader = { name = "鲁涤平" ruling_only = yes }
+				}
+				OR = {
+					has_country_leader = { name = "谭延闿" ruling_only = yes }
+					has_government = social_conservative
+				}
+			}
+		}
+		localization_key = HNN_strike_against_landowners_desc_kmt
+	}
+	text = {
+		localization_key = HNN_strike_against_landowners_desc_nokmt
+	}
+}
+
+defined_text = {
+	name = HNN_reducing_gentry_control_desc_loc
+	text = {
+		trigger = { 
+			ROOT = {
+				OR = {
+					has_country_leader = { name = "唐生明" ruling_only = yes }
+					has_country_leader = { name = "彭德怀" ruling_only = yes }
+					has_country_leader = { name = "贺龙" ruling_only = yes }
+					has_country_leader = { name = "唐生智" ruling_only = yes }
+					has_country_leader = { name = "程潜" ruling_only = yes }
+					has_country_leader = { name = "何键" ruling_only = yes }
+					has_country_leader = { name = "陈立三" ruling_only = yes }
+					has_country_leader = { name = "鲁涤平" ruling_only = yes }
+					AND = {
+						has_country_leader = { name = "谭延闿" ruling_only = yes }
+						has_government = social_conservative
+					}
+				}
+			}
+		}
+		localization_key = HNN_reducing_gentry_control_desc_kmt
+	}
+	text = {
+		localization_key = HNN_reducing_gentry_control_desc_nokmt
+	}
+}
+
+defined_text = {
+	name = HNN_seizing_estates_desc_loc
+	text = {
+		trigger = { 
+			ROOT = {
+				OR = {
+					has_country_leader = { name = "唐生明" ruling_only = yes }
+					has_country_leader = { name = "彭德怀" ruling_only = yes }
+					has_country_leader = { name = "贺龙" ruling_only = yes }
+					has_country_leader = { name = "唐生智" ruling_only = yes }
+					has_country_leader = { name = "程潜" ruling_only = yes }
+					has_country_leader = { name = "何键" ruling_only = yes }
+					has_country_leader = { name = "陈立三" ruling_only = yes }
+					has_country_leader = { name = "鲁涤平" ruling_only = yes }
+					AND = {
+						has_country_leader = { name = "谭延闿" ruling_only = yes }
+						has_government = social_conservative
+					}
+				}
+			}
+		}
+		localization_key = HNN_seizing_estates_desc_kmt
+	}
+	text = {
+		localization_key = HNN_seizing_estates_desc_nokmt
+	}
+}	
+
+defined_text = {
+	name = HNN_pinnacle_of_the_new_army_loc
+	text = {
+		trigger = { 
+			OR = {
+				AND = {
+					has_country_leader = { name = "谭延闿" ruling_only = yes }
+					has_government = social_liberal
+				}
+				has_country_leader = { name = "陈渠珍" ruling_only = yes }
+				has_country_leader = { name = "赵恒惕" ruling_only = yes }
+			}	
+		}
+		localization_key = HNN_pinnacle_of_the_new_army_zhao
+	}
+	text = {
+		localization_key = HNN_pinnacle_of_the_new_army_tang
+	}
+}
+
+defined_text = {
+	name = HNN_pinnacle_of_the_new_army_loc_desc
+	text = {
+		trigger = {  
+			OR = {
+				AND = {
+					has_country_leader = { name = "谭延闿" ruling_only = yes }
+					has_government = social_liberal
+				}
+				has_country_leader = { name = "陈渠珍" ruling_only = yes }
+				has_country_leader = { name = "赵恒惕" ruling_only = yes }
+			}
+		}
+		localization_key = HNN_pinnacle_of_the_new_army_zhao_desc
+	}
+	text = {
+		localization_key = HNN_pinnacle_of_the_new_army_tang_desc
+	}
+}
+
+defined_text = {
+	name = HNN_a_new_academy_faction_loc
+	text = {
+		trigger = { 
+			OR = {
+				AND = {
+					has_country_leader = { name = "谭延闿" ruling_only = yes }
+					has_government = social_liberal
+				}
+				has_country_leader = { name = "陈渠珍" ruling_only = yes }
+				has_country_leader = { name = "赵恒惕" ruling_only = yes }
+			}	
+		}
+		localization_key = HNN_academy_zhao
+	}
+	text = {
+		trigger = { 
+			ROOT = {
+				OR = {
+					has_country_leader = { name = "唐生明" ruling_only = yes }
+					has_country_leader = { name = "彭德怀" ruling_only = yes }
+					has_country_leader = { name = "贺龙" ruling_only = yes }
+					has_country_leader = { name = "唐生智" ruling_only = yes }
+					has_country_leader = { name = "程潜" ruling_only = yes }
+					has_country_leader = { name = "何键" ruling_only = yes }
+					has_country_leader = { name = "陈立三" ruling_only = yes }
+					has_country_leader = { name = "鲁涤平" ruling_only = yes }
+					AND = {
+						has_country_leader = { name = "谭延闿" ruling_only = yes }
+						has_government = social_conservative
+					}
+				}
+			}
+		}
+		localization_key = HNN_academy_kmt
+	}
+	text = {
+		trigger = {
+			has_country_leader = { name = "陈渠珍" ruling_only = yes }
+		}
+		localization_key = HNN_academy_tang
+	}
+	text = {
+		localization_key = HNN_a_new_academy_fallback
+	}
+}
+
+defined_text = {
+	name = HNN_a_new_academy_faction_loc_desc
+	text = {
+		trigger = {  
+			OR = {
+				AND = {
+					has_country_leader = { name = "谭延闿" ruling_only = yes }
+					has_government = social_liberal
+				}
+				has_country_leader = { name = "陈渠珍" ruling_only = yes }
+				has_country_leader = { name = "赵恒惕" ruling_only = yes }
+			}
+		}
+		localization_key = HNN_academy_desc_zhao
+	}
+	text = {
+		trigger = { 
+			ROOT = {
+				OR = {
+					has_country_leader = { name = "唐生明" ruling_only = yes }
+					has_country_leader = { name = "彭德怀" ruling_only = yes }
+					has_country_leader = { name = "贺龙" ruling_only = yes }
+					has_country_leader = { name = "唐生智" ruling_only = yes }
+					has_country_leader = { name = "程潜" ruling_only = yes }
+					has_country_leader = { name = "何键" ruling_only = yes }
+					has_country_leader = { name = "陈立三" ruling_only = yes }
+					has_country_leader = { name = "鲁涤平" ruling_only = yes }
+					AND = {
+						has_country_leader = { name = "谭延闿" ruling_only = yes }
+						has_government = social_conservative
+					}
+				}
+			}
+		}
+		localization_key = HNN_academy_desc_kmt
+	}
+	text = {
+		trigger = { 
+			has_country_leader = { name = "陈渠珍" ruling_only = yes }
+		}
+		localization_key = HNN_academy_desc_tang
+	}
+	text = {
+		localization_key = HNN_a_new_academy_desc_fallback
+	}
+}

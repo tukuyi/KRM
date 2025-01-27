@@ -123,6 +123,9 @@ characters = {
 		country_leader = {
 			desc = HNN_he_long_sic_desc
 			ideology = radical_socialist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
 		}
 	}
 	################
@@ -911,6 +914,9 @@ characters = {
 		country_leader = {
 			desc = POLITICS_HNN_PENG_DEHUAI_DESC
 			ideology = syndicalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
 		}
 		corps_commander = {
 			desc = HNN_peng_dehuai_high_command_desc
@@ -1006,6 +1012,12 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
+		}
+		country_leader = {
+			ideology = totalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
 		}
 	}
 	#何鍵
@@ -2189,6 +2201,9 @@ characters = {
 		country_leader = {
 			desc = POLITICS_HNN_DONG_BIWU_DESC
 			ideology =  syndicalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
 		}
 	}
 #何叔衡
@@ -2202,6 +2217,9 @@ characters = {
 		country_leader = {
 			desc = POLITICS_HNN_HE_SUHENG_DESC
 			ideology =  radical_socialist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
 		}
 	}	
 #滕代远
@@ -2246,6 +2264,13 @@ characters = {
 			slot = political_advisor
 			idea_token = HNN_Chen_Yi_advisor
 			traits = { KR_naive_optimist }
+		}
+		country_leader = {
+			desc = ARMY_HNN_Chen_Yi_ARMY_DESC
+			ideology =  totalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
 		}
 		corps_commander = {
 			desc = ARMY_HNN_Chen_Yi_ARMY_DESC
@@ -2340,6 +2365,13 @@ characters = {
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 2
+		}
+		country_leader = {
+			desc = POLITICS_HNN_WANG_ZHEN_ARMY_DESC
+			ideology = national_populist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
 		}
 	}		
 #谭震林
@@ -2438,6 +2470,12 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 2
 		}
+		country_leader = {
+			ideology = radical_socialist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
 	}			
 #袁文才
 	HNN_Yuan_Wen_Cai = {
@@ -2512,11 +2550,118 @@ characters = {
 			logistics_skill = 1
 		}
 	}	
-
-
-#####################
-#####CSP#############
-#####################
+#高岗
+	HNN_gao_gang = {
+		name = HNN_gao_gang
+		portraits = {
+			army = {
+				small="gfx/interface/ministers/HNN/Portrait_HNN_Gao_gang.png"
+				large = GFX_Portrait_HNN_Portrait_HNN_Gao_gang
+			}
+		}
+		
+		corps_commander = {
+			desc = POLITICS_HNN_gao_gang_army_DESC
+			traits = { 
+				skilled_staffer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}	
+#胡耀邦
+	HNN_hu_yaobang = {
+		name = HNN_hu_yaobang
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_HNN_Daibiaodahui
+				large = "gfx/leaders/HNN/Portrait_HNN_Hu_Yao_Bang.png"
+			}
+		}
+		country_leader = {
+			desc =  POLITICS_HNN_HU_YAOBANG_DESC
+			ideology = radical_socialist_subtype
+			traits = { CHN_CHNsyndicalist_aligned }
+		}
+	}	
+#习仲勋
+	HNN_xi_zhongxun = {
+		name = HNN_xi_zhongxun
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_HNN_Daibiaodahui
+				large = "gfx/leaders/HNN/Portrait_HNN_Xi_Zhong_Xun.png"
+			}
+		}
+		country_leader = {
+			desc =  POLITICS_HNN_Xi_Zhongxun_DESC
+			ideology = social_democrat_subtype
+			traits = { CHN_CHNsyndicalist_aligned }
+		}
+	}	
+#刘少奇
+	HNN_liu_shaoqi = {
+		name = HNN_liu_shaoqi
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_HNN_Daibiaodahui
+				large = "gfx/leaders/HNN/Portrait_HNN_Liu_Shao_Qi.png"
+			}
+		}
+		country_leader = {
+			desc =  POLITICS_HNN_liu_shaoqi_DESC
+			ideology = syndicalist_subtype
+			traits = { CHN_CHNsyndicalist_aligned }
+		}
+	}	
+#林伯渠
+	HNN_lin_boqu = {
+		name = HNN_lin_boqu
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_HNN_Daibiaodahui
+				large = "gfx/leaders/HNN/Portrait_HNN_Lin_Bo_Qu.png"
+			}
+		}
+		country_leader = {
+			desc =  POLITICS_HNN_lin_boqu_DESC
+			ideology = syndicalist_subtype
+			traits = { CHN_CHNsyndicalist_aligned }
+		}
+	}	
+#钱学森
+	HNN_qian_xuesen = {
+		name = HNN_qian_xuesen
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_HNN_Daibiaodahui
+				large = "gfx/leaders/HNN/Portrait_HNN_Qian_Xuesen.png"
+			}
+		}
+		country_leader = {
+			desc =  POLITICS_HNN_qian_xuesen_DESC
+			ideology = totalist_subtype
+			traits = { CHN_CHNsyndicalist_aligned }
+		}
+	}	
+#钱学森
+	HNN_guo_moruo = {
+		name = HNN_guo_moruo
+		portraits = {
+			civilian = {
+				small = GFX_Portrait_HNN_Daibiaodahui
+				large = "gfx/leaders/HNN/Portrait_HNN_Guo_Mo_Ruo.png"
+			}
+		}
+		country_leader = {
+			desc =  POLITICS_HNN_guo_moruo_DESC
+			ideology = totalist_subtype
+			traits = { CHN_CHNsyndicalist_aligned }
+		}
+	}	
 	HNN_Daibiaodahui = {
 		name = HNN_Daibiaodahui
 		portraits = {

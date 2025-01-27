@@ -1,0 +1,10 @@
+HNN_no_cosmetic_flag_check = {
+	NOT = {
+		has_cosmetic_tag = HNN_SCPC
+		has_cosmetic_tag = united_china
+	}
+}
+uses_governorate_autonomy_state = {
+	overlord = { is_chinese_tag = yes }
+	is_chinese_tag = yes
+}
