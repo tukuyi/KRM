@@ -128,6 +128,18 @@ china_is_aligned_with_kmt = {
 	}
 }
 
+
+china_is_aligned_with_CHNsyndicalist = {
+	custom_trigger_tooltip = {
+		tooltip = china_is_aligned_with_CHNsyndicalist
+		OR = {
+			check_variable = { country_leader:china_alignment = token:CHNsyndicalist }
+			check_variable = { country_leader:china_alignment = token:chinese_southern_republican }
+		}
+	}
+}
+
+
 china_is_aligned_with_republicans = {
 	custom_trigger_tooltip = {
 		tooltip = china_is_aligned_with_republicans
@@ -140,15 +152,6 @@ china_is_aligned_with_republicans = {
 	}
 }
 
-china_is_aligned_with_CHNsyndicalist = {
-	custom_trigger_tooltip = {
-		tooltip = china_is_aligned_with_CHNsyndicalist
-		OR = {
-			check_variable = { country_leader:china_alignment = token:CHNsyndicalist }
-			check_variable = { country_leader:china_alignment = token:left_kuomintang }
-		}
-	}
-}
 
 
 china_is_unaligned = {
@@ -205,6 +208,16 @@ china_compatible_alignment_to_PREV = {
 			PREV = { china_is_aligned_with_CHNsyndicalist = yes }
 		}
 	}
+	OR = {
+		AND = {
+			china_is_aligned_with_CHNsyndicalist = yes
+			PREV = { china_is_aligned_with_left_kmt = yes }
+		}
+		AND = {
+			china_is_aligned_with_left_kmt = yes
+			PREV = { china_is_aligned_with_CHNsyndicalist = yes }
+		}
+	}
 }
 
 china_same_alignment_as_FROM = {
@@ -240,6 +253,16 @@ china_compatible_alignment_to_FROM = {
 		}
 		AND = {
 			china_is_aligned_with_CHNsyndicalist = yes
+			FROM = { china_is_aligned_with_CHNsyndicalist = yes }
+		}
+	}
+	OR = {
+		AND = {
+			china_is_aligned_with_CHNsyndicalist = yes
+			FROM = { china_is_aligned_with_left_kmt = yes }
+		}
+		AND = {
+			china_is_aligned_with_left_kmt = yes
 			FROM = { china_is_aligned_with_CHNsyndicalist = yes }
 		}
 	}

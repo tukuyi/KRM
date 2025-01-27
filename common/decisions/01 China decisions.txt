@@ -3413,6 +3413,98 @@ chinese_unification = {
 		}
 	}
 
+	CHN_join_CSP_decision = {
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = {
+			#Can't do always no because otherwise won't be able to check dynamically if new governments spawn.
+			OR = {
+				tag = HNN
+				tag = GXC
+				tag = SHX
+			}
+		}
+		available = {
+			at_peace_or_same_enemies_as_FROM = yes
+			FROM = {
+				china_is_valid_government_to_join = yes
+			}
+			OR = {
+				is_neighbor_of = FROM
+				any_subject_country = { is_neighbor_of = FROM }
+				FROM = { any_subject_country = { is_neighbor_of = ROOT } }
+			}
+		}
+		visible = {
+			china_is_potential_government = no
+			is_subject = no
+			country_exists = CSP
+
+			if = {
+				limit = { tag = HNN }
+				has_country_flag = HNN_gong_tuan_victory_flag
+			}
+			else_if = {
+				limit = { tag = GXC }
+				has_country_leader = { character = GXC_chen_mingshu }
+				has_global_flag = GXC_civil_war_over
+			}
+			else_if = {
+				limit = { tag = SHX }
+				has_country_leader = { character = SHX_feng_yuxiang }
+				has_completed_focus = SHX_beyond_borders
+			}
+		}
+
+		targets = { CSP }
+		target_trigger = { FROM = { tag = CSP } }
+		target_non_existing = yes
+		fire_only_once = yes
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				tag = HNN
+				has_country_flag = HNN_gong_tuan_victory_flag
+				OR = {
+					any_country_with_original_tag = {
+						original_tag_to_check = GXC
+						exists = yes
+						is_subject = no
+						china_is_aligned_with_right_kmt = yes
+						NOT = { has_war_with = ROOT }
+						china_refused_alliance = no
+					}
+					YUN = {
+						OR = {
+							has_idea = YUN_chaos_army
+							china_is_aligned_with_right_kmt = yes
+						}
+						exists = yes
+						is_subject = no
+						NOT = { has_war_with = ROOT }
+						china_refused_alliance = no
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				tag = SHX
+				NOT = { has_game_rule = { rule = SHX_forpol option = DEFAULT } }
+				NOT = { has_game_rule = { rule = SHX_forpol option = SHX_FORPOL_LKMT } }
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_join_LKT_decision target: [From.GetName]"
+			FROM = {
+				country_event = china_events.4
+				custom_effect_tooltip = if_they_accept
+				effect_tooltip = { china_puppet_ROOT_effect = yes }
+			}
+		}
+	}
+
 	CHN_join_RKT_decision = {
 		icon = GFX_decision_eng_trade_unions_support
 		allowed = {
