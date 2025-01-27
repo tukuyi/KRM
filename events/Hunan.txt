@@ -6148,7 +6148,7 @@ country_event = {#中华人民共和国
 			}
 			promote_character = {
 				character = CHI_zhou_enlai
-				ideology = syndicalist_subtype
+				ideology = radical_socialist_subtype
 			}
 			CHI_zhou_enlai = {
 				swap_country_leader_traits = {
@@ -6168,7 +6168,7 @@ country_event = {#中华人民共和国
 			recruit_character = HNN_hu_yaobang
 			promote_character = {
 				character = HNN_hu_yaobang
-				ideology = radical_socialist_subtype
+				ideology = social_democrat_subtype
 			}
 			HNN_hu_yaobang = {
 				set_variable = {
@@ -6177,7 +6177,7 @@ country_event = {#中华人民共和国
 			}
 			recruit_character = HNN_xi_zhongxun
 				character = HNN_xi_zhongxun
-				ideology = social_democrat_subtype
+				ideology = social_liberal_subtype
 			}
 			HNN_xi_zhongxun = {
 				set_variable = {
@@ -6189,7 +6189,7 @@ country_event = {#中华人民共和国
 				desc = "POLITICS_HNN_ZHAO_ZIYANG_DESC"
 				picture = "gfx/leaders/HNN/Portrait_HNN_Zhao_Zi_Yang.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = market_liberal_subtype
 			}
 			promote_character = {
 				character = HNN_wang_zhen
