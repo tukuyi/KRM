@@ -11181,3 +11181,151 @@ HNN_tie_lu_category = {#全国大开发
 		}
 	}
 }
+
+
+HNN_recruit_CSPalignment_category = {
+	CSP_recruit_in_CHI = {
+		icon = GFX_decision_lkmt_flag
+
+		visible = {
+			is_chinese_tag = yes
+			tag = CSP
+			NOT = { country_exists = CHI }
+			NOT = { has_country_flag = HNN_recruited_CHI }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			CSP_recruit_from_CHI_effect = yes
+		}
+
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	CSP_recruit_in_YUN = {
+		icon = generic_agreement
+
+		visible = {
+			is_chinese_tag = yes
+			tag = CSP
+			NOT = { country_exists = YUN }
+		}
+
+		cost = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			CSP_recruit_from_YUN_effect = yes
+		}
+
+		ai_will_do = {
+			factor = 150
+		}
+	}
+
+	CSP_recruit_in_GXC = {
+		icon = generic_agreement
+
+		visible = {
+			is_chinese_tag = yes
+			tag = CSP
+			NOT = { country_exists = GXC }
+		}
+
+		cost = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			CSP_recruit_from_GXC_effect = yes
+		}
+
+		ai_will_do = {
+			factor = 150
+		}
+	}
+
+	CSP_recruit_in_SZC = {
+		icon = generic_agreement
+
+		visible = {
+			is_chinese_tag = yes
+			tag = CSP
+			NOT = { country_exists = SZC }
+		}
+
+		cost = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			CSP_recruit_from_SZC_effect = yes
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+
+	CSP_recruit_in_HNN = {
+		icon = generic_agreement
+
+		visible = {
+			is_chinese_tag = yes
+			tag = CSP
+			NOT = { country_exists = HNN }
+		}
+
+		cost = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			CSP_recruit_from_HNN_effect = yes
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+
+	CSP_recruit_in_SHX = {
+		icon = generic_agreement
+
+		visible = {
+			is_chinese_tag = yes
+			tag = CSP
+			NOT = { country_exists = SHX }
+		}
+
+		cost = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			CSP_recruit_from_SHX_effect = yes
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+
+	CSP_recruit_in_BEIFANG = {
+		icon = generic_agreement
+
+		visible = {
+			is_chinese_tag = yes
+			tag = CSP
+			NOT = { country_exists = QIE }
+			NOT = { country_exists = LEP }
+			NOT = { country_exists = ANQ }
+		}
+
+		cost = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			CSP_recruit_from_BEIFANG_effect = yes
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+}

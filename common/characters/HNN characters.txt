@@ -2251,39 +2251,6 @@ characters = {
 			logistics_skill = 3
 		}
 	}	
-#陈毅
-	HNN_Chen_Yi = {
-		name = HNN_Chen_Yi
-		portraits = {
-			army = {
-				small="gfx/interface/ministers/HNN/HNN_Chen_Yi.png"
-				large = GFX_Portrait_HNN_Chen_Yi
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = HNN_Chen_Yi_advisor
-			traits = { KR_naive_optimist }
-		}
-		country_leader = {
-			desc = ARMY_HNN_Chen_Yi_ARMY_DESC
-			ideology =  totalist_subtype
-			traits = {
-				CHN_CHNsyndicalist_aligned
-			}
-		}
-		corps_commander = {
-			desc = ARMY_HNN_Chen_Yi_ARMY_DESC
-			traits = { 
-				irregulars_officer
-			}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 3
-		}
-	}		
 #萧克
 	HNN_Xiao_Ke = {
 		name = HNN_Xiao_Ke
@@ -2556,7 +2523,7 @@ characters = {
 		portraits = {
 			army = {
 				small="gfx/interface/ministers/HNN/Portrait_HNN_Gao_gang.png"
-				large = GFX_Portrait_HNN_Gao_gang
+				large = "gfx/leaders/HNN/Portrait_HNN_Gao_gang.png"
 			}
 		}
 		
@@ -2602,21 +2569,6 @@ characters = {
 			traits = { CHN_CHNsyndicalist_aligned }
 		}
 	}	
-#刘少奇
-	HNN_liu_shaoqi = {
-		name = HNN_liu_shaoqi
-		portraits = {
-			civilian = {
-				small = GFX_Portrait_HNN_Daibiaodahui
-				large = "gfx/leaders/HNN/Portrait_HNN_Liu_Shao_Qi.png"
-			}
-		}
-		country_leader = {
-			desc =  POLITICS_HNN_liu_shaoqi_DESC
-			ideology = syndicalist_subtype
-			traits = { CHN_CHNsyndicalist_aligned }
-		}
-	}	
 #林伯渠
 	HNN_lin_boqu = {
 		name = HNN_lin_boqu
@@ -2659,21 +2611,6 @@ characters = {
 		country_leader = {
 			desc =  POLITICS_HNN_guo_moruo_DESC
 			ideology = totalist_subtype
-			traits = { CHN_CHNsyndicalist_aligned }
-		}
-	}	
-	#李立三
-	HNN_li_lisan = {
-		name = HNN_li_lisan
-		portraits = {
-			civilian = {
-				small = GFX_Portrait_HNN_Daibiaodahui
-				large = "gfx/leaders/HNN/Portrait_HNN_Li_li_san.png"
-			}
-		}
-		country_leader = {
-			desc =  POLITICS_HNN_LI_LISAN_DESC
-			ideology = syndicalist_subtype
 			traits = { CHN_CHNsyndicalist_aligned }
 		}
 	}	

@@ -167,6 +167,15 @@ HNN_tu_di_gai_ge_category = {#土地改革
 	priority = 0
 }
 
+HNN_recruit_CSPalignment_category = {#招募左翼将领
+	icon = decision_category_generic_political_actions
+	allowed = { tag = CSP }
+	visible = {
+		tag = CSP
+	}
+	priority = 0
+}
+
 HNN_education_category = {#识字率
 	icon = GFX_decision_category_agriculture
 	picture = GFX_decision_category_chinese_mass_exodus

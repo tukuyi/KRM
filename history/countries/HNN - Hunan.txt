@@ -85,11 +85,9 @@ recruit_character = HNN_Daibiaodahui
 recruit_character = HNN_gao_gang
 recruit_character = HNN_hu_yaobang
 recruit_character = HNN_xi_zhongxun
-recruit_character = HNN_liu_shaoqi
 recruit_character = HNN_lin_boqu
 recruit_character = HNN_qian_xuesen
 recruit_character = HNN_guo_moruo
-recruit_character = HNN_li_lisan
 recruit_character = HNN_ren_bishi
 
 ### Generals ###
@@ -158,7 +156,6 @@ recruit_character = HNN_zuo_shunsheng
 recruit_character = HNN_Dong_Bi_Wu
 recruit_character = HNN_He_Su_Heng
 recruit_character = HNN_Teng_Daiyuan
-recruit_character = HNN_Chen_Yi
 recruit_character = HNN_Xiao_Ke
 recruit_character = HNN_mao_ze_dong
 recruit_character = HNN_wang_zhen
@@ -390,12 +387,6 @@ HNN_He_Su_Heng = {
 	set_variable = { china_alignment = token:CHNsyndicalist }
 	retire = yes
 }
-HNN_Chen_Yi = {
-	retire = yes
-	set_variable = {
-		china_alignment = token:CHNsyndicalist
-	}
-}
 HNN_Xiao_Ke = {
 	retire = yes
 	set_variable = {
@@ -446,11 +437,6 @@ HNN_Tan_zheng = {
 }
 HNN_Chen_Yun = {
 	retire = yes
-	set_variable = {
-		china_alignment = token:CHNsyndicalist
-	}
-}
-HNN_li_lisan = {
 	set_variable = {
 		china_alignment = token:CHNsyndicalist
 	}
