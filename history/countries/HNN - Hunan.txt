@@ -452,6 +452,7 @@ HNN_mao_ze_dong = {
 	}
 }
 HNN_gao_gang = {
+	retire = yes
 	set_variable = {
 		china_alignment = token:CHNsyndicalist
 	}
@@ -487,3 +488,8 @@ set_variable = { HNN_size_large_var = 0.08 }
 set_variable = { HNN_zhao_election_percentage_var = 1.00 }
 set_variable = { HNN_tang_election_percentage_var = 0.00 }
 set_variable = { HNN_cheng_election_percentage_var = 0.00 }
+
+
+
+#CSPCSPCSP#
+save_global_event_target_as = cspstronk

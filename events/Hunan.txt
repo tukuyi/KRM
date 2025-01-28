@@ -7807,40 +7807,12 @@ country_event = {###国民党左派革命失败
 				days = 2
 			}
 			set_country_flag = HNN_recruited_CHI
-			CHI = {
-				every_character = {
-					limit = {
-						always = yes
-					}
-					HNN_recruit_character_effect = yes
+			custom_effect_tooltip =  CSP_RCHI_tooltip
+			hidden_effect = {
+				every_country = {
+					CSP_recruit_from_CHI_effect = yes
 				}
 			}
-			SHX = {
-				SHX_deng_xiaoping = {
-					HNN_recruit_character_effect = yes
-				}
-			}
-			SHX = {
-				SHX_bo_yibo = {
-					HNN_recruit_character_effect = yes
-				}
-			}
-			SHX = {
-				SHX_deng_xiaoping = {
-					HNN_recruit_character_effect = yes
-				}
-			}
-			GXC = {
-				GXC_ye_jianying = {
-					HNN_recruit_character_effect = yes
-				}
-			}
-			recruit_character = SHX_bo_yibo
-			recruit_character = SHX_deng_xiaoping
-			recruit_character = HNN_gao_gang
-			recruit_character = GXC_ye_jianying
-			recruit_character = CHI_lin_biao
-			recruit_character = CHI_zhou_enlai
 			set_party_name = {
 				ideology = radical_socialist
 				long_name =  HNN_radical_socialist_party_dbw_long

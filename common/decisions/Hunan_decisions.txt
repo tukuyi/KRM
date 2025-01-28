@@ -11198,7 +11198,11 @@ HNN_recruit_CSPalignment_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			CSP_recruit_from_CHI_effect = yes
+			custom_effect_tooltip =  CSP_RCHI_tooltip
+			hidden_effect = {
+				CSP_recruit_from_CHI_effect = yes
+			}
+				
 		}
 
 		ai_will_do = {
@@ -11218,7 +11222,10 @@ HNN_recruit_CSPalignment_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			CSP_recruit_from_YUN_effect = yes
+			custom_effect_tooltip =  CSP_RYUN_tooltip
+			hidden_effect = {
+				CSP_recruit_from_YUN_effect = yes
+			}
 		}
 
 		ai_will_do = {
@@ -11239,7 +11246,10 @@ HNN_recruit_CSPalignment_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			CSP_recruit_from_GXC_effect = yes
+			custom_effect_tooltip =  CSP_RGXC_tooltip
+			hidden_effect = {
+				CSP_recruit_from_GXC_effect = yes
+			}
 		}
 
 		ai_will_do = {
@@ -11260,7 +11270,10 @@ HNN_recruit_CSPalignment_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			CSP_recruit_from_SZC_effect = yes
+			custom_effect_tooltip =  CSP_RSZC_tooltip
+			hidden_effect = {
+				CSP_recruit_from_SZC_effect = yes
+			}
 		}
 		ai_will_do = {
 			factor = 150
@@ -11280,7 +11293,10 @@ HNN_recruit_CSPalignment_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			CSP_recruit_from_HNN_effect = yes
+			custom_effect_tooltip =  CSP_RHNN_tooltip
+			hidden_effect = {
+				CSP_recruit_from_HNN_effect = yes
+			}
 		}
 		ai_will_do = {
 			factor = 150
@@ -11300,7 +11316,10 @@ HNN_recruit_CSPalignment_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			CSP_recruit_from_SHX_effect = yes
+			custom_effect_tooltip =  CSP_RSHX_tooltip
+			hidden_effect = {
+				CSP_recruit_from_SHX_effect = yes
+			}
 		}
 		ai_will_do = {
 			factor = 150
@@ -11322,7 +11341,10 @@ HNN_recruit_CSPalignment_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			CSP_recruit_from_BEIFANG_effect = yes
+			custom_effect_tooltip =  CSP_RBEIFANG_tooltip
+			hidden_effect = {
+				CSP_recruit_from_BEIFANG_effect = yes
+			}
 		}
 		ai_will_do = {
 			factor = 150
