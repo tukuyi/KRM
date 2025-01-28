@@ -354,7 +354,6 @@ country_event = {#革命成功
 		show_unit_leaders_tooltip = HNN_he_long
 		show_unit_leaders_tooltip = HNN_Teng_Daiyuan
 		show_unit_leaders_tooltip = GXC_Wan_Dan_Ping
-		show_unit_leaders_tooltip = HNN_Chen_Yi
 		show_unit_leaders_tooltip = HNN_Xiao_Ke
 		show_unit_leaders_tooltip = HNN_wang_zhen
 		show_unit_leaders_tooltip = HNN_Tan_Zhen_Lin
@@ -427,13 +426,12 @@ country_event = {#革命成功
 			retire_character = HNN_tian_yingzhao
 			retire_character = HNN_ye_kaixin
 			retire_character = HNN_zhao_hengti
+			retire_character = HNN_he_yaozu
 			HNN_He_Su_Heng = { HNN_recruit_characters_effect = yes }
 			HNN_Dong_Bi_Wu = { HNN_recruit_characters_effect = yes }
 			HNN_he_long = { HNN_recruit_characters_effect = yes }
 			HNN_peng_dehuai = { HNN_recruit_characters_effect = yes }
 			HNN_Teng_Daiyuan = { HNN_recruit_characters_effect = yes }
-			GXC_Wan_Dan_Ping = { HNN_recruit_characters_effect = yes }
-			HNN_Chen_Yi = { HNN_recruit_characters_effect = yes }
 			HNN_Xiao_Ke = { HNN_recruit_characters_effect = yes }
 			HNN_wang_zhen = { HNN_recruit_characters_effect = yes }
 			HNN_Tan_Zhen_Lin = { HNN_recruit_characters_effect = yes }
@@ -443,7 +441,7 @@ country_event = {#革命成功
 			HNN_Tan_zheng = { HNN_recruit_characters_effect = yes }
 			HNN_Chen_Yun = { HNN_recruit_characters_effect = yes }
 			HNN_tang_shengming = { HNN_recruit_characters_effect = yes }
-			 HNN_Hua_Guofeng = { HNN_recruit_characters_effect = yes }
+			HNN_Hua_Guofeng = { HNN_recruit_characters_effect = yes }
 			HNN_peng_dehuai = {
 				promote_leader = yes
 			}
@@ -1249,7 +1247,7 @@ country_event = {#结束军管
 			HNN_Li_Fu_Chun_eco
 		}
 		hidden_effect = {
-			set_country_leader_description = {
+			set_leader_description = {
 				desc = "POLITICS_HNN_PENG_DEHUAI_TONG_YI_DESC"
 			}
 		}
@@ -1941,9 +1939,25 @@ country_event = {#放权
 		trigger = {
 			has_country_flag = chen_victory
 		}
-		promote_character = {
-			character = HNN_Chen_Yi
-			ideology = totalist_subtype
+		hidden_effect = {
+			YUN_chen_yi = {
+				HNN_recruit_character_effect = yes
+			}
+		}
+		add_country_leader_role = {
+			character = YUN_chen_yi
+			promote_leader = yes
+			country_leader = {
+				ideology = totalist_subtype
+				expire = "1965.1.1.1"
+				traits = { CHN_CHNsyndicalist_aligned }
+			}
+		}
+		YUN_chen_yi = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
+			set_leader_description = POLITICS_HNN_Chen_Yi_DESC
 		}
 		set_party_name = {
 			ideology = totalist
@@ -1963,6 +1977,7 @@ country_event = {#放权
 			ideology = totalist_subtype
 		}
 		CHI_zhou_enlai = {
+			set_leader_description = POLITICS_HNN_ZHOU_ENLAI_DESC
 			set_portraits = {
 				civilian = {
 					large = "gfx/leaders/HNN/Portrait_CHI_Zhou_Enlai_CIV.png"
@@ -4761,9 +4776,15 @@ country_event = {#林彪的胜利
 	}
 	option = { #yes
 		name = hunarmy.5.a
-		promote_character = {
+		add_country_leader_role = {
 			character = CHI_lin_biao
-			ideology = totalist_subtype
+			promote_leader = yes
+			country_leader = {
+				ideology = totalist_subtype
+				expire = "1965.1.1.1"
+				traits = { CHN_CHNsyndicalit_aligned }
+				desc = POLITICS_HNN_LIN_BIAO_DESC
+			}
 		}
 		CHI_lin_biao = {
 			swap_country_leader_traits = {
@@ -4790,7 +4811,7 @@ country_event = {#林彪的胜利
 			HNN_Lin_Biao_hog
 			CHI_Chian_Ching_Kuo_eco_tot
 			HNN_Qiu_Hui_Zuo_sec
-			HNN_Chen_Yi_for
+			HNN_chen_yi_for
 		}
 	}
 }
@@ -4816,7 +4837,7 @@ country_event = {#叶剑英的胜利
 			country_leader = {
 				ideology = paternal_autocrat_subtype
 				expire = "1965.1.1.1"
-				traits = { CHN_CHNsyndicalist_aligned }
+				traits = { CHN_CHNsyndicalit_aligned }
 			}
 		}
 		GXC_ye_jianying = {
@@ -4827,6 +4848,7 @@ country_event = {#叶剑英的胜利
 			set_variable = {
 				china_alignment = token:CHNsyndicalist
 			}
+			set_leader_description =  POLITICS_HNN_YE_JIAN_YING_DESC
 		}
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -5890,7 +5912,7 @@ country_event = {#向首都进军
 		remove_all_ministers = yes
 		add_ideas = {
 			HNN_Mao_Ze_Dong_hog
-			HNN_Chen_Yi_for
+			HNN_chen_yi_for
 			HNN_Li_Fu_Chun_eco
 			HNN_Shang_Kun_sec
 		}
@@ -6738,6 +6760,9 @@ country_event = {#中华人民共和国
 			set_politics = {
 				ruling_party = totalist
 			}
+			SHX_deng_xiaoping = {
+				set_leader_description = POLITICS_HNN_DENG_XIAOPING_DESC
+			}
 			add_popularity = {
 				ideology = totalist
 				popularity = 0.50
@@ -6745,7 +6770,7 @@ country_event = {#中华人民共和国
 			remove_all_ministers = yes
 			add_ideas = {
 				HNN_Den_Xiao_Ping_hog
-				HNN_Chen_Yi_for
+				HNN_chen_yi_for
 				HNN_Shang_Kun_sec
 				HNN_Li_Xian_Nian_eco
 			}
@@ -6773,17 +6798,29 @@ country_event = {#中华人民共和国
 					}
 				}
 			}
-			promote_character = {
-				character = HNN_liu_shaoqi
-				ideology = syndicalist_subtype
+			set_politics = {
+				ruling_party = syndicalist
 			}
-			HNN_liu_shaoqi = {
+			add_country_leader_role = {
+				character = CHI_liu_shaoqi
+				promote_leader = yes
+				country_leader = {
+					ideology = syndicalist_subtype
+					expire = "1965.1.1.1"
+					traits = { CHN_CHNsyndicalist_aligned }
+				}
+			}
+			set_portraits = {
+				character = CHI_liu_shaoqi
+				civilian = {
+					large = "gfx/leaders/HNN/Portrait_HNN_Liu_Shao_Qi.png"
+				}
+			}
+			CHI_liu_shaoqi = {
 				set_variable = {
 					china_alignment = token:CHNsyndicalist
 				}
-			}
-			set_politics = {
-				ruling_party = syndicalist
+				set_country_leader_description = POLITICS_HNN_LIU_SHAO_QI_DESC
 			}
 			add_popularity = {
 				ideology = syndicalist
@@ -6874,10 +6911,13 @@ country_event = {#中华人民共和国
 				ideology = radical_socialist
 				popularity = 0.50
 			}
+			CHI_zhou_enlai = {
+				set_leader_description = POLITICS_HNN_ZHOU_ENLAI_DESC
+			}
 			remove_all_ministers = yes
 			add_ideas = {
 				HNN_Zhou_En_Lai_hog
-				HNN_Chen_Yi_for
+				HNN_chen_yi_for
 				HNN_Shang_Kun_sec
 				HNN_Li_Fu_Chun_eco
 			}
@@ -6924,7 +6964,7 @@ country_event = {#中华人民共和国
 			remove_all_ministers = yes
 			add_ideas = {
 				HNN_Chen_Yun_hog
-				HNN_Chen_Yi_for
+				HNN_chen_yi_for
 				HNN_Shang_Kun_sec
 				HNN_Li_Fu_Chun_eco
 			}
@@ -7091,7 +7131,7 @@ country_event = {#中华人民共和国
 			remove_all_ministers = yes
 			add_ideas = {
 				HNN_Hu_Yao_Bang_hog
-				HNN_Chen_Yi_for
+				HNN_chen_yi_for
 				HNN_Shang_Kun_sec
 				HNN_Li_Xian_Nian_eco
 			}
@@ -7746,6 +7786,7 @@ country_event = {###国民党左派革命失败
 	trigger = {
 		tag = HNN
 		has_country_flag = HNN_gong_tuan_victory_flag
+		tag = CSP
 		CHI = {
 			exists = no 
 		}
@@ -7760,45 +7801,15 @@ country_event = {###国民党左派革命失败
 			ideology = social_democrat
 			popularity = 0.02
 		}
+		custom_effect_tooltip =  CSP_RCHI_tooltip
 		hidden_effect = {
 			country_event = { 
 				id = hungong.32
 				days = 2
 			}
-			CHI = {
-				every_character = {
-					limit = {
-						always = yes
-					}
-					HNN_recruit_character_effect = yes
-				}
-			}
-			SHX = {
-				SHX_deng_xiaoping = {
-					HNN_recruit_character_effect = yes
-				}
-			}
-			SHX = {
-				SHX_bo_yibo = {
-					HNN_recruit_character_effect = yes
-				}
-			}
-			SHX = {
-				SHX_deng_xiaoping = {
-					HNN_recruit_character_effect = yes
-				}
-			}
-			GXC = {
-				GXC_ye_jianying = {
-					HNN_recruit_character_effect = yes
-				}
-			}
-			recruit_character = SHX_bo_yibo
-			recruit_character = SHX_deng_xiaoping
-			recruit_character = HNN_gao_gang
-			recruit_character = GXC_ye_jianying
-			recruit_character = CHI_lin_biao
-			recruit_character = CHI_zhou_enlai
+			CSP_recruit_from_CHI_effect = yes
+			set_country_flag = HNN_recruited_CHI
+			
 			set_party_name = {
 				ideology = radical_socialist
 				long_name =  HNN_radical_socialist_party_dbw_long

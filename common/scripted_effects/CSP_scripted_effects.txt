@@ -1,0 +1,216 @@
+CSP_recruit_character_effect = {#招募
+	if = {
+		limit = {
+			NOT = {
+				THIS = { has_character_flag = is_dead }
+				CSP = { has_character = PREV }
+			}
+		}
+		if = {
+			limit = { THIS = { is_army_leader = yes } }
+			demote_to_general = yes
+			remove_trait = { trait = recently_promoted }
+		}
+		set_nationality = CSP
+	}
+}
+
+CSP_recruit_from_CHI_effect = {
+	every_country = {
+		CHI_zhang_zhizhong = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_zhou_enlai = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_chen_geng = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_nie_rongzhen = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_chen_changzu = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_ye_ting = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_xu_xiangqian = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_wang_yaowu = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_su_yu = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_zhou_zhirou = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_li_zhilong = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_xiao_jinguang = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_lin_biao = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_chiang_wei_kuo = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_chiang_ching_kuo = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_dai_chunfeng = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_chen_duxiu = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_li_lisan = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_liu_shaoqi = {
+			CSP_recruit_character_effect = yes
+		}
+		CHI_song_qingling = {
+			CSP_recruit_character_effect = yes
+		}
+	}
+}
+
+CSP_recruit_from_YUN_effect = {
+	every_country = {
+		YUN_zhu_de = {
+			CSP_recruit_character_effect = yes
+		}
+		YUN_chen_yi = {
+			CSP_recruit_character_effect = yes
+		}
+		YUN_jin_handing = {
+			CSP_recruit_character_effect = yes
+		}
+		
+	}
+}
+
+
+CSP_recruit_from_GXC_effect = {
+	every_country = {
+		GXC_ye_jianying = {
+			CSP_recruit_character_effect = yes
+		}
+		GXC_liu_fei = {
+			CSP_recruit_character_effect = yes
+		}
+		GXC_cai_tingkai = {
+			CSP_recruit_character_effect = yes
+		}
+		GXC_jiang_guangnai = {
+			CSP_recruit_character_effect = yes
+		}
+		
+	}
+}
+
+
+CSP_recruit_from_SZC_effect = {
+	every_country = {
+		SZC_liu_bocheng = {
+			CSP_recruit_character_effect = yes
+		}
+		SZC_guo_xunqi = {
+			CSP_recruit_character_effect = yes
+		}
+		SZC_lu_chao = {
+			CSP_recruit_character_effect = yes
+		}
+		SZC_fan_shaozeng = {
+			CSP_recruit_character_effect = yes
+		}
+		
+	}
+}
+
+CSP_recruit_from_HNN_effect = {
+	every_country = {
+		HNN_he_long = {
+			CSP_recruit_character_effect = yes
+		}
+		HNN_peng_dehuai = {
+			CSP_recruit_character_effect = yes
+		}
+		HNN_tang_shengming = {
+			CSP_recruit_character_effect = yes
+		}
+		HNN_Teng_Daiyuan = {
+			CSP_recruit_character_effect = yes
+		}
+		HNN_Xiao_Ke = {
+			CSP_recruit_character_effect = yes
+		}
+		HNN_mao_ze_dong = {
+			CSP_recruit_character_effect = yes
+		}
+		HNN_wang_zhen = {
+			CSP_recruit_character_effect = yes
+		}
+		HNN_Tan_Zhen_Lin = {
+			CSP_recruit_character_effect = yes
+		}
+		HNN_Tan_zheng = {
+			CSP_recruit_character_effect = yes
+		}
+		HNN_Hua_Guofeng = {
+			CSP_recruit_character_effect = yes
+		}
+		HNN_Chen_Yun = {
+			CSP_recruit_character_effect = yes
+		}
+		HNN_Yuan_Wen_Cai= {
+			CSP_recruit_character_effect = yes
+		}
+		HNN_Long_Chao_Qing= {
+			CSP_recruit_character_effect = yes
+		}
+		HNN_Wan_Xi_Xian= {
+			CSP_recruit_character_effect = yes
+		}
+		HNN_gao_gang= {
+			CSP_recruit_character_effect = yes
+		}
+		
+	}
+}
+
+
+CSP_recruit_from_SHX_effect = {
+	every_country = {
+		SHX_feng_yuxiang = {
+			CSP_recruit_character_effect = yes
+		}
+		SHX_yang_hucheng = {
+			CSP_recruit_character_effect = yes
+		}
+		SHX_bo_yibo = {
+			CSP_recruit_character_effect = yes
+		}
+		SHX_deng_xiaoping = {
+			CSP_recruit_character_effect = yes
+		}
+	}
+}
+
+
+CSP_recruit_from_BEIFANG_effect = {
+	every_country = {
+		ANQ_peng_xuefeng = {
+			CSP_recruit_character_effect = yes
+		}
+		MAN_guan_xiangying  = {
+			CSP_recruit_character_effect = yes
+		}
+		
+	}
+}

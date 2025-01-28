@@ -74,7 +74,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			desc = HNN_he_long_sic_desc
+			desc =  POLITICS_HNN_HE_LONG_DESC
 			traits = { CHI_left_kmt_officer trait_reckless light_infantry_officer commando trickster war_hero }
 			skill = 2
 			attack_skill = 2
@@ -85,7 +85,7 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = HNN_he_long_army_chief
-			desc = HNN_he_long_sic_desc
+			desc =  POLITICS_HNN_HE_LONG_DESC
 			traits = { KR_army_chief_manoeuvre_2 }
 			cost = 100
 			on_add = {
@@ -121,7 +121,7 @@ characters = {
 			can_be_fired = no
 		}
 		country_leader = {
-			desc = HNN_he_long_sic_desc
+			desc =  POLITICS_HNN_HE_LONG_DESC
 			ideology = radical_socialist_subtype
 			traits = {
 				CHN_CHNsyndicalist_aligned
@@ -2251,39 +2251,6 @@ characters = {
 			logistics_skill = 3
 		}
 	}	
-#陈毅
-	HNN_Chen_Yi = {
-		name = HNN_Chen_Yi
-		portraits = {
-			army = {
-				small="gfx/interface/ministers/HNN/HNN_Chen_Yi.png"
-				large = GFX_Portrait_HNN_Chen_Yi
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = HNN_Chen_Yi_advisor
-			traits = { KR_naive_optimist }
-		}
-		country_leader = {
-			desc = ARMY_HNN_Chen_Yi_ARMY_DESC
-			ideology =  totalist_subtype
-			traits = {
-				CHN_CHNsyndicalist_aligned
-			}
-		}
-		corps_commander = {
-			desc = ARMY_HNN_Chen_Yi_ARMY_DESC
-			traits = { 
-				irregulars_officer
-			}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 3
-		}
-	}		
 #萧克
 	HNN_Xiao_Ke = {
 		name = HNN_Xiao_Ke
@@ -2335,6 +2302,13 @@ characters = {
 			defense_skill = 1
 			planning_skill = 5
 			logistics_skill = 1
+		}
+		country_leader = {
+			ideology = radical_socialist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+			desc = POLITICS_HNN_MAO_ZHE_DONG_DESC
 		}
 	}		
 #王震
@@ -2475,6 +2449,7 @@ characters = {
 			traits = {
 				CHN_CHNsyndicalist_aligned
 			}
+			DESC = POLITICS_HNN_CHEN_YUN_DESC
 		}
 	}			
 #袁文才
@@ -2556,7 +2531,7 @@ characters = {
 		portraits = {
 			army = {
 				small="gfx/interface/ministers/HNN/Portrait_HNN_Gao_gang.png"
-				large = GFX_Portrait_HNN_Gao_gang
+				large = "gfx/leaders/HNN/Portrait_HNN_Gao_gang.png"
 			}
 		}
 		
@@ -2570,6 +2545,13 @@ characters = {
 			defense_skill = 1
 			planning_skill = 3
 			logistics_skill = 2
+		}
+		country_leader = {
+			ideology = syndicalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+			desc = POLITICS_HNN_GAO_GANG_DESC
 		}
 	}	
 #胡耀邦
@@ -2599,21 +2581,6 @@ characters = {
 		country_leader = {
 			desc =  POLITICS_HNN_Xi_Zhongxun_DESC
 			ideology = social_democrat_subtype
-			traits = { CHN_CHNsyndicalist_aligned }
-		}
-	}	
-#刘少奇
-	HNN_liu_shaoqi = {
-		name = HNN_liu_shaoqi
-		portraits = {
-			civilian = {
-				small = GFX_Portrait_HNN_Daibiaodahui
-				large = "gfx/leaders/HNN/Portrait_HNN_Liu_Shao_Qi.png"
-			}
-		}
-		country_leader = {
-			desc =  POLITICS_HNN_liu_shaoqi_DESC
-			ideology = syndicalist_subtype
 			traits = { CHN_CHNsyndicalist_aligned }
 		}
 	}	
@@ -2647,7 +2614,7 @@ characters = {
 			traits = { CHN_CHNsyndicalist_aligned }
 		}
 	}	
-#钱学森
+#郭沫若
 	HNN_guo_moruo = {
 		name = HNN_guo_moruo
 		portraits = {
@@ -2659,21 +2626,6 @@ characters = {
 		country_leader = {
 			desc =  POLITICS_HNN_guo_moruo_DESC
 			ideology = totalist_subtype
-			traits = { CHN_CHNsyndicalist_aligned }
-		}
-	}	
-	#李立三
-	HNN_li_lisan = {
-		name = HNN_li_lisan
-		portraits = {
-			civilian = {
-				small = GFX_Portrait_HNN_Daibiaodahui
-				large = "gfx/leaders/HNN/Portrait_HNN_Li_li_san.png"
-			}
-		}
-		country_leader = {
-			desc =  POLITICS_HNN_LI_LISAN_DESC
-			ideology = syndicalist_subtype
 			traits = { CHN_CHNsyndicalist_aligned }
 		}
 	}	

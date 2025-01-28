@@ -7740,9 +7740,25 @@ focus_tree = {
 					limit = { 
 						has_completed_focus = HNN_gong_tuan_zhi_dao_ii_hua
 					}
-					promote_character = {
-						character = HNN_li_lisan
-						ideology = syndicalist_subtype
+					add_country_leader_role = {
+						character = CHI_li_lisan
+						promote_leader = yes
+						country_leader = {
+							ideology = syndicalist_subtype
+							expire = "1965.1.1.1"
+							traits = { CHN_CHNsyndicalist_aligned }
+						}
+					}
+					set_portraits = {
+						character = CHI_li_lisan
+						civilian = {
+							large = "gfx/leaders/HNN/Portrait_HNN_Li_li_san.png"
+						}
+					}
+					CHI_li_lisan = {
+						set_variable = {
+							china_alignment = token:CHNsyndicalist
+						}
 					}
 					set_cosmetic_tag = HNN_PROC_LL
 				}
