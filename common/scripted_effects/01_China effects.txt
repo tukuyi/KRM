@@ -1552,7 +1552,6 @@ china_set_government_tag_specific_scripted_effect = {
 			set_cosmetic_tag = CSP_government_cosmetic #总公社
 		}
 	}
-	}
 	else_if = {
 		limit = { check_variable = { country_leader:china_alignment = token:right_kuomintang } }
 		set_cosmetic_tag = RKT_government_cosmetic #Nationalist Military Government
