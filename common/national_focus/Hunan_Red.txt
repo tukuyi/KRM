@@ -9974,7 +9974,13 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus HNN_chong_fan_zhong_guo_zheng_zhi_wu_tai"
 			add_political_power = 50
 			set_potential_national_government = yes
-			china_enable_all_demand_submission_decisions = yes
+			activate_targeted_decision = { decision = china_demand_submission target = SZC }
+			activate_targeted_decision = { decision = china_demand_submission target = SHX }
+			activate_targeted_decision = { decision = china_demand_submission target = YUN }
+			activate_targeted_decision = { decision = china_demand_submission target = GXC }
+			activate_targeted_decision = { decision = china_demand_submission target = ANQ }
+			activate_targeted_decision = { decision = china_demand_submission target = LEP }
+			activate_targeted_decision = { decision = china_demand_submission target = SHD }
 			custom_effect_tooltip = tooltip_white_line
 			china_enable_alliances_decisions = yes
 			custom_effect_tooltip = tooltip_white_line
@@ -10036,6 +10042,7 @@ focus_tree = {
 				type = annex_everything
 				target = var:1072.owner
 		 	}
+			china_enable_all_demand_submission_decisions = yes
 			if = {
 				limit = { 
 					has_completed_focus = HNN_gongtuan
