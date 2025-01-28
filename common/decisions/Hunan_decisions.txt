@@ -11215,7 +11215,10 @@ HNN_recruit_CSPalignment_category = {
 		visible = {
 			is_chinese_tag = yes
 			tag = CSP
-			NOT = { country_exists = YUN }
+			OR = {
+				NOT = { country_exists = YUN }
+				YUN = { is_puppet_of = ROOT }
+			}
 		}
 
 		cost = 15
@@ -11239,7 +11242,10 @@ HNN_recruit_CSPalignment_category = {
 		visible = {
 			is_chinese_tag = yes
 			tag = CSP
-			NOT = { country_exists = GXC }
+			OR = {
+				NOT = { country_exists = GXC }
+				GXC = { is_puppet_of = ROOT }
+			}
 		}
 
 		cost = 15
@@ -11263,7 +11269,10 @@ HNN_recruit_CSPalignment_category = {
 		visible = {
 			is_chinese_tag = yes
 			tag = CSP
-			NOT = { country_exists = SZC }
+			OR = {
+				NOT = { country_exists = SZC }
+				SZC = { is_puppet_of = ROOT }
+			}
 		}
 
 		cost = 15
@@ -11309,7 +11318,10 @@ HNN_recruit_CSPalignment_category = {
 		visible = {
 			is_chinese_tag = yes
 			tag = CSP
-			NOT = { country_exists = SHX }
+			OR = {
+				NOT = { country_exists = SHX }
+				SHX = { is_puppet_of = ROOT }
+			}
 		}
 
 		cost = 15
