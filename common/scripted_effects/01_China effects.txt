@@ -1498,6 +1498,62 @@ china_set_government_tag_specific_scripted_effect = {
 		}
 	}
 	else_if = {
+		limit = { check_variable = { country_leader:china_alignment = token:CHNsyndicalist } }
+		if = {
+			limit = {
+				original_tag = HNN
+			}
+			set_cosmetic_tag = CSP_government_changsha_cosmetic #长沙总公社
+		}
+		else_if = {
+			limit = {
+				OR = {
+					original_tag = LEC
+					original_tag = SHC
+				}
+			}
+			set_cosmetic_tag = CSP_government_shanghai_cosmetic #上海总公社
+		}
+		else_if = {
+			AND = {
+				original_tag = SZC
+				650 = { is_capital = yes }
+			}
+			set_cosmetic_tag = CSP_government_chongqing_cosmetic #重庆总公社
+		}
+		else_if = {
+			limit = {
+				AND = {
+					original_tag = SZC
+					605 = { is_capital = yes }
+				}
+			}
+			set_cosmetic_tag = CSP_government_chengdu_cosmetic #成都总公社
+		}
+		else_if = {
+			limit = {
+				original_tag = YUN
+			}
+			set_cosmetic_tag = CSP_government_kunming_cosmetic #成都总公社
+		}
+		else_if = {
+			limit = {
+				original_tag = SHX
+			}
+			set_cosmetic_tag = CSP_government_zhongyuan_cosmetic #中原总公社
+		}
+		else_if = {
+			limit = {
+				original_tag = GXC
+			}
+			set_cosmetic_tag = CSP_government_guangzhou_cosmetic #广州总公社
+		}
+		else = {
+			set_cosmetic_tag = CSP_government_cosmetic #总公社
+		}
+	}
+	}
+	else_if = {
 		limit = { check_variable = { country_leader:china_alignment = token:right_kuomintang } }
 		set_cosmetic_tag = RKT_government_cosmetic #Nationalist Military Government
 	}
