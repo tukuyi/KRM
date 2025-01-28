@@ -1863,7 +1863,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus HNN_zhong_hua_ren_ming_gong_he_guo_di_yi_ci_ren_ming_dai_biao_da_hui"
 			if = {
 				limit = { 
-					has_country_leader = { name = "彭德怀" ruling_only = yes }
+					has_country_leader = { character = HNN_peng_dehuai ruling_only = yes }
 				}
 				country_event = { 
 					id = hungong.56
@@ -2440,7 +2440,7 @@ focus_tree = {
 		available = {
 			OR = { 
 				has_country_leader = { name = "康生" ruling_only = yes }
-				has_country_leader = { name = "戴笠" ruling_only = yes }
+				has_country_leader = { character = CHI_dai_chunfeng ruling_only = yes }
 			}
 		}
 		prerequisite = {
@@ -2508,7 +2508,7 @@ focus_tree = {
 		available = {
 			OR = { 
 				has_country_leader = { name = "康生" ruling_only = yes }
-				has_country_leader = { name = "戴笠" ruling_only = yes }
+				has_country_leader = { character = CHI_dai_chunfeng ruling_only = yes }
 			}
 		}
 		prerequisite = {
@@ -2542,7 +2542,7 @@ focus_tree = {
 		available = {
 			OR = { 
 				has_country_leader = { name = "康生" ruling_only = yes }
-				has_country_leader = { name = "戴笠" ruling_only = yes }
+				has_country_leader = { character = CHI_dai_chunfeng ruling_only = yes }
 			}
 		}
 		prerequisite = {
@@ -2572,10 +2572,10 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "邓小平" ruling_only = yes }
+				has_country_leader = { character = SHX_deng_xiaoping ruling_only = yes }
 			}
 			bypass = {
-				has_country_leader = { name = "邓小平" ruling_only = yes }
+				has_country_leader = { character = SHX_deng_xiaoping ruling_only = yes }
 			}
 	
 			prerequisite = {
@@ -2601,7 +2601,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "邓小平" ruling_only = yes }
+				has_country_leader = { character = SHX_deng_xiaoping ruling_only = yes }
 			}
 	
 			prerequisite = {
@@ -2637,7 +2637,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "邓小平" ruling_only = yes }
+				has_country_leader = { character = SHX_deng_xiaoping ruling_only = yes }
 			}
 	
 			prerequisite = {
@@ -2662,7 +2662,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "邓小平" ruling_only = yes }
+				has_country_leader = { character = SHX_deng_xiaoping ruling_only = yes }
 			}
 	
 			prerequisite = {
@@ -2696,7 +2696,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "邓小平" ruling_only = yes }
+				has_country_leader = { character = SHX_deng_xiaoping ruling_only = yes }
 			}
 	
 			prerequisite = {
@@ -2731,7 +2731,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "邓小平" ruling_only = yes }
+				has_country_leader = { character = SHX_deng_xiaoping ruling_only = yes }
 			}
 	
 			prerequisite = {
@@ -2778,7 +2778,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "邓小平" ruling_only = yes }
+				has_country_leader = { character = SHX_deng_xiaoping ruling_only = yes }
 			}
 	
 			prerequisite = {
@@ -2833,7 +2833,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "邓小平" ruling_only = yes }
+				has_country_leader = { character = SHX_deng_xiaoping ruling_only = yes }
 				NOT = {
 					has_country_flag = HNN_yao_qian
 				}
@@ -2887,10 +2887,10 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "高岗" ruling_only = yes }
+				has_country_leader = { character = HNN_gao_gang ruling_only = yes }
 			}
 			bypass = {
-				has_country_leader = { name = "高岗" ruling_only = yes }
+				has_country_leader = { character = HNN_gao_gang ruling_only = yes }
 			}
 		
 			prerequisite = {
@@ -2916,7 +2916,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "高岗" ruling_only = yes }
+				has_country_leader = { character = HNN_gao_gang ruling_only = yes }
 			}
 
 			prerequisite = {
@@ -2941,7 +2941,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "高岗" ruling_only = yes }
+				has_country_leader = { character = HNN_gao_gang ruling_only = yes }
 			}
 		
 			prerequisite = {
@@ -2999,7 +2999,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "高岗" ruling_only = yes }
+				has_country_leader = { character = HNN_gao_gang ruling_only = yes }
 			}
 
 			prerequisite = {
@@ -3039,7 +3039,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "高岗" ruling_only = yes }
+				has_country_leader = { character = HNN_gao_gang ruling_only = yes }
 			}
 
 			prerequisite = {
@@ -3096,7 +3096,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "高岗" ruling_only = yes }
+				has_country_leader = { character = HNN_gao_gang ruling_only = yes }
 			}
 
 			prerequisite = {
@@ -3132,7 +3132,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "高岗" ruling_only = yes }
+				has_country_leader = { character = HNN_gao_gang ruling_only = yes }
 			}
 
 			prerequisite = {
@@ -3178,7 +3178,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "高岗" ruling_only = yes }
+				has_country_leader = { character = HNN_gao_gang ruling_only = yes }
 				NOT = {
 					has_country_flag = HNN_yao_qian
 				}
@@ -3216,10 +3216,10 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "周恩来" ruling_only = yes }
+				has_country_leader = { character = CHI_zhou_enlai ruling_only = yes }
 			}
 			bypass = {
-				has_country_leader = { name = "周恩来" ruling_only = yes }
+				has_country_leader = { character = CHI_zhou_enlai ruling_only = yes }
 			}
 		
 			prerequisite = {
@@ -3300,7 +3300,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "周恩来" ruling_only = yes }
+				has_country_leader = { character = CHI_zhou_enlai ruling_only = yes }
 			}
 
 			prerequisite = {
@@ -3336,7 +3336,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "周恩来" ruling_only = yes }
+				has_country_leader = { character = CHI_zhou_enlai ruling_only = yes }
 			}
 			bypass = {
 				
@@ -3380,7 +3380,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "周恩来" ruling_only = yes }
+				has_country_leader = { character = CHI_zhou_enlai ruling_only = yes }
 			}
 			bypass = {
 				
@@ -3450,7 +3450,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "周恩来" ruling_only = yes }
+				has_country_leader = { character = CHI_zhou_enlai ruling_only = yes }
 			}
 			bypass = {
 				
@@ -3481,7 +3481,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "周恩来" ruling_only = yes }
+				has_country_leader = { character = CHI_zhou_enlai ruling_only = yes }
 				NOT = {
 					has_country_flag = HNN_yao_qian
 				}
@@ -3534,10 +3534,10 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "钱学森" ruling_only = yes }
+				has_country_leader = { character = HNN_qian_xuesen ruling_only = yes }
 			}
 			bypass = {
-				has_country_leader = { name = "钱学森" ruling_only = yes }
+				has_country_leader = { character = HNN_qian_xuesen ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -3558,7 +3558,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "钱学森" ruling_only = yes }
+				has_country_leader = { character = HNN_qian_xuesen ruling_only = yes }
 			}
 
 			prerequisite = {
@@ -3717,10 +3717,10 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "陈毅" ruling_only = yes }
+				has_country_leader = { character = YUN_chen_yi ruling_only = yes }
 			}
 			bypass = {
-				has_country_leader = { name = "陈毅" ruling_only = yes }
+				has_country_leader = { character = YUN_chen_yi ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -3817,10 +3817,10 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "郭沫若" ruling_only = yes }
+				has_country_leader = { character = HNN_guo_moruo ruling_only = yes }
 			}
 			bypass = {
-				has_country_leader = { name = "郭沫若" ruling_only = yes }
+				has_country_leader = { character = HNN_guo_moruo ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -4109,7 +4109,7 @@ focus_tree = {
 			}
 		}	
 
-	#戴笠
+	#戴春风
 		focus = {
 			id = HNN_dai_li_zhu_xi
 			icon = GFX_goal_HNN_dai_li_zhu_xi
@@ -4122,10 +4122,10 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "戴笠" ruling_only = yes }
+				has_country_leader = { character = CHI_dai_chunfeng ruling_only = yes }
 			}
 			bypass = {
-				has_country_leader = { name = "戴笠" ruling_only = yes }
+				has_country_leader = { character = CHI_dai_chunfeng ruling_only = yes }
 			}
 	
 			prerequisite = {
@@ -4150,7 +4150,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "戴笠" ruling_only = yes }
+				has_country_leader = { character = CHI_dai_chunfeng ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_dai_li_zhu_xi
@@ -4187,7 +4187,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "戴笠" ruling_only = yes }
+				has_country_leader = { character = CHI_dai_chunfeng ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_dai_li_zhu_xi
@@ -4238,7 +4238,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "戴笠" ruling_only = yes }
+				has_country_leader = { character = CHI_dai_chunfeng ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_long_tou_men_de_jiao_yi
@@ -4266,10 +4266,10 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "刘少奇" ruling_only = yes }
+				has_country_leader = { character = CHI_liu_shaoqi ruling_only = yes }
 			}
 			bypass = {
-				has_country_leader = { name = "刘少奇" ruling_only = yes }
+				has_country_leader = { character = CHI_liu_shaoqi ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_dang_de_fa_lv
@@ -4294,7 +4294,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "刘少奇" ruling_only = yes }
+				has_country_leader = { character = CHI_liu_shaoqi ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_liu_shao_qi_zhu_xi
@@ -4364,7 +4364,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "刘少奇" ruling_only = yes }
+				has_country_leader = { character = CHI_liu_shaoqi ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_kai_zhan_si_qing_yun_dong
@@ -4395,7 +4395,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "刘少奇" ruling_only = yes }
+				has_country_leader = { character = CHI_liu_shaoqi ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_tu_di_gai_ge
@@ -4438,7 +4438,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "刘少奇" ruling_only = yes }
+				has_country_leader = { character = CHI_liu_shaoqi ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_tu_di_gai_ge
@@ -4462,7 +4462,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "刘少奇" ruling_only = yes }
+				has_country_leader = { character = CHI_liu_shaoqi ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_gong_ren_ling_dao
@@ -4494,7 +4494,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "刘少奇" ruling_only = yes }
+				has_country_leader = { character = CHI_liu_shaoqi ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_gong_ren_ling_dao
@@ -4541,7 +4541,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "刘少奇" ruling_only = yes }
+				has_country_leader = { character = CHI_liu_shaoqi ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_fen_sui_pai_xi_zhu_yi
@@ -4572,10 +4572,10 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "陈云" ruling_only = yes }
+				has_country_leader = { character = HNN_chen_yun ruling_only = yes }
 			}
 			bypass = {
-				has_country_leader = { name = "陈云" ruling_only = yes }
+				has_country_leader = { character = HNN_chen_yun ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_dang_de_fa_lv
@@ -4600,7 +4600,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "陈云" ruling_only = yes }
+				has_country_leader = { character = HNN_chen_yun ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_chen_yun_zhu_xi
@@ -4631,7 +4631,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "陈云" ruling_only = yes }
+				has_country_leader = { character = HNN_chen_yun ruling_only = yes }
 			}		
 			prerequisite = {
 				focus = HNN_ji_hua_sheng_yu_zong_fang_zhen
@@ -4677,7 +4677,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "陈云" ruling_only = yes }
+				has_country_leader = { character = HNN_chen_yun ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_ji_hua_sheng_yu_zong_fang_zhen
@@ -4743,7 +4743,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "陈云" ruling_only = yes }
+				has_country_leader = { character = HNN_chen_yun ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_niao_long_li_lun
@@ -4768,7 +4768,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "陈云" ruling_only = yes }
+				has_country_leader = { character = HNN_chen_yun ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_niao_long_li_lun
@@ -4813,7 +4813,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "陈云" ruling_only = yes }
+				has_country_leader = { character = HNN_chen_yun ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_zhi_wei_shi
@@ -4844,10 +4844,10 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "习仲勋" ruling_only = yes }
+				has_country_leader = { character = HNN_xi_zhongxun ruling_only = yes }
 			}
 			bypass = {
-				has_country_leader = { name = "习仲勋" ruling_only = yes }
+				has_country_leader = { character = HNN_xi_zhongxun ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_dang_de_fa_lv
@@ -4872,7 +4872,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "习仲勋" ruling_only = yes }
+				has_country_leader = { character = HNN_xi_zhongxun ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_xi_zhong_xun_zhu_xi
@@ -4899,7 +4899,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "习仲勋" ruling_only = yes }
+				has_country_leader = { character = HNN_xi_zhongxun ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_cheng_li_ji_wei
@@ -4933,7 +4933,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "习仲勋" ruling_only = yes }
+				has_country_leader = { character = HNN_xi_zhongxun ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_cheng_li_ji_wei
@@ -5094,7 +5094,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "习仲勋" ruling_only = yes }
+				has_country_leader = { character = HNN_xi_zhongxun ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_cheng_li_ji_wei
@@ -5119,7 +5119,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "习仲勋" ruling_only = yes }
+				has_country_leader = { character = HNN_xi_zhongxun ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_si_da_zi_you
@@ -5149,7 +5149,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "习仲勋" ruling_only = yes }
+				has_country_leader = { character = HNN_xi_zhongxun ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_si_da_zi_you
@@ -5183,7 +5183,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "习仲勋" ruling_only = yes }
+				has_country_leader = { character = HNN_xi_zhongxun ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_xiao_chu_cheng_xiang_cha_bie
@@ -5215,10 +5215,10 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "胡耀邦" ruling_only = yes }
+				has_country_leader = { character = HNN_hu_yaobang ruling_only = yes }
 			}
 			bypass = {
-				has_country_leader = { name = "胡耀邦" ruling_only = yes }
+				has_country_leader = { character = HNN_hu_yaobang ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_dang_de_fa_lv
@@ -5243,7 +5243,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "胡耀邦" ruling_only = yes }
+				has_country_leader = { character = HNN_hu_yaobang ruling_only = yes }
 			}	
 			prerequisite = {
 				focus = HNN_shi_chang_jing_ji
@@ -5275,7 +5275,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "胡耀邦" ruling_only = yes }
+				has_country_leader = { character = HNN_hu_yaobang ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_mi_he_dang_nei
@@ -5300,7 +5300,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "胡耀邦" ruling_only = yes }
+				has_country_leader = { character = HNN_hu_yaobang ruling_only = yes }
 			}	
 			prerequisite = {
 				focus = HNN_mi_he_dang_nei
@@ -5325,7 +5325,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "胡耀邦" ruling_only = yes }
+				has_country_leader = { character = HNN_hu_yaobang ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_she_hui_fu_li
@@ -5361,7 +5361,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "胡耀邦" ruling_only = yes }
+				has_country_leader = { character = HNN_hu_yaobang ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_she_hui_fu_li
@@ -5398,7 +5398,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "胡耀邦" ruling_only = yes }
+				has_country_leader = { character = HNN_hu_yaobang ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_she_hui_fu_li
@@ -5562,7 +5562,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "胡耀邦" ruling_only = yes }
+				has_country_leader = { character = HNN_hu_yaobang ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_shi_jian_shi_biao_zhun
@@ -5623,7 +5623,7 @@ focus_tree = {
 				focus = HNN_wei_chi_jun_shi_guan_li
 			}
 			available = {
-				has_country_leader = { name = "彭德怀" ruling_only = yes }
+				has_country_leader = { character = HNN_peng_dehuai ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -5667,7 +5667,7 @@ focus_tree = {
 				focus = HNN_wei_chi_jun_shi_guan_li
 			}
 			available = {
-				has_country_leader = { name = "彭德怀" ruling_only = yes }
+				has_country_leader = { character = HNN_peng_dehuai ruling_only = yes }
 			}
 
 			completion_reward = {
@@ -5694,7 +5694,7 @@ focus_tree = {
 				focus = HNN_wei_chi_jun_shi_guan_li
 			}
 			available = {
-				has_country_leader = { name = "彭德怀" ruling_only = yes }
+				has_country_leader = { character = HNN_peng_dehuai ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -5753,7 +5753,7 @@ focus_tree = {
 				focus = HNN_dang_jing
 			}
 			available = {
-				has_country_leader = { name = "彭德怀" ruling_only = yes }
+				has_country_leader = { character = HNN_peng_dehuai ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -5789,7 +5789,7 @@ focus_tree = {
 				focus = HNN_dang_jing
 			}
 			available = {
-				has_country_leader = { name = "彭德怀" ruling_only = yes }
+				has_country_leader = { character = HNN_peng_dehuai ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -5819,7 +5819,7 @@ focus_tree = {
 				focus = HNN_zhan_wang_wei_lai
 			}
 			available = {
-				has_country_leader = { name = "彭德怀" ruling_only = yes }
+				has_country_leader = { character = HNN_peng_dehuai ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -5847,7 +5847,7 @@ focus_tree = {
 				focus = HNN_lao_bu_ke_po_de_dang
 			}
 			available = {
-				has_country_leader = { name = "彭德怀" ruling_only = yes }
+				has_country_leader = { character = HNN_peng_dehuai ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -5874,7 +5874,7 @@ focus_tree = {
 				focus = HNN_lao_bu_ke_po_de_dang
 			}
 			available = {
-				has_country_leader = { name = "彭德怀" ruling_only = yes }
+				has_country_leader = { character = HNN_peng_dehuai ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -5921,7 +5921,7 @@ focus_tree = {
 				focus = HNN_lao_bu_ke_po_de_dang
 			}
 			available = {
-				has_country_leader = { name = "彭德怀" ruling_only = yes }
+				has_country_leader = { character = HNN_peng_dehuai ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -5958,7 +5958,7 @@ focus_tree = {
 				focus = HNN_kuo_da_he_zuo_she
 			}
 			available = {
-				has_country_leader = { name = "彭德怀" ruling_only = yes }
+				has_country_leader = { character = HNN_peng_dehuai ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -6000,7 +6000,7 @@ focus_tree = {
 				focus = HNN_qing_zhong_bing_xing
 			}
 			available = {
-				has_country_leader = { name = "彭德怀" ruling_only = yes }
+				has_country_leader = { character = HNN_peng_dehuai ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -6030,7 +6030,7 @@ focus_tree = {
 				focus = HNN_ji_shu_guan_liao_he_zuo
 			}
 			available = {
-				has_country_leader = { name = "彭德怀" ruling_only = yes }
+				has_country_leader = { character = HNN_peng_dehuai ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -6062,7 +6062,7 @@ focus_tree = {
 				focus = HNN_jun_guan_xia_de_chun_tian
 			}
 			available = {
-				has_country_leader = { name = "彭德怀" ruling_only = yes }
+				has_country_leader = { character = HNN_peng_dehuai ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -6110,7 +6110,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_mao_zhe_dong_zhu_xi
@@ -6134,7 +6134,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_mao_zhe_dong_zhu_xi
@@ -6158,7 +6158,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_wu_guan_de_re_qing
@@ -6185,7 +6185,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_ri_yi_gao_zang
@@ -6212,7 +6212,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_fen_qi_yi_bo
@@ -6240,7 +6240,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_nong_ming_guo_jia_de_zhu_shi
@@ -6295,7 +6295,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_nong_ming_guo_jia_de_zhu_shi
@@ -6332,7 +6332,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_cong_jian_nong_hui
@@ -6368,7 +6368,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_fen_qi_yi_bo
@@ -6396,7 +6396,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_gong_gu_dang_zhi
@@ -6436,7 +6436,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_dang_de_sheng_yu
@@ -6460,7 +6460,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_dang_nei_xie_shang
@@ -6490,7 +6490,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_fen_qi_yi_bo
@@ -6522,7 +6522,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_wei_ceng_she_xiang_zhi_ren
@@ -6557,7 +6557,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_wan_jie_zhi_shen_ying_xiang
@@ -6595,7 +6595,7 @@ focus_tree = {
 			}
 			available = {
 				has_completed_focus = HNN_ren_ming_xu_yao_ling_dao
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_wai_quan_zi_she_hui_tui_chang
@@ -6622,7 +6622,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "毛泽东" ruling_only = yes }
+				has_country_leader = { character = HNN_mao_ze_dong ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_wei_da_de_yuan_jing
@@ -7044,11 +7044,11 @@ focus_tree = {
 				focus = HNN_qing_suan_bao_jun
 			}
 			available = {
-				has_country_leader = { name = "贺龙" ruling_only = yes }
+				has_country_leader = { character = HNN_he_long ruling_only = yes }
 				has_government = radical_socialist
 			}
 			bypass = {
-				has_country_leader = { name = "贺龙" ruling_only = yes }
+				has_country_leader = { character = HNN_he_long ruling_only = yes }
 				has_government = radical_socialist
 			}
 	
@@ -7806,10 +7806,10 @@ focus_tree = {
 				focus = HNN_qing_suan_bao_jun
 			}
 			available = {
-				has_country_leader = { name = "林彪" ruling_only = yes }
+				has_country_leader = { character = CHI_lin_biao ruling_only = yes }
 			}
 			bypass = {
-				has_country_leader = { name = "林彪" ruling_only = yes }
+				has_country_leader = { character = CHI_lin_biao ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -8063,10 +8063,10 @@ focus_tree = {
 				focus = HNN_qing_suan_bao_jun
 			}
 			available = {
-				has_country_leader = { name = "叶剑英" ruling_only = yes }
+				has_country_leader = { character = GXC_ye_jianying ruling_only = yes }
 			}
 			bypass = {
-				has_country_leader = { name = "叶剑英" ruling_only = yes }
+				has_country_leader = { character = GXC_ye_jianying ruling_only = yes }
 			}
 	
 			completion_reward = {
@@ -10487,6 +10487,14 @@ focus_tree = {
 		prerequisite = {
 			focus = HNN_jie_fa_dong_ya
 		}
+		bypass = {
+			OR = {
+				NOT = { JAP = { exists = yes } }
+				JAP = {
+					is_puppet_of = ROOT
+				}
+			}
+		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HNN_xu_ri_xi_luo"
@@ -10637,9 +10645,9 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				has_country_leader = { name = "叶剑英" ruling_only = yes }
-				has_country_leader = { name = "戴笠" ruling_only = yes }
-				has_country_leader = { name = "邓小平" ruling_only = yes }
+				has_country_leader = { character = GXC_ye_jianying ruling_only = yes }
+				has_country_leader = { character = CHI_dai_chunfeng ruling_only = yes }
+				has_country_leader = { character = SHX_deng_xiaoping ruling_only = yes }
 			}
 			GER = {
 				exists = yes
@@ -10982,8 +10990,8 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				has_country_leader = { name = "叶剑英" ruling_only = yes }
-				has_country_leader = { name = "林彪" ruling_only = yes }
+				has_country_leader = { character = GXC_ye_jianying ruling_only = yes }
+				has_country_leader = { character = CHI_lin_biao ruling_only = yes }
 			}
 		}
 		mutually_exclusive = {

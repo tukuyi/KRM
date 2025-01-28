@@ -1262,7 +1262,7 @@ country_event = {#习富平
 
 	trigger = {
 		tag = HNN
-		has_country_leader = { name = "习仲勋" ruling_only = yes }
+		has_country_leader = { character = HNN_xi_zhongxun ruling_only = yes }
 		date > 1941.12.26
 	}
 
@@ -1353,7 +1353,7 @@ country_event = {#事情正在起变化
 					NOT ={
 						OR = {
 							has_country_leader = { name = "康生" ruling_only = yes }
-							has_country_leader = { name = "戴笠" ruling_only = yes }
+							has_country_leader = { character = CHI_dai_chunfeng ruling_only = yes }
 						}
 					}
 				}
@@ -2036,7 +2036,7 @@ country_event = {#肃反之夜
 		add_ideas = LEC_kang_sheng_hog
 	}
 
-	option = {#戴笠
+	option = {#戴春风
 		name = hungong.79.b
 		promote_character = {
 			character = CHI_dai_chunfeng
@@ -4437,6 +4437,9 @@ country_event = {#习仲勋案
 			ideology = social_liberal
 			popularity = -0.05
 		}
+		HNN_xi_zhongxun = {
+			kill = yes
+		}
 	}
 }
 
@@ -4458,9 +4461,8 @@ country_event = {#朱德案
 			ideology = social_democrat
 			popularity = -0.05
 		}
-		random_unit_leader = {
-			limit = { has_id = 5007 }
-			remove_unit_leader = yes
+		YUN_zhu_de = {
+			kill = yes
 		}
 	}
 }
@@ -4481,6 +4483,9 @@ country_event = {#陈独秀案
 		add_popularity = {
 			ideology = syndicalist
 			popularity = -0.05
+		}
+		CHI_chen_duxiu = {
+			kill = yes
 		}
 	}
 }
