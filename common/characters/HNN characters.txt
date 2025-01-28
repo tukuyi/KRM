@@ -74,7 +74,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			desc = HNN_he_long_sic_desc
+			desc =  POLITICS_HNN_HE_LONG_DESC
 			traits = { CHI_left_kmt_officer trait_reckless light_infantry_officer commando trickster war_hero }
 			skill = 2
 			attack_skill = 2
@@ -85,7 +85,7 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = HNN_he_long_army_chief
-			desc = HNN_he_long_sic_desc
+			desc =  POLITICS_HNN_HE_LONG_DESC
 			traits = { KR_army_chief_manoeuvre_2 }
 			cost = 100
 			on_add = {
@@ -121,7 +121,7 @@ characters = {
 			can_be_fired = no
 		}
 		country_leader = {
-			desc = HNN_he_long_sic_desc
+			desc =  POLITICS_HNN_HE_LONG_DESC
 			ideology = radical_socialist_subtype
 			traits = {
 				CHN_CHNsyndicalist_aligned
@@ -2303,6 +2303,13 @@ characters = {
 			planning_skill = 5
 			logistics_skill = 1
 		}
+		country_leader = {
+			ideology = radical_socialist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+			desc = POLITICS_HNN_MAO_ZHE_DONG_DESC
+		}
 	}		
 #王震
 	HNN_wang_zhen = {
@@ -2442,6 +2449,7 @@ characters = {
 			traits = {
 				CHN_CHNsyndicalist_aligned
 			}
+			DESC = POLITICS_HNN_CHEN_YUN_DESC
 		}
 	}			
 #袁文才
@@ -2538,6 +2546,13 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 2
 		}
+		country_leader = {
+			ideology = syndicalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+			desc = POLITICS_HNN_GAO_GANG_DESC
+		}
 	}	
 #胡耀邦
 	HNN_hu_yaobang = {
@@ -2599,7 +2614,7 @@ characters = {
 			traits = { CHN_CHNsyndicalist_aligned }
 		}
 	}	
-#钱学森
+#郭沫若
 	HNN_guo_moruo = {
 		name = HNN_guo_moruo
 		portraits = {

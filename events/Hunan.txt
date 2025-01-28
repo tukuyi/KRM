@@ -1247,7 +1247,7 @@ country_event = {#结束军管
 			HNN_Li_Fu_Chun_eco
 		}
 		hidden_effect = {
-			set_country_leader_description = {
+			set_leader_description = {
 				desc = "POLITICS_HNN_PENG_DEHUAI_TONG_YI_DESC"
 			}
 		}
@@ -1957,6 +1957,7 @@ country_event = {#放权
 			set_variable = {
 				china_alignment = token:CHNsyndicalist
 			}
+			set_leader_description = POLITICS_HNN_Chen_Yi_DESC
 		}
 		set_party_name = {
 			ideology = totalist
@@ -1976,6 +1977,7 @@ country_event = {#放权
 			ideology = totalist_subtype
 		}
 		CHI_zhou_enlai = {
+			set_leader_description = POLITICS_HNN_ZHOU_ENLAI_DESC
 			set_portraits = {
 				civilian = {
 					large = "gfx/leaders/HNN/Portrait_CHI_Zhou_Enlai_CIV.png"
@@ -4774,9 +4776,15 @@ country_event = {#林彪的胜利
 	}
 	option = { #yes
 		name = hunarmy.5.a
-		promote_character = {
+		add_country_leader_role = {
 			character = CHI_lin_biao
-			ideology = totalist_subtype
+			promote_leader = yes
+			country_leader = {
+				ideology = totalist_subtype
+				expire = "1965.1.1.1"
+				traits = { CHN_CHNsyndicalit_aligned }
+				desc = POLITICS_HNN_LIN_BIAO_DESC
+			}
 		}
 		CHI_lin_biao = {
 			swap_country_leader_traits = {
@@ -4840,6 +4848,7 @@ country_event = {#叶剑英的胜利
 			set_variable = {
 				china_alignment = token:CHNsyndicalist
 			}
+			set_leader_description =  POLITICS_HNN_YE_JIAN_YING_DESC
 		}
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -6751,6 +6760,9 @@ country_event = {#中华人民共和国
 			set_politics = {
 				ruling_party = totalist
 			}
+			SHX_deng_xiaoping = {
+				set_leader_description = POLITICS_HNN_DENG_XIAOPING_DESC
+			}
 			add_popularity = {
 				ideology = totalist
 				popularity = 0.50
@@ -6786,6 +6798,9 @@ country_event = {#中华人民共和国
 					}
 				}
 			}
+			set_politics = {
+				ruling_party = syndicalist
+			}
 			add_country_leader_role = {
 				character = CHI_liu_shaoqi
 				promote_leader = yes
@@ -6805,9 +6820,7 @@ country_event = {#中华人民共和国
 				set_variable = {
 					china_alignment = token:CHNsyndicalist
 				}
-			}
-			set_politics = {
-				ruling_party = syndicalist
+				set_country_leader_description = POLITICS_HNN_LIU_SHAO_QI_DESC
 			}
 			add_popularity = {
 				ideology = syndicalist
@@ -6897,6 +6910,9 @@ country_event = {#中华人民共和国
 			add_popularity = {
 				ideology = radical_socialist
 				popularity = 0.50
+			}
+			CHI_zhou_enlai = {
+				set_leader_description = POLITICS_HNN_ZHOU_ENLAI_DESC
 			}
 			remove_all_ministers = yes
 			add_ideas = {
