@@ -426,6 +426,7 @@ country_event = {#革命成功
 			retire_character = HNN_tian_yingzhao
 			retire_character = HNN_ye_kaixin
 			retire_character = HNN_zhao_hengti
+			retire_character = HNN_he_yaozu
 			HNN_He_Su_Heng = { HNN_recruit_characters_effect = yes }
 			HNN_Dong_Bi_Wu = { HNN_recruit_characters_effect = yes }
 			HNN_he_long = { HNN_recruit_characters_effect = yes }
@@ -441,7 +442,6 @@ country_event = {#革命成功
 			HNN_Chen_Yun = { HNN_recruit_characters_effect = yes }
 			HNN_tang_shengming = { HNN_recruit_characters_effect = yes }
 			HNN_Hua_Guofeng = { HNN_recruit_characters_effect = yes }
-			HNN_mao_ze_dong = { HNN_recruit_character_effect = yes }
 			HNN_peng_dehuai = {
 				promote_leader = yes
 			}
@@ -7801,18 +7801,15 @@ country_event = {###国民党左派革命失败
 			ideology = social_democrat
 			popularity = 0.02
 		}
+		custom_effect_tooltip =  CSP_RCHI_tooltip
 		hidden_effect = {
 			country_event = { 
 				id = hungong.32
 				days = 2
 			}
+			CSP_recruit_from_CHI_effect = yes
 			set_country_flag = HNN_recruited_CHI
-			custom_effect_tooltip =  CSP_RCHI_tooltip
-			hidden_effect = {
-				every_country = {
-					CSP_recruit_from_CHI_effect = yes
-				}
-			}
+			
 			set_party_name = {
 				ideology = radical_socialist
 				long_name =  HNN_radical_socialist_party_dbw_long
