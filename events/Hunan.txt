@@ -1247,8 +1247,8 @@ country_event = {#结束军管
 			HNN_Li_Fu_Chun_eco
 		}
 		hidden_effect = {
-			set_leader_description = {
-				desc = "POLITICS_HNN_PENG_DEHUAI_TONG_YI_DESC"
+			HNN_peng_dehuai = {
+				set_leader_description = POLITICS_HNN_PENG_DEHUAI_TONG_YI_DESC
 			}
 		}
 	}
