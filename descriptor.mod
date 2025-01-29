@@ -19,5 +19,5 @@ dependencies={
 	"Kaiserreich Models - Base Game"
 	"Kaiserreich Models - Waking the Tiger DLC"
 }
-name="命运的歧点"
-supported_version="1.15.4"
+name="KR 命运的歧点"
+supported_version="1.15.*"
