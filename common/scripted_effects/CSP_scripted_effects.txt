@@ -3,7 +3,7 @@ CSP_recruit_character_effect = {#招募
 		limit = {
 			NOT = {
 				THIS = { has_character_flag = is_dead }
-				CSP = { has_character = PREV }
+				ROOT = { has_character = PREV }
 			}
 		}
 		if = {
@@ -16,7 +16,7 @@ CSP_recruit_character_effect = {#招募
 }
 
 CSP_recruit_from_CHI_effect = {
-	every_country = {
+	every_other_country = {
 		CHI_zhang_zhizhong = {
 			CSP_recruit_character_effect = yes
 		}
@@ -81,7 +81,7 @@ CSP_recruit_from_CHI_effect = {
 }
 
 CSP_recruit_from_YUN_effect = {
-	every_country = {
+	every_other_country = {
 		YUN_zhu_de = {
 			CSP_recruit_character_effect = yes
 		}
@@ -97,7 +97,7 @@ CSP_recruit_from_YUN_effect = {
 
 
 CSP_recruit_from_GXC_effect = {
-	every_country = {
+	every_other_country = {
 		GXC_ye_jianying = {
 			CSP_recruit_character_effect = yes
 		}
@@ -116,7 +116,7 @@ CSP_recruit_from_GXC_effect = {
 
 
 CSP_recruit_from_SZC_effect = {
-	every_country = {
+	every_other_country = {
 		SZC_liu_bocheng = {
 			CSP_recruit_character_effect = yes
 		}
@@ -134,7 +134,7 @@ CSP_recruit_from_SZC_effect = {
 }
 
 CSP_recruit_from_HNN_effect = {
-	every_country = {
+	every_other_country = {
 		HNN_he_long = {
 			CSP_recruit_character_effect = yes
 		}
@@ -208,7 +208,7 @@ CSP_recruit_from_HNN_effect = {
 
 
 CSP_recruit_from_SHX_effect = {
-	every_country = {
+	every_other_country = {
 		SHX_feng_yuxiang = {
 			CSP_recruit_character_effect = yes
 		}
@@ -229,7 +229,7 @@ CSP_recruit_from_SHX_effect = {
 
 
 CSP_recruit_from_BEIFANG_effect = {
-	every_country = {
+	every_other_country = {
 		ANQ_peng_xuefeng = {
 			CSP_recruit_character_effect = yes
 		}
