@@ -118,6 +118,7 @@ country_event = {#enlai
 			swap_country_leader_traits = {
 				remove = CHN_left_kuomintang_aligned
 				add = CHN_CHNsyndicalist_aligned
+				ideology = totalist_subtype
 			}
 			set_variable = {
 				china_alignment = token:CHNsyndicalist
@@ -824,6 +825,7 @@ country_event = {#并入国民党
 			swap_country_leader_traits = {
 				remove = CHN_CHNsyndicalist_aligned
 				add = CHN_left_kuomintang_aligned
+				ideology = radical_socialist_subtype
 			}
 		}
 	}
@@ -2043,8 +2045,10 @@ country_event = {#肃反之夜
 			ideology = totalist_subtype
 		}
 		CHI_dai_chunfeng = {
-			add_country_leader_trait = {
-				CHN_CHNsyndicalist_aligned
+			swap_country_leader_traits = {
+				remove = CHN_non_aligned
+				add = CHN_CHNsyndicalist_aligned
+				ideology = totalist_subtype
 			}
 			set_variable = {
 				china_alignment = token:CHNsyndicalist
@@ -4788,7 +4792,10 @@ country_event = {#林彪的胜利
 	fire_only_once = yes
 	is_triggered_only = yes
 	immediate = {
+		hidden_effect = {
 		recruit_character = CHI_lin_biao
+
+		}
 	}
 	option = { #yes
 		name = hunarmy.5.a
@@ -4842,7 +4849,10 @@ country_event = {#叶剑英的胜利
 	fire_only_once = yes
 	is_triggered_only = yes
 	immediate = {
+		hidden_effect = {
 		recruit_character = GXC_ye_jianying
+
+		}
 	}
 
 	option = { #yes
@@ -4857,10 +4867,6 @@ country_event = {#叶剑英的胜利
 			}
 		}
 		GXC_ye_jianying = {
-			swap_country_leader_traits = {
-				remove = CHN_left_kuomintang_aligned
-				add = CHN_CHNsyndicalist_aligned
-			}
 			set_variable = {
 				china_alignment = token:CHNsyndicalist
 			}
@@ -5889,9 +5895,6 @@ country_event = {#向首都进军
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	immediate = {
-		recruit_character = HNN_mao_ze_dong
-	}
 
 	option = { #yes
 		name = hunmao.4.a
@@ -5916,12 +5919,7 @@ country_event = {#向首都进军
 			name =  HNN_radical_socialist_party_proc_M
 		}
 		remove_all_ministers = yes
-		add_ideas = {
-			HNN_Mao_Ze_Dong_hog
-			HNN_chen_yi_for
-			HNN_Li_Fu_Chun_eco
-			HNN_Shang_Kun_sec
-		}
+		activate_advisor = YUN_chen_yi_sic
 		HNN_fcations_change = yes 
 		hidden_effect = {
 			set_cosmetic_tag = HNN_PROC_M
@@ -6281,10 +6279,6 @@ country_event = {#中华人民共和国
 				}
 			}
 			SHX_deng_xiaoping = {
-				swap_country_leader_traits = {
-					remove = CHN_left_kuomintang_aligned
-					add = CHN_CHNsyndicalist_aligned
-				}
 				set_variable = {
 					china_alignment = token:CHNsyndicalist
 				}
