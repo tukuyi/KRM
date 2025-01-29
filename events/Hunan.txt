@@ -6186,6 +6186,30 @@ country_event = {#中华人民共和国
 		has_country_flag = HNN_gong_tuan_victory_flag
 	}
 
+	immediate = {
+		SHX = {
+			SHX_deng_xiaoping = {
+				CSP_recruit_character_effect = yes
+			}
+			SHX_bo_yibo = {
+				CSP_recruit_character_effect = yes
+			}
+			CHI_lin_biao = {
+				CSP_recruit_character_effect = yes
+			}
+		}
+		YUN = {
+			YUN_chen_yi = {
+				CSP_recruit_character_effect = yes
+			}
+		}
+		GXC = {
+			GXC_ye_jianying = {
+				CSP_recruit_character_effect = yes
+			}
+		}
+		}
+	}
 	fire_only_once = yes
 
 	option = {#唐生智

@@ -23,14 +23,11 @@ HNN_recruit_CSPalignment_category = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete CSP_recruit_in_CHI"
 			custom_effect_tooltip =  CSP_RCHI_tooltip
-			hidden_effect = {
-				set_variable = {
-					var = CSPalignmentTARGET_temp
-					value = CHI
-				}
-				country_event = { 
-					id = CSP.1
-				}
+			CHI = {
+				CSP_recruit_from_CHI_effect = yes
+			}
+			HNN = {
+				CSP_recruit_from_CHI_effect = yes
 			}
 		}
 
@@ -63,14 +60,11 @@ HNN_recruit_CSPalignment_category = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete CSP_recruit_in_YUN"
 			custom_effect_tooltip =  CSP_RYUN_tooltip
-			hidden_effect = {
-				set_variable = {
-					var = CSPalignmentTARGET_temp
-					value = YUN
-				}
-				country_event = { 
-					id = CSP.1
-				}
+			YUN = {
+				CSP_recruit_from_YUN_effect = yes
+			}
+			HNN = {
+				CSP_recruit_from_YUN_effect = yes
 			}
 		}
 
@@ -104,14 +98,11 @@ HNN_recruit_CSPalignment_category = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete CSP_recruit_in_GXC"
 			custom_effect_tooltip =  CSP_RGXC_tooltip
-			hidden_effect = {
-				set_variable = {
-					var = CSPalignmentTARGET_temp
-					value = GXC
-				}
-				country_event = { 
-					id = CSP.1
-				}
+			GXC = {
+				CSP_recruit_from_GXC_effect = yes
+			}
+			HNN = {
+				CSP_recruit_from_GXC_effect = yes
 			}
 		}
 
@@ -146,14 +137,11 @@ HNN_recruit_CSPalignment_category = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete CSP_recruit_in_SZC"
 			custom_effect_tooltip =  CSP_RSZC_tooltip
-			hidden_effect = {
-				set_variable = {
-					var = CSPalignmentTARGET_temp
-					value = SZC
-				}
-				country_event = { 
-					id = CSP.1
-				}
+			SZC = {
+				CSP_recruit_from_SZC_effect = yes
+			}
+			HNN = {
+				CSP_recruit_from_SZC_effect = yes
 			}
 		}
 		ai_will_do = {
@@ -183,14 +171,8 @@ HNN_recruit_CSPalignment_category = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete CSP_recruit_in_HNN"
 			custom_effect_tooltip =  CSP_RHNN_tooltip
-			hidden_effect = {
-				set_variable = {
-					var = CSPalignmentTARGET_temp
-					value = HNN
-				}
-				country_event = { 
-					id = CSP.1
-				}
+			HNN = {
+				CSP_recruit_from_HNN_effect = yes
 			}
 		}
 		ai_will_do = {
@@ -223,14 +205,12 @@ HNN_recruit_CSPalignment_category = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete CSP_recruit_in_SHX"
 			custom_effect_tooltip =  CSP_RSHX_tooltip
-			hidden_effect = {
-				set_variable = {
-					var = CSPalignmentTARGET_temp
-					value = SHX
-				}
-				country_event = { 
-					id = CSP.1
-				}
+			SHX = {
+				CSP_recruit_from_CHI_effect = yes
+				CSP_recruit_from_SHX_effect = yes
+			}
+			HNN = {
+				CSP_recruit_from_SHX_effect = yes
 			}
 		}
 		ai_will_do = {
@@ -262,14 +242,17 @@ HNN_recruit_CSPalignment_category = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete CSP_recruit_in_BEIFANG"
 			custom_effect_tooltip =  CSP_RBEIFANG_tooltip
-			hidden_effect = {
-				set_variable = {
-					var = CSPalignmentTARGET_temp
-					value = BEIFANG
-				}
-				country_event = { 
-					id = CSP.1
-				}
+			ANQ = {
+				CSP_recruit_from_BEIFANG_effect = yes
+			}
+			LEP = {
+				CSP_recruit_from_BEIFANG_effect = yes
+			}
+			MAN = {
+				CSP_recruit_from_BEIFANG_effect = yes
+			}
+			HNN = {
+				CSP_recruit_from_BEIFANG_effect = yes
 			}
 		}
 		ai_will_do = {
