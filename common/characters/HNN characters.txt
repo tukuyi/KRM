@@ -401,9 +401,6 @@ characters = {
 				OR={china_is_aligned_with_kmt = yes
 			    has_socialist_government=yes}
 			}
-			available = {
-				not_already_hired_except_as = second_in_command
-			}
 			traits = { KR_red_star }
 			on_add = {
 				ROOT = {
@@ -2292,9 +2289,6 @@ characters = {
 		}
 		advisor = {
 			slot = political_advisor
-			available = {
-				not_already_hired_except_as = second_in_command
-			}
 			idea_token = HNN_mao_ze_dong_advisor
 			traits = { KR_hero_of_the_chinese_revolution_3_sic }
 		}
@@ -2452,9 +2446,6 @@ characters = {
 			can_be_fired = no
 		}
 		advisor = {
-			available = {
-				not_already_hired_except_as = second_in_command
-			}
 			slot = political_advisor
 			idea_token = HNN_chen_yun_advisor
 			traits = { KR_economic_reformer }
@@ -2673,9 +2664,6 @@ characters = {
 			can_be_fired = no
 		}
 		advisor = {
-			available = {
-				not_already_hired_except_as = second_in_command
-			}
 			slot = political_advisor
 			idea_token = HNN_li_xiannian_advisor
 			traits = { HNN_wen_jian_gai_ge_zhe }
@@ -2698,9 +2686,6 @@ characters = {
 			can_be_fired = no
 		}
 		advisor = {
-			available = {
-				not_already_hired_except_as = second_in_command
-			}
 			slot = political_advisor
 			idea_token = HNN_zhao_ziyang_advisor
 			traits = { HNN_ji_jin_min_sheng_pai }
