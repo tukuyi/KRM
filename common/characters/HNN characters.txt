@@ -354,7 +354,7 @@ characters = {
 		name = HNN_ren_bishi
 		portraits = {
 			civilian = {
-				large = GFX_portrait_unknown #should never appear
+				large = "gfx/leaders/HNN/Portrait_HNN_Ren_Bi_Shi.png"
 				small = GFX_portrait_HNN_ren_bishi_civilian_small
 			}
 		}
@@ -380,7 +380,9 @@ characters = {
 			}
 		}
 		country_leader = {
+			desc =  POLITICS_HNN_Ren_Bi_Shi_DESC
 			ideology = totalist_subtype
+			traits = { CHN_CHNsyndicalist_aligned }
 		}
 	}
 	#蔡和森
@@ -399,6 +401,9 @@ characters = {
 				OR={china_is_aligned_with_kmt = yes
 			    has_socialist_government=yes}
 			}
+			available = {
+				not_already_hired_except_as = second_in_command
+			}
 			traits = { KR_red_star }
 			on_add = {
 				ROOT = {
@@ -413,10 +418,14 @@ characters = {
 				}
 			}
 		}
-		country_leader = {
-			desc = HNN_cai_hesen_advisor_desc
-			ideology = syndicalist_subtype
+		advisor = {
+			slot = second_in_command
+			idea_token = HNN_cai_hesen_sic
+			traits = { KR_red_star }
+			cost = 0
+			can_be_fired = no
 		}
+		
 	}
 	#黄炎培
 	HNN_huang_yanpei = {
@@ -2283,7 +2292,15 @@ characters = {
 		}
 		advisor = {
 			slot = political_advisor
+			available = {
+				not_already_hired_except_as = second_in_command
+			}
 			idea_token = HNN_mao_ze_dong_advisor
+			traits = { KR_hero_of_the_chinese_revolution_3_sic }
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = HNN_mao_ze_dong_sic
 			traits = { KR_hero_of_the_chinese_revolution_3_sic }
 		}
 		
@@ -2419,21 +2436,31 @@ characters = {
 		}
 	}		
 #陈云
-	HNN_Chen_Yun = {
-		name = HNN_Chen_Yun
+	HNN_chen_yun = {
+		name = HNN_chen_yun
 		portraits = {
 			army = {
 				small="gfx/interface/ministers/HNN/HNN_Chen_Yun.png"
-				large = GFX_Portrait_HNN_Chen_Yun
+				large = GFX_Portrait_HNN_chen_yun
 			}
 		}
 		advisor = {
+			slot = second_in_command
+			idea_token = HNN_chen_yun_sic
+			traits = { KR_economic_reformer }
+			cost = 0
+			can_be_fired = no
+		}
+		advisor = {
+			available = {
+				not_already_hired_except_as = second_in_command
+			}
 			slot = political_advisor
-			idea_token = HNN_Hua_Guofeng_advisor
+			idea_token = HNN_chen_yun_advisor
 			traits = { KR_economic_reformer }
 		}
 		corps_commander = {
-			desc = POLITICS_HNN_Chen_Yun_ARMY_DESC
+			desc = POLITICS_HNN_chen_yun_ARMY_DESC
 			traits = {
 				irregulars_officer
 				politically_connected
@@ -2449,7 +2476,7 @@ characters = {
 			traits = {
 				CHN_CHNsyndicalist_aligned
 			}
-			DESC = POLITICS_HNN_CHEN_YUN_DESC
+			DESC = POLITICS_HNN_chen_yun_DESC
 		}
 	}			
 #袁文才
@@ -2629,19 +2656,88 @@ characters = {
 			traits = { CHN_CHNsyndicalist_aligned }
 		}
 	}	
-	#任弼时
-	HNN_ren_bishi = {
-		name = HNN_ren_bishi
+#李先念
+	HNN_li_xiannian = {
+		name = HNN_li_xiannian
 		portraits = {
-			civilian = {
-				small = GFX_Portrait_HNN_Daibiaodahui
-				large = "gfx/leaders/HNN/Portrait_HNN_Ren_Bi_Shi.png"
+			army = {
+				small="gfx/interface/ministers/HNN/HNN_Li_Xian_Nian.png"
+				large = GFX_Portrait_HNN_li_xiannian
 			}
 		}
-		country_leader = {
-			desc =  POLITICS_HNN_Ren_Bi_Shi_DESC
-			ideology = totalist_subtype
-			traits = { CHN_CHNsyndicalist_aligned }
+		advisor = {
+			slot = second_in_command
+			idea_token = HNN_li_xiannian_sic
+			traits = { HNN_wen_jian_gai_ge_zhe }
+			cost = 0
+			can_be_fired = no
+		}
+		advisor = {
+			available = {
+				not_already_hired_except_as = second_in_command
+			}
+			slot = political_advisor
+			idea_token = HNN_li_xiannian_advisor
+			traits = { HNN_wen_jian_gai_ge_zhe }
+		}
+	}		
+#赵紫阳
+	HNN_zhao_ziyang = {
+		name = HNN_zhao_ziyang
+		portraits = {
+			civilian = {
+				small="gfx/interface/ministers/HNN/HNN_zhao_ziyang.png"
+				large = GFX_Portrait_HNN_Zhao_Zi_Yang
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = HNN_zhao_ziyang_sic
+			traits = { HNN_ji_jin_min_sheng_pai }
+			cost = 0
+			can_be_fired = no
+		}
+		advisor = {
+			available = {
+				not_already_hired_except_as = second_in_command
+			}
+			slot = political_advisor
+			idea_token = HNN_zhao_ziyang_advisor
+			traits = { HNN_ji_jin_min_sheng_pai }
+		}
+	}
+#耿飙
+	HNN_geng_biao = {
+		name = HNN_geng_biao
+		portraits = {
+			civilian = {
+				small="gfx/interface/ministers/HNN/HNN_Geng_Biao.png"
+				large = GFX_Portrait_HNN_geng_biao
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = HNN_geng_biao_sic
+			traits = { HNN_guo_fang_xian_feng }
+			cost = 0
+			can_be_fired = no
+		}
+	}	
+#华罗庚
+	HNN_hua_luogeng = {
+		name = HNN_hua_luogeng
+		portraits = {
+			civilian = {
+				small="gfx/interface/ministers/HNN/HNN_hua_luo_geng.png"
+				large = GFX_Portrait_HNN_hua_luogeng
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = HNN_hua_luogeng_sic
+			traits = { HNN_zhong_guo_de_ai_yin_si_tan }
+			cost = 0
+			can_be_fired = no
 		}
 	}	
 	HNN_Daibiaodahui = {

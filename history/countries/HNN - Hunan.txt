@@ -162,10 +162,14 @@ recruit_character = HNN_wang_zhen
 recruit_character = HNN_Tan_Zhen_Lin
 recruit_character = HNN_Tan_zheng
 recruit_character = HNN_Hua_Guofeng
-recruit_character = HNN_Chen_Yun
+recruit_character = HNN_chen_yun
 recruit_character = HNN_Yuan_Wen_Cai
 recruit_character = HNN_Long_Chao_Qing
 recruit_character = HNN_Wan_Xi_Xian
+recruit_character = HNN_li_xiannian
+recruit_character = HNN_zhao_ziyang
+recruit_character = HNN_geng_biao
+recruit_character = HNN_hua_luogeng
 ### Character Setup ###
 
 ## Federalists
@@ -435,7 +439,7 @@ HNN_Tan_zheng = {
 		china_alignment = token:CHNsyndicalist
 	}
 }
-HNN_Chen_Yun = {
+HNN_chen_yun = {
 	retire = yes
 	set_variable = {
 		china_alignment = token:CHNsyndicalist
@@ -457,6 +461,31 @@ HNN_gao_gang = {
 		china_alignment = token:CHNsyndicalist
 	}
 }
+HNN_li_xiannian = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_zhao_ziyang = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_geng_biao = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_hua_luogeng = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+
 
 
 

@@ -350,19 +350,6 @@ country_event = {#革命成功
 		}
 		leave_faction = yes
 		china_break_puppet_effect = yes
-		show_unit_leaders_tooltip = HNN_peng_dehuai
-		show_unit_leaders_tooltip = HNN_he_long
-		show_unit_leaders_tooltip = HNN_Teng_Daiyuan
-		show_unit_leaders_tooltip = GXC_Wan_Dan_Ping
-		show_unit_leaders_tooltip = HNN_Xiao_Ke
-		show_unit_leaders_tooltip = HNN_wang_zhen
-		show_unit_leaders_tooltip = HNN_Tan_Zhen_Lin
-		show_unit_leaders_tooltip = HNN_Yuan_Wen_Cai
-		show_unit_leaders_tooltip = HNN_Long_Chao_Qing
-		show_unit_leaders_tooltip = HNN_Wan_Xi_Xian
-		show_unit_leaders_tooltip = HNN_Tan_zheng
-		show_unit_leaders_tooltip = HNN_Chen_Yun
-		show_unit_leaders_tooltip = HNN_tang_shengming
 		hidden_effect = {
 			
 			add_stability = -0.40
@@ -439,9 +426,21 @@ country_event = {#革命成功
 			HNN_Long_Chao_Qing = { HNN_recruit_characters_effect = yes }
 			HNN_Wan_Xi_Xian = { HNN_recruit_characters_effect = yes }
 			HNN_Tan_zheng = { HNN_recruit_characters_effect = yes }
-			HNN_Chen_Yun = { HNN_recruit_characters_effect = yes }
+			HNN_chen_yun = { HNN_recruit_characters_effect = yes }
 			HNN_tang_shengming = { HNN_recruit_characters_effect = yes }
 			HNN_Hua_Guofeng = { HNN_recruit_characters_effect = yes }
+			HNN_zhao_ziyang = { HNN_recruit_character_effect = yes }
+			HNN_gao_gang = { HNN_recruit_character_effect = yes }
+			HNN_hu_yaobang = { HNN_recruit_character_effect = yes }
+			HNN_xi_zhongxun = { HNN_recruit_character_effect = yes }
+			HNN_lin_boqu = { HNN_recruit_character_effect = yes }
+			HNN_qian_xuesen = { HNN_recruit_character_effect = yes }
+			HNN_guo_moruo = { HNN_recruit_character_effect = yes }
+			HNN_ren_bishi = { HNN_recruit_character_effect = yes }
+			HNN_li_xiannian = { HNN_recruit_character_effect = yes }
+			HNN_hua_luogeng = { HNN_recruit_character_effect = yes }
+			HNN_geng_biao = { HNN_recruit_character_effect = yes }
+
 			HNN_peng_dehuai = {
 				promote_leader = yes
 			}
@@ -1898,10 +1897,7 @@ country_event = {#放权
 			}
 		}
 		HNN_fcations_change = yes 
-		add_ideas = {
-			HNN_qian_xue_sheng_hog
-			HNN_hua_luo_geng_eco
-		}
+		activate_advisor = HNN_hua_luogeng_sic
 		set_party_name = {
 			ideology = radical_socialist
 			long_name =  HNN_radical_socialist_party_proc_g_long
@@ -1932,6 +1928,7 @@ country_event = {#放权
 			ruling_party = totalist
 		}
 		HNN_fcations_change = yes 
+		activate_advisor = HNN_hua_luogeng_sic
 	}
 
 	option = {#陈毅
@@ -1959,6 +1956,7 @@ country_event = {#放权
 			}
 			set_leader_description = POLITICS_HNN_Chen_Yi_DESC
 		}
+		activate_advisor = HNN_chen_yun_sic
 		set_party_name = {
 			ideology = totalist
 			long_name =  HNN_totalist_party_proc_g_long
@@ -2030,6 +2028,9 @@ country_event = {#肃反之夜
 		set_politics = {
 			ruling_party = totalist
 		}
+		######################
+		###SHC################
+		######################
 		set_cosmetic_tag = HNN_PROC_K
 		HNN_fcations_change = yes 
 		add_ideas = HNN_di_kang_de_da_zong1
@@ -2058,6 +2059,13 @@ country_event = {#肃反之夜
 		set_politics = {
 			ruling_party = totalist
 		}
+		add_advisor_role = {
+			character = CHI_dai_chunfeng
+			idea_token = CHI_dai_chunfeng_sic
+			slot = second_in_command
+			trait = RUS_knight_of_terror
+		}
+		activate_advisor = CHI_dai_chunfeng_sic
 		set_cosmetic_tag = HNN_PROC_D
 		HNN_fcations_change = yes 
 		add_ideas = HNN_di_kang_de_da_zong1
@@ -4810,14 +4818,14 @@ country_event = {#林彪的胜利
 		}
 		set_cosmetic_tag = HNN_PROC_L
 		set_country_flag = HNN_three_gays_ended
-		remove_all_ministers = yes
 		HNN_fcations_change = yes 
-		add_ideas = {
-			HNN_Lin_Biao_hog
-			CHI_Chian_Ching_Kuo_eco_tot
-			HNN_Qiu_Hui_Zuo_sec
-			HNN_chen_yi_for
+		add_advisor_role = {
+			character = CHI_chiang_ching_kuo
+			idea_token = CHI_chiang_ching_kuo_sic
+			slot = second_in_command
+			trait = HNN_xian_fu_yi_zhi
 		}
+		activate_advisor = CHI_chiang_ching_kuo_sic
 	}
 }
 
@@ -4867,12 +4875,7 @@ country_event = {#叶剑英的胜利
 		set_country_flag = HNN_three_gays_ended
 		remove_all_ministers = yes
 		HNN_fcations_change = yes 
-		add_ideas = {
-			HNN_Ye_Jian_Ying_hog
-			HNN_Rong_Yi_Ren_eco
-			HNN_Shang_Kun_sec
-			HNN_Geng_Biao_for
-		}
+		activate_advisor = HNN_geng_biao_sic
 	}
 }
 
@@ -5068,12 +5071,7 @@ country_event = {#贺龙的胜利
 		set_country_flag = HNN_three_gays_ended
 		remove_all_ministers = yes
 		HNN_fcations_change = yes 
-		add_ideas = {
-			HNN_He_Long_hog
-			HNN_Mao_Ze_Dong_eco
-			HNN_Shang_Kun_sec
-			HNN_Zhou_En_Lai_for
-		}
+		activate_advisor = HNN_mao_ze_dong_sic
 	}
 }
 
@@ -6226,8 +6224,11 @@ country_event = {#中华人民共和国
 			}
 		}
 		hidden_effect = {
-			CHI_dai_chunfeng = {
-				HNN_recruit_character_effect = yes
+			add_advisor_role = {
+				character = YUN_chen_yi
+				idea_token = YUN_chen_yi_sic
+				slot = second_in_command
+				trait = HNN_hao_tong_zhi
 			}
 			country_event = { 
 				id = hungong.37
@@ -6772,13 +6773,7 @@ country_event = {#中华人民共和国
 				ideology = totalist
 				popularity = 0.50
 			}
-			remove_all_ministers = yes
-			add_ideas = {
-				HNN_Den_Xiao_Ping_hog
-				HNN_chen_yi_for
-				HNN_Shang_Kun_sec
-				HNN_Li_Xian_Nian_eco
-			}
+			activate_advisor = HNN_li_xiannian_sic
 			HNN_fcations_change = yes 
 		}
 
@@ -6831,7 +6826,13 @@ country_event = {#中华人民共和国
 				ideology = syndicalist
 				popularity = 0.50
 			}
-			remove_all_ministers = yes
+			add_trait = {
+				character = SHX_bo_yibo
+				idea_token = SHX_bo_yibo_sic
+				slot = second_in_command
+				trait = KR_man_of_the_people_sic 
+			}
+			activate_advisor = SHX_bo_yibo_sic
 			add_ideas = {
 				HNN_Liu_Shaoqi_hog
 				HNN_Zhou_En_Lai_for
@@ -6878,6 +6879,9 @@ country_event = {#中华人民共和国
 				ideology = syndicalist
 				popularity = 0.50
 			}
+			##############################
+			#饶漱石不赖，但是等LECSHC再说吧#
+			##############################
 			remove_all_ministers = yes
 			add_ideas = {
 				HNN_Gao_Gang_hog
@@ -6919,13 +6923,7 @@ country_event = {#中华人民共和国
 			CHI_zhou_enlai = {
 				set_leader_description = POLITICS_HNN_ZHOU_ENLAI_DESC
 			}
-			remove_all_ministers = yes
-			add_ideas = {
-				HNN_Zhou_En_Lai_hog
-				HNN_chen_yi_for
-				HNN_Shang_Kun_sec
-				HNN_Li_Fu_Chun_eco
-			}
+			activate_advisor = YUN_chen_yi_sic
 			HNN_fcations_change = yes 
 		}
 
@@ -6966,13 +6964,7 @@ country_event = {#中华人民共和国
 				ideology = radical_socialist
 				popularity = 0.50
 			}
-			remove_all_ministers = yes
-			add_ideas = {
-				HNN_Chen_Yun_hog
-				HNN_chen_yi_for
-				HNN_Shang_Kun_sec
-				HNN_Li_Fu_Chun_eco
-			}
+			activate_advisor = YUN_chen_yi_sic
 			HNN_fcations_change = yes 
 		}
 
@@ -7005,13 +6997,7 @@ country_event = {#中华人民共和国
 				popularity = 0.50
 			}
 			set_cosmetic_tag = HNN_PROC_X
-			remove_all_ministers = yes
-			add_ideas = {
-				HNN_XI_Zhong_Xun_hog
-				HNN_Zhou_En_Lai_for
-				HNN_Shang_Kun_sec
-				HNN_Li_Fu_Chun_eco
-			}
+			activate_advisor = HNN_zhao_ziyang_sic
 			HNN_fcations_change = yes 
 		}
 
@@ -7098,6 +7084,7 @@ country_event = {#中华人民共和国
 					china_alignment = token:CHNsyndicalist
 				}
 			}
+			activate_advisor = YUN_chen_yi_sic
 			set_politics = {
 				ruling_party = syndicalist
 			}
@@ -7133,13 +7120,7 @@ country_event = {#中华人民共和国
 				popularity = 0.50
 			}
 			set_cosmetic_tag = HNN_PROC_X
-			remove_all_ministers = yes
-			add_ideas = {
-				HNN_Hu_Yao_Bang_hog
-				HNN_chen_yi_for
-				HNN_Shang_Kun_sec
-				HNN_Li_Xian_Nian_eco
-			}
+			activate_advisor = HNN_zhao_ziyang_sic
 			HNN_fcations_change = yes 
 		}
 
@@ -7582,9 +7563,7 @@ country_event = {#选举结果
 			}
 		}
 		set_country_flag = HNN_dong_victory
-		add_ideas = {
-			HNN_Dong_Biwu_hog
-		}
+		activate_advisor = HNN_chen_yun_sic
 		promote_character = {
 			character = HNN_Dong_Bi_Wu
 			ideology = syndicalist_subtype
@@ -7631,9 +7610,7 @@ country_event = {#选举结果
 			}
 		}
 		set_country_flag = HNN_peng_victory
-		add_ideas = {
-			HNN_Pong_Dehuai_hog
-		}
+		activate_advisor = HNN_he_long_sic
 		promote_character = {
 			character = HNN_peng_dehuai
 			ideology = syndicalist
@@ -7702,6 +7679,7 @@ country_event = {#选举结果
 			}
 		}
 		set_country_flag = HNN_he_victory
+		activate_advisor = HNN_cai_hesen_sic
 		promote_character = {
 			character = HNN_He_Su_Heng
 			ideology = radical_socialist_subtype
