@@ -161,9 +161,8 @@ leader_traits = {
 
 
 	HNN_wen_jian_gai_ge_zhe = { #稳健改革者
-		consumer_goods_factor = -0.08              
-        industrial_capacity_factory = 0.10          
-        infrastructure_build_speed_factor = 0.1
+		consumer_goods_factor = -0.1   
+        industrial_capacity_factory = 0.10         
 	}
 
 	HNN_ji_jin_min_sheng_pai = { #激进民生派
@@ -173,26 +172,30 @@ leader_traits = {
 	}
 
 	HNN_xian_fu_yi_zhi = { #先父遗志
-        army_attack = 0.10 
-        army_defence = 0.10 
+        army_attack_factor = 0.10 
+        army_defence_factor = 0.10 
         training_time_factor = -0.15 
         war_support_factor = 0.15    
-        division_speed_factor = 0.05         
+        army_speed_factor = 0.05         
+	}
+
+	HNN_hao_tong_zhi = { #好同志
+		trade_opinion_factor = 0.3   
+		cic_construction_boost_factor = 0.15
+		daily_political_power_gain = 0.15    
 	}
 
 	HNN_guo_fang_xian_feng = { #国防先锋
-        division_recovery_rate_factor = 0.1
+		army_morale_factor = 0.1
         supply_consumption_factor = -0.10 
-        enemy_partisan_effect = -0.30
         max_planning_factor = 0.15
 	}
 	HNN_zhong_guo_de_ai_yin_si_tan = { #中国的爱因斯坦
-         research_speed_factor = 0.10    
-        electronics_research_speed_factor = 0.15  
+        research_speed_factor = 0.15
         industrial_capacity_factory = 0.15         
-        production_speed_max_efficiency_factor = 0.10 
-        nuclear_research_speed_factor = 0.30   
-        attrition_factor = -0.10    
+        production_factory_max_efficiency_factor = 0.10 
+		nuclear_production_factor = 0.3
+        attrition = -0.10    
 	}
 }
 	

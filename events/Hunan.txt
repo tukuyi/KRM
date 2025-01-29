@@ -116,7 +116,7 @@ country_event = {#enlai
 		
 		CHI_zhou_enlai = {
 			swap_country_leader_traits = {
-				remove = CHN_lkmt_aligned
+				remove = CHN_left_kuomintang_aligned
 				add = CHN_CHNsyndicalist_aligned
 			}
 			set_variable = {
@@ -823,7 +823,7 @@ country_event = {#并入国民党
 			}
 			swap_country_leader_traits = {
 				remove = CHN_CHNsyndicalist_aligned
-				add = CHN_lkmt_aligned
+				add = CHN_left_kuomintang_aligned
 			}
 		}
 	}
@@ -1249,6 +1249,9 @@ country_event = {#结束军管
 			HNN_peng_dehuai = {
 				set_leader_description = POLITICS_HNN_PENG_DEHUAI_TONG_YI_DESC
 			}
+			set_country_leader_description = {
+				DESC = POLITICS_HNN_PENG_DEHUAI_TONG_YI_DESC
+			} 
 		}
 	}
 }
@@ -1487,6 +1490,11 @@ country_event = {#戴春风的加入？
 				limit = { 
 					NOT ={
 						has_country_leader = { name = "康生" ruling_only = yes }
+					}
+				}
+				CHI = {
+					CHI_dai_chunfeng = {
+						HNN_recruit_character_effect = yes
 					}
 				}
 				country_event = { 
@@ -1949,6 +1957,7 @@ country_event = {#放权
 				expire = "1965.1.1.1"
 				traits = { CHN_CHNsyndicalist_aligned }
 			}
+			desc = POLITICS_HNN_Chen_Yi_DESC
 		}
 		YUN_chen_yi = {
 			set_variable = {
@@ -1970,27 +1979,17 @@ country_event = {#放权
 
 	option = {#周恩来
 		name = hungong.78.e
-		promote_character = {
+		add_country_leader_role = {
 			character = CHI_zhou_enlai
-			ideology = totalist_subtype
+			promote_leader = yes
+			country_leader = {
+				ideology = totalist_subtype
+				expire = "1965.1.1.1"
+				traits = { CHN_CHNsyndicalit_aligned }
+				desc = POLITICS_HNN_ZHOU_ENLAI_DESC
+			}
 		}
-		CHI_zhou_enlai = {
-			set_leader_description = POLITICS_HNN_ZHOU_ENLAI_DESC
-			set_portraits = {
-				civilian = {
-					large = "gfx/leaders/HNN/Portrait_CHI_Zhou_Enlai_CIV.png"
-          			small = GFX_portrait_CHI_zhou_enlai_army_small
-				}
-			}
-			swap_ruler_traits = {
-				remove = CHN_lkmt_aligned
-				add = CHN_CHNsyndicalist_aligned
-			}
-			set_variable = {
-				china_alignment = token:CHNsyndicalist
-			}
-			add_country_leader_trait = CHN_syndicalist_aligned
-		}
+		add_country_leader_trait = CHN_CHNsyndicalist_aligned
 		set_party_name = {
 			ideology = totalist
 			long_name =  HNN_totalist_party_proc_g_long
@@ -2061,9 +2060,13 @@ country_event = {#肃反之夜
 		}
 		add_advisor_role = {
 			character = CHI_dai_chunfeng
-			idea_token = CHI_dai_chunfeng_sic
-			slot = second_in_command
-			trait = RUS_knight_of_terror
+			activate = yes
+			advisor = {
+				idea_token = CHI_dai_chunfeng_sic
+				slot = second_in_command
+				traits = { RUS_knight_of_terror }
+				can_be_fired = no
+			}
 		}
 		activate_advisor = CHI_dai_chunfeng_sic
 		set_cosmetic_tag = HNN_PROC_D
@@ -4776,7 +4779,7 @@ country_event = {#言论要多自由？
 }
 
 country_event = {#林彪的胜利
-	id = hunarmy.5
+	id = 	hunarmy.5
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hunarmy.5" }
 	picture = GFX_report_event_HNN_lin_biao
 	title = hunarmy.5.t
@@ -4789,23 +4792,18 @@ country_event = {#林彪的胜利
 	}
 	option = { #yes
 		name = hunarmy.5.a
-		add_country_leader_role = {
+		promote_character = {
 			character = CHI_lin_biao
-			promote_leader = yes
-			country_leader = {
-				ideology = totalist_subtype
-				expire = "1965.1.1.1"
-				traits = { CHN_CHNsyndicalit_aligned }
-				desc = POLITICS_HNN_LIN_BIAO_DESC
-			}
+			ideology = totalist_subtype
 		}
 		CHI_lin_biao = {
-			swap_country_leader_traits = {
-				remove = CHN_lkmt_aligned
-				add = CHN_CHNsyndicalist_aligned
-			}
 			set_variable = {
 				china_alignment = token:CHNsyndicalist
+			}
+			swap_country_leader_traits = {
+				remove = CHN_left_kuomintang_aligned
+				add = CHN_CHNsyndicalist_aligned
+				ideology = totalist_subtype
 			}
 		}
 		set_politics = {
@@ -4821,9 +4819,14 @@ country_event = {#林彪的胜利
 		HNN_fcations_change = yes 
 		add_advisor_role = {
 			character = CHI_chiang_ching_kuo
-			idea_token = CHI_chiang_ching_kuo_sic
-			slot = second_in_command
-			trait = HNN_xian_fu_yi_zhi
+			activate = yes
+			advisor = {
+				idea_token = CHI_chiang_ching_kuo_sic
+				slot = second_in_command
+				traits = { HNN_xian_fu_yi_zhi }
+				can_be_fired = no
+				cost = 0
+			}
 		}
 		activate_advisor = CHI_chiang_ching_kuo_sic
 	}
@@ -4855,7 +4858,7 @@ country_event = {#叶剑英的胜利
 		}
 		GXC_ye_jianying = {
 			swap_country_leader_traits = {
-				remove = CHN_lkmt_aligned
+				remove = CHN_left_kuomintang_aligned
 				add = CHN_CHNsyndicalist_aligned
 			}
 			set_variable = {
@@ -6187,27 +6190,29 @@ country_event = {#中华人民共和国
 	}
 
 	immediate = {
-		SHX = {
-			SHX_deng_xiaoping = {
-				CSP_recruit_character_effect = yes
+		hidden_effect = {
+			SHX = {
+				SHX_deng_xiaoping = {
+					CSP_recruit_character_effect = yes
+				}
+				SHX_bo_yibo = {
+					CSP_recruit_character_effect = yes
+				}
+				CHI_lin_biao = {
+					CSP_recruit_character_effect = yes
+				}
 			}
-			SHX_bo_yibo = {
-				CSP_recruit_character_effect = yes
+			YUN = {
+				YUN_chen_yi = {
+					CSP_recruit_character_effect = yes
+				}
 			}
-			CHI_lin_biao = {
-				CSP_recruit_character_effect = yes
+			GXC = {
+				GXC_ye_jianying = {
+					CSP_recruit_character_effect = yes
+				}
 			}
-		}
-		YUN = {
-			YUN_chen_yi = {
-				CSP_recruit_character_effect = yes
-			}
-		}
-		GXC = {
-			GXC_ye_jianying = {
-				CSP_recruit_character_effect = yes
-			}
-		}
+
 		}
 	}
 	fire_only_once = yes
@@ -6250,9 +6255,13 @@ country_event = {#中华人民共和国
 		hidden_effect = {
 			add_advisor_role = {
 				character = YUN_chen_yi
-				idea_token = YUN_chen_yi_sic
-				slot = second_in_command
-				trait = HNN_hao_tong_zhi
+				advisor = {
+					idea_token = YUN_chen_yi_sic
+					slot = second_in_command
+					traits = { HNN_hao_tong_zhi }
+					can_be_fired = no
+					cost = 0
+				}
 			}
 			country_event = { 
 				id = hungong.37
@@ -6262,13 +6271,18 @@ country_event = {#中华人民共和国
 				id = hungong.55
 				days = 180
 			}
-			promote_character = {
+			add_country_leader_role = {
 				character = SHX_deng_xiaoping
-				ideology = totalist_subtype
+				promote_leader = yes
+				country_leader = {
+					ideology = totalist_subtype
+					expire = "1965.1.1.1"
+					traits = { CHN_CHNsyndicalist_aligned }
+				}
 			}
 			SHX_deng_xiaoping = {
 				swap_country_leader_traits = {
-					remove = CHN_lkmt_aligned
+					remove = CHN_left_kuomintang_aligned
 					add = CHN_CHNsyndicalist_aligned
 				}
 				set_variable = {
@@ -6855,14 +6869,10 @@ country_event = {#中华人民共和国
 				idea_token = SHX_bo_yibo_sic
 				slot = second_in_command
 				trait = KR_man_of_the_people_sic 
+				can_be_fired = no
+				cost = 0
 			}
 			activate_advisor = SHX_bo_yibo_sic
-			add_ideas = {
-				HNN_Liu_Shaoqi_hog
-				HNN_Zhou_En_Lai_for
-				HNN_Shang_Kun_sec
-				HNN_Li_Fu_Chun_eco
-			}
 			HNN_fcations_change = yes 
 		}
 
@@ -6946,6 +6956,9 @@ country_event = {#中华人民共和国
 			}
 			CHI_zhou_enlai = {
 				set_leader_description = POLITICS_HNN_ZHOU_ENLAI_DESC
+			}
+			set_country_leader_description = {
+				desc = POLITICS_HNN_ZHOU_ENLAI_DESC
 			}
 			activate_advisor = YUN_chen_yi_sic
 			HNN_fcations_change = yes 
