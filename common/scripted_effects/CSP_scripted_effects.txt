@@ -3,7 +3,6 @@ CSP_recruit_character_effect = {#招募
 		limit = {
 			NOT = {
 				THIS = { has_character_flag = is_dead }
-				ROOT = { has_character = PREV }
 			}
 		}
 		if = {
