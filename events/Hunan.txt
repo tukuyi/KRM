@@ -7821,7 +7821,9 @@ country_event = {###国民党左派革命失败
 				id = hungong.32
 				days = 2
 			}
-			CSP_recruit_from_CHI_effect = yes
+			CHI = {
+				CSP_recruit_from_CHI_effect = yes
+			}
 			set_country_flag = HNN_recruited_CHI
 			
 			set_party_name = {
