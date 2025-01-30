@@ -724,6 +724,7 @@ focus_tree = {
 				hidden_effect = {
 					HNN_merge_kmt_spirits_dong = yes
 				}
+				add_research_slot = 1
 			}
 		}
 	
@@ -1219,6 +1220,7 @@ focus_tree = {
 					remove_idea = HNN_chun_jie_de_jun_de2
 					add_idea = HNN_chun_jie_de_jun_de3
 				}
+				add_research_slot = 1
 			}
 		}
 	#何叔衡
@@ -1439,6 +1441,7 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+				add_research_slot = 1
 			}
 
 			search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1876,6 +1879,7 @@ focus_tree = {
 					days = 5
 				}
 			}
+			add_research_slot = 1
 		}
 	}
 	
@@ -10042,7 +10046,8 @@ focus_tree = {
 				type = annex_everything
 				target = var:1072.owner
 		 	}
-			china_enable_all_demand_submission_decisions = yes
+			 activate_targeted_decision = { decision = china_demand_submission target = QIE }
+			 activate_targeted_decision = { decision = china_demand_submission target = XSM }
 			if = {
 				limit = { 
 					has_completed_focus = HNN_gongtuan
@@ -10186,6 +10191,7 @@ focus_tree = {
 				type = annex_everything
 				target = var:613.owner
 		 	}
+			 activate_targeted_decision = { decision = china_demand_submission target = CHI }
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -10239,6 +10245,7 @@ focus_tree = {
 				type = annex_everything
 				target = var:716.owner
 		 	}
+			 activate_targeted_decision = { decision = china_demand_submission target = FNG }
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
