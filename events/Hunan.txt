@@ -2638,6 +2638,8 @@ country_event = {#《女神》再版
 			ideology = totalist
 			popularity = 1
 		}
+		set_country_flag = HNN_guomoruoaya
+		set_cosmetic_tag = HNN_youkai_mountain
 		set_portraits = {
 			character = HNN_guo_moruo
 			civilian = {
@@ -2647,6 +2649,56 @@ country_event = {#《女神》再版
 		}
 		set_country_leader_description = {
 			DESC = POLITICS_HNN_GUO_MORUO_AYA_DESC
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name =  HNN_totalist_party_AYA_long
+			name =   HNN_totalist_party_AYA
+		}
+		set_party_name = {
+			ideology = syndicalist
+			long_name =  HNN_syndicalist_party_AYA_long
+			name =  HNN_syndicalist_party_AYA
+		}
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = HNN_radical_socialist_party_AYA_long
+			name =  HNN_radical_socialist_party_AYA
+		}
+		set_party_name = {
+			ideology = social_democrat
+			long_name =   HNN_social_democrat_party_AYA_long
+			name =   HNN_social_democrat_party_AYA
+		}
+		set_party_name = {
+			ideology = social_liberal
+			long_name =  HNN_social_liberal_party_AYA_long
+			name =  HNN_social_liberal_party_AYA
+		}
+		set_party_name = {
+			ideology = market_liberal
+			long_name =  HNN_market_liberal_party_AYA_long
+			name =   HNN_market_liberal_party_AYA
+		}
+		set_party_name = {
+			ideology = social_conservative
+			long_name =   HNN_social_conservative_party_AYA_long
+			name =   HNN_social_conservative_party_AYA
+		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name =   HNN_authoritarian_democrat_party_AYA_long
+			name =   HNN_authoritarian_democrat_party_AYA
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name =   HNN_paternal_autocrat_party_AYA_long
+			name =   HNN_paternal_autocrat_party_AYA
+		}
+		set_party_name = {
+			ideology = national_populist
+			long_name =   HNN_national_populist_party_AYA_long
+			name =   HNN_national_populist_party_AYA
 		}
 	}
 }
