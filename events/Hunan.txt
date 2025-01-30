@@ -2638,14 +2638,15 @@ country_event = {#《女神》再版
 			ideology = totalist
 			popularity = 1
 		}
-		HNN_guo_moruo = {
-			set_portraits = {
+		set_portraits = {
+			character = HNN_guo_moruo
+			civilian = {
 				large = "gfx/leaders/HNN/Portrait_HNN_Guo_Mo_Ruo_AYA.png"
 				small = "gfx/interface/ministers/HNN/HNN_guo_moruo_aya.png"
 			}
-			set_country_leader_description = {
-				DESC = POLITICS_HNN_GUO_MORUO_AYA_DESC
-			}
+		}
+		set_country_leader_description = {
+			DESC = POLITICS_HNN_GUO_MORUO_AYA_DESC
 		}
 	}
 }
@@ -4896,6 +4897,7 @@ country_event = {#叶剑英的胜利
 					small = "gfx/interface/ministers/HNN/GXC_ye_jianying_generalissimo.png"
 				}
 			}
+			add_country_leader_trait = CHN_CHNsyndicalit_aligned
 		}
 		set_politics = {
 			ruling_party = paternal_autocrat
