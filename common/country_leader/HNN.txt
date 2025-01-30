@@ -18,6 +18,14 @@ leader_traits = {
 		random = no
 		war_support_factor = 0.02
 	}
+	HNN_tian_gou_aya = {
+		random = no
+		stability_factor = 0.2
+		war_support_factor = 0.02
+		army_speed_factor = 1
+		compliance_gain = 0.05
+		attrition = -0.1
+	}
 	HNN_tian_cai = {
 		random = no
 		generate_wargoal_tension = -0.10

@@ -2629,6 +2629,25 @@ country_event = {#《女神》再版
 			popularity = 0.02
 		}
 	}
+	option = {#我的我，要爆了！！！
+		name = hungong.98.b
+		custom_effect_tooltip = HNN_guo_moruo_baole
+		add_country_leader_trait = HNN_tian_gou_aya
+		add_stability = 1
+		add_popularity = {
+			ideology = totalist
+			popularity = 1
+		}
+		HNN_guo_moruo = {
+			set_portraits = {
+				large = "gfx/leaders/HNN/Portrait_HNN_Guo_Mo_Ruo_AYA.png"
+				small = "gfx/interface/ministers/HNN/HNN_guo_moruo_aya.png"
+			}
+			set_country_leader_description = {
+				DESC = POLITICS_HNN_GUO_MORUO_AYA_DESC
+			}
+		}
+	}
 }
 
 country_event = {#一场奇怪的案件
@@ -4871,10 +4890,17 @@ country_event = {#叶剑英的胜利
 				china_alignment = token:CHNsyndicalist
 			}
 			set_leader_description =  POLITICS_HNN_YE_JIAN_YING_DESC
+			set_portraits = {
+				army = {
+					large = "gfx/leaders/HNN/Portrait_GXC_ye_jianying_generalissimo.png"
+					small = "gfx/interface/ministers/HNN/GXC_ye_jianying_generalissimo.png"
+				}
+			}
 		}
 		set_politics = {
 			ruling_party = paternal_autocrat
 		}
+		set_country_leader_description =  POLITICS_HNN_YE_JIAN_YING_DESC
 		set_cosmetic_tag = HNN_PROC_YJ
 		set_party_name = {
 			ideology = paternal_autocrat
@@ -6210,7 +6236,14 @@ country_event = {#中华人民共和国
 					CSP_recruit_character_effect = yes
 				}
 			}
-
+			YUN_chen_yi = {
+				set_portraits = {
+					civilian = {
+						large = "gfx/leaders/HNN/YUN_chen_yi_CIV.png"
+						small = "gfx/interface/ministers/HNN/YUN_chen_yi_CIV.png"
+					}
+				}
+			}
 		}
 	}
 	fire_only_once = yes
@@ -6846,6 +6879,7 @@ country_event = {#中华人民共和国
 				character = CHI_liu_shaoqi
 				civilian = {
 					large = "gfx/leaders/HNN/Portrait_HNN_Liu_Shao_Qi.png"
+					small = "gfx/interface/ministers/HNN/CHI_liu_shaoqi.png"
 				}
 			}
 			CHI_liu_shaoqi = {
