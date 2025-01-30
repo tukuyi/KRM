@@ -2792,9 +2792,9 @@ HNN_let_he_in = {#拉人入伙
 			clr_country_flag = SRI_INVITING_SOMEONE
 		}
 	}
-	HNN_let_BHC = {#拉印度
+	HNN_let_HND = {#拉印度
 		available = {
-			BHC = {
+			HND = {
 				has_war = no
 				is_puppet = no
 				OR = {
@@ -2807,7 +2807,7 @@ HNN_let_he_in = {#拉人入伙
 		}
 		visible = {
 			has_completed_focus = HNN_wm_zj_de_lu
-			BHC = {
+			HND = {
 				exists = yes
 			}
 		}
@@ -3045,93 +3045,6 @@ HNN_let_he_in = {#拉人入伙
 			clr_country_flag = SRI_INVITING_SOMEONE
 		}
 	}
-	HNN_let_TRM = {#拉外阿穆尔
-		available = {
-			TRM = {
-				has_war = no
-				is_puppet = no
-				is_in_faction = no
-				OR = {
-					has_government = totalist 
-					has_government = syndicalist
-					has_government = social_democrat 
-					has_government = radical_socialist
-				}
-			}
-		}
-		visible = {
-			has_completed_focus = HNN_wm_zj_de_lu
-			TRM = {
-				exists = yes
-			}
-		}
-		icon = GFX_decision_category_patriotic
-
-		cost = 20
-		days_remove = 20
-		fire_only_once = yes
-
-		ai_will_do = { factor = 1000 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HNN_let_TRM"
-			set_country_flag = SRI_INVITING_SOMEONE
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove HNN_let_TRM"
-			TRM = {	
-				country_event = {
-					id = hungong.134
-					days = 2
-				}
-			}
-			clr_country_flag = SRI_INVITING_SOMEONE
-		}
-	}
-	HNN_let_NYC = {#拉纽约
-		available = {
-			NYC = {
-				has_war = no
-				is_puppet = no
-				is_in_faction = no
-				OR = {
-					has_government = totalist 
-					has_government = syndicalist
-					has_government = social_democrat 
-					has_government = radical_socialist
-				}
-			}
-		}
-		visible = {
-			has_completed_focus = HNN_wm_zj_de_lu
-			NYC = {
-				exists = yes
-				is_in_faction = no
-			}
-		}
-		icon = GFX_decision_category_patriotic
-
-		cost = 20
-		days_remove = 20
-		fire_only_once = yes
-
-		ai_will_do = { factor = 1000 }
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HNN_let_NYC"
-			set_country_flag = SRI_INVITING_SOMEONE
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove HNN_let_NYC"
-			NYC = {	
-				country_event = {
-					id = hungong.134
-					days = 2
-				}
-			}
-			clr_country_flag = SRI_INVITING_SOMEONE
-		}
-	}
 }
 
 HNN_shu_chu_ge_min = {#输出革命
@@ -3239,9 +3152,9 @@ HNN_shu_chu_ge_min = {#输出革命
 		 	}
 		}
 	}
-	HNN_het_BHC = {#
+	HNN_het_HND = {#
 		available = {
-			BHC = {
+			HND = {
 				NOT = {
 					is_in_faction_with = HNN
 				}
@@ -3249,7 +3162,7 @@ HNN_shu_chu_ge_min = {#输出革命
 		}
 		visible = {
 			has_completed_focus = HNN_shu_chu_ge_ming
-			BHC = {
+			HND = {
 				exists = yes
 				NOT = {
 					is_puppet_of = HNN
@@ -3265,23 +3178,23 @@ HNN_shu_chu_ge_min = {#输出革命
 		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HNN_het_BHC"
+			log = "[GetDateText]: [Root.GetName]: Decision HNN_het_HND"
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove HNN_het_BHC"
+			log = "[GetDateText]: [Root.GetName]: Decision remove HNN_het_HND"
 			create_wargoal = {
 				type = annex_everything
-				target = BHC
+				target = HND
 		 	}
 		}
 	}
-	HNN_het_BEH = {#
+	HNN_het_RAJ = {#
 		available = {
 			
 		}
 		visible = {
 			has_completed_focus = HNN_shu_chu_ge_ming
-			DEH = {
+			RAJ = {
 				exists = yes
 				NOT = {
 					is_puppet_of = HNN
@@ -3297,10 +3210,10 @@ HNN_shu_chu_ge_min = {#输出革命
 		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HNN_het_BEH"
+			log = "[GetDateText]: [Root.GetName]: Decision HNN_het_RAJ"
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove HNN_het_BEH"
+			log = "[GetDateText]: [Root.GetName]: Decision remove HNN_het_RAJ"
 			create_wargoal = {
 				type = annex_everything
 				target = DEH
@@ -3547,13 +3460,13 @@ HNN_shu_chu_ge_min = {#输出革命
 		 	}
 		}
 	}
-	HNN_het_ALO = {#
+	HNN_het_KAZ = {#
 		available = {
 
 		}
 		visible = {
 			has_completed_focus = HNN_fan_yue_sha_mo
-			ALO = {
+			KAZ = {
 				exists = yes
 				NOT = {
 					is_puppet_of = HNN
@@ -3569,13 +3482,13 @@ HNN_shu_chu_ge_min = {#输出革命
 		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HNN_het_ALO"
+			log = "[GetDateText]: [Root.GetName]: Decision HNN_het_KAZ"
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove HNN_het_ALO"
+			log = "[GetDateText]: [Root.GetName]: Decision remove HNN_het_KAZ"
 			create_wargoal = {
 				type = annex_everything
-				target = ALO
+				target = KAZ
 		 	}
 		}
 	}
@@ -3848,9 +3761,9 @@ HNN_shu_chu_ge_min = {#输出革命
 		 	}
 		}
 	}
-	HNN_het_TRM = {#
+	HNN_het_FER = {#
 		available = {
-			TRM = {
+			FER = {
 				NOT = {
 					is_in_faction_with = HNN
 				}
@@ -3858,7 +3771,7 @@ HNN_shu_chu_ge_min = {#输出革命
 		}
 		visible = {
 			has_completed_focus = HNN_fan_yue_gao_shan
-			TRM = {
+			FER = {
 				exists = yes
 				NOT = {
 					is_puppet_of = HNN
@@ -3874,13 +3787,13 @@ HNN_shu_chu_ge_min = {#输出革命
 		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision HNN_het_TRM"
+			log = "[GetDateText]: [Root.GetName]: Decision HNN_het_FER"
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove HNN_het_TRM"
+			log = "[GetDateText]: [Root.GetName]: Decision remove HNN_het_FER"
 			create_wargoal = {
 				type = annex_everything
-				target = TRM
+				target = FER
 		 	}
 		}
 	}
@@ -5325,7 +5238,7 @@ HNN_tie_lu_category = {#全国大开发
 				is_owned_by = ROOT
 				NOT = { has_state_flag = CAN_oil_wells_developed }
 			}
-			has_compele_china2 = yes
+			has_completed_focus = HNN_hou_cai_kuang
 		}
 
 		fire_only_once = yes
@@ -5377,7 +5290,7 @@ HNN_tie_lu_category = {#全国大开发
 					has_state_flag = CAN_oil_wells_developed
 				}
 			}
-			has_compele_china2 = yes
+			has_completed_focus = HNN_hou_cai_kuang
 		}
 
 		fire_only_once = yes
@@ -5428,7 +5341,7 @@ HNN_tie_lu_category = {#全国大开发
 				has_state_flag = CAN_oil_wells_developed
 				NOT = { has_state_flag = CAN_oil_wells_developed2 }
 			}
-			has_compele_china2 = yes
+			has_completed_focus = HNN_hou_cai_kuang
 		}
 
 		fire_only_once = yes
@@ -5478,7 +5391,7 @@ HNN_tie_lu_category = {#全国大开发
 				is_owned_by = ROOT
 				has_state_flag = CAN_oil_wells_developed
 			}
-			has_compele_china2 = yes
+			has_completed_focus = HNN_hou_cai_kuang
 		}
 
 		fire_only_once = yes
@@ -5527,7 +5440,7 @@ HNN_tie_lu_category = {#全国大开发
 			1046 = {
 				is_owned_by = ROOT
 			}
-			has_compele_china2 = yes
+			has_completed_focus = HNN_hou_cai_kuang
 		}
 
 		fire_only_once = yes
@@ -5574,7 +5487,7 @@ HNN_tie_lu_category = {#全国大开发
 			600 = {
 				is_owned_by = ROOT
 			}
-			has_compele_china2 = yes
+			has_completed_focus = HNN_hou_cai_kuang
 		}
 
 		fire_only_once = yes
@@ -5621,7 +5534,7 @@ HNN_tie_lu_category = {#全国大开发
 			600 = {
 				is_owned_by = ROOT
 			}
-			has_compele_china2 = yes
+			has_completed_focus = HNN_hou_cai_kuang
 		}
 
 		fire_only_once = yes
@@ -5666,7 +5579,7 @@ HNN_tie_lu_category = {#全国大开发
 		}
 
 		visible = {
-			has_compele_china2 = yes
+			has_completed_focus = HNN_hou_cai_kuang
 		}
 
 		fire_only_once = yes
