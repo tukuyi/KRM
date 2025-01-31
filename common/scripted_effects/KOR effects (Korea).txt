@@ -115,7 +115,7 @@ KOR_socialist_government = {
 		KOR = {
 			set_country_flag = KOR_socialist
 			set_politics = {
-				ruling_party = syndicalist
+				ruling_party = totalist
 				elections_allowed = no
 			}
 			set_cosmetic_tag = KOR_DPRK
@@ -123,6 +123,14 @@ KOR_socialist_government = {
 				character = KOR_kim_ilsung
 				country_leader = {
 					ideology = syndicalist_subtype
+					desc = KOR_KIM_ILSUNG_LEADER_DESC
+				}
+				promote_leader = yes
+			}
+			add_country_leader_role = {
+				character = KOR_kim_ilsung
+				country_leader = {
+					ideology = totalist_juche_subtype
 					desc = KOR_KIM_ILSUNG_LEADER_DESC
 				}
 				promote_leader = yes
