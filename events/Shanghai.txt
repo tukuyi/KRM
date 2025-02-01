@@ -19,6 +19,16 @@ country_event = {
 	option = {
 		name = SHCqiehuan.1.a
 		add_political_power = 10
+		annex_country = {
+					target = LEC
+					transfer_troops = yes
+				}
+		LEC = {
+				every_character = {
+					
+					set_nationality = ROOT
+				}
+			}
 		create_country_leader = {
 			name = "汪寿华"
 			desc = "WANG_SHOU_HUA_DESC"
@@ -768,7 +778,7 @@ country_event = {
 				desc = "HE_DONG_DESC"
 				picture = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
 				expire = "1.1.1"
-				ideology = minarchism_subtype
+				ideology = social_democrat_subtype
 			}
 			create_country_leader = {
 				name = "何东"
