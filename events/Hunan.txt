@@ -1922,7 +1922,7 @@ country_event = {#放权
 		}
 		promote_character = {
 			character = HNN_guo_moruo
-			ideology = totalist_subtype
+			ideology = totalist_technocracy_subtype
 		}
 		HNN_guo_moruo = {
 			set_variable = {
@@ -1955,7 +1955,7 @@ country_event = {#放权
 			character = YUN_chen_yi
 			promote_leader = yes
 			country_leader = {
-				ideology = totalist_subtype
+				ideology = totalist_technocracy_subtype
 				expire = "1965.1.1.1"
 				traits = { CHN_CHNsyndicalist_aligned }
 			}
@@ -2622,11 +2622,93 @@ country_event = {#《女神》再版
 
 	option = {#
 		name = hungong.98.a
+		ai_chance = {
+			factor = 114
+		} 
 		add_country_leader_trait = HNN_tian_gou
 		add_stability = 0.05
 		add_popularity = {
 			ideology = totalist
 			popularity = 0.02
+		}
+	}
+	option = {#我的我，要爆了！！！
+		name = hungong.98.b
+		ai_chance = {
+			factor = 0
+		} 
+		custom_effect_tooltip = HNN_guo_moruo_baole
+		hidden_effect = {
+			add_country_leader_trait = HNN_tian_gou_aya
+			add_stability = 1
+			add_popularity = {
+				ideology = totalist
+				popularity = 1
+			}
+			set_country_flag = HNN_guomoruoaya
+			set_cosmetic_tag = HNN_youkai_mountain
+			set_portraits = {
+				character = HNN_guo_moruo
+				civilian = {
+					large = "gfx/leaders/HNN/Portrait_HNN_Guo_Mo_Ruo_AYA.png"
+					small = "gfx/interface/ministers/HNN/HNN_guo_moruo_aya.png"
+				}
+			}
+			set_country_leader_ideology = totalist_ayaist_subtype
+			set_country_leader_description = {
+				DESC = POLITICS_HNN_GUO_MORUO_AYA_DESC
+			}
+			set_party_name = {
+				ideology = totalist
+				long_name =  HNN_totalist_party_AYA_long
+				name =   HNN_totalist_party_AYA
+			}
+			set_party_name = {
+				ideology = syndicalist
+				long_name =  HNN_syndicalist_party_AYA_long
+				name =  HNN_syndicalist_party_AYA
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				long_name = HNN_radical_socialist_party_AYA_long
+				name =  HNN_radical_socialist_party_AYA
+			}
+			set_party_name = {
+				ideology = social_democrat
+				long_name =   HNN_social_democrat_party_AYA_long
+				name =   HNN_social_democrat_party_AYA
+			}
+			set_party_name = {
+				ideology = social_liberal
+				long_name =  HNN_social_liberal_party_AYA_long
+				name =  HNN_social_liberal_party_AYA
+			}
+			set_party_name = {
+				ideology = market_liberal
+				long_name =  HNN_market_liberal_party_AYA_long
+				name =   HNN_market_liberal_party_AYA
+			}
+			set_party_name = {
+				ideology = social_conservative
+				long_name =   HNN_social_conservative_party_AYA_long
+				name =   HNN_social_conservative_party_AYA
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				long_name =   HNN_authoritarian_democrat_party_AYA_long
+				name =   HNN_authoritarian_democrat_party_AYA
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name =   HNN_paternal_autocrat_party_AYA_long
+				name =   HNN_paternal_autocrat_party_AYA
+			}
+			set_party_name = {
+				ideology = national_populist
+				long_name =   HNN_national_populist_party_AYA_long
+				name =   HNN_national_populist_party_AYA
+			}
+
 		}
 	}
 }
@@ -4871,10 +4953,18 @@ country_event = {#叶剑英的胜利
 				china_alignment = token:CHNsyndicalist
 			}
 			set_leader_description =  POLITICS_HNN_YE_JIAN_YING_DESC
+			set_portraits = {
+				army = {
+					large = "gfx/leaders/HNN/Portrait_GXC_ye_jianying_generalissimo.png"
+					small = "gfx/interface/ministers/HNN/GXC_ye_jianying_generalissimo.png"
+				}
+			}
+			add_country_leader_trait = CHN_CHNsyndicalit_aligned
 		}
 		set_politics = {
 			ruling_party = paternal_autocrat
 		}
+		set_country_leader_description =  POLITICS_HNN_YE_JIAN_YING_DESC
 		set_cosmetic_tag = HNN_PROC_YJ
 		set_party_name = {
 			ideology = paternal_autocrat
@@ -6210,7 +6300,14 @@ country_event = {#中华人民共和国
 					CSP_recruit_character_effect = yes
 				}
 			}
-
+			YUN_chen_yi = {
+				set_portraits = {
+					civilian = {
+						large = "gfx/leaders/HNN/YUN_chen_yi_CIV.png"
+						small = "gfx/interface/ministers/HNN/YUN_chen_yi_CIV.png"
+					}
+				}
+			}
 		}
 	}
 	fire_only_once = yes
@@ -6846,6 +6943,7 @@ country_event = {#中华人民共和国
 				character = CHI_liu_shaoqi
 				civilian = {
 					large = "gfx/leaders/HNN/Portrait_HNN_Liu_Shao_Qi.png"
+					small = "gfx/interface/ministers/HNN/CHI_liu_shaoqi.png"
 				}
 			}
 			CHI_liu_shaoqi = {
