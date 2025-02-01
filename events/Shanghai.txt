@@ -1,0 +1,3398 @@
+add_namespace = SHCqiehuan
+add_namespace = SHCwaijiao
+add_namespace = Shcjidu 
+add_namespace = Shcjingcha
+add_namespace = shche
+add_namespace = Shchuming
+add_namespace = Shcxinjiao
+add_namespace = Shcgong
+
+country_event = {
+	id = SHCqiehuan.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SHCqiehuan.1"}
+	title = SHCqiehuan.1.t
+	desc = SHCqiehuan.1.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SHCqiehuan.1.a
+		add_political_power = 10
+		create_country_leader = {
+			name = "汪寿华"
+			desc = "WANG_SHOU_HUA_DESC"
+			picture = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
+			expire = "1.1.1"
+			ideology = centralized_syndicalism_subtype
+		}
+		create_country_leader = {
+			name = "鲁迅"
+			desc = "LU_XUN_DESC"
+			picture = "gfx/leaders/LEC/Portrait_LEC_Lu_Xun.png"
+			expire = "1.1.1"
+			ideology = lu_xun_thought_subtype
+		}
+		create_country_leader = {
+			name = "王凡西"
+			desc = "LU_XUN_DESC"
+			picture = "gfx/leaders/LEC/Portrait_LEC_Lu_Xun.png"
+			expire = "1.1.1"
+			ideology = internationalism_subtype
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		set_country_flag = zong_gong_hui_victory
+		set_cosmetic_tag = LEC_GT
+		remove_all_ministers = yes
+		remove_ideas = {
+			LEC_Du_Yuesheng_boss_sli
+			LEC_Huang_Jinrong_boss_sli
+			LEC_Zhang_Xiaolin_boss_sli
+		}
+		add_ideas = {
+			LEC_wang_shou_hua_hog
+			LEC_Liu_Hongsheng_eco_sli
+			LEC_zhao_si_yan_for
+			LEC_tian_han_eco
+		}
+		division_template = { #Guangxi Army
+			name = "工人纠察队"
+			division_names_group = "LEC_GAR_01"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+			}
+			support = {
+					
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 743 }
+			limit = { is_in_home_area = yes }
+			create_unit = {
+				division = "division_template = \"工人纠察队\" start_experience_factor = 0.5"
+				owner = PREV
+				count = 3
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = lecgong.1
+				days = 2
+			}
+			country_event = {
+				id = Shcgong.1
+				days = 5
+			}
+			country_event = {
+				id = Shcgong.26
+				days = 25
+			}
+			if = {
+				limit = { 
+					QYG = {
+						exists = yes
+					}
+				}
+				QYG = {
+					country_event = {
+						id = Shcgong.6
+						days = 1
+					}
+				}
+				country_event = {
+					id = Shcgong.2
+					days = 1
+				}
+			}
+			else_if = {
+				limit = { 
+					QYG = {
+						exists = no
+					}
+					HNN = {
+						has_country_flag = HNN_gong_tuan_victory_flag
+					}
+				}
+				country_event = {
+					id = Shcgong.3
+					days = 1
+				}
+			}
+			if = {
+				limit = { 
+					HNN = {
+						has_country_flag = HNN_gong_tuan_victory_flag
+					}
+				}
+				HNN = {
+					country_event = {
+						id = Shcgong.7
+						days = 1
+					}
+				}
+			}
+			set_party_name = {
+				ideology = social_liberal
+				long_name = LEC_social_liberal_party_GT_long
+				name = LEC_social_liberal_party_GT
+			}
+			create_field_marshal = {
+				name = "汪寿华"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_field_marshal = {
+				name = "亚历山大·I·切列帕诺夫"
+				desc = "Portrait_Alexander_Ivanovich_Cherepanov_DESC"
+				portrait_path = "gfx/leaders/LEC/Portrait_Alexander_Ivanovich_Cherepanov.png"
+				traits = {  
+					war_hero
+					harsh_leader
+					career_officer
+					infantry_officer
+				}
+				skill = 4
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			create_corps_commander = {
+				name = "尼古拉·古比雪夫"
+				desc = "POLITICS_Nikolay_Kuibyshev_DESC"
+				portrait_path = "gfx/leaders/LEC/Portrait_Nikolay_Kuibyshev.png"
+				traits = {  
+					war_hero
+					career_officer
+					infantry_officer
+				}
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			create_corps_commander = {
+				name = "尼古拉·罗申"
+				desc = "POLITICS_Background_Alternate_DESC"
+				portrait_path = "gfx/leaders/LEC/Portrait_Background_Alternate.png"
+				traits = {  
+					career_officer
+					infantry_officer
+				}
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			create_corps_commander = {
+				name = "孙富元"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Sun_Fuyuan.png"
+				traits = {  
+					trait_cautious
+					irregulars_officer
+				}
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "饶漱石"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Rao_Shu_Shi.png"
+				traits = { 
+					irregulars_officer
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "王亚樵"
+				portrait_path = "gfx/leaders/LEC/Portrait_Wang_Yaqiao.png"
+				traits = { 
+					fast_planner
+					offensive_doctrine
+					irregulars_officer
+					urban_assault_specialist
+				}
+				skill = 2
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "鲁迅"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Lu_Xun.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "彭述之"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Peng_Shu_Zhi.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "张溶"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Kang_Sheng.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "田汉"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Tian_Han.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "茅盾"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Mao_Dun.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "张春桥"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Zhang_Chunqiao.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "周扬"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Zhou_Yang.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "赵世炎"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Zhao_Shi_Yan.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = SHCqiehuan.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SHCqiehuan.2"}
+	title = SHCqiehuan.2.t
+	desc = SHCqiehuan.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#工团
+		name = SHCqiehuan.2.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_RICH
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_RICH_SX
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_RICH_HE
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_JIDU
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_POL
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_HZ
+					}
+				}
+			}
+		}
+		add_political_power = 10
+		create_country_leader = {
+			name = "鲁迅"
+			desc = "LU_XUN_DESC"
+			picture = "gfx/leaders/LEC/Portrait_LEC_Lu_Xun.png"
+			expire = "1.1.1"
+			ideology = lu_xun_thought_subtype
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		set_country_flag = zong_gong_hui_victory
+		set_cosmetic_tag = LEC_GT
+		remove_all_ministers = yes
+		remove_ideas = {
+			LEC_Du_Yuesheng_boss_sli
+			LEC_Huang_Jinrong_boss_sli
+			LEC_Zhang_Xiaolin_boss_sli
+		}
+		add_ideas = {
+			LEC_wang_shou_hua_hog
+			LEC_Liu_Hongsheng_eco_sli
+			LEC_zhao_si_yan_for
+			LEC_tian_han_eco
+		}
+		division_template = { #Guangxi Army
+			name = "工人纠察队"
+			division_names_group = "LEC_GAR_01"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+			}
+			support = {
+					
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 743 }
+			limit = { is_in_home_area = yes }
+			create_unit = {
+				division = "division_template = \"工人纠察队\" start_experience_factor = 0.5"
+				owner = PREV
+				count = 3
+			}
+		}
+		add_timed_idea = {
+			idea = SHC_di_xia_she_hui_de_fan_pu
+			days = 180
+		}
+		add_timed_idea = {
+			idea = SHC_wan_gu_de_jiu_shi_li
+			days = 180
+		}
+		hidden_effect = {
+			country_event = {
+				id = lecgong.1
+				days = 2
+			}
+			country_event = {
+				id = Shcgong.1
+				days = 5
+			}
+			country_event = {
+				id = Shcgong.26
+				days = 25
+			}
+			if = {
+				limit = { 
+					QYG = {
+						exists = yes
+					}
+				}
+				QYG = {
+					country_event = {
+						id = Shcgong.6
+						days = 1
+					}
+				}
+				country_event = {
+					id = Shcgong.2
+					days = 2
+				}
+			}
+			else_if = {
+				limit = { 
+					QYG = {
+						exists = no
+					}
+					HNN = {
+						has_country_flag = HNN_gong_tuan_victory_flag
+					}
+				}
+				country_event = {
+					id = Shcgong.3
+					days = 2
+				}
+			}
+			if = {
+				limit = { 
+					HNN = {
+						has_country_flag = HNN_gong_tuan_victory_flag
+					}
+				}
+				HNN = {
+					country_event = {
+						id = Shcgong.7
+						days = 1
+					}
+				}
+			}
+			set_party_name = {
+				ideology = social_liberal
+				long_name = LEC_social_liberal_party_GT_long
+				name = LEC_social_liberal_party_GT
+			}
+			create_field_marshal = {
+				name = "汪寿华"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_field_marshal = {
+				name = "亚历山大·I·切列帕诺夫"
+				desc = "Portrait_Alexander_Ivanovich_Cherepanov_DESC"
+				portrait_path = "gfx/leaders/LEC/Portrait_Alexander_Ivanovich_Cherepanov.png"
+				traits = {  
+					war_hero
+					harsh_leader
+					career_officer
+					infantry_officer
+				}
+				skill = 4
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			create_corps_commander = {
+				name = "尼古拉·古比雪夫"
+				desc = "POLITICS_Nikolay_Kuibyshev_DESC"
+				portrait_path = "gfx/leaders/LEC/Portrait_Nikolay_Kuibyshev.png"
+				traits = {  
+					war_hero
+					career_officer
+					infantry_officer
+				}
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			create_corps_commander = {
+				name = "尼古拉·罗申"
+				desc = "POLITICS_Background_Alternate_DESC"
+				portrait_path = "gfx/leaders/LEC/Portrait_Background_Alternate.png"
+				traits = {  
+					career_officer
+					infantry_officer
+				}
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "孙富元"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Sun_Fuyuan.png"
+				traits = {  
+					trait_cautious
+					irregulars_officer
+				}
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "饶漱石"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Rao_Shu_Shi.png"
+				traits = { 
+					irregulars_officer
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "王亚樵"
+				portrait_path = "gfx/leaders/LEC/Portrait_Wang_Yaqiao.png"
+				traits = { 
+					fast_planner
+					offensive_doctrine
+					irregulars_officer
+					urban_assault_specialist
+				}
+				skill = 2
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "鲁迅"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Lu_Xun.png"
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "彭述之"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Peng_Shu_Zhi.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "张溶"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Kang_Sheng.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "田汉"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Tian_Han.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "茅盾"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Mao_Dun.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "张春桥"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Zhang_Chunqiao.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "周扬"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Zhou_Yang.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "赵世炎"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Zhao_Shi_Yan.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+		}
+	}
+
+	option = {#何东
+		name = SHCqiehuan.2.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION_WORK
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION_SOV
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION_TUO
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION_WRITER
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_JIDU
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_POL
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_HZ
+					}
+				}
+			}
+		}
+		set_country_flag = zi_ben_jia_victory
+		add_political_power = 10
+		create_country_leader = {
+			name = "何东"
+			desc = "HE_DONG_DESC"
+			picture = "gfx/leaders/LEC/Portrait_LEC_He_Dong.png"
+			expire = "1.1.1"
+			ideology = national_socialism_subtype
+		}
+		set_politics = {
+			ruling_party = social_liberal
+			elections_allowed = no
+		}
+		set_cosmetic_tag = LEC_HD
+		remove_all_ministers = yes
+		remove_ideas = {
+			LEC_Du_Yuesheng_boss_sli
+			LEC_Huang_Jinrong_boss_sli
+			LEC_Zhang_Xiaolin_boss_sli
+		}
+		add_ideas = {
+			LEC_Robert_Hotung_hog
+			LEC_he_fu_eco
+			LEC_he_gan_tang_for
+			LEC_he_shi_li_sec
+		}
+		division_template = { #Guangxi Army
+			name = "上海雇佣军"
+			division_names_group = "LEC_GAR_01"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+			}
+			support = {
+					
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 743 }
+			limit = { is_in_home_area = yes }
+			create_unit = {
+				division = "division_template = \"上海雇佣军\" start_experience_factor = 0.5"
+				owner = PREV
+				count = 3
+			}
+		}
+		add_timed_idea = {
+			idea = SHC_she_hui_zhu_yi_yu_wen
+			days = 180
+		}
+		add_timed_idea = {
+			idea = SHC_di_xia_she_hui_de_fan_pu
+			days = 180
+		}
+		country_event = {
+			id = shche.7
+			days = 1
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "何东"
+				desc = "HE_DONG_DESC"
+				picture = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
+				expire = "1.1.1"
+				ideology = minarchism_subtype
+			}
+			create_country_leader = {
+				name = "何东"
+				desc = "HE_DONG_DESC"
+				picture = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
+				expire = "1.1.1"
+				ideology = socdem_humanistic_capitalism_subtype
+			}
+			set_party_name = {
+				ideology = social_democrat
+				long_name = LEC_social_democrat_party_HD_long
+				name = LEC_social_democrat_party_HD
+			}
+			create_country_leader = {
+				name = "维克托·沙逊"
+				desc = "Sha_Xun_DESC"
+				picture = "gfx/leaders/LEC/Portrait_LEC_Sha_Xun.png"
+				expire = "1.1.1"
+				ideology = toryism_subtype
+			}
+			set_party_name = {
+				ideology = social_conservative
+				long_name = LEC_social_conservative_party_HD_long
+				name = LEC_social_conservative_party_HD
+			}
+			create_country_leader = {
+				name = "何东"
+				desc = "HE_DONG_DESC"
+				picture = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
+				expire = "1.1.1"
+				ideology = corporatocracy_subtype
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = LEC_paternal_autocrat_party_HD_long
+				name = LEC_paternal_autocrat_party_HD
+			}
+			create_country_leader = {
+				name = "何东"
+				desc = "HE_DONG_DESC"
+				picture = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
+				expire = "1.1.1"
+				ideology = natpop_corporatocracy_subtype
+			}
+			set_party_name = {
+				ideology = national_populist
+				long_name = LEC_national_populist_party_HD_long
+				name = LEC_national_populist_party_HD
+			}
+			LEC = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_trait = LEC_british_commander
+							has_trait = LEC_international_commander
+						}
+					}
+					set_nationality = ROOT
+				}
+			}
+		}
+	}
+
+	option = {#基督徒
+		name = SHCqiehuan.2.c
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_RICH_HE
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION_WORK
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION_SOV
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION_TUO
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION_WRITER
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_RICH
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_RICH_SX
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_POL
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_HZ
+					}
+				}
+			}
+		}
+		set_country_flag = ji_du_tu_victory
+		add_political_power = 10
+		set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = no
+		}
+		set_cosmetic_tag = LEC_TZ
+		remove_all_ministers = yes
+		remove_ideas = {
+			LEC_Du_Yuesheng_boss_sli
+			LEC_Huang_Jinrong_boss_sli
+			LEC_Zhang_Xiaolin_boss_sli
+		}
+		add_ideas = {
+			LEC_hui_ji_liang_hog
+			LEC_Lothar_Eisentraeger_eco_pau
+			LEC_Hubert_Knipping_for_pau
+			LEC_Thomas_Tien_Ken_sin_sec_sli
+		}
+		add_timed_idea = {
+			idea = SHC_she_hui_zhu_yi_yu_wen
+			days = 180
+		}
+		add_timed_idea = {
+			idea = SHC_di_xia_she_hui_de_fan_pu
+			days = 180
+		}
+		country_event = {
+			days = 5
+			id = lecjidu.4
+		}
+		division_template = { #Guangxi Army
+			name = "护卫骑士团"
+			division_names_group = "LEC_GAR_01"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+			}
+			support = {
+					
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 743 }
+			limit = { is_in_home_area = yes }
+			create_unit = {
+				division = "division_template = \"护卫骑士团\" start_experience_factor = 0.5"
+				owner = PREV
+				count = 3
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				days = 30
+				id = lecjidu.5
+			}
+			create_corps_commander = {
+				name = "于斌"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Ding_Bi.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "惠济良"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Hui_Ji.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			LEC = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_trait = LEC_german_commander
+							has_trait = LEC_international_commander
+						}
+					}
+					set_nationality = ROOT
+				}
+			}
+		}
+	}	
+
+	option = {#警察局
+		name = SHCqiehuan.2.e
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_RICH_HE
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION_WORK
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION_SOV
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION_TUO
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_UNION_WRITER
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_RICH
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_RICH_SX
+					}
+					has_game_rule = {
+						rule = SHC_PATH
+						option = SHC_JIDU
+					}
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		set_cosmetic_tag = SHC_PLE
+		country_event = {
+			days = 2
+			id = Shcjingcha.1
+		}
+		add_timed_idea = {
+			idea = SHC_she_hui_zhu_yi_yu_wen
+			days = 180
+		}
+		add_timed_idea = {
+			idea = SHC_di_xia_she_hui_de_fan_pu
+			days = 180
+		}
+		division_template = { #Guangxi Army
+			name = "上海警察"
+			division_names_group = "LEC_GAR_01"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+			}
+			support = {
+					
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 743 }
+			limit = { is_in_home_area = yes }
+			create_unit = {
+				division = "division_template = \"上海警察\" start_experience_factor = 0.5"
+				owner = PREV
+				count = 3
+			}
+		}
+		hidden_effect = {
+			LEC = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_trait = LEC_japanese_commander
+							has_trait = LEC_international_commander
+						}
+					}
+					set_nationality = ROOT
+				}
+			}
+		}
+	}		
+}
+
+country_event = {#加入共荣圈
+	id = SHCwaijiao.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.1"}
+	title = SHCwaijiao.1.t
+	desc = SHCwaijiao.1.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# let them in
+		name = SHCwaijiao.1.a
+		ai_chance = {
+			base =50
+		}
+		add_political_power = -5
+		SHC = {
+			country_event = {
+				id = SHCwaijiao.2
+				days = 3
+			}
+		}
+	}
+	option = {	# nada
+		name = SHCwaijiao.1.b
+		ai_chance = {
+			base = 20
+		}
+		add_political_power = 5
+		SHC = {
+			country_event = {
+				id = SHCwaijiao.3
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { # Entente lets us in
+	id = SHCwaijiao.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.2" }
+	title = SHCwaijiao.2.t
+	desc = SHCwaijiao.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# great
+		name = SHCwaijiao.2.a
+		add_political_power = 5
+		FROM = {
+			add_to_faction = SHC
+		}
+	}
+}
+
+country_event = { # Entente doesn't let us join
+	id = SHCwaijiao.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.3" }
+	title = SHCwaijiao.3.t
+	desc = SHCwaijiao.3.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.3.a
+		add_political_power = -45
+	}
+}
+
+country_event = {#加入帝国公约
+	id = SHCwaijiao.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.4"}
+	title = SHCwaijiao.4.t
+	desc = SHCwaijiao.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# let them in
+		name = SHCwaijiao.4.a
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = -5
+		SHC = {
+			country_event = {
+				id = SHCwaijiao.5
+				days = 3
+			}
+		}
+	}
+	option = {	# nada
+		name = SHCwaijiao.4.b
+		ai_chance = {
+			base = 20
+		}
+		add_political_power = 5
+		SHC = {
+			country_event = {
+				id = SHCwaijiao.6
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { # Entente lets us in
+	id = SHCwaijiao.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.5" }
+	title = SHCwaijiao.5.t
+	desc = SHCwaijiao.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# great
+		name = SHCwaijiao.5.a
+		add_political_power = 5
+		FROM = {
+			add_to_faction = SHC
+		}
+	}
+}
+
+country_event = { # Entente doesn't let us join
+	id = SHCwaijiao.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.6" }
+	title = SHCwaijiao.6.t
+	desc = SHCwaijiao.6.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.6.a
+		add_political_power = -45
+	}
+}
+
+country_event = {#中立避风港
+	id = SHCwaijiao.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.7" }
+	title = SHCwaijiao.7.t
+	desc = SHCwaijiao.7.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.7.a
+		add_political_power = 5
+	}
+}
+
+country_event = {#今日上海
+	id = SHCwaijiao.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.8" }
+	title = SHCwaijiao.8.t
+	desc = SHCwaijiao.8.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.8.a
+		add_political_power = 5
+		hidden_effect = {
+			if = {
+				limit = { 
+					has_country_flag = zong_gong_hui_victory
+				}
+				country_event = {
+					id = SHCwaijiao.9
+					days = 3
+				}
+			}
+		}
+	}
+}
+
+country_event = {#革命？
+	id = SHCwaijiao.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.9" }
+	title = SHCwaijiao.9.t
+	desc = SHCwaijiao.9.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.9.a
+		add_political_power = -5
+		hidden_effect = {
+			country_event = {
+				id = lecgong.15
+				days = 25
+			}
+		}
+	}
+}
+
+country_event = {#辞退外籍法官
+	id = SHCwaijiao.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.10" }
+	title = SHCwaijiao.10.t
+	desc = SHCwaijiao.10.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.10.a
+		trigger = {
+			OR = {
+				has_country_flag = jin_cha_ju_victory
+				has_country_flag = han_jian_victory				
+			}
+		}
+		add_stability = 0.02
+		add_political_power = -20
+	}	
+
+	option = {
+		name = SHCwaijiao.10.b
+		trigger = {
+			has_country_flag = zong_gong_hui_victory
+		}
+		add_stability = 0.02
+		add_political_power = -20
+	}
+
+	option = {
+		name = SHCwaijiao.10.c
+		trigger = {
+			has_country_flag = zi_ben_jia_victory
+		}
+		add_stability = 0.02
+		add_political_power = -20
+	}
+
+	option = {
+		name = SHCwaijiao.10.e
+		trigger = {
+			has_country_flag = ji_du_tu_victory
+		}
+		add_stability = 0.02
+		add_political_power = -20
+	}	
+}
+
+country_event = {#上海
+	id = SHCwaijiao.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.11" }
+	title = SHCwaijiao.11.t
+	desc = SHCwaijiao.11.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.11.a
+		add_political_power = 1 
+	}
+}
+
+country_event = {#另一个世界
+	id = SHCwaijiao.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.12" }
+	title = SHCwaijiao.12.t
+	desc = SHCwaijiao.12.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.12.a
+		add_political_power = 5 
+		country_event = {
+			id = SHCwaijiao.13
+			days = 2
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+country_event = {#真正的上海房屋
+	id = SHCwaijiao.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.13" }
+	title = SHCwaijiao.13.t
+	desc = SHCwaijiao.13.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.13.a
+		add_political_power = 10 
+		hidden_effect = {
+			
+		}
+	}
+}
+
+country_event = {#沪漂
+	id = SHCwaijiao.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.14" }
+	title = SHCwaijiao.14.t
+	desc = SHCwaijiao.14.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.13.a
+		add_political_power = 10 
+		country_event = {
+			id = SHCwaijiao.12
+			days = 2
+		}
+	}
+}
+
+country_event = {#棚户人
+	id = SHCwaijiao.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.15" }
+	title = SHCwaijiao.15.t
+	desc = SHCwaijiao.15.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.15.a
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.01
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+country_event = {#青年们
+	id = SHCwaijiao.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.16" }
+	title = SHCwaijiao.16.t
+	desc = SHCwaijiao.16.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.16.a
+		add_stability = 0.01
+		hidden_effect = {
+			
+		}
+	}
+}
+
+country_event = {#邻里之间
+	id = SHCwaijiao.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.17" }
+	title = SHCwaijiao.17.t
+	desc = SHCwaijiao.17.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.17.a
+		add_stability = 0.01
+		hidden_effect = {
+			
+		}
+	}
+}
+
+country_event = {#人靠衣装
+	id = SHCwaijiao.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.18" }
+	title = SHCwaijiao.18.t
+	desc = SHCwaijiao.18.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.18.a
+		add_political_power = 10
+		hidden_effect = {
+			
+		}
+	}
+}
+
+country_event = {#陈月华的一天
+	id = SHCwaijiao.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event SHCwaijiao.19" }
+	title = SHCwaijiao.19.t
+	desc = SHCwaijiao.19.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = SHCwaijiao.19.a
+		add_political_power = 10
+		hidden_effect = {
+			
+		}
+	}
+}
+
+########################################
+##########-      工团      -############
+########################################
+country_event = {#丝厂女工曲
+	id = Shcgong.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.1" }
+	title = Shcgong.1.t
+	desc = Shcgong.1.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcgong.1.a
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = {#团结才能胜利-琼崖
+	id = Shcgong.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.2" }
+	title = Shcgong.2.t
+	desc = Shcgong.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#yes
+		name = Shcgong.2.a
+		ai_chance = {
+			base = 30
+		}
+		QYG = {
+			country_event = {
+				id = Shcgong.4
+				days = 2
+			}
+		}
+	}
+
+	option = {	#no
+		name = Shcgong.2.b
+		ai_chance = {
+			base = 5
+		}
+
+	}
+}
+
+country_event = {#团结才能胜利-湖南
+	id = Shcgong.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.3" }
+	title = Shcgong.3.t
+	desc = Shcgong.3.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#yes
+		name = Shcgong.3.a
+		ai_chance = {
+			base = 30
+		}
+		HNN = {
+			country_event = {
+				id = Shcgong.4
+				days = 3
+			}
+		}
+	}
+
+	option = {	#no
+		name = Shcgong.3.b
+		ai_chance = {
+			base = 5
+		}
+
+	}
+}
+
+country_event = {#上海同志的来信
+	id = Shcgong.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.4" }
+	title = Shcgong.4.t
+	desc = Shcgong.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	#yes
+		name = Shcgong.4.a
+		ai_chance = {
+			base = 30
+		}
+		effect_tooltip = {
+			annex_country = {
+				target = SHC
+				transfer_troops = yes
+			}
+		}
+		hidden_effect = {
+			annex_country = {
+				target = SHC
+				transfer_troops = yes
+			}
+		}
+		hidden_effect = {
+			create_corps_commander = {
+				name = "饶漱石"
+				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Rao_Shu_Shi.png"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+		}
+	}
+
+	option = {	#no
+		name = Shcgong.4.b
+		ai_chance = {
+			base = 5
+		}
+		SHC = {
+			country_event = {
+				id = Shcgong.5
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = {#时机未到
+	id = Shcgong.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.5" }
+	title = Shcgong.5.t
+	desc = Shcgong.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcgong.5.a
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#上海工人的胜利-琼崖
+	id = Shcgong.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.6" }
+	title = Shcgong.6.t
+	desc = Shcgong.6.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	
+		name = Shcgong.6.a
+		add_stability = 0.01
+	}
+}
+
+country_event = {#上海工人的胜利-湖南
+	id = Shcgong.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.7" }
+	title = Shcgong.7.t
+	desc = Shcgong.7.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	
+		name = Shcgong.7.a
+		add_stability = 0.01
+	}
+}
+
+country_event = {#俄国难民
+	id = Shcgong.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.8" }
+	picture = GFX_report_event_SHC_bai_e_nan_ming
+	title = Shcgong.8.t
+	desc = Shcgong.8.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.8.a
+		add_stability = -0.01
+		hidden_effect = {
+			country_event = {
+				id = Shcgong.9
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = {#难民问题
+	id = Shcgong.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.9" }
+	picture = GFX_report_event_SHC_nan_min_wen_ti
+	title = Shcgong.9.t
+	desc = Shcgong.9.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.9.a
+		add_stability = -0.01
+	}
+}
+
+country_event = {#另一些人
+	id = Shcgong.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.10" }
+	title = Shcgong.10.t
+	desc = Shcgong.10.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.10.a
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.02
+		}
+	}
+}
+
+country_event = {#国家计划委员会
+	id = Shcgong.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.11" }
+	title = Shcgong.11.t
+	desc = Shcgong.11.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.11.a
+		add_political_power = 10
+	}
+}
+
+country_event = {#上海想要加入我方
+	id = Shcgong.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.12" }
+	title = Shcgong.12.t
+	desc = Shcgong.12.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = Shcgong.12.a
+		every_state = {
+			limit = {
+				is_core_of = SHC
+				is_owned_by = SHC
+			}
+			ROOT = { add_state_core = PREV }
+		}
+		if = {
+			limit = {
+				NOT = { is_neighbor_of = SHC }
+			}
+			SHC = { get_current_government_type = yes }
+			set_autonomy = {
+				target = SHC
+				autonomous_state = kr_autonomous_soviet_republic
+			}
+			SHC = { restore_previous_government_type = yes }
+		}
+		else = {
+			every_state = {
+				limit = {
+					is_core_of = SHC
+					is_owned_by = SHC
+				}
+				ROOT = { transfer_state = PREV }
+			}
+		}
+	}
+}
+
+country_event = {#上海想要我方加入他们
+	id = Shcgong.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.13" }
+	title = Shcgong.13.t
+	desc = Shcgong.13.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#yes
+		name = Shcgong.13.a
+		SHC = {
+			country_event = {
+				id = Shcgong.14
+				days = 3
+			}
+		}
+	}
+
+	option = {#no
+		name = Shcgong.13.b
+		SHC = {
+			country_event = {
+				id = Shcgong.15
+				days = 3
+			}
+		}
+
+	}
+}
+
+country_event = {#他们同意了
+	id = Shcgong.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.14" }
+	title = Shcgong.14.t
+	desc = Shcgong.14.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = Shcgong.14.a
+		every_state = {
+			limit = {
+				is_core_of = TRM
+				is_owned_by = TRM
+			}
+			ROOT = { add_state_core = PREV }
+		}
+		if = {
+			limit = {
+				NOT = { is_neighbor_of = TRM }
+			}
+			TRM = { get_current_government_type = yes }
+			set_autonomy = {
+				target = TRM
+				autonomous_state = kr_autonomous_soviet_republic
+			}
+			TRM = { restore_previous_government_type = yes }
+		}
+		else = {
+			every_state = {
+				limit = {
+					is_core_of = TRM
+					is_owned_by = TRM
+				}
+				ROOT = { transfer_state = PREV }
+			}
+		}
+	}
+}
+
+country_event = {#他们拒绝了
+	id = Shcgong.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.15" }
+	title = Shcgong.15.t
+	desc = Shcgong.15.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#yes
+		name = Shcgong.15.a
+		create_wargoal = {
+			target = TRM
+			type = annex_everything
+		}
+	}
+}
+
+country_event = {#米夫主席发表演讲
+	id = Shcgong.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.16" }
+	title = Shcgong.16.t
+	desc = Shcgong.16.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.16.a
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.02
+		}
+	}
+}
+
+country_event = {#响彻世界的一枪
+	id = Shcgong.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.17" }
+	title = Shcgong.17.t
+	desc = Shcgong.17.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.17.a
+		add_manpower = -1
+		add_stability = -0.10
+		remove_ideas = LEC_mi_fu_hog
+		country_event = {
+			id = Shcgong.18
+			days = 3
+		}
+	}
+}
+
+country_event = {#紧急选举
+	id = Shcgong.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.18" }
+	title = Shcgong.18.t
+	desc = Shcgong.18.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#王明
+		name = Shcgong.18.a
+		if = {
+			limit = { 
+				has_completed_focus = LEC_guan_liao_ji_zhong_zhi
+			}
+			create_country_leader = {
+				name = "王明"
+				desc = "Chen_Shaoyu_desc"
+				picture = "gfx/leaders/LEC/Portrait_LEC_Chen_Shaoyu.png"
+				expire = "1.1.1"
+				ideology = hardliner_bolshevism_subtype
+			}
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}
+		}
+		else = {
+			create_country_leader = {
+				name = "王明"
+				desc = "Chen_Shaoyu_desc"
+				picture = "gfx/leaders/LEC/Portrait_LEC_Chen_Shaoyu.png"
+				expire = "1.1.1"
+				ideology = authcom_subtype
+			}
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}
+		}
+		add_ideas = LEC_wang_min_hog
+	}
+
+	option = {#刘仁静
+		name = Shcgong.18.b
+		create_country_leader = {
+			name = "刘仁静"
+			desc = "liu_ren_jing_desc"
+			picture = "gfx/leaders/LEC/Portrait_LEC_liu_ren_jing.png"
+			expire = "1.1.1"
+			ideology = syn_internationalism_subtype
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			LEC_liu_ren_jing_hog
+			LEC_zheng_chao_ling_eco
+			LEC_bo_gu_for
+			LEC_tian_han_eco
+		}
+		hidden_effect = {
+			create_country_leader = {
+				name = "王明"
+				desc = "Chen_Shaoyu_desc"
+				picture = "gfx/leaders/LEC/Portrait_LEC_Chen_Shaoyu.png"
+				expire = "1.1.1"
+				ideology = authcom_subtype
+			}
+		}
+	}
+
+	option = {#张闻天
+		name = Shcgong.18.c
+		create_country_leader = {
+			name = "张闻天"
+			desc = "Zhang_Wen_Tian_desc"
+			picture = "gfx/leaders/LEC/Portrait_LEC_Zhang_Wen_Tian.png"
+			expire = "1.1.1"
+			ideology = bukharinist_subtype
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.20
+		}
+		add_ideas = LEC_zhang_wen_tian_hog
+		hidden_effect = {
+			set_party_name = {
+				ideology = radical_socialist
+				long_name = SHC_syndicalist_party_EG_long
+				name = SHC_syndicalist_party_EG
+			}
+			create_country_leader = {
+				name = "王明"
+				desc = "Chen_Shaoyu_desc"
+				picture = "gfx/leaders/LEC/Portrait_LEC_Chen_Shaoyu.png"
+				expire = "1.1.1"
+				ideology = authcom_subtype
+			}
+		}
+	}	
+}
+
+country_event = {#彻查反革命
+	id = Shcgong.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.19" }
+	title = Shcgong.19.t
+	desc = Shcgong.19.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.19.a
+		add_manpower = -10000
+		hidden_effect = {
+			country_event = {
+				id = Shcgong.20
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {#遇刺案的真相
+	id = Shcgong.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.20" }
+	title = Shcgong.20.t
+	desc = Shcgong.20.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.20.a
+		add_manpower = -1
+		add_stability = -0.02
+		hidden_effect = {
+			country_event = {
+				id = Shcgong.21
+				days = 140
+			}
+		}
+	}
+}
+
+country_event = {#开除党籍
+	id = Shcgong.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.21" }
+	title = Shcgong.21.t
+	desc = Shcgong.21.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.21.a
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.02
+		}
+	}
+}
+
+country_event = {#意识形态问题
+	id = Shcgong.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.22" }
+	title = Shcgong.22.t
+	desc = Shcgong.22.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.22.a
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.10
+		}
+	}
+
+	option = {
+		name = Shcgong.22.b
+		set_country_leader_ideology = radsoc_popcom_subtype
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.10
+		}
+	}
+
+	option = {
+		name = Shcgong.22.c
+		create_country_leader = {
+			name = "张闻天"
+			desc = "Zhang_Wen_Tian_desc"
+			picture = "gfx/leaders/LEC/Portrait_LEC_Zhang_Wen_Tian.png"
+			expire = "1.1.1"
+			traits = {
+				SHC_hong_se_li_Lun
+			}
+			ideology = broad_communism_subtype
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.20
+		}
+		hidden_effect = {
+			set_party_name = {
+				ideology = totalist
+				long_name = SHC_syndicalist_party_EG_long
+				name = SHC_syndicalist_party_EG
+			}
+		}
+	}
+}
+
+country_event = {#反对小资主义的极左主义
+	id = Shcgong.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.23" }
+	title = Shcgong.23.t
+	desc = Shcgong.23.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.23.a
+		add_political_power = 10
+	}
+}
+
+country_event = {#一切为了保卫苏维埃
+	id = Shcgong.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.24" }
+	title = Shcgong.24.t
+	desc = Shcgong.24.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.24.a
+		add_political_power = 10
+	}
+}
+
+country_event = {#改变对富农的策略
+	id = Shcgong.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.25" }
+	title = Shcgong.25.t
+	desc = Shcgong.25.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.25.a
+		add_political_power = 10
+	}
+}
+
+country_event = {#作家要和工农群众联系在一起
+	id = Shcgong.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.26" }
+	title = Shcgong.26.t
+	desc = Shcgong.26.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.26.a
+		add_political_power = 10
+	}
+}
+
+country_event = {#发展工商业
+	id = Shcgong.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.27" }
+	title = Shcgong.27.t
+	desc = Shcgong.27.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.27.a
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.01
+		}
+		hidden_effect = {
+			country_event = {
+				id = Shcgong.29
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = {#调整工资关系
+	id = Shcgong.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.28" }
+	title = Shcgong.28.t
+	desc = Shcgong.28.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.28.a
+		add_stability = 0.01
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = -0.01
+		}
+	}
+}
+
+country_event = {#发展生产，发扬民主
+	id = Shcgong.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.29" }
+	title = Shcgong.29.t
+	desc = Shcgong.29.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.29.a
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = {#要饭吃！要工作！
+	id = Shcgong.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.30" }
+	title = Shcgong.30.t
+	desc = Shcgong.30.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.30.a
+		add_political_power = 30
+	}
+}
+
+country_event = {#往昔
+	id = Shcgong.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.31" }
+	title = Shcgong.31.t
+	desc = Shcgong.31.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.31.a
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = {#必要之恶
+	id = Shcgong.32
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.32" }
+	title = Shcgong.32.t
+	desc = Shcgong.32.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.32.a
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = {#丢掉酒瓶
+	id = Shcgong.33
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.33" }
+	title = Shcgong.33.t
+	desc = Shcgong.33.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.33.a
+		add_manpower = 1
+	}
+}
+
+country_event = {#人的解放
+	id = Shcgong.34
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.34" }
+	title = Shcgong.34.t
+	desc = Shcgong.34.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.34.a
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.02
+		}
+	}
+}
+
+country_event = {#共和国的未来
+	id = Shcgong.35
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.35" }
+	title = Shcgong.35.t
+	desc = Shcgong.35.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.35.a
+		add_political_power = 20
+	}
+}
+
+country_event = {#革命共产国际
+	id = Shcgong.36
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.36" }
+	title = Shcgong.36.t
+	desc = Shcgong.36.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.36.a
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#缺一不可
+	id = Shcgong.37
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.37" }
+	title = Shcgong.37.t
+	desc = Shcgong.37.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.37.a
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.03
+		}
+	}
+}
+
+country_event = {#迎新
+	id = Shcgong.38
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.38" }
+	title = Shcgong.38.t
+	desc = Shcgong.38.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.38.a
+		add_political_power = 20
+	}
+}
+
+country_event = {#自由王国
+	id = Shcgong.39
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.39" }
+	title = Shcgong.39.t
+	desc = Shcgong.39.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = Shcgong.39.a
+		set_party_name = {
+			ideology = social_conservative
+			long_name = SHC_social_conservative_EG_long
+			name = SHC_social_conservative_EG
+		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = SHC_authoritarian_democrat_EG_long
+			name = SHC_authoritarian_democrat_EG
+		}
+	}
+}
+########################################
+##########-      教会      -############
+########################################
+country_event = {#震旦大学
+	id = Shcjidu.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjidu.1" }
+	title = Shcjidu.1.t
+	desc = Shcjidu.1.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcjidu.1.a
+		add_stability = 0.01
+	}
+}
+
+country_event = {#资助圣言会
+	id = Shcjidu.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjidu.2" }
+	title = Shcjidu.2.t
+	desc = Shcjidu.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcjidu.2.a
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = {#南京总教区
+	id = Shcjidu.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjidu.3" }
+	title = Shcjidu.3.t
+	desc = Shcjidu.3.d
+
+	fire_only_once = yes
+	trigger = {
+		tag = SHC
+		#昆明
+		#owns_state = 325
+		#广州
+		# owns_state = 592
+		#北京
+		# owns_state = 608
+		#南京
+		owns_state = 613
+		#重庆
+		#owns_state = 650
+		#沈阳
+		# owns_state = 716
+		has_country_flag = ji_du_tu_victory
+	}
+
+	option = {	# damn
+		name = Shcjidu.3.a
+		set_party_name = {
+			ideology = social_conservative
+			long_name = SHC_social_conservative_party_new_long
+			name = SHC_social_conservative_party_new
+		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = SHC_authoritarian_democrat_party_new_long
+			name = SHC_authoritarian_democrat_party_new
+		}
+	}
+}
+
+########################################
+##########-     资本家     -############
+########################################
+country_event = {#娼妓
+	id = shche.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shche.1" }
+	title = shche.1.t
+	desc = shche.1.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = shche.1.a
+		add_political_power = 10
+	}
+}
+
+country_event = {#休闲娱乐
+	id = shche.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shche.2" }
+	title = shche.2.t
+	desc = shche.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = shche.2.a
+		add_political_power = 10
+		hidden_effect = {
+			country_event = {
+				days = 14
+				id = shche.4
+			}
+		}
+	}
+}
+
+country_event = {#何计大世界
+	id = shche.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shche.3" }
+	title = shche.3.t
+	desc = shche.3.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = shche.3.a
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = {#快哉生活
+	id = shche.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shche.4" }
+	title = shche.4.t
+	desc = shche.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = shche.4.a
+		add_political_power = 10
+	}
+}
+
+country_event = {#改头换面
+	id = shche.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shche.5" }
+	title = shche.5.t
+	desc = shche.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = shche.5.a
+		add_political_power = 10
+	}
+}
+
+country_event = {#机遇
+	id = shche.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shche.6" }
+	title = shche.6.t
+	desc = shche.6.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = shche.6.a
+		add_political_power = 10
+		add_stability = 0.01
+	}
+}
+
+country_event = {#真正的话事人
+	id = shche.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shche.7" }
+	title = shche.7.t
+	desc = shche.7.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#何东
+		name = shche.7.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = SHC_PATH
+					option = SHC_RICH_SX
+				}
+			}
+		}
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				days = 10
+				id = leche.12
+			}
+			country_event = {
+				days = 25
+				id = shche.6
+			}
+			country_event = {
+				days = 100
+				id = leche.20
+			}
+			create_country_leader = {
+				name = "何东"
+				desc = "HE_DONG_DESC"
+				picture = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
+				expire = "1.1.1"
+				ideology = soccon_oligarchy_subtype
+			}
+			set_party_name = {
+				ideology = social_conservative
+				long_name = LEC_social_democrat_party_HD_long
+				name = LEC_social_democrat_party_HD
+			}
+		}
+	}
+
+	option = {#沙逊
+		name = shche.7.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = SHC_PATH
+					option = SHC_RICH_HE
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			LEC_sha_he_hog
+			LEC_T_Sassoon_eco_pau
+			AOG_He_Fengshang_for_ade
+			LEC_Sir_Harold_McMichael_sec_mli
+		}
+		set_cosmetic_tag = SHC_YT
+		hidden_effect = {
+			country_event = {
+				id = shche.10
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {#同样的出身，不同的道路
+	id = shche.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shche.8" }
+	title = shche.8.t
+	desc = shche.8.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = shche.8.a
+		add_political_power = 10
+	}
+}
+
+country_event = {#天生的地产开发商
+	id = shche.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shche.9" }
+	title = shche.9.t
+	desc = shche.9.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = shche.9.a
+		add_political_power = 10
+	}
+}
+
+country_event = {#绯闻
+	id = shche.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event shche.10" }
+	title = shche.10.t
+	desc = shche.10.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = shche.10.a
+		add_political_power = 10
+	}
+}
+
+########################################
+##########-      警察      -############
+########################################
+country_event = {#抉择
+	id = Shcjingcha.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjingcha.1" }
+	title = Shcjingcha.1.t
+	desc = Shcjingcha.1.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#维持警察
+		name = Shcjingcha.1.a
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = SHC_PATH
+					option = SHC_HZ
+				}
+			}
+		}
+		set_country_flag = jin_cha_ju_victory
+		add_ideas = {
+			LEC_yuan_liang_hog
+			LEC_Hubert_Knipping_for_pau
+			LEC_Robert_Hotung_eco_sli
+			LEC_Mark_Aitchison_Young_sec_sco
+		} 
+	}
+
+	option = {#大道政府
+		name = Shcjingcha.1.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = SHC_PATH
+					option = SHC_POL
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		clr_country_flag = jin_cha_ju_victory
+		set_country_flag = han_jian_victory
+		set_cosmetic_tag = LEC_PLE
+		add_ideas = {
+			LEC_su_xi_wen_hog
+			LEC_Michitaro_Komatsubara_eco_npo
+			LEC_Geoffry_Northcote_sec_sco
+			LEC_Hiraya_Amane_boss_npo
+		} 
+	}	
+}
+
+country_event = {#警务改革
+	id = Shcjingcha.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjingcha.2" }
+	title = Shcjingcha.2.t
+	desc = Shcjingcha.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcjingcha.2.a
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.01
+		}
+		hidden_effect = {
+			country_event = {
+				days = 25
+				id = Shcjingcha.8
+			}
+		}
+	}
+}
+
+country_event = {#消除影响
+	id = Shcjingcha.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjingcha.3" }
+	title = Shcjingcha.3.t
+	desc = Shcjingcha.3.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcjingcha.3.a
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = {#城市清洁
+	id = Shcjingcha.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjingcha.4" }
+	title = Shcjingcha.4.t
+	desc = Shcjingcha.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcjingcha.4.a
+		add_stability = -0.01
+	}
+}
+
+country_event = {#铁链之后
+	id = Shcjingcha.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjingcha.5" }
+	title = Shcjingcha.5.t
+	desc = Shcjingcha.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcjingcha.5.a
+		add_political_power = 10 
+	}
+}
+
+country_event = {#命丧街头
+	id = Shcjingcha.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjingcha.6" }
+	title = Shcjingcha.6.t
+	desc = Shcjingcha.6.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcjingcha.6.a
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.01
+		} 
+	}
+}
+
+country_event = {#正义不容有失
+	id = Shcjingcha.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjingcha.7" }
+	title = Shcjingcha.7.t
+	desc = Shcjingcha.7.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcjingcha.7.a
+		add_stability = 0.01 
+	}
+}
+
+country_event = {#警务改革
+	id = Shcjingcha.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjingcha.8" }
+	title = Shcjingcha.8.t
+	desc = Shcjingcha.8.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcjingcha.8.a
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.01
+		} 
+	}
+}
+
+country_event = {#被捕获的间谍
+	id = Shcjingcha.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjingcha.9" }
+	title = Shcjingcha.9.t
+	desc = Shcjingcha.9.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#放了他
+		name = Shcjingcha.9.a
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.01
+		} 
+		add_political_power = 10
+	}
+
+	option = {#拒绝放入
+		name = Shcjingcha.9.b
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.01
+		} 
+		add_political_power = -10
+	}	
+}
+
+country_event = {#难以为继
+	id = Shcjingcha.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjingcha.10" }
+	title = Shcjingcha.10.t
+	desc = Shcjingcha.10.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {#放了他
+		name = Shcjingcha.10.a
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.01
+		}
+		add_political_power = -10
+	}
+}
+
+country_event = {#暴力之夜
+	id = Shcjingcha.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjingcha.11" }
+	title = Shcjingcha.11.t
+	desc = Shcjingcha.11.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {# 
+		name = Shcjingcha.11.a
+		ai_chance = {
+			base = 30
+		}
+		set_country_flag = SHC_choose_china
+	}
+	option = {# 
+		name = Shcjingcha.11.b
+		ai_chance = {
+			base = 5
+		}
+		set_country_flag = SHC_choose_japan
+	}
+}
+
+country_event = {#死战不降
+	id = Shcjingcha.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjingcha.12" }
+	title = Shcjingcha.12.t
+	desc = Shcjingcha.12.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {# 
+		name = Shcjingcha.12.a
+		add_war_support = 0.10
+	}
+}
+
+country_event = {#中华民国
+	id = Shcjingcha.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjingcha.13" }
+	title = Shcjingcha.13.t
+	desc = Shcjingcha.13.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcjingcha.13.a
+		trigger = {
+			NOT = {
+				has_completed_focus = SHC_gong_rong_quan_de_xin_cheng_yuan
+			}
+		}
+		add_political_power = 100
+	}
+
+	option = {	# damn
+		name = Shcjingcha.13.b
+		trigger = {
+			has_completed_focus = SHC_gong_rong_quan_de_xin_cheng_yuan
+		}
+		add_political_power = 100
+		set_cosmetic_tag = SHC_ROCJ
+	}	
+}
+
+country_event = {#战争
+	id = Shcjingcha.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcjingcha.14" }
+	title = Shcjingcha.14.t
+	desc = Shcjingcha.14.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {# 
+		name = Shcjingcha.14.a
+		add_war_support = 0.01
+	}
+}
+
+########################################
+##########-      汉奸      -############
+########################################
+country_event = {#未来的上海
+	id = Shchuming.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shchuming.1" }
+	title = Shchuming.1.t
+	desc = Shchuming.1.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shchuming.1.a
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = {#买办的新生
+	id = Shchuming.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shchuming.2" }
+	title = Shchuming.2.t
+	desc = Shchuming.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shchuming.2.a
+		add_political_power = 20
+		add_stability = 0.01 
+		country_event = {
+			days = 5
+			id = Shchuming.3
+		}
+	}
+}
+
+country_event = {#沪民？
+	id = Shchuming.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shchuming.3" }
+	title = Shchuming.3.t
+	desc = Shchuming.3.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	# damn
+		name = Shchuming.3.a
+		add_stability = -0.03
+	}
+}
+
+country_event = {#小东京
+	id = Shchuming.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shchuming.4" }
+	title = Shchuming.4.t
+	desc = Shchuming.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shchuming.4.a
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.01
+		} 
+	}
+}
+
+country_event = {#黄包车夫
+	id = Shchuming.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shchuming.5" }
+	title = Shchuming.5.t
+	desc = Shchuming.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shchuming.5.a
+		add_stability = -0.01
+		hidden_effect = {
+			country_event = {
+				days = 15
+				id = Shchuming.6
+			}
+		}
+	}
+}
+
+country_event = {#黄包车夫
+	id = Shchuming.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shchuming.6" }
+	title = Shchuming.6.t
+	desc = Shchuming.6.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shchuming.6.a
+
+	}
+}
+
+########################################
+##########-      新教      -############
+########################################
+country_event = {#新教骚乱
+	id = Shcxinjiao.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcxinjiao.1" }
+	title = Shcxinjiao.1.t
+	desc = Shcxinjiao.1.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcxinjiao.1.a
+	 
+	}
+	option = {	# damn
+		name = Shcxinjiao.1.b
+	 	
+		hidden_effect = {
+			country_event = {
+				days = 25
+				id = Shcxinjiao.2
+			}
+		}
+	}
+}
+
+country_event = {#又一次战火飘摇
+	id = Shcxinjiao.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcxinjiao.2" }
+	title = Shcxinjiao.2.t
+	desc = Shcxinjiao.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcxinjiao.2.a
+		 
+		remove_ideas = SHC_she_hui_zhu_yi_yu_wen
+	}
+
+	option = {	# damn
+		name = Shcxinjiao.2.b
+		set_cosmetic_tag = SHC_CHR
+		set_country_flag = xin_jiao_du_tu_victory
+		clr_country_flag = ji_du_tu_victory
+		create_country_leader = {
+			name = "江长川"
+			desc = "jiang_chang_chuan_DESC"
+			picture = "gfx/leaders/LEC/Portrait_LEC_jiang_chang_chuan.png"
+			expire = "1.1.1"
+			ideology = christian_syndicalism_subtype
+		}
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = syndicalist
+			long_name = SHC_syndicalist_party_XJ_long
+			name = SHC_syndicalist_party_XJ
+		}
+		country_event = {
+			days = 5
+			id = Shcxinjiao.3
+		}
+		remove_ideas = SHC_she_hui_zhu_yi_yu_wen
+		hidden_effect = {
+			country_event = {
+				days = 25
+				id = Shcxinjiao.6
+			}
+			create_country_leader = {
+				name = "丁光训"
+				desc = "Portrait_LEC_ding_guang_xunn_DESC"
+				picture = "gfx/leaders/LEC/Portrait_LEC_ding_guang_xun.png"
+				expire = "1.1.1"
+				ideology = christian_socialism_subtype
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				long_name = SHC_radical_socialist_party_XJ_long
+				name = SHC_radical_socialist_party_XJ
+			}
+			create_country_leader = {
+				name = "李储文"
+				desc = "Portrait_LEC_li_chu_wen_DESC"
+				picture = "gfx/leaders/LEC/Portrait_LEC_li_chu_wen.png"
+				expire = "1.1.1"
+				ideology = christian_communism_subtype
+			}
+			set_party_name = {
+				ideology = totalist
+				long_name = SHC_totalist_party_XJ_long
+				name = SHC_totalist_party_XJ
+			}
+		}
+	}
+}
+
+country_event = {#上海宗教大会
+	id = Shcxinjiao.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcxinjiao.3" }
+	title = Shcxinjiao.3.t
+	desc = Shcxinjiao.3.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcxinjiao.3.a
+	 	add_popularity = {
+			ideology = syndicalist
+			popularity = 0.10
+		}
+	}
+	option = {	# damn
+		name = Shcxinjiao.3.b
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.10
+		}
+	}
+	option = {	# damn
+		name = Shcxinjiao.3.c
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.10
+		}
+		hidden_effect = {
+			country_event = {
+				days = 25
+				id = Shcxinjiao.8
+			}
+		}
+	}
+}
+
+country_event = {#信仰与生活
+	id = Shcxinjiao.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcxinjiao.4" }
+	title = Shcxinjiao.4.t
+	desc = Shcxinjiao.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcxinjiao.4.a
+	 	add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = {#设立劳工部
+	id = Shcxinjiao.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcxinjiao.5" }
+	title = Shcxinjiao.5.t
+	desc = Shcxinjiao.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcxinjiao.5.a
+	 	 
+	}
+}
+
+country_event = {#救济工作
+	id = Shcxinjiao.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcxinjiao.6" }
+	title = Shcxinjiao.6.t
+	desc = Shcxinjiao.6.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcxinjiao.6.a
+	 	 
+	}
+}
+
+country_event = {#报童学校
+	id = Shcxinjiao.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcxinjiao.7" }
+	title = Shcxinjiao.7.t
+	desc = Shcxinjiao.7.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcxinjiao.7.a
+	 	 
+	}
+}
+
+country_event = {#四大教育
+	id = Shcxinjiao.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcxinjiao.8" }
+	title = Shcxinjiao.8.t
+	desc = Shcxinjiao.8.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	# damn
+		name = Shcxinjiao.8.a
+	 	 
+	}
+}

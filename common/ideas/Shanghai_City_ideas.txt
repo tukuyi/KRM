@@ -1,0 +1,308 @@
+##############
+# Legation Cities
+##############
+
+ideas = {
+	country = {
+		SHC_zi_you_gang_kou = {#自由港
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_zi_you_gang_kou"}
+			allowed = { always = no }
+			picture = TIB_fire_bird
+			modifier = {
+				justify_war_goal_time = 1
+				enemy_justify_war_goal_time = 1	
+				army_core_defence_factor = 0.1
+				land_reinforce_rate = 0.01
+				war_support_factor = -0.05
+			}
+		}
+		SHC_city_never_sleeps_never_falls_idea = {#生存是第一要务
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_city_never_sleeps_never_falls_idea"}
+			allowed = { always = no }
+			picture = BBR_militia_tactics
+			modifier = {
+				army_core_defence_factor = 0.05
+				ai_focus_defense_factor = 0.25
+				production_speed_bunker_factor = 0.05
+				production_speed_coastal_bunker_factor = 0.05
+			}
+		}
+		SHC_she_hui_zhu_yi_yu_wen = {#社会主义余温
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_city_never_sleeps_never_falls_idea"}
+			allowed = { always = no }
+			picture = red_militias
+			modifier = {
+				stability_factor = -0.10
+				stability_weekly = -0.010
+				production_factory_max_efficiency_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.10
+			}
+		}
+		SHC_wan_gu_de_jiu_shi_li = {#顽固的旧势力
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_wan_gu_de_jiu_shi_li"}
+			allowed = { always = no }
+			picture = NEE_democratic_republicans
+			modifier = {
+				stability_factor = -0.10
+				stability_weekly = -0.010
+				production_factory_max_efficiency_factor = -0.10
+				production_factory_start_efficiency_factor = -0.10
+			}
+		}		
+		SHC_di_xia_she_hui_de_fan_pu = {#犯罪组织的反扑
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_di_xia_she_hui_de_fan_pu"}
+			allowed = { always = no }
+			picture = BRY_rampant_crime_1
+			modifier = {
+				stability_factor = -0.10
+				stability_weekly = -0.010
+				consumer_goods_factor = 0.20
+				political_power_factor = -0.10
+			}
+		}		
+	###沪民
+		SHC_xin_ming_zhu_jue_xing = {# 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_xin_ming_zhu_jue_xing"}
+			allowed = { always = no }
+			picture = HNN_read
+			modifier = {
+				stability_factor = 0.02
+				political_power_gain = 0.02
+				drift_defence_factor = 0.04
+				national_populist_drift = 0.02
+				production_speed_infrastructure_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.03
+			}
+		}		
+		SHC_xin_ming_zhu_jue_xing2 = {# 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_xin_ming_zhu_jue_xing"}
+			allowed = { always = no }
+			picture = HNN_read
+			name = SHC_xin_ming_zhu_jue_xing			
+			modifier = {
+				stability_factor = 0.04
+				political_power_gain = 0.02
+				drift_defence_factor = 0.05
+				national_populist_drift = 0.02
+				recruitable_population_factor = -0.03
+				production_speed_infrastructure_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.04
+				production_speed_industrial_complex_factor = 0.04
+			}
+		}		
+		SHC_shanghai_yuan = {#沪圆
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_shanghai_yuan"}
+			picture = FNG_china_money
+			allowed = { always = no }
+            modifier = {
+				political_power_factor = 0.03
+				national_populist_drift = 0.02
+				industrial_capacity_factory = 0.05
+				production_speed_infrastructure_factor = 0.03
+			}
+		}		
+		SHC_shanghai_yuan2 = {#沪圆
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_shanghai_yuan"}
+			picture = FNG_china_money
+			name = SHC_shanghai_yuan	
+			allowed = { always = no }
+            modifier = {
+				political_power_factor = 0.05
+				national_populist_drift = 0.02
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_infrastructure_factor = 0.10
+			}
+		}		
+		SHC_hu_ren_you_xian = {#沪人优先
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_hu_ren_you_xian"}
+			allowed = { always = no }
+			picture = kly_nationalist
+			modifier = {
+				local_supplies = 0.02				
+				political_power_gain = 0.05
+				political_power_cost = -0.15
+				local_intel_to_enemies = 0.05
+			}
+		}
+		SHC_crakkka_understanding = {#海派文化
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_crakkka_understanding"}
+			allowed = { always = no }
+			picture = republican_justice_1
+			modifier = {
+				political_power_gain = 0.01
+				consumer_goods_factor = -0.1
+				stability_weekly_factor = 0.001
+				production_speed_buildings_factor = 0.10
+				party_popularity_stability_factor = 0.20
+				production_factory_max_efficiency_factor = 0.07
+				production_factory_efficiency_gain_factor = 0.04
+			}
+		}
+		SHC_crakkka_understanding2 = {#海派文化
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_crakkka_understanding"}
+			allowed = { always = no }
+			picture = republican_justice_1
+			name = SHC_crakkka_understanding	
+			modifier = {
+				war_support_factor = -0.02
+				political_power_gain = 0.01
+				consumer_goods_factor = -0.05
+				stability_weekly_factor = 0.001
+				production_speed_buildings_factor = 0.10
+				party_popularity_stability_factor = 0.10
+				production_factory_max_efficiency_factor = 0.04
+				production_factory_efficiency_gain_factor = 0.02
+			}
+		}
+		SHC_no_yourself = {#清除自由主义瘟疫
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_no_yourself"}
+			picture = black_laws
+			modifier = {
+				local_manpower = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.02
+				command_power_gain = -0.10
+				political_power_gain = 0.05
+				local_resources_factor = 0.06
+				production_factory_max_efficiency_factor = 0.04
+				production_factory_efficiency_gain_factor = 0.03
+			}
+		}		
+	###警察
+		SHC_zheng_yi_wei_shi = {#正义卫士
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_zheng_yi_wei_shi"}
+			allowed = { always = no }
+			picture = TEX_corrupt_police
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.02
+				paternal_autocrat_drift = 0.02
+				army_core_defence_factor = 0.05
+				resistance_garrison_penetration_chance = 0.03
+			}
+		}		
+		SHC_zheng_yi_wei_shi2 = {#正义卫士
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_zheng_yi_wei_shi2"}
+			allowed = { always = no }
+			picture = TEX_corrupt_police
+			modifier = {
+				stability_factor = 0.08
+				stability_weekly = 0.0050
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.02
+				paternal_autocrat_drift = 0.04
+				army_core_defence_factor = 0.05
+				production_speed_buildings_factor = 0.02
+				resistance_garrison_penetration_chance = 0.03
+				production_factory_start_efficiency_factor = 0.03
+			}
+		}		
+		SHC_zheng_yi_wei_shi3 = {#正义卫士?
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_zheng_yi_wei_shi3"}
+			allowed = { always = no }
+			picture = TEX_corrupt_police
+			modifier = {
+				army_org_factor = 0.02
+				stability_factor = 0.02
+				stability_weekly = 0.0050
+				political_power_gain = 0.05
+				consumer_goods_factor = 0.05
+				political_power_factor = 0.05
+				paternal_autocrat_drift = 0.02
+				army_core_defence_factor = 0.03
+				production_speed_buildings_factor = 0.02
+				resistance_garrison_penetration_chance = 0.03
+				production_factory_start_efficiency_factor = 0.03
+			}
+		}	
+		SHC_zheng_yi_wei_shi4 = {#正义卫士?
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_zheng_yi_wei_shi4"}
+			allowed = { always = no }
+			picture = TEX_corrupt_police
+			modifier = {
+				army_org_factor = 0.02
+				stability_factor = 0.10
+				stability_weekly = 0.010
+				political_power_cost = 0.10
+				consumer_goods_factor = 0.10
+				political_power_factor = -0.05
+				paternal_autocrat_drift = 0.05
+				army_core_defence_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				resistance_garrison_penetration_chance = 0.03
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}						
+		SHC_fan_ri = {#死战到底
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_fan_ri"}
+			allowed = { always = no }
+			picture = japanese_influence_3
+			modifier = {
+				surrender_limit = 0.20
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				industry_free_repair_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1   
+			}
+		}		
+		SHC_tong_xing_zheng = {#通行证制度
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_tong_xing_zheng"}
+			picture = LEC_passports
+			allowed = { always = no }
+            modifier = {
+				stability_factor = -0.05
+				political_power_cost = 0.04
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}	
+		SHC_rui_ri_mao_yi = {#对日贸易
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_rui_ri_mao_yi"}
+			picture = japanese_pacific_trade
+			allowed = { always = no }
+            modifier = {
+				political_power_cost = -0.05
+				production_factory_efficiency_gain_factor = 0.03
+			}
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.05
+				trade_opinion_factor = 0.03
+			}
+		}		
+		SHC_rui_ri_mao_yi2 = {#对日贸易
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_rui_ri_mao_yi2"}
+			picture = japanese_pacific_trade
+			allowed = { always = no }
+            modifier = {
+				political_power_cost = -0.10
+				production_factory_efficiency_gain_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.20
+				trade_opinion_factor = 0.10
+			}
+		}			
+		SHC_fan_rong = {#繁荣的上海城
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_fan_rong"}
+			picture = NYC_max_miracle
+			allowed = { always = no }
+            modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.05
+			}
+		}	
+	}
+}
+
