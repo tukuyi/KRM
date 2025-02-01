@@ -7437,7 +7437,7 @@ focus_tree = {
 	
 			completion_reward = {
 				log = "[GetDateText]: [Root.GetName]: Focus HNN_san_ming_zhu_yi"
-	
+				
 			}
 		}	
 	
@@ -7730,6 +7730,7 @@ focus_tree = {
 						character = CHI_song_qingling
 						ideology = radical_socialist_subtype
 					}
+					set_country_leader_ideology = radical_socialist_new_tridemist_subtype
 					CHI_song_qingling = {
 						swap_country_leader_traits = {
 							remove = CHN_lkmt_aligned

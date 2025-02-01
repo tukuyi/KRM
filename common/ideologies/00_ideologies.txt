@@ -38,6 +38,7 @@ ideologies = {
 	syndicalist = {
 		types = {
 			syndicalist_subtype = {} #generic
+			syndicalist_market_syndicalist_subtype = { can_be_randomly_selected = no }#市场工团主义
 		}
 		color = { 227 6 19 }
 
@@ -68,6 +69,7 @@ ideologies = {
 	radical_socialist = {
 		types = {
 			radical_socialist_subtype = {} #generic
+			radical_socialist_new_tridemist_subtype = { can_be_randomly_selected = no }#新三民主义
 		}
 		color = { 234 81 83 }
 
@@ -254,6 +256,7 @@ ideologies = {
 	paternal_autocrat = {
 		types = {
 			paternal_autocrat_subtype = {}
+			paternal_autocrat_ye_jianyingist_subtype = { can_be_randomly_selected = no }#叶剑英主义
 		}
 		color = { 29 29 27 }
 

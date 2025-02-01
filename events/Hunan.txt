@@ -4943,7 +4943,7 @@ country_event = {#叶剑英的胜利
 			character = GXC_ye_jianying
 			promote_leader = yes
 			country_leader = {
-				ideology = paternal_autocrat_subtype
+				ideology = paternal_autocrat_ye_jianyingist_subtype
 				expire = "1965.1.1.1"
 				traits = { CHN_CHNsyndicalit_aligned }
 			}
@@ -5185,9 +5185,15 @@ country_event = {#怎么办？
 
 	option = { #yes
 		name = hunarmy.16.a
-		promote_character = {
+		set_country_leader_ideology = syndicalist_subtype
+		add_country_leader_role = {
 			character = HNN_he_long
-			ideology = syndicalist_subtype
+			promote_character = yes
+			country_leader = {
+				ideology = syndicalist_subtype
+				expire = "1965.1.1.1"
+				traits = { CHN_CHNsyndicalist_aligned }
+			}
 		}
 		set_politics = {
 			ruling_party = syndicalist
@@ -5204,9 +5210,18 @@ country_event = {#怎么办？
 
 	option = { #yes
 		name = hunarmy.16.b
+		add_country_leader_role = {
+			character = HNN_he_long
+			promote_character = yes
+			country_leader = {
+				ideology = syndicalist_market_syndicalist_subtype
+				expire = "1965.1.1.1"
+				traits = { CHN_CHNsyndicalist_aligned }
+			}
+		}
 		promote_character = {
 			character = HNN_he_long
-			ideology = syndicalist_subtype
+			ideology = syndicalist_market_syndicalist_subtype
 		}
 		set_politics = {
 			ruling_party = syndicalist
@@ -5234,7 +5249,7 @@ country_event = {#怎么办？
 
 	option = { #yes
 		name = hunarmy.16.e
-		set_country_leader_ideology = radsoc_tridemism_subtype
+		set_country_leader_ideology = radical_socialist_new_tridemist_subtype
 		set_party_name = {
 			ideology = radical_socialist
 			long_name =  HNN_radical_socialist_party_proc_H2_long
@@ -6934,7 +6949,7 @@ country_event = {#中华人民共和国
 				character = CHI_liu_shaoqi
 				promote_leader = yes
 				country_leader = {
-					ideology = syndicalist_subtype
+					ideology = syndicalist_market_syndicalist_subtype
 					expire = "1965.1.1.1"
 					traits = { CHN_CHNsyndicalist_aligned }
 				}
