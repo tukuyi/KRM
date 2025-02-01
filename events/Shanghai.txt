@@ -24,21 +24,21 @@ country_event = {
 			desc = "WANG_SHOU_HUA_DESC"
 			picture = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
 			expire = "1.1.1"
-			ideology = centralized_syndicalism_subtype
+			ideology = syndicalist_subtype
 		}
 		create_country_leader = {
 			name = "鲁迅"
 			desc = "LU_XUN_DESC"
 			picture = "gfx/leaders/LEC/Portrait_LEC_Lu_Xun.png"
 			expire = "1.1.1"
-			ideology = lu_xun_thought_subtype
+			ideology = radical_socialist_subtype
 		}
 		create_country_leader = {
 			name = "王凡西"
 			desc = "LU_XUN_DESC"
 			picture = "gfx/leaders/LEC/Portrait_LEC_Lu_Xun.png"
 			expire = "1.1.1"
-			ideology = internationalism_subtype
+			ideology = totalist_subtype
 		}
 		set_politics = {
 			ruling_party = syndicalist
@@ -370,7 +370,7 @@ country_event = {
 			desc = "LU_XUN_DESC"
 			picture = "gfx/leaders/LEC/Portrait_LEC_Lu_Xun.png"
 			expire = "1.1.1"
-			ideology = lu_xun_thought_subtype
+			ideology = syndicalist_subtype
 		}
 		set_politics = {
 			ruling_party = syndicalist
@@ -708,7 +708,7 @@ country_event = {
 			desc = "HE_DONG_DESC"
 			picture = "gfx/leaders/LEC/Portrait_LEC_He_Dong.png"
 			expire = "1.1.1"
-			ideology = national_socialism_subtype
+			ideology = social_liberal_subtype
 		}
 		set_politics = {
 			ruling_party = social_liberal

@@ -1,0 +1,680 @@
+LEC_wai_jiao_category = {
+	LEC_dao_xiang_guo_ming_dang = {#倒向国民党
+		icon = GFX_decision_generic_agreement
+		available = {
+			has_war = no
+			is_in_faction = no
+			CHI = {
+				exists = yes
+			}
+			NOT = {
+				has_global_flag = china_united
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			has_completed_focus = SHC_lkmt
+		}
+		cost = 0
+		days_remove = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_dao_xiang_guo_ming_dang"
+			CHI ={
+				puppet = {
+					target = SHC
+					end_wars = no
+				}
+			}
+			every_country = {
+				limit = {
+					has_war_with = CHI
+				}
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+	}
+	LEC_dao_xiang_hu_nan = {#倒向湖南
+		icon = GFX_decision_generic_agreement
+		available = {
+			HNN = {
+				exists = yes
+				has_country_flag = HNN_gong_tuan_victory_flag
+			}
+			NOT = {
+				has_war_with = HNN
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			has_country_flag = zong_gong_hui_victory
+		}
+		cost = 0
+		days_remove = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_dao_xiang_hu_nan"
+			HNN ={
+				puppet = {
+					target = SHC
+					end_wars = no
+				}
+			}
+		}
+	}
+	LEC_dao_xiang_feng_tian= {#倒向奉天
+		icon = GFX_decision_generic_agreement
+		available = {
+			has_war = no
+			is_in_faction = no
+			NOT = {
+				has_global_flag = china_united				
+			}
+			FNG = {
+				exists = yes
+				is_puppet = no
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			has_completed_focus = SHC_da_shuai
+		}
+		cost = 0
+		days_remove = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_dao_xiang_feng_tian"
+			FNG ={
+				puppet = {
+					target = SHC
+					end_wars = no
+				}
+			}
+		}
+	}	
+	LEC_dao_xiang_liang_guang = {#倒向两广
+		icon = GFX_decision_generic_agreement
+		available = {
+			GXC = {
+				exists = yes
+			}
+			NOT = {
+				has_war_with = GXC
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			has_completed_focus = SHC_da_shuai
+			GXC = {
+				GXC_has_RKMT_government = yes
+			}
+		}
+		cost = 0
+		days_remove = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_dao_xiang_liang_guang"
+			GXC ={
+				puppet = {
+					target = SHC
+					end_wars = no
+				}
+			}
+			every_country = {
+				limit = {
+					has_war_with = GXC
+				}
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+	}
+	LEC_dao_xiang_zhi_li = {#倒向大清
+		icon = GFX_decision_generic_agreement
+		available = {
+			has_war = no
+			is_in_faction = no
+			NOT = {
+				has_global_flag = china_united
+			}
+			QIE = {
+				exists = yes
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			has_completed_focus = SHC_da_qing
+		}
+		cost = 0
+		days_remove = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_dao_xiang_zhi_li"
+			QIE ={
+				puppet = {
+					target = SHC
+					end_wars = no
+				}
+			}
+		}
+	}
+	LEC_jia_ru_xie_yue_guo = {#加入协约国
+		icon = GFX_decision_generic_agreement
+		available = {
+			date > 1939.6.13
+			SHC = {
+				is_in_faction = no
+				is_puppet = no
+			}
+			NOT = {
+				has_completed_focus = LEC_tuo_yi_ying_guo_lao
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			has_country_flag = zi_ben_jia_victory
+		}
+
+		cost = 0
+		days_remove = 35
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_jia_ru_xie_yue_guo"
+			CAN = {
+				country_event = {
+					id = leche.3
+					days = 5
+				}
+			}
+		}
+	}	
+	LEC_jia_ru_di_san_guo_ji = {#加入第三国际
+		icon = GFX_decision_generic_agreement
+		available = {
+			date > 1939.6.13
+			SHC = {
+				is_in_faction = no
+				is_puppet = no
+			}
+			NOT = {
+				has_country_leader = { ruling_only = yes name = "彭述之" }	
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			has_country_flag = zong_gong_hui_victory
+		}
+		cost = 0
+		days_remove = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_jia_ru_di_san_guo_ji"
+			FRA = {
+				country_event = {
+					id = lecgong.11
+					days = 5
+				}
+			}
+		}
+	}
+	LEC_jia_ru_she_hui_zhu_yi_e_luo_si = {#加入社会主义俄罗斯
+		icon = GFX_decision_generic_agreement
+		available = {
+			SHC = {
+				is_in_faction = no
+				is_puppet = no
+			}
+			RUS = {
+				has_socialist_government = yes
+			}
+			has_country_leader = { ruling_only = yes name = "帕维尔·米夫" }	
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			has_country_leader = { ruling_only = yes name = "帕维尔·米夫" }	
+		}
+		cost = 0
+		days_remove = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_jia_ru_she_hui_zhu_yi_e_luo_si"
+			RUS = {
+				country_event = {
+					id = Shcgong.12
+					days = 3
+				}
+			}
+		}
+	}
+	LEC_tong_yi_wai_a_mu_er = {#统一外阿穆尔
+		icon = GFX_decision_generic_agreement
+		available = {
+			SHC = {
+				is_ai = no
+				has_war = no
+				is_puppet = no
+				owns_state = 613
+				is_in_faction = no
+			}
+			TRM = {
+				is_puppet = no
+				is_in_faction = no
+				has_socialist_government = yes
+			}
+			has_country_leader = { ruling_only = yes name = "帕维尔·米夫" }	
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			has_country_leader = { ruling_only = yes name = "帕维尔·米夫" }	
+		}
+		cost = 0
+		days_remove = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_jia_ru_she_hui_zhu_yi_e_luo_si"
+			TRM = {
+				country_event = {
+					id = Shcgong.13
+					days = 3
+				}
+			}
+		}
+	}
+	LEC_xie_yue_guo_de_wu_qi = {#购买枪支
+		icon = generic_prepare_civil_war
+		available = {
+			SHC = {
+				is_in_faction = no
+				is_puppet = no
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			NOT = {
+				owns_state = 613
+			}
+		}
+		cost = 50
+		days_remove = 5
+		days_re_enable = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_xie_yue_guo_de_wu_qi"
+			if = {
+				limit = { 
+					has_socialist_government = yes
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 500
+					producer = FRA
+				}
+				FRA = {
+					add_political_power = 50
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_0
+						amount = -500
+						producer = FRA
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					has_democratic_government = yes
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 500
+					producer = CAN
+				}
+				CAN = {
+					add_political_power = 50
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_0
+						amount = -500
+						producer = CAN
+					}
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 500
+					producer = GER
+				}
+				GER = {
+					add_political_power = 50
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_0
+						amount = -500
+						producer = GER
+					}
+				}
+			}
+		}
+	}
+	LEC_xie_yue_guo_de_wu = {#何东大转盘
+		icon = GFX_decision_portraits_picker
+		available = {
+			has_country_leader = { name = "何东" ruling_only = yes }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			has_completed_focus = LEC_zhong_cheng_de_shang_hai
+		}
+
+		cost = 0
+		days_remove = 0
+		days_re_enable = 30
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_xie_yue_guo_de_wu"
+			country_event = {
+				days = 1
+				id = leche.17
+			}
+		}
+	}
+	SHC_xue_zhan_dao_di = {#血战到底
+		icon = generic_civil_support
+		allowed = { always = no }
+
+		available = {
+			has_war_with = JAP
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 180
+
+		cancel_trigger = {
+			NOT = {
+				743 = {
+					is_controlled_by = SHC
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 743
+			}
+		}
+
+		is_good = yes
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel SHC_xue_zhan_dao_di"
+			
+		}
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout SHC_xue_zhan_dao_di target: [From.GetName]"
+			white_peace = {
+				tag = JAP
+				message = SHC_peace_shan_tt
+			}
+		}
+	}	
+}
+
+LEC_economy = {
+	LEC_tap_into_standard_oil = {#石油
+		icon = oil
+
+		allowed = {
+			tag = SHC
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = NYC_taking_decision
+			}
+		}
+
+		visible = {
+			
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		days_remove = 80
+		days_re_enable = 60
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_tap_into_standard_oil"
+			set_country_flag = NYC_taking_decision
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = -20
+			}
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_tap_into_standard_oil"
+			add_resource = {
+				type = oil
+				amount = 6
+				state = 743
+			}
+			clr_country_flag = NYC_taking_decision
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEC_found_rubber_company = {#橡胶
+		icon = rubber
+
+		allowed = {
+			tag = SHC
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = NYC_taking_decision
+			}
+		}
+
+		visible = {
+			
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		days_remove = 80
+		days_re_enable = 60
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_found_rubber_company"
+			set_country_flag = NYC_taking_decision
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_found_rubber_company"
+			add_resource = {
+				type = rubber
+				amount = 6
+				state = 743
+			}
+			clr_country_flag = NYC_taking_decision
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEC_buy_steel = {#钢铁
+		icon = steel
+
+		allowed = {
+			tag = SHC
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = NYC_taking_decision
+			}
+		}
+
+		visible = {
+			
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		days_remove = 80
+		days_re_enable = 60
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_buy_steel"
+			set_country_flag = NYC_taking_decision
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_buy_steel"
+			add_resource = {
+				type = steel
+				amount = 6
+				state = 743
+			}
+			clr_country_flag = NYC_taking_decision
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEC_source_aluminium = {#铝业
+		icon = aluminium
+
+		allowed = {
+			tag = SHC
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = NYC_taking_decision
+			}
+		}
+
+		visible = {
+			
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		days_remove = 80
+		days_re_enable = 60
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_source_aluminium"
+			set_country_flag = NYC_taking_decision
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_source_aluminium"
+			add_resource = {
+				type = aluminium
+				amount = 6
+				state = 743
+			}
+			clr_country_flag = NYC_taking_decision
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEC_tap_into_chappaqua = {#稀土
+		icon = generic_construction
+
+		allowed = {
+			tag = SHC
+		}
+
+		available = {
+			NOT = {
+				has_country_flag = NYC_taking_decision
+			}
+		}
+
+		visible = {
+			
+		}
+
+		fire_only_once = yes
+
+		cost = 150
+		days_remove = 80
+		days_re_enable = 60
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_tap_into_chappaqua"
+			set_country_flag = NYC_taking_decision
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision LEC_tap_into_chappaqua"
+			add_resource = {
+				type = tungsten
+				amount = 6
+				state = 743
+			}
+			add_resource = {
+				type = chromium
+				amount = 6
+				state = 743
+			}
+			clr_country_flag = NYC_taking_decision
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
