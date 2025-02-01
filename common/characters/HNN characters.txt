@@ -2708,6 +2708,17 @@ characters = {
 				large = "gfx/leaders/HNN/Portrait_HNN_geng_biao.png"
 			}
 		}
+		corps_commander = {
+			traits = { 
+				irregulars_officer
+				guerilla_officer
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
 		advisor = {
 			slot = second_in_command
 			idea_token = HNN_geng_biao_sic
