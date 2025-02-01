@@ -79,7 +79,7 @@ country_event = {#enlai
 			character = CHI_zhou_enlai
 			promote_leader = yes
 			country_leader = {
-				ideology = radical_socialist_subtype
+				ideology = radical_socialist_utopian_technocracy_subtype
 				expire = "1965.1.1.1"
 				traits = { CHN_CHNsyndicalist_aligned }
 			}
@@ -1899,7 +1899,7 @@ country_event = {#放权
 		}
 		promote_character = {
 			character = HNN_qian_xuesen
-			ideology = radical_socialist_subtype
+			ideology = radical_socialist_utopian_technocracy_subtype
 		}
 		HNN_qian_xuesen = {
 			set_variable = {
@@ -1985,11 +1985,15 @@ country_event = {#放权
 			character = CHI_zhou_enlai
 			promote_leader = yes
 			country_leader = {
-				ideology = totalist_subtype
+				ideology = totalist_technocracy_subtype
 				expire = "1965.1.1.1"
 				traits = { CHN_CHNsyndicalit_aligned }
 				desc = POLITICS_HNN_ZHOU_ENLAI_DESC
 			}
+		}
+		promote_character = {
+			character = CHI_zhou_enlai
+			ideology = totalist_technocracy_subtype
 		}
 		add_country_leader_trait = CHN_CHNsyndicalist_aligned
 		set_party_name = {
@@ -5238,7 +5242,6 @@ country_event = {#怎么办？
 
 	option = { #yes
 		name = hunarmy.16.c
-		set_country_leader_ideology = bukharinist_subtype
 		set_party_name = {
 			ideology = radical_socialist
 			long_name =  HNN_radical_socialist_party_proc_H3_long
@@ -6006,7 +6009,7 @@ country_event = {#向首都进军
 		complete_national_focus = HNN_mao_zhe_dong_zhu_xi
 		promote_character = {
 			character = HNN_mao_ze_dong
-			ideology = radical_socialist_subtype
+			ideology = radical_socialist_mao_zedong_thought_subtype
 		}
 		HNN_mao_ze_dong = {
 			add_country_leader_trait = HNN_jiao_yuan
@@ -7094,7 +7097,7 @@ country_event = {#中华人民共和国
 			}
 			promote_character = {
 				character = HNN_chen_yun
-				ideology = radical_socialist_subtype
+				ideology = radical_socialist_birdcage_vanguardist_subtype
 			}
 			HNN_chen_yun = {
 				set_variable = {
