@@ -20,6 +20,5 @@ dependencies={
 	"Kaiserreich Models - Waking the Tiger DLC"
 }
 name="KR 命运的歧点"
-picture="Thumbnail.png"
 supported_version="1.15.*"
 remote_file_id="3416954702"
