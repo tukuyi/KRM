@@ -1554,6 +1554,7 @@ country_event = {#紧急选举
 				character = SHC_chen_shaoyu
 				ideology = totalist_subtype
 			}
+		}
 	}	
 }
 
@@ -3374,6 +3375,9 @@ country_event = {#起义！
 			country_event = {
 				id = SHCqiehuan.2
 				days = 2
+			}
+			set_variable = {
+				KR_welcome_splash_variable = 1
 			}
 		}
 		hidden_effect = {
