@@ -2,3 +2,25 @@
  add_namespace = CSP
 
 
+
+ country_event = {#checkCHINAUNITED
+ id = csp.1
+ immediate = { log = "[GetDateText]: [Root.GetName]: event hnndebug.1" }
+ title = hnndebug.1.t
+ desc = hnndebug.1.d
+
+ is_triggered_only = yes
+ option = {#
+	 name = "我草泥马真他妈统一了"
+	 trigger = {
+		has_global_flag = china_united
+	 }
+ }
+ option = {#
+	 name = "其实没有"
+	 trigger = {
+		NOT = { has_global_flag = china_united }
+	 }
+ }
+ 
+}
