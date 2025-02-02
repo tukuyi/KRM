@@ -119,9 +119,7 @@ country_event = {
 			}
 			if = {
 				limit = { 
-					QYG = {
-						exists = yes
-					}
+					always = no
 				}
 				QYG = {
 					country_event = {
@@ -165,6 +163,10 @@ country_event = {
 				ideology = social_liberal
 				long_name = LEC_social_liberal_party_GT_long
 				name = LEC_social_liberal_party_GT
+			}
+			promote_character = {
+				character = SHC_lu_xun
+				ideology = social_liberal_subtype
 			}
 			add_corps_commander_role = {
 				character = SHC_lu_xun
@@ -298,7 +300,7 @@ country_event = {
 		hidden_effect = {
 			add_country_leader_role = {
 				character = LEC_robert_hotung
-				promote = yes
+				promote_leader = yes
 				country_leader = {
 					DESC = HE_DONG_DESC
 					ideology = social_democrat_subtype
@@ -2182,7 +2184,7 @@ country_event = {#真正的话事人
 			}
 			add_country_leader_role = {
 				character = LEC_robert_hotung
-				promote = yes
+				promote_leader = yes
 				country_leader = {
 					DESC = HE_DONG_DESC
 					ideology = social_conservative_subtype
@@ -3356,6 +3358,7 @@ country_event = {#起义！
 
 	option = {
 		name = lecgong.7.b
+		add_to_array = { global.china_tags_array = SHC }
 		SHC = { 
 			change_tag_from = ROOT 
 		}
@@ -3388,9 +3391,11 @@ country_event = {#起义！
 				LEC_robert_hotung = {
 					SHC_recruit_character_effect = yes
 				}
+			}
+			SHC = {
 				add_country_leader_role = {
 					character = LEC_robert_hotung
-					promote = yes
+					promote_leader = yes
 					country_leader = {
 						DESC = HE_DONG_DESC
 						ideology = social_liberal_subtype
@@ -3401,7 +3406,7 @@ country_event = {#起义！
 				}
 				add_country_leader_role = {
 					character = LEC_robert_hotung
-					promote = yes
+					promote_leader = yes
 					country_leader = {
 						DESC = HE_DONG_DESC
 						ideology = market_liberal_subtype
@@ -3413,7 +3418,7 @@ country_event = {#起义！
 				LEC_robert_hotung = {
 					set_variable = {
 						china_alignment = token:CHN_non_aligned
-					}
+					}	
 					set_portraits = {
 						civilian = {
 							large = "gfx/leaders/SHC/Portrait_SHC_robert_hotung.png"
@@ -4420,7 +4425,7 @@ country_event = {#新总督？
 		}
 		add_country_leader_role = {
 			character = LEC_norman_lockhart_smith
-			promote = yes
+			promote_leader = yes
 			country_leader = {
 				DESC = Shi_Mei_DESC
 				ideology = market_liberal_subtype
