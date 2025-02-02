@@ -7696,6 +7696,15 @@ focus_tree = {
 				days = 5
 				id = Shcjingcha.12
 			}
+			SHC_yuan_liang = {
+				swap_country_leader_traits = {
+					remove = CHN_geacps_aligned
+					add = CHN_non_aligned
+				}
+				set_variable = {
+					china_alignment = token:CHN_non_aligned
+				}
+			}
 			hidden_effect = {
 				country_event = {
 					days = 25
@@ -7764,7 +7773,7 @@ focus_tree = {
 			} 
 			hidden_effect = {
 				set_country_leader_description = {
-					desc = "Portrait_LEC_yuan_liang2_DESC"
+					desc = Portrait_LEC_yuan_liang2_DESC
 				}
 			}
 		}

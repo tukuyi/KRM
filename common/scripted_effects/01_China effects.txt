@@ -2481,6 +2481,15 @@ china_enable_concession_decisions = {
 	set_country_flag = china_concession_decisions_unlocked
 	effect_tooltip = {
 		if = {
+			limit = {
+				country_exists = SHC
+				SHC = {
+					has_country_flag = han_jian_victory
+				}
+			}
+			activate_targeted_decision = { decision = china_demand_annexation target = SHC }
+		}
+		if = {
 			limit = { country_exists = LEC }
 			activate_targeted_decision = { decision = china_negotiate_with_legation_cities target = LEC }
 		}

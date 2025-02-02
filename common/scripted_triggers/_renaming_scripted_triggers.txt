@@ -94,7 +94,12 @@ is_chinese_tag = {
 		original_tag = TAI
 		original_tag = XSM
 		original_tag = YUN
-		original_tag = SHC
+		AND = {
+			original_tag = SHC
+			NOT = {
+				has_country_flag = han_jian_victory
+			}
+		}
 		AND = {
 			original_tag = KUM
 			has_country_flag = KUM_is_chinese_tag
@@ -115,6 +120,7 @@ is_tag_in_china_area = {
 		original_tag = TIB
 		original_tag = ETS
 		original_tag = LEC
+		original_tag = SHC
 	}
 }
 
