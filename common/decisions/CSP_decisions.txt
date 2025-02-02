@@ -180,6 +180,45 @@ HNN_recruit_CSPalignment_category = {
 		}
 	}
 
+	CSP_recruit_in_SHC = {
+		icon = generic_agreement
+
+		allowed = {
+			check_variable = {
+				var = CSPalignmentTARGET_temp
+				value = 0
+				compare = equals
+			}
+		}
+		visible = {
+			is_chinese_tag = yes
+			tag = CSP
+			NOT = {
+				AND = {
+					country_exists = LEC
+					country_exists = SHC
+				}
+			}
+		}
+
+		cost = 15
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CSP_recruit_in_SHC"
+			custom_effect_tooltip =  CSP_RHNN_tooltip
+			SHC = {
+				CSP_recruit_from_SHC_effect = yes
+			}
+			HNN = {
+				CSP_recruit_from_SHC_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+
 	CSP_recruit_in_SHX = {
 		icon = generic_agreement
 
