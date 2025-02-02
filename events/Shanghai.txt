@@ -192,6 +192,10 @@ country_event = {
 			recruit_character = SHC_chen_shaoyu
 			recruit_character = SHC_liu_renjing
 			recruit_character = SHC_zhang_wentian
+			recruit_character = SHC_jing_meijiu
+			recruit_character = SHC_ma_sanli
+			recruit_character = SHC_hu_feng
+			
 		}
 	}
 
@@ -3771,7 +3775,8 @@ country_event = {#新领袖
 		promote_character = {
 			character = SHC_hu_feng
 			ideology= radical_socailist_subtype
-		}hu_feng = {
+		}
+		hu_feng = {
 			set_variable = {
 				china_alignment = token:CHNsyndicalist
 			}
