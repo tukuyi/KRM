@@ -2586,6 +2586,15 @@ country_event = {#暴力之夜
 			base = 30
 		}
 		set_country_flag = SHC_choose_china
+		SHC_yuan_liang = {
+			swap_country_leader_traits = {
+				remove = CHN_geacps_aligned
+				add = CHN_non_aligned
+			}
+			set_variable = {
+				china_alignment = 0
+			}
+		}
 	}
 	option = {# 
 		name = Shcjingcha.11.b
@@ -4520,6 +4529,7 @@ country_event = {#英属中国
 	immediate = { log = "[GetDateText]: [Root.GetName]: event leche.15" }
 	title = leche.15.t
 	desc = leche.15.d
+	is_triggered_only = yes
 
 	fire_only_once = yes
 

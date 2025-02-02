@@ -103,6 +103,10 @@ set_potential_national_government = {
 			limit = { check_variable = { country_leader:china_alignment = token:CHNsyndicalist } }
 			CSP_set_leader_effect = yes
 		}
+		else_if = {
+			limit = { check_variable = { country_leader:china_alignment = token:geacps } }
+			RGC_set_leader_effect = yes
+		}
 
 		if = {
 			limit = {
@@ -1473,6 +1477,14 @@ china_set_government_tag_specific_scripted_effect = {
 				}
 				complete_national_focus = CHI_first_congress_focus
 			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					country_leader:china_alignment = token:geacps
+				}
+			}
+			set_cosmetic_tag = FNG_JAP
 		}
 		else_if = {
 			limit = {

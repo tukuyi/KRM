@@ -139,6 +139,15 @@ china_is_aligned_with_CHNsyndicalist = {
 	}
 }
 
+china_is_aligned_with_geacps = {
+	custom_trigger_tooltip = {
+		tooltip = china_is_aligned_with_geacps
+		OR = {
+			check_variable = { country_leader:china_alignment = token:geacps }
+		}
+	}
+}
+
 
 china_is_aligned_with_republicans = {
 	custom_trigger_tooltip = {
