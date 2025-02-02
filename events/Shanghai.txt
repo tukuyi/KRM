@@ -10,157 +10,6 @@ add_namespace = lecgong
 add_namespace = leche
 add_namespace = lecjidu
 add_namespace = lecming
-country_event = {
-	id = SHCqiehuan.1
-	immediate = {log = "[GetDateText]: [Root.GetName]: event SHCqiehuan.1"}
-	title = SHCqiehuan.1.t
-	desc = SHCqiehuan.1.d
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = SHCqiehuan.1.a
-		add_political_power = 10
-		promote_character = {
-			character = SHC_wang_shouhua
-			ideology = syndicalist_subtype
-		}
-		set_politics = {
-			ruling_party = syndicalist
-			elections_allowed = no
-		}
-		set_country_flag = zong_gong_hui_victory
-		set_cosmetic_tag = LEC_GT
-		remove_all_ministers = yes
-		remove_ideas = {
-			LEC_Du_Yuesheng_boss_sli
-			LEC_Huang_Jinrong_boss_sli
-			LEC_Zhang_Xiaolin_boss_sli
-		}
-		add_ideas = {
-			LEC_wang_shou_hua_hog
-			LEC_Liu_Hongsheng_eco_sli
-			LEC_zhao_si_yan_for
-			LEC_tian_han_eco
-		}
-		division_template = { #Guangxi Army
-			name = "工人纠察队"
-			division_names_group = "LEC_GAR_01"
-			regiments = {
-				infantry = { x = 0 y = 0 }
-				infantry = { x = 0 y = 1 }
-				infantry = { x = 0 y = 2 }
-				infantry = { x = 1 y = 0 }
-				infantry = { x = 1 y = 1 }
-			}
-			support = {
-					
-			}
-		}
-		random_owned_controlled_state = {
-			prioritize = { 743 }
-			limit = { is_in_home_area = yes }
-			create_unit = {
-				division = "division_template = \"工人纠察队\" start_experience_factor = 0.5"
-				owner = PREV
-				count = 3
-			}
-		}
-		hidden_effect = {
-			country_event = {
-				id = lecgong.1
-				days = 2
-			}
-			country_event = {
-				id = Shcgong.1
-				days = 5
-			}
-			country_event = {
-				id = Shcgong.26
-				days = 25
-			}
-			if = {
-				limit = { 
-					QYG = {
-						exists = yes
-					}
-				}
-				QYG = {
-					country_event = {
-						id = Shcgong.6
-						days = 1
-					}
-				}
-				country_event = {
-					id = Shcgong.2
-					days = 1
-				}
-			}
-			else_if = {
-				limit = { 
-					QYG = {
-						exists = no
-					}
-					HNN = {
-						has_country_flag = HNN_gong_tuan_victory_flag
-					}
-				}
-				country_event = {
-					id = Shcgong.3
-					days = 1
-				}
-			}
-			if = {
-				limit = { 
-					HNN = {
-						has_country_flag = HNN_gong_tuan_victory_flag
-					}
-				}
-				HNN = {
-					country_event = {
-						id = Shcgong.7
-						days = 1
-					}
-				}
-			}
-			set_party_name = {
-				ideology = social_liberal
-				long_name = LEC_social_liberal_party_GT_long
-				name = LEC_social_liberal_party_GT
-			}
-			add_corps_commander_role = {
-				character = SHC_lu_xun
-				desc =  LU_XUN_DESC
-				traits = { politically_connected  }
-				skill = 1
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 1
-			}
-			recruit_character = SHC_alexander_i_cherepanov
-			recruit_character = SHC_nikolay_kuibyshev
-			recruit_character = SHC_nikolai_roshchin
-			recruit_character = SHC_sun_fuyuan
-			recruit_character = SHC_rao_shushi
-			recruit_character = SHC_wang_yaqiao
-			recruit_character = SHC_peng_shuzhi
-			recruit_character = SHC_kang_sheng
-			recruit_character = SHC_tian_han
-			recruit_character = SHC_mao_dun
-			recruit_character = SHC_zhang_chunqiao
-			recruit_character = SHC_zhou_yang
-			recruit_character = SHC_zhao_shiyan
-			recruit_character = SHC_chen_shaoyu
-			recruit_character = SHC_liu_renjing
-			recruit_character = SHC_pavel_milf
-			recruit_character = SHC_rou_shi
-			recruit_character = SHC_ma_sanli
-			recruit_character = SHC_hu_feng
-		}
-	}
-}
 
 country_event = {
 	id = SHCqiehuan.2
@@ -3519,7 +3368,7 @@ country_event = {#起义！
 		}
 		SHC = {
 			country_event = {
-				id = SHCqiehuan.1
+				id = SHCqiehuan.2
 				days = 2
 			}
 		}
@@ -3556,6 +3405,12 @@ country_event = {#起义！
 				LEC_robert_hotung = {
 					set_variable = {
 						china_alignment = token:CHN_non_aligned
+					}
+					set_portraits = {
+						civilian = {
+							large = "gfx/leaders/SHC/Portrait_SHC_robert_hotung.png"
+							small = "gfx/interface/ministers/SHC/SHC_robert_hotung.png"
+						}
 					}
 				}
 			}
