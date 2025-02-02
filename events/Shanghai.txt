@@ -3922,10 +3922,9 @@ country_event = {#中华公社
 			}
 		}
 		add_political_power = 100
-		set_cosmetic_tag = LEC_GT_C
 	}
 
-	option = {	# damn
+	option = {	# bruhnotfornow
 		name = lecgong.14.b
 		trigger = {
 			OR = {
@@ -4461,27 +4460,10 @@ country_event = {#英属中国
 	desc = leche.15.d
 
 	fire_only_once = yes
-	trigger = {
-		tag = SHC
-		#昆明
-		#owns_state = 325
-		#广州
-		owns_state = 592
-		#北京
-		owns_state = 608
-		#南京
-		owns_state = 613
-		#重庆
-		#owns_state = 650
-		#沈阳
-		owns_state = 716
-		has_completed_focus = LEC_zhong_cheng_de_shang_hai
-	}
 
 	option = {	# damn
 		name = leche.15.a
 		add_political_power = 100
-		set_cosmetic_tag = LEC_CHD_Y
 	}
 }
 
@@ -4596,7 +4578,7 @@ country_event = {#买下故宫
 	trigger = {
 		tag = SHC
 		owns_state = 608 #北京
-		has_country_leader = { name = "何东" ruling_only = yes }
+		has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 		has_completed_focus = LEC_zhong_cheng_de_shang_hai
 	}
 

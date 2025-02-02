@@ -1325,10 +1325,112 @@ chinese_unification = {
 				hidden_effect = { news_event = china_events.314 }
 			}
 			else_if = {
-				limit = { check_variable = { country_leader:china_alignment = token:CHNsyndicalist } }
-				log = "KR_Event_Logging;CHINA UNITED BY CHNsyndicalist;[GetDateText]"
+				limit = {
+					original_tag = HNN
+					check_variable = { country_leader:china_alignment = token:CHNsyndicalist }
+				}
+				log = "KR_Event_Logging;CHINA UNITED BY HNN syndicalist;[GetDateText]"
+				hidden_effect = { news_event = china_events.314 }
+				country_event = { id = hungong.29 }
+			}
+			else_if = {
+				limit = { 
+					original_tag = SHC
+				}
+				log = "KR_Event_Logging;CHINA UNITED BY Shanghai;[GetDateText]"
 				activate_targeted_decision = { decision = china_move_capital target = ROOT }
 				hidden_effect = { news_event = china_events.314 }
+				if = {
+					limit = {
+						has_country_leader = { character = SHC_victor_sassoon ruling_only = yes }
+						NOT = { has_completed_focus = LEC_zhong_cheng_de_shang_hai }
+					}
+					set_cosmetic_tag = SHC_YTC
+				}
+				else_if = {
+					limit = {
+						has_country_leader = { character = SHC_pavel_milf ruling_only = yes }
+					}
+					set_cosmetic_tag = LEC_PRC
+				}
+				else_if = {
+					limit = {
+						has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
+						NOT = { has_completed_focus = LEC_zhong_cheng_de_shang_hai }
+					}
+					set_cosmetic_tag = LEC_HD_Z
+					hidden_effect = {
+						country_event = {
+							id = leche.14
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = LEC_zhong_cheng_de_shang_hai
+					}
+					set_cosmetic_tag = LEC_CHD_Y
+					hidden_effect = {
+						country_event = {
+							id = leche.15
+						}
+					}
+
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = LEC_shang_di_de_huai_bao
+					}
+					set_cosmetic_tag = LEC_TZ_T
+					hidden_effect = {
+						country_event = {
+							id = lecjidu.8
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = SHC_jing_cha_sha_chu_cong_wei
+						NOT = {
+							has_country_flag = han_jian_victory
+						}
+					}
+					set_cosmetic_tag = LEC_HD_Z
+					hidden_effect = {
+						country_event = {
+							id = Shcjingcha.13
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						OR = {
+							has_completed_focus = LEC_lu_xun_zhu_xi
+							has_completed_focus = LEC_qing_xi_cheng_shi_xi_jun
+						}
+					}
+					set_cosmetic_tag = LEC_GT_C
+					hidden_effect = {#女权有，但不是现在
+						country_event = {
+							id = lecgong.14
+						}
+					}
+				}
+				else_if = {
+					limit = { 
+						has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
+					}
+					hidden_effect = {
+						set_cosmetic_tag = LEC_GTT_C
+					}
+				}
+			}
+			else_if = {
+				limit = { check_variable = { country_leader:china_alignment = token:CHNsyndicalist } }
+				log = "KR_Event_Logging;CHINA UNITED BY CHN syndicalist;[GetDateText]"
+				activate_targeted_decision = { decision = china_move_capital target = ROOT }
+				hidden_effect = { news_event = china_events.314 }
+				
 			}
 			else = {
 				log = "KR_Event_Logging;CHINA UNITED BY A minor clique;[GetDateText]"

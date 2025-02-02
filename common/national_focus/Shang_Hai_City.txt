@@ -79,7 +79,7 @@ focus_tree = {
 
 		available = {
 			NOT = {
-				has_country_leader = { name = "维克托·沙逊" ruling_only = yes }
+				has_country_leader = { character = SHC_victor_sassoon ruling_only = yes }
 			}
 		}
 
@@ -136,23 +136,27 @@ focus_tree = {
 			}
 			if = {
 				limit = { 
-					has_country_leader = { name = "何东" ruling_only = yes }
+					has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 				}
-				create_country_leader = {
-					name = "何东"
-					desc = "HE_DONG_DESC"
-					picture = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
-					expire = "1.1.1"
-					ideology = social_liberal_subtype
+				add_country_leader_role = {
+					character = LEC_robert_hotung
+					country_leader = {
+						ideology = social_democrat_subtype
+						traits = {
+							CHN_non_aligned
+						}
+					}
 				}
 			}
 			else = {
-				create_country_leader = {
-					name = "维克托·沙逊"
-					desc = "HE_DONG_DESC"
-					picture = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
-					expire = "1.1.1"
-					ideology = social_liberal_subtype
+				add_country_leader_role = {
+					character = SHC_victor_sassoon
+					country_leader = {
+						ideology = social_democrat_subtype
+						traits = {
+							CHN_non_aligned
+						}
+					}
 				}
 			}
 			add_radsoc_to_coalition = yes
@@ -192,23 +196,27 @@ focus_tree = {
 			}
 			if = {
 				limit = { 
-					has_country_leader = { name = "何东" ruling_only = yes }
+					has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 				}
-				create_country_leader = {
-					name = "何东"
-					desc = "HE_DONG_DESC"
-					picture = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
-					expire = "1.1.1"
-					ideology = authoritarian_democrat_subtype
+				add_country_leader_role = {
+					character = LEC_robert_hotung
+					country_leader = {
+						ideology = authoritarian_democrat_subtype
+						traits = {
+							CHN_non_aligned
+						}
+					}
 				}
 			}
 			else = {
-				create_country_leader = {
-					name = "维克托·沙逊"
-					desc = "HE_DONG_DESC"
-					picture = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
-					expire = "1.1.1"
-					ideology = authoritarian_democrat_subtype
+				add_country_leader_role = {
+					character = SHC_victor_sassoon
+					country_leader = {
+						ideology = authoritarian_democrat_subtype
+						traits = {
+							CHN_non_aligned
+						}
+					}
 				}
 			}
 			set_party_name = {
@@ -229,7 +237,7 @@ focus_tree = {
 		y = 2
 
 		available = {
-			has_country_leader = { name = "何东" ruling_only = yes }
+			has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 		}
 
 		prerequisite = { 
@@ -303,14 +311,16 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { 
-					has_country_leader = { name = "维克托·沙逊" ruling_only = yes }
+					has_country_leader = { character = SHC_victor_sassoon ruling_only = yes }
 				}
-				create_country_leader = {
-					name = "维克托·沙逊"
-					desc = "Sha_Xun_DESC"
-					picture = "gfx/leaders/LEC/Portrait_LEC_Sha_Xun.png"
-					expire = "1.1.1"
-					ideology = national_populist_subtype
+				add_country_leader_role = {
+					character = SHC_victor_sassoon
+					country_leader = {
+						ideology = national_populist_subtype
+						traits = {
+							CHN_non_aligned
+						}
+					}
 				}
 				set_party_name = {
 					ideology = national_populist
@@ -403,7 +413,7 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = { 
-						has_country_leader = { name = "何东" ruling_only = yes }
+						has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 					}
 					country_event = {
 						id = leche.16
@@ -653,7 +663,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "何东" ruling_only = yes }
+			has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -679,7 +689,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "何东" ruling_only = yes }
+			has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -706,7 +716,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "何东" ruling_only = yes }
+			has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -741,7 +751,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "何东" ruling_only = yes }
+			has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -768,7 +778,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "何东" ruling_only = yes }
+			has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -806,7 +816,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "何东" ruling_only = yes }
+			has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -836,7 +846,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "何东" ruling_only = yes }
+			has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -875,7 +885,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "何东" ruling_only = yes }
+			has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -907,7 +917,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "何东" ruling_only = yes }
+			has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -934,7 +944,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "何东" ruling_only = yes }
+			has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -968,7 +978,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "何东" ruling_only = yes }
+			has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -992,7 +1002,7 @@ focus_tree = {
 		y = 2
 
 		available = {
-			has_country_leader = { name = "维克托·沙逊" ruling_only = yes }
+			has_country_leader = { character = SHC_victor_sassoon ruling_only = yes }
 		}
 
 		prerequisite = { 
@@ -2042,10 +2052,10 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 		available = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2069,7 +2079,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2099,7 +2109,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2126,7 +2136,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2150,7 +2160,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2187,7 +2197,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2216,7 +2226,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2246,7 +2256,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2276,7 +2286,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2303,7 +2313,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2342,7 +2352,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2404,7 +2414,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2429,7 +2439,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2456,7 +2466,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "鲁迅" ruling_only = yes }
+			has_country_leader = { character = SHC_lu_xun ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2480,10 +2490,10 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2507,7 +2517,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2537,7 +2547,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2569,7 +2579,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2596,7 +2606,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2623,7 +2633,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2668,7 +2678,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { base = 20 }
@@ -2695,7 +2705,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -2726,7 +2736,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -2753,7 +2763,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -2781,7 +2791,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -2811,7 +2821,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -2838,7 +2848,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -2888,7 +2898,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -2935,7 +2945,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "汪寿华" ruling_only = yes }
+			has_country_leader = { character = SHC_wang_shouhua ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -2963,10 +2973,10 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -2990,7 +3000,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3026,7 +3036,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3056,7 +3066,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3081,7 +3091,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3122,7 +3132,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3169,7 +3179,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3196,7 +3206,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3226,7 +3236,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3252,7 +3262,7 @@ focus_tree = {
 
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 			has_completed_focus = LEC_ci_se_de_zhong_guo
 		}
 
@@ -3281,7 +3291,7 @@ focus_tree = {
 
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3329,7 +3339,7 @@ focus_tree = {
 
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3354,7 +3364,7 @@ focus_tree = {
 
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3380,7 +3390,7 @@ focus_tree = {
 
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3418,7 +3428,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 			#彼得格勒
 			owns_state = 195
 			#莫斯科
@@ -3467,7 +3477,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3509,7 +3519,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3534,7 +3544,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3567,7 +3577,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 			#昆明
 			owns_state = 325
 			#广州
@@ -3586,7 +3596,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_ci_se_de_zhong_guo"
-			set_cosmetic_tag = LEC_GTT_C
 			custom_effect_tooltip = tooltip_white_line
 			H_in_china = yes
 		}
@@ -3605,7 +3614,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3645,7 +3654,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "彭述之" ruling_only = yes }
+			has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -3667,10 +3676,10 @@ focus_tree = {
 		y = 0
 
 		bypass = {
-			has_country_leader = { name = "帕维尔·米夫" ruling_only = yes }
+			has_country_leader = { character = SHC_pavel_milf ruling_only = yes }
 		}
 		available = {
-			has_country_leader = { name = "帕维尔·米夫" ruling_only = yes }
+			has_country_leader = { character = SHC_pavel_milf ruling_only = yes }
 		}
 		ai_will_do = { factor = 100 }
 
@@ -4549,7 +4558,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "王明" ruling_only = yes }
+			has_country_leader = { character = SHC_chen_shaoyu ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -4709,9 +4718,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_chan_chu_fan_ge_ming"
-			create_field_marshal = {
-				name = "王明"
-				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Chen_Shaoyu.png"
+			add_field_marshal_role = {
+				character = SHC_chen_shaoyu
 				traits = {
 					war_hero 
 				}
@@ -4788,7 +4796,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "张闻天" ruling_only = yes }
+			has_country_leader = { character = SHC_zhang_wentian ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }
@@ -4996,7 +5004,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "刘仁静" ruling_only = yes }
+			has_country_leader = { character = SHC_liu_renjing ruling_only = yes }
 		}
 
 		ai_will_do = { factor = 100 }

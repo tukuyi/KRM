@@ -1512,7 +1512,17 @@ china_set_government_tag_specific_scripted_effect = {
 					original_tag = SHC
 				}
 			}
-			set_cosmetic_tag = CSP_government_shanghai_cosmetic #上海总公社
+			if = {
+				limit = {
+					has_country_leader = {
+						character = SHC_peng_shuzhi
+						ruling_only = yes
+					}
+				}
+			}
+			else = {
+				set_cosmetic_tag = CSP_government_shanghai_cosmetic #上海总公社
+			}
 		}
 		else_if = {
 			AND = {

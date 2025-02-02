@@ -6263,34 +6263,6 @@ country_event = {#中华人民共和国
 	title = hungong.29.t
 	desc = hungong.29.d
 
-	trigger = {
-		tag = HNN
-		#昆明
-		# 325 = {
-		# 	is_owned_by_ROOT_or_subject = yes
-		# }
-		#广州
-		592 = {
-			is_owned_by_ROOT_or_subject = yes
-		}
-		#北京
-		608 = {
-			is_owned_by = ROOT
-		}
-		#南京
-		613 = {
-			is_owned_by = ROOT
-		}
-		#重庆
-		# 650 = {
-		# 	is_owned_by_ROOT_or_subject = yes
-		# }
-		#沈阳
-		716 = {
-			is_owned_by_ROOT_or_subject = yes
-		}
-		has_country_flag = HNN_gong_tuan_victory_flag
-	}
 
 	immediate = {
 		hidden_effect = {
