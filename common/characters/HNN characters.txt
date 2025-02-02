@@ -381,7 +381,7 @@ characters = {
 		}
 		country_leader = {
 			desc =  POLITICS_HNN_Ren_Bi_Shi_DESC
-			ideology = totalist_subtype
+			ideology = radical_socialist_subtype
 			traits = { CHN_CHNsyndicalist_aligned }
 		}
 	}
@@ -2318,7 +2318,7 @@ characters = {
 			logistics_skill = 1
 		}
 		country_leader = {
-			ideology = radical_socialist_subtype
+			ideology = radical_socialist_mao_zedong_thought_subtype
 			traits = {
 				CHN_CHNsyndicalist_aligned
 			}
@@ -2441,6 +2441,9 @@ characters = {
 				small="gfx/interface/ministers/HNN/HNN_Chen_Yun.png"
 				large = GFX_Portrait_HNN_Chen_Yun
 			}
+			civilian = {
+				large = "gfx/leaders/HNN/Portrait_HNN_chen_yun_CIV.png"
+			}
 		}
 		advisor = {
 			slot = second_in_command
@@ -2467,7 +2470,7 @@ characters = {
 			logistics_skill = 2
 		}
 		country_leader = {
-			ideology = radical_socialist_subtype
+			ideology = radical_socialist_birdcage_vanguardist_subtype
 			traits = {
 				CHN_CHNsyndicalist_aligned
 			}
@@ -2633,7 +2636,7 @@ characters = {
 		}
 		country_leader = {
 			desc =  POLITICS_HNN_qian_xuesen_DESC
-			ideology = radical_socialist_subtype
+			ideology = radical_socialist_utopian_technocracy_subtype
 			traits = { CHN_CHNsyndicalist_aligned }
 		}
 	}	
@@ -2704,6 +2707,17 @@ characters = {
 				small="gfx/interface/ministers/HNN/HNN_Geng_Biao.png"
 				large = "gfx/leaders/HNN/Portrait_HNN_geng_biao.png"
 			}
+		}
+		corps_commander = {
+			traits = { 
+				irregulars_officer
+				guerilla_officer
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
 		}
 		advisor = {
 			slot = second_in_command

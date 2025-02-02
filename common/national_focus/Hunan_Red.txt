@@ -3700,6 +3700,7 @@ focus_tree = {
 				custom_effect_tooltip = tooltip_white_line
 				unlock_decision_category_tooltip = HNN_ren_ti_ke_xue_category
 				hidden_effect = {
+					set_country_leader_ideology = radical_socialist_qian_xuesen_thought_subtype
 					country_event = { 
 						id = hungong.97
 						days = 20
@@ -7782,7 +7783,7 @@ focus_tree = {
 					}
 					promote_character = {
 						character = HNN_ren_bishi
-						ideology = totalist_subtype
+						ideology = radical_socialist_subtype
 					}
 				}
 			}

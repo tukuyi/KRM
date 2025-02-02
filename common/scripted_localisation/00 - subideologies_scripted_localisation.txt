@@ -4,11 +4,15 @@ defined_text = {
 	text = { trigger = { has_country_leader_ideology = totalist_juche_subtype } localization_key =  totalist_juche_subtype }#主体思想
 	text = { trigger = { has_country_leader_ideology = totalist_technocracy_subtype } localization_key = totalist_technocracy_subtype }#技官主义
 
-	#Radical Socialist
+	#Syndicalist
 	text = { trigger = { has_country_leader_ideology = syndicalist_market_syndicalist_subtype } localization_key = syndicalist_market_syndicalist_subtype }#市场工团主义
 	
-	#Syndicalist
+	#Radical Socialist
 	text = { trigger = { has_country_leader_ideology = radical_socialist_new_tridemist_subtype } localization_key = radical_socialist_new_tridemist_subtype }#新三民主义
+	text = { trigger = { has_country_leader_ideology = radical_socialist_birdcage_vanguardist_subtype } localization_key = radical_socialist_birdcage_vanguardist_subtype }#鸟笼先锋队主义
+	text = { trigger = { has_country_leader_ideology = radical_socialist_mao_zedong_thought_subtype } localization_key = radical_socialist_mao_zedong_thought_subtype }#毛泽东思想
+	text = { trigger = { has_country_leader_ideology = radical_socialist_utopian_technocracy_subtype } localization_key = radical_socialist_utopian_technocracy_subtype }#乌托邦技官主义
+	text = { trigger = { has_country_leader_ideology = radical_socialist_qian_xuesen_thought_subtype } localization_key = radical_socialist_qian_xuesen_thought_subtype }#钱学森思想
 
 	
 	#Social Democrat
