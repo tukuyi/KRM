@@ -4397,15 +4397,10 @@ country_event = {#新总督？
 
 	option = {#伊丽莎白二世
 		name = leche.13.b
-		create_country_leader = {
-			name = "伊丽莎白·亚历山德拉·玛丽"
-			desc = "Elizabeth_II_DESC"
-			picture = "gfx/leaders/LEC/Portrait_LEC_Elizabeth_II.png"
-			expire = "1.1.1"
+		recruit_character = SHC_elizabeth_ii
+		promote_character = {
+			character = SHC_elizabeth_ii
 			ideology = social_conservative_subtype
-			traits = {
-				LEC_di_guo_zong_du
-			}
 		}
 		set_politics = {
 			ruling_party = social_conservative

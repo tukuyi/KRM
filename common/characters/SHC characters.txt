@@ -649,4 +649,21 @@ characters = {
 			}
 		}
 	}
+	#老佛爷
+	SHC_elizabeth_ii = {
+		name = SHC_elizabeth_ii
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_elizabeth_ii_large
+				small = GFX_portrait_SHC_elizabeth_ii_small
+			}
+		}
+		country_leader = {
+			ideology = social_conservative_subtype
+			traits = {
+				CHN_non_aligned
+				LEC_di_guo_zong_du
+			}
+		}
+	}
 }
