@@ -2418,7 +2418,7 @@ focus_tree = {
 			has_country_flag = HNN_yao_qian
 		}
 		bypass = {
-			has_country_leader = { name = "康生" ruling_only = yes }
+			has_country_leader = { character = SHC_kangsheng ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -2443,7 +2443,7 @@ focus_tree = {
 		}
 		available = {
 			OR = { 
-				has_country_leader = { name = "康生" ruling_only = yes }
+				has_country_leader = { character = SHC_kangsheng ruling_only = yes }
 				has_country_leader = { character = CHI_dai_chunfeng ruling_only = yes }
 			}
 		}
@@ -2511,7 +2511,7 @@ focus_tree = {
 		}
 		available = {
 			OR = { 
-				has_country_leader = { name = "康生" ruling_only = yes }
+				has_country_leader = { character = SHC_kangsheng ruling_only = yes }
 				has_country_leader = { character = CHI_dai_chunfeng ruling_only = yes }
 			}
 		}
@@ -2545,7 +2545,7 @@ focus_tree = {
 		}
 		available = {
 			OR = { 
-				has_country_leader = { name = "康生" ruling_only = yes }
+				has_country_leader = { character = SHC_kangsheng ruling_only = yes }
 				has_country_leader = { character = CHI_dai_chunfeng ruling_only = yes }
 			}
 		}
@@ -3967,10 +3967,10 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "康生" ruling_only = yes }
+				has_country_leader = { character = SHC_kangsheng ruling_only = yes }
 			}
 			bypass = {
-				has_country_leader = { name = "康生" ruling_only = yes }
+				has_country_leader = { character = SHC_kangsheng ruling_only = yes }
 			}
 	
 			prerequisite = {
@@ -3995,7 +3995,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "康生" ruling_only = yes }
+				has_country_leader = { character = SHC_kangsheng ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_kang_sheng_zhu_xi
@@ -4037,7 +4037,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "康生" ruling_only = yes }
+				has_country_leader = { character = SHC_kangsheng ruling_only = yes }
 			}	
 			prerequisite = {
 				focus = HNN_kang_sheng_zhu_xi
@@ -4087,7 +4087,7 @@ focus_tree = {
 				base = 15
 			}
 			available = {
-				has_country_leader = { name = "康生" ruling_only = yes }
+				has_country_leader = { character = SHC_kangsheng ruling_only = yes }
 			}
 			prerequisite = {
 				focus = HNN_yi_shi_xin_tai_gao_yu_yi_qie

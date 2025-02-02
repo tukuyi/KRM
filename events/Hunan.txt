@@ -1322,7 +1322,7 @@ country_event = {#《中央政治局关于整风运动的指示》
 			if = {
 				limit = { 
 					NOT ={
-						has_country_leader = { name = "康生" ruling_only = yes }
+						has_country_leader = { character = SHC_kang_sheng ruling_only = yes }
 					}
 				}
 				country_event = { 
@@ -1356,7 +1356,7 @@ country_event = {#事情正在起变化
 				limit = { 
 					NOT ={
 						OR = {
-							has_country_leader = { name = "康生" ruling_only = yes }
+							has_country_leader = { character = SHC_kangsheng ruling_only = yes }
 							has_country_leader = { character = CHI_dai_chunfeng ruling_only = yes }
 						}
 					}
@@ -1458,7 +1458,7 @@ country_event = {#009号目标人物 胡汉民
 			if = {
 				limit = { 
 					NOT ={
-						has_country_leader = { name = "康生" ruling_only = yes }
+						has_country_leader = { character = SHC_kangsheng ruling_only = yes }
 					}
 				}
 				country_event = { 
@@ -1491,7 +1491,7 @@ country_event = {#戴春风的加入？
 			if = {
 				limit = { 
 					NOT ={
-						has_country_leader = { name = "康生" ruling_only = yes }
+						has_country_leader = { character = SHC_kangsheng ruling_only = yes }
 					}
 				}
 				CHI = {
@@ -1537,7 +1537,7 @@ country_event = {#010号目标人物 周福海
 			if = {
 				limit = { 
 					NOT ={
-						has_country_leader = { name = "康生" ruling_only = yes }
+						has_country_leader = { character = SHC_kangsheng ruling_only = yes }
 					}
 				}
 				country_event = { 
@@ -2018,11 +2018,8 @@ country_event = {#肃反之夜
 
 	option = {#康生
 		name = hungong.79.a
-		create_country_leader = {
-			name = "康生"
-			desc = "Kang_Shen_DESC"
-			picture = "gfx/leaders/LEC/Portrait_LEC_Kang_Sheng.png"
-			expire = "1.1.1"
+		promote_character = {
+			character = SHC_kang_sheng
 			ideology = totalist_subtype
 		}
 		set_party_name = {
@@ -6315,6 +6312,11 @@ country_event = {#中华人民共和国
 			}
 			GXC = {
 				GXC_ye_jianying = {
+					CSP_recruit_character_effect = yes
+				}
+			}
+			SHC = {
+				SHC_kang_sheng = {
 					CSP_recruit_character_effect = yes
 				}
 			}

@@ -1,0 +1,652 @@
+characters = {
+################
+###  领导人  ###
+################
+#汪寿华
+ SHC_wang_shouhua = {
+	name = SHC_wangshouhua
+	portraits = {
+		army = {
+			large = GFX_portrait_SHC_wang_shouhua_large
+			small = GFX_portrait_SHC_wang_shouhua_small
+		}
+	}
+	country_leader = {
+		ideology = syndicalist_subtype
+		desc =  WANG_SHOU_HUA_DESC
+		traits = {
+			CHN_CHNsyndicalist_aligned
+		}
+	}
+	field_marshal = {
+		desc =  WANG_SHOU_HUA_DESC
+		traits = { politically_connected irregulars_officer }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
+ }
+ #鲁迅
+  SHC_lu_xun = {
+	 name = SHC_lu_xun
+	 portraits = {
+		 army = {
+			 large = GFX_portrait_SHC_lu_xun_large
+			 small = GFX_portrait_SHC_lu_xun_small
+		 }
+	 }
+	 country_leader = {
+		 ideology = social_liberal_subtype
+		 desc =  LU_XUN_DESC
+		 traits = {
+			 CHN_CHNsyndicalist_aligned
+		 }
+	 }
+  }
+  #王凡西
+   SHC_wang_fanxi = {
+	  name = SHC_wang_fanxi
+	  portraits = {#工具人，不上台
+		  civilian = {
+			  large = GFX_portrait_SHC_wang_fanxi_large
+			  small = GFX_portrait_SHC_wang_fanxi_small
+		  }
+	  }
+	  country_leader = {
+		  ideology = totalist_subtype
+		  desc =  none
+		  traits = {
+			  CHN_CHNsyndicalist_aligned
+		  }
+	  }
+   }
+   #亚历山大·I·切列帕诺夫
+	SHC_alexander_i_cherepanov = {
+	   name = SHC_alexander_i_cherepanov
+	   portraits = {
+		   army = {
+			   large = GFX_portrait_SHC_alexander_i_cherepanov_large
+			   small = GFX_portrait_SHC_alexander_i_cherepanov_small
+		   }
+	   }
+	   field_marshal = {
+		desc = Portrait_Alexander_Ivanovich_Cherepanov_DESC
+		traits = {  
+			war_hero
+			harsh_leader
+			career_officer
+			infantry_officer
+		}
+		skill = 4
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+		}
+	}
+	#尼古拉·古比雪夫
+	 SHC_nikolay_kuibyshev = {
+		name = SHC_nikolay_kuibyshev
+		portraits = {
+			army = {
+				large = GFX_portrait_SHC_nikolay_kuibyshev_large
+				small = GFX_portrait_SHC_nikolay_kuibyshev_small
+			}
+		}
+		corps_commander = {
+			desc = POLITICS_Nikolay_Kuibyshev_DES
+			traits = {  
+				war_hero
+				career_officer
+				infantry_officer
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		 }
+	 }
+	#尼古拉·罗申
+	SHC_nikolai_roshchin = {
+		name = SHC_nikolai_roshchin
+		portraits = {
+			army = {
+				large = GFX_portrait_SHC_nikolai_roshchin_large
+				small = GFX_portrait_SHC_nikolai_roshchin_small
+			}
+		}
+		corps_commander = {
+		 	desc =  POLITICS_Background_Alternate_DESC
+		 	traits = {  
+				career_officer
+				infantry_officer
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	#孙富元
+	SHC_sun_fuyuan = {
+		name = SHC_sun_fuyuan
+		portraits = {
+			army = {
+				large = GFX_portrait_SHC_sun_fuyuan_large
+				small = GFX_portrait_SHC_sun_fuyuan_small
+			}
+		}
+		corps_commander = {
+		 	desc =  none
+		 	traits = {  
+				trait_cautious
+				irregulars_officer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	#饶漱石
+	SHC_rao_shushi = {
+		name = SHC_rao_shushi
+		portraits = {
+			army = {
+				large = GFX_portrait_SHC_rao_shushi_large
+				small = GFX_portrait_SHC_rao_shushi_small
+			}
+		}
+		corps_commander = {
+		 	desc =  none
+		 	traits = { 
+				irregulars_officer
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		country_leader = {
+			ideology = syndicalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#王亚樵
+	SHC_wang_yaqiao = {
+		name = SHC_wang_yaqiao
+		portraits = {
+			army = {
+				large = GFX_portrait_SHC_wang_yaqiao_large
+				small = GFX_portrait_SHC_wang_yaqiao_small
+			}
+		}
+		corps_commander = {
+		 	desc =  none
+		 	traits = { 
+				fast_planner
+				offensive_doctrine
+				irregulars_officer
+				urban_assault_specialist
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		country_leader = {
+			ideology = syndicalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#彭述之
+	SHC_peng_shuzhi = {
+		name = SHC_peng_shuzhi
+		portraits = {
+			army = {
+				large = GFX_portrait_SHC_peng_shuzhi_large
+				small = GFX_portrait_SHC_peng_shuzhi_small
+			}
+		}
+		corps_commander = {
+		 	desc =  none
+		 	traits = {  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		country_leader = {
+			ideology = syndicalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#康生
+	SHC_kang_sheng = {
+		name = SHC_kang_sheng
+		portraits = {
+			army = {
+				large = GFX_portrait_SHC_kang_sheng_large
+				small = GFX_portrait_SHC_kang_sheng_small
+			}
+		}
+		corps_commander = {
+		 	desc =  none
+		 	traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+		}
+		country_leader = {
+			ideology = totalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#田汉
+	SHC_tian_han = {
+		name = SHC_tian_han
+		portraits = {
+			army = {
+				large = GFX_portrait_SHC_tian_han_large
+				small = GFX_portrait_SHC_tian_han_small
+			}
+		}
+		corps_commander = {
+		 	desc =  none
+		 	traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+		}
+	}
+	#茅盾
+	SHC_mao_dun = {
+		name = SHC_mao_dun
+		portraits = {
+			army = {
+				large = GFX_portrait_SHC_mao_dun_large
+				small = GFX_portrait_SHC_mao_dun_small
+			}
+		}
+		corps_commander = {
+		 	desc =  none
+		 	traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#张春桥
+	SHC_zhang_chunqiao = {
+		name = SHC_zhang_chunqiao
+		portraits = {
+			army = {
+				large = GFX_portrait_SHC_zhang_chunqiao_large
+				small = GFX_portrait_SHC_zhang_chunqiao_small
+			}
+		}
+		corps_commander = {
+		 	desc =  none
+		 	traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+		}
+	}
+	#周扬
+	SHC_zhou_yang = {
+		name = SHC_zhou_yang
+		portraits = {
+			army = {
+				large = GFX_portrait_SHC_zhou_yang_large
+				small = GFX_portrait_SHC_zhou_yang_small
+			}
+		}
+		corps_commander = {
+		 	desc =  none
+		 	traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+		}
+		country_leader = {
+			ideology = totalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#赵世炎
+	SHC_zhao_shiyan = {
+		name = SHC_zhao_shiyan
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_zhao_shiyan_large
+				small = GFX_portrait_SHC_zhao_shiyan_small
+			}
+		}
+		corps_commander = {
+		 	desc =  none
+		 	traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+		}
+		country_leader = {
+			ideology = radical_socialist_new_tridemist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#维克多·沙逊
+	SHC_victor_sassoon = {
+		name = SHC_victor_sassoon
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_victor_sassoon_large
+				small = GFX_portrait_SHC_victor_sassoon_small
+			}
+		}
+		country_leader = {
+			ideology = social_conservative_subtype
+			desc =  Sha_Xun_DESC
+			traits = {
+				CHN_non_aligned
+			}
+		}
+	}
+	#惠济良
+	SHC_hui_jiliang = {
+		name = SHC_hui_jiliang
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_hui_jiliang_large
+				small = GFX_portrait_SHC_hui_jiliang_small
+			}
+		}
+		country_leader = {
+			ideology = social_conservative_subtype
+			desc =   HUI_JI_DESC
+			traits = {
+				CHN_non_aligned
+			}
+		}
+	}
+	#于斌
+	SHC_yu_bing = {
+		name = SHC_yu_bing
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_yu_bing_large
+				small = GFX_portrait_SHC_yu_bing_small
+			}
+		}
+		country_leader = {
+			ideology = authoritarian_democrat_subtype
+			desc =   YU_BING_DESC
+			traits = {
+				CHN_non_aligned
+			}
+		}
+	}
+	#袁良
+	SHC_yuan_liang = {
+		name = SHC_yuan_liang
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_yuan_liang_large
+				small = GFX_portrait_SHC_yuan_liang_small
+			}
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+			desc =    Portrait_LEC_yuan_liang_DESC
+			traits = {
+				CHN_geacps_aligned
+			}
+		}
+	}
+	#苏锡文
+	SHC_su_xiwen = {
+		name = SHC_su_xiwen
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_su_xiwen_large
+				small = GFX_portrait_SHC_su_xiwen_small
+			}
+		}
+		country_leader = {
+			ideology = national_populist_subtype
+			desc =   none
+			traits = {
+				CHN_geacps_aligned
+			}
+		}
+	}
+	#王明
+	 SHC_chen_shaoyu = {
+		name = SHC_chen_shaoyu
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_chen_shaoyu_large
+				small = GFX_portrait_SHC_chen_shaoyu_small
+			}
+		}
+		country_leader = {
+			ideology = totalist_subtype
+			desc =  Chen_Shaoyu_desc
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+		country_leader = {
+			ideology = radical_socicalist_subtype
+			desc =  Chen_Shaoyu_desc
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	 }
+	 #刘仁静
+	 SHC_liu_renjing = {
+		 name = SHC_liu_renjing
+		 portraits = {
+			civilian = {
+				 large = GFX_portrait_SHC_liu_renjing_large
+				 small = GFX_portrait_SHC_liu_renjing_small
+			 }
+		 }
+		 country_leader = {
+			 ideology = syndicalist_subtype
+			 desc =   none
+			 traits = {
+				 CHN_CHNsyndicalist_aligned
+			 }
+		 }
+	 }
+	#张闻天
+	SHC_zhang_wentian = {
+		name = SHC_zhang_wentian
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_zhang_wentian_large
+				small = GFX_portrait_SHC_zhang_wentian_small
+			}
+		}
+		country_leader = {
+			ideology = radical_socialist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+		country_leader = {
+			ideology = totalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#江长川
+	SHC_jiang_changchuan = {
+		name = SHC_jiang_changchuan
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_jiang_changchuan_large
+				small = GFX_portrait_SHC_jiang_changchuan_small
+			}
+		}
+		country_leader = {
+			ideology = syndicalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#丁光训
+	SHC_ding_guangxun = {
+		name = SHC_ding_guangxun
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_ding_guangxun_large
+				small = GFX_portrait_SHC_ding_guangxun_small
+			}
+		}
+		country_leader = {
+			ideology = radical_socialist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#李储文
+	SHC_li_chuwen = {
+		name = SHC_li_chuwen
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_li_chuwen_large
+				small = GFX_portrait_SHC_li_chuwen_small
+			}
+		}
+		country_leader = {
+			ideology = totalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#帕维尔·米夫
+	SHC_pavel_milf = {
+		name = SHC_pavel_milf
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_pavel_milf_large
+				small = GFX_portrait_SHC_pavel_milf_small
+			}
+		}
+		country_leader = {
+			ideology = totalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#景梅九
+	SHC_jing_meijiu = {
+		name = SHC_jing_meijiu
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_jing_meijiu_large
+				small = GFX_portrait_SHC_jing_meijiu_small
+			}
+		}
+		country_leader = {
+			ideology = syndicalist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#柔石
+	SHC_rou_shi = {
+		name = SHC_rou_shi
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_rou_shi_large
+				small = GFX_portrait_SHC_rou_shi_small
+			}
+		}
+		country_leader = {
+			ideology = radical_socailist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#马三立
+	SHC_ma_sanli = {
+		name = SHC_ma_sanli
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_ma_sanli_large
+				small = GFX_portrait_SHC_ma_sanli_small
+			}
+		}
+		country_leader = {
+			ideology = radical_socailist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+	#胡风
+	SHC_hu_feng = {
+		name = SHC_hu_feng
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SHC_hu_feng_large
+				small = GFX_portrait_SHC_hu_feng_small
+			}
+		}
+		country_leader = {
+			ideology = radical_socailist_subtype
+			traits = {
+				CHN_CHNsyndicalist_aligned
+			}
+		}
+	}
+}
