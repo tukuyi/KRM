@@ -168,6 +168,17 @@ country_event = {
 				character = SHC_lu_xun
 				ideology = social_liberal_subtype
 			}
+			add_field_marshal_role = {
+				character = SHC_wang_shouhua
+				traits = { politically_connected irregulars_officer }
+				desc = WANG_SHOUHUA_DESC
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			
 			add_corps_commander_role = {
 				character = SHC_lu_xun
 				desc =  LU_XUN_DESC
@@ -354,8 +365,28 @@ country_event = {
 				every_unit_leader = {
 					limit = {
 						OR = {
-							has_trait = LEC_german_commander
+							has_trait = LEC_british_commander
 							has_trait = LEC_international_commander
+						}
+					}
+					SHC_recruit_character_effect = yes
+				}
+			}
+			AST = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_trait = LEC_british_commander
+						}
+					}
+					SHC_recruit_character_effect = yes
+				}
+			}
+			CAN = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_trait = LEC_british_commander
 						}
 					}
 					SHC_recruit_character_effect = yes
@@ -502,6 +533,26 @@ country_event = {
 					SHC_recruit_character_effect = yes
 				}
 			}
+			GEA = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_trait = LEC_german_commander
+						}
+					}
+					SHC_recruit_character_effect = yes
+				}
+			}
+			GER = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_trait = LEC_german_commander
+						}
+					}
+					SHC_recruit_character_effect = yes
+				}
+			}
 		}
 	}	
 
@@ -598,6 +649,16 @@ country_event = {
 						OR = {
 							has_trait = LEC_japanese_commander
 							has_trait = LEC_international_commander
+						}
+					}
+					set_nationality = ROOT
+				}
+			}
+			JAP = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_trait = LEC_japanese_commander
 						}
 					}
 					set_nationality = ROOT
@@ -3416,9 +3477,6 @@ country_event = {#起义！
 					}
 				}
 				LEC_robert_hotung = {
-					set_variable = {
-						china_alignment = token:CHN_non_aligned
-					}	
 					set_portraits = {
 						civilian = {
 							large = "gfx/leaders/SHC/Portrait_SHC_robert_hotung.png"
@@ -4433,11 +4491,6 @@ country_event = {#新总督？
 					CHN_non_aligned
 					LEC_di_guo_zong_du
 				}
-			}
-		}
-		LEC_norman_lockhart_smith = {
-			set_variable = {
-				china_alignment = token:CHN_non_aligned
 			}
 		}
 		set_politics = {
