@@ -3529,6 +3529,8 @@ chinese_unification = {
 				tag = HNN
 				tag = GXC
 				tag = SHX
+				tag = SHC
+				tag = YUN
 			}
 		}
 		available = {
@@ -3560,6 +3562,10 @@ chinese_unification = {
 				limit = { tag = SHX }
 				has_country_leader = { character = SHX_feng_yuxiang }
 				has_completed_focus = SHX_beyond_borders
+			}
+			else_if = {
+				limit = { tag = SHC }
+				has_country_flag = zong_gong_hui_victory
 			}
 		}
 

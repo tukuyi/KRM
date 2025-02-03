@@ -309,6 +309,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_zhong_cheng_de_shang_hai"
 			set_cosmetic_tag = LEC_CHD
 			custom_effect_tooltip = tooltip_white_line
+			set_country_flag = british_shanghai
 			if = {
 				limit = { 
 					has_country_leader = { character = SHC_victor_sassoon ruling_only = yes }
@@ -6324,117 +6325,6 @@ focus_tree = {
 	}	
 
 	focus = {
-		id = SHC_entente_guarentee
-		icon = GFX_goal_GXC_zhu_ke_dian_dao_KX
-		relative_position_id = SHC_bao_wei_shang_hai
-		cost = 5
-		x = -1
-		y = 1
-		
-		prerequisite = { 
-			focus = SHC_bao_wei_shang_hai 
-		}
-		mutually_exclusive = {
-			focus = SHC_berlin_friend
-		}
-		ai_will_do = { base = 20 }
-
-		available = {
-			has_war = no
-			is_in_faction = no
-			date > 1938.6.13
-			NOT = {
-				has_country_flag = zong_gong_hui_victory
-			}
-			if = {
-				limit = { 
-					has_country_flag = jin_cha_ju_victory
-				}
-				NOT = {
-					has_completed_focus = SHC_zhong_hua_de_ming_zhu
-				}
-			}
-			if = {
-				limit = { 
-					has_completed_focus = LEC_zi_ben_jia_de_sheng_li
-				}
-				OR = {
-					has_completed_focus = LEC_tuo_yi_ying_guo_lao
-					has_completed_focus = LEC_you_tai_ren_ed_ming_ding
-				}
-			}
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHC_entente_guarentee"
- 			JAP = { 
-				give_guarantee = SHC 
-			}
-			JAP = {
-				country_event = {
-					id = SHCwaijiao.1
-					days = 3
-				}
-			}
-		}
-	}		
-
-	focus = {
-		id = SHC_berlin_friend
-		icon = GFX_goal_GXC_zhen_zhi_de_ya
-		relative_position_id = SHC_bao_wei_shang_hai
-		cost = 5
-		x = 1
-		y = 1
-		
-		prerequisite = { 
-			focus = SHC_bao_wei_shang_hai 
-		}
-		mutually_exclusive = {
-			focus = SHC_entente_guarentee
-		}
-
-		available = {
-			has_war = no
-			date > 1939.6.13
-			NOT = {
-				OR = {
-					has_country_flag = zong_gong_hui_victory
-				}
-			}
-			if = {
-				limit = { 
-					has_country_flag = jin_cha_ju_victory
-				}
-				has_completed_focus = SHC_zhong_hua_de_ming_zhu
-			}
-			if = {
-				limit = { 
-					has_completed_focus = LEC_zi_ben_jia_de_sheng_li
-				}
-				OR = {
-					has_completed_focus = LEC_tuo_yi_ying_guo_lao
-					has_completed_focus = LEC_you_tai_ren_ed_ming_ding
-				}
-			}
-		}
-
-		ai_will_do = { base = 20 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHC_berlin_friend"
-			GER = { 
-				give_guarantee = SHC 
-			}
-			GER = {
-				country_event = {
-					id = SHCwaijiao.4
-					days = 3
-				}
-			}
-		}
-	}		
-
-	focus = {
 		id = SHC_zi_you_gang_kou
 		icon = GFX_goal_MAG_open_port_for_all
 		relative_position_id = SHC_bao_wei_shang_hai
@@ -6777,13 +6667,9 @@ focus_tree = {
 		ai_will_do = { base = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHC_da_shuai"
-			every_country = {
+			if = {
 				limit = {
-					has_war_with = FNG
-				}
-				declare_war_on = {
-					target = PREV
-					type = annex_everything
+
 				}
 			}
 			unlock_decision_tooltip = LEC_dao_xiang_feng_tian
