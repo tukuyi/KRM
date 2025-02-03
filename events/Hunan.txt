@@ -328,8 +328,8 @@ country_event = {#革命成功
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = HNN_path
-					option = HNN_SONG
+					rule = HNNREV_path
+					option =  HNN_norev
 				}
 			}
 		}
@@ -536,19 +536,19 @@ country_event = {#革命成功
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_PDH
 					}
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_DBW
 					}
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_HSH
 					}
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_TSM
 					}
 				}
@@ -7302,15 +7302,15 @@ country_event = {#经济政策
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_DBW
 					}
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_HSH
 					}
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_TSM
 					}
 				}
@@ -7337,7 +7337,7 @@ country_event = {#经济政策
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_PDH
 					}
 				}
@@ -7376,11 +7376,11 @@ country_event = {#外交政策
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_HSH
 					}
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_TSM
 					}
 				}
@@ -7418,11 +7418,11 @@ country_event = {#外交政策
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_PDH
 					}
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_DBW
 					}
 				}
@@ -7506,7 +7506,7 @@ country_event = {#赵恒惕的问题
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = HNN_path
+					rule = HNNREV_path
 					option = HNN_TSM
 				}
 			}
@@ -7530,15 +7530,15 @@ country_event = {#赵恒惕的问题
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_PDH
 					}
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_DBW
 					}
 					has_game_rule = {
-						rule = HNN_path
+						rule = HNNREV_path
 						option = HNN_HSH
 					}
 				}

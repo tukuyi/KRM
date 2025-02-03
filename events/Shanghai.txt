@@ -3119,6 +3119,13 @@ country_event = {#罢工
 				factor = 4.0
 				has_political_power > 50
 			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = LEC_path
+					option = LEC_COLLAPSE
+				}
+			}
 		}
 		decrease_currency_reserve = yes
 		add_stability = 0.05
@@ -3131,6 +3138,13 @@ country_event = {#罢工
 			modifier = {
 				factor = 4.0
 				has_political_power < 50
+			}
+			modifier = {
+				factor = 100000
+				has_game_rule = {
+					rule = LEC_path
+					option = LEC_COLLAPSE
+				}
 			}
 		}
 		add_timed_idea = {
@@ -3160,6 +3174,13 @@ country_event = {#罢工升级
 		name = lecgong.5.a
 		ai_chance = {
 			factor = 20
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = LEC_path
+					option = LEC_COLLAPSE
+				}
+			}
 		}
 		decrease_currency_reserve = yes
 		remove_ideas = LEC_ba_gong
@@ -3172,6 +3193,13 @@ country_event = {#罢工升级
 			modifier = {
 				factor = 4.0
 				has_political_power < 50
+			}
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = LEC_path
+					option = LEC_COLLAPSE
+				}
 			}
 		}
 		modify_timed_idea = {
@@ -3204,6 +3232,13 @@ country_event = {#起义边缘
 			modifier = {
 				factor = 4.0
 				has_political_power < 50
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = LEC_path
+					option = LEC_COLLAPSE
+				}
 			}
 		}
 		decrease_currency_reserve = yes
