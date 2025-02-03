@@ -53,6 +53,12 @@ CSP_set_leader_effect = {
 	save_global_event_target_as = CSP_leader
 }
 
+BCN_set_leader_effect = {
+	#CHNbritish
+	custom_effect_tooltip = BCN_set_leader_tt
+	save_global_event_target_as = BCN_leader
+}
+
 set_potential_national_government = {
 
 	#DEV NOTE - MAKE SURE YOU DO NOT USE THIS EFFECT WITHOUT CHECKING IF CHN_no_aligned_unifier_exists_trigger is TRUE FIRST, OTHERWISE WILL DOUBLE UP TAG ALIASES
@@ -106,6 +112,10 @@ set_potential_national_government = {
 		else_if = {
 			limit = { check_variable = { country_leader:china_alignment = token:geacps } }
 			RGC_set_leader_effect = yes
+		}
+		else_if = {
+			limit = { check_variable = { country_leader:china_alignment = token:CHNbritish } }
+			BCN_set_leader_effect = yes
 		}
 
 		if = {
@@ -2994,9 +3004,14 @@ CHN_calculate_china_alignment_gui_effect = {
 				add_to_array = { global.china_alignment_tokens = token:geacps }
 			}
 			else_if = {
-				limit = { tag = CSP } #CSP HUNAN
+				limit = { tag = CSP } #CSP
 				add_to_array = { global.china_alignment_leaders = CSP }
 				add_to_array = { global.china_alignment_tokens = token:CHNsyndicalist }
+			}
+			else_if = {
+				limit = { tag = BCN } #CHNbritish
+				add_to_array = { global.china_alignment_leaders = BCN }
+				add_to_array = { global.china_alignment_tokens = token:CHNbritish }
 			}
 		}
 	}

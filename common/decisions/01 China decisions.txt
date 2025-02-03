@@ -1425,6 +1425,13 @@ chinese_unification = {
 				}
 			}
 			else_if = {
+				limit = {check_variable = { country_leader:china_alignment = token:CHNbritish } }
+				log = "KR_Event_Logging;CHINA UNITED BY CHNbritish;[GetDateText]"
+				activate_targeted_decision = { decision = china_move_capital target = ROOT }
+				hidden_effect = { news_event = china_events.314 }
+				set_cosmetic_tag = LEC_CHD_Y
+			}
+			else_if = {
 				limit = { check_variable = { country_leader:china_alignment = token:CHNsyndicalist } }
 				log = "KR_Event_Logging;CHINA UNITED BY CHN syndicalist;[GetDateText]"
 				activate_targeted_decision = { decision = china_move_capital target = ROOT }

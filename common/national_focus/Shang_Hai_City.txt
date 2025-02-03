@@ -302,24 +302,27 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_zhong_cheng_de_shang_hai"
 			set_cosmetic_tag = LEC_CHD
-			CAN ={
-				puppet = {
-					target = SHC
-					end_wars = no
-				}
-			}
 			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { 
 					has_country_leader = { character = SHC_victor_sassoon ruling_only = yes }
 				}
+				CAN = {
+					set_autonomy = {
+						target = SHC
+						autonomy_state = default_puppet
+						end_wars = no
+					}
+				}
 				add_country_leader_role = {
 					character = SHC_victor_sassoon
+					promote_leader = yes
 					country_leader = {
 						ideology = national_populist_subtype
 						traits = {
-							CHN_non_aligned
+							CHN_CHNbritish_aligned
 						}
+						DESC = Sha_Xun_DESC
 					}
 				}
 				set_party_name = {
@@ -329,6 +332,31 @@ focus_tree = {
 				}
 				set_politics = {
 					ruling_party = national_populist
+					elections_allowed = no
+				}
+			}
+			if = {
+				limit = {
+					has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
+				}
+				CAN = {
+					set_autonomy = {
+						target = SHC
+						autonomy_state = default_puppet
+						end_wars = no
+					}
+				}
+				LEC_robert_hotung = {
+					swap_country_leader_traits = {
+						remove = CHN_non_aligned
+						add = CHN_CHNbritish_aligned
+					}
+					set_variable = {
+						china_alignment = token:CHNbritish
+					}
+				}
+				set_politics = {
+					ruling_party = social_liberal
 					elections_allowed = no
 				}
 			}
@@ -636,6 +664,7 @@ focus_tree = {
 			CAN = {
 				end_puppet = SHC
 			}
+			leave_faction = CAN
 			CAN = {
 				diplomatic_relation = {
 					country = SHC

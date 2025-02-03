@@ -346,6 +346,11 @@ country_event = {
 				character = SHC_victor_sassoon
 				ideology = social_conservative_subtype
 			}
+			SHC_victor_sassoon = {
+				set_variable = {
+					china_alignment = token:CHNbritish
+				}
+			}
 			set_party_name = {
 				ideology = social_conservative
 				long_name = LEC_social_conservative_party_HD_long
