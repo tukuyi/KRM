@@ -729,7 +729,7 @@ ideas = {
 		}
 		LEC_japanese_down = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea LEC_japanese_down"}
-			picture = LEC_Japan_Falling
+			picture = HOL_mass_collectivisation
 			allowed = { always = no }
 			available = { tag = LEC }
             modifier = {
@@ -1303,7 +1303,7 @@ ideas = {
 		#debuff
 		LEC_fire_city = {#燃烧的上海
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_fire_city"}
-			picture = NFA_devastation
+			picture = NOR_secret_police
 			allowed = { always = no }
 			available = { 
 				
@@ -1318,7 +1318,7 @@ ideas = {
 		}
 		LEC_fire_city2 = {#燃烧的上海
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_fire_city2"}
-			picture = NFA_devastation
+			picture = NOR_secret_police
 			allowed = { always = no }
 			available = { 
 				
@@ -1332,7 +1332,7 @@ ideas = {
 		}
 		LEC_fire_city3 = {#燃烧的上海
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_fire_city3"}
-			picture = NFA_devastation
+			picture = NOR_secret_police
 			allowed = { always = no }
 			available = { 
 				
@@ -1346,7 +1346,7 @@ ideas = {
 		}
 		LEC_fire_city4 = {#焕然一新的上海
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_fire_city4"}
-			picture = GFX_idea_OTT_Sublime_Porte_idea_icon
+			picture = HOL_welfare_state
 			allowed = { always = no }
             modifier = {
 				political_power_gain = 0.10
@@ -1358,7 +1358,7 @@ ideas = {
 		}
 		LEC_zhi_ye_jiao_yu = {#职业教育
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_zhi_ye_jiao_yu"}
-			picture = bloated_bureaucracy
+			picture = HOL_welfare_state
 			allowed = { always = no }
 			available = { 
 				
@@ -1370,7 +1370,7 @@ ideas = {
 		}
 		LEC_she_hui_fu_li = {#福利主义
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_she_hui_fu_li"}
-			picture = enlightenment
+			picture = HOL_welfare_state
 			allowed = { always = no }
             modifier = {
 				stability_factor = 0.10
@@ -1383,7 +1383,7 @@ ideas = {
 		}
 		LEC_ba_gong = {#大罢工
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_ba_gong"}
-			picture = LEC_separatism
+			picture = NOR_secret_police
 			allowed = { always = no }
 			available = { 
 				
@@ -1398,7 +1398,7 @@ ideas = {
 	###黑帮
 		LEC_Opium_Idea1 = {#鸦片贸易
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_Opium_Idea1"}
-			picture = LEC_opium
+			picture = HOL_transition_to_fair_economy
 			allowed = { always = no }
 			available = { 
 				has_country_flag = shanghai_gang_victory
@@ -1412,7 +1412,7 @@ ideas = {
 		}
 		LEC_Opium_Idea3 = {#鸦片贸易
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_Opium_Idea3"}
-			picture = LEC_opium
+			picture = HOL_transition_to_fair_economy
 			allowed = { always = no }
 			available = { 
 				has_country_flag = shanghai_gang_victory
@@ -1428,7 +1428,7 @@ ideas = {
 		}
 		LEC_fan_ri_xuan_chuan = {#反日宣传
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_fan_ri_xuan_chuan"}
-			picture = LEC_Japan_Falling
+			picture = HOL_mass_collectivisation
 			allowed = { always = no }
 			available = { 
 				has_country_flag = shanghai_gang_victory
@@ -1448,7 +1448,7 @@ ideas = {
 		}
 		LEC_du_mian_zhi_wang = {#无冕之王
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_du_mian_zhi_wang"}
-			picture = NFA_crown
+			picture = HOL_mass_collectivisation
 			allowed = { always = no }
 			available = { 
 				has_country_flag = shanghai_gang_victory
@@ -1465,7 +1465,7 @@ ideas = {
 		}
 		LEC_hei_bang_jing_cha_ju = {#黑帮警察
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_hei_bang_jing_cha_ju"}
-			picture = NFA_crown
+			picture = HOL_mass_collectivisation
 			allowed = { always = no }
 			available = { 
 				has_country_flag = shanghai_gang_victory
@@ -1480,7 +1480,7 @@ ideas = {
 		}
 		LEC_sao_hui_du_ping_ye = {#焚毁毒品
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_sao_hui_du_ping_ye"}
-			picture = SZC_opium_spread
+			picture = HOL_mass_collectivisation
 			allowed = { always = no }
 			available = { 
 				has_country_flag = shanghai_gang_victory
@@ -1498,7 +1498,7 @@ ideas = {
 		}
 		LEC_sao_hui_du_ping_ye2 = {#睁一只眼闭一只眼
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_sao_hui_du_ping_ye2"}
-			picture = SZC_opium_spread
+			picture = HOL_mass_collectivisation
 			allowed = { always = no }
 			available = { 
 				has_country_flag = shanghai_gang_victory
@@ -1515,7 +1515,7 @@ ideas = {
 		}
 		LEC_jue_xin_de_ge_ming_zhe = {#觉醒的革命者
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_jue_xin_de_ge_ming_zhe"}
-			picture = UKR_mace
+			picture = HOL_dutch_militia
 			allowed = { always = no }
 			available = { 
 				has_country_flag = shanghai_gang_victory
@@ -1532,7 +1532,7 @@ ideas = {
 		}
 		LEC_jue_xin_de_ge_ming_zhe2 = {#觉醒的革命者
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_jue_xin_de_ge_ming_zhe2"}
-			picture = UKR_mace
+			picture = HOL_dutch_militia
 			allowed = { always = no }
 			available = { 
 				has_country_flag = shanghai_gang_victory
@@ -1552,7 +1552,7 @@ ideas = {
 		}
 		LEC_jue_xin_de_ge_ming_zhe3 = {#觉醒的革命者
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_jue_xin_de_ge_ming_zhe3"}
-			picture = UKR_mace
+			picture = HOL_dutch_militia
 			allowed = { always = no }
 			available = { 
 				has_country_flag = shanghai_gang_victory
@@ -1576,7 +1576,7 @@ ideas = {
 	###基督教
 		LEC_ren_ci_de_zhu = {#主的仁慈
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_ren_ci_de_zhu"}
-			picture = TEX_catholic_education_idea
+			picture = SRI_sanfedisti
 			allowed = { always = no }
 			available = { 
 				has_country_flag = ji_du_tu_victory
@@ -1591,7 +1591,7 @@ ideas = {
 		}
 		LEC_ren_ci_de_zhu2 = {#主的仁慈
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_ren_ci_de_zhu2"}
-			picture = TEX_catholic_education_idea
+			picture = SRI_sanfedisti
 			allowed = { always = no }
 			available = { 
 				has_country_flag = ji_du_tu_victory
@@ -1608,7 +1608,7 @@ ideas = {
 		}
 		LEC_ren_ci_de_zhu3 = {#主的仁慈
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_ren_ci_de_zhu3"}
-			picture = TEX_catholic_education_idea
+			picture = SRI_sanfedisti
 			allowed = { always = no }
 			available = { 
 				has_country_flag = ji_du_tu_victory
@@ -1626,7 +1626,7 @@ ideas = {
 		}
 		LEC_ren_ci_de_zhu4 = {#主的仁慈
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_ren_ci_de_zhu4"}
-			picture = TEX_catholic_education_idea
+			picture = SRI_sanfedisti
 			allowed = { always = no }
 			available = { 
 				has_country_flag = ji_du_tu_victory
@@ -1649,7 +1649,7 @@ ideas = {
 		}
 		LEC_tian_zhu_jiao_gong_hui = {#天主教工会
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_tian_zhu_jiao_gong_hui"}
-			picture = TEX_catholic_unions_idea
+			picture = SRI_sanfedisti
 			allowed = { always = no }
 			available = { 
 				has_country_flag = ji_du_tu_victory
@@ -1663,7 +1663,7 @@ ideas = {
 		}
 		LEC_tian_zhu_jiao_gong_hui2 = {#天主教工会
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_tian_zhu_jiao_gong_hui2"}
-			picture = TEX_catholic_unions_idea
+			picture = SRI_sanfedisti
 			allowed = { always = no }
 			available = { 
 				has_country_flag = ji_du_tu_victory
@@ -1679,7 +1679,7 @@ ideas = {
 		}
 		LEC_qi_shi_tuan = {#圣方济各骑士团
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_qi_shi_tuan"}
-			picture = TEX_catholic_america_idea
+			picture = SRI_sanfedisti
 			allowed = { always = no }
 			available = { 
 				has_country_flag = ji_du_tu_victory
@@ -1693,7 +1693,7 @@ ideas = {
 		}
 		LEC_qing_fen_shi_yi_zhong_mei_de = {#勤奋是一种美德
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_qing_fen_shi_yi_zhong_mei_de"}
-			picture = economic_control_icon
+			picture = HOL_labor_camps
 			allowed = { always = no }
 			available = { 
 				has_country_flag = ji_du_tu_victory
@@ -1712,7 +1712,7 @@ ideas = {
 		}
 		LEC_bu_lao_zhe_bu_shi = {#不劳者不食
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_bu_lao_zhe_bu_shi"}
-			picture = economic_control_icon
+			picture = HOL_labor_camps
 			allowed = { always = no }
             modifier = {
 				stability_factor = 0.10
@@ -1723,7 +1723,7 @@ ideas = {
 		}
 		LEC_you_de_zhi_ren = {#有德之人
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_you_de_zhi_ren"}
-			picture = TEX_radtradgang
+			picture = HOL_labor_camps
 			allowed = { always = no }
             modifier = {
 				stability_factor = 0.10
@@ -1737,7 +1737,7 @@ ideas = {
 	###资本家
 		LEC_hei_hui_jing_ji = {#黑灰经济
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_hei_hui_jing_ji"}
-			picture = NYC_mob_cooperation_idea
+			picture = HOL_transition_to_fair_economy
 			allowed = { always = no }
             modifier = {
 				stability_factor = -0.10
@@ -1748,7 +1748,7 @@ ideas = {
 		}
 		LEC_du_ping_mao_yi = {#全球毒品贸易
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_du_ping_mao_yi"}
-			picture = NYC_mob_cooperation_idea
+			picture = HOL_transition_to_fair_economy
 			allowed = { always = no }
             modifier = {
 				stability_factor = -0.15
@@ -1764,7 +1764,7 @@ ideas = {
 		LEC_war_profiteering = {#战争暴利
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea LEC_war_profiteering"}
 			allowed = { always = no }
-			picture = private_defence_forces
+			picture = HOL_transition_to_fair_economy
 			modifier = {
 				consumer_goods_factor = -0.15
 				production_speed_arms_factory_factor = 0.05
@@ -1774,7 +1774,7 @@ ideas = {
 		LEC_civil_rights_all_or_nothing = {#保卫上海
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_civil_rights_all_or_nothing"}
 			allowed = { always = no }
-			picture = NYC_clean_up
+			picture = HOL_unemployed_conscription
 			modifier = {
 				local_resources = 0.03
 				stability_factor = 0.05
@@ -1787,7 +1787,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_civil_rights_all_or_nothingB"}
 			name = LEC_civil_rights_all_or_nothing
 			allowed = { always = no }
-			picture = NYC_clean_up
+			picture = HOL_unemployed_conscription
 			modifier = {
 				local_resources = 0.03
 				stability_factor = 0.05
@@ -1803,7 +1803,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_civil_rights_all_or_nothingC"}
 			name = LEC_civil_rights_all_or_nothing
 			allowed = { always = no }
-			picture = NYC_clean_up
+			picture = HOL_unemployed_conscription
 			modifier = {
 				local_resources = 0.03
 				stability_factor = 0.05
@@ -1823,7 +1823,7 @@ ideas = {
 		LEC_true_shambala = {#佛陀之梦
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea LEC_true_shambala" }
 			allowed = { always = no }
-			picture = TIB_himalaya_beauty
+			picture = HOL_transition_to_fair_economy
 			modifier = {
 				stability_factor = 0.05
 				army_attack_factor = 0.03
@@ -1834,7 +1834,7 @@ ideas = {
 		LEC_free_market_economy = {#自由贸易
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea LEC_free_market_economy"}
 			allowed = { always = no }
-			picture = market_efficiency_2
+			picture = HOL_transition_to_fair_economy
 			modifier = {
 				trade_opinion_factor = 0.2
 				consumer_goods_factor = -0.14
@@ -1844,7 +1844,7 @@ ideas = {
 		}
 		LEC_welcoming_da_jews = { #犹太避风港
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea LEC_welcoming_da_jews"}
-			picture = PAL_Balfour_Declaration 
+			picture = HOL_transition_to_fair_economy 
 			allowed = { always = no }
 			modifier = {
 				weekly_manpower = 200
@@ -1854,7 +1854,7 @@ ideas = {
 		}
 		LEC_qing_chu_hei_bang = {#清除黑帮
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_qing_chu_hei_bang"}
-			picture = NYC_clean_up
+			picture = HOL_mass_collectivisation
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zi_ben_jia_victory
@@ -1868,7 +1868,7 @@ ideas = {
 		}
 		LEC_da_zong_xuan_chuan = {#大众宣传
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_da_zong_xuan_chuan"}
-			picture = radio_propaganda
+			picture = HOL_mass_collectivisation
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zi_ben_jia_victory
@@ -1884,7 +1884,7 @@ ideas = {
 		}
 		LEC_fu_hao_yi_hui = {#富豪议会
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_fu_hao_yi_hui"}
-			picture = GRE_palaiokommatismos
+			picture = HOL_workplace_democracy
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zi_ben_jia_victory
@@ -1898,7 +1898,7 @@ ideas = {
 		}
 		LEC_fu_hao_yi_hui2 = {#富豪议会
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_fu_hao_yi_hui2"}
-			picture = GRE_palaiokommatismos
+			picture = HOL_workplace_democracy
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zi_ben_jia_victory
@@ -1916,7 +1916,7 @@ ideas = {
 		}
 		LEC_fu_hao_yi_hui3 = {#富豪议会
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_fu_hao_yi_hui3"}
-			picture = GRE_palaiokommatismos
+			picture = HOL_workplace_democracy
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zi_ben_jia_victory
@@ -1936,7 +1936,7 @@ ideas = {
 		}
 		LEC_fu_hao_yi_hui4 = {#富豪议会
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_fu_hao_yi_hui4"}
-			picture = GRE_palaiokommatismos
+			picture = HOL_workplace_democracy
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zi_ben_jia_victory
@@ -1959,7 +1959,7 @@ ideas = {
 		}
 		LEC_jing_zai_zhang_wo = {#竟在掌握
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_jing_zai_zhang_wo"}
-			picture = state_economy
+			picture = HOL_workplace_democracy
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zi_ben_jia_victory
@@ -1975,7 +1975,7 @@ ideas = {
 		}
 		LEC_kuan_song_zheng_ce = {#宽松政策
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_kuan_song_zheng_ce"}
-			picture = generic_capitalism
+			picture = HOL_workplace_democracy
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zi_ben_jia_victory
@@ -1989,10 +1989,10 @@ ideas = {
 		}
 		LEC_yi_wu_lao_don = {#义务劳动
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_yi_wu_lao_don"}
-			picture = generic_capitalism
+			picture = HOL_workplace_democracy
 			allowed = { always = no }
 			available = { 
-				has_country_flag = economic_control_icon
+				has_country_flag = HOL_labor_camps
 			}
             modifier = {
 				stability_weekly = -0.001
@@ -2005,7 +2005,7 @@ ideas = {
 		}
 		LEC_city_defant = {#城市防卫队
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_city_defant"}
-			picture = cop_idea
+			picture = HOL_mass_collectivisation
 			allowed = { always = no }
 			available = { 
 				has_country_flag = economic_control_icon
@@ -2021,7 +2021,7 @@ ideas = {
 	###工团
 		LEC_po_chu_feng_jian_jia_zhang = {#破除封建家长
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_po_chu_feng_jian_jia_zhang"}
-			picture = ALB_prosperity_shared
+			picture = UK_politics_syn_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2036,7 +2036,7 @@ ideas = {
 		}
 		LEC_po_chu_feng_jian_jia_zhang2 = {#破除封建家长
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_po_chu_feng_jian_jia_zhang2"}
-			picture = ALB_prosperity_shared
+			picture = UK_politics_syn_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2056,7 +2056,7 @@ ideas = {
 		}
 		LEC_po_chu_feng_jian_jia_zhang3 = {#自由的魂灵
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_po_chu_feng_jian_jia_zhang3"}
-			picture = ALB_prosperity_shared
+			picture = UK_politics_syn_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2078,7 +2078,7 @@ ideas = {
 		}
 		LEC_chuan_bo_si_xiang = {#传播思想
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_chuan_bo_si_xiang"}
-			picture = OTT_compromise_idea
+			picture = UK_politics_syn_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2089,7 +2089,7 @@ ideas = {
 		}
 		LEC_chuan_bo_si_xiang2 = {#传播思想
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_chuan_bo_si_xiang2"}
-			picture = OTT_compromise_idea
+			picture = UK_politics_syn_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2105,7 +2105,7 @@ ideas = {
 		}
 		LEC_wu_zhi_zhu_yi = {#无治主义
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_wu_zhi_zhu_yi"}
-			picture = FAUD_ANARCHO
+			picture = UK_politics_syn_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2119,7 +2119,7 @@ ideas = {
 		}
 		LEC_ren_ren_ping_den = {#人人平等
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_ren_ren_ping_den"}
-			picture = WHR_goods_vouchers_community
+			picture = UK_politics_syn_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2132,7 +2132,7 @@ ideas = {
 		}
 		LEC_ren_ren_ping_den2 = {#人人平等
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_ren_ren_ping_den2"}
-			picture = WHR_goods_vouchers_community
+			picture = UK_politics_syn_idea
 			allowed = { always = no }
 			available = { 
 				 
@@ -2150,7 +2150,7 @@ ideas = {
 		}
 		LEC_dai_biao = {#全行业工人代表大会
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_dai_biao"}
-			picture = UMN_rolling_in_cash_idea
+			picture = UK_politics_syn_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2164,7 +2164,7 @@ ideas = {
 		}
 		LEC_dai_biao2 = {#总工会的领导
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_dai_biao2"}
-			picture = UMN_rolling_in_cash_idea
+			picture = UK_politics_syn_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2183,7 +2183,7 @@ ideas = {
 		}
 		LEC_lao_gong_zhi_ci = {#劳工支持
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_lao_gong_zhi_ci"}
-			picture = CSA_proletariat_duties
+			picture = UK_politics_syn_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2197,7 +2197,7 @@ ideas = {
 		}
 		LEC_lao_gong_zhi_ci2 = {#劳工支持
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_lao_gong_zhi_ci2"}
-			picture = CSA_proletariat_duties
+			picture = UK_politics_syn_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2215,7 +2215,7 @@ ideas = {
 		}
 		LEC_lao_gong_zhi_ci3 = {#劳工支持
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_lao_gong_zhi_ci3"}
-			picture = CSA_proletariat_duties
+			picture = UK_politics_syn_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2234,7 +2234,7 @@ ideas = {
 		}
 		LEC_jiu_cha_dui= {#工人纠察队
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_jiu_cha_dui"}
-			picture = generic_syndicalist_militia
+			picture = NOR_secret_police
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2248,7 +2248,7 @@ ideas = {
 		}
 		LEC_jiu_cha_dui_jun = {#工人纠察队
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_jiu_cha_dui_jun"}
-			picture = generic_syndicalist_militia
+			picture = NOR_secret_police
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2263,7 +2263,7 @@ ideas = {
 		}
 		LEC_jie_ji_dou_zhen = {#阶级斗争
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_jie_ji_dou_zhen"}
-			picture = CSA_pcc_rigged
+			picture = NOR_secret_police
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2280,7 +2280,7 @@ ideas = {
 		}
 		LEC_lao_dong_fen_pei = {#按劳分配
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_lao_dong_fen_pei"}
-			picture = CSA_pcc
+			picture = NOR_secret_police
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2294,7 +2294,7 @@ ideas = {
 		}
 		LEC_lao_dong_fen_pei2 = {#按劳分配
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_lao_dong_fen_pei2"}
-			picture = CSA_pcc
+			picture = NOR_secret_police
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2308,7 +2308,7 @@ ideas = {
 		}
 		LEC_si_duan_ge_ming = {#不断革命
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_si_duan_ge_ming"}
-			picture = MAF_disgruntled_farmers
+			picture = NOR_secret_police
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2327,7 +2327,7 @@ ideas = {
 		}
 		LEC_si_duan_ge_ming2 = {#不断革命
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_si_duan_ge_ming2"}
-			picture = MAF_disgruntled_farmers
+			picture = NOR_secret_police
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2349,7 +2349,7 @@ ideas = {
 		}
 		LEC_si_duan_ge_ming3 = {#不断革命
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_si_duan_ge_ming3"}
-			picture = MAF_disgruntled_farmers
+			picture = NOR_secret_police
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2371,7 +2371,7 @@ ideas = {
 		}
 		LEC_da_yue_jin = {#大跃进
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_da_yue_jin"}
-			picture = communard_spirit
+			picture = NOR_syndicalist_industry_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2387,7 +2387,7 @@ ideas = {
 		}
 		LEC_chun_cui_de_jun_dui = {#纯粹的军队
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_chun_cui_de_jun_dui"}
-			picture = ALB_thousand_voices
+			picture = UoB_militia_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2407,7 +2407,7 @@ ideas = {
 		}
 		LEC_jia_da_sheng_chan = {#扩大生产
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_jia_da_sheng_chan"}
-			picture = MON_scourge_of_the_steppes
+			picture = NOR_syndicalist_industry_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2431,7 +2431,7 @@ ideas = {
 		}
 		LEC_jia_da_sheng_chan2 = {#扩大生产
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_jia_da_sheng_chan2"}
-			picture = MON_scourge_of_the_steppes
+			picture = NOR_syndicalist_industry_idea
 			allowed = { always = no }
 			available = { 
 				has_country_flag = zong_gong_hui_victory
@@ -2458,7 +2458,7 @@ ideas = {
 	#流亡俄共
 		SHC_gosplan = {#国家计划委员会
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_gosplan"}
-			picture = UK_economy_syn_idea
+			picture = NOR_syndicalist_industry_idea
 			allowed = { always = no }
             modifier = { 
 				global_building_slots_factor = 0.10 
@@ -2470,7 +2470,7 @@ ideas = {
 		SHC_gosplan_B = {#国家计划委员会
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_gosplan_B"}
 			name = SHC_gosplan
-			picture = UK_economy_syn_idea
+			picture = NOR_syndicalist_industry_idea
 			allowed = { always = no }
             modifier = { 
 				global_building_slots_factor = 0.10 
@@ -2485,7 +2485,7 @@ ideas = {
 		SHC_gosplan_C = {#国家计划委员会
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_gosplan_C"}
 			name = SHC_gosplan
-			picture = UK_economy_syn_idea
+			picture = NOR_syndicalist_industry_idea
 			allowed = { always = no }
             modifier = { 
 				local_manpower = 0.10
@@ -2503,7 +2503,7 @@ ideas = {
 		SHC_gosplan_D = {#国家计划委员会
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_gosplan_D"}
 			name = SHC_gosplan
-			picture = UK_economy_syn_idea
+			picture = NOR_syndicalist_industry_idea
 			allowed = { always = no }
             modifier = { 
 				local_manpower = 0.10
@@ -2521,7 +2521,7 @@ ideas = {
 		}	
 		SHC_peoples = {#人民代表委员会
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_peoples"}
-			picture = socialist_science_focus
+			picture = NOR_secret_police
 			allowed = { always = no }
             modifier = {
 				stability_factor = 0.05
@@ -2532,7 +2532,7 @@ ideas = {
 		SHC_peoples_B = {#人民代表委员会
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_peoples_B"}
 			name = SHC_peoples
-			picture = socialist_science_focus
+			picture = NOR_secret_police
 			allowed = { always = no }
             modifier = {
 				stability_factor = 0.10
@@ -2543,7 +2543,7 @@ ideas = {
 		SHC_peoples_C = {#人民代表委员会
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_peoples_C"}
 			name = SHC_peoples
-			picture = socialist_science_focus
+			picture = NOR_secret_police
 			allowed = { always = no }
             modifier = {
 				stability_factor = 0.15
@@ -2554,7 +2554,7 @@ ideas = {
 		}
 		LEC_fan_qing_xuan_chuan = {#反清宣传
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea LEC_fan_qing_xuan_chuan"}
-			picture = LEC_bainian_hate
+			picture = NOR_secret_police
 			allowed = { always = no }
 			available = {
 				QIE = {
@@ -2569,7 +2569,7 @@ ideas = {
 		}
 		LEC_bu_qu_de_ge_ming = {#不屈的革命
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea LEC_bu_qu_de_ge_ming"}
-			picture = LEC_separatism
+			picture = NOR_secret_police
 			allowed = { always = no }
 			modifier = {
 				army_org_factor = 0.10
@@ -2716,7 +2716,7 @@ ideas = {
 
 		LEC_soc_prop_in_russia = {#社会主义政治宣传
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_soc_prop_in_russia"}
-			picture = generic_syndicalist_militia
+			picture = NOR_secret_police
 			allowed = { always = no }
             modifier = {
 				totalist_drift = 0.025
@@ -2731,7 +2731,7 @@ ideas = {
 		}
 		LEC_aftermath_uch_idea_B = {#打倒官僚主义
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_aftermath_uch_idea_B"}
-			picture = generic_agrarian_reform
+			picture = NOR_uob_support_idea
 			allowed = { always = no }
             modifier = {
 				stability_factor = -0.05
@@ -2745,7 +2745,7 @@ ideas = {
 		}
 		LEC_aftermath_uch_idea_C = {#官僚集中制
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_aftermath_uch_idea_C"}
-			picture = SOV_cultural_revolution
+			picture = NOR_secret_police
 			allowed = { always = no }
             modifier = {
 				totalist_drift = 0.025
@@ -2759,7 +2759,7 @@ ideas = {
 		}
 		LEC_red_army = {#红军
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_red_army"}
-			picture = generic_communist_army
+			picture = UoB_militia_idea
 			allowed = { always = no }
             modifier = {
 				army_org_factor = 0.10
@@ -2770,7 +2770,7 @@ ideas = {
 	#刘仁静	
 		LEC_red_army_B = {#革命圭臬
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_red_army_B"}
-			picture = generic_totalist_revolution
+			picture = NOR_secret_police
 			allowed = { always = no }
             modifier = {
 				army_org_factor = 0.10
@@ -2784,7 +2784,7 @@ ideas = {
 		LEC_red_army_C = {#革命圭臬
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_red_army_C"}
 			name = LEC_red_army_B
-			picture = generic_totalist_revolution
+			picture = NOR_secret_police
 			allowed = { always = no }
             modifier = {
 				max_planning = 0.10
@@ -2800,7 +2800,7 @@ ideas = {
 		}
 		LEC_hit_socdem = {#托派“打入”！
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_hit_socdem"}
-			picture = FSA_atlanta_fire
+			picture = NOR_secret_police
 			allowed = { always = no }
             modifier = {
 				stability_weekly = -0.005
@@ -2812,7 +2812,7 @@ ideas = {
 		LEC_hit_socdem_B = {#托派“打入”！
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_hit_socdem_B"}
 			name = LEC_hit_socdem
-			picture = FSA_atlanta_fire
+			picture = NOR_secret_police
 			allowed = { always = no }
             modifier = {
 				surrender_limit = -0.10
@@ -2826,7 +2826,7 @@ ideas = {
 		}
 		SHC_aftermath_uch_economic_idea_A = {#革命经济
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_aftermath_uch_economic_idea_A"}
-			picture = HOL_high_debt
+			picture = NOR_NOR_syndicalist_industry_idea
 			allowed = { always = no }
             modifier = { 
 				consumer_goods_factor = -0.10 
@@ -2839,7 +2839,7 @@ ideas = {
 	#王明	
 		SHC_aftermath_uch_economic_idea_B = {#统筹经济
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_aftermath_uch_economic_idea_B"}
-			picture = HOL_black_monday_recovery
+			picture = NOR_NOR_syndicalist_industry_idea
 			allowed = { always = no }
             modifier = { 
 				local_supplies = 0.05
@@ -2850,7 +2850,7 @@ ideas = {
 		}
 		SHC_han_wei_zhe = {#正统路线的捍卫者
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_han_wei_zhe"}
-			picture = MEX_Eternal_Revolution
+			picture = NOR_secret_police
 			allowed = { always = no }
             modifier = { 
 				stability_factor = 0.05
@@ -2861,7 +2861,7 @@ ideas = {
 		}
 		SHC_no_corruption = {#党内革命
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_no_corruption" }
-			picture = KIV_anti_corruption_idea
+			picture = NOR_secret_police
 			allowed = { always = no }
 			modifier = {
 				conscription = 0.01
@@ -2873,7 +2873,7 @@ ideas = {
 		}
 		SHC_leader_no_one= {#领袖崇拜
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_leader_no_one" }
-			picture = SKM_red_sun
+			picture = NOR_secret_police
 			allowed = { always = no }
 			modifier = {
 				org_loss_when_moving = -0.05
@@ -2888,7 +2888,7 @@ ideas = {
 		LEC_socialism_in_city = {#消除差异
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_socialism_in_city"}
 			allowed = { always = no }
-			picture = social_enterprises
+			picture = NOR_secret_police
 			modifier = {
 				political_power_cost = 0.05
 				industrial_capacity_factory = 0.05
@@ -2900,7 +2900,7 @@ ideas = {
 		SHC_mayakovsky = { #无意识形态无进步
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_mayakovsky"}
 			allowed = { always = no }
-			picture = SOV_social_futurism
+			picture = NOR_secret_police
 			modifier = {
 				stability_factor = 0.05
 				drift_defence_factor = -0.3
@@ -2911,7 +2911,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_mayakovsky_B"}	
 			name = SHC_mayakovsky	
 			allowed = { always = no }
-			picture = SOV_social_futurism
+			picture = NOR_secret_police
 			modifier = {
 				stability_factor = 0.10
 				stability_weekly = 0.005
@@ -2924,7 +2924,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_mayakovsky_C"}	
 			name = SHC_mayakovsky	
 			allowed = { always = no }
-			picture = SOV_social_futurism
+			picture = NOR_secret_police
 			modifier = {
 				stability_factor = 0.10
 				stability_weekly = 0.010
@@ -3106,7 +3106,7 @@ ideas = {
 		}
 		LEC_te_xu_jin_yin = {#特许经营
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_te_xu_jin_yin"}
-			picture = generic_capitalism
+			picture = HOL_workplace_democracy
 			allowed = { always = no }
             modifier = {
 				recon_factor = 0.10
@@ -3131,7 +3131,7 @@ ideas = {
 		}
 		LEC_she_hui_fu_li2 = {#福利主义
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_she_hui_fu_li"}
-			picture = enlightenment
+			picture = HOL_welfare_state
 			name = LEC_she_hui_fu_li
 			allowed = { always = no }
 			modifier = {

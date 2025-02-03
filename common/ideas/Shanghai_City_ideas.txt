@@ -7,7 +7,7 @@ ideas = {
 		SHC_zi_you_gang_kou = {#自由港
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_zi_you_gang_kou"}
 			allowed = { always = no }
-			picture = TIB_fire_bird
+			picture = SYR_Navy
 			modifier = {
 				justify_war_goal_time = 1
 				enemy_justify_war_goal_time = 1	
@@ -19,7 +19,7 @@ ideas = {
 		SHC_city_never_sleeps_never_falls_idea = {#生存是第一要务
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_city_never_sleeps_never_falls_idea"}
 			allowed = { always = no }
-			picture = BBR_militia_tactics
+			picture = HNN_hopes_dashed
 			modifier = {
 				army_core_defence_factor = 0.05
 				ai_focus_defense_factor = 0.25
@@ -30,7 +30,7 @@ ideas = {
 		SHC_she_hui_zhu_yi_yu_wen = {#社会主义余温
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_city_never_sleeps_never_falls_idea"}
 			allowed = { always = no }
-			picture = red_militias
+			picture = HNN_hopes_dashed
 			modifier = {
 				stability_factor = -0.10
 				stability_weekly = -0.010
@@ -41,7 +41,7 @@ ideas = {
 		SHC_wan_gu_de_jiu_shi_li = {#顽固的旧势力
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_wan_gu_de_jiu_shi_li"}
 			allowed = { always = no }
-			picture = NEE_democratic_republicans
+			picture = HNN_hopes_dashed
 			modifier = {
 				stability_factor = -0.10
 				stability_weekly = -0.010
@@ -52,7 +52,7 @@ ideas = {
 		SHC_di_xia_she_hui_de_fan_pu = {#犯罪组织的反扑
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_di_xia_she_hui_de_fan_pu"}
 			allowed = { always = no }
-			picture = BRY_rampant_crime_1
+			picture = HNN_hopes_dashed
 			modifier = {
 				stability_factor = -0.10
 				stability_weekly = -0.010
@@ -64,7 +64,7 @@ ideas = {
 		SHC_xin_ming_zhu_jue_xing = {# 
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_xin_ming_zhu_jue_xing"}
 			allowed = { always = no }
-			picture = HNN_read
+			picture = HOL_mass_collectivisation
 			modifier = {
 				stability_factor = 0.02
 				political_power_gain = 0.02
@@ -77,7 +77,7 @@ ideas = {
 		SHC_xin_ming_zhu_jue_xing2 = {# 
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_xin_ming_zhu_jue_xing"}
 			allowed = { always = no }
-			picture = HNN_read
+			picture = HOL_mass_collectivisation
 			name = SHC_xin_ming_zhu_jue_xing			
 			modifier = {
 				stability_factor = 0.04
@@ -117,7 +117,7 @@ ideas = {
 		SHC_hu_ren_you_xian = {#沪人优先
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_hu_ren_you_xian"}
 			allowed = { always = no }
-			picture = kly_nationalist
+			picture = HOL_mass_collectivisation
 			modifier = {
 				local_supplies = 0.02				
 				political_power_gain = 0.05
@@ -128,7 +128,7 @@ ideas = {
 		SHC_crakkka_understanding = {#海派文化
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_crakkka_understanding"}
 			allowed = { always = no }
-			picture = republican_justice_1
+			picture = HOL_mass_collectivisation
 			modifier = {
 				political_power_gain = 0.01
 				consumer_goods_factor = -0.1
@@ -142,7 +142,7 @@ ideas = {
 		SHC_crakkka_understanding2 = {#海派文化
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_crakkka_understanding"}
 			allowed = { always = no }
-			picture = republican_justice_1
+			picture = HOL_mass_collectivisation
 			name = SHC_crakkka_understanding	
 			modifier = {
 				war_support_factor = -0.02
@@ -157,7 +157,7 @@ ideas = {
 		}
 		SHC_no_yourself = {#清除自由主义瘟疫
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHC_no_yourself"}
-			picture = black_laws
+			picture = HOL_mass_collectivisation
 			modifier = {
 				local_manpower = -0.05
 				stability_factor = -0.05
@@ -173,7 +173,7 @@ ideas = {
 		SHC_zheng_yi_wei_shi = {#正义卫士
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_zheng_yi_wei_shi"}
 			allowed = { always = no }
-			picture = TEX_corrupt_police
+			picture = HOL_mass_collectivisation
 			modifier = {
 				stability_factor = 0.05
 				consumer_goods_factor = 0.05
@@ -186,7 +186,7 @@ ideas = {
 		SHC_zheng_yi_wei_shi2 = {#正义卫士
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_zheng_yi_wei_shi2"}
 			allowed = { always = no }
-			picture = TEX_corrupt_police
+			picture = HOL_mass_collectivisation
 			modifier = {
 				stability_factor = 0.08
 				stability_weekly = 0.0050
@@ -202,7 +202,7 @@ ideas = {
 		SHC_zheng_yi_wei_shi3 = {#正义卫士?
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_zheng_yi_wei_shi3"}
 			allowed = { always = no }
-			picture = TEX_corrupt_police
+			picture = HOL_mass_collectivisation
 			modifier = {
 				army_org_factor = 0.02
 				stability_factor = 0.02
@@ -220,7 +220,7 @@ ideas = {
 		SHC_zheng_yi_wei_shi4 = {#正义卫士?
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_zheng_yi_wei_shi4"}
 			allowed = { always = no }
-			picture = TEX_corrupt_police
+			picture = HOL_mass_collectivisation
 			modifier = {
 				army_org_factor = 0.02
 				stability_factor = 0.10
@@ -238,7 +238,7 @@ ideas = {
 		SHC_fan_ri = {#死战到底
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_fan_ri"}
 			allowed = { always = no }
-			picture = japanese_influence_3
+			picture = HOL_mass_collectivisation
 			modifier = {
 				surrender_limit = 0.20
 				army_core_attack_factor = 0.05
@@ -253,7 +253,7 @@ ideas = {
 		}		
 		SHC_tong_xing_zheng = {#通行证制度
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_tong_xing_zheng"}
-			picture = LEC_passports
+			picture = HOL_negotiating_with_extremists
 			allowed = { always = no }
             modifier = {
 				stability_factor = -0.05
@@ -264,7 +264,7 @@ ideas = {
 		}	
 		SHC_rui_ri_mao_yi = {#对日贸易
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_rui_ri_mao_yi"}
-			picture = japanese_pacific_trade
+			picture = HOL_negotiating_with_extremists
 			allowed = { always = no }
             modifier = {
 				political_power_cost = -0.05
@@ -278,7 +278,7 @@ ideas = {
 		}		
 		SHC_rui_ri_mao_yi2 = {#对日贸易
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_rui_ri_mao_yi2"}
-			picture = japanese_pacific_trade
+			picture = HOL_negotiating_with_extremists
 			allowed = { always = no }
             modifier = {
 				political_power_cost = -0.10
@@ -292,7 +292,7 @@ ideas = {
 		}			
 		SHC_fan_rong = {#繁荣的上海城
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_fan_rong"}
-			picture = NYC_max_miracle
+			picture = HOL_welfare_state
 			allowed = { always = no }
             modifier = {
 				stability_factor = 0.05
