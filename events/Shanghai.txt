@@ -78,10 +78,6 @@ country_event = {
 			}
 		}
 		add_political_power = 10
-		set_politics = {
-			ruling_party = syndicalist
-			elections_allowed = no
-		}
 		set_country_flag = zong_gong_hui_victory
 		set_cosmetic_tag = LEC_GT
 		activate_advisor = SHC_zhao_shiyan_sic
@@ -94,10 +90,16 @@ country_event = {
 			days = 180
 		}
 		hidden_effect = {
+			SHC_hui_jiliang = {
+				retire = yes
+			}
+			SHC_yu_bing = {
+				retire = yes
+			}
 			remove_advisor_role = {
 				character = LEC_robert_hotung
 				slot = political_advisor
-			  }
+			}
 			country_event = {
 				id = lecgong.1
 				days = 2
@@ -110,48 +112,6 @@ country_event = {
 				id = Shcgong.26
 				days = 25
 			}
-			if = {
-				limit = { 
-					always = no
-				}
-				QYG = {
-					country_event = {
-						id = Shcgong.6
-						days = 1
-					}
-				}
-				country_event = {
-					id = Shcgong.2
-					days = 2
-				}
-			}
-			else_if = {
-				limit = { 
-					QYG = {
-						exists = no
-					}
-					HNN = {
-						has_country_flag = HNN_gong_tuan_victory_flag
-					}
-				}
-				country_event = {
-					id = Shcgong.3
-					days = 2
-				}
-			}
-			if = {
-				limit = { 
-					HNN = {
-						has_country_flag = HNN_gong_tuan_victory_flag
-					}
-				}
-				HNN = {
-					country_event = {
-						id = Shcgong.7
-						days = 1
-					}
-				}
-			}
 			set_party_name = {
 				ideology = social_liberal
 				long_name = LEC_social_liberal_party_GT_long
@@ -162,32 +122,7 @@ country_event = {
 				character = SHC_lu_xun
 				ideology = social_liberal_lu_xun_thought_subtype
 			}
-			SHC_lu_xun = {
-				set_variable = {
-					china_alignment = token:CHNsyndicalist
-				}
-			}
-			add_field_marshal_role = {
-				character = SHC_wang_shouhua
-				traits = { politically_connected irregulars_officer }
-				desc = WANG_SHOUHUA_DESC
-				skill = 1
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 1
-			}
-			
-			add_corps_commander_role = {
-				character = SHC_lu_xun
-				desc =  LU_XUN_DESC
-				traits = { politically_connected  }
-				skill = 1
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 1
-			}
+			recruit_character = SHC_pavel_milf
 			recruit_character = SHC_alexander_i_cherepanov
 			recruit_character = SHC_nikolay_kuibyshev
 			recruit_character = SHC_nikolai_roshchin
@@ -207,6 +142,7 @@ country_event = {
 			recruit_character = SHC_jing_meijiu
 			recruit_character = SHC_ma_sanli
 			recruit_character = SHC_hu_feng
+			recruit_character = SHC_rou_shi
 			
 		}
 	}
@@ -299,6 +235,18 @@ country_event = {
 			days = 1
 		}
 		hidden_effect = {
+			SHC_lu_xun = {
+				retire = yes
+			}
+			SHC_wang_shouhua = {
+				retire = yes
+			}
+			SHC_hui_jiliang = {
+				retire = yes
+			}
+			SHC_yu_bing = {
+				retire = yes
+			}
 			remove_advisor_role = {
 				character = LEC_robert_hotung
 				slot = political_advisor
@@ -471,23 +419,11 @@ country_event = {
 				days = 30
 				id = lecjidu.5
 			}
-			add_corps_commander_role = {
-				character = SHC_yu_bing
-				traits = {  }
-				skill = 1
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 1
+			SHC_lu_xun = {
+				retire = yes
 			}
-			add_corps_commander_role = {
-				character = SHC_hui_jiliang
-				traits = {  }
-				skill = 1
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 1
+			SHC_wang_shouhua = {
+				retire = yes
 			}
 			LEC = {
 				SHC_recruit_from_LEC = yes
@@ -589,6 +525,18 @@ country_event = {
 			}
 		}
 		hidden_effect = {
+			SHC_lu_xun = {
+				retire = yes
+			}
+			SHC_wang_shouhua = {
+				retire = yes
+			}
+			SHC_hui_jiliang = {
+				retire = yes
+			}
+			SHC_yu_bing = {
+				retire = yes
+			}
 			LEC = {
 				SHC_recruit_from_LEC = yes
 				SHC_recruit_from_LEC_JAP = yes
@@ -2898,6 +2846,13 @@ country_event = {#领导人
 				}
 			}
 		}
+		activate_advisor = SHC_zhao_shiyan_sic
+		
+		SHC_wang_shouhua = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
+		}
 		add_political_power = 10
 		hidden_effect = {
 			country_event = {
@@ -2940,6 +2895,11 @@ country_event = {#领导人
 		set_politics = {
 			ruling_party = social_liberal
 			elections_allowed = no
+		}
+		SHC_lu_xun = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
 		}
 		activate_advisor = SHC_rou_shi_sic
 		hidden_effect = {
@@ -2994,8 +2954,7 @@ country_event = {#领导人
 			}
 		}
 		add_tot_to_coalition = yes
-		remove_ideas = LEC_wang_shou_hua_hog
-		add_ideas = LEC_peng_shu_zhi_hog
+		activate_advisor = SHC_zhao_shiyan_sic
 		hidden_effect = {
 			country_event = {
 				id = lecgong.2

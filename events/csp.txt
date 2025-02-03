@@ -24,3 +24,73 @@
  }
  
 }
+
+
+
+country_event = {#checkWANGSHOUHUA
+id = csp.2
+immediate = { log = "[GetDateText]: [Root.GetName]: event hnndebug.1" }
+title = hnndebug.1.t
+desc = hnndebug.1.d
+
+is_triggered_only = yes
+option = {#
+	name = "汪寿华有"
+	trigger = {
+	   SHC_wang_shouhua = {
+		check_variable = {
+			china_alignment = token:CHNsyndicalist
+		}
+	   }
+	}
+}
+option = {#
+	name = "汪寿华没有"
+	trigger = {
+	   NOT = { 
+		SHC_wang_shouhua = {
+		 check_variable = {
+			 china_alignment = token:CHNsyndicalist
+		 }
+		}
+	 }
+	}
+}
+option = {#
+	name = "鲁迅有"
+	trigger = {
+	   SHC_lu_xun = {
+		check_variable = {
+			china_alignment = token:CHNsyndicalist
+		}
+	   }
+	}
+}
+option = {#
+	name = "鲁迅没有"
+	trigger = {
+	   NOT = { 
+		SHC_lu_xun = {
+		 check_variable = {
+			 china_alignment = token:CHNsyndicalist
+		 }
+		}
+	 }
+	}
+}
+	option = {#
+		name = "有结盟"
+		trigger = {
+			has_variable = country_leader:china_alignment 
+		}
+	}
+	option = {#
+		name = "没结盟"
+		trigger = {
+		   NOT = { 
+			has_variable = country_leader:china_alignment 
+		 }
+		}
+}
+
+}

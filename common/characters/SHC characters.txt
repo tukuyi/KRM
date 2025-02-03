@@ -22,6 +22,15 @@ characters = {
 			CHN_CHNsyndicalist_aligned
 		}
 	}
+	field_marshal = {
+		traits = { politically_connected irregulars_officer }
+		desc = WANG_SHOUHUA_DESC
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+	}
  }
  #鲁迅
   SHC_lu_xun = {
@@ -42,6 +51,15 @@ characters = {
 		 traits = {
 			 CHN_CHNsyndicalist_aligned
 		 }
+	 }
+	 corps_commander = {
+		desc =  LU_XUN_DESC
+		 traits = { politically_connected  }
+		 skill = 1
+		 attack_skill = 1
+		 defense_skill = 1
+		 planning_skill = 1
+		 logistics_skill = 1
 	 }
   }
   #王凡西
@@ -533,6 +551,14 @@ characters = {
 			cost = 0
 			can_be_fired = no
 		}
+		corps_commander = {
+			traits = {  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
 	}
 	#于斌
 	SHC_yu_bing = {
@@ -556,6 +582,14 @@ characters = {
 			traits = { KR_spiritual_leader_sic   }
 			cost = 0
 			can_be_fired = no
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
 		}
 	}
 	#袁良
