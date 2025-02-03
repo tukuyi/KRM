@@ -711,6 +711,7 @@ focus_tree = {
 					active = yes
 				}
 			}
+			set_potential_national_government = yes
 			country_event = {
 				days = 5
 				id = leche.13
@@ -4060,7 +4061,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_zhu_xi_de_jue_se
-		icon = GFX_SOV_Central_Moscow
+		icon = GFX_goal_support_communism
 		relative_position_id = LEC_liu_wang_zhe_gui_lai
 		cost = 5.00
 		x = 2
@@ -4380,8 +4381,8 @@ focus_tree = {
 				add_core_of = ROOT
 			}
 			custom_effect_tooltip = tooltip_white_line
-			add_ideas = DKB_aftermath_uch_idea
-			add_ideas = DKB_aftermath_uch_economic_idea
+			add_ideas = SHC_aftermath_uch_idea
+			add_ideas = SHC_aftermath_uch_economic_idea
 			hidden_effect = {
 				set_popularities = {
 					totalist = 40
@@ -4489,8 +4490,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_jing_ji_zai_zheng_he"
 			swap_ideas = {
-				remove_idea = DKB_aftermath_uch_economic_idea
-				add_idea = DKB_aftermath_uch_economic_idea_2
+				remove_idea = SHC_aftermath_uch_economic_idea
+				add_idea = SHC_aftermath_uch_economic_idea_2
 			}
 		}
 	}
@@ -4512,8 +4513,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_guan_liao_zai_kao_he"
 			swap_ideas = {
-				remove_idea = DKB_aftermath_uch_idea
-				add_idea = DKB_aftermath_uch_idea_3
+				remove_idea = SHC_aftermath_uch_idea
+				add_idea = SHC_aftermath_uch_idea_3
 			}
 		}
 	}
@@ -4545,7 +4546,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_yu_guan_liao_zhu_yi_dou"
 			swap_ideas = {
-				remove_idea = DKB_aftermath_uch_idea_3
+				remove_idea = SHC_aftermath_uch_idea_3
 				add_idea = LEC_aftermath_uch_idea_B
 			}
 		}
@@ -4578,7 +4579,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_guan_liao_ji_zhong_zhi"
 			swap_ideas = {
-				remove_idea = DKB_aftermath_uch_idea_3
+				remove_idea = SHC_aftermath_uch_idea_3
 				add_idea = LEC_aftermath_uch_idea_C
 			}
 		}
@@ -4610,7 +4611,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_jue_bu_tuo_xie_de_ling_xiu
-		icon = GFX_focus_fra_loyalty_stalin
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism
 		relative_position_id = LEC_liu_wang_zhe_gui_lai
 		cost = 5.00
 		x = 0
@@ -4657,8 +4658,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_jian_c_zheng_tong_lu_xian"
 			swap_ideas = {
-				remove_idea = DKB_aftermath_uch_economic_idea_2
-				add_idea = DKB_aftermath_uch_economic_idea_4
+				remove_idea = SHC_aftermath_uch_economic_idea_2
+				add_idea = SHC_aftermath_uch_economic_idea_4
 			}
 			country_event = {
 				id = Shcgong.19
@@ -4684,7 +4685,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_jiao_yu_nong_min"
 			swap_ideas = {
-				remove_idea = DKB_aftermath_uch_economic_idea_4
+				remove_idea = SHC_aftermath_uch_economic_idea_4
 				add_idea = SHC_aftermath_uch_economic_idea_B
 			}
 		}
@@ -4774,7 +4775,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_chan_chu_fan_ge_ming
-		icon = GFX_focus_SOV_stalins_cult_of_personality
+		icon = GFX_goal_syndicalist_lenin
 		relative_position_id = LEC_jue_bu_tuo_xie_de_ling_xiu
 		cost = 5.00
 		x = 1
@@ -4964,8 +4965,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_yin_ru_xin_jin_ji_zheng_ce"
 			swap_ideas = {
-				remove_idea = DKB_aftermath_uch_economic_idea_2
-				add_idea = DKB_aftermath_uch_economic_idea_4
+				remove_idea = SHC_aftermath_uch_economic_idea_2
+				add_idea = SHC_aftermath_uch_economic_idea_4
 			}
 			country_event = {
 				id = Shcgong.27
@@ -4990,8 +4991,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_cheng_shi_gpmg_ye"
 			swap_ideas = {
-				remove_idea = DKB_aftermath_uch_economic_idea_4
-				add_idea = UKR_socialism_in_city
+				remove_idea = SHC_aftermath_uch_economic_idea_4
+				add_idea = SHC_socialism_in_city
 			}
 			country_event = {
 				id = Shcgong.28
@@ -5016,7 +5017,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_jin_sheng_gong_ye_hua"
 			swap_ideas = {
-				remove_idea = UKR_socialism_in_city
+				remove_idea = SHC_socialism_in_city
 				add_idea = LEC_socialism_in_city
 			}
 			country_event = {
@@ -5125,8 +5126,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_da_ru_di_ying"
 			swap_ideas = {
-				remove_idea = DKB_aftermath_uch_economic_idea_2
-				add_idea = DKB_aftermath_uch_economic_idea_4
+				remove_idea = SHC_aftermath_uch_economic_idea_2
+				add_idea = SHC_aftermath_uch_economic_idea_4
 			}
 		}
 	}
@@ -5175,7 +5176,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 			add_stability = 0.10
-			create_faction = "第三国际-东线"
+			create_faction = revolutionary_communist_internationale
 			custom_effect_tooltip = tooltip_white_line
 			country_event = {
 				id = Shcgong.36
@@ -5304,570 +5305,241 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_si_qu_de_bao_jun"
 			swap_ideas = {
-				remove_idea = DKB_aftermath_uch_economic_idea_4
+				remove_idea = SHC_aftermath_uch_economic_idea_4
 				add_idea = SHC_aftermath_uch_economic_idea_A
 			}
 		}
 	}
 
+
 	focus = {
-		id = LEC_shou_fu_shi_di
-		icon = GFX_focus_SOV_socialism_in_one_country
-		relative_position_id = LEC_liu_wang_zhe_gui_lai	
+		id = SHC_SOV_union_restored
+		icon = GFX_goal_LAT_soviet_union
+		cost = 6
+
+		relative_position_id = LEC_liu_wang_zhe_gui_lai
 		x = 0
 		y = 16
-		cost = 5
-
-		available = {
+		bypass = {
 			has_completed_focus = LEC_msk_jiao_wai
 		}
-
+		available = {
+			always = no
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LEC_shou_fu_shi_di"
-			custom_effect_tooltip = TRM_expansion
-			create_wargoal = {
-				target = GEO
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = DKB
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = KLY
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = AZE
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = ARM
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = KUB
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = MTR
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = ALO
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = TRK
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = KYR
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = UZB
-				type = annex_everything
-			}
-			hidden_effect = {
-				every_state = {
+			log = "[GetDateText]: [Root.GetName]: Focus SHC_SOV_union_restored"
+			custom_effect_tooltip = tooltip_focus_unlocked_by_event
+		}
+	}
+
+	focus = {
+		id = SHC_SOV_establish_red_army
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		cost = 6
+
+		relative_position_id = SHC_SOV_union_restored
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = SHC_SOV_union_restored
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SHC_SOV_establish_red_army"
+			RUS = {
+				every_character = {
 					limit = {
 						OR = {
-							is_core_of = KUB
-							is_core_of = GEO
-							is_core_of = DKB
-							is_core_of = KLY
-							is_core_of = AZE
-							is_core_of = ARM
-							is_core_of = MTR
-							is_core_of = ALO
-							is_core_of = KYR
-							is_core_of = UZB
-							is_core_of = TRK
+							has_character_flag = RUS_socialist
+							has_character_flag = RUS_neutral
 						}
 					}
-					add_core_of = ROOT
+					set_nationality = ROOT
 				}
-			}
-		}
-	}
-
-	focus = {
-		id = LEC_tu_er_qi
-		icon = GFX_focus_generic_attack_turkey
-		relative_position_id = LEC_shou_fu_shi_di	
-		x = 4
-		y = 1
-		cost = 4
-
-		available = {
-			has_war = no
-			is_subject = no
-			is_neighbor_of = TUR 
-		}
-		prerequisite = {
-			focus = LEC_shou_fu_shi_di
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}
-		bypass = {
-			NOT = {
-				country_exists = TUR
-			}
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LEC_tu_er_qi"
-			every_state = {
-				limit = {
-					OR = {
-						state = 1225 #Dardanelles
-						state = 773 #Constantinople
-					}
-					is_claim_or_core_of_ROOT = no
-				}
-				add_claim_by = ROOT
-			}
-			if = {
-				limit = { 
-					country_exists = TUR 
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = TUR
-				}
-			}
-			if = {
-				limit = { 
-					country_exists = PER 
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = PER
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = LEC_Demand_North_Iran
-		icon = GFX_focus_generic_attack_iran
-		relative_position_id = LEC_shou_fu_shi_di	
-		x = 4
-		y = 2
-		cost = 4
-
-		available = {
-			has_war = no
-			is_subject = no
-			is_neighbor_of = PER
-		}
-		prerequisite = {
-			focus = LEC_tu_er_qi
-		}
-		bypass = { NOT = { country_exists = PER } }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LEC_Demand_North_Iran"
-			create_wargoal = {
-				type = annex_everything
-				target = PER
-			}
-		}
-	}
-
-	focus = {
-		id = LEC_Invade_Afghanistan
-		icon = GFX_focus_generic_befriend_afghanistan
-		relative_position_id = LEC_shou_fu_shi_di	
-		x = 4
-		y = 3
-		cost = 4
-
-		prerequisite = { focus = LEC_Demand_North_Iran }
-		available = {
-			has_war = no
-			is_subject = no
-			is_neighbor_of = AFG
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}
-		bypass = {
-			OR = {
-				NOT = { country_exists = AFG }
-				is_in_faction_with = AFG
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LEC_Invade_Afghanistan"
-			create_wargoal = {
-				type = annex_everything
-				target = AFG
-			}
-		}
-	}
-
-	focus = {
-		id = LEC_Attack_Europe
-		icon = GFX_focus_GER_liberate_exploited_colonial_workers
-		relative_position_id = LEC_shou_fu_shi_di	
-		x = 0
-		y = 1
-		cost = 2
-
-		available = {
-			has_war = no
-			is_subject = no
-		}
-		prerequisite = {
-			focus = LEC_shou_fu_shi_di
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LEC_Attack_Europe"
-			add_war_support = 0.05
-			add_political_power = 25
-		}
-	}
-
-	focus = {
-		id = LEC_Invade_WHR
-		icon = GFX_focus_spr_torchbearers_of_tomorrow
-		relative_position_id = LEC_shou_fu_shi_di	
-		x = 0
-		y = 2
-		cost = 4
-
-		available = {
-			has_war = no
-			is_subject = no
-			is_neighbor_of = WHR
-		}
-		prerequisite = {
-			focus = LEC_Attack_Europe
-		}
-		bypass = { 
-			NOT = { 
-				country_exists = WHR 
-			} 
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LEC_Invade_WHR"
-			create_wargoal = {
-				type = annex_everything
-				target = WHR
-			}
-		}
-	}
-
-	focus = {
-		id = LEC_Invade_Finland
-		icon = GFX_focus_generic_attack_finland
-		relative_position_id = LEC_shou_fu_shi_di	
-		x = -2
-		y = 2
-		cost = 4
-
-		available = {
-			has_war = no
-			is_subject = no
-			is_neighbor_of = FIN 
-		}
-		prerequisite = {
-			focus = LEC_Attack_Europe
-		}
-
-		bypass = { NOT = { country_exists = FIN } }
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LEC_Invade_Finland"
-			create_wargoal = {
-				type = annex_everything
-				target = FIN
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = LEC_Invade_Ukraine
-		icon = GFX_focus_SOV_organization_centralization_discipline
-		relative_position_id = LEC_shou_fu_shi_di	
-		x = 2
-		y = 2
-		cost = 4
-
-		available = {
-			has_war = no
-			is_subject = no
-			is_neighbor_of = UKR
-		}
-		prerequisite = {
-			focus = LEC_Attack_Europe
-		}
-		bypass = { 
-			NOT = { 
-				country_exists = UKR 
-			} 
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LEC_Invade_Ukraine"
-			create_wargoal = {
-				type = annex_everything
-				target = UKR
-			}
-			if = {
-				limit = { country_exists = WSU }
-				create_wargoal = {
-					type = annex_everything
-					target = WSU
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = LEC_Demand_Bessarabiav
-		icon = GFX_focus_generic_attack_romania
-		relative_position_id = LEC_shou_fu_shi_di	
-		x = 1
-		y = 3
-		cost = 4
-
-		available = {
-			has_war = no
-			is_subject = no
-			is_neighbor_of = ROM 
-		}
-		prerequisite = {
-			focus = LEC_Attack_Europe
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LEC_Demand_Bessarabiav"
-			create_wargoal = {
-				type = annex_everything
-				target = ROM
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = SER
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = ALB
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = BUL
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = GRE
-			}
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = LEC_End_Poland
-		icon = GFX_focus_generic_polish_deal
-		relative_position_id = LEC_shou_fu_shi_di	
-		x = -1
-		y = 3
-		cost = 4
-
-		available = {
-			has_war = no
-			is_subject = no
-			is_neighbor_of = POL 
-		}
-		prerequisite = {
-			focus = LEC_Attack_Europe
-		}
-
-		bypass = { NOT = { country_exists = POL } }
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LEC_End_Poland"
-			create_wargoal = {
-				type = annex_everything
-				target = POL
-			}
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = LEC_End_Germany
-		icon = GFX_focus_SOV_international_union_of_soviet_republics
-		relative_position_id = LEC_shou_fu_shi_di	
-		x = 0
-		y = 4
-		cost = 4
-
-		available = {
-			has_war = no
-			is_subject = no
-			is_neighbor_of = GER
-			NOT = { is_in_faction_with = GER }
-		}
-
-		prerequisite = {
-			focus = LEC_Attack_Europe
-			focus = LEC_End_Poland
-			focus = LEC_Demand_Bessarabiav
-		}
-
-		bypass = { NOT = { country_exists = GER } }
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LEC_End_Germany"
-			create_wargoal = {
-				type = annex_everything
-				target = GER
 			}
 			hidden_effect = {
-				add_stability = 0.05
-				add_war_support = 0.10
+				XXA = {
+					every_character = {
+						limit = { has_character_flag = RUS_socialist }
+						set_nationality = ROOT
+					}
+				}
+				### Transfer Stalin, Tukha, Yegorov, and Zhukov
+				RUS_move_exiled_socialist_leaders = yes
 			}
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
-		id = LEC_fuck_japan
-		icon = GFX_focus_GER_strike_at_the_rising_sun
-		relative_position_id = LEC_shou_fu_shi_di	
-		x = -5
+		id = SHC_SOV_world_revolution
+		icon = GFX_goal_communist_world_revolution
+		cost = 6
+
+		relative_position_id = SHC_SOV_union_restored
+		x = 0
 		y = 1
-		cost = 4
-
+		available = {
+			NOT = {
+				AND = {
+					has_country_leader = {
+						character = SHC_liu_renjing
+						ruling_only = yes
+					}
+					NOT = {
+						has_completed_focus = LEC_qong_chan_guo_ji
+					}
+				}
+			}
+		}
 		prerequisite = {
-			focus = LEC_shou_fu_shi_di
+			focus = SHC_SOV_union_restored
 		}
-		ai_will_do = {
-			factor = 50
-		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LEC_fuck_japan"
-			create_wargoal = {
-				target = JAP
-				type = annex_everything
+			log = "[GetDateText]: [Root.GetName]: Focus SHC_SOV_world_revolution"
+			leave_faction = yes
+			FRA_remove_from_phalanstere = yes
+			add_ideas = LAT_SOV_world_revolution_idea
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = LEC_qong_chan_guo_ji
+					}
+				}
+				create_faction = communist_internationale
 			}
 		}
 	}
 
 	focus = {
-		id = LEC_aslaksa
-		icon = GFX_focus_ARG_women_in_industry
-		relative_position_id = LEC_shou_fu_shi_di	
-		x = -6
-		y = 2
-		cost = 4
+		id = SHC_SOV_natural_borders
+		icon = GFX_focus_SOV_socialism_in_one_country
+		cost = 6
+
+		relative_position_id = SHC_SOV_union_restored
+		x = 2
+		y = 1
 
 		prerequisite = {
-			focus = LEC_fuck_japan
+			focus = SHC_SOV_union_restored
 		}
-		ai_will_do = {
-			factor = 50
-		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LEC_aslaksa"
-			country_event = rusfor.1423
-			add_state_claim = 463
-			add_state_claim = 629
-			add_state_claim = 630
-			add_state_claim = 631
-			add_state_claim = 632
-			add_state_claim = 648
-			add_state_claim = 645
-			add_state_claim = 646
-			add_state_claim = 638
-			add_state_claim = 633
-			add_state_claim = 727
-			add_state_claim = 642
-			add_state_claim = 643
-			add_state_claim = 639
-			add_state_claim = 725
+			log = "[GetDateText]: [Root.GetName]: Focus SHC_SOV_natural_borders"
+			every_state = {
+				limit = {
+					NOT = {
+						is_core_of = LAT
+					}
+					OR = {
+						is_finland = yes
+						region = 37 # Baltic States
+						state = 188 #Memel
+						is_central_asia = yes
+						state = 418 #Ashkhabad
+						region = 38 # Poland
+						region = 39 # Belarus
+						region = 130 # Ukraine
+						region = 134 # Caucasus
+						region = 135 # North Caucasus
+						is_galicia = yes
+						is_russian_far_east = yes
+						state = 537 #South Sakhalin
+						state = 555 #Kuril Islands
+						state = 577 #North Sakhalin
+						is_siberia = yes
+						state = 78 #Bessarabia
+						state = 80 #Cernauti
+					}
+				}
+				add_claim_by = LAT
+			}
 		}
 	}
 
 	focus = {
-		id = LEC_east_aisa
-		icon = GFX_goal_JAP_target_indonesia
-		relative_position_id = LEC_shou_fu_shi_di	
-		x = -4
+		id = SHC_SOV_invasion_of_europe
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		cost = 6
+
+		relative_position_id = SHC_SOV_union_restored
+		x = -1
 		y = 2
-		cost = 4
 
 		prerequisite = {
-			focus = LEC_fuck_japan
+			focus = SHC_SOV_establish_red_army
 		}
-		ai_will_do = {
-			factor = 50
+		prerequisite = {
+			focus = SHC_SOV_natural_borders
 		}
+		prerequisite = {
+			focus = SHC_SOV_world_revolution
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus LEC_east_aisa"
-			create_wargoal = {
-				target = GEA
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = BRM
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = SIA
-				type = annex_everything
-			}
-			create_wargoal = {
-				target = VIN
-				type = annex_everything
-			}
+			log = "[GetDateText]: [Root.GetName]: Focus SHC_SOV_invasion_of_europe"
+			custom_effect_tooltip = LAT_SOV_Attack_Europe_tt
 		}
 	}
+
+	focus = {
+		id = SHC_SOV_invasion_of_asia
+		icon = GFX_focus_usa_focus_on_asia
+		cost = 6
+
+		relative_position_id = SHC_SOV_union_restored
+		x = 1
+		y = 2
+
+		prerequisite = {
+			focus = SHC_SOV_establish_red_army
+		}
+		prerequisite = {
+			focus = SHC_SOV_natural_borders
+		}
+		prerequisite = {
+			focus = SHC_SOV_world_revolution
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SHC_SOV_invasion_of_asia"
+			custom_effect_tooltip = LAT_SOV_Attack_Asia_tt
+		}
+	}
+
+	focus = {
+		id = SHC_SOV_invasion_of_everyone
+		icon = GFX_focus_SOV_organization_centralization_discipline
+		cost = 6
+
+		relative_position_id = SHC_SOV_union_restored
+		x = 0
+		y = 3
+
+		prerequisite = {
+			focus = SHC_SOV_invasion_of_europe
+		}
+		prerequisite = {
+			focus = SHC_SOV_invasion_of_asia
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SHC_SOV_invasion_of_everyone"
+			custom_effect_tooltip = LAT_SOV_gain_cores_tt
+			every_owned_state = {
+				limit = {
+					is_claimed_by = ROOT
+					NOT = { is_core_of = ROOT }
+				}
+				add_core_of = ROOT
+				hidden_effect = { remove_claim_by = ROOT }
+			}
+			add_war_support = 0.25
+		}
+	}
+
 ###经济线
 	focus = {
 		id = LEC_xi_mie_huo_yan

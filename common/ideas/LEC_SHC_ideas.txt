@@ -2578,6 +2578,142 @@ ideas = {
 				training_time_army_factor = -0.10
 			}
 		}
+		SHC_aftermath_uch_idea = {
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+            modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.4
+				political_power_gain = -0.4
+				experience_gain_army_factor = -0.25
+				encryption = -0.1
+				command_power_gain = -0.3
+				conscription_factor = -0.2
+				#political_power_gain = -0.2
+			}
+		}
+		SHC_aftermath_uch_idea_1 = {
+			name = SHC_aftermath_uch_idea
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+            modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				political_power_gain = -0.3
+				experience_gain_army_factor = -0.15
+				encryption = -0.1
+				command_power_gain = -0.2
+				conscription_factor = -0.1
+				#political_power_gain = -0.1
+			}
+		}
+		SHC_aftermath_uch_idea_2 = {
+			name = SHC_aftermath_uch_idea
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+            modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				political_power_gain = -0.2
+				experience_gain_army_factor = -0.05
+				encryption = -0.05
+				command_power_gain = -0.1
+				conscription_factor = -0.05
+				#political_power_gain = -0.1
+			}
+		}
+		SHC_aftermath_uch_idea_3 = {
+			name = SHC_aftermath_uch_idea
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+            modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				political_power_gain = -0.15
+				experience_gain_army_factor = -0.05
+				encryption = -0.05
+				command_power_gain = -0.05
+				conscription_factor = -0.05
+				#political_power_gain = -0.1
+			}
+		}
+		SHC_aftermath_uch_idea_4 = {
+			name = SHC_aftermath_uch_idea
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+            modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				political_power_gain = -0.1
+			}
+		}
+		SHC_aftermath_uch_economic_idea = {
+			picture = HOL_black_monday_recovery
+			allowed = { always = no }
+            modifier = {
+				production_factory_max_efficiency_factor = -0.2
+				production_factory_start_efficiency_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.2
+				industrial_capacity_factory = -0.2
+				consumer_goods_factor = 0.6
+				production_speed_buildings_factor = -0.25
+			}
+		}
+		SHC_aftermath_uch_economic_idea_1 = {
+			name = SHC_aftermath_uch_economic_idea
+			picture = HOL_black_monday_recovery
+			allowed = { always = no }
+            modifier = {
+				production_factory_max_efficiency_factor = -0.15
+				production_factory_start_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.15
+				industrial_capacity_factory = -0.1
+				consumer_goods_factor = 0.4
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		SHC_aftermath_uch_economic_idea_2 = {
+			name = SHC_aftermath_uch_economic_idea
+			picture = HOL_black_monday_recovery
+			allowed = { always = no }
+            modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_start_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				industrial_capacity_factory = -0.05
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		SHC_aftermath_uch_economic_idea_3 = {
+			name = SHC_aftermath_uch_economic_idea
+			picture = HOL_black_monday_recovery
+			allowed = { always = no }
+            modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_start_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				consumer_goods_factor = 0.1
+			}
+		}
+		SHC_aftermath_uch_economic_idea_4 = {
+			name = SHC_aftermath_uch_economic_idea
+			picture = HOL_black_monday_recovery
+			allowed = { always = no }
+            modifier = { consumer_goods_factor = 0.1 }
+		}
+
+		SHC_socialism_in_city = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UKR_socialism_in_city"}
+			allowed = { always = no }
+			picture = social_enterprises
+			modifier = {
+				political_power_cost = 0.05
+				industrial_capacity_factory = 0.03
+				line_change_production_efficiency_factor = 0.04
+			}
+		}
+
 		LEC_soc_prop_in_russia = {#社会主义政治宣传
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LEC_soc_prop_in_russia"}
 			picture = generic_syndicalist_militia
@@ -2717,7 +2853,6 @@ ideas = {
 			picture = MEX_Eternal_Revolution
 			allowed = { always = no }
             modifier = { 
-				totalist_drift = 0.05
 				stability_factor = 0.05
 				army_speed_factor = 0.05
 				drift_defence_factor = 0.20
