@@ -236,7 +236,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_tuo_yi_ying_guo_lao
-		icon = GFX_CAL_prohibition
+		icon = GFX_goal_chi_one_china_policy_KMT
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		cost = 2
 		x = -4
@@ -415,7 +415,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_quan_mian_si_you_hua
-		icon = GFX_goal_NYC_Privatization
+		icon = GFX_focus_usa_reestablish_the_gold_standard
 		cost = 5.00
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = -1
@@ -454,7 +454,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_ying_wang_yan_jiang
-		icon = GFX_NEE_crown_edward
+		icon = GFX_goal_LEC_zhong_cheng_de_shang_hai
 		cost = 5.00
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = 0
@@ -530,7 +530,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_fang_song_jin_rong_guan_zhi
-		icon = GFX_goal_AUS_Kickstart_Broken_Banks
+		icon = GFX_focus_generic_welfare
 		cost = 5.00
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = -2
@@ -604,7 +604,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_mai_ban_yi_shi_hui
-		icon = GFX_goal_NYC_National_Political_Machine
+		icon = GFX_focus_GER_strengthen_the_proletarian_international
 		cost = 5.00
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = 1
@@ -626,7 +626,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_yong_you_cheng_shi_de_qi_ye
-		icon = GFX_goal_NYC_Police_TPose
+		icon = GFX_focus_generic_low_cost_housing
 		cost = 5.00
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = 2
@@ -649,7 +649,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_fan_hua_de_ye_shang_hai
-		icon = GFX_goal_NYC_Housing_Projects
+		icon = GFX_goal_LEC_si_you_jing_cha_ju
 		cost = 5.00
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = 0
@@ -681,7 +681,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_di_guo_de_ming_zhu
-		icon = GFX_goal_CAN_god_save_empire
+		icon = GFX_focus_chi_british_cooperation
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = 0
 		y = 7
@@ -704,7 +704,6 @@ focus_tree = {
 			CAN = {
 				end_puppet = SHC
 			}
-			leave_faction = CAN
 			CAN = {
 				diplomatic_relation = {
 					country = SHC
@@ -747,7 +746,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_cha_shou_di_fang
-		icon = GFX_goal_NYC_living_gangster_paradise
+		icon = GFX_goal_molotov_ribbentrop_pact
 		cost = 5.00
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = -5
@@ -833,7 +832,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_shou_gou_jiu_zi_chan
-		icon = GFX_NEE_decentralized_money
+		icon = GFX_focus_ARG_anti_corruption_policies
 		cost = 5.00
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = -6
@@ -871,7 +870,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_cheng_shi_an_bao_dui
-		icon = GFX_goal_AUS_corporatism
+		icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
 		cost = 5.00
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = -7
@@ -898,7 +897,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_tou_zi_ji_jian
-		icon = GFX_RUS_Rural_Electro
+		icon = GFX_focus_generic_low_cost_housing
 		cost = 5.00
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = -5
@@ -940,7 +939,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_ti_gao_xiao_lv
-		icon = GFX_goal_AUS_ear_labor
+		icon = GFX_focus_generic_currency_reforms
 		cost = 5.00
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = -3
@@ -972,7 +971,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_yi_wu_lao_dong
-		icon = GFX_goal_AUS_raised_working_week
+		icon = GFX_focus_generic_workers
 		cost = 5.00
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = -6
@@ -999,7 +998,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_tou_zi_jun_gong_ye
-		icon = GFX_goal_NYC_War_Profiteering
+		icon = GFX_focus_generic_mass_production
 		cost = 5.00
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = -4
@@ -1033,7 +1032,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_zuo_yan_wei_lai
-		icon = GFX_goal_AUS_Industrialisms_Past_Present_Future
+		icon = GFX_focus_GER_kdf_wagen
 		cost = 5.00
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		x = -5
@@ -1064,7 +1063,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_you_tai_ren_ed_ming_ding
-		icon = GFX_goal_NYC_People_Power
+		icon = GFX_focus_generic_workers
 		relative_position_id = LEC_zi_ben_jia_de_sheng_li
 		cost = 2
 		x = 4
@@ -1108,7 +1107,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_kuo_da_you_tai_qu
-		icon = GFX_goal_NYC_Free_City
+		icon = GFX_focus_ARG_develop_the_electricity_sector
 		relative_position_id = LEC_you_tai_ren_ed_ming_ding
 		cost = 5
 		x = 1
@@ -1128,7 +1127,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_tong_niu_you_de_lian_xi
-		icon = GFX_goal_NYC_Mafia_Rule
+		icon = GFX_goal_support_democracy
 		relative_position_id = LEC_you_tai_ren_ed_ming_ding
 		cost = 5
 		x = -1
@@ -1150,7 +1149,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_zhen_dun_bao_ye
-		icon = GFX_goal_NYC_Bolito_King_Controls_Rackets
+		icon = GFX_goal_LEC_shou_gou_guo_ming_re_bao
 		relative_position_id = LEC_you_tai_ren_ed_ming_ding
 		cost = 5
 		x = 0
@@ -1186,7 +1185,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_shang_hai_de_xue
-		icon = GFX_goal_NYC_Civil_War
+		icon = GFX_focus_generic_total_war
 		relative_position_id = LEC_you_tai_ren_ed_ming_ding
 		cost = 5
 		x = -2
@@ -1208,7 +1207,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_xiang_gang_de_ming_mai
-		icon = GFX_goal_NYC_Strangle_Opposition
+		icon = GFX_focus_generic_university_2
 		relative_position_id = LEC_you_tai_ren_ed_ming_ding
 		cost = 5
 		x = 2
@@ -1254,7 +1253,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_kuo_jian_sha_xun_xue_xiao
-		icon = GFX_goal_NYC_Civil_Rights_All
+		icon = GFX_focus_research
 		relative_position_id = LEC_you_tai_ren_ed_ming_ding
 		cost = 5
 		x = 1
@@ -1279,7 +1278,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_shou_wei_hang_xian
-		icon = GFX_goal_NYC_Replace_NYPD
+		icon = GFX_goal_USA_liberty_ships
 		relative_position_id = LEC_you_tai_ren_ed_ming_ding
 		cost = 5
 		x = 3
@@ -1315,7 +1314,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_di_chan_jin_rong
-		icon = GFX_goal_NYC_Use_Police
+		icon = GFX_focus_generic_currency_reforms
 		relative_position_id = LEC_you_tai_ren_ed_ming_ding
 		cost = 5
 		x = -1
@@ -1402,7 +1401,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_gui_xiang_gui_xiang
-		icon = GFX_goal_NYC_Encourage_Black_Self_Confidence_Pride
+		icon = GFX_focus_generic_attack_turkey
 		relative_position_id = LEC_you_tai_ren_ed_ming_ding
 		cost = 5
 		x = 1
@@ -1485,7 +1484,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_jie_shou_pa_pa_de_jiao_hui
-		icon = GFX_goal_TEX_focus_Catholic_Education
+		icon = GFX_focus_generic_pope
 		relative_position_id = LEC_shang_di_de_huai_bao
 		cost = 5
 		x = -2
@@ -1559,7 +1558,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_chong_zu_shang_hai_chen
-		icon = GFX_goal_SRI_reform
+		icon = GFX_focus_generic_low_cost_housing
 		relative_position_id = LEC_shang_di_de_huai_bao
 		cost = 5
 		x = 2
@@ -1661,7 +1660,7 @@ focus_tree = {
 	
 	focus = {
 		id = LEC_chuan_bo_zhen_xin
-		icon = GFX_goal_TEX_focus_Encourage_Conversions
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		relative_position_id = LEC_shang_di_de_huai_bao
 		cost = 5
 		x = -4
@@ -1712,7 +1711,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_zu_fu_qing_fen_zhi_ren
-		icon = GFX_goal_SRI_stronkpope
+		icon = GFX_focus_generic_workers
 		relative_position_id = LEC_shang_di_de_huai_bao
 		cost = 5
 		x = -2
@@ -1813,7 +1812,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_tian_zhu_jiao_gong_hui
-		icon = GFX_goal_TEX_focus_Catholic_Unions
+		icon = GFX_focus_ITA_workers_unions
 		relative_position_id = LEC_shang_di_de_huai_bao
 		cost = 5
 		x = 4
@@ -1836,7 +1835,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_fen_chan_zhu_yi
-		icon = GFX_goal_TEX_focus_Reward_Catholics_Plan
+		icon = GFX_focus_generic_welfare
 		relative_position_id = LEC_shang_di_de_huai_bao
 		cost = 5
 		x = 4
@@ -1862,7 +1861,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_kuo_jian_jiao_hui_xue_xiao
-		icon = GFX_goal_COR_christian_education
+		icon = GFX_focus_ARG_develop_the_electricity_sector
 		relative_position_id = LEC_shang_di_de_huai_bao
 		cost = 5
 		x = 0
@@ -1929,7 +1928,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_pei_yang_you_de_zhi_ren
-		icon = GFX_goal_COR_restoring_faith
+		icon = GFX_focus_generic_vatican_agents
 		relative_position_id = LEC_shang_di_de_huai_bao
 		cost = 5
 		x = 2
@@ -1952,7 +1951,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_pu_shi_de_jiu_su
-		icon = GFX_NEE_court_catholics
+		icon = GFX_focus_por_concordat
 		relative_position_id = LEC_shang_di_de_huai_bao
 		cost = 5
 		x = -1
@@ -2032,7 +2031,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_sheng_jie_de_Yuan_dong_min_zhu
-		icon = GFX_goal_generic_cathedral
+		icon = GFX_focus_ARG_defense_and_democracy
 		relative_position_id = LEC_shang_di_de_huai_bao
 		cost = 5
 		x = 0
@@ -2061,7 +2060,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_shang_di_zu_fu_zhi_di
-		icon = GFX_goal_POL_Second_Coming
+		icon = GFX_focus_generic_catholic_dominion
 		relative_position_id = LEC_shang_di_de_huai_bao
 		cost = 5
 		x = 0
@@ -2438,7 +2437,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_xin_de_li_Ming
-		icon = GFX_goal_CSA_lead_american_revolution
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = -6
@@ -2605,7 +2604,7 @@ focus_tree = {
 	
 	focus = {
 		id = LEC_da_dao_mai_ban
-		icon = GFX_goal_CSA_power_to_the_people
+		icon = GFX_focus_SOV_penal_battalions
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 2
@@ -2637,7 +2636,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_quan_hang_ye_gong_ren_dai_biao_da_hui
-		icon = GFX_goal_CSA_all_industrial_congress
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = -2
@@ -2763,7 +2762,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_gong_ren_fu_li
-		icon = GFX_goal_CSA_gift_economy
+		icon = GFX_focus_generic_welfare
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = -2
@@ -2794,7 +2793,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_kuo_jian_gong_ren_jiu_cha_dui
-		icon = GFX_CSA_defensive_outlook
+		icon = GFX_focus_generic_workers
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 2
@@ -2818,7 +2817,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_wu_chan_jie_ji_yi_shu
-		icon = GFX_goal_CSA_surveillance
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = -1
@@ -2876,7 +2875,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_zong_gong_hui_ling_dao_yi_qie
-		icon = GFX_goal_CSA_dictatorship_of_proletariat
+		icon = GFX_focus_GER_proletarian_dictatorship
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 0
@@ -2906,7 +2905,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_bu_duan_qian_jin
-		icon = GFX_goal_CSA_great_sprint
+		icon = GFX_focus_SOV_organization_centralization_discipline
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = -1
@@ -3031,7 +3030,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_peng_shu_zhi_zhu_xi
-		icon = GFX_goal_FOP_posadism
+		icon = GFX_focus_fra_loyalty_trotzky
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 7
@@ -3058,7 +3057,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_fen_sui_zi_ben_jia
-		icon = GFX_goal_CSA_deal_with_odp
+		icon = GFX_focus_SOV_the_last_purge
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 4
@@ -3124,7 +3123,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_jun_shi_hua_jiu_cha_dui
-		icon = GFX_goal_CSA_empower_red_militias
+		icon = GFX_focus_SOV_organization_centralization_discipline
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 8
@@ -3149,7 +3148,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_she_hui_hua_zi_can
-		icon = GFX_goal_CSA_squeeze_elites
+		icon = GFX_SOV_foreign_experts_ccp_2d_sov_compatibility
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 10
@@ -3234,7 +3233,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_la_dong_fen_pei_zhi
-		icon = GFX_goal_CSA_department_of_production
+		icon = GFX_focus_usa_reestablish_the_gold_standard
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 9
@@ -3261,7 +3260,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_jie_ji_dou_zheng
-		icon = GFX_goal_CSA_rehab_centers
+		icon = GFX_SOV_leader_of_the_party_and_the_people_ccp_2d_sov_compatibility
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 5
@@ -3288,7 +3287,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_wo_men_de_ren_wu
-		icon = GFX_goal_CSA_asserting_the_apparatus
+		icon = GFX_focus_generic_workers_and_farmers_rise
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 7
@@ -3319,7 +3318,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_si_jie_ge_ming
-		icon = GFX_goal_CSA_experimental_age
+		icon = GFX_SOV_the_fourth_international_ccp_2d_sov_compatibility
 		cost = 6.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 5
@@ -3348,7 +3347,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_bu_duan_ge_ming
-		icon = GFX_goal_CSA_liquidate_bourgeoisie
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 4
@@ -3396,7 +3395,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_gong_chan_zhu_yi_ling_dao_jun_dui
-		icon = GFX_goal_CSA_revolutionary_army
+		icon = GFX_goal_HNN_ban_bu_xin_xian_fa
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 4
@@ -3421,7 +3420,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_jun_shi_hua_lao_dong
-		icon = GFX_goal_CSA_social_dividends
+		icon = GFX_focus_SOV_organization_centralization_discipline
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 6
@@ -3483,7 +3482,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_hong_qi_piao_bian_shi_jie
-		icon = GFX_BBR_internationale_struggle
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
 		cost = 6.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 5
@@ -3535,7 +3534,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_xian_zai_zhong_guo
-		icon = GFX_goal_NEE_Chicago_Insp
+		icon = GFX_goal_chi_one_china_policy_KMT
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 9
@@ -3577,7 +3576,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_ge_ming_xuan_chuan
-		icon = GFX_goal_CSA_revolution_will_be_broadcasted_2
+		icon = GFX_focus_por_workers_of_iberia
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 8
@@ -3602,7 +3601,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_sheng_chan_yue_jin
-		icon = GFX_goal_CSA_strenght_through_industry
+		icon = GFX_focus_generic_public_works
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 8
@@ -3672,7 +3671,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_ge_nong_tong_meng
-		icon = GFX_SOV_god_building
+		icon = GFX_focus_generic_workers_and_farmers_rise
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 10
@@ -3712,7 +3711,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_wu_chan_jie_ji_zhuan_zheng
-		icon = GFX_goal_CSA_proletarian_science
+		icon = GFX_SOV_leader_of_the_party_and_the_people_ccp_2d_sov_compatibility
 		cost = 5.00
 		relative_position_id = LEC_zong_gong_hui_de_sheng_li
 		x = 10
@@ -4083,7 +4082,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_wu_chan_jie_ji_zhuan_zhen
-		icon = GFX_SOV_coop
+		icon = GFX_SOV_leader_of_the_party_and_the_people_ccp_2d_sov_compatibility
 		relative_position_id = LEC_liu_wang_zhe_gui_lai
 		cost = 5.00
 		x = 4
@@ -4106,7 +4105,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_she_hui_zhu_yi_jiao_yu
-		icon = GFX_SOV_god_building
+		icon = GFX_focus_por_workers_of_iberia
 		relative_position_id = LEC_liu_wang_zhe_gui_lai
 		cost = 5.00
 		x = 3
@@ -4305,7 +4304,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_sshi_yue_ge_ming
-		icon = GFX_SOV_soviet_republics
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism
 		relative_position_id = LEC_liu_wang_zhe_gui_lai
 		cost = 3.00
 		x = 0
@@ -4347,7 +4346,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_ou_ya_de_xin_li_ming
-		icon = GFX_SOV_bolsheviks_in_power
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		relative_position_id = LEC_liu_wang_zhe_gui_lai
 		cost = 2.00
 		x = 0
@@ -4445,7 +4444,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_qing_suan_bai_fei_jun
-		icon = GFX_SOV_even_greater_purge
+		icon = GFX_focus_SOV_penal_battalions
 		relative_position_id = LEC_liu_wang_zhe_gui_lai
 		cost = 5.00
 		x = -2
@@ -4473,7 +4472,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_jing_ji_zai_zheng_he
-		icon = GFX_SOV_forging_new_identity
+		icon = GFX_focus_generic_spur_communist_revolutions
 		relative_position_id = LEC_liu_wang_zhe_gui_lai
 		cost = 5.00
 		x = 0
@@ -4496,7 +4495,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_guan_liao_zai_kao_he
-		icon = GFX_SOV_down_villages
+		icon = GFX_focus_GER_strengthen_the_proletarian_international
 		relative_position_id = LEC_liu_wang_zhe_gui_lai
 		cost = 5.00
 		x = 2
@@ -4519,7 +4518,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_yu_guan_liao_zhu_yi_dou
-		icon = GFX_SOV_strike_syndies
+		icon = GFX_SOV_leader_of_the_party_and_the_people_ccp_2d_sov_compatibility
 		relative_position_id = LEC_liu_wang_zhe_gui_lai
 		cost = 5.00
 		x = -1
@@ -4552,7 +4551,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_guan_liao_ji_zhong_zhi
-		icon = GFX_SOV_bur_central
+		icon = GFX_focus_SOV_the_supreme_soviet
 		relative_position_id = LEC_liu_wang_zhe_gui_lai
 		cost = 5.00
 		x = 1
@@ -4609,7 +4608,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_jue_bu_tuo_xie_de_ling_xiu
-		icon = GFX_goal_GEO_Loyalty_or_Fear
+		icon = GFX_focus_fra_loyalty_stalin
 		relative_position_id = LEC_liu_wang_zhe_gui_lai
 		cost = 5.00
 		x = 0
@@ -4641,7 +4640,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_jian_c_zheng_tong_lu_xian
-		icon = GFX_goal_GEO_Mountain_gulags
+		icon = GFX_focus_SOV_military_purge
 		relative_position_id = LEC_jue_bu_tuo_xie_de_ling_xiu
 		cost = 5.00
 		x = 0
@@ -4668,7 +4667,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_jiao_yu_nong_min
-		icon = GFX_goal_GEO_We_Kneel_To_No_Other_Nation
+		icon = GFX_focus_SOV_breadbasket_of_the_union
 		relative_position_id = LEC_jue_bu_tuo_xie_de_ling_xiu
 		cost = 5.00
 		x = -1
@@ -4691,7 +4690,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_dong_fang_de_gang_tie_ju_ren
-		icon = GFX_goal_GEO_Tower_of_Tbilisi
+		icon = GFX_SOV_foreign_experts_ccp_2d_sov_compatibility
 		relative_position_id = LEC_jue_bu_tuo_xie_de_ling_xiu
 		cost = 5.00
 		x = -1
@@ -4773,7 +4772,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_chan_chu_fan_ge_ming
-		icon = GFX_goal_AUS_commandments_comrades
+		icon = GFX_focus_SOV_stalins_cult_of_personality
 		relative_position_id = LEC_jue_bu_tuo_xie_de_ling_xiu
 		cost = 5.00
 		x = 1
@@ -4804,7 +4803,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_zi_wo_ge_ming
-		icon = GFX_goal_GEO_Expanding_the_States_Capabilities
+		icon = GFX_SOV_inheritor_of_the_mantle_of_lenin_ccp_2d_sov_compatibility
 		relative_position_id = LEC_jue_bu_tuo_xie_de_ling_xiu
 		cost = 5.00
 		x = 1
@@ -4824,7 +4823,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_tuan_jie_jiu_si_li_liang
-		icon = GFX_goal_GEO_Peoples_Guard_Dictatorship
+		icon = GFX_SOV_leader_of_the_party_and_the_people_ccp_2d_sov_compatibility
 		relative_position_id = LEC_jue_bu_tuo_xie_de_ling_xiu
 		cost = 5.00
 		x = 0
@@ -4878,7 +4877,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_yi_si_xing_tai_wen
-		icon = GFX_RUS_Promote_Cooperation
+		icon = GFX_focus_spr_unify_the_london_bureau
 		relative_position_id = LEC_hong_se_jiao_shou
 		cost = 5.00
 		x = 2
@@ -4901,7 +4900,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_qian_zhe_xiu_zheng_zhu_yi
-		icon = GFX_RUS_Vanguard_Of_The_Revolution
+		icon = GFX_SOV_a_new_theory_of_revolution_ccp_2d_sov_compatibility
 		relative_position_id = LEC_hong_se_jiao_shou
 		cost = 5.00
 		x = 3
@@ -4923,7 +4922,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_ji_yao_fang_zuo_ye_yao
-		icon = GFX_RUS_left_eurasians2
+		icon = GFX_SOV_bring_old_trotskyists_back_ccp_2d_sov_compatibility
 		relative_position_id = LEC_hong_se_jiao_shou
 		cost = 5.00
 		x = 3
@@ -4949,7 +4948,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_yin_ru_xin_jin_ji_zheng_ce
-		icon = GFX_RUS_Introduce_NEP
+		icon = GFX_focus_SOV_bukharinists
 		relative_position_id = LEC_hong_se_jiao_shou
 		cost = 5.00
 		x = 0
@@ -4975,7 +4974,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_cheng_shi_gpmg_ye
-		icon = GFX_RUS_Fight_Urban_Rural
+		icon = GFX_focus_generic_low_cost_housing
 		relative_position_id = LEC_hong_se_jiao_shou
 		cost = 5.00
 		x = 1
@@ -5001,7 +5000,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_jin_sheng_gong_ye_hua
-		icon = GFX_RUS_Village_Communes
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		relative_position_id = LEC_hong_se_jiao_shou
 		cost = 5.00
 		x = 1
@@ -5027,7 +5026,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_lian_meng_de_xin_shi_dai
-		icon = GFX_SOV_centralize_supreme_soviet
+		icon = GFX_focus_generic_workers_and_farmers_rise
 		relative_position_id = LEC_hong_se_jiao_shou
 		cost = 5.00
 		x = 2
@@ -5311,7 +5310,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_shou_fu_shi_di
-		icon = GFX_RUS_totalism_with_eurasianism
+		icon = GFX_focus_SOV_socialism_in_one_country
 		relative_position_id = LEC_liu_wang_zhe_gui_lai	
 		x = 0
 		y = 16
@@ -5393,7 +5392,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_tu_er_qi
-		icon = GFX_goal_RUS_middle_east
+		icon = GFX_focus_generic_attack_turkey
 		relative_position_id = LEC_shou_fu_shi_di	
 		x = 4
 		y = 1
@@ -5455,7 +5454,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_Demand_North_Iran
-		icon = GFX_focus_rus_persia
+		icon = GFX_focus_generic_attack_iran
 		relative_position_id = LEC_shou_fu_shi_di	
 		x = 4
 		y = 2
@@ -5481,7 +5480,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_Invade_Afghanistan
-		icon = GFX_focus_rus_afghanistan
+		icon = GFX_focus_generic_befriend_afghanistan
 		relative_position_id = LEC_shou_fu_shi_di	
 		x = 4
 		y = 3
@@ -5517,7 +5516,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_Attack_Europe
-		icon = GFX_RUS_eastern_europe
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
 		relative_position_id = LEC_shou_fu_shi_di	
 		x = 0
 		y = 1
@@ -5546,7 +5545,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_Invade_WHR
-		icon = GFX_focus_rus_belarus
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		relative_position_id = LEC_shou_fu_shi_di	
 		x = 0
 		y = 2
@@ -5583,7 +5582,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_Invade_Finland
-		icon = GFX_focus_rus_finland
+		icon = GFX_focus_generic_attack_finland
 		relative_position_id = LEC_shou_fu_shi_di	
 		x = -2
 		y = 2
@@ -5618,7 +5617,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_Invade_Ukraine
-		icon = GFX_focus_rus_ukraine
+		icon = GFX_focus_SOV_organization_centralization_discipline
 		relative_position_id = LEC_shou_fu_shi_di	
 		x = 2
 		y = 2
@@ -5656,7 +5655,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_Demand_Bessarabiav
-		icon = GFX_focus_rus_balkans
+		icon = GFX_focus_generic_attack_romania
 		relative_position_id = LEC_shou_fu_shi_di	
 		x = 1
 		y = 3
@@ -5699,7 +5698,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_End_Poland
-		icon = GFX_focus_rus_poland
+		icon = GFX_focus_generic_polish_deal
 		relative_position_id = LEC_shou_fu_shi_di	
 		x = -1
 		y = 3
@@ -5734,7 +5733,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_End_Germany
-		icon = GFX_focus_RUS_germany
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
 		relative_position_id = LEC_shou_fu_shi_di	
 		x = 0
 		y = 4
@@ -5777,7 +5776,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_fuck_japan
-		icon = GFX_goal_generic_anti_japan
+		icon = GFX_focus_GER_strike_at_the_rising_sun
 		relative_position_id = LEC_shou_fu_shi_di	
 		x = -5
 		y = 1
@@ -5800,7 +5799,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_aslaksa
-		icon = GFX_DKB_Fort_Elisabeth
+		icon = GFX_focus_ARG_women_in_industry
 		relative_position_id = LEC_shou_fu_shi_di	
 		x = -6
 		y = 2
@@ -5835,7 +5834,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_east_aisa
-		icon = GFX_RUS_Kerensky_Martial_Law
+		icon = GFX_goal_JAP_target_indonesia
 		relative_position_id = LEC_shou_fu_shi_di	
 		x = -4
 		y = 2
@@ -5870,7 +5869,7 @@ focus_tree = {
 ###经济线
 	focus = {
 		id = LEC_xi_mie_huo_yan
-		icon = GFX_goal_TEX_rebuild_urban_housing
+		icon = GFX_focus_generic_workers
 		cost = 2
 		x = 60
 		y = 0
@@ -5898,7 +5897,7 @@ focus_tree = {
 	
 	focus = {
 		id = LEC_kai_fa_shang_hai_jiao_qu
-		icon = GFX_goal_CSA_strenght_through_industry
+		icon = GFX_focus_generic_land_reclamation
 		relative_position_id = LEC_xi_mie_huo_yan
 		cost = 5
 		x = -1
@@ -5948,7 +5947,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_she_hui_fu_li
-		icon = GFX_goal_USA_To_You_The_People
+		icon = GFX_focus_generic_welfare
 		relative_position_id = LEC_xi_mie_huo_yan
 		cost = 5
 		x = 0
@@ -5986,7 +5985,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_sheng_ji_jiao_yu
-		icon = GFX_goal_generic_red_university
+		icon = GFX_focus_ARG_develop_the_electricity_sector
 		relative_position_id = LEC_xi_mie_huo_yan
 		cost = 5
 		x = 0
@@ -6073,7 +6072,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_gui_hua_xin_jie_qu
-		icon = GFX_goal_ATH_logistics
+		icon = GFX_focus_BEL_engine_of_the_economy
 		relative_position_id = LEC_xi_mie_huo_yan
 		cost = 5
 		x = 3
@@ -6102,7 +6101,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_tou_zi_gong_ye
-		icon = GFX_goal_MEX_Smoke_over_Sonora
+		icon = GFX_focus_GER_wirtschaftswunder
 		relative_position_id = LEC_xi_mie_huo_yan
 		cost = 5
 		x = 3
@@ -6133,7 +6132,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_kuo_jian_gang_kou
-		icon = GFX_goal_FIU_Rebuild_Adriatic_Shipping_Lanes
+		icon = GFX_goal_USA_liberty_ships
 		relative_position_id = LEC_xi_mie_huo_yan
 		cost = 5
 		x = -3
@@ -6167,7 +6166,7 @@ focus_tree = {
 	
 	focus = {
 		id = LEC_dong_ya_shi_zi_lu_kou
-		icon = GFX_goal_MAG_open_port_for_all
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		relative_position_id = LEC_xi_mie_huo_yan
 		cost = 5
 		x = -3
@@ -6207,7 +6206,7 @@ focus_tree = {
 	
 	focus = {
 		id = LEC_lan_tian_hang_yun
-		icon = GFX_goal_VIN_expand_tan_son_nhut_air_base
+		icon = GFX_focus_generic_cas_aircraft
 		relative_position_id = LEC_xi_mie_huo_yan
 		cost = 5
 		x = -2
@@ -6240,7 +6239,7 @@ focus_tree = {
 
 	focus = {
 		id = LEC_rang_shi_you_liu_dong
-		icon = GFX_goal_GAL_sell_oil
+		icon = GFX_SOV_oil_production_ccp_2d_sov_compatibility
 		relative_position_id = LEC_xi_mie_huo_yan
 		cost = 5
 		x = 2
@@ -6267,7 +6266,7 @@ focus_tree = {
 	
 	focus = {
 		id = LEC_huan_ran_yi_xin
-		icon = GFX_HUN_hungary_diplomat
+		icon = GFX_focus_generic_public_works
 		relative_position_id = LEC_xi_mie_huo_yan
 		cost = 5
 		x = 0
@@ -6301,7 +6300,7 @@ focus_tree = {
 ###外交线
 	focus = {
 		id = SHC_bao_wei_shang_hai
-		icon = GFX_focus_HKG_Military_Cabinet
+		icon = GFX_goal_generic_fortify_city
 		cost = 5
 		x = 60
 		y = 15
@@ -6326,7 +6325,7 @@ focus_tree = {
 
 	focus = {
 		id = SHC_zi_you_gang_kou
-		icon = GFX_goal_MAG_open_port_for_all
+		icon = GFX_focus_ARG_defense_and_democracy
 		relative_position_id = SHC_bao_wei_shang_hai
 		cost = 5
 		x = 0
@@ -6360,7 +6359,7 @@ focus_tree = {
 
 	focus = {
 		id = SHC_international_neutral_zone
-		icon = GFX_goal_TEX_ideoloical_neutrality
+		icon = GFX_focus_GER_strengthen_the_proletarian_international
 		relative_position_id = SHC_bao_wei_shang_hai
 		cost = 5
 		x = 0
@@ -6484,7 +6483,7 @@ focus_tree = {
 
 	focus = {
 		id = SHC_shang_hai_shou_hu_zhe
-		icon = GFX_goal_TIB_Protecting_Antiquity_Roerich_Pact
+		icon = GFX_SOV_bring_old_trotskyists_back_ccp_2d_sov_compatibility
 		relative_position_id = SHC_bao_wei_shang_hai
 		cost = 5
 		x = 2
@@ -6513,7 +6512,7 @@ focus_tree = {
 ###军事线
 	focus = {
 		id = SHC_sheng_cun_shi_di_yi_yao_wu
-		icon = GFX_focus_HKG_kowloon_march
+		icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
 		cost = 4
 		x = 60
 		y = 7
@@ -6535,7 +6534,7 @@ focus_tree = {
 
 	focus = {
 		id = SHC_emergency_draft
-		icon = GFX_goal_NYC_new_york_volunteers
+		icon = GFX_SOV_muster_the_old_guard_ccp_2d_sov_compatibility
 		relative_position_id = SHC_sheng_cun_shi_di_yi_yao_wu
 		cost = 5		
 		x = 0
@@ -6558,7 +6557,7 @@ focus_tree = {
 
 	focus = {
 		id = SHC_industrialization_funded_by_elite
-		icon = GFX_GRU_CORPORATE_MILITARY_INDUSTRIAL_COMPLEX
+		icon = GFX_focus_generic_welfare
 		relative_position_id = SHC_sheng_cun_shi_di_yi_yao_wu
 		cost = 5		
 		x = 1
@@ -6620,7 +6619,7 @@ focus_tree = {
 
 	focus = {
 		id = SHC_emergency_fortifications
-		icon = GFX_goal_NYC_emergency_fortifications
+		icon = GFX_goal_generic_fortify_city
 		relative_position_id = SHC_sheng_cun_shi_di_yi_yao_wu
 		cost = 5		
 		x = -1
@@ -6702,7 +6701,7 @@ focus_tree = {
 
 	focus = {
 		id = SHC_utilize_the_national_guard
-		icon = GFX_focus_HKG_secure_the_streets
+		icon = GFX_SOV_reinstitute_the_mestnichestvo_ccp_2d_sov_compatibility
 		relative_position_id = SHC_sheng_cun_shi_di_yi_yao_wu
 		x = 0
 		y = 4
@@ -6744,7 +6743,7 @@ focus_tree = {
 
 	focus = {
 		id = SHC_pull_exiles
-		icon = GFX_focus_HKG_19_Army
+		icon = GFX_focus_SOV_approach_semyonov
 		relative_position_id = SHC_sheng_cun_shi_di_yi_yao_wu
 		x = -1
 		y = 5
@@ -6779,7 +6778,7 @@ focus_tree = {
 
 	focus = {
 		id = SHC_global_arms_trade
-		icon = GFX_goal_NFA_subsidize_guns
+		icon = GFX_SOV_shift_to_armaments_production_ccp_2d_sov_compatibility
 		relative_position_id = SHC_sheng_cun_shi_di_yi_yao_wu
 		x = 1
 		y = 5
@@ -6822,7 +6821,7 @@ focus_tree = {
 
 	focus = {
 		id = SHC_city_never_sleeps_never_falls
-		icon = GFX_focus_HKG_Recompense_Soldiers
+		icon = GFX_focus_generic_little_entente
 		relative_position_id = SHC_sheng_cun_shi_di_yi_yao_wu
 		x = 0
 		y = 6
@@ -6853,7 +6852,7 @@ focus_tree = {
 
 	focus = {
 		id = SHC_build_up_municipal_airstrip
-		icon = GFX_goal_CZE_air_industry
+		icon = GFX_focus_generic_multi_role_aircraft
 		relative_position_id = SHC_sheng_cun_shi_di_yi_yao_wu
 		cost = 5		
 		x = -3
@@ -6881,7 +6880,7 @@ focus_tree = {
 
 	focus = {
 		id = SHC_steal_planes
-		icon = GFX_goal_USA_organic_air_support
+		icon = GFX_focus_generic_aircraft_production
 		relative_position_id = SHC_sheng_cun_shi_di_yi_yao_wu
 		x = -3
 		y = 1
@@ -6912,7 +6911,7 @@ focus_tree = {
 
 	focus = {
 		id = SHC_central_park_aerodrome
-		icon = GFX_CAL_aerial_contracts
+		icon = GFX_focus_generic_air_research_boost
 		relative_position_id = SHC_sheng_cun_shi_di_yi_yao_wu
 		x = -3
 		y = 3
@@ -6980,7 +6979,7 @@ focus_tree = {
 
 	focus = {
 		id = SHC_pride_of_fleet_week
-		icon = GFX_goal_TEX_naval_prominence
+		icon = GFX_focus_generic_refit_civilian_ships
 		relative_position_id = SHC_sheng_cun_shi_di_yi_yao_wu
 		cost = 5		
 		x = 3
