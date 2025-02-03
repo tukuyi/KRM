@@ -157,9 +157,15 @@ country_event = {
 				long_name = LEC_social_liberal_party_GT_long
 				name = LEC_social_liberal_party_GT
 			}
+			recruit_character = SHC_lu_xun
 			promote_character = {
 				character = SHC_lu_xun
 				ideology = social_liberal_lu_xun_thought_subtype
+			}
+			SHC_lu_xun = {
+				set_variable = {
+					china_alignment = token:CHNsyndicalist
+				}
 			}
 			add_field_marshal_role = {
 				character = SHC_wang_shouhua
@@ -1354,6 +1360,11 @@ country_event = {#紧急选举
 				ruling_party = totalist
 				elections_allowed = no
 			}
+			SHC_chen_shaoyu = {
+				set_variable = {
+					china_alignment = token:CHNsyndicalist
+				}
+			}
 		}
 		else = {
 			promote_character = {
@@ -1383,6 +1394,11 @@ country_event = {#紧急选举
 			ruling_party = syndicalist
 			elections_allowed = no
 		}
+		SHC_liu_renjing = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
+		}
 		remove_all_ministers = yes
 		activate_advisor = SHC_tian_han_sic
 		hidden_effect = {
@@ -1406,6 +1422,11 @@ country_event = {#紧急选举
 		add_popularity = {
 			ideology = radical_socialist
 			popularity = 0.20
+		}
+		SHC_zhang_wentian = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
 		}
 		add_ideas = LEC_zhang_wen_tian_hog
 		hidden_effect = {
@@ -3479,6 +3500,11 @@ country_event = {#新领袖
 			character = SHC_zhou_yang
 			ideology = totalist_subtype
 		}
+		SHC_zhou_yang = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
+		}
 		set_party_name = {
 			ideology = totalist
 			long_name = LEC_totalist_party_ZY_long
@@ -3503,6 +3529,11 @@ country_event = {#新领袖
 		promote_character = {
 			character = SHC_kang_sheng
 			ideology = totalist_subtype
+		}
+		SHC_kang_sheng = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
 		}
 		set_party_name = {
 			ideology = totalist
@@ -3530,6 +3561,11 @@ country_event = {#新领袖
 			character = SHC_rao_shushi
 			ideology = syndicalist_subtype
 		}
+		SHC_rao_shushi = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
+		}
 		set_politics = {
 			ruling_party = syndicalist
 			elections_allowed = no
@@ -3553,6 +3589,11 @@ country_event = {#新领袖
 		set_politics = {
 			ruling_party = syndicalist
 		}
+		SHC_wang_yaqiao = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
+		}
 		set_party_name = {
 			ideology = syndicalist
 			long_name = LEC_triad_syndicalist_party_long
@@ -3573,6 +3614,11 @@ country_event = {#新领袖
 		promote_character = {
 			character = SHC_jing_meijiu
 			ideology = syndicalist_subtype
+		}
+		SHC_jing_meijiu = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
 		}
 		set_politics = {
 			ruling_party = syndicalist
@@ -3614,6 +3660,11 @@ country_event = {#新领袖
 		promote_character = {
 			character = SHC_zhao_shiyan
 			ideology = radical_socialist_new_tridemist_subtype
+		}
+		SHC_zhao_shiyan = {
+			set_variable = {
+				china_alignment = token:CHNsyndicalist
+			}
 		}
 		set_politics = {
 			ruling_party = radical_socialist
@@ -4359,6 +4410,12 @@ country_event = {#新总督？
 					elections_allowed = no
 				}
 			}
+			
+			SHC_elizabeth_ii = {
+				set_variable = {
+					china_alignment = token:CHNbritish
+				}
+			}
 		}
 	}
 
@@ -4384,6 +4441,12 @@ country_event = {#新总督？
 		set_politics = {
 			ruling_party = market_liberal
 			elections_allowed = no
+		}
+		
+		LEC_norman_lockhart_smith= {
+			set_variable = {
+				china_alignment = token:CHNbritish
+			}
 		}
 	}
 }

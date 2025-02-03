@@ -145,7 +145,6 @@ china_add_poor_army = yes
 #CHARACTERS
 recruit_character = SHC_wang_shouhua
 recruit_character = SHC_wang_fanxi
-recruit_character = SHC_lu_xun
 recruit_character = SHC_hui_jiliang
 recruit_character = SHC_yu_bing
 recruit_character = SHC_yuan_liang
@@ -157,11 +156,6 @@ SHC_wang_shouhua = {
 	}
 }
 SHC_wang_fanxi = {
-	set_variable = {
-		china_alignment = token:CHNsyndicalist
-	}
-}
-SHC_lu_xun = {
 	set_variable = {
 		china_alignment = token:CHNsyndicalist
 	}
