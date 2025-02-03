@@ -6455,52 +6455,7 @@ focus_tree = {
 				add_core_of = ROOT
 			}
 		}
-	}			
-
-	focus = {
-		id = SHC_shou_fu_shi_di
-		icon = GFX_LEC_Passports2
-		relative_position_id = SHC_bao_wei_shang_hai
-		cost = 4
-		x = -1
-		y = 3
-		
-		prerequisite = { 
-			focus = SHC_rang_shang_hai_zai_ci_wei_da 
-		}
-		available = {
-			is_puppet = no
-		}
-
-		ai_will_do = { base = 20 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHC_shou_fu_shi_di"
-			1066 = {
-				add_core_of = SHC
-			}
-			1068 = {
-				add_core_of = SHC
-			}
-			1012 = {
-				add_core_of = SHC
-			}
-			608 = {
-				add_core_of = SHC
-			}
-			746 = {
-				add_core_of = SHC
-			}
-			747 = {
-				add_core_of = SHC
-			}
-			326 = {
-				add_core_of = SHC
-			}
-			802 = {
-				add_core_of = SHC
-			}
-		}
-	}		
+	}				
 
 	focus = {
 		id = SHC_yi_tong_zhong_hua
@@ -6510,9 +6465,6 @@ focus_tree = {
 		x = -2
 		y = 4
 		
-		prerequisite = { 
-			focus = SHC_shou_fu_shi_di 
-		}
 		prerequisite = { 
 			focus = SHC_xiang_nan_jing_jin_jun 
 		}
@@ -6558,123 +6510,6 @@ focus_tree = {
 		}
 	}	
 
-	focus = {
-		id = SHC_da_qing
-		icon = GFX_goal_QIE_modernize_monarchy
-		relative_position_id = SHC_bao_wei_shang_hai
-		cost = 5
-		x = 1
-		y = 3
-		
-		prerequisite = { 
-			focus = SHC_shang_hai_shou_hu_zhe 
-		}
-		available = {
-			has_war = no
-			is_in_faction = no
-			NOT = {
-				has_country_flag = zong_gong_hui_victory
-				has_global_flag = china_united
-				has_completed_focus = SHC_lkmt
-				has_completed_focus = SHC_da_shuai
-			}
-			QIE = {
-				exists = yes
-			}
-		}
-
-		ai_will_do = { base = 20 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHC_da_qing"
-			every_country = {
-				limit = {
-					has_war_with = QIE
-				}
-				declare_war_on = {
-					target = PREV
-					type = annex_everything
-				}
-			}
-			unlock_decision_tooltip = LEC_dao_xiang_zhi_li
-		}
-	}		
-
-	focus = {
-		id = SHC_lkmt
-		icon = GFX_goal_chi_republic
-		relative_position_id = SHC_bao_wei_shang_hai
-		cost = 5
-		x = 3
-		y = 3
-		
-		prerequisite = { 
-			focus = SHC_shang_hai_shou_hu_zhe 
-		}
-		available = {
-			has_war = no
-			is_in_faction = no
-			CHI = {
-				exists = yes
-			}
-			NOT = {
-				has_global_flag = china_united
-				has_completed_focus = SHC_da_qing
-				has_completed_focus = SHC_da_shuai
-			}
-		}
-
-		ai_will_do = { base = 20 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHC_lkmt"
-			if = {
-				limit = { 
-					GXC = {
-						GXC_has_RKMT_government = yes
-					}
-				}
-			}
-			unlock_decision_tooltip = LEC_dao_xiang_liang_guang
-			unlock_decision_tooltip = LEC_dao_xiang_guo_ming_dang
-		}
-	}		
-
-	focus = {
-		id = SHC_da_shuai
-		icon = GFX_goal_FNG_Continue_the_National_Reclamation
-		relative_position_id = SHC_bao_wei_shang_hai
-		cost = 5
-		x = 2
-		y = 4
-		
-		prerequisite = { 
-			focus = SHC_shang_hai_shou_hu_zhe 
-		}
-		available = {
-			has_war = no
-			is_in_faction = no
-			NOT = {
-				has_global_flag = china_united				
-				has_country_flag = zong_gong_hui_victory
-				has_completed_focus = SHC_lkmt
-				has_completed_focus = SHC_da_qing
-			}
-			FNG = {
-				exists = yes
-				is_puppet = no
-			}
-		}
-
-		ai_will_do = { base = 20 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHC_da_shuai"
-			if = {
-				limit = {
-
-				}
-			}
-			unlock_decision_tooltip = LEC_dao_xiang_feng_tian
-		}
-	}	
 ###军事线
 	focus = {
 		id = SHC_sheng_cun_shi_di_yi_yao_wu
