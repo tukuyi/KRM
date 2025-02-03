@@ -37,7 +37,7 @@ characters = {
 		 }
 	 }
 	 country_leader = {
-		 ideology = social_liberal_subtype
+		 ideology = social_liberal_lu_xun_thought_subtype
 		 desc =  LU_XUN_DESC
 		 traits = {
 			 CHN_CHNsyndicalist_aligned
@@ -347,7 +347,7 @@ characters = {
 				logistics_skill = 1
 		}
 		country_leader = {
-			ideology = social_liberal_subtype
+			ideology = social_liberal_lu_xun_thought_subtype
 			traits = {
 				CHN_CHNsyndicalist_aligned
 			}
@@ -448,6 +448,13 @@ characters = {
 		}
 		country_leader = {
 			ideology = social_conservative_subtype
+			desc =  Sha_Xun_DESC
+			traits = {
+				CHN_CHNbritish_aligned
+			}
+		}
+		country_leader = {
+			ideology = national_populist_british_israelist_subtype
 			desc =  Sha_Xun_DESC
 			traits = {
 				CHN_CHNbritish_aligned
@@ -821,6 +828,13 @@ characters = {
 		}
 		country_leader = {
 			ideology = social_conservative_subtype
+			traits = {
+				CHN_CHNbritish_aligned
+				LEC_di_guo_zong_du
+			}
+		}
+		country_leader = {
+			ideology = national_populist_british_israelist_subtype
 			traits = {
 				CHN_CHNbritish_aligned
 				LEC_di_guo_zong_du

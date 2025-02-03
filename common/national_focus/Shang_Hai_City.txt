@@ -321,16 +321,9 @@ focus_tree = {
 						end_wars = no
 					}
 				}
-				add_country_leader_role = {
+				promote_character = {
 					character = SHC_victor_sassoon
-					promote_leader = yes
-					country_leader = {
-						ideology = national_populist_subtype
-						traits = {
-							CHN_CHNbritish_aligned
-						}
-						DESC = Sha_Xun_DESC
-					}
+					ideology = national_populist_british_israelist_subtype
 				}
 				set_party_name = {
 					ideology = national_populist
