@@ -6328,8 +6328,8 @@ focus_tree = {
 		icon = GFX_focus_ARG_defense_and_democracy
 		relative_position_id = SHC_bao_wei_shang_hai
 		cost = 5
-		x = 0
-		y = 2
+		x = 2
+		y = 1
 		
 		prerequisite = { 
 			focus = SHC_bao_wei_shang_hai 
@@ -6362,8 +6362,8 @@ focus_tree = {
 		icon = GFX_focus_GER_strengthen_the_proletarian_international
 		relative_position_id = SHC_bao_wei_shang_hai
 		cost = 5
-		x = 0
-		y = 4
+		x = 2
+		y = 2
 		
 		prerequisite = { 
 			focus = SHC_zi_you_gang_kou 
@@ -6390,7 +6390,7 @@ focus_tree = {
 		relative_position_id = SHC_bao_wei_shang_hai
 		cost = 3
 		x = -2
-		y = 2
+		y = 1
 		
 		prerequisite = { 
 			focus = SHC_bao_wei_shang_hai 
@@ -6412,27 +6412,6 @@ focus_tree = {
 				amount = 2000
 				producer = SHC
 			}
-		}
-	}		
-
-	focus = {
-		id = SHC_xiang_nan_jing_jin_jun
-		icon = GFX_goal_HNN_zhao_mu_ge_lao_hui
-		relative_position_id = SHC_bao_wei_shang_hai
-		cost = 4
-		x = -3
-		y = 3
-		
-		prerequisite = { 
-			focus = SHC_rang_shang_hai_zai_ci_wei_da 
-		}
-		available = {
-			is_puppet = no
-		}
-
-		ai_will_do = { base = 20 }
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SHC_xiang_nan_jing_jin_jun"
 			create_wargoal = {
 				type = annex_everything
 				target = var:613.owner
@@ -6454,18 +6433,17 @@ focus_tree = {
 				add_core_of = ROOT
 			}
 		}
-	}				
-
+	}		
 	focus = {
 		id = SHC_yi_tong_zhong_hua
 		icon = GFX_goal_chi_one_china_policy_KMT
 		relative_position_id = SHC_bao_wei_shang_hai
 		cost = 4
 		x = -2
-		y = 4
+		y = 2
 		
 		prerequisite = { 
-			focus = SHC_xiang_nan_jing_jin_jun 
+			focus = SHC_rang_shang_hai_zai_ci_wei_da
 		}
 		available = {
 			is_puppet = no
@@ -6477,7 +6455,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHC_yi_tong_zhong_hua"
 			add_political_power = 50
 			custom_effect_tooltip = tooltip_white_line
-			H_to_china = yes
+			set_potential_national_government = yes
 		}
 	}		
 
@@ -6486,7 +6464,7 @@ focus_tree = {
 		icon = GFX_SOV_bring_old_trotskyists_back_ccp_2d_sov_compatibility
 		relative_position_id = SHC_bao_wei_shang_hai
 		cost = 5
-		x = 2
+		x = 0
 		y = 2
 		
 		prerequisite = { 
@@ -6504,6 +6482,7 @@ focus_tree = {
 		ai_will_do = { base = 20 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SHC_shang_hai_shou_hu_zhe"
+			custom_effect_tooltip =  SHC_protector_tooltip
 			add_stability = -0.05
 			add_war_support = 0.05
 		}
