@@ -3666,6 +3666,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_ci_se_de_zhong_guo"
 			custom_effect_tooltip = tooltip_white_line
 			H_in_china = yes
+			set_potential_national_government = yes
 		}
 	}
 
@@ -3849,6 +3850,7 @@ focus_tree = {
 				target = var:613.owner
 				type = annex_everything
 			}
+			set_potential_national_government = yes
 			hidden_effect = {
 				create_wargoal = {
 					target = var:1046.owner

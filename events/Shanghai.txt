@@ -367,35 +367,14 @@ country_event = {
 				name = LEC_national_populist_party_HD
 			}
 			LEC = {
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_trait = LEC_british_commander
-							has_trait = LEC_international_commander
-						}
-					}
-					SHC_recruit_character_effect = yes
-				}
+				SHC_recruit_from_LEC = yes
+				SHC_recruit_from_LEC_ENG = yes
 			}
 			AST = {
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_trait = LEC_british_commander
-						}
-					}
-					SHC_recruit_character_effect = yes
-				}
+				SHC_recruit_from_LEC_ENG = yes
 			}
 			CAN = {
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_trait = LEC_british_commander
-						}
-					}
-					SHC_recruit_character_effect = yes
-				}
+				SHC_recruit_from_LEC_ENG = yes
 			}
 		}
 	}
@@ -528,35 +507,14 @@ country_event = {
 				logistics_skill = 1
 			}
 			LEC = {
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_trait = LEC_german_commander
-							has_trait = LEC_international_commander
-						}
-					}
-					SHC_recruit_character_effect = yes
-				}
+				SHC_recruit_from_LEC = yes
+				SHC_recruit_from_LEC_GER = yes
 			}
 			GEA = {
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_trait = LEC_german_commander
-						}
-					}
-					SHC_recruit_character_effect = yes
-				}
+				SHC_recruit_from_LEC_GER = yes
 			}
 			GER = {
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_trait = LEC_german_commander
-						}
-					}
-					SHC_recruit_character_effect = yes
-				}
+				SHC_recruit_from_LEC_GER = yes
 			}
 		}
 	}	
@@ -649,25 +607,11 @@ country_event = {
 		}
 		hidden_effect = {
 			LEC = {
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_trait = LEC_japanese_commander
-							has_trait = LEC_international_commander
-						}
-					}
-					set_nationality = ROOT
-				}
+				SHC_recruit_from_LEC = yes
+				SHC_recruit_from_LEC_JAP = yes
 			}
 			JAP = {
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_trait = LEC_japanese_commander
-						}
-					}
-					set_nationality = ROOT
-				}
+				SHC_recruit_from_LEC_JAP = yes
 			}
 		}
 	}		

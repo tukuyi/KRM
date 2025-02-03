@@ -1529,27 +1529,34 @@ china_set_government_tag_specific_scripted_effect = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					original_tag = LEC
-					original_tag = SHC
-				}
+				743 = { is_capital = yes }
 			}
 			if = {
 				limit = {
-					has_country_leader = {
-						character = SHC_peng_shuzhi
-						ruling_only = yes
+					NOT = {
+						OR = {
+							has_country_leader = {
+								character = SHC_peng_shuzhi
+								ruling_only = yes
+								
+							}
+							has_country_leader = {
+								character = SHC_pavel_milf
+								ruling_only = yes
+							}
+						}
 					}
 				}
-			}
-			else = {
 				set_cosmetic_tag = CSP_government_shanghai_cosmetic #上海总公社
 			}
+			else = {}
 		}
 		else_if = {
-			AND = {
-				original_tag = SZC
-				650 = { is_capital = yes }
+			limit = {
+				AND = {
+					original_tag = SZC
+					650 = { is_capital = yes }
+				}
 			}
 			set_cosmetic_tag = CSP_government_chongqing_cosmetic #重庆总公社
 		}

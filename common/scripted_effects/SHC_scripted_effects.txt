@@ -15,6 +15,98 @@ SHC_recruit_character_effect = {#SHC招募
 	}
 }
 
+
+
+
+#####RECRUIT POST LEC OFFICIER#####
+SHC_recruit_from_LEC = {
+	LEC_william_ewart_fairbairn = {
+		SHC_recruit_character_effect = yes
+	}
+	LEC_german_time = {
+		SHC_recruit_character_effect = yes
+	}
+	LEC_reginald_yorke_tyrwhitt = {
+		SHC_recruit_character_effect = yes
+	}
+	LEC_john_duncan = {
+		SHC_recruit_character_effect = yes
+	}
+	LEC_jame_howe_dobson  = {
+		SHC_recruit_character_effect = yes
+	}
+	LEC_john_marston = {
+		SHC_recruit_character_effect = yes
+	}
+}
+
+SHC_recruit_from_LEC_GER = {
+	LEC_lothar_eisentrager = {
+		SHC_recruit_character_effect = yes
+	}
+	LEC_emil_helfferich = {
+		SHC_recruit_character_effect = yes
+	}
+	LEC_georg_wetzell  = {
+		SHC_recruit_character_effect = yes
+	}
+	LEC_walter_stennes  = {
+		SHC_recruit_character_effect = yes
+	}
+}
+
+SHC_recruit_from_LEC_JAP = {
+	LEC_hiraya_amane = {
+		SHC_recruit_character_effect = yes
+	}
+	LEC_masahiko_amakasu = {
+		SHC_recruit_character_effect = yes
+	}
+	LEC_michitaro_komatsubara  = {
+		SHC_recruit_character_effect = yes
+	}
+	LEC_koreshige_inuzuka  = {
+		SHC_recruit_character_effect = yes
+	}
+}
+
+SHC_recruit_from_LEC_ENG = {
+	LEC_cecil_clementi = {
+		SHC_recruit_character_effect = yes
+	}
+	LEC_vandeleur_molyneux_grayburn = {
+		SHC_recruit_character_effect = yes
+	}
+	LEC_francis_wogan_festing = {
+		SHC_recruit_character_effect = yes
+	}
+	LEC_edward_barrett = {
+		SHC_recruit_character_effect = yes
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 SHC_HD_idaa_change = {
 	if = {
 		limit = { 
