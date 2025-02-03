@@ -1232,11 +1232,8 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			add_marlib_to_coalition = yes
-			create_country_leader = {
-				name = "艾利·嘉道理"
-				desc = "HE_DONG_DESC"
-				picture = "gfx/leaders/LEC/Portrait_LEC_Wang_Shou_Hua.png"
-				expire = "1.1.1"
+			promote_character = {
+				character = SHC_elly_kadoorie
 				ideology = market_liberal_subtype
 			}
 			set_party_name = {

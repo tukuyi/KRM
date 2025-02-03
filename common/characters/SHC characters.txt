@@ -84,6 +84,13 @@ characters = {
 		planning_skill = 3
 		logistics_skill = 3
 		}
+		advisor = {
+			slot = army_chief
+			idea_token = SHC_alexander_i_cherepanov_army_chief
+			desc = Portrait_Alexander_Ivanovich_Cherepanov_DESC
+			traits = { KR_army_chief_morale_2 }
+			cost = 100
+		}
 	}
 	#尼古拉·古比雪夫
 	 SHC_nikolay_kuibyshev = {
@@ -107,6 +114,14 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 3
 		 }
+		 advisor = {
+			slot = high_command
+			idea_token = SHC_nikolay_kuibyshev_high_command
+			desc = POLITICS_Nikolay_Kuibyshev_DES
+			ledger = army
+			traits = { KR_MHC_infantry_2 }
+			cost = 100
+		}
 	 }
 	#尼古拉·罗申
 	SHC_nikolai_roshchin = {
@@ -210,8 +225,16 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 2
 		}
+		advisor = {
+			slot = high_command
+			idea_token = SHC_wang_yaqiao_high_command
+			ledger = army
+			traits = { KR_shock_assault_2 }
+			cost = 100
+		}
 		country_leader = {
 			ideology = syndicalist_subtype
+			desc =  POLITICS_WANG_YA_QIAO_DESC
 			traits = {
 				CHN_CHNsyndicalist_aligned
 			}
@@ -292,6 +315,13 @@ characters = {
 				defense_skill = 1
 				planning_skill = 1
 				logistics_skill = 1
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SHC_tian_han_sic
+			traits = { KR_socialist_idealist_sic }
+			cost = 0
+			can_be_fired = no
 		}
 	}
 	#茅盾
@@ -399,6 +429,13 @@ characters = {
 				CHN_CHNsyndicalist_aligned
 			}
 		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SHC_zhao_shiyan_sic
+			traits = { KR_man_of_the_people_sic }
+			cost = 0
+			can_be_fired = no
+		}
 	}
 	#维克多·沙逊
 	SHC_victor_sassoon = {
@@ -417,6 +454,55 @@ characters = {
 			}
 		}
 	}
+	#艾利·嘉道理
+	SHC_elly_kadoorie = {
+		name = SHC_elly_kadoorie
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_SHC_elly_kadoorie_large
+				small = GFX_Portrait_SHC_elly_kadoorie_small
+			}
+		}
+		country_leader = {
+			ideology = market_liberal_subtype
+			traits = {
+				CHN_CHNbritish_aligned
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SHC_elly_kadoorie_sic
+			traits = { KR_economic_reformer_sic   }
+			cost = 0
+			can_be_fired = no
+		}
+	}
+	#何世礼
+	SHC_robbie_hoshailai = {
+		name = SHC_robbie_hoshailai
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_SHC_robbie_hoshailai_large
+				small = GFX_Portrait_SHC_robbie_hoshailai_small
+			}
+		}
+		field_marshal = {
+		 	desc =  none
+		 	traits = { infantry_officer career_officer organizer }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SHC_robbie_hoshailai_sic
+			traits = { KR_silent_workhorse_sic  }
+			cost = 0
+			can_be_fired = no
+		}
+	}
 	#惠济良
 	SHC_hui_jiliang = {
 		name = SHC_hui_jiliang
@@ -432,6 +518,13 @@ characters = {
 			traits = {
 				CHN_non_aligned
 			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SHC_hui_jiliang_sic
+			traits = { KR_media_magnate_sic  }
+			cost = 0
+			can_be_fired = no
 		}
 	}
 	#于斌
@@ -449,6 +542,13 @@ characters = {
 			traits = {
 				CHN_non_aligned
 			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SHC_yu_bing_sic
+			traits = { KR_spiritual_leader_sic   }
+			cost = 0
+			can_be_fired = no
 		}
 	}
 	#袁良
@@ -508,6 +608,13 @@ characters = {
 				CHN_CHNsyndicalist_aligned
 			}
 		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SHC_chen_shaoyu_sic
+			traits = { KR_gentleman_of_revolution_sic }
+			cost = 0
+			can_be_fired = no
+		}
 	 }
 	 #刘仁静
 	 SHC_liu_renjing = {
@@ -546,6 +653,14 @@ characters = {
 			traits = {
 				CHN_CHNsyndicalist_aligned
 			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SHC_zhang_wentian_advisor
+			visible = {
+			    has_socialist_government = yes
+			}
+			traits = { KR_silent_workhorse }
 		}
 	}
 	#江长川
@@ -611,7 +726,19 @@ characters = {
 				CHN_CHNsyndicalist_aligned
 			}
 		}
-	}
+	}	
+	SHC_allrussochinese_soviet = {
+		name = SHC_allrussochinese_soviet
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/HNN/Portrait_RUS_Workers.png"
+			}
+		}
+		country_leader = {
+			ideology = totalist_subtype
+			traits = { CHN_CHNsyndicalist_aligned }
+		}
+	}	
 	#景梅九
 	SHC_jing_meijiu = {
 		name = SHC_jing_meijiu
@@ -642,6 +769,13 @@ characters = {
 			traits = {
 				CHN_CHNsyndicalist_aligned
 			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SHC_rou_shi_sic
+			traits = { KR_worldly_intellectual_sic }
+			cost = 0
+			can_be_fired = no
 		}
 	}
 	#马三立
@@ -688,7 +822,7 @@ characters = {
 		country_leader = {
 			ideology = social_conservative_subtype
 			traits = {
-				CHN_non_aligned
+				CHN_CHNbritish_aligned
 				LEC_di_guo_zong_du
 			}
 		}

@@ -84,18 +84,7 @@ country_event = {
 		}
 		set_country_flag = zong_gong_hui_victory
 		set_cosmetic_tag = LEC_GT
-		remove_all_ministers = yes
-		remove_ideas = {
-			LEC_Du_Yuesheng_boss_sli
-			LEC_Huang_Jinrong_boss_sli
-			LEC_Zhang_Xiaolin_boss_sli
-		}
-		add_ideas = {
-			LEC_wang_shou_hua_hog
-			LEC_Liu_Hongsheng_eco_sli
-			LEC_zhao_si_yan_for
-			LEC_tian_han_eco
-		}
+		activate_advisor = SHC_zhao_shiyan_sic
 		add_timed_idea = {
 			idea = SHC_di_xia_she_hui_de_fan_pu
 			days = 180
@@ -105,6 +94,10 @@ country_event = {
 			days = 180
 		}
 		hidden_effect = {
+			remove_advisor_role = {
+				character = LEC_robert_hotung
+				slot = political_advisor
+			  }
 			country_event = {
 				id = lecgong.1
 				days = 2
@@ -261,18 +254,9 @@ country_event = {
 			elections_allowed = no
 		}
 		set_cosmetic_tag = LEC_HD
-		remove_all_ministers = yes
-		remove_ideas = {
-			LEC_Du_Yuesheng_boss_sli
-			LEC_Huang_Jinrong_boss_sli
-			LEC_Zhang_Xiaolin_boss_sli
-		}
-		add_ideas = {
-			LEC_Robert_Hotung_hog
-			LEC_he_fu_eco
-			LEC_he_gan_tang_for
-			LEC_he_shi_li_sec
-		}
+		recruit_character = SHC_robbie_hoshailai
+		activate_advisor = SHC_robbie_hoshailai
+		
 		division_template = { #Guangxi Army
 			name = "上海雇佣军"
 			division_names_group = "LEC_GAR_01"
@@ -309,6 +293,10 @@ country_event = {
 			days = 1
 		}
 		hidden_effect = {
+			remove_advisor_role = {
+				character = LEC_robert_hotung
+				slot = political_advisor
+			  }
 			add_country_leader_role = {
 				character = LEC_robert_hotung
 				promote_leader = yes
@@ -436,18 +424,7 @@ country_event = {
 			elections_allowed = no
 		}
 		set_cosmetic_tag = LEC_TZ
-		remove_all_ministers = yes
-		remove_ideas = {
-			LEC_Du_Yuesheng_boss_sli
-			LEC_Huang_Jinrong_boss_sli
-			LEC_Zhang_Xiaolin_boss_sli
-		}
-		add_ideas = {
-			LEC_hui_ji_liang_hog
-			LEC_Lothar_Eisentraeger_eco_pau
-			LEC_Hubert_Knipping_for_pau
-			LEC_Thomas_Tien_Ken_sin_sec_sli
-		}
+		activate_advisor = SHC_hui_jiliang_sic
 		add_timed_idea = {
 			idea = SHC_she_hui_zhu_yi_yu_wen
 			days = 180
@@ -1319,7 +1296,16 @@ country_event = {#响彻世界的一枪
 		name = Shcgong.17.a
 		add_manpower = -1
 		add_stability = -0.10
-		remove_ideas = LEC_mi_fu_hog
+		SHC_pavel_milf = {
+			kill_country_leader = yes
+		}
+		hidden_effect = {
+			recruit_character = SHC_allrussochinese_soviet
+			promote_character = {
+				character = SHC_allrussochinese_soviet
+				ideology = totalist_subtype
+			}
+		}
 		country_event = {
 			id = Shcgong.18
 			days = 3
@@ -1398,12 +1384,7 @@ country_event = {#紧急选举
 			elections_allowed = no
 		}
 		remove_all_ministers = yes
-		add_ideas = {
-			LEC_liu_ren_jing_hog
-			LEC_zheng_chao_ling_eco
-			LEC_bo_gu_for
-			LEC_tian_han_eco
-		}
+		activate_advisor = SHC_tian_han_sic
 		hidden_effect = {
 			promote_character = {
 				character = SHC_chen_shaoyu
@@ -2098,13 +2079,8 @@ country_event = {#真正的话事人
 			ruling_party = social_conservative
 			elections_allowed = no
 		}
-		remove_all_ministers = yes
-		add_ideas = {
-			LEC_sha_he_hog
-			LEC_T_Sassoon_eco_pau
-			AOG_He_Fengshang_for_ade
-			LEC_Sir_Harold_McMichael_sec_mli
-		}
+		recruit_character = SHC_elly_kadoorie
+		activate_advisor = SHC_elly_kadoorie_sic
 		set_cosmetic_tag = SHC_YT
 		hidden_effect = {
 			country_event = {
@@ -2185,12 +2161,24 @@ country_event = {#抉择
 			}
 		}
 		set_country_flag = jin_cha_ju_victory
-		add_ideas = {
-			LEC_yuan_liang_hog
-			LEC_Hubert_Knipping_for_pau
-			LEC_Robert_Hotung_eco_sli
-			LEC_Mark_Aitchison_Young_sec_sco
-		} 
+		
+		remove_advisor_role = {
+			character = LEC_robert_hotung
+			slot = political_advisor
+		}
+		add_advisor_role = {
+			character = LEC_robert_hotung
+			advisor = {
+				slot = second_in_command
+				idea_token = LEC_robert_hotung_sic
+				traits = {
+					KR_grand_old_man
+				}
+				cost = 0
+				can_be_fired = no
+			 }
+			 activate = yes
+		}
 	}
 
 	option = {#大道政府
@@ -2212,12 +2200,19 @@ country_event = {#抉择
 		clr_country_flag = jin_cha_ju_victory
 		set_country_flag = han_jian_victory
 		set_cosmetic_tag = LEC_PLE
-		add_ideas = {
-			LEC_su_xi_wen_hog
-			LEC_Michitaro_Komatsubara_eco_npo
-			LEC_Geoffry_Northcote_sec_sco
-			LEC_Hiraya_Amane_boss_npo
-		} 
+		add_advisor_role = {
+			character = LEC_michitaro_komatsubara
+			advisor = {
+				slot = second_in_command
+				idea_token = LEC_minchitaro_komatsubara_sic
+				traits = {
+					KR_administrative_genius_sic
+				}
+				cost = 0
+				can_be_fired = no
+			 }
+			 activate = yes
+		}
 	}	
 }
 
@@ -2422,6 +2417,23 @@ country_event = {#暴力之夜
 			base = 5
 		}
 		set_country_flag = SHC_choose_japan
+		remove_advisor_role = {
+			slot = second_in_command
+			character = LEC_robert_hotung
+		}
+		add_advisor_role = {
+			character = LEC_michitaro_komatsubara
+			advisor = {
+				slot = second_in_command
+				idea_token = LEC_minchitaro_komatsubara_sic
+				traits = {
+					KR_administrative_genius_sic
+				}
+				cost = 0
+				can_be_fired = no
+			 }
+			 activate = yes
+		}
 	}
 }
 
@@ -2908,8 +2920,7 @@ country_event = {#领导人
 			ruling_party = social_liberal
 			elections_allowed = no
 		}
-		remove_ideas = LEC_wang_shou_hua_hog
-		add_ideas = LEC_lu_xun_hog
+		activate_advisor = SHC_rou_shi_sic
 		hidden_effect = {
 			country_event = {
 				id = Shcgong.34
@@ -3002,12 +3013,7 @@ country_event = {#领导人
 			}
 		}
 		remove_all_ministers = yes
-		add_ideas = {
-			LEC_mi_fu_hog
-			LEC_wang_ming_eco
-			LEC_bo_gu_for
-			LEC_tian_han_eco
-		}
+		activate_advisor = SHC_chen_shaoyu_sic
 		set_politics = {
 			ruling_party = totalist
 			elections_allowed = no
@@ -4607,8 +4613,7 @@ country_event = {#我们的领导者
 	option = {#
 		name = lecjidu.4.b
 		add_political_power = 10
-		remove_ideas = LEC_hui_ji_liang_hog
-		add_ideas = LEC_yu_bing_hog
+		activate_advisor = SHC_hui_jiliang_sic
 		set_politics = {
 			ruling_party = authoritarian_democrat
 			elections_allowed = no
