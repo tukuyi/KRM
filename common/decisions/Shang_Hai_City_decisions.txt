@@ -549,10 +549,6 @@ LEC_wai_jiao_category = {
 	LEC_xie_yue_guo_de_wu_qi = {#购买枪支
 		icon = generic_prepare_civil_war
 		available = {
-			SHC = {
-				is_in_faction = no
-				is_puppet = no
-			}
 		}
 		ai_will_do = {
 			factor = 100
