@@ -94,3 +94,24 @@ option = {#
 }
 
 }
+
+
+country_event = {#laofoye
+id = csp.3
+immediate = { log = "[GetDateText]: [Root.GetName]: event hnndebug.1" }
+title = hnndebug.1.t
+desc = hnndebug.1.d
+
+is_triggered_only = yes
+option = {#
+	name = "老佛爷来了"
+	recruit_character = SHC_elizabeth_ii
+}
+option = {#
+	name = "有老佛爷"
+	trigger = {
+	   has_character = SHC_elizabeth_ii
+	}
+}
+
+}

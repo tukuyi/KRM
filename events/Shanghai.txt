@@ -4337,7 +4337,11 @@ country_event = {#新总督？
 	fire_only_once = yes
 
 	is_triggered_only = yes
-
+	immediate = {
+		hidden_effect = {
+			recruit_character = SHC_elizabeth_ii
+		}
+	}
 	option = {#何东
 		name = leche.13.a
 		add_country_leader_trait = LEC_di_guo_zong_du
@@ -4345,6 +4349,7 @@ country_event = {#新总督？
 
 	option = {#伊丽莎白二世
 		name = leche.13.b
+		recruit_character = SHC_elizabeth_ii
 		hidden_effect = {
 			if ={
 				limit = {
@@ -4353,17 +4358,25 @@ country_event = {#新总督？
 						ruling_only = yes
 					}
 				}
-				recruit_character = SHC_elizabeth_ii
 				promote_character = {
 					character = SHC_elizabeth_ii
 					ideology = national_populist_british_israelist_subtype
 				}
+				set_party_name = {
+					ideology = national_populist
+					long_name =  SHC_BCN_party_long
+					name =  SHC_BCN_party
+				}
 			}
 			else = {
-				recruit_character = SHC_elizabeth_ii
 				promote_character = {
 					character = SHC_elizabeth_ii
 					ideology = social_conservative_subtype
+				}
+				set_party_name = {
+					ideology = social_conservative
+					long_name =  SHC_BCN_party_long
+					name =  SHC_BCN_party
 				}
 				set_politics = {
 					ruling_party = social_conservative
@@ -4401,6 +4414,11 @@ country_event = {#新总督？
 		set_politics = {
 			ruling_party = market_liberal
 			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = market_liberal
+			long_name =  SHC_BCN_party_long
+			name =  SHC_BCN_party
 		}
 		
 		LEC_norman_lockhart_smith= {
