@@ -140,8 +140,10 @@ focus_tree = {
 				}
 				add_country_leader_role = {
 					character = LEC_robert_hotung
+					promote_leader = yes
 					country_leader = {
 						ideology = social_democrat_subtype
+						desc = HE_DONG_DESC
 						traits = {
 							CHN_non_aligned
 						}
@@ -151,10 +153,11 @@ focus_tree = {
 			else = {
 				add_country_leader_role = {
 					character = SHC_victor_sassoon
+					promote_leader = yes
 					country_leader = {
 						ideology = social_democrat_subtype
 						traits = {
-							CHN_non_aligned
+							CHN_CHNbritish_aligned
 						}
 					}
 				}
@@ -200,8 +203,10 @@ focus_tree = {
 				}
 				add_country_leader_role = {
 					character = LEC_robert_hotung
+					promote_leader = yes
 					country_leader = {
 						ideology = authoritarian_democrat_subtype
+						desc = HE_DONG_DESC
 						traits = {
 							CHN_non_aligned
 						}
@@ -211,10 +216,11 @@ focus_tree = {
 			else = {
 				add_country_leader_role = {
 					character = SHC_victor_sassoon
+					promote_leader = yes
 					country_leader = {
 						ideology = authoritarian_democrat_subtype
 						traits = {
-							CHN_non_aligned
+							CHN_CHNbritish_aligned
 						}
 					}
 				}
@@ -346,18 +352,51 @@ focus_tree = {
 						end_wars = no
 					}
 				}
-				LEC_robert_hotung = {
-					swap_country_leader_traits = {
-						remove = CHN_non_aligned
-						add = CHN_CHNbritish_aligned
+				hidden_effect = {
+					LEC_robert_hotung = {
+						swap_country_leader_traits = {
+							remove = CHN_non_aligned
+							add = CHN_CHNbritish_aligned
+							ideology = social_democrat_subtype
+						}
+						swap_country_leader_traits = {
+							remove = CHN_non_aligned
+							add = CHN_CHNbritish_aligned
+							ideology = social_liberal_subtype
+						}
+						swap_country_leader_traits = {
+							remove = CHN_non_aligned
+							add = CHN_CHNbritish_aligned
+							ideology = market_liberal_subtype
+						}
+						swap_country_leader_traits = {
+							remove = CHN_non_aligned
+							add = CHN_CHNbritish_aligned
+							ideology = social_conservative_subtype
+						}
+						swap_country_leader_traits = {
+							remove = CHN_non_aligned
+							add = CHN_CHNbritish_aligned
+							ideology = authoritarian_democrat_subtype
+						}
+						swap_country_leader_traits = {
+							remove = CHN_non_aligned
+							add = CHN_CHNbritish_aligned
+							ideology = paternal_autocrat_subtype
+						}
+						swap_country_leader_traits = {
+							remove = CHN_non_aligned
+							add = CHN_CHNbritish_aligned
+							ideology = national_populist_subtype
+						}
+						set_variable = {
+							china_alignment = token:CHNbritish
+						}
 					}
-					set_variable = {
-						china_alignment = token:CHNbritish
+					set_politics = {
+						ruling_party = social_liberal
+						elections_allowed = no
 					}
-				}
-				set_politics = {
-					ruling_party = social_liberal
-					elections_allowed = no
 				}
 			}
 			hidden_effect = {
@@ -7737,6 +7776,7 @@ focus_tree = {
 				swap_country_leader_traits = {
 					remove = CHN_geacps_aligned
 					add = CHN_non_aligned
+					ideology = paternal_autocrat_subtype
 				}
 				set_variable = {
 					china_alignment = token:CHN_non_aligned

@@ -246,3 +246,56 @@ CSP_recruit_from_BEIFANG_effect = {
 			CSP_recruit_character_effect = yes
 		}
 }
+
+
+
+
+
+SHC_startup_effect = {
+	SHC = { 524 = { enable_state_integration_80_compliance = yes } } #Taiwan }
+	SHC = {
+		if = {
+			limit = { has_dlc_aat = yes }
+			###- MIO Decision Setup - add half funds if they start off
+			#Major Arsenals
+			716 = { CHN_setup_major_arsenal_decision_effect = yes } #Liaoning
+			1072 = { CHN_setup_major_arsenal_decision_effect = yes } #East Shanxi
+			1059 = { CHN_setup_major_arsenal_decision_effect = yes } #Kaifeng
+			1048 = { CHN_setup_major_arsenal_decision_effect = yes } #Wuhan
+			592 = { CHN_setup_major_arsenal_decision_effect = yes } #Canton
+			#Minor Small Arms Arsenals
+			597 = { CHN_setup_minor_small_arms_arsenal_decision_effect = yes } #Jinan
+			613 = { CHN_setup_minor_small_arms_arsenal_decision_effect = yes } #Jinling
+			650 = { CHN_setup_minor_small_arms_arsenal_decision_effect = yes } #Chongqing
+			#Minor Support Equipment Arsenals
+			325 = { CHN_setup_minor_support_equipment_arsenal_decision_effect = yes } #kunming
+			602 = { CHN_setup_minor_support_equipment_arsenal_decision_effect = yes } #zhuzhou
+			617 = { CHN_setup_minor_support_equipment_arsenal_decision_effect = yes } #Dihua
+			#Minor Artillery Arsenals
+			283 = { CHN_setup_minor_artillery_arsenal_decision_effect = yes } #Lanzhou
+			#Major Dockyards
+			716 = { CHN_setup_major_dockyards_decision_effect = yes } #Liaoning
+			743 = { CHN_setup_major_dockyards_decision_effect = yes } #Shanghai
+			747 = { CHN_setup_major_dockyards_decision_effect = yes } #Fuzhou
+			592 = { CHN_setup_major_dockyards_decision_effect = yes } #Canton
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				is_mongolia = yes
+				is_tibet = yes
+				is_xinjiang = yes
+			}
+		}
+		SHC = {
+			enable_state_integration_80_compliance = yes
+		}
+	}
+	every_state = {
+		limit = { is_core_china = yes }
+		SHC = {
+			enable_state_integration_50_compliance = yes
+		}
+	}
+}
