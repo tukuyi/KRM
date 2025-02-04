@@ -3324,8 +3324,6 @@ country_event = {#起义！
 
 	option = {
 		name = lecgong.7.b
-		add_to_array = { global.china_tags_array = SHC }
-		SHC_startup_effect = yes
 		SHC = { 
 			change_tag_from = ROOT 
 		}
