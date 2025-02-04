@@ -288,14 +288,10 @@ SHC_startup_effect = {
 				is_xinjiang = yes
 			}
 		}
-		SHC = {
-			enable_state_integration_80_compliance = yes
-		}
+		enable_state_integration_80_compliance = yes
 	}
 	every_state = {
 		limit = { is_core_china = yes }
-		SHC = {
-			enable_state_integration_50_compliance = yes
-		}
+		enable_state_integration_50_compliance = yes
 	}
 }
