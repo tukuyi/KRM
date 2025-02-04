@@ -143,6 +143,7 @@ china_add_poor_army = yes
 
 
 #CHARACTERS
+
 recruit_character = SHC_wang_shouhua
 recruit_character = SHC_wang_fanxi
 recruit_character = SHC_hui_jiliang
@@ -151,6 +152,46 @@ recruit_character = SHC_yuan_liang
 recruit_character = SHC_su_xiwen
 recruit_character = SHC_zhang_wentian
 recruit_character = SHC_lu_xun
+
+
+recruit_character = SHC_pavel_milf
+recruit_character = SHC_alexander_i_cherepanov
+recruit_character = SHC_nikolay_kuibyshev
+recruit_character = SHC_nikolai_roshchin
+recruit_character = SHC_sun_fuyuan
+recruit_character = SHC_rao_shushi
+recruit_character = SHC_wang_yaqiao
+recruit_character = SHC_peng_shuzhi
+recruit_character = SHC_kang_sheng
+recruit_character = SHC_tian_han
+recruit_character = SHC_mao_dun
+recruit_character = SHC_zhang_chunqiao
+recruit_character = SHC_zhou_yang
+recruit_character = SHC_zhao_shiyan
+recruit_character = SHC_chen_shaoyu
+recruit_character = SHC_liu_renjing
+recruit_character = SHC_zhang_wentian
+recruit_character = SHC_jing_meijiu
+recruit_character = SHC_ma_sanli
+recruit_character = SHC_hu_feng
+recruit_character = SHC_rou_shi
+recruit_character = SHC_allrussochinese_soviet
+
+
+
+recruit_character = SHC_victor_sassoon
+recruit_character = SHC_elly_kadoorie
+recruit_character = SHC_elizabeth_ii
+recruit_character = SHC_robbie_hoshailai
+
+
+recruit_character = SHC_jiang_changchuan
+recruit_character = SHC_ding_guangxun
+recruit_character = SHC_li_chuwen
+
+
+
+
 SHC_lu_xun = {
 	set_variable = {
 		china_alignment = token:CHNsyndicalist
@@ -176,6 +217,183 @@ SHC_su_xiwen = {
 		china_alignment = token:CHN_geacps_aligned
 	}
 }
+
+
+
+SHC_pavel_milf = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_alexander_i_cherepanov = {
+	retire = yes
+}
+SHC_nikolay_kuibyshev = {
+	retire = yes
+}
+SHC_nikolai_roshchin = {
+	retire = yes
+}
+SHC_sun_fuyuan = {
+	retire = yes
+}
+SHC_rao_shushi = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_wang_yaqiao = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_peng_shuzhi = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_kang_sheng = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_tian_han = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_mao_dun = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_zhang_chunqiao = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_zhou_yang = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_zhao_shiyan = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_chen_shaoyu = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_liu_renjing = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_zhang_wentian = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_jing_meijiu = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_ma_sanli = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_hu_feng = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_rou_shi = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_rao_shushi = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_allrussochinese_soviet = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+
+
+SHC_victor_sassoon = {
+	set_variable = {
+		china_alignment = token:CHNbritish
+	}
+	retire = yes
+}
+SHC_elly_kadoorie = {
+	set_variable = {
+		china_alignment = token:CHNbritish
+	}
+	retire = yes
+}
+SHC_robbie_hoshailai = {
+	retire = yes
+}
+SHC_elizabeth_ii = {
+	set_variable = {
+		china_alignment = token:CHNbritish
+	}
+	retire = yes
+}
+
+
+
+SHC_jiang_changchuan = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_ding_guangxun = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+SHC_li_chuwen = {
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+	retire = yes
+}
+
+
+
+
 
 
 

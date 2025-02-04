@@ -117,32 +117,76 @@ country_event = {
 				long_name = LEC_social_liberal_party_GT_long
 				name = LEC_social_liberal_party_GT
 			}
-			recruit_character = SHC_lu_xun
+			SHC_lu_xun = {
+				SHC_recruit_character_effect = yes
+			}
 			promote_character = {
 				character = SHC_lu_xun
 				ideology = social_liberal_lu_xun_thought_subtype
 			}
-			recruit_character = SHC_pavel_milf
-			recruit_character = SHC_alexander_i_cherepanov
-			recruit_character = SHC_nikolay_kuibyshev
-			recruit_character = SHC_nikolai_roshchin
-			recruit_character = SHC_sun_fuyuan
-			recruit_character = SHC_rao_shushi
-			recruit_character = SHC_wang_yaqiao
-			recruit_character = SHC_peng_shuzhi
-			recruit_character = SHC_kang_sheng
-			recruit_character = SHC_tian_han
-			recruit_character = SHC_mao_dun
-			recruit_character = SHC_zhang_chunqiao
-			recruit_character = SHC_zhou_yang
-			recruit_character = SHC_zhao_shiyan
-			recruit_character = SHC_chen_shaoyu
-			recruit_character = SHC_liu_renjing
-			recruit_character = SHC_zhang_wentian
-			recruit_character = SHC_jing_meijiu
-			recruit_character = SHC_ma_sanli
-			recruit_character = SHC_hu_feng
-			recruit_character = SHC_rou_shi
+			SHC_pavel_milf = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_alexander_i_cherepanov = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_nikolay_kuibyshev = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_nikolai_roshchin = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_sun_fuyuan = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_rao_shushi = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_wang_yaqiao = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_peng_shuzhi = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_kang_sheng = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_tian_han = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_mao_dun = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_zhang_chunqiao = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_zhou_yang = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_zhao_shiyan = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_chen_shaoyu = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_liu_renjing = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_zhang_wentian = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_jing_meijiu = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_ma_sanli = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_hu_feng = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_rou_shi = {
+				SHC_recruit_character_effect = yes
+			}
 			
 		}
 	}
@@ -196,7 +240,9 @@ country_event = {
 			elections_allowed = no
 		}
 		set_cosmetic_tag = LEC_HD
-		recruit_character = SHC_robbie_hoshailai
+		SHC_robbie_hoshailai = {
+			SHC_recruit_character_effect = yes
+		}
 		activate_advisor = SHC_robbie_hoshailai_sic
 		
 		division_template = { #Guangxi Army
@@ -283,15 +329,12 @@ country_event = {
 					}
 				}
 			}
-			recruit_character = SHC_victor_sassoon
+			SHC_victor_sassoon = {
+				SHC_recruit_character_effect = yes
+			}
 			promote_character = {
 				character = SHC_victor_sassoon
 				ideology = social_conservative_subtype
-			}
-			SHC_victor_sassoon = {
-				set_variable = {
-					china_alignment = token:CHNbritish
-				}
 			}
 			set_party_name = {
 				ideology = social_conservative
@@ -1254,7 +1297,9 @@ country_event = {#响彻世界的一枪
 			kill_country_leader = yes
 		}
 		hidden_effect = {
-			recruit_character = SHC_allrussochinese_soviet
+			SHC_allrussochinese_soviet = {
+				SHC_recruit_character_effect = yes
+			}
 			promote_character = {
 				character = SHC_allrussochinese_soviet
 				ideology = totalist_subtype
@@ -2049,7 +2094,9 @@ country_event = {#真正的话事人
 			ruling_party = social_conservative
 			elections_allowed = no
 		}
-		recruit_character = SHC_elly_kadoorie
+		SHC_elly_kadoorie = {
+			SHC_recruit_character_effect = yes
+		}
 		activate_advisor = SHC_elly_kadoorie_sic
 		set_cosmetic_tag = SHC_YT
 		hidden_effect = {
@@ -2627,7 +2674,9 @@ country_event = {#又一次战火飘摇
 		set_cosmetic_tag = SHC_CHR
 		set_country_flag = xin_jiao_du_tu_victory
 		clr_country_flag = ji_du_tu_victory
-		recruit_character = SHC_jiang_changchuan
+		SHC_jiang_changchuan = {
+			SHC_recruit_character_effect = yes
+		}
 		promote_character= {
 			character = SHC_jiang_changchuan
 			ideology = syndicalist_subtype
@@ -2647,8 +2696,12 @@ country_event = {#又一次战火飘摇
 		}
 		remove_ideas = SHC_she_hui_zhu_yi_yu_wen
 		hidden_effect = {
-			recruit_character = SHC_ding_guangxun
-			recruit_character = SHC_li_chuwen
+			SHC_ding_guangxun = {
+				SHC_recruit_character_effect = yes
+			}
+			SHC_li_chuwen = {
+				SHC_recruit_character_effect = yes
+			}
 			country_event = {
 				days = 25
 				id = Shcxinjiao.6
@@ -4340,11 +4393,6 @@ country_event = {#新总督？
 	fire_only_once = yes
 
 	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			recruit_character = SHC_elizabeth_ii
-		}
-	}
 	option = {#何东
 		name = leche.13.a
 		add_country_leader_trait = LEC_di_guo_zong_du
@@ -4352,7 +4400,9 @@ country_event = {#新总督？
 
 	option = {#伊丽莎白二世
 		name = leche.13.b
-		recruit_character = SHC_elizabeth_ii
+			SHC_elizabeth_ii = {
+				SHC_recruit_character_effect = yes
+			}
 		hidden_effect = {
 			if ={
 				limit = {
