@@ -9,6 +9,12 @@ chinese_unification = {
 		}
 		NOT = { original_tag = MAN }
 		NOT = { original_tag = TAI }
+		NOT = {
+			AND = {
+				original_tag = SHC
+				has_country_flag = han_jian_victory
+			}
+		}
 	}
 }
 
