@@ -4,7 +4,7 @@ bookmarks = {
 		desc = KR_scenario_desc
 		date = 1936.1.1.1
 		picture = GFX_select_date_1936
-		default_country = RUS
+		default_country = LEC
 		default = yes
 
 	### Americas ###
@@ -283,20 +283,21 @@ bookmarks = {
 			history = Debug_KR_gathering_storm_desc
 		}
 
-		RUS = {
-			history = RUS_KR_gathering_storm_desc
-			ideology = national_populist
+		LEC = {
+			history = SHC_KR_gathering_storm_desc
+			ideology = market_liberal
 			ideas = {
-				RUS_entrenched_opposition
-				RUS_german_economic_influence_8
+				LEC_neutrality
+				LEC_volunteer_force
+				LEC_currency_6
 			}
 			focuses = {
-				RUS_third_russia
-				#RUS_democracy_restored
-				RUS_honour_romanovs
-				RUS_red_flag_over_kremlin
+				LEC_zi_ben_jia_de_sheng_li
+				LEC_lu_xun_zhu_xi
+				SHC_xin_ming_zhu_jue_xing
 			}
 		}
+		
 
 		HNN = {
 			minor = yes
@@ -330,19 +331,19 @@ bookmarks = {
 			}
 		}
 
-		LEC = {
+		RUS = {
+			history = RUS_KR_gathering_storm_desc
+			ideology = national_populist
 			minor = yes
-			history = SHC_KR_gathering_storm_desc
-			ideology = market_liberal
 			ideas = {
-				LEC_neutrality
-				LEC_volunteer_force
-				LEC_currency_6
+				RUS_entrenched_opposition
+				RUS_german_economic_influence_8
 			}
 			focuses = {
-				LEC_zi_ben_jia_de_sheng_li
-				LEC_lu_xun_zhu_xi
-				SHC_xin_ming_zhu_jue_xing
+				RUS_third_russia
+				#RUS_democracy_restored
+				RUS_honour_romanovs
+				RUS_red_flag_over_kremlin
 			}
 		}
 
