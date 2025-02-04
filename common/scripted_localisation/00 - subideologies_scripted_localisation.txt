@@ -17,7 +17,9 @@ defined_text = {
 	
 	#Social Democrat
 
-	#Paternal Autocrat
+	#Social Liberal
+	text = { trigger = { has_country_leader_ideology = social_liberal_lu_xun_thought_subtype } localization_key = social_liberal_lu_xun_thought_subtype }#鲁迅思想
+	
 	text = { trigger = { has_country_leader_ideology = paternal_autocrat_ye_jianyingist_subtype } localization_key = paternal_autocrat_ye_jianyingist_subtype }#叶剑英主义
 
 	#National Populist

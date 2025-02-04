@@ -303,6 +303,20 @@ ideas = {
 				production_lack_of_resource_penalty_factor = -0.05
 			}
 		}	
+		SHC_oil_industry_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SHC_oil_industry_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = NFA_business_ties
+			modifier = {
+				production_oil_factor = 0.05
+				base_fuel_gain_factor = 0.03
+				max_fuel_factor = 0.03
+			}
+			research_bonus = {
+				excavation_tech = 0.1
+			}
+		}
 	}
 }
 
