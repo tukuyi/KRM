@@ -124,21 +124,6 @@ country_event = {
 				character = SHC_lu_xun
 				ideology = social_liberal_lu_xun_thought_subtype
 			}
-			SHC_pavel_milf = {
-				SHC_recruit_character_effect = yes
-			}
-			SHC_alexander_i_cherepanov = {
-				SHC_recruit_character_effect = yes
-			}
-			SHC_nikolay_kuibyshev = {
-				SHC_recruit_character_effect = yes
-			}
-			SHC_nikolai_roshchin = {
-				SHC_recruit_character_effect = yes
-			}
-			SHC_sun_fuyuan = {
-				SHC_recruit_character_effect = yes
-			}
 			SHC_rao_shushi = {
 				SHC_recruit_character_effect = yes
 			}
@@ -2877,6 +2862,21 @@ country_event = {#领导人
 					option = SHC_UNION_SOV
 				}
 			}
+		}
+		SHC_pavel_milf = {
+			SHC_recruit_character_effect = yes
+		}
+		SHC_alexander_i_cherepanov = {
+			SHC_recruit_character_effect = yes
+		}
+		SHC_nikolay_kuibyshev = {
+			SHC_recruit_character_effect = yes
+		}
+		SHC_nikolai_roshchin = {
+			SHC_recruit_character_effect = yes
+		}
+		SHC_sun_fuyuan = {
+			SHC_recruit_character_effect = yes
 		}
 		promote_character = {
 			character = SHC_pavel_milf

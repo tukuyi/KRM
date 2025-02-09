@@ -1329,16 +1329,16 @@ chinese_unification = {
 					check_variable = { country_leader:china_alignment = token:CHNsyndicalist }
 				}
 				log = "KR_Event_Logging;CHINA UNITED BY HNN syndicalist;[GetDateText]"
-				hidden_effect = { news_event = china_events.314 }
+				hidden_effect = { news_event = NKRnews.1 }
 				country_event = { id = hungong.29 }
 			}
 			else_if = {
 				limit = { 
 					original_tag = SHC
 				}
-				log = "KR_Event_Logging;CHINA UNITED BY Shanghai;[GetDateText]"
+				log = "KR_Event_Logging;CHINA UNITED BY SASSOON;[GetDateText]"
 				activate_targeted_decision = { decision = china_move_capital target = ROOT }
-				hidden_effect = { news_event = china_events.314 }
+				hidden_effect = { news_event = NKRnews.2 }
 				if = {
 					limit = {
 						has_country_leader = { character = SHC_victor_sassoon ruling_only = yes }
@@ -1350,13 +1350,17 @@ chinese_unification = {
 					limit = {
 						has_country_leader = { character = SHC_pavel_milf ruling_only = yes }
 					}
+					log = "KR_Event_Logging;CHINA UNITED BY bolshevik;[GetDateText]"
 					set_cosmetic_tag = LEC_PRC
+					hidden_effect = { news_event = NKRnews.11 }
 				}
 				else_if = {
 					limit = {
 						has_country_leader = { character = LEC_robert_hotung ruling_only = yes }
 						NOT = { has_completed_focus = LEC_zhong_cheng_de_shang_hai }
 					}
+					log = "KR_Event_Logging;CHINA UNITED BY hotung;[GetDateText]"
+					hidden_effect = { news_event = NKRnews.7 }
 					set_cosmetic_tag = LEC_HD_Z
 					hidden_effect = {
 						country_event = {
@@ -1368,60 +1372,92 @@ chinese_unification = {
 					limit = {
 						has_completed_focus = LEC_zhong_cheng_de_shang_hai
 					}
+					log = "KR_Event_Logging;CHINA UNITED BY british;[GetDateText]"
 					set_cosmetic_tag = LEC_CHD_Y
 					hidden_effect = {
 						country_event = {
 							id = leche.15
 						}
 					}
+					hidden_effect = { news_event = NKRnews.3 }
 
 				}
 				else_if = {
 					limit = {
 						has_completed_focus = LEC_shang_di_de_huai_bao
 					}
+					log = "KR_Event_Logging;CHINA UNITED BY christian;[GetDateText]"
 					set_cosmetic_tag = LEC_TZ_T
 					hidden_effect = {
 						country_event = {
 							id = lecjidu.8
 						}
 					}
+					hidden_effect = { news_event = NKRnews.8 }
 				}
 				else_if = {
 					limit = {
 						has_completed_focus = SHC_jing_cha_sha_chu_cong_wei
-						NOT = {
-							has_country_flag = han_jian_victory
-						}
+						has_country_flag = SHC_choose_china
 					}
+					log = "KR_Event_Logging;CHINA UNITED BY polices;[GetDateText]"
 					set_cosmetic_tag = LEC_HD_Z
 					hidden_effect = {
 						country_event = {
 							id = Shcjingcha.13
 						}
 					}
+					hidden_effect = { news_event = NKRnews.10 }
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = SHC_jing_cha_sha_chu_cong_wei
+						has_country_flag = SHC_choose_japan
+					}
+					log = "KR_Event_Logging;CHINA UNITED BY SHCRGC;[GetDateText]"
+					set_cosmetic_tag = SHC_ROCJ
+					hidden_effect = {
+						country_event = {
+							id = Shcjingcha.13
+						}
+					}
+					hidden_effect = { news_event = NKRnews.9 }
 				}
 				else_if = {
 					limit = { 
-						OR = {
-							has_completed_focus = LEC_lu_xun_zhu_xi
-							has_completed_focus = LEC_qing_xi_cheng_shi_xi_jun
-						}
+						has_completed_focus = LEC_lu_xun_zhu_xi
 					}
 					set_cosmetic_tag = LEC_GT_C
+					log = "KR_Event_Logging;CHINA UNITED BY leftwriters;[GetDateText]"
 					hidden_effect = {#女权有，但不是现在
 						country_event = {
 							id = lecgong.14
 						}
 					}
+					hidden_effect = { news_event = NKRnews.4 }
+				}
+				else_if = {
+					limit = { 
+						has_completed_focus = LEC_qing_xi_cheng_shi_xi_jun
+					}
+					set_cosmetic_tag = LEC_GT_C
+					log = "KR_Event_Logging;CHINA UNITED BY SHCunion;[GetDateText]"
+					hidden_effect = {#女权有，但不是现在
+						country_event = {
+							id = lecgong.14
+						}
+					}
+					hidden_effect = { news_event = NKRnews.5 }
 				}
 				else_if = {
 					limit = { 
 						has_country_leader = { character = SHC_peng_shuzhi ruling_only = yes }
 					}
+					log = "KR_Event_Logging;CHINA UNITED BY pengshuzhi;[GetDateText]"
 					hidden_effect = {
 						set_cosmetic_tag = LEC_GTT_C
 					}
+					hidden_effect = { news_event = NKRnews.6 }
 				}
 			}
 			else_if = {

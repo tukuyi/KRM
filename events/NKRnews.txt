@@ -7,7 +7,7 @@
 		immediate = { log = "[GetLogInfo]: event NKRnews.1" }
 		title = NKRnews.1.t
 			desc = NKRnews.1.d
-		picture = GFX_news_event_china_unified
+		picture = GFX_news_event_hunancsp_united
 
 		trigger = {
 			wants_world_news = yes
@@ -23,6 +23,15 @@
 
 		option = {
 			name = NKRnews.1.a
+			trigger = {
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.1.b
+			trigger = {
+				has_socialist_government = no
+			}
 		}
 	}
 
@@ -32,7 +41,7 @@
 		immediate = { log = "[GetLogInfo]: event NKRnews.2" }
 		title = NKRnews.2.t
 		desc = NKRnews.2.d
-		picture = GFX_news_event_china_unified
+		picture = GFX_news_event_sassoon_united
 
 		trigger = {
 			wants_world_news = yes
@@ -55,7 +64,7 @@
 		immediate = { log = "[GetLogInfo]: event NKRnews.3" }
 		title = NKRnews.3.t
 		desc = NKRnews.3.d
-		picture = GFX_news_event_china_unified
+		picture = GFX_news_event_british_china_united
 
 		trigger = {
 			wants_world_news = yes
@@ -71,6 +80,306 @@
 
 		option = {
 			name = NKRnews.3.a
+			trigger = {
+				OR = {
+					is_in_faction_with = IMP
+					tag = SHC
+				}
+			}
+		}
+		option = {
+			name = NKRnews.3.b
+			trigger = {
+				NOT = {
+					OR = {
+						is_in_faction_with = IMP
+						tag = SHC
+						has_socialist_government = yes
+						tag = ENG
+						is_in_faction_with = INT
+					}
+				}
+			}
+		}
+		option = {
+			name = NKRnews.3.c
+			trigger = {
+				OR = {
+					tag = ENG
+					is_in_faction_with = INT
+					has_socialist_government = yes
+				}
+			}
+		}
+	}
+	news_event = { #左翼作家联盟统一中国
+		id = NKRnews.4
+		immediate = { log = "[GetLogInfo]: event NKRnews.4" }
+		title = NKRnews.4.t
+		desc = NKRnews.4.d
+		picture = GFX_news_event_left_writers_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.4.a
+		}
+	}
+	news_event = { #上海总工会统一中国
+		id = NKRnews.5
+		immediate = { log = "[GetLogInfo]: event NKRnews.5" }
+		title = NKRnews.5.t
+		desc = NKRnews.5.d
+		picture = GFX_news_event_shanghai_union_unified
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.5.a
+			trigger = {
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.5.b
+			trigger = {
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #上海托派统一中国
+		id = NKRnews.6
+		immediate = { log = "[GetLogInfo]: event NKRnews.6" }
+		title = NKRnews.6.t
+		desc = NKRnews.6.d
+		picture = GFX_news_event_pengshuzhi_unified
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.6.a
+		}
+	}
+	news_event = { #何东统一中国
+		id = NKRnews.7
+		immediate = { log = "[GetLogInfo]: event NKRnews.7" }
+		title = NKRnews.7.t
+		desc = NKRnews.7.d
+		picture = GFX_news_event_hotong_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.7.a
+		}
+	}
+	news_event = { #上海天主教统一中国
+		id = NKRnews.8
+		immediate = { log = "[GetLogInfo]: event NKRnews.8" }
+		title = NKRnews.8.t
+		desc = NKRnews.8.d
+		picture = GFX_news_event_catholic_unified
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.8.a
+			trigger = {
+				tag = SHC
+			}
+		}
+		option = {
+			name = NKRnews.8.b
+			trigger = {
+				NOT = {
+					tag = SHC
+				}
+				NOT = {
+					is_in_faction_with = INT
+				}
+			}
+		}
+		option = {
+			name = NKRnews.8.c
+			trigger = {
+				is_in_faction_with = INT
+			}
+		}
+	}
+	news_event = { #警察局-维新政府统一中国
+		id = NKRnews.9
+		immediate = { log = "[GetLogInfo]: event NKRnews.9" }
+		title = NKRnews.9.t
+		desc = NKRnews.9.d
+		picture = GFX_news_event_japanese_parade
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.9.a
+		}
+	}
+	news_event = { #警察局-反抗日本统一中国
+		id = NKRnews.10
+		immediate = { log = "[GetLogInfo]: event NKRnews.10" }
+		title = NKRnews.10.t
+		desc = NKRnews.10.d
+		picture = GFX_news_event_shanghai_police_unified
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.10.a
+			trigger = {
+				NOT = {
+					original_tag = JAP
+				}
+			}
+		}
+		option = {
+			name = NKRnews.10.b
+			trigger = {
+				original_tag = JAP
+			}
+		}
+	}
+	news_event = { #布尔什维克统一中国
+		id = NKRnews.11
+		immediate = { log = "[GetLogInfo]: event NKRnews.11" }
+		title = NKRnews.11.t
+		desc = NKRnews.11.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.11.a
+			trigger = {
+				tag = SHC
+			}
+		}
+		option = {
+			name = NKRnews.11.b
+			trigger = {
+				AND = {
+					OR = {
+						original_tag = RUS
+						original_tag = FER
+						original_tag = RSA
+					}
+					has_socialist_government = no
+				}
+			}
+		}
+		option = {
+			name = NKRnews.11.c
+			trigger = {
+				AND = {
+					OR = {
+						original_tag = RUS
+						original_tag = FER
+						original_tag = RSA
+					}
+					has_socialist_government = yes
+				}
+			}
+		}
+		option = {
+			name = NKRnews.11.d
+			trigger = {
+				AND = {
+					NOT = {
+						tag = SHC
+					}
+					has_socialist_government = yes
+				}
+			}
+		}
+		option = {
+			name = NKRnews.11.e
+			trigger = {
+				has_socialist_government = no
+			}
 		}
 	}
 
