@@ -461,9 +461,16 @@ LEC_wai_jiao_category = {
 			factor = 5
 		}
 		visible = {
-			has_completed_focus = LEC_zhong_cheng_de_shang_hai
-			has_country_flag = zi_ben_jia_victory
-			has_completed_focus = SHC_shang_hai_shou_hu_zhe
+			OR = {
+				AND = {
+					has_country_flag = zi_ben_jia_victory
+					has_completed_focus = SHC_shang_hai_shou_hu_zhe
+				}
+				AND = {
+					has_completed_focus = LEC_zhong_cheng_de_shang_hai
+					has_completed_focus = LEC_di_guo_de_ming_zhu
+				}
+			}
 		}
 
 		cost = 0

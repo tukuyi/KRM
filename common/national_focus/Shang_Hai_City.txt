@@ -697,6 +697,7 @@ focus_tree = {
 			CAN = {
 				end_puppet = SHC
 			}
+			leave_faction = yes
 			CAN = {
 				diplomatic_relation = {
 					country = SHC
@@ -6120,6 +6121,7 @@ focus_tree = {
 			add_political_power = 50
 			custom_effect_tooltip = tooltip_white_line
 			set_potential_national_government = yes
+			china_enable_all_demand_submission_decisions = yes
 		}
 	}		
 

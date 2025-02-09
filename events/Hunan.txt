@@ -50,84 +50,6 @@ country_event = {#创建CSP
 	
 }
 
-country_event = {#enlai
-	id = hnndebug.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event hnndebug.1" }
-	title = hnndebug.1.t
-	desc = hnndebug.1.d
-
-	is_triggered_only = yes
-	option = {#同意
-		name = hnndebug.1.a
-		CHI = {
-			CHI_zhou_enlai = {
-				HNN_recruit_character_effect = yes
-			}
-			CHI_lin_biao = {
-				HNN_recruit_character_effect = yes
-			}
-		}
-		GXC = {
-			GXC_ye_jianying = {
-				HNN_recruit_character_effect = yes
-			}
-		}
-		recruit_character = CHI_zhou_enlai
-		recruit_character = GXC_ye_jianying
-		recruit_character = CHI_lin_biao
-		add_country_leader_role = {
-			character = CHI_zhou_enlai
-			promote_leader = yes
-			country_leader = {
-				ideology = radical_socialist_utopian_technocracy_subtype
-				expire = "1965.1.1.1"
-				traits = { CHN_CHNsyndicalist_aligned }
-			}
-		}
-		CHI_zhou_enlai = {
-			set_variable = {
-				china_alignment = token:CHNsyndicalist
-			}
-			set_portraits = {
-				civilian = {
-					large = "gfx/leaders/HNN/Portrait_CHI_Zhou_Enlai_CIV.png"
-          			small = GFX_portrait_CHI_zhou_enlai_army_small
-				}
-			}
-		}
-	}
-	
-}
-
-country_event = {#enlai
-	id = hnndebug.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event hnndebug.1" }
-	title = hnndebug.1.t
-	desc = hnndebug.1.d
-
-	is_triggered_only = yes
-	option = {#同意
-		name = hnndebug.1.a
-		
-		promote_character = {
-			character = CHI_zhou_enlai
-			ideology = radical_socialist_subtype		
-		}
-		
-		CHI_zhou_enlai = {
-			swap_country_leader_traits = {
-				remove = CHN_left_kuomintang_aligned
-				add = CHN_CHNsyndicalist_aligned
-				ideology = totalist_subtype
-			}
-			set_variable = {
-				china_alignment = token:CHNsyndicalist
-			}
-		}
-	}
-	
-}
-
 country_event = {#湖南的谈判申请
 	id = hunbao.40
 	immediate = { log = "[GetDateText]: [Root.GetName]: event hunbao.40" }
@@ -1748,12 +1670,9 @@ country_event = {#党内最大的右派分子
 	option = {#
 		name = hungong.72.a
 		add_ideas = LEC_kang_sheng_hog
-		create_country_leader = {
-			name = "康生"
-			desc = "Kang_Shen_DESC"
-			picture = "gfx/leaders/LEC/Portrait_LEC_Kang_Sheng.png"
-			expire = "1.1.1"
-			ideology = totalist_subtype
+		promote_character = {
+			character = SHC_kang_sheng
+			ideology = totalist_socialist_security_subtype
 		}
 		HNN_fcations_change = yes 
 		set_party_name = {
@@ -1922,7 +1841,7 @@ country_event = {#放权
 		}
 		promote_character = {
 			character = HNN_guo_moruo
-			ideology = totalist_technocracy_subtype
+			ideology = totalist_social_futurist_subtype
 		}
 		HNN_guo_moruo = {
 			set_variable = {
@@ -1985,7 +1904,7 @@ country_event = {#放权
 			character = CHI_zhou_enlai
 			promote_leader = yes
 			country_leader = {
-				ideology = totalist_technocracy_subtype
+				ideology = totalist_veperedist_subtype
 				expire = "1965.1.1.1"
 				traits = { CHN_CHNsyndicalit_aligned }
 				desc = POLITICS_HNN_ZHOU_ENLAI_DESC
@@ -1993,7 +1912,7 @@ country_event = {#放权
 		}
 		promote_character = {
 			character = CHI_zhou_enlai
-			ideology = totalist_technocracy_subtype
+			ideology = totalist_veperedist_subtype
 		}
 		add_country_leader_trait = CHN_CHNsyndicalist_aligned
 		set_party_name = {
@@ -2020,7 +1939,7 @@ country_event = {#肃反之夜
 		name = hungong.79.a
 		promote_character = {
 			character = SHC_kang_sheng
-			ideology = totalist_subtype
+			ideology = totalist_socialist_security_subtype
 		}
 		set_party_name = {
 			ideology = totalist
@@ -2041,15 +1960,20 @@ country_event = {#肃反之夜
 
 	option = {#戴春风
 		name = hungong.79.b
-		promote_character = {
+		add_country_leader_role = {
 			character = CHI_dai_chunfeng
-			ideology = totalist_subtype
+			promote_leader = yes
+			country_leader = {
+				ideology = totalist_kleptocracy_subtype
+				expire = "1965.1.1.1"
+				traits = { CHN_CHNsyndicalit_aligned }
+			}
 		}
 		CHI_dai_chunfeng = {
 			swap_country_leader_traits = {
 				remove = CHN_non_aligned
 				add = CHN_CHNsyndicalist_aligned
-				ideology = totalist_subtype
+				ideology = totalist_kleptocracy_subtype
 			}
 			set_variable = {
 				china_alignment = token:CHNsyndicalist
@@ -2079,7 +2003,6 @@ country_event = {#肃反之夜
 		add_ideas = HNN_di_kang_de_da_zong1
 		add_ideas = CHI_Dai_Chunfeng_sec_tot
 	}
-}
 }
 
 country_event = {#向邓主席提些意见
@@ -6363,7 +6286,7 @@ country_event = {#中华人民共和国
 				character = SHX_deng_xiaoping
 				promote_leader = yes
 				country_leader = {
-					ideology = totalist_subtype
+					ideology = totalist_sorelian_marketist_subtype
 					expire = "1965.1.1.1"
 					traits = { CHN_CHNsyndicalist_aligned }
 				}
@@ -6402,16 +6325,16 @@ country_event = {#中华人民共和国
 			recruit_character = HNN_hu_yaobang
 			promote_character = {
 				character = HNN_hu_yaobang
-				ideology = social_democrat_subtype
+				ideology = social_democrat_democratic_socialist_subtype
 			}
 			HNN_hu_yaobang = {
 				set_variable = {
 					china_alignment = token:CHNsyndicalist
 				}
 			}
-			recruit_character = HNN_xi_zhongxun
+			promote_character = {
 				character = HNN_xi_zhongxun
-				ideology = social_liberal_subtype
+				ideology = social_liberal_liberal_socialist_subtype
 			}
 			HNN_xi_zhongxun = {
 				set_variable = {
@@ -6512,6 +6435,7 @@ country_event = {#中华人民共和国
 			}
 		}
 	}
+}
 
 	country_event = {#中华人民共和国第一次人民代表大会开幕式
 		id = hungong.38

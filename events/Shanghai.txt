@@ -1030,167 +1030,6 @@ country_event = {#丝厂女工曲
 	}
 }
 
-country_event = {#团结才能胜利-琼崖
-	id = Shcgong.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.2" }
-	title = Shcgong.2.t
-	desc = Shcgong.2.d
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {	#yes
-		name = Shcgong.2.a
-		ai_chance = {
-			base = 30
-		}
-		QYG = {
-			country_event = {
-				id = Shcgong.4
-				days = 2
-			}
-		}
-	}
-
-	option = {	#no
-		name = Shcgong.2.b
-		ai_chance = {
-			base = 5
-		}
-
-	}
-}
-
-country_event = {#团结才能胜利-湖南
-	id = Shcgong.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.3" }
-	title = Shcgong.3.t
-	desc = Shcgong.3.d
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {	#yes
-		name = Shcgong.3.a
-		ai_chance = {
-			base = 30
-		}
-		HNN = {
-			country_event = {
-				id = Shcgong.4
-				days = 3
-			}
-		}
-	}
-
-	option = {	#no
-		name = Shcgong.3.b
-		ai_chance = {
-			base = 5
-		}
-
-	}
-}
-
-country_event = {#上海同志的来信
-	id = Shcgong.4
-	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.4" }
-	title = Shcgong.4.t
-	desc = Shcgong.4.d
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {	#yes
-		name = Shcgong.4.a
-		ai_chance = {
-			base = 30
-		}
-		effect_tooltip = {
-			annex_country = {
-				target = SHC
-				transfer_troops = yes
-			}
-		}
-		hidden_effect = {
-			annex_country = {
-				target = SHC
-				transfer_troops = yes
-			}
-		}
-		hidden_effect = {
-			create_corps_commander = {
-				name = "饶漱石"
-				portrait_path = "gfx/leaders/LEC/Portrait_LEC_Rao_Shu_Shi.png"
-				traits = {  }
-				skill = 1
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 1
-			}
-		}
-	}
-
-	option = {	#no
-		name = Shcgong.4.b
-		ai_chance = {
-			base = 5
-		}
-		SHC = {
-			country_event = {
-				id = Shcgong.5
-				days = 3
-			}
-		}
-	}
-}
-
-country_event = {#时机未到
-	id = Shcgong.5
-	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.5" }
-	title = Shcgong.5.t
-	desc = Shcgong.5.d
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {	# damn
-		name = Shcgong.5.a
-		add_war_support = 0.05
-	}
-}
-
-country_event = {#上海工人的胜利-琼崖
-	id = Shcgong.6
-	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.6" }
-	title = Shcgong.6.t
-	desc = Shcgong.6.d
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {	
-		name = Shcgong.6.a
-		add_stability = 0.01
-	}
-}
-
-country_event = {#上海工人的胜利-湖南
-	id = Shcgong.7
-	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.7" }
-	title = Shcgong.7.t
-	desc = Shcgong.7.d
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {	
-		name = Shcgong.7.a
-		add_stability = 0.01
-	}
-}
-
 country_event = {#俄国难民
 	id = Shcgong.8
 	immediate = { log = "[GetDateText]: [Root.GetName]: event Shcgong.8" }
@@ -2422,6 +2261,7 @@ country_event = {#暴力之夜
 			swap_country_leader_traits = {
 				remove = CHN_geacps_aligned
 				add = CHN_non_aligned
+				ideology = paternal_autocrat_subtype
 			}
 			set_variable = {
 				china_alignment = 0
@@ -2451,9 +2291,7 @@ country_event = {#暴力之夜
 			 }
 			 activate = yes
 		}
-		SHC_yuan_liang = {
-			set_country_leader_ideology = paternal_autocrat_pan_asianist_subtype
-		}
+		set_country_leader_ideology = paternal_autocrat_pan_asianist_subtype
 	}
 }
 
@@ -3326,8 +3164,6 @@ country_event = {#起义！
 
 	option = {
 		name = lecgong.7.b
-		add_to_array = { global.china_tags_array = SHC }
-		SHC_startup_effect = yes
 		SHC = { 
 			change_tag_from = ROOT 
 		}
@@ -3544,7 +3380,7 @@ country_event = {#新领袖
 		
 		promote_character = {
 			character = SHC_kang_sheng
-			ideology = totalist_subtype
+			ideology = totalist_socialist_security_subtype
 		}
 		SHC_kang_sheng = {
 			set_variable = {
@@ -3700,7 +3536,7 @@ country_event = {#新领袖
 		
 		promote_character = {
 			character = SHC_mao_dun
-			ideology = social_liberal_lu_xun_thought_subtype
+			ideology = social_liberal_liberal_socialist_subtype
 		}
 		SHC_mao_dun = {
 			set_variable = {
@@ -3723,7 +3559,7 @@ country_event = {#新领袖
 		set_country_flag = LEC_wo_men_de_xin_ling_xiu_flag
 		promote_character = {
 			character = SHC_rou_shi
-			ideology = radical_socailist_subtype
+			ideology = radical_socialist_lu_xun_thought_subtype
 		}
 		set_politics = {
 			ruling_party = radical_socialist
