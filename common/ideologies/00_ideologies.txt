@@ -8,6 +8,11 @@ ideologies = {
 			totalist_ayaist_subtype = { can_be_randomly_selected = no }#天狗主义
 			totalist_technocracy_subtype = { can_be_randomly_selected = no }#技官主义
 			totalist_juche_subtype = { can_be_randomly_selected = no }#主体思想
+			totalist_social_futurist_subtype = { can_be_randomly_selected = no }#社会未来主义
+			totalist_veperedist_subtype = { can_be_randomly_selected = no }#前进主义
+			totalist_socialist_security_subtype = { can_be_randomly_selected = no }#社会主义安保国家
+			totalist_kleptocracy_subtype = { can_be_randomly_selected = no }#极权强盗政府
+			totalist_sorelian_marketist_subtype = { can_be_randomly_selected = no }#市场索雷尔主义
 		}
 		color = { 119 15 0 }
 
@@ -74,6 +79,7 @@ ideologies = {
 			radical_socialist_mao_zedong_thought_subtype = { can_be_randomly_selected = no }#毛泽东思想
 			radical_socialist_utopian_technocracy_subtype = { can_be_randomly_selected = no }#乌托邦技官主义
 			radical_socialist_qian_xuesen_thought_subtype = { can_be_randomly_selected = no }#钱学森思想
+			radical_socialist_lu_xun_thought_subtype = { can_be_randomly_selected = no }#激社鲁迅思想
 		}
 		color = { 234 81 83 }
 
@@ -107,6 +113,7 @@ ideologies = {
 	social_democrat = {
 		types = {
 			social_democrat_subtype = {}
+			social_democrat_democratic_socialism_subtype = { can_be_randomly_selected = no }#民主社会主义
 		}
 		color = { 199 23 72 }
 
@@ -138,6 +145,7 @@ ideologies = {
 		types = {
 			social_liberal_subtype = {}
 			social_liberal_lu_xun_thought_subtype = { can_be_randomly_selected = no }#鲁迅思想
+			social_liberal_liberal_socialist_subtype = { can_be_randomly_selected = no }#自由社会主义
 		}
 		color = { 239 125 0 }
 
