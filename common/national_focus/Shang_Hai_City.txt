@@ -3555,6 +3555,8 @@ focus_tree = {
 				}
 				add_core_of = ROOT
 			}
+			set_potential_national_government = yes
+			china_enable_all_demand_submission_decisions = yes
 			custom_effect_tooltip = tooltip_white_line
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
@@ -3658,7 +3660,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus LEC_ci_se_de_zhong_guo"
 			custom_effect_tooltip = tooltip_white_line
 			H_in_china = yes
-			set_potential_national_government = yes
 		}
 	}
 
@@ -3843,6 +3844,7 @@ focus_tree = {
 				type = annex_everything
 			}
 			set_potential_national_government = yes
+			china_enable_all_demand_submission_decisions = yes
 			hidden_effect = {
 				create_wargoal = {
 					target = var:1046.owner
