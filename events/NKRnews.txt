@@ -210,7 +210,7 @@
 		option = {
 			name = NKRnews.6.c
 			trigger = {
-				OR = {
+				AND = {
 					NOT = {
 						is_in_faction_with = INT
 					}
