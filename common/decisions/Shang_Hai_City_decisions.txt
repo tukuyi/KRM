@@ -503,8 +503,24 @@ LEC_wai_jiao_category = {
 			factor = 4
 		}
 		visible = {
-			has_completed_focus = SHC_shang_hai_shou_hu_zhe
-			has_country_flag = zong_gong_hui_victory
+			OR = {
+				AND = {
+					has_completed_focus = SHC_shang_hai_shou_hu_zhe
+					has_country_flag = zong_gong_hui_victory
+					INT = { exists = yes }
+				}
+				AND = {
+					has_global_flag = china_united
+					has_country_flag = zong_gong_hui_victory
+					NOT = {
+						has_completed_focus = LEC_liu_wang_zhe_gui_lai
+					}
+					NOT = {
+						has_completed_focus = LEC_peng_shu_zhi_zhu_xi
+					}
+					INT = { exists = yes }
+				}
+			}
 		}
 		cost = 0
 		days_remove = 15
