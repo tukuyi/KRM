@@ -188,6 +188,38 @@
 
 		option = {
 			name = NKRnews.6.a
+			trigger = {
+				AND = {
+					OR = {
+						tag = SHC
+						is_in_faction_with = SHC
+						has_socialist_government = yes
+					}
+					NOT = {
+						is_in_faction_with = INT
+					}
+				}
+			}
+		}
+		option = {
+			name = NKRnews.6.b
+			trigger = {
+				is_in_faction_with = INT
+			}
+		}
+		option = {
+			name = NKRnews.6.c
+			trigger = {
+				OR = {
+					NOT = {
+						is_in_faction_with = INT
+					}
+					NOT = {
+						is_in_faction_with = SHC
+					}
+					has_socialist_government = no
+				}
+			}
 		}
 	}
 	news_event = { #何东统一中国
