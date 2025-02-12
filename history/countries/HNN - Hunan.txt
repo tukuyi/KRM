@@ -170,6 +170,7 @@ recruit_character = HNN_li_xiannian
 recruit_character = HNN_zhao_ziyang
 recruit_character = HNN_geng_biao
 recruit_character = HNN_hua_luogeng
+recruit_character = HNN_xu_shiyou
 ### Character Setup ###
 
 ## Federalists
@@ -480,6 +481,12 @@ HNN_geng_biao = {
 	}
 }
 HNN_hua_luogeng = {
+	retire = yes
+	set_variable = {
+		china_alignment = token:CHNsyndicalist
+	}
+}
+HNN_xu_shiyou = {
 	retire = yes
 	set_variable = {
 		china_alignment = token:CHNsyndicalist

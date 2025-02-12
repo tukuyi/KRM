@@ -363,6 +363,7 @@ country_event = {#革命成功
 			HNN_li_xiannian = { HNN_recruit_character_effect = yes }
 			HNN_hua_luogeng = { HNN_recruit_character_effect = yes }
 			HNN_geng_biao = { HNN_recruit_character_effect = yes }
+			HNN_xu_shiyou = { HNN_recruit_character_effect = yes }
 
 			HNN_peng_dehuai = {
 				promote_leader = yes
@@ -4258,6 +4259,9 @@ country_event = {#许世友案
 			ideology = authoritarian_democrat
 			popularity = -0.05
 		} 
+		HNN_xu_shiyou = {
+			kill = yes
+		}
 	}
 }
 
@@ -4817,6 +4821,12 @@ country_event = {#林彪的胜利
 				remove = CHN_left_kuomintang_aligned
 				add = CHN_CHNsyndicalist_aligned
 				ideology = totalist_subtype
+			}
+			set_portraits = {
+				army = {
+					large = GFX_Portrait_HNN_lin_biao_generalissimo
+					small = GFX_Portrait_HNN_lin_biao_generalissimo_small
+				}
 			}
 		}
 		set_politics = {

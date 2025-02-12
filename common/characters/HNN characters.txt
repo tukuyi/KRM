@@ -2744,6 +2744,29 @@ characters = {
 			can_be_fired = no
 		}
 	}	
+#许世友
+    HNN_xu_shiyou = {
+		name = HNN_xu_shiyou
+		portraits = {
+			army = {
+				small = GFX_Portrait_HNN_xu_shiyou_small
+				large = GFX_Portrait_HNN_xu_shiyou
+			}
+		}
+		corps_commander = {
+			desc = POLITICS_HNN_XU_SI_YOU_ARMY_DESC
+			traits = { 
+				irregulars_officer
+				guerilla_officer
+				trait_reckless
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}	
 	HNN_Daibiaodahui = {
 		name = HNN_Daibiaodahui
 		portraits = {
