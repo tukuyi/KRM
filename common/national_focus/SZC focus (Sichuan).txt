@@ -3024,7 +3024,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 10
+			add = 0
 			tag = SZC
 		}
 	}
@@ -4481,6 +4481,10 @@ focus_tree = {
 	id = Sichuan_Clique_Industrial
 	country = {
 		factor = 0
+		modifier = {
+			add = 10
+			tag = SZC
+		}
 	}
 	default = no
 	continuous_focus_position = { x = 2350 y = 850 }

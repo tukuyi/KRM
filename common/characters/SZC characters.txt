@@ -510,6 +510,10 @@ characters = {
 				small = GFX_portrait_SZC_liu_xiang_army_small
 				large = GFX_portrait_SZC_liu_xiang_army_large
 			}
+			civilian = {
+				small = GFX_portrait_SZC_liu_xiang_civilian_small
+				large = GFX_portrait_SZC_liu_xiang_civilian_large
+			}
 		}
 		country_leader = {
 			desc = SZC_liu_xiang_leader_desc
@@ -632,6 +636,7 @@ characters = {
 		portraits = {
 			civilian = {
 				small = GFX_portrait_SZC_ba_jin_civilian_small
+				large = GFX_portrait_SZC_ba_jin_large
 			}
 		}
 		advisor = {
@@ -846,4 +851,105 @@ characters = {
 			traits = { KR_silent_workhorse }
 		}
 	}
+
+
+	#############醒      狮#############
+
+	#陈启天
+	SZC_chen_qitian = {
+		name = SZC_chen_qitian
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_chen_qitian_small
+				large = GFX_portrait_SZC_chen_qitian_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_chen_qitian_advisor
+			traits = { KR_silent_workhorse }
+		}
+	}
+	#曾琦
+	SZC_zeng_qi = {
+		name = SZC_zeng_qi
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zeng_qi_small
+				large = GFX_portrait_SZC_zeng_qi_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_zeng_qi_advisor
+			traits = { KR_silent_workhorse }
+		}
+	}
+	#李璜
+	SZC_li_huang = {
+		name = SZC_li_huang
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_li_huang_small
+				large = GFX_portrait_SZC_li_huang_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_li_huang_advisor
+			traits = { KR_silent_workhorse }
+		}
+	}
+	#左舜生
+	SZC_zuo_shunsheng = {
+		name = SZC_zuo_shunsheng
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zuo_shunsheng_small
+				large = GFX_portrait_SZC_zuo_shunsheng_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_zuo_shunsheng_advisor
+			traits = { KR_silent_workhorse }
+		}
+	}
+	#刘丛云
+	SZC_liu_congyun = {
+		name = SZC_liu_congyun
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_liu_congyun_small
+				large = GFX_portrait_SZC_liu_congyun_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_liu_congyun_advisor
+			traits = { KR_silent_workhorse }
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
