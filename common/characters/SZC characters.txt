@@ -561,6 +561,12 @@ characters = {
 			traits = { KR_MHC_army_regrouping_2 }
 			cost = 100
 		}
+		country_leader = {
+			desc = SZC_pan_wenhua_leader_desc
+			ideology = paternal_autocrat_subtype
+			traits = { CHN_non_aligned }
+		}
+
 	}
 	#唐式遵
 	SZC_tang_shizun = {
@@ -855,6 +861,20 @@ characters = {
 
 	#############醒      狮#############
 
+	#权力真空
+	SZC_power_vacuum = {
+		name = SZC_power_vacuum
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_power_vacuum_large
+			}
+		}
+		country_leader = {
+			desc = SZC_power_vacuum_desc
+			ideology = paternal_autocrat_subtype
+			traits = { CHN_non_aligned }
+		}
+	}
 	#陈启天
 	SZC_chen_qitian = {
 		name = SZC_chen_qitian
