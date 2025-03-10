@@ -547,7 +547,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_pan_wenhua_high_command_desc
-			traits = { trait_cautious light_infantry_officer trait_mountaineer rising_star }
+			traits = { trait_cautious light_infantry_officer trait_mountaineer rising_star war_hero }
 			skill = 2
 			attack_skill = 3
 			defense_skill = 1
@@ -573,7 +573,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_tang_shizun_commander_desc
-			traits = { trickster infantry_officer }
+			traits = { trickster infantry_officer war_hero }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
@@ -869,6 +869,14 @@ characters = {
 			idea_token = SZC_chen_qitian_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_chen_qitian_advisor_desc
+			visible = {
+				has_country_flag = YCP_advisors_available
+			}
+		}
+		country_leader = {
+			desc = SZC_chen_qitian_desc
+			ideology = authoritarian_democrat_new_legalism_subtype
+			traits = { CHN_non_aligned }
 		}
 	}
 	#曾琦
@@ -885,6 +893,14 @@ characters = {
 			idea_token = SZC_zeng_qi_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_zeng_qi_advisor_desc
+			visible = {
+				has_country_flag = YCP_advisors_available
+			}
+		}
+		country_leader = {
+			desc = SZC_zeng_qi_desc
+			ideology = paternal_autocrat_new_legalism_subtype
+			traits = { CHN_non_aligned }
 		}
 	}
 	#李璜
@@ -901,6 +917,19 @@ characters = {
 			idea_token = SZC_li_huang_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_li_huang_advisor_desc
+			visible = {
+				has_country_flag = YCP_advisors_available
+			}
+		}
+		country_leader = {
+			desc = SZC_li_huang_desc
+			ideology = authoritarian_democrat_new_legalism_subtype
+			traits = { CHN_non_aligned }
+		}
+		country_leader = {
+			desc = SZC_li_huang_desc
+			ideology = social_conservative_new_legalism_subtype
+			traits = { CHN_non_aligned }
 		}
 	}
 	#左舜生
@@ -917,6 +946,14 @@ characters = {
 			idea_token = SZC_zuo_shunsheng_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_zuo_shunsheng_advisor_desc
+			visible = {
+				has_country_flag = YCP_advisors_available
+			}
+		}
+		country_leader = {
+			desc = SZC_zuo_shunsheng_desc
+			ideology = social_liberal_new_legalism_subtype
+			traits = { CHN_non_aligned }
 		}
 	}
 	#刘丛云
@@ -933,6 +970,14 @@ characters = {
 			idea_token = SZC_liu_congyun_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_liu_congyun_advisor_desc
+			visible = {
+				has_country_flag = YGD_advisors_available
+			}
+		}
+		country_leader = {
+			desc = SZC_liu_congyun_desc
+			ideology = national_populist_subtype
+			traits = { CHN_non_aligned }
 		}
 	}
 

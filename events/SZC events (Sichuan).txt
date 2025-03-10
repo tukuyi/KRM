@@ -4,6 +4,8 @@
 ####################
 
 add_namespace = sichuan
+add_namespace = NKRsichuan
+add_namespace = NKRsichuanmisc
 
 ### System Events ###
 
@@ -8536,3 +8538,147 @@ country_event = { #Chen Jiongming Arrives in Sichuan
 	}
 }
 
+
+
+
+###醒狮###
+
+country_event = { #安抚委员会宣告成立
+	id = NKRsichuan.1
+	title = NKRsichuan.1.t
+	desc = NKRsichuan.1.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event NKRsichuan.1 option NKRsichuan.1.a"
+		name = NKRsichuan.1.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.2
+				days = 3
+			}
+			country_event = {
+				id = NKRsichuan.3
+				days = 6
+			}
+			country_event = {
+				id = NKRsichuan.4
+				days = 9
+			}
+		}
+	}
+}
+
+country_event = { #潘文华系简介
+	id = NKRsichuan.2
+	title = NKRsichuan.2.t
+	desc = NKRsichuan.2.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event NKRsichuan.2 option NKRsichuan.2.a"
+		name = NKRsichuan.2.a
+		
+	}
+}
+
+country_event = { #中国青年党简介
+	id = NKRsichuan.3
+	title = NKRsichuan.3.t
+	desc = NKRsichuan.3.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event NKRsichuan.1 option NKRsichuan.3.a"
+		name = NKRsichuan.3.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.5
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { #刘从云和一贯道
+	id = NKRsichuan.4
+	title = NKRsichuan.4.t
+	desc = NKRsichuan.4.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event NKRsichuan.1 option NKRsichuan.4.a"
+		name = NKRsichuan.4.a
+	}
+}
+
+country_event = { #唐式遵和青年党
+	id = NKRsichuan.5
+	title = NKRsichuan.5.t
+	desc = NKRsichuan.5.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event NKRsichuan.1 option NKRsichuan.5.a"
+		name = NKRsichuan.5.a
+	}
+}
+
+
+
+
+###杂项###
+
+unit_leader_event = {
+	id = NKRsichuanmisc.1 #四川将军升级
+	title = {
+		text = NKRsichuanmisc.1.t.SZC_pan_wenhua
+		trigger = { THIS = { is_character = SZC_pan_wenhua } }
+	}
+	title = {
+		text = NKRsichuanmisc.1.t.SZC_tang_shizun
+		trigger = { THIS = { is_character = SZC_tang_shizun } }
+	}
+	desc = {
+		text = NKRsichuanmisc.1.d.SZC_pan_wenhua
+		trigger = { THIS = { is_character = SZC_pan_wenhua
+	desc = {
+		text = NKRsichuanmisc.1.d.SZC_tang_shizun
+		trigger = { THIS = { is_character = SZC_tang_shizun } }
+	}
+
+
+	is_triggered_only = yes #fired by on_event related to general promotions.
+
+	trigger = {
+		THIS = {
+			OR = {
+				is_character = SZC_pan_wenhua
+				is_character = SZC_tang_shizun
+			}
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.1 option NKRsichuanmisc.1.a"
+		name = NKRsichuanmisc.1.a #文武双全，吾辈楷模！
+		trigger = { THIS = { is_character = SZC_pan_wenhua } }
+		custom_effect_tooltip = CHI_champion_effect_tt
+	}
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.1 option NKRsichuanmisc.1.b"
+		name = NKRsichuanmisc.1.b #瘟猪打老虎，打的尽是土
+		trigger = { THIS = { is_character = SZC_tang_shizun } }
+		custom_effect_tooltip = CHI_champion_effect_tt
+	}
+}

@@ -1,3 +1,25 @@
+SZC_recruit_character_effect = {#招募
+	if = {
+		limit = {
+			NOT = {
+				THIS = { has_character_flag = is_dead }
+			}
+		}
+		if = {
+			limit = { THIS = { is_army_leader = yes } }
+			demote_to_general = yes
+			remove_trait = { trait = recently_promoted }
+		}
+		set_nationality = SZC
+	}
+}
+
+
+
+
+
+
+
 SZC_armament_collapse = {
 	modify_country_flag = {
 		flag = SZC_armament_defeats
@@ -173,6 +195,7 @@ SZC_industrial_corps_wins_civil_war = {
 		ruling_party = paternal_autocrat
 		elections_allowed = no
 	}
+	set_country_flag = NKRSZCpathbruh
 	clr_country_flag = SZC_zhili_supports_armament
 	clr_country_flag = SZC_yunnan_supports_officers
 	set_capital = { state = 650 remember_old_capital = no }
