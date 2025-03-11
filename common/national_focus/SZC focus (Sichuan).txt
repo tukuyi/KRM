@@ -4557,6 +4557,13 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_Align_The_Minor_Warlords"
 			SZC_political_recovery = yes
 			army_experience = 15
+			hidden_effect = {
+				SZC_fan_shaozeng = {
+					unit_leader_event = {
+						id = NKRsichuanmisc.2
+					}
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
@@ -4650,6 +4657,11 @@ focus_tree = {
 			is_in_faction = no
 			NOT = { has_idea = SZC_two_lius_war }
 		}
+		allow_branch = {
+			NOT = {
+				has_country_flag = SZC_liu_xiang_dead
+			}
+		}
 		prerequisite = {
 			focus = SZC_Family_Matters
 		}
@@ -4661,6 +4673,10 @@ focus_tree = {
 		}
 		select_effect = {
 			log = "[GetLogRoot]: Select Focus SZC_Sichuan_Fowards"
+			country_event = {
+				id = NKRsichuan.11
+				days = 7
+			}
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_Sichuan_Fowards"
@@ -4671,6 +4687,39 @@ focus_tree = {
 				china_enable_all_attack_decisions = yes
 				custom_effect_tooltip = tooltip_white_line
 				custom_effect_tooltip = china_can_core_through_compliance
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_what_now
+		icon = GFX_goal_SZC_Sichuan_Fowards
+		cost = 1
+
+		relative_position_id = SZC_Family_Matters
+		x = -1
+		y = 2
+
+		allow_branch = {
+			has_country_flag = SZC_liu_xiang_dead
+		}
+		prerequisite = {
+			focus = SZC_Family_Matters
+		}
+		prerequisite = {
+			focus = SZC_Famine_Relief_Corps
+		}
+		prerequisite = {
+			focus = SZC_Urban_Expansion
+		}
+		select_effect = {
+			log = "[GetLogRoot]: Select Focus SZC_what_now"
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed what_now"
+			custom_effect_tooltip = SZC_what_now_tooltip
+			country_event = {
+				id = NKRsichuan.14
 			}
 		}
 	}

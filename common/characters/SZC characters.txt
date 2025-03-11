@@ -408,7 +408,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_fan_shaozeng_commander_desc
-			traits = { light_infantry_officer trait_reckless commando }
+			traits = { light_infantry_officer trait_reckless commando war_hero }
 			skill = 2
 			attack_skill = 3
 			defense_skill = 2
@@ -560,6 +560,17 @@ characters = {
 			ledger = army
 			traits = { KR_MHC_army_regrouping_2 }
 			cost = 100
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_pan_wenhua_sic
+			ledger = army
+			traits = { KR_spiritual_leader_sic }
+			cost = 0
+			visible = {
+				has_country_flag = NKRSZCpathbruh
+			}
+			desc = SZC_pan_wenhua_sic_desc
 		}
 		country_leader = {
 			desc = SZC_pan_wenhua_leader_desc
