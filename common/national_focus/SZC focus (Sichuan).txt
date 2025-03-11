@@ -10099,6 +10099,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_destroy_the_ygd"
+			remove_ideas = {
+				SZC_yiguandao_revolt
+			}
 		}
 	}
 
@@ -10116,6 +10119,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_control_the_army"
+			add_stability = 0.05
+			remove_ideas = { SZC_after_liu_2 }
+			country_lock_all_division_template = no
 		}
 	}
 
@@ -10133,6 +10139,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_marginalize_the_YCP"
+			country_event =  { id = NKRsichuan.101 }
 		}
 	}
 
@@ -10157,6 +10164,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_situation_under_control"
 			custom_effect_tooltip = SZC_pan_situation_under_control_tooltip
+			SZC_improve_pan_legitimacy_effect = yes
 		}
 	}
 
@@ -10192,6 +10200,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_political_tutelage"
+			add_political_power = 150
+			add_stability = 0.05
+			SZC_improve_pan_legitimacy_effect = yes
 		}
 	}
 
@@ -10209,6 +10220,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_support_intellectual"
+			add_research_slot = 1
 		}
 	}
 
@@ -10226,7 +10238,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_deal_with_paoges"
-			custom_effect_tooltip = SZC_pan_deal_with_paoges_tooltip
+			add_stability = -0.1
+			add_war_support = 0.1
+			add_political_power = 50
 		}
 	}
 
@@ -10244,6 +10258,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_rally_our_men"
+			increase_conscription = yes
+			custom_effect_tooltip = tooltip_white_line
+			add_war_support = 0.05
 		}
 	}
 

@@ -8727,7 +8727,9 @@ country_event = { #刘湘之死
 				promote_character = paternal_autocrat_subtype
 			}
 			set_country_flag = SZC_liu_xiang_dead
+			add_ideas = { SZC_after_liu }
 		}
+		country_lock_all_division_template = yes
 	}
 }
 
@@ -8861,6 +8863,10 @@ country_event = { #刘神仙
 		}
 		SZC_liu_congyun = {
 			promote_character = national_populist_subtype
+		}
+		swap_ideas = {
+			remove_idea = SZC_after_liu
+			add_idea = SZC_after_liu_2
 		}
 	}
 }
@@ -9028,6 +9034,12 @@ country_event = { #惨剧定性
 	option = {#有罪！
 		log = "[GetLogInfo]: event NKRsichuan.28 option NKRsichuan.28.a"
 		name = NKRsichuan.28.a
+		SZC_liu_congyun = {
+			kill_character = yes
+		}
+		add_ideas = {
+			SZC_yiguandao_revolt
+		}
 	}
 }
 
@@ -9049,6 +9061,13 @@ country_event = { #潘文华巩固政权
 		SZC_pan_wenhua = {
 			promote_character = paternal_autocrat_subtype
 		}
+		swap_ideas = {
+			remove_idea = SZC_after_liu
+			add_idea = SZC_after_liu_2
+		}
+		add_ideas = {
+			SZC_pan_legitimacy_1
+		}
 	}
 }
 
@@ -9067,6 +9086,10 @@ country_event = { #让贤唐式遵
 		SZC_tang_shizun = {
 			promote_character = paternal_autocrat_subtype
 		}
+		swap_ideas = {
+			remove_idea = SZC_after_liu
+			add_idea = SZC_after_liu_2
+		}
 	}
 }
 
@@ -9079,6 +9102,26 @@ country_event = { #中国青年党浮出水面
 	is_triggered_only = yes
 
 	option = {#青年中国，自川蜀而始！
+		log = "[GetLogInfo]: event NKRsichuan.31 option NKRsichuan.31.a"
+		name = NKRsichuan.31.a
+	}
+}
+
+
+##############
+###潘文华线###
+##############
+
+
+country_event = { #对付青年党
+	id = NKRsichuan.101
+	title = NKRsichuan.101.t
+	desc = NKRsichuan.101.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#我应当小心地避免任用他们...
 		log = "[GetLogInfo]: event NKRsichuan.31 option NKRsichuan.31.a"
 		name = NKRsichuan.31.a
 	}
