@@ -8742,10 +8742,18 @@ country_event = { #准备调查
 	option = {#我们应该集中盯紧武备系残党
 		log = "[GetLogInfo]: event NKRsichuan.14 option NKRsichuan.14.a"
 		name = NKRsichuan.14.a
+		country_event = {
+			id = NKRsichuan.15
+			days = 2
+		}
 	}
 	option = {#范哈儿？他怎么可能，应该聚焦事件本身
 		log = "[GetLogInfo]: event NKRsichuan.14 option NKRsichuan.14.b"
 		name = NKRsichuan.14.b
+		country_event = {
+			id = NKRsichuan.21
+			days = 2
+		}
 	}
 }
 
@@ -8760,10 +8768,18 @@ country_event = { #范哈儿与武备系
 	option = {#不能再犹豫了，必须要出重拳！
 		log = "[GetLogInfo]: event NKRsichuan.15 option NKRsichuan.15.a"
 		name = NKRsichuan.15.a
+		country_event = {
+			id = NKRsichuan.17
+			days = 5
+		}
 	}
 	option = {#老子去和他摆！
 		log = "[GetLogInfo]: event NKRsichuan.15 option NKRsichuan.15.b"
 		name = NKRsichuan.15.b
+		country_event = {
+			id = NKRsichuan.16
+			days = 3
+		}
 	}
 }
 
@@ -8778,10 +8794,18 @@ country_event = { #水银？
 	option = {#什么屁话...
 		log = "[GetLogInfo]: event NKRsichuan.16 option NKRsichuan.16.a"
 		name = NKRsichuan.16.a
+		country_event = {
+			id = NKRsichuan.17
+			days = 4
+		}
 	}
 	option = {#水银...我知道了！
 		log = "[GetLogInfo]: event NKRsichuan.16 option NKRsichuan.16.b"
 		name = NKRsichuan.16.b
+		country_event = {
+			id = NKRsichuan.20
+			days = 2
+		}
 	}
 }
 
@@ -8793,9 +8817,13 @@ country_event = { #肃清范哈儿
 
 	is_triggered_only = yes
 
-	option = {#什么屁话...
+	option = {#有什么不对劲
 		log = "[GetLogInfo]: event NKRsichuan.17 option NKRsichuan.17.a"
 		name = NKRsichuan.17.a
+		country_event = {
+			id = NKRsichuan.18
+			days = 5
+		}
 	}
 }
 
@@ -8810,6 +8838,10 @@ country_event = { #神兵现身
 	option = {#刘从云，我日你先人！
 		log = "[GetLogInfo]: event NKRsichuan.18 option NKRsichuan.18.a"
 		name = NKRsichuan.18.a
+		country_event = {
+			id = NKRsichuan.19
+			days = 1
+		}
 	}
 }
 
@@ -8821,7 +8853,7 @@ country_event = { #刘神仙
 
 	is_triggered_only = yes
 
-	option = {#刘从云，我日你先人！
+	option = {#开始了
 		log = "[GetLogInfo]: event NKRsichuan.19 option NKRsichuan.19.a"
 		name = NKRsichuan.19.a
 	}
@@ -8838,6 +8870,10 @@ country_event = { #抓捕刘从云
 	option = {#妖言惑众，死有余辜！
 		log = "[GetLogInfo]: event NKRsichuan.20 option NKRsichuan.20.a"
 		name = NKRsichuan.20.a
+		country_event = {
+			id = NKRsichuan.28
+			days = 5
+		}
 	}
 }
 
@@ -8852,6 +8888,10 @@ country_event = { #询问周书
 	option = {#周夫人不可能下手，那会是谁？
 		log = "[GetLogInfo]: event NKRsichuan.21 option NKRsichuan.21.a"
 		name = NKRsichuan.21.a
+		country_event = {
+			id = NKRsichuan.22
+			days = 2
+		}
 	}
 }
 
@@ -8866,6 +8906,10 @@ country_event = { #查看化验结果
 	option = {#水银中毒？
 		log = "[GetLogInfo]: event NKRsichuan.22 option NKRsichuan.22.a"
 		name = NKRsichuan.22.a
+		country_event = {
+			id = NKRsichuan.23
+			days = 2
+		}
 	}
 }
 
@@ -8880,10 +8924,18 @@ country_event = { #作案动机
 	option = {#或许这根本就不是计划好的预谋？
 		log = "[GetLogInfo]: event NKRsichuan.23 option NKRsichuan.23.a"
 		name = NKRsichuan.23.a
+		country_event = {
+			id = NKRsichuan.24
+			days = 3
+		}
 	}
 	option = {#应该没这么简单，继续调查。
 		log = "[GetLogInfo]: event NKRsichuan.23 option NKRsichuan.23.b"
 		name = NKRsichuan.23.b
+		country_event = {
+			id = NKRsichuan.25
+			days = 2
+		}
 	}
 }
 
@@ -8898,6 +8950,10 @@ country_event = { #刘湘的活动踪迹
 	option = {#水银...刘从云！
 		log = "[GetLogInfo]: event NKRsichuan.24 option NKRsichuan.24.a"
 		name = NKRsichuan.24.a
+		country_event = {
+			id = NKRsichuan.20
+			days = 3
+		}
 	}
 }
 
@@ -8912,6 +8968,10 @@ country_event = { #夜袭潘府
 	option = {#狗日的，给我找个训练有素的医生来！
 		log = "[GetLogInfo]: event NKRsichuan.25 option NKRsichuan.25.a"
 		name = NKRsichuan.25.a
+		country_event = {
+			id = NKRsichuan.26
+			days = 2
+		}
 	}
 }
 
@@ -8926,6 +8986,10 @@ country_event = { #洞察
 	option = {#只可能是刘从云了。
 		log = "[GetLogInfo]: event NKRsichuan.26 option NKRsichuan.26.a"
 		name = NKRsichuan.26.a
+		country_event = {
+			id = NKRsichuan.27
+			days = 3
+		}
 	}
 }
 
@@ -8937,9 +9001,13 @@ country_event = { #抓捕刘从云（唐式遵版）
 
 	is_triggered_only = yes
 
-	option = {#只可能是刘从云了。
+	option = {#可惜你没料到
 		log = "[GetLogInfo]: event NKRsichuan.27 option NKRsichuan.27.a"
 		name = NKRsichuan.27.a
+		country_event = {
+			id = NKRsichuan.28
+			days = 5
+		}
 	}
 }
 
@@ -8968,6 +9036,11 @@ country_event = { #潘文华巩固政权
 	option = {#总有人得收拾残局。
 		log = "[GetLogInfo]: event NKRsichuan.29 option NKRsichuan.29.a"
 		name = NKRsichuan.29.a
+		load_focus_tree = Sichuan_Clique_Panwenhua
+		complete_national_focus = SZC_Pan_Victory
+		SZC_pan_wenhua = {
+			promote_character = paternal_autocrat_subtype
+		}
 	}
 }
 
@@ -8982,6 +9055,10 @@ country_event = { #让贤唐式遵
 	option = {#希望你能不负刘将军的遗志吧。
 		log = "[GetLogInfo]: event NKRsichuan.30 option NKRsichuan.30.a"
 		name = NKRsichuan.30.a
+		load_focus_tree = Sichuan_Clique_YCP
+		SZC_tang_shizun = {
+			promote_character = paternal_autocrat_subtype
+		}
 	}
 }
 

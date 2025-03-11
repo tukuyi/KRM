@@ -1488,6 +1488,7 @@ shared_focus = {
 		OR = {
 			has_focus_tree = Sichuan_Clique_Armament
 			has_focus_tree = Sichuan_Clique_Zhili
+			has_focus_tree = Sichuan_Clique_Panwenhua
 		}
 	}
 	mutually_exclusive = {
@@ -1817,6 +1818,7 @@ shared_focus = {
 		OR = {
 			has_focus_tree = Sichuan_Clique_Armament
 			has_focus_tree = Sichuan_Clique_Zhili
+			has_focus_tree = Sichuan_Clique_Panwenhua
 		}
 	}
 	mutually_exclusive = {
@@ -3042,7 +3044,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_Armament_Department_Holds_On
-		icon = GFX_goal_SZC_flag
+		icon = GFX_goal_SZC_
 		cost = 0
 
 		x = 6
@@ -3444,7 +3446,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_A_Man_Of_The_People
-		icon = GFX_goal_SZC_flag_2
+		icon = GFX_goal_SZC__2
 		cost = 5
 
 		relative_position_id = SZC_Yang_Sens_Ambition
@@ -3693,7 +3695,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_A_Victory_From_Baoding
-		icon = GFX_goal_SZC_flag
+		icon = GFX_goal_SZC_
 		cost = 0
 
 		x = 5
@@ -4481,10 +4483,6 @@ focus_tree = {
 	id = Sichuan_Clique_Industrial
 	country = {
 		factor = 0
-		modifier = {
-			add = 10
-			tag = SZC
-		}
 	}
 	default = no
 	continuous_focus_position = { x = 2350 y = 850 }
@@ -4500,7 +4498,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_Industrial_Victory
-		icon = GFX_goal_SZC_flag
+		icon = GFX_goal_SZC_
 		cost = 0
 
 		x = 4
@@ -4559,6 +4557,7 @@ focus_tree = {
 			army_experience = 15
 			hidden_effect = {
 				SZC_fan_shaozeng = {
+					SZC_recruit_character_effect = yes
 					unit_leader_event = {
 						id = NKRsichuanmisc.2
 					}
@@ -4693,7 +4692,7 @@ focus_tree = {
 	
 	focus = {
 		id = SZC_what_now
-		icon = GFX_goal_SZC_Sichuan_Fowards
+		icon = GFX_goal_SZC_what_now
 		cost = 1
 
 		relative_position_id = SZC_Family_Matters
@@ -4711,9 +4710,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = SZC_Urban_Expansion
-		}
-		select_effect = {
-			log = "[GetLogRoot]: Select Focus SZC_what_now"
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed what_now"
@@ -5207,7 +5203,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_Republican_Triumph
-		icon = GFX_goal_SZC_flag
+		icon = GFX_goal_SZC_
 		cost = 0
 
 		x = 6
@@ -7545,7 +7541,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_The_Zhilis_Last_Stand
-		icon = GFX_goal_SZC_flag_2
+		icon = GFX_goal_SZC__2
 		cost = 0
 
 		x = 7
@@ -10045,6 +10041,461 @@ focus_tree = {
 			add_to_coalition = yes
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+}
+
+
+focus_tree = {
+	id = Sichuan_Clique_Panwenhua
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SZC
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 2350 y = 850 }
+
+	shared_focus = SZC_Chengdu_Chongqing_Railway
+	shared_focus = SZC_Rebuild_The_Sichuanese_Army
+	shared_focus = SZC_Rebuild_The_Officer_Corps
+
+	shared_focus = CHS_provisional_government
+	shared_focus = CHS_reintegrate_academies
+	shared_focus = CHS_standardised_arsenals
+	shared_focus = CHS_southern_fleets_legacy
+
+	focus = {
+		id = SZC_Pan_Victory
+		icon = GFX_goal_SZC_Pan_Victory
+		cost = 0
+
+		x = 4
+		y = 0
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_Pan_Victory"
+			custom_effect_tooltip = SZC_Pan_Victory_tooltip
+		}
+	}
+
+	focus = {
+		id = SZC_pan_destroy_the_ygd
+		icon = GFX_goal_SZC_pan_destroy_the_ygd
+		cost = 2
+
+		x = -2
+		y = 1
+		relative_position_id = SZC_Pan_Victory
+
+		prerequisite = {
+			focus = SZC_Pan_Victory
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_destroy_the_ygd"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_control_the_army
+		icon = GFX_goal_SZC_pan_control_the_army
+		cost = 2
+
+		x = 2
+		y = 1
+		relative_position_id = SZC_Pan_Victory
+
+		prerequisite = {
+			focus = SZC_Pan_Victory
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_control_the_army"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_marginalize_the_YCP
+		icon = GFX_goal_SZC_pan_marginalize_the_YCP
+		cost = 2
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_Pan_Victory
+
+		prerequisite = {
+			focus = SZC_Pan_Victory
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_marginalize_the_YCP"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_situation_under_control
+		icon = GFX_goal_SZC_pan_situation_under_control
+		cost = 2
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_Pan_Victory
+
+		prerequisite = {
+			focus = SZC_pan_control_the_army
+		}
+		prerequisite = {
+			focus = SZC_pan_destroy_the_ygd
+		}
+		prerequisite = {
+			focus = SZC_pan_marginalize_the_YCP
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_situation_under_control"
+			custom_effect_tooltip = SZC_pan_situation_under_control_tooltip
+		}
+	}
+
+	focus = {
+		id = SZC_pan_rally_republicans
+		icon = GFX_goal_SZC_pan_rally_republicans
+		cost = 2
+
+		x = 1
+		y = 1
+		relative_position_id = SZC_pan_situation_under_control
+
+		prerequisite = {
+			focus = SZC_pan_situation_under_control
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_rally_republicans"
+			custom_effect_tooltip = SZC_pan_rally_republicans_tooltip
+		}
+	}
+
+	focus = {
+		id = SZC_pan_political_tutelage
+		icon = GFX_goal_SZC_pan_political_tutelage
+		cost = 2
+
+		x = 2
+		y = 2
+		relative_position_id = SZC_pan_situation_under_control
+
+		prerequisite = {
+			focus = SZC_pan_rally_republicans
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_political_tutelage"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_support_intellectual
+		icon = GFX_goal_SZC_pan_support_intellectual
+		cost = 2
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_pan_situation_under_control
+
+		prerequisite = {
+			focus = SZC_pan_rally_republicans
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_support_intellectual"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_deal_with_paoges
+		icon = GFX_goal_SZC_pan_deal_with_paoges
+		cost = 2
+
+		x = -1
+		y = 1
+		relative_position_id = SZC_pan_situation_under_control
+
+		prerequisite = {
+			focus = SZC_pan_situation_under_control
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_deal_with_paoges"
+			custom_effect_tooltip = SZC_pan_deal_with_paoges_tooltip
+		}
+	}
+
+	focus = {
+		id = SZC_pan_rally_our_men
+		icon = GFX_goal_SZC_pan_rally_our_men
+		cost = 2
+
+		x = -2
+		y = 2
+		relative_position_id = SZC_pan_situation_under_control
+
+		prerequisite = {
+			focus = SZC_pan_deal_with_paoges
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_rally_our_men"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_declare_southernwest_autonomy
+		icon = GFX_goal_SZC_pan_declare_southernwest_autonomy
+		cost = 2
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_pan_situation_under_control
+
+		allow_branch = {
+			# NOT = {
+			# 	has_country_flag = NKRSZC_joinkmt
+			# }
+			always = no
+		}
+
+		prerequisite = {
+			focus = SZC_pan_rally_our_men
+		}
+		prerequisite = {
+			focus = SZC_pan_support_intellectual
+		}
+		prerequisite = {
+			focus = SZC_pan_political_tutelage
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_declare_southernwest_autonomy"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_a_red_sichuan
+		icon = GFX_goal_SZC_pan_a_red_sichuan
+		cost = 2
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_pan_situation_under_control
+
+		allow_branch = {
+			# has_country_flag = NKRSZC_joinkmt
+			always = yes
+		}
+
+		prerequisite = {
+			focus = SZC_pan_rally_our_men
+		}
+		prerequisite = {
+			focus = SZC_pan_support_intellectual
+		}
+		prerequisite = {
+			focus = SZC_pan_political_tutelage
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_a_red_sichuan"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_spare_revolution
+		icon = GFX_goal_SZC_pan_spare_revolution
+		cost = 2
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_pan_a_red_sichuan
+
+
+		prerequisite = {
+			focus = SZC_pan_a_red_sichuan
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_spare_revolution"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_ask_for_MMIC_help
+		icon = GFX_goal_SZC_pan_ask_for_MMIC_help
+		cost = 2
+
+		x = -4
+		y = 1
+		relative_position_id = SZC_pan_a_red_sichuan
+
+
+		prerequisite = {
+			focus = SZC_pan_a_red_sichuan
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_ask_for_MMIC_help"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_politicalize_the_army
+		icon = GFX_goal_SZC_pan_politicalize_the_army
+		cost = 2
+
+		x = -2
+		y = 1
+		relative_position_id = SZC_pan_a_red_sichuan
+
+
+		prerequisite = {
+			focus = SZC_pan_a_red_sichuan
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_politicalize_the_army"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_NRA_in_sichuan
+		icon = GFX_goal_SZC_pan_NRA_in_sichuan
+		cost = 2
+
+		x = -4
+		y = 2
+		relative_position_id = SZC_pan_a_red_sichuan
+
+
+		prerequisite = {
+			focus = SZC_pan_ask_for_MMIC_help
+		}
+		prerequisite = {
+			focus = SZC_pan_politicalize_the_army
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_NRA_in_sichuan"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_public_safety
+		icon = GFX_goal_SZC_pan_public_safety
+		cost = 2
+
+		x = -1
+		y = 2
+		relative_position_id = SZC_pan_a_red_sichuan
+
+
+		prerequisite = {
+			focus = SZC_pan_a_red_sichuan
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_public_safety"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_grand_sichuan_plan
+		icon = GFX_goal_SZC_pan_grand_sichuan_plan
+		cost = 2
+
+		x = 2
+		y = 1
+		relative_position_id = SZC_pan_a_red_sichuan
+
+
+		prerequisite = {
+			focus = SZC_pan_a_red_sichuan
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_public_safety"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_towards_radical_agricutural_revolution
+		icon = GFX_goal_SZC_pan_towards_radical_agricutural_revolution
+		cost = 2
+
+		x = 1
+		y = 2
+		relative_position_id = SZC_pan_a_red_sichuan
+
+		mutually_exclusive = {
+			focus = SZC_pan_moderate_agricutural_reform
+		}
+
+		prerequisite = {
+			focus = SZC_pan_grand_sichuan_plan
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_towards_radical_agricutural_revolution"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_moderate_agricutural_reform
+		icon = GFX_goal_SZC_pan_moderate_agricutural_reform
+		cost = 2
+
+		x = 3
+		y = 2
+		relative_position_id = SZC_pan_a_red_sichuan
+
+		mutually_exclusive = {
+			focus = SZC_pan_towards_radical_agricutural_revolution
+		}
+
+		prerequisite = {
+			focus = SZC_pan_grand_sichuan_plan
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_moderate_agricutural_reform"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_a_united_southernwest
+		icon = GFX_goal_SZC_pan_a_united_southernwest
+		cost = 2
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_pan_a_red_sichuan
+
+
+		prerequisite = {
+			focus = SZC_pan_NRA_in_sichuan
+		}
+		prerequisite = {
+			focus = SZC_pan_towards_radical_agricutural_revolution
+			focus = SZC_pan_moderate_agricutural_reform
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_a_united_southernwest"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_seize_the_revolution
+		icon = GFX_goal_SZC_pan_seize_the_revolution
+		cost = 2
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_pan_a_united_southernwest
+
+
+		prerequisite = {
+			focus = SZC_pan_a_united_southernwest
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_seize_the_revolution"
+		}
 	}
 }
 

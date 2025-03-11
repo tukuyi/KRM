@@ -603,6 +603,11 @@ characters = {
 			desc = SZC_tang_shizun_commander_desc
 			traits = { KR_armaments_organiser }
 		}
+		country_leader = {
+			desc =SZC_tang_shizun_desc
+			ideology = paternal_autocrat_subtype
+			traits = { CHN_non_aligned }
+		}
 	}
 	#郭勛祺
 	SZC_guo_xunqi = { #could work as a 2 level but that would put him as same level as his superior which would be abit odd
