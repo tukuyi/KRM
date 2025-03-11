@@ -8856,6 +8856,12 @@ country_event = { #刘神仙
 	option = {#开始了
 		log = "[GetLogInfo]: event NKRsichuan.19 option NKRsichuan.19.a"
 		name = NKRsichuan.19.a
+		set_politics = {
+			ruling_party = national_populist
+		}
+		SZC_liu_congyun = {
+			promote_character = national_populist_subtype
+		}
 	}
 }
 
@@ -9036,6 +9042,8 @@ country_event = { #潘文华巩固政权
 	option = {#总有人得收拾残局。
 		log = "[GetLogInfo]: event NKRsichuan.29 option NKRsichuan.29.a"
 		name = NKRsichuan.29.a
+		set_country_flag = NKRSZCpanpath
+		activate_advisor = SZC_li_hongkun_sic
 		load_focus_tree = Sichuan_Clique_Panwenhua
 		complete_national_focus = SZC_Pan_Victory
 		SZC_pan_wenhua = {
