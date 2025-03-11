@@ -568,7 +568,10 @@ characters = {
 			traits = { KR_spiritual_leader_sic }
 			cost = 0
 			visible = {
-				has_country_flag = NKRSZCpathbruh
+				AND = {
+					NOT = { has_country_flag =NKRSZCpanpath }
+					has_country_flag = NKRSZCpathbruh
+				}
 			}
 			desc = SZC_pan_wenhua_sic_desc
 		}
@@ -602,6 +605,11 @@ characters = {
 			idea_token = SZC_tang_shizun_advisor
 			desc = SZC_tang_shizun_commander_desc
 			traits = { KR_armaments_organiser }
+		}
+		country_leader = {
+			desc =SZC_tang_shizun_desc
+			ideology = paternal_autocrat_subtype
+			traits = { CHN_non_aligned }
 		}
 	}
 	#郭勛祺
@@ -1010,6 +1018,37 @@ characters = {
 			ideology = national_populist_subtype
 			traits = { CHN_non_aligned }
 		}
+	}
+	#李宏锟
+	SZC_li_hongkun = {
+		name = SZC_li_hongkun
+		portraits = {
+			army = {
+				small = GFX_portrait_SZC_li_hongkun_small
+				large = GFX_portrait_SZC_li_hongkun_large
+			}
+		}
+		corps_commander = {
+			desc = SZC_li_hongkun_desc
+			traits = { light_infantry_officer }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_li_hongkun_sic
+			ledger = army
+			traits = { KR_spiritual_leader_sic }
+			cost = 0
+			visible = {
+				has_country_flag = NKRSZCpanpath
+			}
+			desc = SZC_li_hongkun_advisor_desc
+		}
+
 	}
 
 
