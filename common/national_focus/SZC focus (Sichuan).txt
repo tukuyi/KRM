@@ -10339,7 +10339,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_spare_revolution
 		icon = GFX_goal_SZC_pan_spare_revolution
-		cost = 2
+		cost = 5
 
 		x = 0
 		y = 1
@@ -10351,6 +10351,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_spare_revolution"
+			hidden_effect = {
+				country_event = {
+					id =  NKRsichuan.109
+				}
+			}
 			activate_targeted_decision = { decision = china_demand_submission target = SHX }
 			activate_targeted_decision = { decision = china_demand_submission target = YUN }
 			activate_targeted_decision = { decision = china_demand_submission target = GXC }
@@ -10364,7 +10369,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_ask_for_MMIC_help
 		icon = GFX_goal_SZC_pan_ask_for_MMIC_help
-		cost = 2
+		cost = 5
 
 		x = -4
 		y = 1
@@ -10379,13 +10384,19 @@ focus_tree = {
 			set_country_flag = SZC_MMIC_available
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SZC_MMIC_theorist
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.110
+					days = 5
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_politicalize_the_army
 		icon = GFX_goal_SZC_pan_politicalize_the_army
-		cost = 2
+		cost = 5
 
 		x = -2
 		y = 1
@@ -10412,8 +10423,8 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_NRA_in_sichuan
 		icon = GFX_goal_SZC_pan_NRA_in_sichuan
-		cost = 2
-
+		cost = 5
+		
 		x = -4
 		y = 2
 		relative_position_id = SZC_pan_a_red_sichuan
@@ -10504,13 +10515,16 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_public_safety"
 			set_country_flag = SZC_grand_sichuan_plan_available
 			unlock_decision_category_tooltip = SZC_grand_sichuan_plan_category
+			country_event = {
+				id = NKRsichuan.111
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_towards_radical_agricutural_revolution
 		icon = GFX_goal_SZC_pan_towards_radical_agricutural_revolution
-		cost = 2
+		cost = 5
 
 		x = 1
 		y = 2
@@ -10523,6 +10537,16 @@ focus_tree = {
 		prerequisite = {
 			focus = SZC_pan_grand_sichuan_plan
 		}
+
+		
+		select_effect = {
+			log = "[GetLogRoot]: Select Focus SZC_pan_towards_radical_agricutural_revolution"
+			country_event = {
+				id = NKRsichuan.113
+				days = 5
+			}
+		}
+
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_towards_radical_agricutural_revolution"
 			every_core_state = {
@@ -10544,7 +10568,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_moderate_agricutural_reform
 		icon = GFX_goal_SZC_pan_moderate_agricutural_reform
-		cost = 2
+		cost = 5
 
 		x = 3
 		y = 2
@@ -10578,7 +10602,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_a_united_southernwest
 		icon = GFX_goal_SZC_pan_a_united_southernwest
-		cost = 2
+		cost = 5
 
 		x = 0
 		y = 3
@@ -10594,24 +10618,42 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_a_united_southernwest"
+			set_cosmetic_tag = SZC_KMT_SOUTHERNWEST
+			every_state = {
+				limit = {
+					OR = {
+						has_state_flag = guangxi_province_state
+						has_state_flag = guangdong_province_state
+						has_state_flag = yunnan_province_state
+						has_state_flag = hubei_province_state 
+						has_state_flag = hunan_province_state 
+					}
+				}
+				add_claim_by = ROOT 
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_seize_the_revolution
 		icon = GFX_goal_SZC_pan_seize_the_revolution
-		cost = 2
+		cost = 3
 
 		x = 0
 		y = 1
 		relative_position_id = SZC_pan_a_united_southernwest
 
+		available = {
+			has_country_flag = NKRSZC_crisis_done
+			has_global_flag = china_united
+		}
 
 		prerequisite = {
 			focus = SZC_pan_a_united_southernwest
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_seize_the_revolution"
+			custom_effect_tooltip = SZC_seize_KMT_attention
 		}
 	}
 }
