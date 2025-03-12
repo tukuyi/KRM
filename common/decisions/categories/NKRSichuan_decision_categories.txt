@@ -1,0 +1,42 @@
+SZC_debug_category = {
+	icon = GFX_decision_category_qing_hall
+	
+	allowed = { 
+		tag = SZC
+	}
+	available = {  
+
+	}
+	priority = 114514
+	visible = { 
+		always = yes
+	}
+}
+
+SZC_grand_sichuan_plan_category = {
+	icon = GFX_decision_category_qing_hall
+	
+	allowed = { 
+		tag = SZC
+	}
+	available = {  
+
+	}
+	visible = { 
+		has_country_flag = SZC_grand_sichuan_plan_available
+	}
+}
+
+SZC_sichuan_agricultural_reform_category = {
+	icon = GFX_decision_category_qing_hall
+	
+	allowed = { 
+		tag = SZC
+	}
+	available = {  
+
+	}
+	visible = { 
+		has_country_flag = sichuan_agricultural_reform_availble
+	}
+}

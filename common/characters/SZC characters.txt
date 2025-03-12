@@ -567,6 +567,7 @@ characters = {
 			ledger = army
 			traits = { KR_spiritual_leader_sic }
 			cost = 0
+			can_be_fired = no
 			visible = {
 				AND = {
 					NOT = { has_country_flag =NKRSZCpanpath }
@@ -1043,6 +1044,7 @@ characters = {
 			ledger = army
 			traits = { KR_spiritual_leader_sic }
 			cost = 0
+			can_be_fired = no
 			visible = {
 				has_country_flag = NKRSZCpanpath
 			}
@@ -1050,10 +1052,50 @@ characters = {
 		}
 
 	}
+	#杨庶堪
+	SZC_yang_shukan = {
+		name = SZC_yang_shukan
+		portraits = {
+			army = {
+				small = GFX_portrait_SZC_yang_shukan_small
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_yang_shukan_advisor
+			ledger = civilian
+			traits = { KR_influential_intellectual }
+			cost = 0
+			can_be_fired = no
+			visible = {
+				has_country_flag = SZC_yang_shukan_available
+			}
+			desc = SZC_yang_shukan_desc
+		}
+
+	}
 
 
 
-
+	#MMIC四川分署
+	SZC_MMIC = {
+		name = SZC_MMIC
+		portraits = {
+			army = {
+				small = GFX_portrait_CHI_mission_militaire_army_small
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = SZC_MMIC_theorist
+			ledger = military
+			visible = {
+				has_country_flag = SZC_MMIC_available
+			}
+			traits = { KR_council_of_theorists }
+			cost = 100
+		}
+	}
 
 
 
