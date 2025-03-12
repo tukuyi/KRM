@@ -10581,6 +10581,15 @@ focus_tree = {
 		prerequisite = {
 			focus = SZC_pan_grand_sichuan_plan
 		}
+
+		select_effect = {
+			log = "[GetLogRoot]: Select Focus SZC_pan_moderate_agricutural_reform"
+			country_event = {
+				id = NKRsichuan.131
+				days = 5
+			}
+		}
+
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_moderate_agricutural_reform"
 			every_core_state = {

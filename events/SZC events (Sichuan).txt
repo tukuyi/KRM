@@ -9525,6 +9525,12 @@ country_event = { #那些所被遗忘的人...
 	option = {#叫国民革命军来把你们这群老虎送上天！
 		log = "[GetLogInfo]: event NKRsichuan.114 option NKRsichuan.114.b"
 		name = NKRsichuan.114.b
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.126
+				days = 4
+			}
+		}
 	}
 }
 
@@ -9551,6 +9557,12 @@ country_event = { #流血一日
 		log = "[GetLogInfo]: event NKRsichuan.115 option NKRsichuan.115.b"
 		name = NKRsichuan.115.b
 		add_manpower = -331
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.126
+				days = 4
+			}
+		}
 	}
 }
 
@@ -9783,6 +9795,295 @@ country_event = { #赤红的四川
 		set_country_flag = NKRSZC_crisis_done
 	}
 }
+
+country_event = { #xx秩序井然
+	id = NKRsichuan.126
+	title = NKRsichuan.126.t
+	desc = NKRsichuan.126.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#这是必要之举。
+		log = "[GetLogInfo]: event NKRsichuan.126 option NKRsichuan.126.a"
+		name = NKRsichuan.126.a
+		add_manpower = -412
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.127
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = { #戒严下的土改
+	id = NKRsichuan.127
+	title = NKRsichuan.127.t
+	desc = NKRsichuan.127.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#行之有效。
+		log = "[GetLogInfo]: event NKRsichuan.127 option NKRsichuan.127.a"
+		name = NKRsichuan.127.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.128
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #潘将军告全川人民书
+	id = NKRsichuan.128
+	title = NKRsichuan.128.t
+	desc = NKRsichuan.128.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#万岁！
+		log = "[GetLogInfo]: event NKRsichuan.128 option NKRsichuan.128.a"
+		name = NKRsichuan.128.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.129
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #睁一只眼闭一只眼的哲学
+	id = NKRsichuan.129
+	title = NKRsichuan.129.t
+	desc = NKRsichuan.129.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#善。
+		log = "[GetLogInfo]: event NKRsichuan.129 option NKRsichuan.129.a"
+		name = NKRsichuan.129.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.130
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #南京的认可
+	id = NKRsichuan.130
+	title = NKRsichuan.130.t
+	desc = NKRsichuan.130.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#从易帜到真正掌权。
+		log = "[GetLogInfo]: event NKRsichuan.130 option NKRsichuan.130.a"
+		name = NKRsichuan.130.a
+		set_country_flag = NKRSZC_crisis_done
+		set_politics = {
+			ruling_party = authoritarian_democrat
+		}
+	}
+}
+
+country_event = { #土改情况（温和版）
+	id = NKRsichuan.131
+	title = NKRsichuan.131.t
+	desc = NKRsichuan.131.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#我们走在正确的道路上。
+		log = "[GetLogInfo]: event NKRsichuan.131 option NKRsichuan.131.a"
+		name = NKRsichuan.131.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.132
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #新闻报道
+	id = NKRsichuan.132
+	title = NKRsichuan.132.t
+	desc = NKRsichuan.132.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.132 option NKRsichuan.132.a"
+		name = NKRsichuan.132.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.133
+				days = 4
+			}
+		}
+	}
+}
+
+country_event = { #不满的火花
+	id = NKRsichuan.133
+	title = NKRsichuan.133.t
+	desc = NKRsichuan.133.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#农民同胞们，我们可以先谈嘛。
+		log = "[GetLogInfo]: event NKRsichuan.133 option NKRsichuan.133.a"
+		name = NKRsichuan.133.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.134
+				days = 5
+			}
+		}
+	}
+	option = {#私藏枪支？这还不让军队阻止他们？！
+		log = "[GetLogInfo]: event NKRsichuan.133 option NKRsichuan.133.b"
+		name = NKRsichuan.133.b
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.136
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #胡萝卜与大棒
+	id = NKRsichuan.134
+	title = NKRsichuan.134.t
+	desc = NKRsichuan.134.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#接近你的敌人...
+		log = "[GetLogInfo]: event NKRsichuan.134 option NKRsichuan.134.a"
+		name = NKRsichuan.134.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.135
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #潘将军告全川人民书（温和版）
+	id = NKRsichuan.135
+	title = NKRsichuan.135.t
+	desc = NKRsichuan.135.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#万岁！
+		log = "[GetLogInfo]: event NKRsichuan.135 option NKRsichuan.135.a"
+		name = NKRsichuan.135.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.129
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #xx秩序井然
+	id = NKRsichuan.136
+	title = NKRsichuan.136.t
+	desc = NKRsichuan.136.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#“国民”革命军？
+		log = "[GetLogInfo]: event NKRsichuan.136 option NKRsichuan.136.a"
+		name = NKRsichuan.136.a
+		add_manpower = -412
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.137
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = { #南京的不满
+	id = NKRsichuan.137
+	title = NKRsichuan.137.t
+	desc = NKRsichuan.137.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#“我以为我们能时常见面的，潘将军。”
+		log = "[GetLogInfo]: event NKRsichuan.137 option NKRsichuan.137.a"
+		name = NKRsichuan.137.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.138
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { #事在人为
+	id = NKRsichuan.138
+	title = NKRsichuan.138.t
+	desc = NKRsichuan.138.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#或许能成？
+		log = "[GetLogInfo]: event NKRsichuan.138 option NKRsichuan.138.a"
+		name = NKRsichuan.138.a
+		CHI = {
+			add_political_power = 200
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.139
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #庆功宴
+	id = NKRsichuan.139
+	title = NKRsichuan.139.t
+	desc = NKRsichuan.139.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#致未来。
+		log = "[GetLogInfo]: event NKRsichuan.13 option NKRsichuan.139.a"
+		name = NKRsichuan.139.a
+		set_country_flag = NKRSZC_crisis_done
+	}
+}
+
 
 
 
