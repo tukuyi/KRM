@@ -9218,7 +9218,49 @@ country_event = { #四川易帜
 			long_name = SZC_Pan_LKMT_party_long
 			name = SZC_Pan_LKMT_party
 		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = SZC_Pan_LKMT_party_long
+			name = SZC_Pan_LKMT_party
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = SZC_CRS_party_long
+			name = SZC_CRS_party
+		}
+		set_party_name = {
+			ideology = syndicalist
+			long_name = SZC_KMTPAC_party_long
+			name = SZC_KMTPAC_party
+		}
+		set_party_name = {
+			ideology = radical_socialist
+			long_name = SZC_KMTRCA_party_long
+			name = SZC_KMTRCA_party
+		}
+		set_party_name = {
+			ideology = social_democrat
+			long_name = SZC_officer_clique_party_long
+			name = SZC_officer_clique_party
+		}
+		set_party_name = {
+			ideology = social_liberal
+			long_name = SZC_KMTRCF_party_long
+			name = SZC_KMTRCF_party
+		}
+		set_party_name = {
+			ideology = market_liberal
+			long_name = SZC_KMTPSC_party_long
+			name = SZC_KMTPSC_party
+		}
+		set_party_name = {
+			ideology = social_conservative
+			long_name = SZC_KMTWHC_party_long
+			name = SZC_KMTWHC_party
+		}
 		set_temp_variable = { coalition_partner_var = token:radical_socialist }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
 		add_to_coalition = yes
 		set_country_flag = NKRSZC_joinkmt
 		complete_national_focus = SZC_pan_a_red_sichuan
@@ -9262,6 +9304,44 @@ country_event = { #杨专员
 		name = NKRsichuan.106.a
 		set_country_flag = SZC_yang_shukan_available
 		activate_advisor = SZC_yang_shukan_advisor
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.03
+		}
+	}
+}
+
+country_event = { #人民军队为人民？
+	id = NKRsichuan.107
+	title = NKRsichuan.107.t
+	desc = NKRsichuan.107.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#简直就是在南京和巴黎的翻版。
+		log = "[GetLogInfo]: event NKRsichuan.107 option NKRsichuan.107.a"
+		name = NKRsichuan.107.a
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.03
+		}
 	}
 }
 

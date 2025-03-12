@@ -328,4 +328,98 @@ SZC_grand_sichuan_plan_category = {
 			}
 		}
 	}
+	
+	SZC_langzhong_ammonium_nitrate_plant_decision = {#阆中硝酸铵工场
+		icon = GFX_decision_electrify
+
+		allowed = {
+			tag = SZC
+		}
+
+		available = {
+			controls_state = 661
+		}
+
+		visible = {
+			has_completed_focus = SZC_pan_grand_sichuan_plan
+			owns_state = 661
+		}
+
+		fire_only_once = yes
+		cost = 30
+		days_remove = 100
+		cancel_if_not_visible = no
+
+		ai_will_do = {
+			factor = 25
+		}
+		
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_langzhong_ammonium_nitrate_plant_decision"
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_langzhong_ammonium_nitrate_plant_decision"
+			random_owned_state = {
+				prioritize = { 661 } #达县state
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	SZC_huidong_lead_zinc_smelting_decision = {#会东铅锌冶炼
+		icon = GFX_decision_electrify
+
+		allowed = {
+			tag = SZC
+		}
+
+		available = {
+			controls_state = 1015
+		}
+
+		visible = {
+			has_completed_focus = SZC_pan_grand_sichuan_plan
+			owns_state = 1015
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 50
+		cancel_if_not_visible = no
+
+		ai_will_do = {
+			factor = 25
+		}
+		
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_huidong_lead_zinc_smelting_decision"
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_huidong_lead_zinc_smelting_decision"
+			random_owned_state = {
+				prioritize = { 1015 } #凉山
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
 }
