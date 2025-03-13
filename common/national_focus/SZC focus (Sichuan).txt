@@ -10382,7 +10382,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_ask_for_MMIC_help"
 			set_country_flag = SZC_MMIC_available
-			custom_effect_tooltip = available_political_advisor
+			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = SZC_MMIC_theorist
 			hidden_effect = {
 				country_event = {
@@ -10657,12 +10657,207 @@ focus_tree = {
 			has_global_flag = china_united
 		}
 
+		bypass = {
+			has_war_with = CHI
+		}
+
 		prerequisite = {
 			focus = SZC_pan_a_united_southernwest
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_seize_the_revolution"
 			custom_effect_tooltip = SZC_seize_KMT_attention
+			# CHN_add_to_civil_war_preparation_effect = yes #等待KR华南
+			set_country_flag = china_revolted_against_@var:overlord
+			create_wargoal = {
+				target = overlord
+				type = topple_government
+			}
+			custom_effect_tooltip = tooltip_white_line
+			overlord = {
+				if = {
+					limit = { is_in_array = { china_possible_allies_array = ROOT } }
+					remove_from_array = { china_possible_allies_array = ROOT }
+				}
+				if = {
+					limit = { is_in_array = { china_possible_allies_array_northwest = ROOT } }
+					remove_from_array = { china_possible_allies_array_northwest = ROOT }
+				}
+				effect_tooltip = {
+					create_wargoal = {
+						target = ROOT
+						type = annex_everything
+					}
+				}
+				if = {
+					limit = { NOT = { any_other_country = { has_country_flag = china_revolted_against_@FROM } } }
+					country_event = china_events.13
+				}
+				else = {
+					country_event = china_events.15
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_pan_kuomintang_civil_war
+		icon = GFX_goal_SZC_pan_a_red_sichuan
+		cost = 0
+
+		x = 0
+		y = 10
+
+		allow_branch = {
+			# has_country_flag = NKRSZC_KMTcivilwar
+			always = yes
+		}
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_kuomintang_civil_war"
+			custom_effect_tooltip = SZC_pan_kuomintang_civil_war
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_arise_our_men
+		icon = GFX_goal_SZC_pan_a_red_sichuan
+		cost = 0
+		relative_position_id = SZC_pan_kuomintang_civil_war
+
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = SZC_pan_kuomintang_civil_war
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_arise_our_men"
+			custom_effect_tooltip = SZC_pan_arise_our_men
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_to_revolutionaries
+		icon = GFX_goal_SZC_pan_a_red_sichuan
+		cost = 0
+		relative_position_id = SZC_pan_kuomintang_civil_war
+
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SZC_pan_kuomintang_civil_war
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_to_revolutionaries"
+			custom_effect_tooltip = SZC_pan_to_revolutionaries
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_resist_the_silver_offensive
+		icon = GFX_goal_SZC_pan_a_red_sichuan
+		cost = 0
+		relative_position_id = SZC_pan_kuomintang_civil_war
+
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = SZC_pan_kuomintang_civil_war
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_resist_the_silver_offensive"
+			custom_effect_tooltip = SZC_pan_resist_the_silver_offensive
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_propaganda_war
+		icon = GFX_goal_SZC_pan_a_red_sichuan
+		cost = 0
+		relative_position_id = SZC_pan_kuomintang_civil_war
+
+		x = -1
+		y = 2
+
+		prerequisite = {
+			focus = SZC_pan_to_revolutionaries
+		}
+		prerequisite = {
+			focus = SZC_pan_arise_our_men
+		}
+		prerequisite = {
+			focus = SZC_pan_resist_the_silver_offensive
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_propaganda_war"
+			custom_effect_tooltip = SZC_pan_propaganda_war
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_convince_patriots
+		icon = GFX_goal_SZC_pan_a_red_sichuan
+		cost = 0
+		relative_position_id = SZC_pan_kuomintang_civil_war
+
+		x = 1
+		y = 2
+
+		prerequisite = {
+			focus = SZC_pan_to_revolutionaries
+		}
+		prerequisite = {
+			focus = SZC_pan_arise_our_men
+		}
+		prerequisite = {
+			focus = SZC_pan_resist_the_silver_offensive
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_convince_patriots"
+			custom_effect_tooltip = SZC_pan_convince_patriots
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_xiangqianxiangqianxiangqian
+		icon = GFX_goal_SZC_pan_a_red_sichuan
+		cost = 0
+		relative_position_id = SZC_pan_kuomintang_civil_war
+
+		x = 0
+		y = 3
+
+		prerequisite = {
+			focus = SZC_pan_propaganda_war
+		}
+		prerequisite = {
+			focus = SZC_pan_convince_patriots
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_xiangqianxiangqianxiangqian"
+			custom_effect_tooltip = SZC_pan_xiangqianxiangqianxiangqian
+			
 		}
 	}
 }
