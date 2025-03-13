@@ -9793,6 +9793,10 @@ country_event = { #赤红的四川
 			promote_character = syndicalist_subtype
 		}
 		set_country_flag = NKRSZC_crisis_done
+		swap_ideas = {
+			remove_idea = SZC_pan_legitimacy_4
+			add_idea = SZC_pan_legitimacy_6
+		}
 	}
 }
 
@@ -9891,6 +9895,10 @@ country_event = { #南京的认可
 		set_country_flag = NKRSZC_crisis_done
 		set_politics = {
 			ruling_party = authoritarian_democrat
+		}
+		swap_ideas = {
+			remove_idea = SZC_pan_legitimacy_4
+			add_idea = SZC_pan_legitimacy_5
 		}
 	}
 }
@@ -10081,6 +10089,10 @@ country_event = { #庆功宴
 		log = "[GetLogInfo]: event NKRsichuan.139 option NKRsichuan.139.a"
 		name = NKRsichuan.139.a
 		set_country_flag = NKRSZC_crisis_done
+		swap_ideas = {
+			remove_idea = SZC_pan_legitimacy_4
+			add_idea = SZC_pan_legitimacy_7
+		}
 		SZC_pan_wenhua = {
 			swap_country_leader_traits = {
 				remove = CHN_left_kuomintang_aligned
@@ -10126,6 +10138,7 @@ country_event = { #国民党内战-开始
 		set_country_flag = NKRSZC_KMTcivilwar
 		activate_mission = SZC_resist_the_silver_offensive_mission
 		custom_effect_tooltip = CHI_focus_tree_will_change_tt
+		clr_country_flag = SZC_yang_shukan_available
 	}
 }
 

@@ -77,7 +77,7 @@ index_to_insert = find_index_before_bracket(lines)
 
 lines.insert(index_to_insert, "\t}")
 lines.insert(index_to_insert, "\t\ttexturefile = \"gfx/interface/goals/SZC/" + args.icon_name + ".png\"")
-lines.insert(index_to_insert, "\t\tname = \"GFX_" + args.icon_name + "\"")
+lines.insert(index_to_insert, "\t\tname = \"GFX_goal_" + args.icon_name + "\"")
 lines.insert(index_to_insert, "\tSpriteType = {")
 
 with open(dir + "/" + args.goals,"w+") as f:
@@ -117,7 +117,7 @@ lines.insert(index_to_insert, "\t\t\tanimationmaskfile = \"gfx/interface/goals/S
 lines.insert(index_to_insert, "\t\tanimation = {")
 lines.insert(index_to_insert, "\t\t\t\teffectFile = \"gfx/FX/buttonstate.lua\"")
 lines.insert(index_to_insert, "\t\ttexturefile = \"gfx/interface/goals/SZC/" + args.icon_name + ".png\"")
-lines.insert(index_to_insert, "\t\tname = \"GFX_" + args.icon_name + "_shine\"")
+lines.insert(index_to_insert, "\t\tname = \"GFX_goal_" + args.icon_name + "_shine\"")
 lines.insert(index_to_insert, "\tSpriteType = {")
 
 with open(dir + "/" + args.goals_shine,"w+") as f:

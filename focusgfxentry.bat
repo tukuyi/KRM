@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_pan_seize_the_revolution
+python focusgfxentry.py SZC_pan_xiangqianxiangqianxiangqian
 pause
