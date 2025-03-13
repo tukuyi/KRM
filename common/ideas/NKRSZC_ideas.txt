@@ -112,6 +112,56 @@ ideas = {
 				required_garrison_factor = -0.15
 			}
 		}
+		SZC_pan_march_towards_nanjing_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_march_towards_nanjing_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			targeted_modifier = {
+				tag = CHI
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+				army_speed_factor = 0.15
+			}
+		}
+		SZC_pan_propaganda_from_sichuan = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_propaganda_from_sichuan" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			targeted_modifier = {
+				tag = SZC
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+				army_speed_factor = -0.1
+			}
+		}
+		SZC_pan_endsieg = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_endsieg" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				breakthrough_factor = 0.25
+				army_org_factor = 0.2
+			}
+			on_remove = {
+				if = {
+					limit = { NOT = { controls_state = 613 } }
+					country_event = NKRsichuan.140
+				}
+			}
+		}
+		SZC_pan_mandate_lost = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_mandate_lost" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			cancel = {
+				controls_state = 613 #Jinling
+			}
+			modifier = {
+				war_support_factor = -0.4
+				army_org_factor = -0.3
+				land_reinforce_rate = -0.04
+			}
+		}
 	}
 }
 

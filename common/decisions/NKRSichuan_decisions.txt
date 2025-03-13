@@ -423,3 +423,46 @@ SZC_grand_sichuan_plan_category = {
 		}
 	}
 }
+
+chinese_unification = {
+	SZC_resist_the_silver_offensive_mission = { #mission for FROM who's attacking alongside them - can select to bail out early
+		allowed = {
+				always = no
+		}
+		icon = GFX_decision_generic_ignite_civil_war
+		days_mission_timeout = 30
+		priority = 200
+
+		is_good = no
+
+		cancel_trigger = {
+			OR = {
+				CHI = {
+					exists = no
+				}
+				has_completed_focus = SZC_pan_resist_the_silver_offensive
+			}
+		}
+
+		ai_will_do = { factor = 0 }
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout SZC_resist_the_silver_offensive_mission"
+			remove_decision = SZC_resist_the_silver_offensive_mission
+			if = {
+				limit = {
+					has_idea = SZC_pan_march_towards_nanjing_idea
+				}
+				remove_ideas = {
+					SZC_pan_march_towards_nanjing_idea
+				}
+				add_war_support = -0.2
+				add_stability = -0.2
+			}
+			else = {
+				add_war_support = -0.5
+				add_stability = -0.5
+			}
+		}
+	}
+}

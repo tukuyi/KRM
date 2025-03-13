@@ -10078,9 +10078,71 @@ country_event = { #庆功宴
 	is_triggered_only = yes
 
 	option = {#致未来。
-		log = "[GetLogInfo]: event NKRsichuan.13 option NKRsichuan.139.a"
+		log = "[GetLogInfo]: event NKRsichuan.139 option NKRsichuan.139.a"
 		name = NKRsichuan.139.a
 		set_country_flag = NKRSZC_crisis_done
+		SZC_pan_wenhua = {
+			swap_country_leader_traits = {
+				remove = CHN_left_kuomintang_aligned
+				add = CHN__right_kuomintang_aligned
+			}
+			set_variable = {
+				china_alignment = token:right_kuomintang
+			}
+		}
+	}
+}
+
+country_event = { #我们失败了
+	id = NKRsichuan.140
+	title = NKRsichuan.140.t
+	desc = NKRsichuan.140.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	option = {#一片迷茫
+		log = "[GetLogInfo]: event NKRsichuan.140 option NKRsichuan.140.a"
+		name = NKRsichuan.140.a
+		add_ideas = {
+			SZC_pan_mandate_lost
+		}
+	}
+}
+
+country_event = { #国民党内战-开始
+	id = NKRsichuan.141
+	title = NKRsichuan.141.t
+	desc = NKRsichuan.141.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {#我们要打到南京去！
+		log = "[GetLogInfo]: event NKRsichuan.140 option NKRsichuan.141.a"
+		name = NKRsichuan.141.a
+		set_country_flag = NKRSZC_KMTcivilwar
+		activate_mission = SZC_resist_the_silver_offensive_mission
+		custom_effect_tooltip = CHI_focus_tree_will_change_tt
+	}
+}
+
+country_event = { #步入权力殿堂
+	id = NKRsichuan.142
+	title = NKRsichuan.142.t
+	desc = NKRsichuan.142.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {#从四川到全中国。
+		log = "[GetLogInfo]: event NKRsichuan.142 option NKRsichuan.142.a"
+		name = NKRsichuan.142.t
+		custom_effect_tooltip = CHI_focus_tree_will_change_tt
 	}
 }
 
