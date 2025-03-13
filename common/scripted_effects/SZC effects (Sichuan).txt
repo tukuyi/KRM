@@ -348,7 +348,6 @@ SZC_move_officer_generals = {
 		set_nationality = PREV
 		promote_character = yes
 	}
-	SZC_liu_bocheng = { set_nationality = PREV }
 	SZC_li_jiayu = { set_nationality = PREV }
 }
 
@@ -1080,3 +1079,25 @@ SZC_improve_zhili_republic_legitimacy = {
 		custom_effect_tooltip = SZC_improve_legitimacy_tt
 	}
 }
+
+SZC_improve_pan_legitimacy_effect = {
+	if = {
+		limit = { has_idea = SZC_pan_legitimacy_1 }
+		swap_ideas = {
+			remove_idea = SZC_pan_legitimacy_1
+			add_idea = SZC_pan_legitimacy_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = SZC_pan_legitimacy_2 }
+		swap_ideas = {
+			remove_idea = SZC_pan_legitimacy_2
+			add_idea = SZC_pan_legitimacy_3
+		}
+	}
+	else = {
+		set_temp_variable = { ideology_change_var = 0.05 }
+		change_ruling_party_popularity = yes
+	}
+}
+

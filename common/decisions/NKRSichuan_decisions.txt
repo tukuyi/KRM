@@ -1,0 +1,425 @@
+SZC_debug_category = {
+	SZC_DEBUG_panpath_pantakeover_decision = {
+		allowed = { tag = SZC }
+		visible = {
+			is_debug = yes
+		}
+		icon = GFX_decision_lkmt_flag
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_DEBUG_panpath_pantakeover_decision target: [From.GetName]"
+			set_politics = {
+				ruling_party = paternal_autocrat
+			}
+			country_event = NKRsichuan.29
+		}
+	}
+	SZC_DEBUG_panpath_lkmt_decision = {
+		allowed = { tag = SZC }
+		visible = {
+			is_debug = yes
+		}
+		icon = GFX_decision_lkmt_flag
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_DEBUG_panpath_lkmt_decision target: [From.GetName]"
+			CHI = {
+				china_puppet_FROM_effect = yes
+				country_event = CHI.midgame.000
+				complete_national_focus = CHI_first_congress_focus
+				annex_country = {
+					target = LEP
+					transfer_troops = yes
+				}
+			}
+			country_event = NKRsichuan.104
+		}
+	}
+}
+
+SZC_grand_sichuan_plan_category = {
+	SZC_chongqing_jiangbei_match_factory_decision = {#重庆江北火柴厂
+		icon = GFX_decision_electrify
+
+		allowed = {
+			tag = SZC
+		}
+
+		available = {
+			controls_state = 650
+		}
+
+		visible = {
+			has_completed_focus = SZC_pan_grand_sichuan_plan
+			owns_state = 650
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 80
+		cancel_if_not_visible = no
+
+		ai_will_do = {
+			factor = 25
+		}
+		
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_chongqing_jiangbei_match_factory_decision"
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_chongqing_jiangbei_match_factory_decision"
+			random_owned_state = {
+				prioritize = { 650 } #重庆
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	SZC_leshan_jiahua_cement_plant_decision = {#乐山嘉华水泥厂
+		icon = GFX_decision_electrify
+
+		allowed = {
+			tag = SZC
+		}
+
+		available = {
+			controls_state = 605
+		}
+
+		visible = {
+			has_completed_focus = SZC_pan_grand_sichuan_plan
+			owns_state = 605
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 80
+		cancel_if_not_visible = no
+
+		ai_will_do = {
+			factor = 25
+		}
+		
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_leshan_jiahua_cement_plant_decision"
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_leshan_jiahua_cement_plant_decision"
+			random_owned_state = {
+				prioritize = { 605 } #成都state
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	
+	SZC_beipei_sanxia_cloth_factory_decision = {#北碚三峡布厂
+		icon = GFX_decision_electrify
+
+		allowed = {
+			tag = SZC
+		}
+
+		available = {
+			controls_state = 650
+		}
+
+		visible = {
+			has_completed_focus = SZC_pan_grand_sichuan_plan
+			owns_state = 650
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 80
+		cancel_if_not_visible = no
+
+		ai_will_do = {
+			factor = 25
+		}
+		
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_beipei_sanxia_cloth_factory_decision"
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_beipei_sanxia_cloth_factory_decision"
+			random_owned_state = {
+				prioritize = { 650 } #重庆
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	SZC_wanxian_tongyou_refinery_decision = {#万县桐油精炼厂
+		icon = GFX_decision_electrify
+
+		allowed = {
+			tag = SZC
+		}
+
+		available = {
+			controls_state = 661
+		}
+
+		visible = {
+			has_completed_focus = SZC_pan_grand_sichuan_plan
+			owns_state = 661
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 80
+		cancel_if_not_visible = no
+
+		ai_will_do = {
+			factor = 25
+		}
+		
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_wanxian_tongyou_refinery_decision"
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_wanxian_tongyou_refinery_decision"
+			random_owned_state = {
+				prioritize = { 661 } #达县state
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	SZC_luzhou_alkali_plant_decision = {#泸州碱厂扩建
+		icon = GFX_decision_electrify
+
+		allowed = {
+			tag = SZC
+		}
+
+		available = {
+			controls_state = 605
+		}
+
+		visible = {
+			has_completed_focus = SZC_pan_grand_sichuan_plan
+			owns_state = 605
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 80
+		cancel_if_not_visible = no
+
+		ai_will_do = {
+			factor = 25
+		}
+		
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_luzhou_alkali_plant_decision"
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_luzhou_alkali_plant_decision"
+			random_owned_state = {
+				prioritize = { 605 } #成都state
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	SZC_qijiang_iron_plant_decision = {#綦江炼铁厂
+		icon = GFX_decision_electrify
+
+		allowed = {
+			tag = SZC
+		}
+
+		available = {
+			controls_state = 650
+		}
+
+		visible = {
+			has_completed_focus = SZC_pan_grand_sichuan_plan
+			owns_state = 650
+		}
+
+		fire_only_once = yes
+		cost = 30
+		days_remove = 100
+		cancel_if_not_visible = no
+
+		ai_will_do = {
+			factor = 25
+		}
+		
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_qijiang_iron_plant_decision"
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_qijiang_iron_plant_decision"
+			random_owned_state = {
+				prioritize = { 650 } #重庆state
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 8
+					state = 650
+				}
+			}
+		}
+	}
+	
+	SZC_langzhong_ammonium_nitrate_plant_decision = {#阆中硝酸铵工场
+		icon = GFX_decision_electrify
+
+		allowed = {
+			tag = SZC
+		}
+
+		available = {
+			controls_state = 661
+		}
+
+		visible = {
+			has_completed_focus = SZC_pan_grand_sichuan_plan
+			owns_state = 661
+		}
+
+		fire_only_once = yes
+		cost = 30
+		days_remove = 100
+		cancel_if_not_visible = no
+
+		ai_will_do = {
+			factor = 25
+		}
+		
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_langzhong_ammonium_nitrate_plant_decision"
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_langzhong_ammonium_nitrate_plant_decision"
+			random_owned_state = {
+				prioritize = { 661 } #达县state
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	SZC_huidong_lead_zinc_smelting_decision = {#会东铅锌冶炼
+		icon = GFX_decision_electrify
+
+		allowed = {
+			tag = SZC
+		}
+
+		available = {
+			controls_state = 1015
+		}
+
+		visible = {
+			has_completed_focus = SZC_pan_grand_sichuan_plan
+			owns_state = 1015
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 50
+		cancel_if_not_visible = no
+
+		ai_will_do = {
+			factor = 25
+		}
+		
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_huidong_lead_zinc_smelting_decision"
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SZC_huidong_lead_zinc_smelting_decision"
+			random_owned_state = {
+				prioritize = { 1015 } #凉山
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

@@ -1,4 +1,6 @@
 characters = {
+
+
 	#張瀾
 	SZC_zhang_lan = {
 		name = SZC_zhang_lan
@@ -127,7 +129,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_liu_bocheng_high_command_desc
-			traits = { light_infantry_officer trickster trait_reckless irregulars_officer rising_star }
+			traits = { light_infantry_officer trickster trait_reckless irregulars_officer war_hero rising_star }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 1
@@ -152,6 +154,10 @@ characters = {
 			}
 			traits = { KR_MHC_infantry_2 }
 			cost = 100
+		}
+		country_leader = {
+			ideology = syndicalist_subtype
+			desc = SZC_liu_bocheng_high_command_desc
 		}
 	}
 
@@ -567,6 +573,7 @@ characters = {
 			ledger = army
 			traits = { KR_spiritual_leader_sic }
 			cost = 0
+			can_be_fired = no
 			visible = {
 				AND = {
 					NOT = { has_country_flag =NKRSZCpanpath }
@@ -578,6 +585,11 @@ characters = {
 		country_leader = {
 			desc = SZC_pan_wenhua_leader_desc
 			ideology = paternal_autocrat_subtype
+			traits = { CHN_non_aligned }
+		}
+		country_leader = {
+			desc = SZC_pan_wenhua_leader_desc
+			ideology = authoritarian_democrat_subtype
 			traits = { CHN_non_aligned }
 		}
 
@@ -880,6 +892,49 @@ characters = {
 
 	#############醒      狮#############
 
+	
+	#各色领袖
+	SZC_assorted_leaders = {
+		name = SZC_assorted_leaders
+		portraits = {
+			civilian = {
+				large = GFX_portrait_CHI_lixingshe_civilian_large
+			}
+		}
+		country_leader = {
+			desc = empty
+			ideology = totalist_subtype
+		}
+		country_leader = {
+			desc = empty
+			ideology = syndicalist_subtype
+		}
+		country_leader = {
+			desc = empty
+			ideology = radical_socialist_subtype
+		}
+		country_leader = {
+			desc = empty
+			ideology = social_democrat_subtype
+		}
+		country_leader = {
+			desc = empty
+			ideology = social_conservative_subtype
+		}
+		country_leader = {
+			desc = empty
+			ideology = authoritarian_democrat_subtype
+		}
+		country_leader = {
+			desc = empty
+			ideology = paternal_autocrat_subtype
+		}
+		country_leader = {
+			desc = empty
+			ideology = national_populist_subtype
+		}
+	}
+
 	#权力真空
 	SZC_power_vacuum = {
 		name = SZC_power_vacuum
@@ -1043,6 +1098,7 @@ characters = {
 			ledger = army
 			traits = { KR_spiritual_leader_sic }
 			cost = 0
+			can_be_fired = no
 			visible = {
 				has_country_flag = NKRSZCpanpath
 			}
@@ -1050,10 +1106,79 @@ characters = {
 		}
 
 	}
+	#杨庶堪
+	SZC_yang_shukan = {
+		name = SZC_yang_shukan
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_yang_shukan_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_yang_shukan_advisor
+			ledger = civilian
+			traits = { KR_influential_intellectual }
+			cost = 100
+			can_be_fired = no
+			visible = {
+				has_country_flag = SZC_yang_shukan_available
+			}
+			desc = SZC_yang_shukan_desc
+		}
+
+	}
+	#漆南薰
+	SZC_qi_nanxun = {
+		name = SZC_qi_nanxun
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_qi_nanxun_small
+				large = GFX_portrait_SZC_qi_nanxun_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_qi_nanxun_advisor
+			ledger = civilian
+			traits = { KR_patriotic_socialist }
+			cost = 100
+			visible = {
+				has_country_flag = SZC_qi_nanxun_available
+			}
+			desc = SZC_qi_nanxun_advisor_desc
+		}
+		country_leader = {
+			ideology = syndicalist_subtype
+			traits = {
+				CHN_left_kuomintang_aligned
+			}
+			desc = SZC_qi_nanxun_desc
+		}
+
+	}
 
 
 
-
+	#MMIC四川分署
+	SZC_MMIC = {
+		name = SZC_MMIC
+		portraits = {
+			army = {
+				small = GFX_portrait_CHI_mission_militaire_army_small
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = SZC_MMIC_theorist
+			ledger = military
+			visible = {
+				has_country_flag = SZC_MMIC_available
+			}
+			traits = { KR_council_of_theorists }
+			cost = 100
+		}
+	}
 
 
 
