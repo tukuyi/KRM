@@ -1211,6 +1211,23 @@ chinese_unification = {
 					hidden_effect = { news_event = china_events.308 }
 				}
 				else_if = {
+					limit = { original_tag = SZC }
+					country_event = NKRsichuan.142
+					if = {
+						limit = {
+							check_variable = { country_leader:china_alignment = token:right_kuomintang }
+						}
+						set_cosmetic_tag = RKT_united_china
+						activate_targeted_decision = { decision = china_move_capital target = ROOT }
+						hidden_effect = { news_event = china_events.309 }
+					}
+					else = {
+						set_cosmetic_tag = KMT_united_china
+						activate_targeted_decision = { decision = china_move_capital target = ROOT }
+						hidden_effect = { news_event = china_events.308 }
+					}
+				}
+				else_if = {
 					limit = { check_variable = { country_leader:china_alignment = token:left_kuomintang } }
 					set_cosmetic_tag = LKT_united_china
 					log = "KR_Event_Logging;CHINA UNITED BY Left-KMT;[GetDateText]"
