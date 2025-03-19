@@ -27,6 +27,19 @@ SZC_grand_sichuan_plan_category = {
 	}
 }
 
+
+SZC_national_reconstruction_category = {
+	icon = GFX_decision_category_kuomintang_industry
+	picture = GFX_decision_cat_industry_KMT
+	priority = 80
+	allowed = { original_tag = SZC }
+	visible = {
+		has_country_flag = SZC_national_reconstruction
+	}
+	visible_when_empty = yes
+}
+
+
 # SZC_sichuan_agricultural_reform_category = {
 # 	icon = GFX_decision_category_qing_hall
 	

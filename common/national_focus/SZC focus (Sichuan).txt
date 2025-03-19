@@ -10927,6 +10927,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_takeover_administration"
+			china_generic_land_reform_setup = yes
+			add_political_power = 50
+			CHN_improve_economic_devastation_effect = yes
 		}
 	}
 
@@ -10945,6 +10948,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed pan_reorganize_the_army"
+			CHN_improve_military_disarray_effect = yes
+			army_experience = 100
 		}
 	}
 
@@ -10963,6 +10968,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed pan_about_economy"
+			SZC_reconstruction_effect = yes
+			CHN_improve_economic_devastation_effect = yes
 		}
 	}
 

@@ -124,7 +124,7 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
-		SZC_pan_revolutionary_army = {
+		SZC_pan_revolutionary_army = {#四川革命军
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_revolutionary_army " }
 			picture = CHI_soldier_flag
 			allowed = { always = no }
@@ -136,7 +136,7 @@ ideas = {
 				skill_bonus_factor = 0.05
 			}
 		}
-		SZC_pan_peoples_army_for_people = {
+		SZC_pan_peoples_army_for_people = {#人民军队为人民
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_peoples_army_for_people " }
 			picture = CHI_soldier_flag
 			allowed = { always = no }
@@ -146,7 +146,7 @@ ideas = {
 				required_garrison_factor = -0.15
 			}
 		}
-		SZC_pan_march_towards_nanjing_idea = {
+		SZC_pan_march_towards_nanjing_idea = {#向南京进军
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_march_towards_nanjing_idea" }
 			picture = chi_warlord_integration
 			allowed = { always = no }
@@ -157,7 +157,7 @@ ideas = {
 				army_speed_factor = 0.15
 			}
 		}
-		SZC_pan_propaganda_from_sichuan = {
+		SZC_pan_propaganda_from_sichuan = {#四川宣传
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_propaganda_from_sichuan" }
 			picture = chi_warlord_integration
 			allowed = { always = no }
@@ -168,7 +168,7 @@ ideas = {
 				army_speed_factor = -0.1
 			}
 		}
-		SZC_pan_endsieg = {
+		SZC_pan_endsieg = {#最后的胜利
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_endsieg" }
 			picture = chi_warlord_integration
 			allowed = { always = no }
@@ -183,7 +183,7 @@ ideas = {
 				}
 			}
 		}
-		SZC_pan_mandate_lost = {
+		SZC_pan_mandate_lost = {#天命尽失
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_mandate_lost" }
 			picture = chi_warlord_integration
 			allowed = { always = no }
