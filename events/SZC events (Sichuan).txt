@@ -10154,10 +10154,652 @@ country_event = { #步入权力殿堂
 
 	option = {#从四川到全中国。
 		log = "[GetLogInfo]: event NKRsichuan.142 option NKRsichuan.142.a"
-		name = NKRsichuan.142.t
+		name = NKRsichuan.142.a
 		custom_effect_tooltip = CHI_focus_tree_will_change_tt
 		CHN_setup_economic_devastation_normal_effect = yes
 		CHN_setup_military_disarray_normal_effect = yes
+		complete_national_focus = SZC_pan_revolution_secured
+	}
+}
+
+country_event = { #人民的力量
+	id = NKRsichuan.150
+	title = NKRsichuan.150.t
+	desc = NKRsichuan.150.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#...是人民带我们走到了这步！
+		log = "[GetLogInfo]: event NKRsichuan.150 option NKRsichuan.150.a"
+		name = NKRsichuan.150.a
+		add_stability = 0.1
+		add_war_support = 0.1
+		custom_effect_tooltip = SZC_politic_changes_tt
+		hidden_effect = {
+			set_party_name = {
+				ideology = totalist
+				name = SZC_CSP_party
+				long_name = SZC_CSP_party_long
+			}
+			set_party_name = {
+				ideology = social_liberal
+				name = SZC_DSP_party
+				long_name = SZC_DSP_party_long
+			}
+			set_party_name = {
+				ideology = market_liberal
+				name = SZC_CNDCA_party
+				long_name = SZC_CNDCA_party_long
+			}
+			set_party_name = {
+				ideology = social_conservative
+				name = SZC_PIP_party
+				long_name = SZC_PIP_party_long
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				name = SZC_YCPkmtlapdog_party
+				long_name = SZC_YCPkmtlapdog_party_long
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				name = SZC_NRA_party
+				long_name = SZC_NRA_party_long
+			}
+			set_party_name = {
+				ideology = national_populist
+				name = SZC_ZGCP_party
+				long_name = SZC_ZGCP_party_long
+			}
+		}
+	}
+}
+
+country_event = { #党的路线问题
+	id = NKRsichuan.151
+	title = NKRsichuan.151.t
+	desc = NKRsichuan.151.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#只有社会主义才能救中国！
+		log = "[GetLogInfo]: event NKRsichuan.151 option NKRsichuan.151.a"
+		name = NKRsichuan.151.a
+		custom_effect_tooltip = NKRsichuan.151.att
+		custom_effect_tooltip = SZC_politic_changes_tt
+		set_country_flag = SZC_pan_choose_socialism_flag
+		
+		set_party_name = {
+			ideology = syndicalist
+			name = SZC_SUP_party
+			long_name = SZC_SUP_party_long
+		}
+		set_temp_variable = { coalition_partner_var = token:totalist }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:radical_socialist }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:social_democrat }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+		add_to_coalition = yes
+		hidden_effect = {
+			set_party_name = {
+				ideology = totalist
+				name = SZC_SUP_party
+				long_name = SZC_SUP_party_long
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				name = SZC_SUP_party
+				long_name = SZC_SUP_party_long
+			}
+			set_party_name = {
+				ideology = social_democrat
+				name = SZC_SUP_party
+				long_name = SZC_SUP_party_long
+			}
+		}
+	}
+	option = {#太多人为了一己私利背叛了先总理遗教。
+		log = "[GetLogInfo]: event NKRsichuan.151 option NKRsichuan.151.b"
+		name = NKRsichuan.151.b
+		custom_effect_tooltip = NKRsichuan.151.btt
+		custom_effect_tooltip = SZC_politic_changes_tt
+		set_country_flag = SZC_pan_choose_tridemism_flag
+		set_party_name = {
+			ideology = syndicalist
+			name = SZC_KMTRC_party
+			long_name = SZC_KMTRC_party_long
+		}
+		set_temp_variable = { coalition_partner_var = token:radical_socialist }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:social_democrat }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+		add_to_coalition = yes
+		hidden_effect = {
+			set_party_name = {
+				ideology = radical_socialist
+				name = SZC_KMTRC_party
+				long_name = SZC_KMTRC_party_long
+			}
+			set_party_name = {
+				ideology = social_democrat
+				name = SZC_KMTRC_party
+				long_name = SZC_KMTRC_party_long
+			}
+		}
+	}
+}
+
+country_event = { #统一社会党第一届代表大会
+	id = NKRsichuan.152
+	title = NKRsichuan.152.t
+	desc = NKRsichuan.152.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#统一，自由，社会主义。
+		log = "[GetLogInfo]: event NKRsichuan.152 option NKRsichuan.152.a"
+		name = NKRsichuan.152.a
+	}
+}
+
+country_event = { #111
+	id = NKRsichuan.153
+	title = NKRsichuan.153.t
+	desc = NKRsichuan.153.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#111
+		log = "[GetLogInfo]: event NKRsichuan.153 option NKRsichuan.153.a"
+		name = NKRsichuan.153.a
+	}
+}
+
+country_event = { #社会主义多党制
+	id = NKRsichuan.154
+	title = NKRsichuan.154.t
+	desc = NKRsichuan.154.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#人民必须发声。
+		log = "[GetLogInfo]: event NKRsichuan.154 option NKRsichuan.154.a"
+		name = NKRsichuan.154.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.155
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #我的一票
+	id = NKRsichuan.155
+	title = NKRsichuan.155.t
+	desc = NKRsichuan.155.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.155 option NKRsichuan.155.a"
+		name = NKRsichuan.155.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.156
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #金豆豆，银豆豆...
+	id = NKRsichuan.156
+	title = NKRsichuan.156.t
+	desc = NKRsichuan.156.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#统一社会党高票胜出！
+		log = "[GetLogInfo]: event NKRsichuan.156 option NKRsichuan.156.a"
+		name = NKRsichuan.156.a
+	}
+}
+
+country_event = { #我们时代的社会主义
+	id = NKRsichuan.157
+	title = NKRsichuan.157.t
+	desc = NKRsichuan.157.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#赤色中国已成。
+		log = "[GetLogInfo]: event NKRsichuan.157 option NKRsichuan.157.a"
+		name = NKRsichuan.157.a
+	}
+}
+
+country_event = { #《帝国主义铁蹄下的中国》再版
+	id = NKRsichuan.158
+	title = NKRsichuan.158.t
+	desc = NKRsichuan.158.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#漆总统的文章具有前沿性！
+		log = "[GetLogInfo]: event NKRsichuan.158 option NKRsichuan.158.a"
+		name = NKRsichuan.158.a
+	}
+}
+
+country_event = { #中国国民党革命委员会
+	id = NKRsichuan.159
+	title = NKRsichuan.159.t
+	desc = NKRsichuan.159.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#矢勤矢勇，必信必忠！
+		log = "[GetLogInfo]: event NKRsichuan.159 option NKRsichuan.159.a"
+		name = NKRsichuan.159.a
+	}
+}
+
+country_event = { #全民党理论
+	id = NKRsichuan.160
+	title = NKRsichuan.160.t
+	desc = NKRsichuan.160.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#我们将代表全民的利益。
+		log = "[GetLogInfo]: event NKRsichuan.160 option NKRsichuan.160.a"
+		name = NKRsichuan.160.a
+	}
+}
+
+country_event = { #当马克思遇上孙逸仙
+	id = NKRsichuan.161
+	title = NKRsichuan.161.t
+	desc = NKRsichuan.161.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#马克思是一个骨子里纯正的中国人！
+		log = "[GetLogInfo]: event NKRsichuan.161 option NKRsichuan.161.a"
+		name = NKRsichuan.161.a
+	}
+}
+
+country_event = { #共同纲领
+	id = NKRsichuan.162
+	title = NKRsichuan.162.t
+	desc = NKRsichuan.162.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#团结在国民党革命委员会的旗帜下共赴社会主义！
+		log = "[GetLogInfo]: event NKRsichuan.162 option NKRsichuan.162.a"
+		name = NKRsichuan.162.a
+	}
+}
+
+country_event = { #努力至终，革命遂成
+	id = NKRsichuan.163
+	title = NKRsichuan.163.t
+	desc = NKRsichuan.163.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#一心一德，贯彻始终。
+		log = "[GetLogInfo]: event NKRsichuan.163 option NKRsichuan.163.a"
+		name = NKRsichuan.163.a
+	}
+}
+
+country_event = { #最宏伟的阅兵式
+	id = NKRsichuan.164
+	title = NKRsichuan.164.t
+	desc = NKRsichuan.164.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#同志们辛苦了！
+		log = "[GetLogInfo]: event NKRsichuan.164 option NKRsichuan.164.a"
+		name = NKRsichuan.164.a
+	}
+}
+
+country_event = { #你说...
+	id = NKRsichuan.165
+	title = NKRsichuan.165.t
+	desc = NKRsichuan.165.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#这怕不太可能吧？
+		log = "[GetLogInfo]: event NKRsichuan.165 option NKRsichuan.165.a"
+		name = NKRsichuan.165.a
+	}
+}
+
+country_event = { #往孙先生的路走！
+	id = NKRsichuan.166
+	title = NKRsichuan.166.t
+	desc = NKRsichuan.166.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#我们一定能复兴中华！
+		log = "[GetLogInfo]: event NKRsichuan.166 option NKRsichuan.166.a"
+		name = NKRsichuan.166.a
+	}
+}
+
+country_event = { #笑面示人
+	id = NKRsichuan.167
+	title = NKRsichuan.167.t
+	desc = NKRsichuan.167.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#他又记住了许多面孔。
+		log = "[GetLogInfo]: event NKRsichuan.167 option NKRsichuan.167.a"
+		name = NKRsichuan.167.a
+	}
+}
+
+country_event = { #上海一夜
+	id = NKRsichuan.168
+	title = NKRsichuan.168.t
+	desc = NKRsichuan.168.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#让我们嗨起来！
+		log = "[GetLogInfo]: event NKRsichuan.168 option NKRsichuan.168.a"
+		name = NKRsichuan.168.a
+	}
+}
+
+country_event = { #铭记护国战争
+	id = NKRsichuan.169
+	title = NKRsichuan.169.t
+	desc = NKRsichuan.169.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#不忘初心，牢记使命。
+		log = "[GetLogInfo]: event NKRsichuan.169 option NKRsichuan.169.a"
+		name = NKRsichuan.169.a
+	}
+}
+
+country_event = { #民国的第一次大选
+	id = NKRsichuan.170
+	title = NKRsichuan.170.t
+	desc = NKRsichuan.170.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#不忘初心，牢记使命。
+		log = "[GetLogInfo]: event NKRsichuan.170 option NKRsichuan.170.a"
+		name = NKRsichuan.170.a
+	}
+}
+
+country_event = { #革命志士
+	id = NKRsichuan.171
+	title = NKRsichuan.171.t
+	desc = NKRsichuan.171.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.171 option NKRsichuan.171.a"
+		name = NKRsichuan.171.a
+	}
+}
+
+country_event = { #民国义士
+	id = NKRsichuan.172
+	title = NKRsichuan.172.t
+	desc = NKRsichuan.172.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.172 option NKRsichuan.172.a"
+		name = NKRsichuan.172.a
+	}
+}
+
+country_event = { #川渝豪杰
+	id = NKRsichuan.173
+	title = NKRsichuan.173.t
+	desc = NKRsichuan.173.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.173 option NKRsichuan.173.a"
+		name = NKRsichuan.173.a
+	}
+}
+
+country_event = { #国家总统
+	id = NKRsichuan.174
+	title = NKRsichuan.174.t
+	desc = NKRsichuan.174.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.174 option NKRsichuan.174.a"
+		name = NKRsichuan.174.a
+	}
+}
+
+country_event = { #民族先锋
+	id = NKRsichuan.175
+	title = NKRsichuan.175.t
+	desc = NKRsichuan.175.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.175 option NKRsichuan.175.a"
+		name = NKRsichuan.175.a
+	}
+}
+
+country_event = { #国民党新一届代表大会
+	id = NKRsichuan.176
+	title = NKRsichuan.176.t
+	desc = NKRsichuan.176.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#元老重返政治中心。
+		log = "[GetLogInfo]: event NKRsichuan.176 option NKRsichuan.176.a"
+		name = NKRsichuan.176.a
+	}
+}
+
+country_event = { #善意的建议
+	id = NKRsichuan.177
+	title = NKRsichuan.177.t
+	desc = NKRsichuan.177.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#看起来我也没得选。
+		log = "[GetLogInfo]: event NKRsichuan.177 option NKRsichuan.177.a"
+		name = NKRsichuan.177.a
+	}
+}
+
+country_event = { #何谓正统
+	id = NKRsichuan.178
+	title = NKRsichuan.178.t
+	desc = NKRsichuan.178.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#翻案，翻案！
+		log = "[GetLogInfo]: event NKRsichuan.178 option NKRsichuan.178.a"
+		name = NKRsichuan.178.a
+	}
+}
+
+country_event = { #孔教归来
+	id = NKRsichuan.179
+	title = NKRsichuan.179.t
+	desc = NKRsichuan.179.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#可孙先生不是基督徒吗？
+		log = "[GetLogInfo]: event NKRsichuan.179 option NKRsichuan.179.a"
+		name = NKRsichuan.179.a
+	}
+}
+
+country_event = { #新生活运动
+	id = NKRsichuan.180
+	title = NKRsichuan.180.t
+	desc = NKRsichuan.180.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#不要逃税，我们共建新中国！
+		log = "[GetLogInfo]: event NKRsichuan.180 option NKRsichuan.180.a"
+		name = NKRsichuan.180.a
+	}
+}
+
+country_event = { #中华民国国立总工会
+	id = NKRsichuan.181
+	title = NKRsichuan.181.t
+	desc = NKRsichuan.181.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#一心一德。
+		log = "[GetLogInfo]: event NKRsichuan.181 option NKRsichuan.181.a"
+		name = NKRsichuan.181.a
+	}
+}
+
+country_event = { #中华民国国立总工会
+	id = NKRsichuan.181
+	title = NKRsichuan.181.t
+	desc = NKRsichuan.181.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#一心一德。
+		log = "[GetLogInfo]: event NKRsichuan.181 option NKRsichuan.181.a"
+		name = NKRsichuan.181.a
+	}
+}
+
+country_event = { #双重思想
+	id = NKRsichuan.182
+	title = NKRsichuan.182.t
+	desc = NKRsichuan.182.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#先总理的内心确实如此所想。
+		log = "[GetLogInfo]: event NKRsichuan.182 option NKRsichuan.182.a"
+		name = NKRsichuan.182.a
+	}
+}
+
+country_event = { #有机的国家，大同的民国
+	id = NKRsichuan.183
+	title = NKRsichuan.183.t
+	desc = NKRsichuan.183.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#民国已回正统道路。
+		log = "[GetLogInfo]: event NKRsichuan.183 option NKRsichuan.183.a"
+		name = NKRsichuan.183.a
 	}
 }
 

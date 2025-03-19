@@ -10909,6 +10909,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_revolution_secured"
+			custom_effect_tooltip = SZC_pan_revolution_secured_tooltip
 		}
 	}
 
@@ -10999,6 +11000,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed pan_popular_revolution"
+			country_event = {
+				id = NKRsichuan.150
+			}
+			custom_effect_tooltip = SZC_end_coalition_tt
+			end_coalition = yes
+			add_idea = {
+				SZC_pan_popular_revolution
+			}
 		}
 	}
 
@@ -11017,6 +11026,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_partys_line"
+			country_event = {
+				id = NKRsichuan.151
+			}
 		}
 	}
 
@@ -11029,6 +11041,10 @@ focus_tree = {
 		x = -1
 		y = 1
 
+		available = {
+			has_country_flag = SZC_pan_choose_socialism_flag
+		}
+
 		prerequisite = {
 			focus = SZC_pan_partys_line
 		}
@@ -11039,6 +11055,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_socialist_solidarity"
+			country_event = {
+				id = NKRsichuan.152
+			}
 		}
 	}
 
@@ -11057,6 +11076,32 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_push_sichuan_democratic_model"
+			add_political_power = 200
+			activate_targeted_decision = { target = 594 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 325 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 1051 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 602 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 605 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 1048 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 1044 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 606 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 596 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 613 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 597 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 1059 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 608 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 1072 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 799 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 283 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 348 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 604 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 617 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 621 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 612 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 716 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 886 decision = SZC_expand_local_peoples_democracy_decision }
+			activate_targeted_decision = { target = 714 decision = SZC_expand_local_peoples_democracy_decision }
+
 		}
 	}
 
@@ -11075,6 +11120,25 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_push_sichuan_democratic_model"
+			country_event = {
+				id = NKRsichuan.153
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_china_claim_area = yes
+						is_core_of = MON
+					}
+					OR = {
+						has_state_category = one
+						has_state_category = two
+						has_state_category = three
+					}
+				}
+				ROOT = {
+					activate_targeted_decision = { target = PREV decision = SZC_peoples_commune_target_decision }
+				}
+			}
 		}
 	}
 
@@ -11114,6 +11178,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_push_sichuan_democratic_model"
+			country_event = {
+				id = NKRsichuan.154
+			}
 		}
 	}
 
@@ -11125,6 +11192,11 @@ focus_tree = {
 
 		x = 1
 		y = 1
+
+		available = {
+			has_country_flag = SZC_pan_choose_tridemism_flag
+		}
+		
 
 		prerequisite = {
 			focus = SZC_pan_partys_line
@@ -11248,6 +11320,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_all_against_capital_imperialist"
+			country_event = {
+				id = NKRsichuan.158
+			}
 		}
 	}
 
@@ -11269,6 +11344,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_shining_star_of_socialist_democracy_in_asia"
+			country_event = {
+				id = NKRsichuan.157
+			}
+			swap_ideas = {
+				remove_idea = SZC_pan_legitimacy_6
+				add_idea = SZC_pan_legitimacy_8
+			}
 		}
 	}
 

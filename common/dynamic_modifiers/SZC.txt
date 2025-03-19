@@ -1,0 +1,15 @@
+SZC_peoples_commune = {#人民公社
+	icon = GFX_modifiers_state_socialism
+	mobilization_speed = 0.2
+	local_building_slots = -1
+	state_resources_factor = -0.05
+	recruitable_population_factor = 0.1
+	state_production_speed_buildings_factor = 0.1
+}
+
+SZC_local_peoples_democracy = {
+	icon = "GFX_decision_eng_trade_unions_support"
+	state_resources_factor = 0.20
+	local_supplies = 0.1
+	enemy_operative_detection_chance_factor_over_occupied_tag = 0.15
+}

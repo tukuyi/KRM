@@ -465,6 +465,337 @@ chinese_unification = {
 			}
 		}
 	}
+	SZC_expand_local_peoples_democracy_decision = {
+		allowed = { 
+			always = no
+		 }
+		highlight_states = {
+			highlight_state_targets = { state = FROM }
+		}
+		visible = {
+			ROOT = {
+				owns_state = FROM
+				has_full_control_of_state = FROM
+			}
+		}
+		available = {
+			ROOT = {
+				surrender_progress < 0.01
+			}
+			FROM = {
+				is_core_of = ROOT
+			}
+		}
+		state_target = yes
+		fire_only_once = yes
+		icon = GFX_decision_eng_trade_unions_support
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 50 }
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_expand_local_peoples_democracy_decision target: [From.GetName]"
+		}
+		days_remove = 180
+		modifier = {
+			stability_weekly = 0.0010
+			market_liberal_drift = 0.020
+			social_liberal_drift = 0.015
+			syndicalist_drift = 0.015
+			radical_socialist_drift = 0.015
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SZC_expand_local_peoples_democracy_decision target: [From.GetName]"
+			if = {
+				limit = { FROM = { has_state_flag = guangxi_province_state } } #Nanning
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = guangxi_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = yunnan_province_state } } #Kunming
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = yunnan_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = guizhou_province_state } } #Guixi
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = guizhou_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = hunan_province_state } } #Changsha
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = hunan_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = sichuan_province_state } } #Chengdu
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = sichuan_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = hubei_province_state } } #Wuhan
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = hubei_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = jiangxi_province_state } } #nanchang
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = jiangxi_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = zhejiang_province_state } } #Hangzhou
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = zhejiang_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = jiangsu_province_state } } #Nanjing
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = jiangsu_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = anhui_province_state } } #hefei
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = anhui_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = shandong_province_state } } #jinan
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = shandong_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = henan_province_state } } #zhengzhou
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = henan_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = zhili_province_state } } #beijing
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = zhili_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = shanxi_province_state } } #taiyuan
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = shanxi_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = shannxi_province_state } } #xian
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = shannxi_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = fengtian_province_state } } #shengyang
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = fengtian_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = jilin_province_state } } #changchun
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = jilin_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = heilongjiang_province_state } } #qiqihaer
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = heilongjiang_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = chahaer_province_state } } #xilinhaote
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = chahaer_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = gansu_province_state } } #lanzhou
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = gansu_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = ningxia_province_state } } #yinchuan
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = ningxia_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = qinghai_province_state } } #xining
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = qinghai_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = xinjiang_province_state } } #dihua
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = xinjiang_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { has_state_flag = suiyuan_province_state } } #guisui
+				ROOT = {
+					every_owned_state = {
+						limit = { has_state_flag = suiyuan_province_state }
+						add_dynamic_modifier = {
+							modifier = SZC_local_peoples_democracy
+							scope = THIS
+						}
+					}
+				}
+			}
+		}
+	}
+
 }
 
 SZC_national_reconstruction_category = {
@@ -2154,6 +2485,75 @@ SZC_national_reconstruction_category = {
 				add_resource = {
 					type = steel
 					amount = 4
+				}
+			}
+		}
+	}
+}
+
+SZC_peoples_commune_reform_category = {
+	SZC_peoples_commune_target_decision = {
+		icon = GFX_decision_generic_agriculture
+
+		allowed = { always = no } #activated by effect
+
+		visible = {
+			FROM = {
+				is_owned_and_controlled_by = ROOT
+				non_damaged_building_level = {
+					building = infrastructure
+					level > 2
+				}
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+
+		fire_only_once = yes
+		state_target = yes
+		cancel_if_not_visible = yes
+		cost = 75
+		days_remove = 200
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_political_power < 200
+			}
+		}
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel SZC_peoples_commune_target_decision target: [From.GetName]"
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_peoples_commune_target_decision target: [From.GetName]"
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							is_core_of = SIK
+							is_core_of = TIB
+							is_core_of = MON
+						}
+					}
+				}
+				add_stability = -0.025
+				#add_compliance = 10 - idk if adding compliance after doing land reform would be too OP but it's an option
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove china_generic_land_reform_decision target: [From.GetName]"
+			FROM = {#111
+				add_dynamic_modifier = {
+					modifier = SZC_peoples_commune
+					scope = THIS
 				}
 			}
 		}
