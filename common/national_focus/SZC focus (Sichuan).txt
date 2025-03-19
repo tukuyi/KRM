@@ -11077,11 +11077,18 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_push_sichuan_democratic_model"
 			add_political_power = 200
+			every_owned_state = {
+				limit = { has_state_flag = sichuan_province_state }
+				add_dynamic_modifier = {
+					modifier = SZC_local_peoples_democracy
+					scope = THIS
+				}
+			}
 			activate_targeted_decision = { target = 594 decision = SZC_expand_local_peoples_democracy_decision }
 			activate_targeted_decision = { target = 325 decision = SZC_expand_local_peoples_democracy_decision }
 			activate_targeted_decision = { target = 1051 decision = SZC_expand_local_peoples_democracy_decision }
 			activate_targeted_decision = { target = 602 decision = SZC_expand_local_peoples_democracy_decision }
-			activate_targeted_decision = { target = 605 decision = SZC_expand_local_peoples_democracy_decision }
+			# activate_targeted_decision = { target = 605 decision = SZC_expand_local_peoples_democracy_decision }
 			activate_targeted_decision = { target = 1048 decision = SZC_expand_local_peoples_democracy_decision }
 			activate_targeted_decision = { target = 1044 decision = SZC_expand_local_peoples_democracy_decision }
 			activate_targeted_decision = { target = 606 decision = SZC_expand_local_peoples_democracy_decision }
@@ -11157,6 +11164,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed modernisation_not_only_within_city"
+			CHN_improve_economic_devastation_effect = yes
 		}
 	}
 
@@ -11180,6 +11188,9 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_push_sichuan_democratic_model"
 			country_event = {
 				id = NKRsichuan.154
+			}
+			add_ideas = {
+				SZC_pan_democratic_parties
 			}
 		}
 	}
@@ -11208,6 +11219,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_tridemism_unite_china"
+			country_event = {
+				id = NKRsichuan.159
+			}
 		}
 	}
 
@@ -11226,6 +11240,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_develop_a_popular_party"
+			country_event = {
+				id = NKRsichuan.160
+			}
+			add_ideas = {
+				SZC_pan_popular_party_theory
+			}
 		}
 	}
 
@@ -11244,6 +11264,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_socialist_national_capitalism"
+			CHN_improve_economic_devastation_effect = yes
 		}
 	}
 

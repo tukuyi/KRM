@@ -554,18 +554,6 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = sichuan_province_state } } #Chengdu
-				ROOT = {
-					every_owned_state = {
-						limit = { has_state_flag = sichuan_province_state }
-						add_dynamic_modifier = {
-							modifier = SZC_local_peoples_democracy
-							scope = THIS
-						}
-					}
-				}
-			}
-			else_if = {
 				limit = { FROM = { has_state_flag = hubei_province_state } } #Wuhan
 				ROOT = {
 					every_owned_state = {

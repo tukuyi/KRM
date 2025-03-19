@@ -219,6 +219,30 @@ ideas = {
 				global_building_slots_factor = 0.05
 			}
 		}
+		SZC_pan_democratic_parties = {#民主党派
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_democratic_parties" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				local_supplies = 0.05
+				stability_factor = 0.10
+				stability_weekly = 0.01
+				local_non_core_manpower	= 0.1
+				party_popularity_stability_factor = 0.10
+			}
+		}
+		SZC_pan_popular_party_theory = {#全民党理论
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_popular_party_theory" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.10
+				consumer_goods_factor = -0.15
+				party_popularity_stability_factor = 0.10
+				conscription_factor = 0.03
+			}
+		}
 	}
 }
 
