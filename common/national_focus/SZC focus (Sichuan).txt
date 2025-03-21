@@ -11276,6 +11276,435 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = SZC_pan_all_chinese_political_consulative_conference
+		icon = GFX_goal_SZC_pan_all_chinese_political_consulative_conference
+		cost = 2
+
+		x = -5
+		y = 1
+		relative_position_id = SZC_pan_nanjing_democratic_government
+
+
+		prerequisite = {
+			focus = SZC_pan_nanjing_democratic_government
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_all_chinese_political_consulative_conference"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_national_democratic_united_front
+		icon = GFX_goal_SZC_pan_national_democratic_united_front
+		cost = 2
+
+		x = -3
+		y = 1
+		relative_position_id = SZC_pan_all_chinese_political_consulative_conference
+
+
+		prerequisite = {
+			focus = SZC_pan_all_chinese_political_consulative_conference
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_national_democratic_united_front"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_open_for_all_patriots
+		icon = GFX_goal_SZC_pan_open_for_all_patriots
+		cost = 2
+
+		x = -4
+		y = 2
+		relative_position_id = SZC_pan_all_chinese_political_consulative_conference
+
+		mutually_exclusive = {
+			focus = SZC_pan_centrist_stands
+		}
+
+		prerequisite = {
+			focus = SZC_pan_national_democratic_united_front
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_open_for_all_patriots"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_the_rules_of_democracy
+		icon = GFX_goal_SZC_pan_open_for_all_patriots
+		cost = 2
+
+		x = -4
+		y = 3
+		relative_position_id = SZC_pan_all_chinese_political_consulative_conference
+
+		prerequisite = {
+			focus = SZC_pan_open_for_all_patriots
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_the_rules_of_democracy"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_centrist_stands
+		icon = GFX_goal_SZC_pan_centrist_stands
+		cost = 2
+
+		x = -2
+		y = 2
+		relative_position_id = SZC_pan_all_chinese_political_consulative_conference
+
+		mutually_exclusive = {
+			focus = SZC_pan_open_for_all_patriots
+		}
+
+		prerequisite = {
+			focus = SZC_pan_national_democratic_united_front
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_centrist_stands"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_keep_the_coalition_works
+		icon = GFX_goal_SZC_pan_centrist_stands
+		cost = 2
+
+		x = -2
+		y = 3
+		relative_position_id = SZC_pan_all_chinese_political_consulative_conference
+
+
+		prerequisite = {
+			focus = SZC_pan_centrist_stands
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_keep_the_coalition_works"
+		}
+	}
+
+	
+
+	focus = {
+		id = SZC_pan_secure_local_administration
+		icon = GFX_goal_SZC_pan_secure_local_administration
+		cost = 2
+
+		x = 4
+		y = 1
+		relative_position_id = SZC_pan_all_chinese_political_consulative_conference
+
+
+		prerequisite = {
+			focus = SZC_pan_all_chinese_political_consulative_conference
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_secure_local_administration"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_eliminate_local_corruption
+		icon = GFX_goal_SZC_pan_eliminate_local_corruption
+		cost = 2
+
+		x = 6
+		y = 2
+		relative_position_id = SZC_pan_all_chinese_political_consulative_conference
+
+
+		prerequisite = {
+			focus = SZC_pan_secure_local_administration
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_eliminate_local_corruption"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_raise_democratic_consciousness
+		icon = GFX_goal_SZC_pan_raise_democratic_consciousness
+		cost = 2
+
+		x = 4
+		y = 2
+		relative_position_id = SZC_pan_all_chinese_political_consulative_conference
+
+
+		prerequisite = {
+			focus = SZC_pan_secure_local_administration
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_raise_democratic_consciousness"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_support_youth_league
+		icon = GFX_goal_SZC_pan_support_youth_league
+		cost = 2
+
+		x = 2
+		y = 2
+		relative_position_id = SZC_pan_all_chinese_political_consulative_conference
+
+
+		prerequisite = {
+			focus = SZC_pan_secure_local_administration
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_support_youth_league"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_use_public_media
+		icon = GFX_goal_SZC_pan_use_public_media
+		cost = 2
+
+		x = 3
+		y = 3
+		relative_position_id = SZC_pan_all_chinese_political_consulative_conference
+
+
+		prerequisite = {
+			focus = SZC_pan_support_youth_league
+		}
+		prerequisite = {
+			focus = SZC_pan_raise_democratic_consciousness
+		}
+		prerequisite = {
+			focus = SZC_pan_eliminate_local_corruption
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_use_public_media"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_nationalist_propaganda
+		icon = GFX_goal_SZC_pan_nationalist_propaganda
+		cost = 2
+
+		x = 5
+		y = 3
+		relative_position_id = SZC_pan_all_chinese_political_consulative_conference
+
+
+		prerequisite = {
+			focus = SZC_pan_support_youth_league
+		}
+		prerequisite = {
+			focus = SZC_pan_raise_democratic_consciousness
+		}
+		prerequisite = {
+			focus = SZC_pan_eliminate_local_corruption
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_nationalist_propaganda"
+		}
+	}
+
+	
+
+	focus = {
+		id = SZC_pan_against_all_odds
+		icon = GFX_goal_SZC_pan_against_all_odds
+		cost = 2
+
+		x = 0
+		y = 4
+		relative_position_id = SZC_pan_all_chinese_political_consulative_conference
+
+
+		prerequisite = {
+			focus = SZC_pan_the_rules_of_democracy
+			focus = SZC_pan_keep_the_coalition_works
+		}
+		prerequisite = {
+			focus = SZC_pan_use_public_media
+		}
+		prerequisite = {
+			focus = SZC_pan_nationalist_propaganda
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_against_all_odds"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_national_reconstruction
+		icon = GFX_goal_SZC_pan_national_reconstruction
+		cost = 2
+
+		x = 4
+		y = 1
+		relative_position_id = SZC_pan_nanjing_democratic_government
+
+
+		prerequisite = {
+			focus = SZC_pan_nanjing_democratic_government
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_national_reconstruction"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_expand_science_fund
+		icon = GFX_goal_SZC_pan_national_reconstruction
+		cost = 2
+
+		x = -2
+		y = 1
+		relative_position_id = SZC_pan_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_pan_national_reconstruction
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_expand_science_fund"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_education_first
+		icon = GFX_goal_SZC_pan_education_first
+		cost = 2
+
+		x = -2
+		y = 3
+		relative_position_id = SZC_pan_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_pan_expand_science_fund
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_education_first"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_improve_industrial_production
+		icon = GFX_goal_SZC_pan_improve_industrial_production
+		cost = 2
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_pan_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_pan_national_reconstruction
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_improve_industrial_production"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_protect_nationalist_capitalism
+		icon = GFX_goal_SZC_pan_protect_nationalist_capitalism
+		cost = 2
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_pan_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_pan_improve_industrial_production
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_protect_nationalist_capitalism"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_grand_southernwest_construction
+		icon = GFX_goal_SZC_pan_grand_southernwest_construction
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_pan_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_pan_protect_nationalist_capitalism
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_grand_southernwest_construction"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_rent_reduction
+		icon = GFX_goal_SZC_pan_rent_reduction
+		cost = 2
+
+		x = 2
+		y = 1
+		relative_position_id = SZC_pan_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_pan_national_reconstruction
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_rent_reduction"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_introducing_mechanized_agriculture
+		icon = GFX_goal_SZC_pan_rent_reduction
+		cost = 2
+
+		x = 2
+		y = 3
+		relative_position_id = SZC_pan_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_pan_rent_reduction
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_introducing_mechanized_agriculture"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_unleash_industrial_potential
+		icon = GFX_goal_SZC_pan_unleash_industrial_potential
+		cost = 2
+
+		x = 0
+		y = 4
+		relative_position_id = SZC_pan_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_pan_education_first
+		}
+		prerequisite = {
+			focus = SZC_pan_grand_southernwest_construction
+		}
+		prerequisite = {
+			focus = SZC_pan_introducing_mechanized_agriculture
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_unleash_industrial_potential"
+		}
+	}
+
 
 
 
