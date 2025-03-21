@@ -10159,6 +10159,19 @@ country_event = { #步入权力殿堂
 		CHN_setup_economic_devastation_normal_effect = yes
 		CHN_setup_military_disarray_normal_effect = yes
 		complete_national_focus = SZC_pan_revolution_secured
+		hidden_effect = {
+			china_enable_concession_decisions = yes
+			china_enable_outskirts_decisions = yes
+			KUM = {
+				every_core_state = { add_claim_by = ROOT }
+			}
+			ETS = {
+				every_core_state = { add_claim_by = ROOT }
+			}
+			SIK = {
+				every_core_state = { add_claim_by = ROOT }
+			}
+		}
 	}
 }
 
@@ -10447,7 +10460,7 @@ country_event = { #当马克思遇上孙逸仙
 	id = NKRsichuan.161
 	title = NKRsichuan.161.t
 	desc = NKRsichuan.161.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_CHI_dr_sun_yat_sen_express_train
 
 	is_triggered_only = yes
 	
@@ -10455,6 +10468,7 @@ country_event = { #当马克思遇上孙逸仙
 	option = {#马克思是一个骨子里纯正的中国人！
 		log = "[GetLogInfo]: event NKRsichuan.161 option NKRsichuan.161.a"
 		name = NKRsichuan.161.a
+		add_political_power = 1
 	}
 }
 
@@ -10500,6 +10514,65 @@ country_event = { #最宏伟的阅兵式
 	option = {#同志们辛苦了！
 		log = "[GetLogInfo]: event NKRsichuan.164 option NKRsichuan.164.a"
 		name = NKRsichuan.164.a
+		add_stability = 0.1
+		add_war_support = 0.1
+		custom_effect_tooltip = SZC_politic_changes_tt
+		set_temp_variable = { coalition_partner_var = token:radical_socialist }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+		add_to_coalition = yes
+		hidden_effect = {
+			set_party_name = {
+				ideology = totalist
+				name = SZC_CRSpan_party
+				long_name = SZC_CRSpan_party_long
+			}
+			set_party_name = {
+				ideology = syndicalist
+				name = SZC_CSP_party
+				long_name = SZC_CSP_party_long
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				name = SZC_KMTRCpan_party
+				long_name = SZC_KMTRCpan_party_long
+			}
+			set_party_name = {
+				ideology = social_democrat
+				name = SZC_DSP_party
+				long_name = SZC_DSP_party_long
+			}
+			set_party_name = {
+				ideology = social_liberal
+				name = SZC_YCPkmtlapdog_party
+				long_name = SZC_YCPkmtlapdog_party_long
+			}
+			set_party_name = {
+				ideology = market_liberal
+				name = SZC_CNDCA_party
+				long_name = SZC_CNDCA_party_long
+			}
+			set_party_name = {
+				ideology = social_conservative
+				name = SZC_PIP_party
+				long_name = SZC_PIP_party_long
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				name = SZC_KMTRCpan_party
+				long_name = SZC_KMTRCpan_party_long
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				name = SZC_NRA_party
+				long_name = SZC_NRA_party_long
+			}
+			set_party_name = {
+				ideology = national_populist
+				name = SZC_CRSpan_party
+				long_name = SZC_CRSpan_party_long
+			}
+		}
 	}
 }
 
@@ -10587,7 +10660,7 @@ country_event = { #民国的第一次大选
 	is_triggered_only = yes
 	
 
-	option = {#不忘初心，牢记使命。
+	option = {#潘文华，得票2430，当选中华民国第一届总统！
 		log = "[GetLogInfo]: event NKRsichuan.170 option NKRsichuan.170.a"
 		name = NKRsichuan.170.a
 	}
@@ -10605,6 +10678,19 @@ country_event = { #革命志士
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.171 option NKRsichuan.171.a"
 		name = NKRsichuan.171.a
+		set_politics = {
+			ruling_party = radical_socialist
+		}
+		hidden_effect = {
+			SZC_pan_wenhua = {
+				promote_character = radical_socialist_subtype
+			}
+			end_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+			add_to_coalition = yes
+		}
 	}
 }
 
@@ -10620,6 +10706,26 @@ country_event = { #民国义士
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.172 option NKRsichuan.172.a"
 		name = NKRsichuan.172.a
+		set_politics = {
+			ruling_party = social_democrat
+		}
+		set_party_name = {
+			ideology = social_democrat
+			long_name = SZC_KMTRCpan_party_long
+			name = SZC_KMTRCpan_party
+		}
+		hidden_effect = {
+			SZC_pan_wenhua = {
+				promote_character = social_democrat_subtype
+			}
+			end_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:radical_socialist }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+			add_to_coalition = yes
+		}
 	}
 }
 
@@ -10650,6 +10756,26 @@ country_event = { #国家总统
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.174 option NKRsichuan.174.a"
 		name = NKRsichuan.174.a
+		set_politics = {
+			ruling_party = market_liberal
+		}
+		set_party_name = {
+			ideology = market_liberal
+			long_name = SZC_KMTRCpan_party_long
+			name = SZC_KMTRCpan_party
+		}
+		hidden_effect = {
+			SZC_pan_wenhua = {
+				promote_character = market_liberal_subtype
+			}
+			end_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:radical_socialist }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+			add_to_coalition = yes
+		}
 	}
 }
 
@@ -10665,6 +10791,25 @@ country_event = { #民族先锋
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.175 option NKRsichuan.175.a"
 		name = NKRsichuan.175.a
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = SZC_KMTRCpan_party_long
+			name = SZC_KMTRCpan_party
+		}
+		hidden_effect = {
+			end_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:radical_socialist }
+			add_to_coalition = yes
+		}
+		set_temp_variable = { coalition_partner_var = token:totalist }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:national_populist }
+		add_to_coalition = yes
 	}
 }
 
@@ -10680,6 +10825,63 @@ country_event = { #国民党新一届代表大会
 	option = {#元老重返政治中心。
 		log = "[GetLogInfo]: event NKRsichuan.176 option NKRsichuan.176.a"
 		name = NKRsichuan.176.a
+		custom_effect_tooltip = SZC_politic_changes_tt
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:market_liberal }
+		add_to_coalition = yes
+		hidden_effect = {
+			set_party_name = {
+				ideology = totalist
+				name = SZC_BSS_party
+				long_name = SZC_BSS_party_long
+			}
+			set_party_name = {
+				ideology = syndicalist
+				name = SZC_CSP_party
+				long_name = SZC_CSP_party_long
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				name = SZC_CSP_party
+				long_name = SZC_CSP_party_long
+			}
+			set_party_name = {
+				ideology = social_democrat
+				name = SZC_DSP_party
+				long_name = SZC_DSP_party_long
+			}
+			set_party_name = {
+				ideology = social_liberal
+				name = SZC_YCPkmtlapdog_party
+				long_name = SZC_YCPkmtlapdog_party_long
+			}
+			set_party_name = {
+				ideology = market_liberal
+				name = SZC_KMTPSC_party
+				long_name = SZC_KMTPSC_party_long
+			}
+			set_party_name = {
+				ideology = social_conservative
+				name = SZC_KMTWHC_party
+				long_name = SZC_KMTWHC_party_long
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				name = SZC_KMTCC_party
+				long_name = SZC_KMTCC_party_long
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				name = SZC_NRA_party
+				long_name = SZC_NRA_party_long
+			}
+			set_party_name = {
+				ideology = national_populist
+				name = SZC_BSS_party
+				long_name = SZC_BSS_party_long
+			}
+		}
 	}
 }
 
@@ -10695,6 +10897,21 @@ country_event = { #善意的建议
 	option = {#看起来我也没得选。
 		log = "[GetLogInfo]: event NKRsichuan.177 option NKRsichuan.177.a"
 		name = NKRsichuan.177.a
+		hidden_effect = {
+			end_coalition = yes
+			SZC_xie_chi = {
+				promote_character = social_conservative_subtype
+			}
+		}
+		set_politics = {
+			ruling_party = social_conservative
+		}
+		set_temp_variable = { coalition_partner_var = token:market_liberal }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+		add_to_coalition = yes
 	}
 }
 

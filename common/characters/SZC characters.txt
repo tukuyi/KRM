@@ -592,6 +592,21 @@ characters = {
 			ideology = authoritarian_democrat_subtype
 			traits = { CHN_non_aligned }
 		}
+		country_leader = {
+			desc = SZC_pan_wenhua_leader_desc
+			ideology = radical_socialist_subtype
+			traits = { CHN_left_kuomintang_aligned }
+		}
+		country_leader = {
+			desc = SZC_pan_wenhua_leader_desc
+			ideology = market_liberal_subtype
+			traits = { CHN_left_kuomintang_aligned }
+		}
+		country_leader = {
+			desc = SZC_pan_wenhua_leader_desc
+			ideology = social_democrat_subtype
+			traits = { CHN_left_kuomintang_aligned }
+		}
 
 	}
 	#唐式遵
@@ -1154,6 +1169,35 @@ characters = {
 				CHN_left_kuomintang_aligned
 			}
 			desc = SZC_qi_nanxun_desc
+		}
+
+	}
+	#谢持
+	SZC_xie_chi = {
+		name = SZC_xie_chi
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_xie_chi_small
+				large = GFX_portrait_SZC_xie_chi_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_xie_chi_advisor
+			ledger = civilian
+			traits = {  }
+			cost = 100
+			visible = {
+				has_country_flag = SZC_xie_chi_available
+			}
+			desc = SZC_qi_nanxun_advisor_desc
+		}
+		country_leader = {
+			ideology = social_conservative_subtype
+			traits = {
+				CHN_right_kuomintang_aligned
+			}
+			desc = SZC_xie_chi_desc
 		}
 
 	}

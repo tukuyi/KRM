@@ -1911,6 +1911,9 @@
  SZC_qi_nanxun: "漆南熏"
  SZC_qi_nanxun_advisor_desc: ""
  SZC_qi_nanxun_desc: ""
+ SZC_xie_chi: "谢持"
+ SZC_xie_chi_advisor_desc: ""
+ SZC_xie_chi_desc: ""
 
  SZC_pan_wenhua_sic_desc: ""
  SZC_MMIC: "第三国际驻华军事代表团-四川分署"
@@ -1954,6 +1957,31 @@
  SZC_ZGCP_party_long: "战国策派\n§g§!\n"
 
 
+ SZC_KMTRCpan_party: "国民党(革命委员会)" #潘文华版本
+ SZC_KMTRCpan_party_long: "中国国民党 - 革命委员会\n§g§!\n"
+ SZC_CRSpan_party: "国民党(复兴社)" #潘文华版本 NATPOPTOT都有
+ SZC_CRSpan_party_long: "中国国民党 - 中华复兴社\n§g§!\n"
+ SZC_DSP_party: "民主社会党"
+ SZC_DSP_party_long: "中国民主社会党\n§g§!\n"
+ SZC_CNDCA_party: "民主建国会"
+ SZC_CNDCA_party_long: "中国民主建国会\n§g§!\n"
+ SZC_PIP_party: "致公党"
+ SZC_PIP_party_long: "中国致公党\n§g致公党是中国联省运动的主要政党。1925年，一群失意的广州政客不满孙中山的威权和社会主义倾向，建立了致公党。在陈炯明领导下，他们团结起多个派别，呼吁建立多党制联邦共和国。\n\n孙中山和陈炯明关系破裂后，国民党与致公党长期不和，双方相互竞争影响力，而国民党一直指责致公党是“军阀的工具”。\n\n随着中国政坛整体左转，致公党内许多进步派被吸收进国民党各派系中，但致公党仍然在右转中争取到了一些影响力。随着漆南熏的革命成功，致公党作为新生中国民主政治的一部分继续存续。§!\n"
+ SZC_YCPkmtlapdog_party: "中国青年党"
+ SZC_YCPkmtlapdog_party_long: "中国青年党\n§g§!\n"
+ SZC_NRA_party: "国民革命军"
+ SZC_NRA_party_long: "国民革命军\n§g§!\n"
+ SZC_ZGCP_party: "战国策派"
+ SZC_ZGCP_party_long: "战国策派\n§g§!\n"
+
+
+ 
+ SZC_BSS_party: "国民党(蓝衣社)" #RKMT NATPOP TOT
+ SZC_BSS_party_long: "中国国民党 - 蓝衣社\n§g§!\n"
+ SZC_KMTCC_party: "国民党(CC系)" #RKMT
+ SZC_KMTCC_party_long: "中国国民党 - 中央俱乐部\n§g§!\n"
+
+
 
  SZC_end_coalition_tt: "§R现有的执政联盟将破裂。§!"
  SZC_politic_changes_tt: "§G政治格局将洗牌§!"
@@ -1976,12 +2004,24 @@
  SZC_pan_legitimacy_5_desc: ""
  SZC_pan_legitimacy_6: "政府公信力：§o工农觉醒§!"
  SZC_pan_legitimacy_6_desc: ""
- SZC_pan_legitimacy_7: "政府公信力：§b保守合流§!"
+ SZC_pan_legitimacy_7: "政府公信力：§B保守合流§!"
  SZC_pan_legitimacy_7_desc: ""
  SZC_pan_legitimacy_8: "政府公信力：§R社会主义多党民主§!"
  SZC_pan_legitimacy_8_desc: ""
- SZC_pan_legitimacy_9: "政府公信力：§P逸仙之梦§!"
+ SZC_pan_legitimacy_9: "政府公信力：§S逸仙之梦§!"
  SZC_pan_legitimacy_9_desc: ""
+ SZC_pan_legitimacy_10: "政府公信力：§R赤色先锋§!"
+ SZC_pan_legitimacy_10_desc: ""
+ SZC_pan_legitimacy_11: "政府公信力：§S中华义士§!"
+ SZC_pan_legitimacy_11_desc: ""
+ SZC_pan_legitimacy_12: "政府公信力：§P川渝英豪§!"
+ SZC_pan_legitimacy_12_desc: ""
+ SZC_pan_legitimacy_13: "政府公信力：§m民国总统§!"
+ SZC_pan_legitimacy_13_desc: ""
+ SZC_pan_legitimacy_14: "政府公信力：§n民族英雄§!"
+ SZC_pan_legitimacy_14_desc: ""
+ SZC_pan_legitimacy_15: "政府公信力：§c大同之国§!"
+ SZC_pan_legitimacy_15_desc: ""
  SZC_pan_revolutionary_army: "革命之军"
  SZC_pan_revolutionary_army_desc: ""
  SZC_pan_peoples_army_for_people: "人民军队为人民"
@@ -2482,8 +2522,8 @@
  NKRsichuan.160.d: "#为什么国民党会陷入内部冲突以至于内战呢？因为他没能代表好全体国民。如今社会主义革命已经在中国取得胜利，我们所需要的是成为一个代表所有人民的全民党"
  NKRsichuan.160.a: "我们将代表全民的利益。"
  NKRsichuan.161.t: "当马克思遇上孙逸仙"
- NKRsichuan.161.d: "暮色中的国立四川大学泛起一层薄雾，大礼堂的吊扇咯吱咯吱转得人心慌。小王把长衫下摆往条凳上一撩，跟邻座嘀咕："龟儿子，宣传就宣传嘛，搞啥子情景剧哦。"舞台上的汽灯突然亮起，刺得他眯起眼睛——穿灰布长衫的郭教授领着两个奇装异服的人踱出来了。\n\n"诶？这不是教政治经济学的郭老头？"小王身子往前一探，竹条凳发出不堪重负的吱呀声。左边那个洋人扮相的白胡子老头活像年画上的寿星公，右边穿中山装的倒有几分像挂像上的孙先生。"该不会是...马克思和孙中山？"他被自己这个念头逗笑了，手肘撞了撞旁边打瞌睡的同窗："快看快看，孙大炮和洋先生摆龙门阵咯！"\n\n台上的马克思突然用椒盐川普开口："我这个《资本论》嘛，其实跟三民主义的民生主义是异曲同工..."孙中山操着广东腔接话："要得要得，我们两个的主义都是为劳苦大众..."小王听得直甩脑壳，指节在膝盖上敲出轻响："民生主义讲平均地权，马克思讲阶级斗争，这两个咋个就穿连裆裤了嘛？"\n\n汽灯在郭教授光秃秃的脑门上反着光："所以说马克思同志是潜伏在欧洲的纯正中国人！"台下顿时掌声雷动，小王瞅见前排几个女同学手板心都拍红了。他往条凳上一靠，后颈贴着冰凉的砖墙，突然想起上个月在茶馆听人说书——说书先生讲关公战秦琼时，台下也是这样满堂彩。\n\n散场时秋露渐起，小王踩着青石板路上的梧桐叶，嘴里嘟囔着往宿舍走，他边走边想："
- NKRsichuan.161.a: "马克思是一个骨子里纯正的中国人...？"
+ NKRsichuan.161.d: "暮色中的国立四川大学泛起一层薄雾，大礼堂的吊扇咯吱咯吱转得人心慌。小王把长衫下摆往条凳上一撩，跟邻座嘀咕："龟儿子，宣传就宣传嘛，搞啥子情景剧哦。"舞台上的汽灯突然亮起，刺得他眯起眼睛——穿灰布长衫的郭教授领着两个奇装异服的人踱出来了。\n\n"诶？这不是教政治经济学的郭老头？"小王身子往前一探，竹条凳发出不堪重负的吱呀声。左边那个洋人扮相的白胡子老头活像年画上的寿星公，右边穿中山装的倒有几分像挂像上的孙先生。"该不会是...马克思和孙中山？"他被自己这个念头逗笑了，手肘撞了撞旁边打瞌睡的同窗："快看快看，孙大炮和洋先生摆龙门阵咯！"\n\n台上的马克思突然用椒盐川普开口："我这个《资本论》嘛，其实跟三民主义的民生主义是异曲同工..."孙中山操着广东腔接话："要得要得，我们两个的主义都是为劳苦大众..."小王听得直甩脑壳，指节在膝盖上敲出轻响："民生主义讲平均地权，马克思讲阶级斗争，民生主义就是讲得再广泛，这两个也不可能就穿连裆裤了嘛？"\n\n汽灯在郭教授光秃秃的脑门上反着光："所以说马克思同志是潜伏在欧洲的纯正中国人！"台下顿时掌声雷动，小王瞅见前排几个女同学手板心都拍红了。他往条凳上一靠，后颈贴着冰凉的砖墙，突然想起上个月在茶馆听人说书——说书先生讲关公战秦琼时，台下也是这样满堂彩。\n\n散场时秋露渐起，小王踩着青石板路上的梧桐叶，嘴里嘟囔着往宿舍走，他边走边想："
+ NKRsichuan.161.a: "...马克思是一个骨子里纯正的中国人？"
  NKRsichuan.162.t: "共同纲领"
  NKRsichuan.162.d: "#民族共同纲领，总之这个就是协商民主那样的"
  NKRsichuan.162.a: "团结在国民党革命委员会的旗帜下共赴社会主义！"
@@ -2524,7 +2564,7 @@
  NKRsichuan.174.d: "#我潘文华听了不少政学系再造系的人批话，其实还真对哈，就该经济发展"
  NKRsichuan.174.a: "#哦牛批"
  NKRsichuan.175.t: "民族先锋"
- NKRsichuan.175.d: "#我潘文华是中华民族第一先锋，虽然我不会切换成natpop啦.."
+ NKRsichuan.175.d: "#我潘文华是中华民族第一先锋，复兴社说的挺对的，虽然我不会切换成natpop啦.."
  NKRsichuan.175.a: "#哦牛批"
  NKRsichuan.176.t: "国民党新一届代表大会"
  NKRsichuan.176.d: "#国民党新一届代表大会，哈哈我西山会议和政学系后来居上辣，什么改组派、莫斯科委员会都是fw"
