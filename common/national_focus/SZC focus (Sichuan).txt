@@ -16,7 +16,7 @@ shared_focus = {
 	y = 14
 
 	allow_branch = {
-		always = yes
+		always = no
 	}
 	available = {
 		is_subject = no
@@ -11085,10 +11085,9 @@ focus_tree = {
 		relative_position_id = SZC_pan_situation_under_control
 
 		allow_branch = {
-			# NOT = {
-			# 	has_country_flag = NKRSZC_joinkmt
-			# }
-			always = no
+			NOT = {
+				has_country_flag = NKRSZC_joinkmt
+			}
 		}
 
 		available = {
@@ -11110,6 +11109,190 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SZC_pan_legitimacy_of_huguojun
+		icon = GFX_goal_SZC_pan_legitimacy_of_huguojun
+		cost = 2
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_pan_declare_southernwest_autonomy
+
+
+		prerequisite = {
+			focus = SZC_pan_declare_southernwest_autonomy
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_legitimacy_of_huguojun"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_found_a_new_party
+		icon = GFX_goal_SZC_pan_found_a_new_party
+		cost = 2
+
+		x = -1
+		y = 2
+		relative_position_id = SZC_pan_declare_southernwest_autonomy
+
+
+		prerequisite = {
+			focus = SZC_pan_legitimacy_of_huguojun
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_found_a_new_party"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_huguo_spirit
+		icon = GFX_goal_SZC_pan_huguo_spirit
+		cost = 2
+
+		x = 1
+		y = 2
+		relative_position_id = SZC_pan_declare_southernwest_autonomy
+
+
+		prerequisite = {
+			focus = SZC_pan_legitimacy_of_huguojun
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_huguo_spirit"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_the_new_sun_rises
+		icon = GFX_goal_SZC_pan_the_new_sun_rises
+		cost = 2
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_pan_declare_southernwest_autonomy
+
+
+		prerequisite = {
+			focus = SZC_pan_found_a_new_party
+		}
+		prerequisite = {
+			focus = SZC_pan_huguo_spirit
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_the_new_sun_rises"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_southernwest_war
+		icon = GFX_goal_SZC_pan_southernwest_war
+		cost = 2
+
+		x = -3
+		y = 1
+		relative_position_id = SZC_pan_declare_southernwest_autonomy
+
+
+		prerequisite = {
+			focus = SZC_pan_declare_southernwest_autonomy
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_southernwest_war"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_march_east
+		icon = GFX_goal_SZC_pan_march_east
+		cost = 2
+
+		x = -3
+		y = 2
+		relative_position_id = SZC_pan_declare_southernwest_autonomy
+
+
+		prerequisite = {
+			focus = SZC_pan_southernwest_war
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_march_east"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_march_huxiang
+		icon = GFX_goal_SZC_pan_march_huxiang
+		cost = 2
+
+		x = 3
+		y = 1
+		relative_position_id = SZC_pan_declare_southernwest_autonomy
+
+
+		prerequisite = {
+			focus = SZC_pan_declare_southernwest_autonomy
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_march_huxiang"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_northern_expedition
+		icon = GFX_goal_SZC_pan_northern_expedition
+		cost = 2
+
+		x = 3
+		y = 2
+		relative_position_id = SZC_pan_declare_southernwest_autonomy
+
+
+		prerequisite = {
+			focus = SZC_pan_march_huxiang
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_northern_expedition"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_nanjing_democratic_government
+		icon = GFX_goal_SZC_pan_nanjing_democratic_government
+		cost = 2
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_pan_the_new_sun_rises
+
+		allow_branch = {
+			always = yes
+		}
+
+		prerequisite = {
+			focus = SZC_pan_the_new_sun_rises
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_nanjing_democratic_government"
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+########################################
+######KKKKKKKKKKKKKKKKKKKKKKKKKKKKKK####
+#####MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM###
+######TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT####
+########################################
+	focus = {
 		id = SZC_pan_a_red_sichuan
 		icon = GFX_goal_SZC_pan_a_red_sichuan
 		cost = 0
@@ -11119,8 +11302,7 @@ focus_tree = {
 		relative_position_id = SZC_pan_situation_under_control
 
 		allow_branch = {
-			# has_country_flag = NKRSZC_joinkmt
-			always = yes
+			has_country_flag = NKRSZC_joinkmt
 		}
 
 		prerequisite = {
@@ -11523,13 +11705,7 @@ focus_tree = {
 		y = 10
 
 		allow_branch = {
-			#has_country_flag = NKRSZC_KMTcivilwar
-			#NOT = { 
-			#	CHI = {
-			#		exists = no
-			#	}
-			#}
-			always = yes
+			has_country_flag = NKRSZC_KMTcivilwar
 		}
 
 		available = {
@@ -11714,6 +11890,10 @@ focus_tree = {
 
 		x = 8
 		y = 12
+
+		allow_branch = {
+			has_country_flag = NKRSZC_kmtpostwar
+		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_revolution_secured"
@@ -12627,6 +12807,12 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = SZC_pan_legitimacy_5
 				add_idea = SZC_pan_legitimacy_12
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.184
+					days = 1984
+				}
 			}
 		}
 	}

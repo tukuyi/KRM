@@ -8719,10 +8719,15 @@ country_event = { #刘湘之死
 		log = "[GetLogInfo]: event NKRsichuan.13 option NKRsichuan.13.a"
 		name = NKRsichuan.13.a
 		custom_effect_tooltip = SZC_liu_xiang_dead_tooltip
-		SZC_liu_xiang = {
-			kill_character = yes
+		effect_tooltip = {
+			SZC_liu_xiang = {
+				kill_character = yes
+			}
 		}
 		hidden_effect = {
+			SZC_liu_xiang = {
+				retire_character = yes
+			}
 			SZC_power_vacuum = {
 				promote_character = paternal_autocrat_subtype
 			}
@@ -10155,6 +10160,8 @@ country_event = { #步入权力殿堂
 	option = {#从四川到全中国。
 		log = "[GetLogInfo]: event NKRsichuan.142 option NKRsichuan.142.a"
 		name = NKRsichuan.142.a
+		set_country_flag = NKRSZC_kmtpostwar
+		clr_country_flag = NKRSZC_KMTcivilwar
 		custom_effect_tooltip = CHI_focus_tree_will_change_tt
 		CHN_setup_economic_devastation_normal_effect = yes
 		CHN_setup_military_disarray_normal_effect = yes
@@ -11017,6 +11024,35 @@ country_event = { #有机的国家，大同的民国
 	option = {#民国已回正统道路。
 		log = "[GetLogInfo]: event NKRsichuan.183 option NKRsichuan.183.a"
 		name = NKRsichuan.183.a
+	}
+}
+
+country_event = { #meme背叛世界的男人
+	id = NKRsichuan.184
+	title = NKRsichuan.184.t
+	desc = NKRsichuan.184.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	
+
+	option = {#谢谢你，Boss！
+		log = "[GetLogInfo]: event NKRsichuan.184 option NKRsichuan.184.a"
+		name = NKRsichuan.184.a
+		SZC_liu_xiang = {
+			SZC_recruit_character_effect = yes
+			promote_character = paternal_autocrat
+			set_portraits = {
+				army = {
+					large = GFX_portrait_SZC_liu_xiang_VS_large
+					small = GFX_portrait_SZC_liu_xiang_VS_small
+				}
+				civilian = {
+					large = GFX_portrait_SZC_liu_xiang_VS_large
+					small = GFX_portrait_SZC_liu_xiang_VS_small
+				}
+			}
+		}
 	}
 }
 
