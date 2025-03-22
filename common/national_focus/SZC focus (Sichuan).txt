@@ -11105,6 +11105,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_declare_southernwest_autonomy"
+			custom_effect_tooltip = SZC_pan_declare_southernwest_autonomy_tooltip
+			if = {
+				limit = {
+					CHI = { exists = yes }
+				}
+				custom_effect_tooltip = SZC_pan_declare_southernwest_autonomy_tooltip_KMT_exists
+			}
+			set_potential_national_government = yes	
 		}
 	}
 
@@ -11198,6 +11206,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_southernwest_war"
+			activate_targeted_decision = { decision = china_demand_submission target = YUN }
 		}
 	}
 
@@ -11216,6 +11225,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_march_east"
+			activate_targeted_decision = { decision = china_demand_submission target = GXC }
+			custom_effect_tooltip = SZC_pan_march_east_tooltip
+			if = {
+				limit = {
+					has_completed_focus = SZC_pan_march_huxiang
+				}
+				activate_targeted_decision = { decision = china_demand_submission target = CHI }
+				activate_targeted_decision = { decision = china_demand_submission target = LEP }
+				activate_targeted_decision = { decision = china_demand_submission target = ANQ }
+				activate_targeted_decision = { decision = china_demand_submission target = SHD }
+				activate_targeted_decision = { decision = china_demand_submission target = SHC }
+			}
 		}
 	}
 
@@ -11234,6 +11255,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_march_huxiang"
+			activate_targeted_decision = { decision = china_demand_submission target = HNN }
+			custom_effect_tooltip = SZC_pan_march_huxiang_tooltip
+			if = {
+				limit = {
+					has_completed_focus = SZC_pan_march_east
+				}
+				activate_targeted_decision = { decision = china_demand_submission target = CHI }
+				activate_targeted_decision = { decision = china_demand_submission target = LEP }
+				activate_targeted_decision = { decision = china_demand_submission target = ANQ }
+				activate_targeted_decision = { decision = china_demand_submission target = SHD }
+				activate_targeted_decision = { decision = china_demand_submission target = SHC }
+			}
 		}
 	}
 
@@ -11252,6 +11285,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_northern_expedition"
+			activate_targeted_decision = { decision = china_demand_submission target = QIE }
+			activate_targeted_decision = { decision = china_demand_submission target = SHX }
+			activate_targeted_decision = { decision = china_demand_submission target = FNG }
 		}
 	}
 
