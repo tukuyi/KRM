@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_pan_abandon_the_foolish_internationalism
+python focusgfxentry.py SZC_pan_unleash_industrial_potential
 pause
