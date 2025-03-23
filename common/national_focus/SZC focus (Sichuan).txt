@@ -11371,25 +11371,33 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_all_chinese_political_consulative_conference
 		icon = GFX_goal_SZC_pan_all_chinese_political_consulative_conference
-		cost = 2
+		cost = 5
 
 		x = -5
 		y = 1
 		relative_position_id = SZC_pan_nanjing_democratic_government
 
+		select_effect = {
+			country_event = {
+				id = NKRsichuan.217
+				days = 20
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_pan_nanjing_democratic_government
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_all_chinese_political_consulative_conference"
+			add_stability = 0.1
+			custom_effect_tooltip = SZC_pan_all_chinese_political_consulative_conference_tooltip
 		}
 	}
 
 	focus = {
 		id = SZC_pan_national_democratic_united_front
 		icon = GFX_goal_SZC_pan_national_democratic_united_front
-		cost = 2
+		cost = 4
 
 		x = -3
 		y = 1

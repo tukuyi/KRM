@@ -11477,6 +11477,134 @@ country_event = { #中国制造
 	}
 }
 
+country_event = { #师父和徒弟
+	id = NKRsichuan.217
+	title = NKRsichuan.217.t
+	desc = NKRsichuan.217.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#你要这么说的话，我就给你讲讲吧
+		log = "[GetLogInfo]: event NKRsichuan.217 option NKRsichuan.217.a"
+		name = NKRsichuan.217.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.218
+			}
+		}
+	}
+}
+
+country_event = { #中国民主社会党
+	id = NKRsichuan.218
+	title = NKRsichuan.218.t
+	desc = NKRsichuan.218.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#我不是不信任君劢兄，只是他，唉...
+		log = "[GetLogInfo]: event NKRsichuan.218 option NKRsichuan.218.a"
+		name = NKRsichuan.218.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.219
+			}
+		}
+	}
+}
+
+country_event = { #中国致公党
+	id = NKRsichuan.219
+	title = NKRsichuan.219.t
+	desc = NKRsichuan.219.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#谁知道他们里面有多少投机派？
+		log = "[GetLogInfo]: event NKRsichuan.219 option NKRsichuan.219.a"
+		name = NKRsichuan.219.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.220
+			}
+		}
+	}
+}
+
+country_event = { #中国青年党
+	id = NKRsichuan.220
+	title = NKRsichuan.220.t
+	desc = NKRsichuan.220.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#我们必须小心。
+		log = "[GetLogInfo]: event NKRsichuan.220 option NKRsichuan.220.a"
+		name = NKRsichuan.220.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.221
+			}
+		}
+	}
+}
+
+country_event = { #中国国民党和中国工团党
+	id = NKRsichuan.221
+	title = NKRsichuan.221.t
+	desc = NKRsichuan.221.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#党内不一定会同意他们的加入。
+		log = "[GetLogInfo]: event NKRsichuan.221 option NKRsichuan.221.a"
+		name = NKRsichuan.221.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.222
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = { #政治协商会议召开
+	id = NKRsichuan.222
+	title = NKRsichuan.222.t
+	desc = NKRsichuan.222.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#我们的首要目标，是实现祖国统一！
+		log = "[GetLogInfo]: event NKRsichuan.222 option NKRsichuan.222.a"
+		name = NKRsichuan.222.a
+		add_political_power = 150
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = 0.05
+			tooltip_side = SZC_bop_CDL_winning_side
+		}
+	}
+}
+
 
 
 
