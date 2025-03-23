@@ -1,0 +1,42 @@
+
+### Savinkov Inner Circle Inlay ###
+SZC_CDL_inlay_window = {
+	window_name = SZC_CDL_gui_window
+	internal = yes
+	visible = {
+		# has_power_balance = { id = SZC_CDL_power_balance }
+		always = yes
+	}
+	scripted_images = {
+
+		### BoP Icons ###
+		SZC_PWH_icon = {
+			GFX_bop_SZC_PWH_side_favoured = {
+				power_balance_value = { id = SZC_CDL_power_balance value < 0 }
+			}
+			GFX_bop_SZC_PWH_side = yes
+		}
+		SZC_CDL_icon = {
+			GFX_bop_SZC_CDL_side_favoured = {
+				power_balance_value = { id = SZC_CDL_power_balance value > 0 }
+			}
+			GFX_bop_SZC_CDL_side = yes
+		}
+
+		### BoP Bars ###
+		SZC_CDL_power_balance_left_side = {
+			GFX_power_balance_left = {
+				OR = {
+					power_balance_value = { id = SZC_CDL_power_balance value < 0 }
+				}
+			}
+		}
+		SZC_CDL_power_balance_right_side = {
+			GFX_power_balance_right = {
+				OR = {
+					power_balance_value = { id = SZC_CDL_power_balance value > 0 }
+				}
+			}
+		}
+	}
+}

@@ -6,7 +6,7 @@ SZC_CDL_power_balance = {
 
 	#潘文华/军方不满侧
 	side = {
-		id = SHX_PWH_winning_side
+		id = SZC_bop_PWH_winning_side
 		icon = GFX_bop_SZC_PWH_side
 
 		range = {
@@ -14,8 +14,9 @@ SZC_CDL_power_balance = {
 			min = -0.66
 			max = 0.00
 			modifier = {
-				stability_weekly = 0.0010
+				stability_weekly = -0.0010
 				political_power_gain = -0.20
+
 			}
 			on_activate = {
 
@@ -30,7 +31,7 @@ SZC_CDL_power_balance = {
 			min = -1.00
 			max = -0.66
 			modifier = {
-				stability_weekly = 0.0050
+				stability_weekly = -0.0050
 				production_factory_max_efficiency_factor = 0.05
 			}
 			on_activate = {
@@ -45,7 +46,7 @@ SZC_CDL_power_balance = {
 				set_power_balance_gfx = {
 					id = SZC_CDL_power_balance
 					side = SZC_bop_PWH_winning_side
-					gfx = GFX_bop_PWH_CDL_side
+					gfx = GFX_bop_SZC_PWH_CDL_side
 				}
 			}
 		}
@@ -61,9 +62,9 @@ SZC_CDL_power_balance = {
 			min = 0.00
 			max = 0.66
 			modifier = {
-				war_support_weekly = 0.0050
+				war_support_weekly = -0.0050
 				political_power_gain = -0.10
-				production_factory_efficiency_gain_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.05
 			}
 			on_activate = {
 			}
@@ -77,8 +78,9 @@ SZC_CDL_power_balance = {
 			min = 0.66
 			max = 1.00
 			modifier = {
-				war_support_weekly = 0.0050
-				production_factory_efficiency_gain_factor = 0.05
+				war_support_weekly = -0.005
+				political_power_gain = 0.05
+				production_factory_efficiency_gain_factor = 0.1
 			}
 			on_activate = {
 				set_power_balance_gfx = {

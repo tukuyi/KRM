@@ -11343,6 +11343,13 @@ country_event = { #暗流之下
 	option = {#一切会好吗？
 		log = "[GetLogInfo]: event NKRsichuan.211 option NKRsichuan.211.a"
 		name = NKRsichuan.211.a
+		custom_effect_tooltip = SZC_bop_mechanic_explanation_tt
+		set_power_balance = {
+			id = SZC_CDL_power_balance
+			left_side = SZC_bop_PWH_winning_side
+			right_side = SZC_bop_CDL_winning_side
+			set_value = 0.10
+		}
 	}
 }
 
