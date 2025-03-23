@@ -11078,7 +11078,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_declare_southernwest_autonomy
 		icon = GFX_goal_SZC_pan_declare_southernwest_autonomy
-		cost = 2
+		cost = 3
 
 		x = 0
 		y = 3
@@ -11113,13 +11113,14 @@ focus_tree = {
 				custom_effect_tooltip = SZC_pan_declare_southernwest_autonomy_tooltip_KMT_exists
 			}
 			set_potential_national_government = yes	
+			set_country_flag = NKRSZC_CDLpath
 		}
 	}
 
 	focus = {
 		id = SZC_pan_legitimacy_of_huguojun
 		icon = GFX_goal_SZC_pan_legitimacy_of_huguojun
-		cost = 2
+		cost = 3
 
 		x = 0
 		y = 1
@@ -11131,13 +11132,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_legitimacy_of_huguojun"
+			swap_ideas = {
+				remove_idea = SZC_pan_legitimacy_3
+				add_idea = SZC_pan_legitimacy_16
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_found_a_new_party
 		icon = GFX_goal_SZC_pan_found_a_new_party
-		cost = 2
+		cost = 3
 
 		x = -1
 		y = 2
@@ -11149,13 +11154,22 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_found_a_new_party"
+			country_event = {
+				id = NKRsichuan.200
+			}
+			effect_tooltip = {
+				set_temp_variable = { coalition_partner_var = token:social_democrat }
+				add_to_coalition = yes
+				set_temp_variable = { coalition_partner_var = token:social_liberal }
+				add_to_coalition = yes
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_huguo_spirit
 		icon = GFX_goal_SZC_pan_huguo_spirit
-		cost = 2
+		cost = 3
 
 		x = 1
 		y = 2
@@ -11167,18 +11181,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_huguo_spirit"
+			country_event = {
+				id = NKRsichuan.201
+			}
+			add_ideas = {
+				SZC_pan_new_national_protect_army
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_the_new_sun_rises
 		icon = GFX_goal_SZC_pan_the_new_sun_rises
-		cost = 2
+		cost = 5
 
 		x = 0
 		y = 3
 		relative_position_id = SZC_pan_declare_southernwest_autonomy
 
+		available = {
+			controls_state = 613
+			controls_state = 608
+		}
 
 		prerequisite = {
 			focus = SZC_pan_found_a_new_party
@@ -11186,8 +11210,16 @@ focus_tree = {
 		prerequisite = {
 			focus = SZC_pan_huguo_spirit
 		}
+		select_effect = {
+			country_event = {
+				id = NKRsichuan.204
+				days = 3
+			}
+		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_the_new_sun_rises"
+			custom_effect_tooltip = SZC_pan_the_new_sun_rises_tooltip
+			set_country_flag = NKRSZC_CDLpath_phase2
 		}
 	}
 
@@ -11302,6 +11334,14 @@ focus_tree = {
 
 		allow_branch = {
 			always = yes
+			# has_country_flag = NKRSZC_CDLpath_phase2
+		}
+
+		select_effect = {
+			country_event = {
+				id = NKRsichuan.210
+				days = 10
+			}
 		}
 
 		prerequisite = {
@@ -11309,6 +11349,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_nanjing_democratic_government"
+			swap_ideas = {
+				remove_idea = SZC_pan_legitimacy_16
+				add_idea = SZC_pan_legitimacy_17
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.211
+				}
+			}
 		}
 	}
 

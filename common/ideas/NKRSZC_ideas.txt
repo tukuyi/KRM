@@ -226,6 +226,30 @@ ideas = {
 				local_resources_factor = 0.1
 			}
 		}
+		SZC_pan_legitimacy_16 = {#潘文华政府公信力-护国遗产
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_legitimacy_16" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				political_power_factor = -0.05
+				mobilization_speed = -0.05
+				compliance_gain = 0.03
+				consumer_goods_factor = -0.05
+			}
+		}
+		SZC_pan_legitimacy_17 = {#潘文华政府公信力-新生民主
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_legitimacy_17" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.05
+				mobilization_speed = 0.05
+				compliance_gain = 0.05
+				consumer_goods_factor = -0.1
+			}
+		}
 		SZC_pan_revolutionary_army = {#四川革命军
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_revolutionary_army " }
 			picture = CHI_soldier_flag
@@ -478,6 +502,17 @@ ideas = {
 				conscription_factor = 0.05
 				political_power_factor = 0.10
 				social_conservative_drift = 0.05
+			}
+		}
+		SZC_pan_new_national_protect_army = {#新护国军
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_new_national_protect_army " }
+			picture = CHI_soldier_flag
+			allowed = { always = no }
+			modifier = {
+				army_speed_factor = 0.1
+				land_reinforce_rate = 0.05
+				army_attack_factor = 0.1
+				planning_speed = 0.2
 			}
 		}
 	}
