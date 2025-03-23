@@ -1,0 +1,100 @@
+SZC_CDL_power_balance = {
+	initial_value = 0.00
+	left_side = SHX_PWH_winning_side
+	right_side = SHX_CDL_winning_side
+	decision_category = SZC_CDL_balance_of_power_category
+
+	#潘文华/军方不满侧
+	side = {
+		id = SHX_PWH_winning_side
+		icon = GFX_bop_SZC_PWH_side
+
+		range = {
+			id = SZC_bop_PWH_slightly_dissatisfied
+			min = -0.66
+			max = 0.00
+			modifier = {
+				stability_weekly = 0.0010
+				political_power_gain = -0.20
+			}
+			on_activate = {
+
+			}
+			on_deactivate = {
+
+			}
+		}
+
+		range = {
+			id = SZC_bop_PWH_quite_dissatisfied
+			min = -1.00
+			max = -0.66
+			modifier = {
+				stability_weekly = 0.0050
+				production_factory_max_efficiency_factor = 0.05
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = SZC_CDL_power_balance
+					side = SZC_bop_PWH_winning_side
+					gfx = GFX_bop_SZC_PWH_improved_side
+				}
+
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = SZC_CDL_power_balance
+					side = SZC_bop_PWH_winning_side
+					gfx = GFX_bop_PWH_CDL_side
+				}
+			}
+		}
+	}
+
+	#民盟/军方满意侧
+	side = {
+		id = SZC_bop_CDL_winning_side
+		icon = GFX_bop_SZC_CDL_side
+
+		range = {
+			id = SZC_bop_CDL_basically_satisfied
+			min = 0.00
+			max = 0.66
+			modifier = {
+				war_support_weekly = 0.0050
+				political_power_gain = -0.10
+				production_factory_efficiency_gain_factor = 0.02
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+
+			}
+		}
+
+		range = {
+			id = SZC_bop_CDL_supports_democracy
+			min = 0.66
+			max = 1.00
+			modifier = {
+				war_support_weekly = 0.0050
+				production_factory_efficiency_gain_factor = 0.05
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = SZC_CDL_power_balance
+					side = SZC_bop_CDL_winning_side
+					gfx = GFX_bop_SZC_CDL_improved_side
+				}
+
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = SZC_CDL_power_balance
+					side = SZC_bop_CDL_winning_side
+					gfx = GFX_bop_SZC_CDL_side
+				}
+			}
+		}
+	}
+}
