@@ -515,6 +515,28 @@ ideas = {
 				planning_speed = 0.2
 			}
 		}
+		SZC_pan_education_first_idea = {#教育第一
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_education_first" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.20
+				consumer_goods_factor = 0.05
+			}
+		}
+		SZC_pan_nationalist_capitalism_idea = {#民族资本主义
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_nationalist_capitalism_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				local_resources_factor = 0.05
+				industry_free_repair_factor	= 0.10
+				consumer_goods_expected_value = 0.05
+				production_speed_buildings_factor = 0.1
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
 	}
 }
 

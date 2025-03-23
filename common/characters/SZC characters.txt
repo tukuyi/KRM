@@ -1,37 +1,6 @@
 characters = {
 
 
-	#張瀾
-	SZC_zhang_lan = {
-		name = SZC_zhang_lan
-		portraits = {
-			civilian = {
-				large = GFX_portrait_SZC_zhang_lan_civilian_large
-				small = GFX_portrait_SZC_zhang_lan_civilian_small
-			}
-		}
-		country_leader = {
-			# Placeholder leader, doesn't need desc
-			ideology = totalist_subtype
-		}
-		country_leader = {
-			# Placeholder leader, doesn't need desc
-			ideology = syndicalist_subtype
-		}
-		country_leader = {
-			# Placeholder leader, doesn't need desc
-			ideology = radical_socialist_subtype
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SZC_zhang_lan_advisor
-			available = {
-				has_left_democratic_government = yes
-			}
-			traits = { KR_ideological_crusader }
-		}
-	}
-
 	#何魯之
 	SZC_he_luzhi = {
 		name = SZC_he_luzhi
@@ -1200,6 +1169,35 @@ characters = {
 			desc = SZC_xie_chi_desc
 		}
 
+	}
+
+	#張瀾
+	SZC_zhang_lan = {
+		name = SZC_zhang_lan
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_zhang_lan_civilian_large
+				small = GFX_portrait_SZC_zhang_lan_civilian_small
+			}
+		}
+		country_leader = {
+			ideology = social_democrat_subtype
+			desc = SZC_zhang_lan_desc
+			traits = { CHN_southern_republican_aligned }
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			desc = SZC_zhang_lan_desc
+			traits = { CHN_southern_republican_aligned }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_zhang_lan_advisor
+			available = {
+				has_left_democratic_government = yes
+			}
+			traits = { KR_ideological_crusader }
+		}
 	}
 
 

@@ -11072,6 +11072,10 @@ country_event = { #统一建国同志会
 	option = {#我们为的，是国家的统一和民主的实现。
 		log = "[GetLogInfo]: event NKRsichuan.200 option NKRsichuan.200.a"
 		name = NKRsichuan.200.a
+		SZC_zhang_lan = {
+			promote_character = social_democrat_subtype
+			promote_character = social_liberal_subtype
+		}
 		set_party_name = {
 			ideology = social_democrat
 			long_name = SZC_NUCA_party_long
@@ -11163,6 +11167,8 @@ country_event = { #迁宁前最后一次大会
 	option = {#全体起立，奏《卿云歌》！
 		log = "[GetLogInfo]: event NKRsichuan.20 option NKRsichuan.204.a"
 		name = NKRsichuan.204.a
+		CHN_setup_economic_devastation_normal_effect = yes
+		CHN_setup_military_disarray_normal_effect = yes
 		hidden_effect = {
 			country_event = {
 				id = NKRsichuan.205
@@ -11294,6 +11300,10 @@ country_event = { #中国民主同盟
 				id = NKRsichuan.209
 				days = 3
 			}
+			SZC_assorted_leaders = {
+				promote_character = market_liberal_subtype
+				promote_character = social_conservative_subtype
+			}
 		}
 	}
 }
@@ -11327,6 +11337,15 @@ country_event = { #就职典礼
 	option = {#中华的曙光。
 		log = "[GetLogInfo]: event NKRsichuan.210 option NKRsichuan.210.a"
 		name = NKRsichuan.210.a
+		set_politics = {
+			ruling_party = social_democrat
+		}
+		set_temp_variable = { coalition_partner_var = token:social_liberal }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:market_liberal }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		add_to_coalition = yes
 	}
 }
 

@@ -4,8 +4,7 @@ SZC_CDL_inlay_window = {
 	window_name = SZC_CDL_gui_window
 	internal = yes
 	visible = {
-		# has_power_balance = { id = SZC_CDL_power_balance }
-		always = yes
+		has_power_balance = { id = SZC_CDL_power_balance }
 	}
 	scripted_images = {
 

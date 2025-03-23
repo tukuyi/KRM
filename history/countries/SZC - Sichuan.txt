@@ -65,7 +65,6 @@ country_event = { id = sichuan.120 days = 48 random_hours = 432 }
 country_event = { id = sichuan.125 days = 451 random_hours = 288 }
 
 ### Country Leaders ###
-recruit_character = SZC_zhang_lan
 recruit_character = SZC_he_luzhi
 recruit_character = SZC_lu_chao
 recruit_character = SZC_xiong_kewu
@@ -122,6 +121,7 @@ recruit_character = SZC_yang_shukan
 recruit_character = SZC_qi_nanxun
 recruit_character = SZC_xie_chi
 recruit_character = SZC_assorted_leaders
+recruit_character = SZC_zhang_lan
 
 
 ### Character Setup ###
@@ -134,6 +134,9 @@ SZC_liu_cunhou = {
 	set_variable = { china_alignment = token:northern_zhili }
 	set_character_flag = SZC_armament_leader
 	set_character_flag = CHN_original_unit_leader
+}
+SZC_zhang_lan = {
+	set_variable = { china_alignment = token:chinese_southern_republican }
 }
 SZC_fan_shaozeng = {
 	set_character_flag = SZC_armament_leader
