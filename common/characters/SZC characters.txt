@@ -1195,8 +1195,32 @@ characters = {
 			idea_token = SZC_zhang_lan_advisor
 			available = {
 				has_left_democratic_government = yes
+				NOT = {
+					has_country_leader = SZC_zhang_lan
+				}
 			}
 			traits = { KR_ideological_crusader }
+		}
+	}
+
+	#F范朴斋
+	SZC_fan_piaozhai = {
+		name = SZC_fan_piaozhai
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_fan_piaozhai_large
+				small = GFX_portrait_SZC_fan_piaozhai_small
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_fan_piaozhai_sic
+			visible = {
+				has_country_flag = SZC_fan_piaozhai_available
+			}
+			cost = 0
+			can_be_fired = no
+			traits = { KR_parliament_sic }
 		}
 	}
 

@@ -11633,7 +11633,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_national_reconstruction
 		icon = GFX_goal_SZC_pan_national_reconstruction
-		cost = 2
+		cost = 4
 
 		x = 4
 		y = 1
@@ -11653,7 +11653,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_expand_science_fund
 		icon = GFX_goal_SZC_pan_expand_science_fund
-		cost = 2
+		cost = 5
 
 		x = -2
 		y = 1
@@ -11672,7 +11672,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_education_first
 		icon = GFX_goal_SZC_pan_education_first
-		cost = 2
+		cost = 5
 
 		x = -2
 		y = 3
@@ -11687,13 +11687,16 @@ focus_tree = {
 			add_ideas = {
 				SZC_pan_education_first_idea
 			}
+			country_event = {
+				id = NKRsichuan.212
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_improve_industrial_production
 		icon = GFX_goal_SZC_pan_improve_industrial_production
-		cost = 2
+		cost = 5
 
 		x = 0
 		y = 1
@@ -11718,7 +11721,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_protect_nationalist_capitalism
 		icon = GFX_goal_SZC_pan_protect_nationalist_capitalism
-		cost = 2
+		cost = 5
 
 		x = 0
 		y = 2
@@ -11747,6 +11750,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			country_event = {
+				id = NKRsichuan.213
+			}
 		}
 
 	}
@@ -11754,6 +11760,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_grand_southernwest_construction
 		icon = GFX_goal_SZC_pan_grand_southernwest_construction
+		cost = 5
 
 		x = 0
 		y = 3
@@ -11774,7 +11781,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_rent_reduction
 		icon = GFX_goal_SZC_pan_rent_reduction
-		cost = 2
+		cost = 5
 
 		x = 2
 		y = 1
@@ -11786,13 +11793,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_rent_reduction"
+			china_generic_land_reform_setup = yes
+			add_stability = 0.1
+			add_war_support = 0.1
+			country_event = {
+				id = NKRsichuan.214
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_introducing_mechanized_agriculture
 		icon = GFX_goal_SZC_pan_introducing_mechanized_agriculture
-		cost = 2
+		cost = 5
 
 		x = 2
 		y = 3
@@ -11804,13 +11817,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_introducing_mechanized_agriculture"
+			add_ideas = {
+				SZC_pan_mechanized_agriculture
+			}
+			country_event = {
+				id = NKRsichuan.215
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_unleash_industrial_potential
 		icon = GFX_goal_SZC_pan_unleash_industrial_potential
-		cost = 2
+		cost = 5
 
 		x = 0
 		y = 4
@@ -11828,6 +11847,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_unleash_industrial_potential"
+			swap_ideas = {
+				remove_idea = SZC_pan_nationalist_capitalism_idea
+				add_idea = SZC_pan_made_in_china
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.216
+					days = 3
+				}
+			}
 		}
 	}
 

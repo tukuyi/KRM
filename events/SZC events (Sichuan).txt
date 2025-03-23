@@ -11300,9 +11300,31 @@ country_event = { #中国民主同盟
 				id = NKRsichuan.209
 				days = 3
 			}
+			set_party_name = {
+				ideology = syndicalist
+				long_name = SZC_CSP_party_long
+				name = SZC_CSP_party
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				long_name = SZC_CDLYCP_party_long
+				name = SZC_CDLYCP_party
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = SZC_NPA_party_long
+				name = SZC_NPA_party
+			}
+			set_party_name = {
+				ideology = national_populist
+				long_name = SZC_ZGCP_party_long
+				name = SZC_ZGCP_party
+			}
 			SZC_assorted_leaders = {
 				promote_character = market_liberal_subtype
 				promote_character = social_conservative_subtype
+				promote_character = authoritarian_democrat_subtype
+				promote_character = national_populist_subtype
 			}
 		}
 	}
@@ -11340,6 +11362,8 @@ country_event = { #就职典礼
 		set_politics = {
 			ruling_party = social_democrat
 		}
+		set_country_flag = SZC_fan_piaozhai_available
+		activate_advisor = SZC_fan_piaozhai_sic
 		set_temp_variable = { coalition_partner_var = token:social_liberal }
 		add_to_coalition = yes
 		set_temp_variable = { coalition_partner_var = token:market_liberal }
@@ -11369,6 +11393,87 @@ country_event = { #暗流之下
 			right_side = SZC_bop_CDL_winning_side
 			set_value = 0.10
 		}
+	}
+}
+
+country_event = { #新课本
+	id = NKRsichuan.212
+	title = NKRsichuan.212.t
+	desc = NKRsichuan.212.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.212 option NKRsichuan.212.a"
+		name = NKRsichuan.212.a
+	}
+}
+
+country_event = { #进城去
+	id = NKRsichuan.213
+	title = NKRsichuan.213.t
+	desc = NKRsichuan.213.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#万一找得到安？
+		log = "[GetLogInfo]: event NKRsichuan.213 option NKRsichuan.213.a"
+		name = NKRsichuan.213.a
+	}
+}
+
+country_event = { #二五减租
+	id = NKRsichuan.214
+	title = NKRsichuan.214.t
+	desc = NKRsichuan.214.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.214 option NKRsichuan.214.a"
+		name = NKRsichuan.214.a
+		add_political_power = 50
+	}
+}
+
+country_event = { #农业机械化
+	id = NKRsichuan.215
+	title = NKRsichuan.215.t
+	desc = NKRsichuan.215.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.215 option NKRsichuan.215.a"
+		name = NKRsichuan.215.a
+	}
+}
+
+country_event = { #中国制造
+	id = NKRsichuan.216
+	title = NKRsichuan.216.t
+	desc = NKRsichuan.216.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.216 option NKRsichuan.216.a"
+		name = NKRsichuan.216.a
 	}
 }
 
@@ -11423,6 +11528,7 @@ unit_leader_event = {
 				is_character = SZC_pan_wenhua
 				is_character = SZC_tang_shizun
 				is_character = SZC_fan_shaozeng
+				is_character = SZC_liu_bocheng
 			}
 		}
 	}
