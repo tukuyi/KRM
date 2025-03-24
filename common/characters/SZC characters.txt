@@ -1203,7 +1203,7 @@ characters = {
 		}
 	}
 
-	#F范朴斋
+	#范朴斋
 	SZC_fan_piaozhai = {
 		name = SZC_fan_piaozhai
 		portraits = {
@@ -1218,6 +1218,58 @@ characters = {
 			visible = {
 				has_country_flag = SZC_fan_piaozhai_available
 			}
+			cost = 0
+			can_be_fired = no
+			traits = { KR_parliament_sic }
+		}
+	}
+
+	#沈钧儒
+	SZC_shen_junru = {
+		name = SZC_shen_junru
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_shen_junru_large
+				small = GFX_portrait_SZC_shen_junru_small
+			}
+		}
+		
+		country_leader = {
+			ideology = social_democrat_subtype
+			desc = SZC_shen_junru_desc
+			traits = { CHN_southern_republican_aligned }
+		}
+	}
+
+	#罗隆基
+	SZC_luo_longji = {
+		name = SZC_luo_longji
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_luo_longji_large
+				small = GFX_portrait_SZC_luo_longji_small
+			}
+		}
+		
+		country_leader = {
+			ideology = social_democrat_subtype
+			desc = SZC_luo_longji_desc
+			traits = { CHN_southern_republican_aligned }
+		}
+	}
+
+	#潘光旦
+	SZC_pan_guangdan = {
+		name = SZC_pan_guangdan
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_pan_guangdan_large
+				small = GFX_portrait_SZC_pan_guangdan_small
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_pan_guangdan_sic
 			cost = 0
 			can_be_fired = no
 			traits = { KR_parliament_sic }
