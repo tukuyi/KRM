@@ -13,6 +13,88 @@ SZC_debug_category = {
 			country_event = NKRsichuan.29
 		}
 	}
+	SZC_DEBUG_panpath_CDLpath_decision = {
+		allowed = { tag = SZC }
+		visible = {
+			is_debug = yes
+		}
+		icon = GFX_decision_lkmt_flag
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_DEBUG_panpath_CDLpath_decision target: [From.GetName]"
+			set_country_flag = NKRSZC_CDLpath_phase2
+			SZC_zhang_lan = {
+				promote_character = social_democrat_subtype
+				promote_character = social_liberal_subtype
+			}
+			
+		set_party_name = {
+			ideology = social_democrat
+			long_name = SZC_CDL_party_long
+			name = SZC_CDL_party
+		}
+		set_party_name = {
+			ideology = social_liberal
+			long_name = SZC_CDL_party_long
+			name = SZC_CDL_party
+		}
+		set_party_name = {
+			ideology = market_liberal
+			long_name = SZC_CDL_party_long
+			name = SZC_CDL_party
+		}
+		set_party_name = {
+			ideology = social_conservative
+			long_name = SZC_CDL_party_long
+			name = SZC_CDL_party
+		}
+		hidden_effect = {
+			set_party_name = {
+				ideology = syndicalist
+				long_name = SZC_CSP_party_long
+				name = SZC_CSP_party
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				long_name = SZC_CDLYCP_party_long
+				name = SZC_CDLYCP_party
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = SZC_NPA_party_long
+				name = SZC_NPA_party
+			}
+			set_party_name = {
+				ideology = national_populist
+				long_name = SZC_ZGCP_party_long
+				name = SZC_ZGCP_party
+			}
+			SZC_assorted_leaders = {
+				promote_character = market_liberal_subtype
+				promote_character = social_conservative_subtype
+				promote_character = authoritarian_democrat_subtype
+				promote_character = national_populist_subtype
+			}
+		}
+		set_politics = {
+			ruling_party = social_democrat
+		}
+		set_country_flag = SZC_fan_piaozhai_available
+		activate_advisor = SZC_fan_piaozhai_sic
+		set_temp_variable = { coalition_partner_var = token:social_liberal }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:market_liberal }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		add_to_coalition = yes
+		custom_effect_tooltip = SZC_bop_mechanic_explanation_tt
+		set_power_balance = {
+			id = SZC_CDL_power_balance
+			left_side = SZC_bop_PWH_winning_side
+			right_side = SZC_bop_CDL_winning_side
+			set_value = 0.10
+		}
+		}
+	}
 	SZC_DEBUG_panpath_lkmt_decision = {
 		allowed = { tag = SZC }
 		visible = {
