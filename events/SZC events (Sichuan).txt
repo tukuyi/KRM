@@ -12650,6 +12650,15 @@ country_event = { #就职典礼
 				}
 			}
 		}
+		hidden_effect = {
+			SZC_fan_piaozhai = {
+				add_temp_unit_leader_role = yes
+				unit_leader_event = {
+					id = NKRsichuanmisc.4
+					days = 5
+				}
+			}
+		}
 	}
 }
 
@@ -12784,6 +12793,13 @@ country_event = { #就职典礼
 			}
 			GXC_zhang_junmai = {
 				promote_character = social_democrat_subtype
+			}
+			SZC_pan_guangdan = {
+				add_temp_unit_leader_role = yes
+				unit_leader_event = {
+					id = NKRsichuanmisc.5
+					days = 5
+				}
 			}
 		}
 	}
@@ -12942,6 +12958,15 @@ country_event = { #就职典礼
 		custom_effect_tooltip = CHI_focus_tree_will_change_tt
 		complete_national_focus = SZC_pan_against_all_odds
 		add_stability = 0.05
+		hidden_effect = {
+			GXC_zhang_junmai = {
+				add_temp_unit_leader_role = yes
+				unit_leader_event = {
+					id = NKRsichuanmisc.6
+					days = 5
+				}
+			}
+		}
 	}
 }
 
@@ -13131,6 +13156,69 @@ unit_leader_event = {
 		custom_effect_tooltip = SZC_liu_bocheng_return_tooltip
 		SZC_liu_bocheng = {
 			SZC_recruit_character_effect = yes
+		}
+	}
+}
+
+unit_leader_event = {
+	id = NKRsichuanmisc.4 #致张先生
+	title = {
+		text = NKRsichuanmisc.4.t
+	}
+	desc = {
+		text = NKRsichuanmisc.4.d
+	}
+
+
+	is_triggered_only = yes #fired by on_event related to general promotions.
+
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.4 option NKRsichuanmisc.4.a"
+		name = NKRsichuanmisc.4.a #我们的努力终于付出了收获啊...
+		hidden_effect = {
+			remove_temp_unit_leader_role = yes
+		}
+	}
+}
+
+unit_leader_event = {
+	id = NKRsichuanmisc.5 #致罗兄
+	title = {
+		text = NKRsichuanmisc.5.t
+	}
+	desc = {
+		text = NKRsichuanmisc.5.d
+	}
+
+
+	is_triggered_only = yes #fired by on_event related to general promotions.
+
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.5 option NKRsichuanmisc.5.a"
+		name = NKRsichuanmisc.5.a #我也没想到，但我们要向着未来前进！
+		hidden_effect = {
+			remove_temp_unit_leader_role = yes
+		}
+	}
+}
+
+unit_leader_event = {
+	id = NKRsichuanmisc.6 #致沈老
+	title = {
+		text = NKRsichuanmisc.6.t
+	}
+	desc = {
+		text = NKRsichuanmisc.6.d
+	}
+
+
+	is_triggered_only = yes #fired by on_event related to general promotions.
+
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.6 option NKRsichuanmisc.6.a"
+		name = NKRsichuanmisc.6.a #道阻且长啊。
+		hidden_effect = {
+			remove_temp_unit_leader_role = yes
 		}
 	}
 }
