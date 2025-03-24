@@ -11751,12 +11751,15 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_against_all_odds
 		icon = GFX_goal_SZC_pan_against_all_odds
-		cost = 2
+		cost = 10
 
 		x = 0
 		y = 4
 		relative_position_id = SZC_pan_all_chinese_political_consulative_conference
 
+		available = {
+			has_global_flag = china_united
+		}
 
 		prerequisite = {
 			focus = SZC_pan_the_rules_of_democracy
@@ -11770,6 +11773,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_against_all_odds"
+			custom_effect_tooltip = SZC_pan_against_all_odds_tt
 		}
 	}
 
