@@ -12233,6 +12233,9 @@ country_event = { #学潮扩大
 		log = "[GetLogInfo]: event NKRsichuan.260 option NKRsichuan.260.a"
 		name = NKRsichuan.260.a
 		custom_effect_tooltip = NKRsichuan.260.tt
+		remove_power_balance = {
+			id = SZC_CDL_power_balance
+		}
 		add_stability = -0.1
 		hidden_effect = {
 			country_event = {
@@ -12514,6 +12517,9 @@ country_event = { #宪法几乎全票通过
 	option = {#中华民主史上最光辉的一天！
 		log = "[GetLogInfo]: event NKRsichuan.271 option NKRsichuan.271.a"
 		name = NKRsichuan.271.a
+		remove_power_balance = {
+			id = SZC_CDL_power_balance
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -12796,6 +12802,9 @@ country_event = { #宪法超过三分之二，获得通过
 	option = {#哈，松了口气。
 		log = "[GetLogInfo]: event NKRsichuan.280 option NKRsichuan.280.a"
 		name = NKRsichuan.280.a
+		remove_power_balance = {
+			id = SZC_CDL_power_balance
+		}
 		add_stability = 0.05
 		hidden_effect = {
 			country_event = {
