@@ -16,7 +16,7 @@ SZC_CDL_power_balance = {
 			modifier = {
 				stability_weekly = -0.0010
 				political_power_gain = -0.20
-
+				paternal_autocrat_drift = 0.04
 			}
 			on_activate = {
 
@@ -33,6 +33,7 @@ SZC_CDL_power_balance = {
 			modifier = {
 				stability_weekly = -0.0050
 				production_factory_max_efficiency_factor = 0.05
+				paternal_autocrat_drift = 0.08
 			}
 			on_activate = {
 				set_power_balance_gfx = {
@@ -81,6 +82,7 @@ SZC_CDL_power_balance = {
 				war_support_weekly = -0.005
 				political_power_gain = 0.05
 				production_factory_efficiency_gain_factor = 0.1
+				paternal_autocrat_drift = -0.04
 			}
 			on_activate = {
 				set_power_balance_gfx = {

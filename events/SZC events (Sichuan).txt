@@ -11632,6 +11632,10 @@ country_event = { #爱国阵线问题
 			value = -0.05
 			tooltip_side = SZC_bop_PWH_winning_side
 		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.03
+		}
 	}
 }
 
@@ -11717,7 +11721,7 @@ country_event = { #整合民政
 		name = NKRsichuan.228.a
 		add_power_balance_value = {
 			id = SZC_CDL_power_balance
-			value = 0.05
+			value = 0.15
 			tooltip_side = SZC_bop_CDL_winning_side
 		}
 		every_owned_state = {
@@ -11729,7 +11733,7 @@ country_event = { #整合民政
 		name = NKRsichuan.228.b
 		add_power_balance_value = {
 			id = SZC_CDL_power_balance
-			value = -0.05
+			value = -0.10
 			tooltip_side = SZC_bop_PWH_winning_side
 		}
 		every_owned_state = {
@@ -11753,7 +11757,7 @@ country_event = { #一笔交易
 		name = NKRsichuan.229.a
 		add_power_balance_value = {
 			id = SZC_CDL_power_balance
-			value = 0.05
+			value = 0.1
 			tooltip_side = SZC_bop_CDL_winning_side
 		}
 		add_stability = -0.03
@@ -11786,7 +11790,7 @@ country_event = { #演讲
 		name = NKRsichuan.230.a
 		add_power_balance_value = {
 			id = SZC_CDL_power_balance
-			value = 0.05
+			value = 0.10
 			tooltip_side = SZC_bop_CDL_winning_side
 		}
 	}
@@ -11795,8 +11799,12 @@ country_event = { #演讲
 		name = NKRsichuan.230.b
 		add_power_balance_value = {
 			id = SZC_CDL_power_balance
-			value = 0.05
-			tooltip_side = SZC_bop_CDL_winning_side
+			value = -0.10
+			tooltip_side = SZC_bop_PWH_winning_side
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.03
 		}
 	}
 }
@@ -11837,17 +11845,21 @@ country_event = { #新《新青年》
 		name = NKRsichuan.232.a
 		add_power_balance_value = {
 			id = SZC_CDL_power_balance
-			value = 0.05
+			value = 0.10
 			tooltip_side = SZC_bop_CDL_winning_side
 		}
 		add_war_support = 0.1
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.03
+		}
 	}
 	option = {#今日中国，仍需要德先生和赛先生！
 		log = "[GetLogInfo]: event NKRsichuan.232 option NKRsichuan.231.a"
 		name = NKRsichuan.232.b
 		add_power_balance_value = {
 			id = SZC_CDL_power_balance
-			value = -0.05
+			value = -0.10
 			tooltip_side = SZC_bop_PWH_winning_side
 		}
 		add_popularity = {
@@ -11878,7 +11890,7 @@ country_event = { #政治宣传
 		}
 		add_power_balance_value = {
 			id = SZC_CDL_power_balance
-			value = 0.05
+			value = 0.10
 			tooltip_side = SZC_bop_CDL_winning_side
 		}
 		add_popularity = {
@@ -11900,8 +11912,12 @@ country_event = { #政治宣传
 		}
 		add_power_balance_value = {
 			id = SZC_CDL_power_balance
-			value = -0.05
+			value = -0.10
 			tooltip_side = SZC_bop_PWH_winning_side
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.03
 		}
 	}
 }
