@@ -11922,6 +11922,1084 @@ country_event = { #政治宣传
 	}
 }
 
+country_event = { #山河一统
+	id = NKRsichuan.250
+	title = NKRsichuan.250.t
+	desc = NKRsichuan.250.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#时机已到。
+		log = "[GetLogInfo]: event NKRsichuan.250 option NKRsichuan.250.a"
+		name = NKRsichuan.250.a
+		custom_effect_tooltip = NKRsichuan.250.tt
+		add_ideas = {
+			SZC_pan_calls_for_congress
+		}
+	}
+}
+
+country_event = { #新制宪大会提上日程
+	id = NKRsichuan.251
+	title = NKRsichuan.251.t
+	desc = NKRsichuan.251.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#一部新宪法，一个新民国！
+		log = "[GetLogInfo]: event NKRsichuan.251 option NKRsichuan.251.a"
+		name = NKRsichuan.251.a
+		remove_ideas = {
+			SZC_pan_calls_for_congress
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.252
+				days = 5
+			}
+			GXC = {
+				GXC_zhang_junmai = {
+					SZC_recruit_character_effect = yes
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_SZC_zhang_junmai_large
+							small = GFX_portrait_SZC_zhang_junmai_small
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #宪法研讨委员会成立
+	id = NKRsichuan.252
+	title = NKRsichuan.252.t
+	desc = NKRsichuan.252.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#希望能有个好结果。
+		log = "[GetLogInfo]: event NKRsichuan.252 option NKRsichuan.252.a"
+		name = NKRsichuan.252.a
+		hidden_effect = {
+			if = {
+				limit = {
+					is_power_balance_in_range = {
+						id = SZC_CDL_power_balance
+						range = SZC_bop_PWH_quite_dissatisfied
+					}
+				}
+				country_event = {
+					id = NKRsichuan.253
+					days = 5
+				}
+			}
+			else = {
+				country_event = {
+					id = NKRsichuan.264
+					days = 5
+				}
+			}
+		}
+	}
+}
+
+country_event = { #潘将军的忧虑
+	id = NKRsichuan.253
+	title = NKRsichuan.253.t
+	desc = NKRsichuan.253.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#我也不想背上鲁登道夫那样的骂名啊...
+		log = "[GetLogInfo]: event NKRsichuan.253 option NKRsichuan.253.a"
+		name = NKRsichuan.253.a
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.254
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #研讨委员会推迟草案公布日
+	id = NKRsichuan.254
+	title = NKRsichuan.254.t
+	desc = NKRsichuan.254.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#令人不安。
+		log = "[GetLogInfo]: event NKRsichuan.254 option NKRsichuan.254.a"
+		name = NKRsichuan.254.a
+		add_stability = -0.01
+		
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.02
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = -0.02
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.255
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = { #宪法草案公布
+	id = NKRsichuan.255
+	title = NKRsichuan.255.t
+	desc = NKRsichuan.255.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#他们到底在干什么！
+		log = "[GetLogInfo]: event NKRsichuan.255 option NKRsichuan.255.a"
+		name = NKRsichuan.255.a
+		add_stability = -0.15
+		add_manpower = -64
+		add_political_power = -150
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.04
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = -0.04
+		}
+		add_popularity = {
+			ideology = market_liberal
+			popularity = -0.04
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = -0.04
+		}
+		
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.256
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #无言
+	id = NKRsichuan.256
+	title = NKRsichuan.256.t
+	desc = NKRsichuan.256.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#老先生！快来人啊！
+		log = "[GetLogInfo]: event NKRsichuan.256 option NKRsichuan.256.a"
+		name = NKRsichuan.256.a
+		add_political_power = -50
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.257
+				days = 3
+			}
+			SZC_fan_piaozhai = {
+				promote_character = social_democrat_subtype
+				promote_character = social_liberal_subtype
+			}
+		}
+	}
+}
+
+country_event = { #混乱的制宪大会
+	id = NKRsichuan.257
+	title = NKRsichuan.257.t
+	desc = NKRsichuan.257.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#当务之急是迅速完成制宪工作...
+		log = "[GetLogInfo]: event NKRsichuan.257 option NKRsichuan.257.a"
+		name = NKRsichuan.257.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.258
+				days = 3
+			}
+		}
+	}
+	option = {#于情于理，我都不可能接受这样的一份草案。
+		log = "[GetLogInfo]: event NKRsichuan.257 option NKRsichuan.257.b"
+		name = NKRsichuan.257.b
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.259
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #宪法通过
+	id = NKRsichuan.258
+	title = NKRsichuan.258.t
+	desc = NKRsichuan.258.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#这就是我们奋战这么多年换来的吗？
+		log = "[GetLogInfo]: event NKRsichuan.258 option NKRsichuan.258.a"
+		name = NKRsichuan.258.a
+		add_stability = -0.1
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.260
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #宪法被否决
+	id = NKRsichuan.259
+	title = NKRsichuan.259.t
+	desc = NKRsichuan.259.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#那该怎么办，再扯皮再否决？
+		log = "[GetLogInfo]: event NKRsichuan.259 option NKRsichuan.259.a"
+		name = NKRsichuan.259.a
+		add_stability = -0.1
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.260
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #学潮扩大
+	id = NKRsichuan.260
+	title = NKRsichuan.260.t
+	desc = NKRsichuan.260.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#有人在想，他不得不背上这个骂名了。
+		log = "[GetLogInfo]: event NKRsichuan.260 option NKRsichuan.260.a"
+		name = NKRsichuan.260.a
+		custom_effect_tooltip = NKRsichuan.260.tt
+		add_stability = -0.1
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.261
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #民盟最漫长的一天
+	id = NKRsichuan.261
+	title = NKRsichuan.261.t
+	desc = NKRsichuan.261.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#我们别无选择。
+		log = "[GetLogInfo]: event NKRsichuan.261 option NKRsichuan.261.a"
+		name = NKRsichuan.261.a
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		activate_advisor = SZC_li_hongkun_sic
+		add_stability = -0.1
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.04
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = -0.04
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = -0.04
+		}
+		add_popularity = {
+			ideology = market_liberal
+			popularity = -0.04
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.262
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #铁与血
+	id = NKRsichuan.262
+	title = NKRsichuan.262.t
+	desc = NKRsichuan.262.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#烟灰缸很快就满了。
+		log = "[GetLogInfo]: event NKRsichuan.262 option NKRsichuan.262.a"
+		name = NKRsichuan.262.a
+		custom_effect_tooltip = NKRsichuan.262.tt
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.263
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #南京，朝阳升起
+	id = NKRsichuan.263
+	title = NKRsichuan.263.t
+	desc = NKRsichuan.263.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#我的手沾满了鲜血...
+		log = "[GetLogInfo]: event NKRsichuan.263 option NKRsichuan.263.a"
+		name = NKRsichuan.263.a
+		custom_effect_tooltip = CHI_focus_tree_will_change_tt
+		add_manpower = -89
+		complete_national_focus = SZC_pan_against_all_odds
+	}
+}
+
+country_event = { #《新青年》新刊
+	id = NKRsichuan.264
+	title = NKRsichuan.264.t
+	desc = NKRsichuan.264.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#真不错。
+		log = "[GetLogInfo]: event NKRsichuan.264 option NKRsichuan.264.a"
+		name = NKRsichuan.264.a
+		add_political_power = 50
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.265
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #宪法研讨-权力下放
+	id = NKRsichuan.265
+	title = NKRsichuan.265.t
+	desc = NKRsichuan.265.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#这是最适合中国国情的道路。
+		log = "[GetLogInfo]: event NKRsichuan.265 option NKRsichuan.265.a"
+		name = NKRsichuan.265.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.266
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #宪法研讨-选举权
+	id = NKRsichuan.266
+	title = NKRsichuan.266.t
+	desc = NKRsichuan.266.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#我们不能辜负人民的希望。
+		log = "[GetLogInfo]: event NKRsichuan.266 option NKRsichuan.266.a"
+		name = NKRsichuan.266.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.267
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #宪法研讨-权力划分
+	id = NKRsichuan.267
+	title = NKRsichuan.267.t
+	desc = NKRsichuan.267.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#府院之争决不能再次上演了！
+		log = "[GetLogInfo]: event NKRsichuan.267 option NKRsichuan.267.a"
+		name = NKRsichuan.267.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.268
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #宪法公布
+	id = NKRsichuan.268
+	title = NKRsichuan.268.t
+	desc = NKRsichuan.268.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#以上由宪法研讨委员会起草。
+		log = "[GetLogInfo]: event NKRsichuan.268 option NKRsichuan.268.a"
+		name = NKRsichuan.268.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.269
+				days = 2
+			}
+			country_event = {
+				id = NKRsichuan.270
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #媒体界现状
+	id = NKRsichuan.269
+	title = NKRsichuan.269.t
+	desc = NKRsichuan.269.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#我们接受一切合理的评价。
+		log = "[GetLogInfo]: event NKRsichuan.269 option NKRsichuan.269.a"
+		name = NKRsichuan.269.a
+		add_political_power = 100
+		add_stability = 0.03
+	}
+}
+
+country_event = { #制宪大会开始表决
+	id = NKRsichuan.270
+	title = NKRsichuan.270.t
+	desc = NKRsichuan.270.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#翘首以待...
+		log = "[GetLogInfo]: event NKRsichuan.270 option NKRsichuan.270.a"
+		name = NKRsichuan.270.a
+		hidden_effect = {
+			if = {
+				limit = {
+					is_power_balance_in_range = {
+						id = SZC_CDL_power_balance
+						range = SZC_bop_CDL_supports_democracy
+					}
+				}
+				country_event = {
+					id = NKRsichuan.271
+					days = 1
+				}
+			}
+			else = {
+				country_event = {
+					id = NKRsichuan.280
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { #宪法几乎全票通过
+	id = NKRsichuan.271
+	title = NKRsichuan.271.t
+	desc = NKRsichuan.271.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#中华民主史上最光辉的一天！
+		log = "[GetLogInfo]: event NKRsichuan.271 option NKRsichuan.271.a"
+		name = NKRsichuan.271.a
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = NKRSZC_CDLpath_APF
+				}
+				country_event = {
+					id = NKRsichuan.272
+					days = 10
+				}
+			}
+			else = {
+				country_event = {
+					id = NKRsichuan.276
+					days = 10
+				}
+			}
+		}
+	}
+}
+
+country_event = { #边缘政党起势
+	id = NKRsichuan.272
+	title = NKRsichuan.272.t
+	desc = NKRsichuan.272.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#新生民国，新生格局。
+		log = "[GetLogInfo]: event NKRsichuan.272 option NKRsichuan.272.a"
+		name = NKRsichuan.272.a
+		add_stability = 0.05
+		set_party_name = {
+			ideology = social_conservative
+			long_name = SZC_CDLYCP_party_long
+			name = SZC_CDLYCP_party
+		}
+		hidden_effect = {
+			set_party_name = {
+				ideology = totalist
+				long_name = SZC_CDLKMT_party_long
+				name = SZC_CDLKMT_party
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				long_name = SZC_CDLKMT_party_long
+				name = SZC_CDLKMT_party
+			}
+			end_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:market_liberal }
+			add_to_coalition = yes
+			country_event = {
+				id = NKRsichuan.273
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = { #新生民国的第一次普选（YCPKMTAVAILABLE
+	id = NKRsichuan.273
+	title = NKRsichuan.273.t
+	desc = NKRsichuan.273.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#这是民主的实践！
+		log = "[GetLogInfo]: event NKRsichuan.273 option NKRsichuan.273.a"
+		name = NKRsichuan.273.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.274
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #三党演义
+	id = NKRsichuan.274
+	title = NKRsichuan.274.t
+	desc = NKRsichuan.274.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#话说天下大势，专制久必民主！
+		log = "[GetLogInfo]: event NKRsichuan.274 option NKRsichuan.274.a"
+		name = NKRsichuan.274.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.275
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #就职典礼
+	id = NKRsichuan.275
+	title = NKRsichuan.275.t
+	desc = NKRsichuan.275.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#为民主三呼万岁！
+		log = "[GetLogInfo]: event NKRsichuan.275 option NKRsichuan.275.a"
+		name = NKRsichuan.275.a
+		custom_effect_tooltip = CHI_focus_tree_will_change_tt
+		complete_national_focus = SZC_pan_against_all_odds
+		SZC_zhang_lan = {
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_SZC_zhang_lan_old_large
+					small = GFX_portrait_SZC_zhang_lan_old_small
+				}
+			}
+		}
+	}
+}
+
+country_event = { #民主同盟使命的终结
+	id = NKRsichuan.276
+	title = NKRsichuan.276.t
+	desc = NKRsichuan.276.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#时代变了...
+		log = "[GetLogInfo]: event NKRsichuan.276 option NKRsichuan.276.a"
+		name = NKRsichuan.276.a
+		custom_effect_tooltip = SZC_end_coalition_tt
+		hidden_effect = {
+			end_coalition = yes
+			SZC_luo_longji = {
+				promote_character = social_liberal_subtype
+			}
+			set_party_name = {
+				ideology = social_liberal
+				name = SZC_CDLCMP_party
+				long_name = SZC_CDLCMP_party_long
+			}
+			set_party_name = {
+				ideology = market_liberal
+				name = SZC_CDLCDP_party
+				long_name = SZC_CDLCDP_party_long
+			}
+			set_party_name = {
+				ideology = social_conservative
+				name = SZC_CDLPIP_party
+				long_name = SZC_CDLPIP_party_long
+			}
+			country_event = {
+				id = NKRsichuan.277
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #新生民国的第一次普选 NOKMTYCP
+	id = NKRsichuan.277
+	title = NKRsichuan.277.t
+	desc = NKRsichuan.277.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#祝贺罗潘二位先生了！
+		log = "[GetLogInfo]: event NKRsichuan.277 option NKRsichuan.277.a"
+		name = NKRsichuan.277.a
+		add_popularity = {
+			popularity = 0.15
+			ideology = social_liberal
+		}
+		add_popularity = {
+			popularity = 0.1
+			ideology = social_democrat
+		}
+		add_popularity = {
+			popularity = 0.04
+			ideology = market_liberal
+		}
+		add_popularity = {
+			popularity = 0.04
+			ideology = social_conservative
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.278
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #新绝对真理下的自由
+	id = NKRsichuan.278
+	title = NKRsichuan.278.t
+	desc = NKRsichuan.278.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#时代滚滚向前。
+		log = "[GetLogInfo]: event NKRsichuan.278 option NKRsichuan.278.a"
+		name = NKRsichuan.278.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.279
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #就职典礼
+	id = NKRsichuan.279
+	title = NKRsichuan.279.t
+	desc = NKRsichuan.279.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#为自由三呼万岁！
+		log = "[GetLogInfo]: event NKRsichuan.279 option NKRsichuan.279.a"
+		name = NKRsichuan.279.a
+		custom_effect_tooltip = CHI_focus_tree_will_change_tt
+		complete_national_focus = SZC_pan_against_all_odds
+		add_stability = 0.1
+		set_politics = {
+			ruling_party = social_liberal
+		}
+		set_temp_variable = { coalition_partner_var = token:social_democrat }
+		add_to_coalition = yes
+		hidden_effect = {
+			set_party_name = {
+				ideology = social_democrat
+				name = SZC_CDLDSP_party
+				long_name = SZC_CDLDSP_party_long
+			}
+			GXC_zhang_junmai = {
+				promote_character = social_democrat_subtype
+			}
+		}
+	}
+}
+
+country_event = { #宪法超过三分之二，获得通过
+	id = NKRsichuan.280
+	title = NKRsichuan.280.t
+	desc = NKRsichuan.280.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#哈，松了口气。
+		log = "[GetLogInfo]: event NKRsichuan.280 option NKRsichuan.280.a"
+		name = NKRsichuan.280.a
+		add_stability = 0.05
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.281
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = { #民主同盟的扩大
+	id = NKRsichuan.281
+	title = NKRsichuan.281.t
+	desc = NKRsichuan.281.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#唉...
+		log = "[GetLogInfo]: event NKRsichuan.281 option NKRsichuan.281.a"
+		name = NKRsichuan.281.a
+		add_political_power = 50
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.282
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #元老的辞职
+	id = NKRsichuan.282
+	title = NKRsichuan.282.t
+	desc = NKRsichuan.282.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#再见，张先生。
+		log = "[GetLogInfo]: event NKRsichuan.282 option NKRsichuan.282.a"
+		name = NKRsichuan.282.a
+		clr_country_flag = SZC_fan_piaozhai_available
+		SZC_zhang_lan = {
+			retire_character = yes
+		}
+		SZC_fan_piaozhai = {
+			retire_character = yes
+		}
+		hidden_effect = {
+			SZC_shen_junru = {
+				promote_character = social_democrat_subtype
+				promote_character = social_liberal_subtype
+			}
+			set_politics = {
+				ruling_party = social_liberal
+			}
+			end_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:social_democrat }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:market_liberal }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			add_to_coalition = yes
+			country_event = {
+				id = NKRsichuan.283
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #民国的第一次普选
+	id = NKRsichuan.283
+	title = NKRsichuan.283.t
+	desc = NKRsichuan.283.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#党的胜利。
+		log = "[GetLogInfo]: event NKRsichuan.283 option NKRsichuan.283.a"
+		name = NKRsichuan.283.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.284
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #中华第一大政党
+	id = NKRsichuan.284
+	title = NKRsichuan.284.t
+	desc = NKRsichuan.284.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#于是我们向前。
+		log = "[GetLogInfo]: event NKRsichuan.284 option NKRsichuan.284.a"
+		name = NKRsichuan.284.a
+		add_political_power = 150
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.285
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { #就职典礼
+	id = NKRsichuan.285
+	title = NKRsichuan.285.t
+	desc = NKRsichuan.285.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#为民国三呼万岁！
+		log = "[GetLogInfo]: event NKRsichuan.285 option NKRsichuan.285.a"
+		name = NKRsichuan.285.a
+		custom_effect_tooltip = CHI_focus_tree_will_change_tt
+		complete_national_focus = SZC_pan_against_all_odds
+		add_stability = 0.05
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.286
+	title = NKRsichuan.286.t
+	desc = NKRsichuan.286.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.286 option NKRsichuan.286.a"
+		name = NKRsichuan.286.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.287
+	title = NKRsichuan.287.t
+	desc = NKRsichuan.287.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.287 option NKRsichuan.287.a"
+		name = NKRsichuan.287.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.288
+	title = NKRsichuan.288.t
+	desc = NKRsichuan.288.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.288 option NKRsichuan.288.a"
+		name = NKRsichuan.288.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.289
+	title = NKRsichuan.289.t
+	desc = NKRsichuan.289.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.289 option NKRsichuan.289.a"
+		name = NKRsichuan.289.a
+	}
+}
+
 
 
 

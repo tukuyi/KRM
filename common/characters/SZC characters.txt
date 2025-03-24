@@ -1222,6 +1222,16 @@ characters = {
 			can_be_fired = no
 			traits = { KR_parliament_sic }
 		}
+		country_leader = {
+			ideology = social_democrat_subtype
+			desc = SZC_fan_piaozhai_desc
+			traits = { CHN_southern_republican_aligned }
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			desc = SZC_fan_piaozhai_desc
+			traits = { CHN_southern_republican_aligned }
+		}
 	}
 
 	#沈钧儒
@@ -1236,6 +1246,11 @@ characters = {
 		
 		country_leader = {
 			ideology = social_democrat_subtype
+			desc = SZC_shen_junru_desc
+			traits = { CHN_southern_republican_aligned }
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
 			desc = SZC_shen_junru_desc
 			traits = { CHN_southern_republican_aligned }
 		}

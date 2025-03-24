@@ -11751,7 +11751,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_against_all_odds
 		icon = GFX_goal_SZC_pan_against_all_odds
-		cost = 10
+		cost = 15
 
 		x = 0
 		y = 4
@@ -11759,6 +11759,12 @@ focus_tree = {
 
 		available = {
 			has_global_flag = china_united
+		}
+
+		select_effect = {
+			country_event = {
+				id = NKRsichuan.251
+			}
 		}
 
 		prerequisite = {
@@ -11774,6 +11780,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_against_all_odds"
 			custom_effect_tooltip = SZC_pan_against_all_odds_tt
+			effect_tooltip = {
+				remove_idea = SZC_pan_calls_for_congress
+			}
 		}
 	}
 
