@@ -11605,6 +11605,307 @@ country_event = { #政治协商会议召开
 	}
 }
 
+country_event = { #爱国阵线问题
+	id = NKRsichuan.223
+	title = NKRsichuan.223.t
+	desc = NKRsichuan.223.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#民主同盟最终达成一致。
+		log = "[GetLogInfo]: event NKRsichuan.223 option NKRsichuan.223.a"
+		name = NKRsichuan.223.a
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = 0.05
+			tooltip_side = SZC_bop_CDL_winning_side
+		}
+	}
+	option = {#民主同盟为此喋喋不休。
+		log = "[GetLogInfo]: event NKRsichuan.223 option NKRsichuan.223.b"
+		name = NKRsichuan.223.b
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = -0.05
+			tooltip_side = SZC_bop_PWH_winning_side
+		}
+	}
+}
+
+country_event = { #两个愿景，两个党国
+	id = NKRsichuan.224
+	title = NKRsichuan.224.t
+	desc = NKRsichuan.224.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#自由是属于所有人发声的自由...
+		log = "[GetLogInfo]: event NKRsichuan.224 option NKRsichuan.224.a"
+		name = NKRsichuan.224.a
+		add_political_power = -50
+	}
+}
+
+country_event = { #这...
+	id = NKRsichuan.225
+	title = NKRsichuan.225.t
+	desc = NKRsichuan.225.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#这就是民主啊。
+		log = "[GetLogInfo]: event NKRsichuan.225 option NKRsichuan.225.a"
+		name = NKRsichuan.225.a
+		add_political_power = -50
+	}
+}
+
+country_event = { #反对极端主义
+	id = NKRsichuan.226
+	title = NKRsichuan.226.t
+	desc = NKRsichuan.226.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#他们真的能算极端吗？
+		log = "[GetLogInfo]: event NKRsichuan.226 option NKRsichuan.226.a"
+		name = NKRsichuan.226.a
+		add_political_power = 50
+	}
+}
+
+country_event = { #民主同盟屹立
+	id = NKRsichuan.227
+	title = NKRsichuan.227.t
+	desc = NKRsichuan.227.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#如果这就是民主...
+		log = "[GetLogInfo]: event NKRsichuan.227 option NKRsichuan.227.a"
+		name = NKRsichuan.227.a
+	}
+}
+
+country_event = { #整合民政
+	id = NKRsichuan.228
+	title = NKRsichuan.228.t
+	desc = NKRsichuan.228.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#我们是老百姓的公仆！怎么能这么做！
+		log = "[GetLogInfo]: event NKRsichuan.228 option NKRsichuan.228.a"
+		name = NKRsichuan.228.a
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = 0.05
+			tooltip_side = SZC_bop_CDL_winning_side
+		}
+		every_owned_state = {
+			add_compliance = 3
+		}
+	}
+	option = {#如果得不到他们的帮助，我们不可能统治中国。
+		log = "[GetLogInfo]: event NKRsichuan.228 option NKRsichuan.228.b"
+		name = NKRsichuan.228.b
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = -0.05
+			tooltip_side = SZC_bop_PWH_winning_side
+		}
+		every_owned_state = {
+			add_compliance = 10
+		}
+	}
+}
+
+country_event = { #一笔交易
+	id = NKRsichuan.229
+	title = NKRsichuan.229.t
+	desc = NKRsichuan.229.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#一群龟儿子的...
+		log = "[GetLogInfo]: event NKRsichuan.229 option NKRsichuan.229.a"
+		name = NKRsichuan.229.a
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = 0.05
+			tooltip_side = SZC_bop_CDL_winning_side
+		}
+		add_stability = -0.03
+	}
+	option = {#不失为一个选项。
+		log = "[GetLogInfo]: event NKRsichuan.229 option NKRsichuan.229.b"
+		name = NKRsichuan.229.b
+		add_stability = 0.05
+		remove_ideas = {
+			SZC_pan_anti_corruption_action
+		}
+		every_owned_state = {
+			add_compliance = 5
+		}
+	}
+}
+
+country_event = { #演讲
+	id = NKRsichuan.230
+	title = NKRsichuan.230.t
+	desc = NKRsichuan.230.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#士兵们深受触动。
+		log = "[GetLogInfo]: event NKRsichuan.230 option NKRsichuan.230.a"
+		name = NKRsichuan.230.a
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = 0.05
+			tooltip_side = SZC_bop_CDL_winning_side
+		}
+	}
+	option = {#军官们及时将其终止。
+		log = "[GetLogInfo]: event NKRsichuan.230 option NKRsichuan.230.b"
+		name = NKRsichuan.230.b
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = 0.05
+			tooltip_side = SZC_bop_CDL_winning_side
+		}
+	}
+}
+
+country_event = { #民主青年同盟
+	id = NKRsichuan.231
+	title = NKRsichuan.231.t
+	desc = NKRsichuan.231.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.231 option NKRsichuan.231.a"
+		name = NKRsichuan.231.a
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = 0.05
+			tooltip_side = SZC_bop_CDL_winning_side
+		}
+	}
+}
+
+country_event = { #新《新青年》
+	id = NKRsichuan.232
+	title = NKRsichuan.232.t
+	desc = NKRsichuan.231.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#今日中国，需要一致对抗帝国主义！
+		log = "[GetLogInfo]: event NKRsichuan.232 option NKRsichuan.232.a"
+		name = NKRsichuan.232.a
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = 0.05
+			tooltip_side = SZC_bop_CDL_winning_side
+		}
+		add_war_support = 0.1
+	}
+	option = {#今日中国，仍需要德先生和赛先生！
+		log = "[GetLogInfo]: event NKRsichuan.232 option NKRsichuan.231.a"
+		name = NKRsichuan.232.b
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = -0.05
+			tooltip_side = SZC_bop_PWH_winning_side
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.03
+		}
+	}
+}
+country_event = { #政治宣传
+	id = NKRsichuan.233
+	title = NKRsichuan.233.t
+	desc = NKRsichuan.233.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#中国万岁！
+		log = "[GetLogInfo]: event NKRsichuan.233 option NKRsichuan.233.a"
+		name = NKRsichuan.233.a
+		trigger = {
+			has_completed_focus = SZC_pan_open_for_all_patriots
+		}
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = 0.05
+			tooltip_side = SZC_bop_CDL_winning_side
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.03
+		}
+	}
+	option = {#可能有点过激了...
+		log = "[GetLogInfo]: event NKRsichuan.233 option NKRsichuan.233.a"
+		name = NKRsichuan.233.b
+		trigger = {
+			NOT = {
+				has_completed_focus = SZC_pan_open_for_all_patriots
+			}
+		}
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = -0.05
+			tooltip_side = SZC_bop_PWH_winning_side
+		}
+	}
+}
+
 
 
 

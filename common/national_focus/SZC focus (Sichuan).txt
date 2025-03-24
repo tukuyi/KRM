@@ -11409,13 +11409,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_national_democratic_united_front"
+			country_event = {
+				id = NKRsichuan.223
+			}
+			add_ideas = {
+				SZC_pan_patriot_front
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_open_for_all_patriots
 		icon = GFX_goal_SZC_pan_open_for_all_patriots
-		cost = 2
+		cost = 4
 
 		x = -4
 		y = 2
@@ -11430,13 +11436,43 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_open_for_all_patriots"
+				
+			add_power_balance_value = {
+				id = SZC_CDL_power_balance
+				value = -0.15
+				tooltip_side = SZC_bop_PWH_winning_side
+			}
+			country_event = {
+				id = NKRsichuan.224
+			}
+			set_country_flag = NKRSZC_CDLpath_APF
+			set_temp_variable = { coalition_partner_var = token:radical_socialist }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+			add_to_coalition = yes
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_the_rules_of_democracy
 		icon = GFX_goal_SZC_pan_the_rules_of_democracy
-		cost = 2
+		cost = 4
 
 		x = -4
 		y = 3
@@ -11447,13 +11483,22 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_the_rules_of_democracy"
+			country_event = {
+				id = NKRsichuan.225
+			}
+			add_stability = -0.05
+			add_power_balance_value = {
+				id = SZC_CDL_power_balance
+				value = -0.05
+				tooltip_side = SZC_bop_PWH_winning_side
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_centrist_stands
 		icon = GFX_goal_SZC_pan_centrist_stands
-		cost = 2
+		cost = 4
 
 		x = -2
 		y = 2
@@ -11468,13 +11513,39 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_centrist_stands"
+			country_event = {
+				id = NKRsichuan.226
+			}
+
+			add_power_balance_value = {
+				id = SZC_CDL_power_balance
+				value = 0.05
+				tooltip_side = SZC_bop_CDL_winning_side
+			}
+
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = -0.03
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_keep_the_coalition_works
 		icon = GFX_goal_SZC_pan_keep_the_coalition_works
-		cost = 2
+		cost = 4
 
 		x = -2
 		y = 3
@@ -11486,6 +11557,26 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_keep_the_coalition_works"
+			country_event = {
+				id = NKRsichuan.227
+			}
+			
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.03
+			}
 		}
 	}
 
@@ -11494,7 +11585,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_secure_local_administration
 		icon = GFX_goal_SZC_pan_secure_local_administration
-		cost = 2
+		cost = 5
 
 		x = 4
 		y = 1
@@ -11506,13 +11597,20 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_secure_local_administration"
+			country_event = {
+				id = NKRsichuan.228
+			}
+			every_owned_state = {
+				add_compliance = 5
+			}
+			add_stability = 0.1
 		}
 	}
 
 	focus = {
 		id = SZC_pan_eliminate_local_corruption
 		icon = GFX_goal_SZC_pan_eliminate_local_corruption
-		cost = 2
+		cost = 5
 
 		x = 6
 		y = 2
@@ -11524,13 +11622,23 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_eliminate_local_corruption"
+			add_timed_idea = {
+				idea = SZC_pan_anti_corruption_action 
+				days = 200
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.229
+					days = 10
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_raise_democratic_consciousness
 		icon = GFX_goal_SZC_pan_raise_democratic_consciousness
-		cost = 2
+		cost = 5
 
 		x = 4
 		y = 2
@@ -11542,13 +11650,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_raise_democratic_consciousness"
+			add_ideas = {
+				SZC_pan_republican_spirit
+			}
+			country_event = {
+				id = NKRsichuan.230
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_support_youth_league
 		icon = GFX_goal_SZC_pan_support_youth_league
-		cost = 2
+		cost = 5
 
 		x = 2
 		y = 2
@@ -11560,13 +11674,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_support_youth_league"
+			add_manpower = 50000
+			add_war_support = 0.1
+			country_event = {
+				id = NKRsichuan.231
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_use_public_media
 		icon = GFX_goal_SZC_pan_use_public_media
-		cost = 2
+		cost = 5
 
 		x = 3
 		y = 3
@@ -11584,13 +11703,23 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_use_public_media"
+			#add some advisors?
+			country_event = {
+				id = NKRsichuan.232
+			}
+			add_war_support = 0.1
+			add_stability = 0.1
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.03
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_pan_nationalist_propaganda
 		icon = GFX_goal_SZC_pan_nationalist_propaganda
-		cost = 2
+		cost = 5
 
 		x = 5
 		y = 3
@@ -11608,6 +11737,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_nationalist_propaganda"
+			country_event = {
+				id = NKRsichuan.233
+			}
+			add_ideas = {
+				SZC_pan_nationalist_first
+			}
 		}
 	}
 

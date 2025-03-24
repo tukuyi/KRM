@@ -562,6 +562,42 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.10
 			}
 		}
+		SZC_pan_patriot_front = {#爱国阵线
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_patriot_front" }
+			picture = generic_research_increase
+			modifier = {
+				party_popularity_stability_factor = 0.1
+				compliance_gain = 0.01
+			}
+		}
+		SZC_pan_anti_corruption_action = {#反腐行动
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_anti_corruption_action" }
+			picture = generic_research_increase
+			modifier = {
+				consumer_goods_factor = 0.05
+				compliance_gain = 0.5
+				stability_weekly = -0.01
+			}
+		}
+		SZC_pan_republican_spirit = {#共和精神
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_republican_spirit" }
+			picture = generic_research_increase
+			modifier = {
+				conscription = 0.005
+				non_core_manpower = 0.03
+				army_org_factor = 0.05
+			}
+		}
+		SZC_pan_nationalist_first = {#民族至上
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_nationalist_first" }
+			picture = generic_research_increase
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.15
+			}
+		}
 	}
 }
 
