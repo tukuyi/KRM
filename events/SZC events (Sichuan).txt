@@ -13236,3 +13236,52 @@ unit_leader_event = {
 	}
 }
 
+unit_leader_event = {
+	id = NKRsichuanmisc.7 #致潘总统
+	title = {
+		text = NKRsichuanmisc.7.t
+	}
+	desc = {
+		text = NKRsichuanmisc.7.d
+	}
+
+
+	is_triggered_only = yes #fired by on_event related to general promotions.
+
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.7 option NKRsichuanmisc.7.a"
+		name = NKRsichuanmisc.7.a #他什么时候成这样了？
+		hidden_effect = {
+			remove_temp_unit_leader_role = yes
+		}
+	}
+}
+
+unit_leader_event = {
+	id = NKRsichuanmisc.8 #致潘帅
+	title = {
+		text = NKRsichuanmisc.8.t
+	}
+	desc = {
+		text = NKRsichuanmisc.8.d
+	}
+
+
+	is_triggered_only = yes #fired by on_event related to general promotions.
+
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.8 option NKRsichuanmisc.8.a"
+		name = NKRsichuanmisc.8.a #嗯。
+		hidden_effect = {
+			SZC_li_hongkun = {
+				set_portraits = {
+					army = {
+						small = GFX_portrait_SZC_li_hongkun_small
+						large = GFX_portrait_SZC_li_hongkun_large
+					}
+				}
+			}
+		}
+	}
+}
+

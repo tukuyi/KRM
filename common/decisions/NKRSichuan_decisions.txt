@@ -115,6 +115,68 @@ SZC_debug_category = {
 			country_event = NKRsichuan.104
 		}
 	}
+	SZC_DEBUG_panpath_letters_decision = {
+		allowed = { tag = SZC }
+		visible = {
+			is_debug = yes
+		}
+		icon = GFX_decision_lkmt_flag
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_DEBUG_panpath_letters_decision target: [From.GetName]"
+			
+			GXC = {
+				GXC_zhang_junmai = {
+					SZC_recruit_character_effect = yes
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_SZC_zhang_junmai_large
+							small = GFX_portrait_SZC_zhang_junmai_small
+						}
+					}
+				}
+			}
+			SZC_fan_piaozhai = {
+				add_temp_unit_leader_role = yes
+				unit_leader_event = {
+					id = NKRsichuanmisc.4
+					days = 5
+				}
+			}
+			SZC_pan_guangdan = {
+				add_temp_unit_leader_role = yes
+				unit_leader_event = {
+					id = NKRsichuanmisc.5
+					days = 5
+				}
+			}
+			GXC_zhang_junmai = {
+				add_temp_unit_leader_role = yes
+				unit_leader_event = {
+					id = NKRsichuanmisc.6
+					days = 5
+				}
+			}
+			SZC_yang_bokai = {
+				add_temp_unit_leader_role = yes
+				unit_leader_event = {
+					id = NKRsichuanmisc.7
+					days = 5
+				}
+			}
+			SZC_li_hongkun = {
+				set_portraits = {
+					army = {
+						small = GFX_portrait_SZC_li_hongkun_civilian_small
+						large = GFX_portrait_SZC_li_hongkun_civilian_large
+					}
+				}
+				unit_leader_event = {
+					id = NKRsichuanmisc.8
+					days = 5
+				}
+			}
+		}
+	}
 }
 
 SZC_grand_sichuan_plan_category = {
