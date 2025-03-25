@@ -12017,6 +12017,585 @@ focus_tree = {
 	}
 
 
+	focus = {
+		id = SZC_pan_iron_and_blood
+		icon = GFX_goal_SZC_pan_iron_and_blood
+		cost = 2
+
+		x = 4
+		y = 16
+
+		allow_branch = {
+			always = yes
+			# has_country_flag = NKRSZC_CDLpath_PWHcoup
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_iron_and_blood"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_stablize_the_nation
+		icon = GFX_goal_SZC_pan_stablize_the_nation
+		cost = 2
+
+		x = -2
+		y = 1
+		relative_position_id = SZC_pan_iron_and_blood
+
+		prerequisite = {
+			focus = SZC_pan_iron_and_blood
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_stablize_the_nation"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_silence_the_media
+		icon = GFX_goal_SZC_pan_silence_the_media
+		cost = 2
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_pan_iron_and_blood
+
+		prerequisite = {
+			focus = SZC_pan_iron_and_blood
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_silence_the_media"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_legalize_the_action
+		icon = GFX_goal_SZC_pan_legalize_the_action
+		cost = 2
+
+		x = 2
+		y = 1
+		relative_position_id = SZC_pan_iron_and_blood
+
+		prerequisite = {
+			focus = SZC_pan_iron_and_blood
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_legalize_the_action"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_call_me_mrpresident
+		icon = GFX_goal_SZC_pan_call_me_mrpresident
+		cost = 3
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_pan_iron_and_blood
+
+		prerequisite = {
+			focus = SZC_pan_stablize_the_nation
+		}
+		prerequisite = {
+			focus = SZC_pan_silence_the_media
+		}
+		prerequisite = {
+			focus = SZC_pan_legalize_the_action
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_call_me_mrpresident"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_the_last_observer
+		icon = GFX_goal_SZC_pan_the_last_observer
+		cost = 3
+
+		x = -4
+		y = 1
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_call_me_mrpresident
+		}
+
+		mutually_exclusive = {
+			focus = SZC_pan_the_eastern_schleicher
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_the_last_observer"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_edit_the_constitution
+		icon = GFX_goal_SZC_pan_edit_the_constitution
+		cost = 3
+
+		x = -5
+		y = 2
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_the_last_observer
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_edit_the_constitution"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_work_with_collaborate_parties
+		icon = GFX_goal_SZC_pan_work_with_collaborate_parties
+		cost = 3
+
+		x = -5
+		y = 3
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_edit_the_constitution
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_work_with_collaborate_parties"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_grand_coalition
+		icon = GFX_goal_SZC_pan_grand_coalition
+		cost = 3
+
+		x = -5
+		y = 4
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_work_with_collaborate_parties
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_grand_coalition"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_normalization
+		icon = GFX_goal_SZC_pan_normalization
+		cost = 3
+
+		x = -7
+		y = 3
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_edit_the_constitution
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_normalization"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_our_modern_life
+		icon = GFX_goal_SZC_pan_our_modern_life
+		cost = 3
+
+		x = -7
+		y = 4
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_normalization
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_our_modern_life"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_socalled_democracy_restored
+		icon = GFX_goal_SZC_pan_socalled_democracy_restored
+		cost = 3
+
+		x = -6
+		y = 5
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_our_modern_life
+		}
+
+		prerequisite = {
+			focus = SZC_pan_grand_coalition
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_socalled_democracy_restored"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_the_eastern_schleicher
+		icon = GFX_goal_SZC_pan_the_eastern_schleicher
+		cost = 3
+
+		x = 4
+		y = 1
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_call_me_mrpresident
+		}
+
+		mutually_exclusive = {
+			focus = SZC_pan_the_last_observer
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_the_eastern_schleicher"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_the_non_party_cabinet
+		icon = GFX_goal_SZC_pan_the_non_party_cabinet
+		cost = 3
+
+		x = 5
+		y = 2
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_the_eastern_schleicher
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_the_non_party_cabinet"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_end_the_party_mess
+		icon = GFX_goal_SZC_pan_end_the_party_mess
+		cost = 3
+
+		x = 5
+		y = 3
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_the_non_party_cabinet
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_end_the_party_mess"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_executive_supremacy
+		icon = GFX_goal_SZC_pan_executive_supremacy
+		cost = 3
+
+		x = 5
+		y = 4
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_end_the_party_mess
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_executive_supremacy"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_militarist_state
+		icon = GFX_goal_SZC_pan_militarist_state
+		cost = 3
+
+		x = 7
+		y = 3
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_the_non_party_cabinet
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_militarist_state"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_not_duan_nor_cao
+		icon = GFX_goal_SZC_pan_ot_duan_nor_cao
+		cost = 3
+
+		x = 7
+		y = 4
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_militarist_state
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_ot_duan_nor_cao"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_generals_regime
+		icon = GFX_goal_SZC_pan_generals_regime
+		cost = 3
+
+		x = 6
+		y = 5
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_executive_supremacy
+		}
+
+		prerequisite = {
+			focus = SZC_pan_not_duan_nor_cao
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_generals_regime"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_laissez_faire_policy
+		icon = GFX_goal_SZC_pan_laissez_faire_policy
+		cost = 3
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_the_eastern_schleicher
+			focus = SZC_pan_the_last_observer
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_laissez_faire_policy"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_open_the_ports
+		icon = GFX_goal_SZC_pan_open_the_ports
+		cost = 3
+
+		x = -3
+		y = 3
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_laissez_faire_policy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_open_the_ports"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_national_highway_program
+		icon = GFX_goal_SZC_pan_national_highway_program
+		cost = 3
+
+		x = -1
+		y = 3
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_laissez_faire_policy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_national_highway_program"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_raise_the_military_industrial_symbiosis
+		icon = GFX_goal_SZC_pan_raise_the_military_industrial_symbiosis
+		cost = 3
+
+		x = 1
+		y = 3
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_laissez_faire_policy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_raise_the_military_industrial_symbiosis"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_reduce_unnecessarty_expenses
+		icon = GFX_goal_SZC_pan_reduce_unnecessarty_expenses
+		cost = 3
+
+		x = 3
+		y = 3
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_laissez_faire_policy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_reduce_unnecessarty_expenses"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_inland_special_economic_zone
+		icon = GFX_goal_SZC_pan_inland_special_economic_zone
+		cost = 3
+
+		x = -1
+		y = 4
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_open_the_ports
+		}
+
+		prerequisite = {
+			focus = SZC_pan_national_highway_program
+		}
+
+		prerequisite = {
+			focus = SZC_pan_raise_the_military_industrial_symbiosis
+		}
+
+		prerequisite = {
+			focus = SZC_pan_reduce_unnecessarty_expenses
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_inland_special_economic_zone"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_support_financial_industry
+		icon = GFX_goal_SZC_pan_support_financial_industry
+		cost = 3
+
+		x = 1
+		y = 4
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_open_the_ports
+		}
+
+		prerequisite = {
+			focus = SZC_pan_national_highway_program
+		}
+
+		prerequisite = {
+			focus = SZC_pan_raise_the_military_industrial_symbiosis
+		}
+
+		prerequisite = {
+			focus = SZC_pan_reduce_unnecessarty_expenses
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_support_financial_industry"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_protector_of_democracy
+		icon = GFX_goal_SZC_pan_protector_of_democracy
+		cost = 3
+
+		x = -2
+		y = 6
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_socalled_democracy_restored
+		}
+
+		prerequisite = {
+			focus = SZC_pan_inland_special_economic_zone
+		}
+
+		prerequisite = {
+			focus = SZC_pan_support_financial_industry
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_protector_of_democracy"
+		}
+	}
+	
+	focus = {
+		id = SZC_pan_guiding_hand_of_the_republic
+		icon = GFX_goal_SZC_pan_guiding_hand_of_the_republic
+		cost = 3
+
+		x = 2
+		y = 6
+		relative_position_id = SZC_pan_call_me_mrpresident
+
+		prerequisite = {
+			focus = SZC_pan_generals_regime
+		}
+
+		prerequisite = {
+			focus = SZC_pan_inland_special_economic_zone
+		}
+
+		prerequisite = {
+			focus = SZC_pan_support_financial_industry
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_guiding_hand_of_the_republic"
+		}
+	}
+
 
 
 
