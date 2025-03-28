@@ -931,6 +931,108 @@ chinese_unification = {
 }
 
 SZC_national_reconstruction_category = {
+
+	
+	SZC_open_the_port_decision = {
+		allowed = { 
+			always = no
+		 }
+		highlight_states = {
+			highlight_state_targets = { state = FROM }
+		}
+		visible = {
+			ROOT = {
+				owns_state = FROM
+				has_full_control_of_state = FROM
+			}
+		}
+		available = {
+			ROOT = {
+				surrender_progress < 0.01
+			}
+			FROM = {
+				is_core_of = ROOT
+			}
+		}
+		state_target = yes
+		fire_only_once = yes
+		icon = GFX_decision_eng_trade_unions_support
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 50 }
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_open_the_port_decision target: [From.GetName]"
+		}
+		days_remove = 70
+		modifier = {
+			stability_weekly = 0.0010
+			market_liberal_drift = 0.01
+			social_liberal_drift = 0.01
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SZC_open_the_port_decision target: [From.GetName]"
+			FROM = {#111
+				add_dynamic_modifier = {
+					modifier = SZC_open_port_city
+					scope = THIS
+				}
+			}
+		}
+	}
+
+	SZC_inland_sez_decision = {
+		allowed = { 
+			always = no
+		 }
+		highlight_states = {
+			highlight_state_targets = { state = FROM }
+		}
+		visible = {
+			ROOT = {
+				owns_state = FROM
+				has_full_control_of_state = FROM
+			}
+		}
+		available = {
+			ROOT = {
+				surrender_progress < 0.01
+			}
+			FROM = {
+				is_core_of = ROOT
+			}
+		}
+		state_target = yes
+		fire_only_once = yes
+		icon = GFX_decision_eng_trade_unions_support
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 50 }
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_inland_sez_decision target: [From.GetName]"
+		}
+		days_remove = 70
+		modifier = {
+			stability_weekly = 0.0010
+			market_liberal_drift = 0.01
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SZC_inland_sez_decision target: [From.GetName]"
+			FROM = {#111
+				add_dynamic_modifier = {
+					modifier = SZC_open_inland
+					scope = THIS
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+
 	SZC_nationalise_nanjing_electrical_works = {
 		visible = {
 			613 = { is_owned_and_controlled_by = ROOT }

@@ -36,11 +36,13 @@ defined_text = {
 
 	#Authoritarian Democrat
 	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_new_legalism_subtype } localization_key = authoritarian_democrat_new_legalism_subtype }#威民新法家
+	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_spectral_state_subtype } localization_key = authoritarian_democrat_spectral_state_subtype }#幽灵国家
 
 	#Paternal Autocrat
 	text = { trigger = { has_country_leader_ideology = paternal_autocrat_ye_jianyingist_subtype } localization_key = paternal_autocrat_ye_jianyingist_subtype }#叶剑英主义
 	text = { trigger = { has_country_leader_ideology = paternal_autocrat_pan_asianist_subtype } localization_key = paternal_autocrat_pan_asianist_subtype }#家独泛亚
 	text = { trigger = { has_country_leader_ideology = paternal_autocrat_new_legalism_subtype } localization_key = paternal_autocrat_new_legalism_subtype }#家独新法家
+	text = { trigger = { has_country_leader_ideology = paternal_autocrat_spectral_state_subtype } localization_key = paternal_autocrat_spectral_state_subtype }#幽灵国家
 
 	#National Populist
 	text = { trigger = { has_country_leader_ideology = national_populist_british_israelist_subtype } localization_key = national_populist_british_israelist_subtype }#英式以色列主义

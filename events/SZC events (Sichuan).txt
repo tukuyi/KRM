@@ -12236,7 +12236,7 @@ country_event = { #学潮扩大
 		remove_power_balance = {
 			id = SZC_CDL_power_balance
 		}
-		add_stability = -0.1
+		add_stability = -0.2
 		hidden_effect = {
 			country_event = {
 				id = NKRsichuan.261
@@ -12289,6 +12289,31 @@ country_event = { #民盟最漫长的一天
 				id = NKRsichuan.262
 				days = 3
 			}
+			set_party_name = {
+				ideology = social_democrat
+				name = SZC_CDLDSP_party
+				long_name = SZC_CDLDSP_party_long
+			}
+			set_party_name = {
+				ideology = social_liberal
+				name = SZC_CDLYCP_party
+				long_name = SZC_CDLYCP_party_long
+			}
+			set_party_name = {
+				ideology = market_liberal
+				name = SZC_CDLCDP_party
+				long_name = SZC_CDLCDP_party_long
+			}
+			set_party_name = {
+				ideology = social_conservative
+				name = SZC_CDLPIP_party
+				long_name = SZC_CDLPIP_party_long
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				name = SZC_CDLPRP_party
+				long_name = SZC_CDLPRP_party_long
+			}
 		}
 	}
 }
@@ -12333,6 +12358,10 @@ country_event = { #南京，朝阳升起
 		set_country_flag = NKRSZC_CDLpath_PWHcoup
 		add_manpower = -89
 		complete_national_focus = SZC_pan_against_all_odds
+		complete_national_focus = SZC_pan_iron_and_blood
+		add_ideas = {
+			SZC_pan_constitutional_chaos
+		}
 	}
 }
 
@@ -12983,7 +13012,7 @@ country_event = { #就职典礼
 	}
 }
 
-country_event = { #
+country_event = { #有什么区别呢？
 	id = NKRsichuan.286
 	title = NKRsichuan.286.t
 	desc = NKRsichuan.286.d
@@ -12999,7 +13028,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #闭嘴！
 	id = NKRsichuan.287
 	title = NKRsichuan.287.t
 	desc = NKRsichuan.287.d
@@ -13009,13 +13038,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#好吧？
 		log = "[GetLogInfo]: event NKRsichuan.287 option NKRsichuan.287.a"
 		name = NKRsichuan.287.a
 	}
 }
 
-country_event = { #
+country_event = { #法院裁定
 	id = NKRsichuan.288
 	title = NKRsichuan.288.t
 	desc = NKRsichuan.288.d
@@ -13031,7 +13060,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #就职典礼
 	id = NKRsichuan.289
 	title = NKRsichuan.289.t
 	desc = NKRsichuan.289.d
@@ -13041,9 +13070,558 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#万岁！万岁！万岁！
 		log = "[GetLogInfo]: event NKRsichuan.289 option NKRsichuan.289.a"
 		name = NKRsichuan.289.a
+		SZC_pan_wenhua = {
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_SZC_pan_wenhua_civilian_large
+					small = GFX_portrait_SZC_pan_wenhua_civilian_small
+				}
+			}
+		}
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+country_event = { #总理人选
+	id = NKRsichuan.290
+	title = NKRsichuan.290.t
+	desc = NKRsichuan.290.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#就让姓杨的去干吧
+		log = "[GetLogInfo]: event NKRsichuan.290 option NKRsichuan.290.a"
+		name = NKRsichuan.290.a
+		activate_advisor = SZC_yang_bokai_sic
+		
+		SZC_yang_bokai = {
+			add_temp_unit_leader_role = yes
+			unit_leader_event = {
+				id = NKRsichuanmisc.7
+				days = 5
+			}
+		}
+
+		set_politics = {
+			ruling_party = authoritarian_democrat
+		}
+		set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+		add_to_coalition = yes
+
+		hidden_effect = {
+			SZC_pan_wenhua = {
+				promote_character = authoritarian_democrat_subtype
+			}
+			set_country_leader_ideology = authoritarian_democrat_spectral_state_subtype
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = SZC_CDLPRP_party_long
+				name = SZC_CDLPRP_party
+			}
+		}
+
+	}
+	option = {#这群政客除了弄乱国家什么也不会
+		log = "[GetLogInfo]: event NKRsichuan.290 option NKRsichuan.290.b"
+		name = NKRsichuan.290.b
+		activate_advisor = SZC_li_hongkun_sic
+		
+		SZC_li_hongkun = {
+			set_portraits = {
+				army = {
+					small = GFX_portrait_SZC_li_hongkun_civilian_small
+					large = GFX_portrait_SZC_li_hongkun_civilian_large
+				}
+			}
+			unit_leader_event = {
+				id = NKRsichuanmisc.8
+				days = 5
+			}
+		}
+		
+		set_country_leader_ideology = paternal_autocrat_spectral_state_subtype
+	}
+}
+
+country_event = { #杨伯恺内阁
+	id = NKRsichuan.291
+	title = NKRsichuan.291.t
+	desc = NKRsichuan.291.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#台下无言。
+		log = "[GetLogInfo]: event NKRsichuan.291 option NKRsichuan.291.a"
+		name = NKRsichuan.291.a
+	}
+}
+
+country_event = { #宪法修订
+	id = NKRsichuan.292
+	title = NKRsichuan.292.t
+	desc = NKRsichuan.292.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#投票结果，一致通过。
+		log = "[GetLogInfo]: event NKRsichuan.292 option NKRsichuan.292.a"
+		name = NKRsichuan.292.a
+	}
+}
+
+country_event = { #合作探讨
+	id = NKRsichuan.293
+	title = NKRsichuan.293.t
+	desc = NKRsichuan.293.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.293 option NKRsichuan.293.a"
+		name = NKRsichuan.293.a
+		add_political_power = 50
+	}
+}
+
+country_event = { #大联合政府
+	id = NKRsichuan.294
+	title = NKRsichuan.294.t
+	desc = NKRsichuan.294.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#本届政府以促进民主宪政为宗旨...
+		log = "[GetLogInfo]: event NKRsichuan.294 option NKRsichuan.294.a"
+		name = NKRsichuan.294.a
+	}
+}
+
+country_event = { #坦克，军靴与购物袋
+	id = NKRsichuan.295
+	title = NKRsichuan.295.t
+	desc = NKRsichuan.295.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#你是个不夜城...
+		log = "[GetLogInfo]: event NKRsichuan.295 option NKRsichuan.295.a"
+		name = NKRsichuan.295.a
+	}
+}
+
+country_event = { #新国会
+	id = NKRsichuan.296
+	title = NKRsichuan.296.t
+	desc = NKRsichuan.296.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#窗外你所看到的便是民主。
+		log = "[GetLogInfo]: event NKRsichuan.296 option NKRsichuan.2966.a"
+		name = NKRsichuan.296.a
+	}
+}
+
+country_event = { #李宏锟内阁
+	id = NKRsichuan.297
+	title = NKRsichuan.297.t
+	desc = NKRsichuan.297.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#...
+		log = "[GetLogInfo]: event NKRsichuan.297 option NKRsichuan.297.a"
+		name = NKRsichuan.297.a
+	}
+}
+
+country_event = { #超然内阁
+	id = NKRsichuan.298
+	title = NKRsichuan.298.t
+	desc = NKRsichuan.298.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#最管用的民主。
+		log = "[GetLogInfo]: event NKRsichuan.298 option NKRsichuan.298.a"
+		name = NKRsichuan.298.a
+	}
+}
+
+country_event = { #太古俱乐部
+	id = NKRsichuan.299
+	title = NKRsichuan.299.t
+	desc = NKRsichuan.299.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#恰如1918。
+		log = "[GetLogInfo]: event NKRsichuan.299 option NKRsichuan.299.a"
+		name = NKRsichuan.299.a
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = SZC_CDLTGC_party_long
+			name = SZC_CDLTGC_party
+		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = SZC_CDLTGC_party_long
+			name = SZC_CDLTGC_party
+		}
+	}
+}
+
+country_event = { #权力之下
+	id = NKRsichuan.300
+	title = NKRsichuan.300.t
+	desc = NKRsichuan.300.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#中国之新政治格局。
+		log = "[GetLogInfo]: event NKRsichuan.300 option NKRsichuan.300.a"
+		name = NKRsichuan.300.a
+	}
+}
+
+country_event = { #军国体制
+	id = NKRsichuan.301
+	title = NKRsichuan.301.t
+	desc = NKRsichuan.301.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#已成定局。
+		log = "[GetLogInfo]: event NKRsichuan.301 option NKRsichuan.301.a"
+		name = NKRsichuan.301.a
+	}
+}
+
+country_event = { #潘总统用石头击落日本飞机
+	id = NKRsichuan.302
+	title = NKRsichuan.302.t
+	desc = NKRsichuan.302.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#...这都写的啥？
+		log = "[GetLogInfo]: event NKRsichuan.302 option NKRsichuan.302.a"
+		name = NKRsichuan.302.a
+	}
+}
+
+country_event = { #会晤
+	id = NKRsichuan.303
+	title = NKRsichuan.303.t
+	desc = NKRsichuan.303.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#希望你能为我国的经济建设添砖加瓦。
+		log = "[GetLogInfo]: event NKRsichuan.303 option NKRsichuan.303.a"
+		name = NKRsichuan.303.a
+	}
+}
+
+country_event = { #经费呢？
+	id = NKRsichuan.304
+	title = NKRsichuan.304.t
+	desc = NKRsichuan.304.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#生活还得继续。
+		log = "[GetLogInfo]: event NKRsichuan.304 option NKRsichuan.304.a"
+		name = NKRsichuan.304.a
+	}
+}
+
+country_event = { #东亚的辛辛纳图斯
+	id = NKRsichuan.305
+	title = NKRsichuan.305.t
+	desc = NKRsichuan.305.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#民主之光尚存。
+		log = "[GetLogInfo]: event NKRsichuan.305 option NKRsichuan.305.a"
+		name = NKRsichuan.305.a
+	}
+}
+
+country_event = { #东亚的凯撒
+	id = NKRsichuan.306
+	title = NKRsichuan.306.t
+	desc = NKRsichuan.306.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#民国不断前进。
+		log = "[GetLogInfo]: event NKRsichuan.306 option NKRsichuan.3066.a"
+		name = NKRsichuan.306.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.307
+	title = NKRsichuan.307.t
+	desc = NKRsichuan.307.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.307 option NKRsichuan.307.a"
+		name = NKRsichuan.307.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.308
+	title = NKRsichuan.308.t
+	desc = NKRsichuan.308.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.308 option NKRsichuan.308.a"
+		name = NKRsichuan.308.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.309
+	title = NKRsichuan.309.t
+	desc = NKRsichuan.309.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.309 option NKRsichuan.309.a"
+		name = NKRsichuan.309.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.310
+	title = NKRsichuan.310.t
+	desc = NKRsichuan.310.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.310 option NKRsichuan.310.a"
+		name = NKRsichuan.310.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.311
+	title = NKRsichuan.311.t
+	desc = NKRsichuan.311.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.311 option NKRsichuan.311.a"
+		name = NKRsichuan.311.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.312
+	title = NKRsichuan.312.t
+	desc = NKRsichuan.312.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.312 option NKRsichuan.312.a"
+		name = NKRsichuan.312.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.313
+	title = NKRsichuan.313.t
+	desc = NKRsichuan.313.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.313 option NKRsichuan.313.a"
+		name = NKRsichuan.313.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.314
+	title = NKRsichuan.314.t
+	desc = NKRsichuan.314.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.314 option NKRsichuan.314.a"
+		name = NKRsichuan.314.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.315
+	title = NKRsichuan.315.t
+	desc = NKRsichuan.315.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.315 option NKRsichuan.315.a"
+		name = NKRsichuan.315.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.316
+	title = NKRsichuan.316.t
+	desc = NKRsichuan.316.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.316 option NKRsichuan.3166.a"
+		name = NKRsichuan.316.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.317
+	title = NKRsichuan.317.t
+	desc = NKRsichuan.317.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.317 option NKRsichuan.317.a"
+		name = NKRsichuan.317.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.318
+	title = NKRsichuan.318.t
+	desc = NKRsichuan.318.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.318 option NKRsichuan.318.a"
+		name = NKRsichuan.318.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.319
+	title = NKRsichuan.319.t
+	desc = NKRsichuan.319.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.319 option NKRsichuan.319.a"
+		name = NKRsichuan.319.a
 	}
 }
 

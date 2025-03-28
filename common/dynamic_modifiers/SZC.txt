@@ -13,3 +13,15 @@ SZC_local_peoples_democracy = {
 	local_supplies = 0.1
 	enemy_operative_detection_chance_factor_over_occupied_tag = 0.15
 }
+
+SZC_open_port_city = {
+	icon = "GFX_decision_eng_trade_unions_support"
+	local_building_slots = 3
+	state_production_speed_buildings_factor = 0.2
+}
+
+SZC_open_inland = {
+	icon = "GFX_decision_eng_trade_unions_support"
+	local_building_slots = 1
+	state_production_speed_buildings_factor = 0.15
+}
