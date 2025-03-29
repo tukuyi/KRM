@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_pan_guiding_hand_of_the_republic
+python focusgfxentry.py SZC_pan_the_end_of_CDL
 pause
