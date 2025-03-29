@@ -12997,8 +12997,10 @@ country_event = { #就职典礼
 	option = {#为民国三呼万岁！
 		log = "[GetLogInfo]: event NKRsichuan.285 option NKRsichuan.285.a"
 		name = NKRsichuan.285.a
+		set_country_flag = NKRSZC_CDLpath_SJRpresidency
 		custom_effect_tooltip = CHI_focus_tree_will_change_tt
 		complete_national_focus = SZC_pan_against_all_odds
+		complete_national_focus = SZC_pan_shen_junru_presidency
 		add_stability = 0.05
 		hidden_effect = {
 			GXC_zhang_junmai = {
@@ -13629,6 +13631,328 @@ country_event = { #
 		name = NKRsichuan.319.a
 	}
 }
+
+country_event = { #
+	id = NKRsichuan.320
+	title = NKRsichuan.320.t
+	desc = NKRsichuan.320.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.320 option NKRsichuan.320.a"
+		name = NKRsichuan.320.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.321
+	title = NKRsichuan.321.t
+	desc = NKRsichuan.321.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.321 option NKRsichuan.321.a"
+		name = NKRsichuan.321.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.322
+	title = NKRsichuan.322.t
+	desc = NKRsichuan.322.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.322 option NKRsichuan.322.a"
+		name = NKRsichuan.322.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.323
+	title = NKRsichuan.323.t
+	desc = NKRsichuan.323.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.323 option NKRsichuan.323.a"
+		name = NKRsichuan.323.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.324
+	title = NKRsichuan.324.t
+	desc = NKRsichuan.324.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.324 option NKRsichuan.324.a"
+		name = NKRsichuan.324.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.325
+	title = NKRsichuan.325.t
+	desc = NKRsichuan.325.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.325 option NKRsichuan.325.a"
+		name = NKRsichuan.325.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.326
+	title = NKRsichuan.326.t
+	desc = NKRsichuan.326.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.326 option NKRsichuan.3266.a"
+		name = NKRsichuan.326.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.327
+	title = NKRsichuan.327.t
+	desc = NKRsichuan.327.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.327 option NKRsichuan.327.a"
+		name = NKRsichuan.327.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.328
+	title = NKRsichuan.328.t
+	desc = NKRsichuan.328.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.328 option NKRsichuan.328.a"
+		name = NKRsichuan.328.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.329
+	title = NKRsichuan.329.t
+	desc = NKRsichuan.329.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.329 option NKRsichuan.329.a"
+		name = NKRsichuan.329.a
+	}
+}
+
+
+country_event = { #
+	id = NKRsichuan.330
+	title = NKRsichuan.330.t
+	desc = NKRsichuan.330.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.330 option NKRsichuan.330.a"
+		name = NKRsichuan.330.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.331
+	title = NKRsichuan.331.t
+	desc = NKRsichuan.331.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.331 option NKRsichuan.331.a"
+		name = NKRsichuan.331.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.332
+	title = NKRsichuan.332.t
+	desc = NKRsichuan.332.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.332 option NKRsichuan.332.a"
+		name = NKRsichuan.332.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.333
+	title = NKRsichuan.333.t
+	desc = NKRsichuan.333.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.333 option NKRsichuan.333.a"
+		name = NKRsichuan.333.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.334
+	title = NKRsichuan.334.t
+	desc = NKRsichuan.334.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.334 option NKRsichuan.334.a"
+		name = NKRsichuan.334.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.335
+	title = NKRsichuan.335.t
+	desc = NKRsichuan.335.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.335 option NKRsichuan.335.a"
+		name = NKRsichuan.335.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.336
+	title = NKRsichuan.336.t
+	desc = NKRsichuan.336.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.336 option NKRsichuan.3366.a"
+		name = NKRsichuan.336.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.337
+	title = NKRsichuan.337.t
+	desc = NKRsichuan.337.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.337 option NKRsichuan.337.a"
+		name = NKRsichuan.337.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.338
+	title = NKRsichuan.338.t
+	desc = NKRsichuan.338.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.338 option NKRsichuan.338.a"
+		name = NKRsichuan.338.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuan.339
+	title = NKRsichuan.339.t
+	desc = NKRsichuan.339.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuan.339 option NKRsichuan.339.a"
+		name = NKRsichuan.339.a
+	}
+}
+
 
 
 

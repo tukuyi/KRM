@@ -12016,6 +12016,7 @@ focus_tree = {
 		}
 	}
 
+	#CDL军政府线
 
 	focus = {
 		id = SZC_pan_iron_and_blood
@@ -12780,6 +12781,359 @@ focus_tree = {
 		}
 	}
 
+
+
+	#CDL独大线
+
+
+	focus = {
+		id = SZC_pan_shen_junru_presidency
+		icon = GFX_goal_SZC_pan_shen_junru_presidency
+		cost = 2
+
+		x = 4
+		y = 16
+
+		allow_branch = {
+			# has_country_flag = NKRSZC_CDLpath_SJRpresidency
+			always = yes
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_shen_junru_presidency"
+			custom_effect_tooltip = SZC_pan_shen_junru_presidency_tt
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_crisis_of_confidence
+		icon = GFX_goal_SZC_pan_crisis_of_confidence
+		cost = 2
+
+		x = -1
+		y = 1
+		relative_position_id = SZC_pan_shen_junru_presidency
+
+		prerequisite = {
+			focus = SZC_pan_shen_junru_presidency
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_crisis_of_confidence"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_a_whipped_heart
+		icon = GFX_goal_SZC_pan_a_whipped_heart
+		cost = 2
+
+		x = 1
+		y = 1
+		relative_position_id = SZC_pan_shen_junru_presidency
+
+		prerequisite = {
+			focus = SZC_pan_shen_junru_presidency
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_a_whipped_heart"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_task_ahead
+		icon = GFX_goal_SZC_pan_task_ahead
+		cost = 2
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_pan_shen_junru_presidency
+
+		prerequisite = {
+			focus = SZC_pan_crisis_of_confidence
+		}
+		prerequisite = {
+			focus = SZC_pan_a_whipped_heart
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_task_ahead"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_social_market
+		icon = GFX_goal_SZC_pan_social_market
+		cost = 2
+
+		x = -3
+		y = 1
+		relative_position_id = SZC_pan_task_ahead
+
+		prerequisite = {
+			focus = SZC_pan_task_ahead
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_social_market"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_confuciusist_economy
+		icon = GFX_goal_SZC_pan_confuciusist_economy
+		cost = 2
+
+		x = -3
+		y = 3
+		relative_position_id = SZC_pan_task_ahead
+
+		prerequisite = {
+			focus = SZC_pan_social_market
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_confuciusist_economy"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_civil_rights
+		icon = GFX_goal_SZC_pan_civil_rights
+		cost = 2
+
+		x = 3
+		y = 1
+		relative_position_id = SZC_pan_task_ahead
+
+		prerequisite = {
+			focus = SZC_pan_task_ahead
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_civil_rights"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_push_healthcare
+		icon = GFX_goal_SZC_pan_confuciusist_economy
+		cost = 2
+
+		x = 3
+		y = 3
+		relative_position_id = SZC_pan_task_ahead
+
+		prerequisite = {
+			focus = SZC_pan_civil_rights
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_push_healthcare"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_empower_the_media
+		icon = GFX_goal_SZC_pan_empower_the_media
+		cost = 2
+
+		x = -1
+		y = 1
+		relative_position_id = SZC_pan_task_ahead
+
+		prerequisite = {
+			focus = SZC_pan_task_ahead
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_empower_the_media"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_democratic_education
+		icon = GFX_goal_SZC_pan_democratic_education
+		cost = 2
+
+		x = -1
+		y = 2
+		relative_position_id = SZC_pan_task_ahead
+
+		prerequisite = {
+			focus = SZC_pan_empower_the_media
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_democratic_education"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_talk_with_pan
+		icon = GFX_goal_SZC_pan_talk_with_pan
+		cost = 2
+
+		x = 1
+		y = 1
+		relative_position_id = SZC_pan_task_ahead
+
+		prerequisite = {
+			focus = SZC_pan_task_ahead
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_talk_with_pan"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_from_the_bottom
+		icon = GFX_goal_SZC_pan_from_the_bottom
+		cost = 2
+
+		x = 1
+		y = 2
+		relative_position_id = SZC_pan_task_ahead
+
+		prerequisite = {
+			focus = SZC_pan_talk_with_pan
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_from_the_bottom"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_confucianist_democracy
+		icon = GFX_goal_SZC_pan_confucianist_democracy
+		cost = 2
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_pan_task_ahead
+
+		prerequisite = {
+			focus = SZC_pan_from_the_bottom
+		}
+		prerequisite = {
+			focus = SZC_pan_democratic_education
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_confucianist_democracy"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_steady_as_she_goes
+		icon = GFX_goal_SZC_pan_steady_as_she_goes
+		cost = 2
+
+		x = -1
+		y = 4
+		relative_position_id = SZC_pan_task_ahead
+
+		prerequisite = {
+			focus = SZC_pan_confucianist_democracy
+		}
+		prerequisite = {
+			focus = SZC_pan_confuciusist_economy
+		}
+		prerequisite = {
+			focus = SZC_pan_push_healthcare
+		}
+
+		mutually_exclusive = {
+			focus = SZC_pan_to_kill_an_idea
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_steady_as_she_goes"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_for_more_years
+		icon = GFX_goal_SZC_pan_for_more_years
+		cost = 2
+
+		x = -1
+		y = 5
+		relative_position_id = SZC_pan_task_ahead
+
+		prerequisite = {
+			focus = SZC_pan_steady_as_she_goes
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_for_more_years"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_to_kill_an_idea
+		icon = GFX_goal_SZC_pan_to_kill_an_idea
+		cost = 2
+
+		x = 1
+		y = 4
+		relative_position_id = SZC_pan_task_ahead
+
+		prerequisite = {
+			focus = SZC_pan_confucianist_democracy
+		}
+		prerequisite = {
+			focus = SZC_pan_confuciusist_economy
+		}
+		prerequisite = {
+			focus = SZC_pan_push_healthcare
+		}
+
+		mutually_exclusive = {
+			focus = SZC_pan_steady_as_she_goes
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_to_kill_an_idea"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_the_end_of_CDL
+		icon = GFX_goal_SZC_pan_the_end_of_CDL
+		cost = 2
+
+		x = 1
+		y = 5
+		relative_position_id = SZC_pan_task_ahead
+
+		prerequisite = {
+			focus = SZC_pan_to_kill_an_idea
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_the_end_of_CDL"
+		}
+	}
 
 
 
