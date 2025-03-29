@@ -816,6 +816,16 @@ ideas = {
 				political_power_factor = 0.15
 			}
 		}
+		SZC_pan_CDL_supremacy_3 = {#民盟主导政坛
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_CDL_supremacy_3" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.03
+				authoritarian_democrat_drift = 0.02
+				political_power_factor = 0.05
+			}
+		}
 		SZC_pan_social_market_idea = {#社会市场
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_social_market_idea"}
 			allowed = { always = no }

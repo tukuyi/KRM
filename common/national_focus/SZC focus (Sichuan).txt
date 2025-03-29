@@ -13120,6 +13120,10 @@ focus_tree = {
 			add_ideas = {
 				SZC_pan_confucianist_democracy_idea
 			}
+			swap_ideas = {
+				remove_idea = SZC_pan_CDL_supremacy_2
+				add_idea = SZC_pan_CDL_supremacy_3
+			}
 			country_event = {
 				id = NKRsichuan.316
 			}
@@ -13242,6 +13246,9 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_the_end_of_CDL"
 			country_event = {
 				id = NKRsichuan.321
+			}
+			remove_ideas = {
+				SZC_pan_CDL_supremacy_3
 			}
 			swap_ideas = {
 				remove_idea = SZC_pan_legitimacy_17
