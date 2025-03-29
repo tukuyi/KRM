@@ -12795,8 +12795,7 @@ focus_tree = {
 		y = 16
 
 		allow_branch = {
-			# has_country_flag = NKRSZC_CDLpath_SJRpresidency
-			always = yes
+			has_country_flag = NKRSZC_CDLpath_SJRpresidency
 		}
 
 		completion_reward = {
@@ -13254,6 +13253,28 @@ focus_tree = {
 				remove_idea = SZC_pan_legitimacy_17
 				add_idea = SZC_pan_legitimacy_21
 			}
+		}
+	}
+
+	#CMP新月社你崛起吧！
+
+
+	focus = {
+		id = SZC_pan_luo_longji_presidency
+		icon = GFX_goal_SZC_pan_luo_longji_presidency
+		cost = 2
+
+		x = 4
+		y = 16
+
+		allow_branch = {
+			# has_country_flag = NKRSZC_CDLpath_LLJpresidency
+			always = yes
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_luo_longji_presidency"
+			custom_effect_tooltip = SZC_pan_luo_longji_presidency_tt
 		}
 	}
 
