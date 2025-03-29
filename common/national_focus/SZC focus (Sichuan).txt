@@ -12809,7 +12809,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_crisis_of_confidence
 		icon = GFX_goal_SZC_pan_crisis_of_confidence
-		cost = 2
+		cost = 3
 
 		x = -1
 		y = 1
@@ -12821,6 +12821,9 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_crisis_of_confidence"
+			country_event = {
+				id = NKRsichuan.307
+			}
 		}
 	}
 
@@ -12828,7 +12831,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_a_whipped_heart
 		icon = GFX_goal_SZC_pan_a_whipped_heart
-		cost = 2
+		cost = 3
 
 		x = 1
 		y = 1
@@ -12840,6 +12843,9 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_a_whipped_heart"
+			country_event = {
+				id = NKRsichuan.308
+			}
 		}
 	}
 
@@ -12847,7 +12853,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_task_ahead
 		icon = GFX_goal_SZC_pan_task_ahead
-		cost = 2
+		cost = 3
 
 		x = 0
 		y = 2
@@ -12862,6 +12868,15 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_task_ahead"
+			country_event = {
+				id = NKRsichuan.309
+			}
+			add_stability = 0.1
+			add_political_power = 100
+			swap_ideas = {
+				remove_idea = SZC_pan_CDL_supremacy
+				add_idea = SZC_pan_CDL_supremacy_2
+			}
 		}
 	}
 
@@ -12869,7 +12884,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_social_market
 		icon = GFX_goal_SZC_pan_social_market
-		cost = 2
+		cost = 4
 
 		x = -3
 		y = 1
@@ -12881,6 +12896,12 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_social_market"
+			add_ideas = {
+				SZC_pan_social_market_idea
+			}
+			country_event = {
+				id = NKRsichuan.310
+			}
 		}
 	}
 
@@ -12888,7 +12909,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_confuciusist_economy
 		icon = GFX_goal_SZC_pan_confuciusist_economy
-		cost = 2
+		cost = 4
 
 		x = -3
 		y = 3
@@ -12900,6 +12921,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_confuciusist_economy"
+			swap_ideas = {
+				remove_idea = SZC_pan_social_market_idea
+				add_idea = SZC_pan_confucius_social_market_idea
+			}
+			country_event = {
+				id = NKRsichuan.311
+			}
 		}
 	}
 
@@ -12907,7 +12935,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_civil_rights
 		icon = GFX_goal_SZC_pan_civil_rights
-		cost = 2
+		cost = 4
 
 		x = 3
 		y = 1
@@ -12919,6 +12947,26 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_civil_rights"
+			country_event = {
+				id = NKRsichuan.312
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
+			add_stability = 0.05
 		}
 	}
 
@@ -12926,7 +12974,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_push_healthcare
 		icon = GFX_goal_SZC_pan_push_healthcare
-		cost = 2
+		cost = 4
 
 		x = 3
 		y = 3
@@ -12938,6 +12986,9 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_push_healthcare"
+			add_ideas = {
+				SZC_pan_healthcare_pushing
+			}
 		}
 	}
 
@@ -12945,7 +12996,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_empower_the_media
 		icon = GFX_goal_SZC_pan_empower_the_media
-		cost = 2
+		cost = 3
 
 		x = -1
 		y = 1
@@ -12957,6 +13008,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_empower_the_media"
+			country_event = {
+				id = NKRsichuan.313
+			}
+			add_timed_idea = {
+				idea = SZC_pan_free_media_speaking
+				days = 365
+			}
 		}
 	}
 
@@ -12964,7 +13022,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_democratic_education
 		icon = GFX_goal_SZC_pan_democratic_education
-		cost = 2
+		cost = 3
 
 		x = -1
 		y = 2
@@ -12976,6 +13034,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_democratic_education"
+			add_research_slot = 1
 		}
 	}
 
@@ -12983,7 +13042,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_talk_with_pan
 		icon = GFX_goal_SZC_pan_talk_with_pan
-		cost = 2
+		cost = 3
 
 		x = 1
 		y = 1
@@ -12995,6 +13054,9 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_talk_with_pan"
+			country_event = {
+				id = NKRsichuan.314
+			}
 		}
 	}
 
@@ -13002,7 +13064,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_from_the_bottom
 		icon = GFX_goal_SZC_pan_from_the_bottom
-		cost = 2
+		cost = 3
 
 		x = 1
 		y = 2
@@ -13014,6 +13076,25 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_from_the_bottom"
+			country_event = {
+				id = NKRsichuan.315
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 		}
 	}
 
@@ -13036,6 +13117,12 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_confucianist_democracy"
+			add_ideas = {
+				SZC_pan_confucianist_democracy_idea
+			}
+			country_event = {
+				id = NKRsichuan.316
+			}
 		}
 	}
 
@@ -13065,6 +13152,9 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_steady_as_she_goes"
+			country_event = {
+				id = NKRsichuan.317
+			}
 		}
 	}
 
@@ -13084,6 +13174,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_for_more_years"
+			country_event = {
+				id = NKRsichuan.318
+			}
+			swap_ideas = {
+				remove_idea = SZC_pan_legitimacy_17
+				add_idea = SZC_pan_legitimacy_20
+			}
 		}
 	}
 
@@ -13113,6 +13210,9 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_to_kill_an_idea"
+			country_event = {
+				id = NKRsichuan.319
+			}
 		}
 	}
 
@@ -13120,11 +13220,19 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_the_end_of_CDL
 		icon = GFX_goal_SZC_pan_the_end_of_CDL
-		cost = 2
+		cost = 4
 
 		x = 1
 		y = 5
 		relative_position_id = SZC_pan_task_ahead
+
+		select_effect = {
+			
+			country_event = {
+				id = NKRsichuan.320
+				days = 10
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_pan_to_kill_an_idea
@@ -13132,6 +13240,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_the_end_of_CDL"
+			country_event = {
+				id = NKRsichuan.321
+			}
+			swap_ideas = {
+				remove_idea = SZC_pan_legitimacy_17
+				add_idea = SZC_pan_legitimacy_21
+			}
 		}
 	}
 

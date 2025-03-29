@@ -25,6 +25,7 @@ defined_text = {
 	
 	#Social Democrat
 	text = { trigger = { has_country_leader_ideology = social_democrat_democratic_socialist_subtype } localization_key = social_democrat_democratic_socialist_subtype }#民主社会主义
+	text = { trigger = { has_country_leader_ideology = social_democrat_national_socialist_subtype } localization_key = social_democrat_national_socialist_subtype }#国家社会主义
 	
 	#Social Liberal
 	text = { trigger = { has_country_leader_ideology = social_liberal_lu_xun_thought_subtype } localization_key = social_liberal_lu_xun_thought_subtype }#鲁迅思想
@@ -37,6 +38,7 @@ defined_text = {
 	#Authoritarian Democrat
 	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_new_legalism_subtype } localization_key = authoritarian_democrat_new_legalism_subtype }#威民新法家
 	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_spectral_state_subtype } localization_key = authoritarian_democrat_spectral_state_subtype }#幽灵国家
+	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_dominant_party_system_subtype } localization_key = authoritarian_democrat_dominant_party_system_subtype }#一党独大制
 
 	#Paternal Autocrat
 	text = { trigger = { has_country_leader_ideology = paternal_autocrat_ye_jianyingist_subtype } localization_key = paternal_autocrat_ye_jianyingist_subtype }#叶剑英主义

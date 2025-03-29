@@ -276,6 +276,30 @@ ideas = {
 				consumer_goods_factor = -0.1
 			}
 		}
+		SZC_pan_legitimacy_20 = {#潘文华政府公信力-第一大党
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_legitimacy_20" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.25
+				mobilization_speed = 0.15
+				compliance_gain = 0.05
+				consumer_goods_factor = -0.2
+			}
+		}
+		SZC_pan_legitimacy_21 = {#潘文华政府公信力-民社前行
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_legitimacy_21" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.05
+				mobilization_speed = 0.05
+				compliance_gain = 0.09
+				consumer_goods_factor = -0.15
+				economy_cost_factor = -0.25
+				embargo_cost_factor = -0.25
+			}
+		}
 		SZC_pan_revolutionary_army = {#四川革命军
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_revolutionary_army " }
 			picture = CHI_soldier_flag
@@ -768,6 +792,80 @@ ideas = {
 				global_building_slots_factor = 0.2
 				production_factory_efficiency_gain_factor = 0.2
 				consumer_goods_factor = -0.15
+			}
+		}
+		SZC_pan_CDL_supremacy = {#民盟主宰政坛
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_CDL_supremacy" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				stability_weekly = 0.005
+				authoritarian_democrat_drift = 0.05
+				political_power_factor = 0.25
+			}
+		}
+		SZC_pan_CDL_supremacy_2 = {#民盟控制政坛
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_CDL_supremacy_2" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.03
+				stability_weekly = 0.002
+				authoritarian_democrat_drift = 0.04
+				political_power_factor = 0.15
+			}
+		}
+		SZC_pan_social_market_idea = {#社会市场
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_social_market_idea"}
+			allowed = { always = no }
+			picture = HNN_hopes_dashed
+			modifier = {
+				global_building_slots_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = 0.05
+			}
+		}
+		SZC_pan_confucius_social_market_idea = {#儒学社会市场
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_confucius_social_market_idea"}
+			allowed = { always = no }
+			picture = HNN_hopes_dashed
+			modifier = {
+				global_building_slots_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = 0.1
+			}
+		}
+		SZC_pan_healthcare_pushing = {#推进医疗保健建设
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_healthcare_pushing"}
+			allowed = { always = no }
+			picture = HNN_hopes_dashed
+			modifier = {
+				monthly_population = 0.15
+				consumer_goods_factor = 0.05
+			}
+		}
+		SZC_pan_free_media_speaking = {#自由媒体发声
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_free_media_speaking"}
+			allowed = { always = no }
+			picture = HNN_hopes_dashed
+			modifier = {
+				stability_weekly = -0.005
+				war_support_weekly = -0.005
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		SZC_pan_confucianist_democracy_idea = {#儒式民主
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_confucianist_democracy_idea"}
+			allowed = { always = no }
+			picture = HNN_hopes_dashed
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				resistance_growth = -0.1
 			}
 		}
 	}

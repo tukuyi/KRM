@@ -12917,7 +12917,7 @@ country_event = { #元老的辞职
 			SZC_shen_junru = {
 				promote_character = social_democrat_subtype
 				promote_character = social_liberal_subtype
-				promote_character = authoritarian_democrat_subtype
+				promote_character = authoritarian_democrat_dominant_party_system_subtype
 			}
 			set_politics = {
 				ruling_party = authoritarian_democrat
@@ -13002,6 +13002,9 @@ country_event = { #就职典礼
 		complete_national_focus = SZC_pan_against_all_odds
 		complete_national_focus = SZC_pan_shen_junru_presidency
 		add_stability = 0.05
+		add_ideas = {
+			SZC_pan_CDL_supremacy
+		}
 		hidden_effect = {
 			GXC_zhang_junmai = {
 				add_temp_unit_leader_role = yes
@@ -13424,7 +13427,7 @@ country_event = { #东亚的凯撒
 	}
 }
 
-country_event = { #
+country_event = { #我们怎么办？
 	id = NKRsichuan.307
 	title = NKRsichuan.307.t
 	desc = NKRsichuan.307.d
@@ -13434,13 +13437,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#只有天知道。
 		log = "[GetLogInfo]: event NKRsichuan.307 option NKRsichuan.307.a"
 		name = NKRsichuan.307.a
 	}
 }
 
-country_event = { #
+country_event = { #痛苦的心
 	id = NKRsichuan.308
 	title = NKRsichuan.308.t
 	desc = NKRsichuan.308.d
@@ -13450,13 +13453,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#我想要做的...
 		log = "[GetLogInfo]: event NKRsichuan.308 option NKRsichuan.308.a"
 		name = NKRsichuan.308.a
 	}
 }
 
-country_event = { #
+country_event = { #前方的任务
 	id = NKRsichuan.309
 	title = NKRsichuan.309.t
 	desc = NKRsichuan.309.d
@@ -13466,13 +13469,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#但我们还见的到那一天的来临吗？
 		log = "[GetLogInfo]: event NKRsichuan.309 option NKRsichuan.309.a"
 		name = NKRsichuan.309.a
 	}
 }
 
-country_event = { #
+country_event = { #社会市场理论
 	id = NKRsichuan.310
 	title = NKRsichuan.310.t
 	desc = NKRsichuan.310.d
@@ -13482,13 +13485,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#看起来不错？
 		log = "[GetLogInfo]: event NKRsichuan.310 option NKRsichuan.310.a"
 		name = NKRsichuan.310.a
 	}
 }
 
-country_event = { #
+country_event = { #儒学与现代经济
 	id = NKRsichuan.311
 	title = NKRsichuan.311.t
 	desc = NKRsichuan.311.d
@@ -13498,13 +13501,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#奇特的组合。
 		log = "[GetLogInfo]: event NKRsichuan.311 option NKRsichuan.311.a"
 		name = NKRsichuan.311.a
 	}
 }
 
-country_event = { #
+country_event = { #告学生书
 	id = NKRsichuan.312
 	title = NKRsichuan.312.t
 	desc = NKRsichuan.312.d
@@ -13520,7 +13523,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #一篇报道
 	id = NKRsichuan.313
 	title = NKRsichuan.313.t
 	desc = NKRsichuan.313.d
@@ -13530,13 +13533,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#身为媒体人就应该像这样！
 		log = "[GetLogInfo]: event NKRsichuan.313 option NKRsichuan.313.a"
 		name = NKRsichuan.313.a
 	}
 }
 
-country_event = { #
+country_event = { #总统面见委员长
 	id = NKRsichuan.314
 	title = NKRsichuan.314.t
 	desc = NKRsichuan.314.d
@@ -13546,13 +13549,15 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#无言。
 		log = "[GetLogInfo]: event NKRsichuan.314 option NKRsichuan.314.a"
 		name = NKRsichuan.314.a
+		add_political_power = -50
+		add_stability = -0.03
 	}
 }
 
-country_event = { #
+country_event = { #新的尝试
 	id = NKRsichuan.315
 	title = NKRsichuan.315.t
 	desc = NKRsichuan.315.d
@@ -13562,13 +13567,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#民盟...？
 		log = "[GetLogInfo]: event NKRsichuan.315 option NKRsichuan.315.a"
 		name = NKRsichuan.315.a
 	}
 }
 
-country_event = { #
+country_event = { #争论
 	id = NKRsichuan.316
 	title = NKRsichuan.316.t
 	desc = NKRsichuan.316.d
@@ -13578,13 +13583,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#怎么办...
 		log = "[GetLogInfo]: event NKRsichuan.316 option NKRsichuan.3166.a"
 		name = NKRsichuan.316.a
 	}
 }
 
-country_event = { #
+country_event = { #如故
 	id = NKRsichuan.317
 	title = NKRsichuan.317.t
 	desc = NKRsichuan.317.d
@@ -13594,13 +13599,18 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#唉...
 		log = "[GetLogInfo]: event NKRsichuan.317 option NKRsichuan.317.a"
 		name = NKRsichuan.317.a
+		add_political_power = -1
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.01
+		}
 	}
 }
 
-country_event = { #
+country_event = { #中国头号大党
 	id = NKRsichuan.318
 	title = NKRsichuan.318.t
 	desc = NKRsichuan.318.d
@@ -13610,13 +13620,14 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#要向长远去看。
 		log = "[GetLogInfo]: event NKRsichuan.318 option NKRsichuan.318.a"
 		name = NKRsichuan.318.a
+		custom_effect_tooltip = NKRsichuan.318.tt
 	}
 }
 
-country_event = { #
+country_event = { #我意已决
 	id = NKRsichuan.319
 	title = NKRsichuan.319.t
 	desc = NKRsichuan.319.d
@@ -13626,13 +13637,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#那就这样吧。
 		log = "[GetLogInfo]: event NKRsichuan.319 option NKRsichuan.319.a"
 		name = NKRsichuan.319.a
 	}
 }
 
-country_event = { #
+country_event = { #解散民盟
 	id = NKRsichuan.320
 	title = NKRsichuan.320.t
 	desc = NKRsichuan.320.d
@@ -13642,13 +13653,49 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#这是必要之举。
 		log = "[GetLogInfo]: event NKRsichuan.320 option NKRsichuan.320.a"
 		name = NKRsichuan.320.a
+		set_politics = {
+			ruling_party = social_democrat
+		}
+		GXC_zhang_junmai = {
+			promote_character = social_democrat_subtype
+		}
+		set_country_leader_ideology = social_democrat_national_socialist_subtype
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.15
+		}
+		set_party_name = {
+			ideology = social_democrat
+			name = SZC_CDLDSP_party
+			long_name = SZC_CDLDSP_party_long
+		}
+		set_party_name = {
+			ideology = social_liberal
+			name = SZC_CDLYCP_party
+			long_name = SZC_CDLYCP_party_long
+		}
+		set_party_name = {
+			ideology = market_liberal
+			name = SZC_CDLCDP_party
+			long_name = SZC_CDLCDP_party_long
+		}
+		set_party_name = {
+			ideology = social_conservative
+			name = SZC_CDLPIP_party
+			long_name = SZC_CDLPIP_party_long
+		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			name = SZC_CDLPRP_party
+			long_name = SZC_CDLPRP_party_long
+		}
 	}
 }
 
-country_event = { #
+country_event = { #新总统
 	id = NKRsichuan.321
 	title = NKRsichuan.321.t
 	desc = NKRsichuan.321.d
@@ -13658,9 +13705,10 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#继续努力吧。
 		log = "[GetLogInfo]: event NKRsichuan.321 option NKRsichuan.321.a"
 		name = NKRsichuan.321.a
+		custom_effect_tooltip = NKRsichuan.321.tt
 	}
 }
 
