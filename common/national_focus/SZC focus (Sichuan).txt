@@ -13279,6 +13279,600 @@ focus_tree = {
 	}
 
 
+	focus = {
+		id = SZC_pan_prosperous_society
+		icon = GFX_goal_SZC_pan_prosperous_society
+		cost = 2
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_pan_luo_longji_presidency
+
+		prerequisite = {
+			focus = SZC_pan_luo_longji_presidency
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_prosperous_society"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_modernize_economy
+		icon = GFX_goal_SZC_pan_modernize_economy
+		cost = 2
+
+		x = -6
+		y = 1
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_prosperous_society
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_modernize_economy"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_national_construction_fund
+		icon = GFX_goal_SZC_pan_national_construction_fund
+		cost = 2
+
+		x = -7
+		y = 2
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_modernize_economy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_national_construction_fund"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_national_highway_program_llj
+		icon = GFX_goal_SZC_pan_national_highway_program_llj
+		cost = 2
+
+		x = -7
+		y = 3
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_national_construction_fund
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_national_highway_program_llj"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_poverty_alleviation_program
+		icon = GFX_goal_SZC_pan_poverty_alleviation_program
+		cost = 2
+
+		x = -7
+		y = 4
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_national_highway_program_llj
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_poverty_alleviation_program"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_technology_innovation
+		icon = GFX_goal_SZC_pan_technology_innovation
+		cost = 2
+
+		x = -5
+		y = 2
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_modernize_economy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_technology_innovation"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_invest_technical_schools
+		icon = GFX_goal_SZC_pan_invest_technical_schools
+		cost = 2
+
+		x = -5
+		y = 3
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_technology_innovation
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_invest_technical_schools"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_support_smes
+		icon = GFX_goal_SZC_pan_support_smes
+		cost = 2
+
+		x = -5
+		y = 4
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_invest_technical_schools
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_support_smes"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_humanistic_techno_capitalism
+		icon = GFX_goal_SZC_pan_humanistic_techno_capitalism
+		cost = 2
+
+		x = -6
+		y = 5
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_poverty_alleviation_program
+		}
+		prerequisite = {
+			focus = SZC_pan_support_smes
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_humanistic_techno_capitalism"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_human_rights_first
+		icon = GFX_goal_SZC_pan_human_rights_first
+		cost = 2
+
+		x = 6
+		y = 1
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_prosperous_society
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_human_rights_first"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_organic_society
+		icon = GFX_goal_SZC_pan_organic_society
+		cost = 2
+
+		x = 7
+		y = 2
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_human_rights_first
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_organic_society"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_social_security_system
+		icon = GFX_goal_SZC_pan_social_security_system
+		cost = 2
+
+		x = 7
+		y = 3
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_organic_society
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_social_security_system"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_provide_wide_education
+		icon = GFX_goal_SZC_pan_provide_wide_education
+		cost = 2
+
+		x = 7
+		y = 4
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_social_security_system
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_provide_wide_education"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_ensure_free_speech
+		icon = GFX_goal_SZC_pan_ensure_free_speech
+		cost = 2
+
+		x = 5
+		y = 2
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_human_rights_first
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_ensure_free_speech"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_independent_union
+		icon = GFX_goal_SZC_pan_independent_union
+		cost = 2
+
+		x = 5
+		y = 3
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_ensure_free_speech
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_independent_union"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_intellectual_leads
+		icon = GFX_goal_SZC_pan_intellectual_leads
+		cost = 2
+
+		x = 5
+		y = 4
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_independent_union
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_intellectual_leads"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_chinese_renaissance
+		icon = GFX_goal_SZC_pan_chinese_renaissance
+		cost = 2
+
+		x = 6
+		y = 5
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_intellectual_leads
+		}
+		prerequisite = {
+			focus = SZC_pan_provide_wide_education
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_chinese_renaissance"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_not_for_the_party_but_the_nation
+		icon = GFX_goal_SZC_pan_not_for_the_party_but_the_nation
+		cost = 2
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_prosperous_society
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_not_for_the_party_but_the_nation"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_continue_anti_corruption
+		icon = GFX_goal_SZC_pan_continue_anti_corruption
+		cost = 2
+
+		x = 3
+		y = 2
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_not_for_the_party_but_the_nation
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_continue_anti_corruption"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_expand_local_elections
+		icon = GFX_goal_SZC_pan_expand_local_elections
+		cost = 2
+
+		x = 3
+		y = 3
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_continue_anti_corruption
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_expand_local_elections"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_privatization_of_non_essential_industries
+		icon = GFX_goal_SZC_pan_privatization_of_non_essential_industries
+		cost = 2
+
+		x = 1
+		y = 3
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_continue_anti_corruption
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_privatization_of_non_essential_industries"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_rule_by_law
+		icon = GFX_goal_SZC_pan_rule_by_law
+		cost = 2
+
+		x = 2
+		y = 4
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_privatization_of_non_essential_industries
+		}
+		prerequisite = {
+			focus = SZC_pan_expand_local_elections
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_rule_by_law"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_ministry_of_defense
+		icon = GFX_goal_SZC_pan_ministry_of_defense
+		cost = 2
+
+		x = -3
+		y = 2
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_not_for_the_party_but_the_nation
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_ministry_of_defense"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_military_nationalize
+		icon = GFX_goal_SZC_pan_military_nationalize
+		cost = 2
+
+		x = -3
+		y = 3
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_ministry_of_defense
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_military_nationalize"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_peacekeeping_contingent
+		icon = GFX_goal_SZC_pan_peacekeeping_contingent
+		cost = 2
+
+		x = -1
+		y = 3
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_ministry_of_defense
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_peacekeeping_contingent"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_an_army_for_democracy
+		icon = GFX_goal_SZC_pan_an_army_for_democracy
+		cost = 2
+
+		x = -2
+		y = 4
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_peacekeeping_contingent
+		}
+		prerequisite = {
+			focus = SZC_pan_military_nationalize
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_an_army_for_democracy"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_multi_party_cooperation_concept
+		icon = GFX_goal_SZC_pan_multi_party_cooperation_concept
+		cost = 2
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_not_for_the_party_but_the_nation
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_multi_party_cooperation_concept"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_a_supervisory_committee
+		icon = GFX_goal_SZC_pan_a_supervisory_committee
+		cost = 2
+
+		x = 0
+		y = 4
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_multi_party_cooperation_concept
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_a_supervisory_committee"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_an_open_government
+		icon = GFX_goal_SZC_pan_an_open_government
+		cost = 2
+
+		x = 0
+		y = 5
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_a_supervisory_committee
+		}
+		prerequisite = {
+			focus = SZC_pan_an_army_for_democracy
+		}
+		prerequisite = {
+			focus = SZC_pan_rule_by_law
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_an_open_government"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_free_china
+		icon = GFX_goal_SZC_pan_free_china
+		cost = 2
+
+		x = 0
+		y = 6
+		relative_position_id = SZC_pan_prosperous_society
+
+		prerequisite = {
+			focus = SZC_pan_an_open_government
+		}
+		prerequisite = {
+			focus = SZC_pan_humanistic_techno_capitalism
+		}
+		prerequisite = {
+			focus = SZC_pan_chinese_renaissance
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_free_china"
+		}
+	}
+
+
 
 
 
