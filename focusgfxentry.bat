@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_pan_the_end_of_CDL
+python focusgfxentry.py SZC_pan_free_china
 pause
