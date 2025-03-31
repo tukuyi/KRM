@@ -13268,8 +13268,7 @@ focus_tree = {
 		y = 16
 
 		allow_branch = {
-			# has_country_flag = NKRSZC_CDLpath_LLJpresidency
-			always = yes
+			has_country_flag = NKRSZC_CDLpath_LLJpresidency
 		}
 
 		completion_reward = {
@@ -13664,7 +13663,7 @@ focus_tree = {
 				ideology = social_conservative
 				popularity = 0.04
 			}
-			add_political_power = 100、
+			add_political_power = 100
 			country_event = {
 				id = NKRsichuan.333
 				days = 5
@@ -14149,6 +14148,28 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.347
 			}
+		}
+	}
+
+	#正统民社的我CDL
+
+
+	focus = {
+		id = SZC_pan_zhang_lan_presidency
+		icon = GFX_goal_SZC_pan_zhang_lan_presidency
+		cost = 2
+
+		x = 4
+		y = 16
+
+		allow_branch = {
+			# has_country_flag = NKRSZC_CDLpath_ZLpresidency
+			always = yes
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_zhang_lan_presidency"
+			custom_effect_tooltip = SZC_pan_zhang_lan_presidency_tt
 		}
 	}
 
