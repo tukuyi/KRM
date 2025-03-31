@@ -25,3 +25,27 @@ SZC_open_inland = {
 	local_building_slots = 1
 	state_production_speed_buildings_factor = 0.15
 }
+
+SZC_prosperous_society_mod = {
+	icon = "GFX_decision_eng_trade_unions_support"
+	political_power_factor = SZC_PS_pp_fac_var
+	command_power_gain_mult = SZC_PS_com_pow_var
+	party_popularity_stability_factor = SZC_PS_stab_var
+	min_export = SZC_PS_export_var
+	consumer_goods_factor = SZC_PS_con_good_var
+	production_factory_max_efficiency_factor = SZC_PS_fac_max_var
+	production_factory_start_efficiency_factor = SZC_PS_fac_star_var
+	production_lack_of_resource_penalty_factor = SZC_PS_lac_res_var
+	production_speed_buildings_factor = SZC_PS_construction_var
+	research_speed_factor = SZC_PS_research_var
+	local_resources_factor = SZC_PS_loc_res_var
+	production_speed_buildings_factor = SZC_PS_prosp_build_var
+	monthly_population = SZC_PS_mon_pop_var
+}
+
+SZC_local_parliament_democracy = {
+	icon = "GFX_decision_eng_trade_unions_support"
+	state_resources_factor = 0.15
+	local_supplies = 0.1
+	enemy_operative_detection_chance_factor_over_occupied_tag = 0.10
+}

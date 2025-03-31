@@ -13282,7 +13282,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_prosperous_society
 		icon = GFX_goal_SZC_pan_prosperous_society
-		cost = 2
+		cost = 4
 
 		x = 0
 		y = 1
@@ -13294,6 +13294,28 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_prosperous_society"
+			country_event = {
+				id = NKRsichuan.322
+			}
+			custom_effect_tooltip = SZC_pan_prosperous_society_tt
+			set_variable = { SZC_PS_pp_fac_var = 0.10 }
+			set_variable = { SZC_PS_com_pow_var = 0 }
+			set_variable = { SZC_PS_stab_var = 0 }
+			set_variable = { SZC_PS_export_var = 0 }
+			set_variable = { SZC_PS_con_good_var = -0.1 }
+			set_variable = { SZC_PS_fac_max_var = 0 }
+			set_variable = { SZC_PS_fac_star_var = 0 }
+			set_variable = { SZC_PS_lac_res_var = 0 }
+			set_variable = { SZC_PS_construction_var = 0 }
+			set_variable = { SZC_PS_research_var = 0 }
+			set_variable = { SZC_PS_loc_res_var = 0 }
+			set_variable = { SZC_PS_prosp_build_var = 0 }
+			set_variable = { SZC_PS_mon_pop_var = 0 }
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = SZC_prosperous_society_mod
+				}
+			}
 		}
 	}
 
@@ -13313,6 +13335,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_modernize_economy"
+			country_event = {
+				id = NKRsichuan.323
+			}
+			custom_effect_tooltip = SZC_pan_modernize_economy_tt
+			add_to_variable = {
+				SZC_PS_fac_star_var = 0.1
+				SZC_PS_con_good_var = -0.05
+			}
 		}
 	}
 
@@ -13332,6 +13362,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_national_construction_fund"
+			custom_effect_tooltip = SZC_pan_national_construction_fund_tt
+			add_to_variable = {
+				SZC_PS_prosp_build_var = 0.2
+			}
 		}
 	}
 
@@ -13351,6 +13385,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_national_highway_program_llj"
+			add_timed_idea = {
+				idea = SZC_pan_constructing_highway
+				days = 180
+			}
+			custom_effect_tooltip = SZC_pan_national_highway_program_tt
 		}
 	}
 
@@ -13370,6 +13409,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_poverty_alleviation_program"
+			country_event = {
+				id = NKRsichuan.324
+				days = 7
+			}
+			add_to_variable = {
+				SZC_PS_mon_pop_var = 0.15
+				SZC_PS_con_good_var = 0.1
+			}
+			custom_effect_tooltip = SZC_pan_poverty_alleviation_program_tt
 		}
 	}
 
@@ -13389,6 +13437,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_technology_innovation"
+			add_to_variable = {
+				SZC_PS_research_var = 0.2
+			}
+			custom_effect_tooltip = SZC_pan_technology_innovation_tt
+			country_event = {
+				id = NKRsichuan.327
+			}
 		}
 	}
 
@@ -13408,6 +13463,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_invest_technical_schools"
+			add_to_variable = {
+				SZC_PS_research_var = 0.05
+				SZC_PS_fac_max_var = 0.05
+			}
+			custom_effect_tooltip = SZC_pan_invest_technical_schools_tt
+			country_event = {
+				id = NKRsichuan.328
+			}
 		}
 	}
 
@@ -13427,6 +13490,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_support_smes"
+			add_to_variable = {
+				SZC_PS_fac_max_var = 0.05
+				SZC_PS_lac_res_var = -0.10
+			}
+			custom_effect_tooltip = SZC_pan_support_smes_tt
+			country_event = {
+				id = NKRsichuan.329
+			}
 		}
 	}
 
@@ -13449,6 +13520,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_humanistic_techno_capitalism"
+			add_to_variable = {
+				SZC_PS_fac_max_var = 0.10
+				SZC_PS_lac_res_var = -0.10
+				SZC_PS_export_var = 0.10
+				SZC_PS_con_good_var = -0.1
+				SZC_PS_construction_var = 0.05
+				SZC_PS_loc_res_var = 0.1
+			}
+			custom_effect_tooltip = SZC_pan_humanistic_techno_capitalism_tt
+			country_event = {
+				id = NKRsichuan.330
+			}
 		}
 	}
 
@@ -13468,6 +13551,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_human_rights_first"
+			add_to_variable = {
+				SZC_PS_stab_var = 0.2
+			}
+			custom_effect_tooltip = SZC_pan_human_rights_first_tt
+			country_event = {
+				id = NKRsichuan.331
+			}
 		}
 	}
 
@@ -13487,6 +13577,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_organic_society"
+			add_to_variable = {
+				SZC_PS_pp_fac_var = 0.15
+			}
+			custom_effect_tooltip = SZC_pan_organic_society_tt
+			country_event = { id = NKRsichuan.332 }
 		}
 	}
 
@@ -13506,6 +13601,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_social_security_system"
+			add_to_variable = {
+				SZC_PS_mon_pop_var = 0.1
+				SZC_PS_con_good_var = 0.07
+			}
+			custom_effect_tooltip = SZC_pan_social_security_system_tt
 		}
 	}
 
@@ -13525,6 +13625,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_provide_wide_education"
+			add_to_variable = {
+				SZC_PS_research_var = 0.15
+			}
+			custom_effect_tooltip = SZC_pan_provide_wide_education_tt
 		}
 	}
 
@@ -13544,6 +13648,27 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_ensure_free_speech"
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.04
+			}
+			add_political_power = 100、
+			country_event = {
+				id = NKRsichuan.333
+				days = 5
+			}
 		}
 	}
 
@@ -13563,6 +13688,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_independent_union"
+			add_to_variable = {
+				SZC_PS_fac_max_var = 0.05
+				SZC_PS_con_good_var = 0.05
+			}
+			custom_effect_tooltip = SZC_pan_independent_union_tt
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.05
+			}
+			country_event = {
+				id = NKRsichuan.334
+			}
 		}
 	}
 
@@ -13582,6 +13719,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_intellectual_leads"
+			add_research_slot = 1
+			country_event = {
+				id = NKRsichuan.335
+			}
 		}
 	}
 
@@ -13604,6 +13745,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_chinese_renaissance"
+			add_ideas = {
+				SZC_pan_chinese_renaissance_idea
+			}
+			country_event = {
+				id = NKRsichuan.336
+			}
 		}
 	}
 
@@ -13623,6 +13770,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_not_for_the_party_but_the_nation"
+			add_to_variable = {
+				SZC_PS_pp_fac_var = -0.2
+			}
+			custom_effect_tooltip = SZC_pan_not_for_the_party_but_the_nation_tt
+			country_event = {
+				id = NKRsichuan.337
+			}
 		}
 	}
 
@@ -13642,6 +13796,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_continue_anti_corruption"
+			add_timed_idea = {
+				idea = SZC_pan_anti_corruption_action
+				days = 730
+			}
 		}
 	}
 
@@ -13661,6 +13819,44 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_expand_local_elections"
+			
+			every_owned_state = {
+				limit = { has_state_flag = sichuan_province_state }
+				add_dynamic_modifier = {
+					modifier = SZC_local_parliament_democracy
+					scope = THIS
+				}
+			}
+			activate_targeted_decision = { target = 594 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 325 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 1051 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 602 decision = SZC_expand_local_parliament_democracy_decision }
+			# activate_targeted_decision = { target = 605 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 1048 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 1044 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 606 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 596 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 613 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 597 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 1059 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 608 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 1072 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 799 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 283 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 348 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 604 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 617 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 621 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 612 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 716 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 886 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 714 decision = SZC_expand_local_parliament_democracy_decision }
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.338
+					days = 5
+				}
+			}
 		}
 	}
 
@@ -13680,6 +13876,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_privatization_of_non_essential_industries"
+			add_timed_idea = {
+				idea = SZC_pan_wealth_from_privitzation
+				days = 365
+			}
+			country_event = {
+				id = NKRsichuan.339
+			}
 		}
 	}
 
@@ -13702,6 +13905,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_rule_by_law"
+			add_to_variable = {
+				SZC_PS_pp_fac_var = 0.1
+			}
+			custom_effect_tooltip = SZC_pan_rule_by_law_tt
+			country_event = {
+				id = NKRsichuan.340
+			}
 		}
 	}
 
@@ -13721,6 +13931,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_ministry_of_defense"
+			add_to_variable = {
+				SZC_PS_com_pow_var = 0.25
+			}
+			custom_effect_tooltip = SZC_pan_ministry_of_defense_tt
+			country_event = {
+				id =  NKRsichuan.341
+			}
 		}
 	}
 
@@ -13740,6 +13957,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_military_nationalize"
+			add_to_variable = {
+				SZC_PS_com_pow_var = 0.15
+			}
+			custom_effect_tooltip = SZC_pan_military_nationalize_tt
+			country_event = {
+				id = NKRsichuan.342
+			}
 		}
 	}
 
@@ -13759,6 +13983,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_peacekeeping_contingent"
+			add_ideas = {
+				SZC_pan_chinese_peacekeeper 
+			}
+			country_event = {
+				id = NKRsichuan.343
+			}
 		}
 	}
 
@@ -13781,6 +14011,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_an_army_for_democracy"
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = SZC_NDA_party_long
+				name = SZC_NDA_party
+			}
+			add_ideas = {
+				SZC_pan_democratic_guofangjun
+			}
 		}
 	}
 
@@ -13800,6 +14038,26 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_multi_party_cooperation_concept"
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.05
+			}
+			add_political_power = 50
+			country_event = {
+				id = NKRsichuan.344
+			}
 		}
 	}
 
@@ -13819,6 +14077,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_a_supervisory_committee"
+			add_stability = 0.15
+			add_to_variable = {
+				SZC_PS_stab_var = 0.2
+			}
+			custom_effect_tooltip = SZC_pan_a_supervisory_committee_tt
+			country_event = {
+				id = NKRsichuan.345
+			}
 		}
 	}
 
@@ -13844,6 +14110,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_an_open_government"
+			swap_ideas = {
+				remove_idea = SZC_pan_legitimacy_17
+				add_idea = SZC_pan_legitimacy_22
+			}
+			country_event = {
+				id = NKRsichuan.346
+			}
 		}
 	}
 
@@ -13869,6 +14142,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_free_china"
+			swap_ideas = {
+				remove_idea = SZC_pan_legitimacy_22
+				add_idea = SZC_pan_legitimacy_23
+			}
+			country_event = {
+				id = NKRsichuan.347
+			}
 		}
 	}
 

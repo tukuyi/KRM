@@ -300,6 +300,32 @@ ideas = {
 				embargo_cost_factor = -0.25
 			}
 		}
+		SZC_pan_legitimacy_22 = {#潘文华政府公信力-廉洁政府
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_legitimacy_22" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.10
+				mobilization_speed = 0.10
+				compliance_gain = 0.08
+				war_support_factor = -0.1
+				consumer_goods_factor = -0.15
+				trade_opinion_factor = 0.1
+			}
+		}
+		SZC_pan_legitimacy_23 = {#潘文华政府公信力-自由繁荣
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_legitimacy_23" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.15
+				mobilization_speed = 0.15
+				compliance_gain = 0.10
+				war_support_factor = -0.15
+				consumer_goods_factor = -0.15
+				trade_opinion_factor = 0.2
+			}
+		}
 		SZC_pan_revolutionary_army = {#四川革命军
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_revolutionary_army " }
 			picture = CHI_soldier_flag
@@ -878,6 +904,44 @@ ideas = {
 				resistance_growth = -0.1
 			}
 		}
+		SZC_pan_chinese_renaissance_idea = {#中华文艺复兴
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_chinese_renaissance_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				research_speed_factor = 0.10
+			}
+		}
+		SZC_pan_wealth_from_privitzation = {#私有化之果
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_chinese_renaissance_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.25
+			}
+		}
+		SZC_pan_chinese_peacekeeper = {#中华和平卫士
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_chinese_peacekeeper" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				send_volunteer_size = 24
+				send_volunteers_tension = -100
+			}
+		}
+		SZC_pan_democratic_guofangjun = {#民主国防军
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_democratic_guofangjun" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.2
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.1
+			}
+		}
 	}
+
 }
 
