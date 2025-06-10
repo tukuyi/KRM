@@ -14199,30 +14199,6 @@ focus_tree = {
 
 
 	focus = {
-		id = SZC_pan_social_democrat_with_chinese_characteristic
-		icon = GFX_goal_SZC_pan_social_democrat_with_chinese_characteristic
-		cost = 2
-
-		x = -2
-		y = 1
-		
-		prerequisite = {
-			focus = SZC_pan_zhang_lan_presidency
-		}
-
-		mutually_exclusive = {
-			focus = SZC_pan_restore_centrist_marxism
-		}
-
-		relative_position_id = SZC_pan_zhang_lan_presidency
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_pan_social_democrat_with_chinese_characteristic"
-		}
-	}
-
-
-	focus = {
 		id = SZC_pan_centrist_supremacy
 		icon = GFX_goal_SZC_pan_centrist_supremacy
 		cost = 2
@@ -14730,46 +14706,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_our_finest_hours"
-		}
-	}
-
-
-	focus = {
-		id = SZC_pan_an_army_for_peace
-		icon = GFX_goal_SZC_pan_an_army_for_peace
-		cost = 2
-
-		x = -6
-		y = 2
-		
-		prerequisite = {
-			focus = SZC_pan_stop_army_overstep
-		}
-
-		relative_position_id = SZC_pan_zhang_lan_presidency
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_pan_an_army_for_peace"
-		}
-	}
-
-
-	focus = {
-		id = SZC_pan_special_RND
-		icon = GFX_goal_SZC_pan_special_RND
-		cost = 2
-
-		x = -6
-		y = 3
-		
-		prerequisite = {
-			focus = SZC_pan_an_army_for_peace
-		}
-
-		relative_position_id = SZC_pan_zhang_lan_presidency
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_pan_aspecial_RND
 		}
 	}
 
