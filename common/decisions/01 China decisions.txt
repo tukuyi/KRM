@@ -3620,6 +3620,10 @@ chinese_unification = {
 				limit = { tag = SHC }
 				has_country_flag = zong_gong_hui_victory
 			}
+			else_if = {
+				limit = { tag = YUN }
+				has_country_leader = { character = YUN_zhu_de }
+			}
 		}
 
 		targets = { CSP }
