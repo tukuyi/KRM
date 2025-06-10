@@ -14186,10 +14186,117 @@ focus_tree = {
 			focus = SZC_pan_zhang_lan_presidency
 		}
 
+		mutually_exclusive = {
+			focus = SZC_pan_restore_centrist_marxism
+		}
+
 		relative_position_id = SZC_pan_zhang_lan_presidency
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_social_democrat_with_chinese_characteristic"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_social_democrat_with_chinese_characteristic
+		icon = GFX_goal_SZC_pan_social_democrat_with_chinese_characteristic
+		cost = 2
+
+		x = -2
+		y = 1
+		
+		prerequisite = {
+			focus = SZC_pan_zhang_lan_presidency
+		}
+
+		mutually_exclusive = {
+			focus = SZC_pan_restore_centrist_marxism
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_social_democrat_with_chinese_characteristic"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_centrist_supremacy
+		icon = GFX_goal_SZC_pan_centrist_supremacy
+		cost = 2
+
+		x = -4
+		y = 2
+		
+		prerequisite = {
+			focus = SZC_pan_social_democrat_with_chinese_characteristic
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_centrist_supremacy"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_work_with_ycp
+		icon = GFX_goal_SZC_pan_work_with_ycp
+		cost = 2
+
+		x = -4
+		y = 3
+		
+		prerequisite = {
+			focus = SZC_pan_centrist_supremacy
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_work_with_ycp"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_continue_our_work
+		icon = GFX_goal_SZC_pan_continue_our_work
+
+		x = -2
+		y = 2
+		
+		prerequisite = {
+			focus = SZC_pan_social_democrat_with_chinese_characteristic
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_continue_our_work"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_well_organized
+		icon = GFX_goal_SZC_pan_well_organized
+		cost = 2
+
+		x = -2
+		y = 3
+		
+		prerequisite = {
+			focus = SZC_pan_continue_our_work
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_panwell_organized"
 		}
 	}
 
@@ -14206,10 +14313,463 @@ focus_tree = {
 			focus = SZC_pan_zhang_lan_presidency
 		}
 
+		mutually_exclusive = {
+			focus = SZC_pan_social_democrat_with_chinese_characteristic
+		}
+
 		relative_position_id = SZC_pan_zhang_lan_presidency
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_restore_centrist_marxism"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_new_line_for_the_party
+		icon = GFX_goal_SZC_pan_new_line_for_the_party
+		cost = 2
+
+		x = 4
+		y = 2
+		
+		prerequisite = {
+			focus = SZC_pan_restore_centrist_marxism
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_new_line_for_the_party"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_work_with_kmt
+		icon = GFX_goal_SZC_pan_work_with_kmt
+		cost = 2
+
+		x = 4
+		y = 3
+		
+		prerequisite = {
+			focus = SZC_pan_new_line_for_the_party
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_work_with_kmt"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_ensure_party_united
+		icon = GFX_goal_SZC_pan_ensure_party_united
+
+		x = 2
+		y = 2
+		
+		prerequisite = {
+			focus = SZC_pan_restore_centrist_marxism
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_ensure_party_united"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_so_let_it_be
+		icon = GFX_goal_SZC_pan_so_let_it_be
+		cost = 2
+
+		x = 2
+		y = 3
+		
+		prerequisite = {
+			focus = SZC_pan_ensure_party_united
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_so_let_it_be"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_act_chinese_future
+		icon = GFX_goal_SZC_pan_act_chinese_future
+		cost = 2
+
+		x = -3
+		y = 4
+		
+		prerequisite = {
+			focus = SZC_pan_work_with_ycp
+			focus = SZC_pan_work_with_kmt
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_well_organized
+			focus = SZC_pan_so_let_it_be
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_act_chinese_future"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_act_workers_right
+		icon = GFX_goal_SZC_pan_act_workers_right
+		cost = 2
+
+		x = 0
+		y = 4
+		
+		prerequisite = {
+			focus = SZC_pan_work_with_ycp
+			focus = SZC_pan_work_with_kmt
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_well_organized
+			focus = SZC_pan_so_let_it_be
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_act_workers_right"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_act_for_all
+		icon = GFX_goal_SZC_pan_act_for_all
+		cost = 2
+
+		x = 3
+		y = 4
+		
+		prerequisite = {
+			focus = SZC_pan_work_with_ycp
+			focus = SZC_pan_work_with_kmt
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_well_organized
+			focus = SZC_pan_so_let_it_be
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_act_for_all"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_act_new_economy
+		icon = GFX_goal_SZC_pan_act_new_economy
+		cost = 2
+
+		x = -2
+		y = 5
+		
+		prerequisite = {
+			focus = SZC_pan_work_with_ycp
+			focus = SZC_pan_work_with_kmt
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_well_organized
+			focus = SZC_pan_so_let_it_be
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_act_new_economy"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_act_election_for_people
+		icon = GFX_goal_SZC_pan_act_election_for_people
+		cost = 2
+
+		x = 2
+		y = 5
+		
+		prerequisite = {
+			focus = SZC_pan_work_with_ycp
+			focus = SZC_pan_work_with_kmt
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_well_organized
+			focus = SZC_pan_so_let_it_be
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_act_election_for_people"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_mr_democracy_victorious
+		icon = GFX_goal_SZC_pan_mr_democracy_victorious
+		cost = 2
+
+		x = -1
+		y = 6
+
+		available = {
+			has_completed_focus = SZC_pan_social_democrat_with_chinese_characteristic
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_act_election_for_people
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_act_workers_right
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_act_for_all
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_act_new_economy
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_act_chinese_future
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_mr_democracy_victorious"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_kautskys_dream
+		icon = GFX_goal_SZC_pan_kautskys_dream
+		cost = 2
+
+		x = 1
+		y = 6
+
+		available = {
+			has_completed_focus = SZC_pan_restore_centrist_marxism
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_act_election_for_people
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_act_workers_right
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_act_for_all
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_act_new_economy
+		}
+		
+		prerequisite = {
+			focus = SZC_pan_act_chinese_future
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_kautskys_dream"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_stop_army_overstep
+		icon = GFX_goal_SZC_pan_stop_army_overstep
+		cost = 2
+
+		x = -6
+		y = 1
+		
+		prerequisite = {
+			focus = SZC_pan_zhang_lan_presidency
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_stop_army_overstep"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_an_army_for_peace
+		icon = GFX_goal_SZC_pan_an_army_for_peace
+		cost = 2
+
+		x = -6
+		y = 2
+		
+		prerequisite = {
+			focus = SZC_pan_stop_army_overstep
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_an_army_for_peace"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_special_RND
+		icon = GFX_goal_SZC_pan_special_RND
+		cost = 2
+
+		x = -6
+		y = 3
+		
+		prerequisite = {
+			focus = SZC_pan_an_army_for_peace
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_aspecial_RND"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_east_asia_optimism
+		icon = GFX_goal_SZC_pan_east_asia_optimism
+		cost = 2
+
+		x = 6
+		y = 1
+		
+		prerequisite = {
+			focus = SZC_pan_zhang_lan_presidency
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_east_asia_optimism"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_dream_of_a_federation
+		icon = GFX_goal_SZC_pan_dream_of_a_federation
+		cost = 2
+
+		x = 6
+		y = 2
+		
+		prerequisite = {
+			focus = SZC_pan_east_asia_optimism
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_dream_of_a_federation"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_our_finest_hours
+		icon = GFX_goal_SZC_pan_our_finest_hours
+		cost = 2
+
+		x = 6
+		y = 3
+		
+		prerequisite = {
+			focus = SZC_pan_dream_of_a_federation
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_our_finest_hours"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_an_army_for_peace
+		icon = GFX_goal_SZC_pan_an_army_for_peace
+		cost = 2
+
+		x = -6
+		y = 2
+		
+		prerequisite = {
+			focus = SZC_pan_stop_army_overstep
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_an_army_for_peace"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_special_RND
+		icon = GFX_goal_SZC_pan_special_RND
+		cost = 2
+
+		x = -6
+		y = 3
+		
+		prerequisite = {
+			focus = SZC_pan_an_army_for_peace
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_aspecial_RND
 		}
 	}
 
