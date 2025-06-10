@@ -14174,6 +14174,46 @@ focus_tree = {
 	}
 
 
+	focus = {
+		id = SZC_pan_social_democrat_with_chinese_characteristic
+		icon = GFX_goal_SZC_pan_social_democrat_with_chinese_characteristic
+		cost = 2
+
+		x = -2
+		y = 1
+		
+		prerequisite = {
+			focus = SZC_pan_zhang_lan_presidency
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_social_democrat_with_chinese_characteristic"
+		}
+	}
+
+
+	focus = {
+		id = SZC_pan_restore_centrist_marxism
+		icon = GFX_goal_SZC_pan_restore_centrist_marxism
+		cost = 2
+
+		x = 2
+		y = 1
+		
+		prerequisite = {
+			focus = SZC_pan_zhang_lan_presidency
+		}
+
+		relative_position_id = SZC_pan_zhang_lan_presidency
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_restore_centrist_marxism"
+		}
+	}
+
+
 
 
 
