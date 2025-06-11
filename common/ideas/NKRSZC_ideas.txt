@@ -326,6 +326,33 @@ ideas = {
 				trade_opinion_factor = 0.2
 			}
 		}
+		SZC_pan_legitimacy_24 = {#潘文华政府公信力-东亚社会民主
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_legitimacy_24" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.20
+				mobilization_speed = 0.15
+				compliance_gain = 0.08
+				war_support_factor = -0.1
+				consumer_goods_factor = -0.05
+				trade_opinion_factor = 0.2
+			}
+		}
+		SZC_pan_legitimacy_25 = {#潘文华政府公信力-马克思的愿景
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_legitimacy_25" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.10
+				mobilization_speed = 0.10
+				compliance_gain = 0.12
+				war_support_factor = -0.25
+				consumer_goods_factor = -0.1
+				trade_opinion_factor = 0.2
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
 		SZC_pan_revolutionary_army = {#四川革命军
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_revolutionary_army " }
 			picture = CHI_soldier_flag
@@ -939,6 +966,58 @@ ideas = {
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
 				army_speed_factor = 0.1
+			}
+		}
+		SZC_pan_chinese_future_act_idea = {#中华未来法案
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_chinese_future_act_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.15
+			}
+		}
+		SZC_pan_healthcare_for_all = {#全民医保
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_healthcare_for_all"}
+			allowed = { always = no }
+			picture = HNN_hopes_dashed
+			modifier = {
+				monthly_population = 0.25
+				consumer_goods_factor = 0.1
+			}
+		}
+		SZC_pan_black_and_white_cats = {#黑猫白猫论
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_black_and_white_cats" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				production_oil_factor = 0.15
+				local_resources_factor = 0.10
+				consumer_goods_expected_value = 0.10
+				production_speed_buildings_factor = 0.15
+				line_change_production_efficiency_factor = 0.10
+				production_factory_max_efficiency_factor = -0.05	
+				production_factory_start_efficiency_factor = 0.10
+				production_lack_of_resource_penalty_factor = -0.15
+			}
+		}
+		SZC_pan_peace_keeper = {#社会民主的和平卫士
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_peacekeeper" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.1
+				army_defence_factor = 0.25
+				send_volunteer_size = 12
+				send_volunteers_tension = -50
+			}
+		}
+		SZC_pan_panasian_transfers = {#泛亚转移支付
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_pan_panasian_transfers" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_expected_value = 0.20
+				stability_factor = -0.2
 			}
 		}
 	}

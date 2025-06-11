@@ -14194,6 +14194,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_social_democrat_with_chinese_characteristic"
+			country_event = {
+				id = NKRsichuan.348
+			}
+			custom_effect_tooltip = SZC_pan_social_democrat_with_chinese_characteristic_tt
 		}
 	}
 
@@ -14214,6 +14218,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_centrist_supremacy"
+			add_stability = 0.05
+			add_political_power = 100
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.05
+			}
 		}
 	}
 
@@ -14234,6 +14244,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_work_with_ycp"
+			country_event = {
+				id = NKRsichuan.349
+			}
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			add_to_coalition = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 		}
 	}
 
@@ -14253,6 +14272,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_continue_our_work"
+			country_event = {
+				id = NKRsichuan.350
+			}
 		}
 	}
 
@@ -14273,6 +14295,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_panwell_organized"
+			country_event = {
+				id = NKRsichuan.351
+			}
 		}
 	}
 
@@ -14297,6 +14322,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_restore_centrist_marxism"
+			country_event = {
+				id = NKRsichuan.352
+			}
+			custom_effect_tooltip = SZC_pan_restore_centrist_marxism_tt
+			set_country_leader_ideology = social_democrat_centrist_marxist_subtype
 		}
 	}
 
@@ -14317,6 +14347,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_new_line_for_the_party"
+			add_stability = -0.05
+			add_political_power = -50
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.04
+			}
 		}
 	}
 
@@ -14337,6 +14373,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_work_with_kmt"
+			country_event = {
+				id = NKRsichuan.353
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.03
+			}
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			add_to_coalition = yes
 		}
 	}
 
@@ -14356,6 +14401,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_ensure_party_united"
+			country_event = {
+				id = NKRsichuan.354
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 		}
 	}
 
@@ -14376,6 +14432,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_so_let_it_be"
+			country_event = {
+				id = NKRsichuan.355
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 		}
 	}
 
@@ -14402,6 +14469,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_act_chinese_future"
+			add_research_slot = 1
+			add_ideas = {
+				SZC_pan_chinese_future_act_idea
+			}
+			country_event = {
+				id = NKRsichuan.356
+				days = 45
+			}
 		}
 	}
 
@@ -14428,6 +14503,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_act_workers_right"
+			country_event = {
+				id = NKRsichuan.357
+			}
+			add_ideas = {
+				SZC_pan_workers_right
+			}
 		}
 	}
 
@@ -14454,6 +14535,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_act_for_all"
+			country_event = {
+				id = NKRsichuan.358
+			}
+			add_ideas = {
+				SZC_pan_healthcare_for_all
+			}
 		}
 	}
 
@@ -14480,6 +14567,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_act_new_economy"
+			country_event = {
+				id = NKRsichuan.359
+			}
+			add_ideas = {
+				SZC_pan_black_and_white_cats
+			}
 		}
 	}
 
@@ -14506,6 +14599,41 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_act_election_for_people"
+			country_event = {
+				id = NKRsichuan.360
+			}
+			
+			every_owned_state = {
+				limit = { has_state_flag = sichuan_province_state }
+				add_dynamic_modifier = {
+					modifier = SZC_local_parliament_democracy
+					scope = THIS
+				}
+			}
+			activate_targeted_decision = { target = 594 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 325 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 1051 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 602 decision = SZC_expand_local_parliament_democracy_decision }
+			# activate_targeted_decision = { target = 605 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 1048 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 1044 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 606 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 596 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 613 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 597 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 1059 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 608 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 1072 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 799 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 283 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 348 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 604 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 617 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 621 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 612 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 716 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 886 decision = SZC_expand_local_parliament_democracy_decision }
+			activate_targeted_decision = { target = 714 decision = SZC_expand_local_parliament_democracy_decision }
 		}
 	}
 
@@ -14546,6 +14674,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_mr_democracy_victorious"
+			country_event = {
+				id = NKRsichuan.361
+			}
+			swap_ideas = {
+				remove_idea = SZC_pan_legitimacy_17
+				add_idea = SZC_pan_legitimacy_24
+			}
 		}
 	}
 
@@ -14586,6 +14721,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_kautskys_dream"
+			country_event = {
+				id = NKRsichuan.362
+			}
+			swap_ideas = {
+				remove_idea = SZC_pan_legitimacy_17
+				add_idea = SZC_pan_legitimacy_25
+			}
 		}
 	}
 
@@ -14606,6 +14748,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_stop_army_overstep"
+			country_event = {
+				id = NKRsichuan.363
+			}
 		}
 	}
 
@@ -14626,6 +14771,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_an_army_for_peace"
+			country_event = {
+				id = NKRsichuan.364
+			}
+			add_ideas = {
+				SZC_pan_peace_keeper
+			}
 		}
 	}
 
@@ -14646,6 +14797,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_aspecial_RND"
+			add_research_slot = 1
+			add_breakthrough_points = 3
 		}
 	}
 
@@ -14666,6 +14819,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_east_asia_optimism"
+			country_event = {
+				id = NKRsichuan.365
+			}
+			add_stability = 0.05
+			add_ideas = {
+				SZC_pan_panasian_transfers
+			}
 		}
 	}
 
@@ -14686,6 +14846,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_dream_of_a_federation"
+			#没做，外交线弄了再说
 		}
 	}
 
@@ -14706,6 +14867,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_our_finest_hours"
+			#没做，外交线弄了再说
 		}
 	}
 
