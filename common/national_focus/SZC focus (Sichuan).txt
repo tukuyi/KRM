@@ -16825,6 +16825,11 @@ focus_tree = {
 		}
 	}
 
+	inlay_window = {
+		id = SZC_YCP_inlay_window
+		position = { x = 630 y = 270 }
+	}
+
 
 	default = no
 	continuous_focus_position = { x = 2350 y = 850 }
@@ -16856,6 +16861,116 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_statism_arise"
 			custom_effect_tooltip = SZC_YCP_statism_arise_tooltip
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_stablize_the_status
+		icon = GFX_goal_SZC_YCP_stablize_the_status
+		cost = 2
+
+		x = -1
+		y = 1
+		relative_position_id = SZC_YCP_statism_arise
+
+		prerequisite = {
+			focus = SZC_YCP_statism_arise
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_stablize_the_status"
+			remove_ideas = {
+				SZC_yiguandao_revolt
+			}
+			remove_ideas = { SZC_after_liu_2 }
+			country_lock_all_division_template = no
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.400
+					days = 3
+				}
+				country_event = {
+					id = NKRsichuan.401
+					days = 2
+				}
+			}
+			country_event = {
+				id = NKRsichuan.402
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_rally_members
+		icon = GFX_goal_SZC_YCP_rally_members
+		cost = 2
+
+		x = 1
+		y = 1
+		relative_position_id = SZC_YCP_statism_arise
+
+		prerequisite = {
+			focus = SZC_YCP_statism_arise
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_rally_members"
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = 100
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.15
+			}
+			country_event = {
+				id = NKRsichuan.403
+			}
+			hidden_effect = {
+				id = NKRsichuan.404
+				days = 2
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_the_ninth_congress_of_YCP
+		icon = GFX_goal_SZC_YCP_the_ninth_congress_of_YCP
+		cost = 10
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_YCP_statism_arise
+
+		prerequisite = {
+			focus = SZC_YCP_stablize_the_status
+		}
+		prerequisite = {
+			focus = SZC_YCP_rally_members
+		}
+		select_effect = {
+			country_event = {
+				id = NKRsichuan.31
+				days = 1
+			}
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_the_ninth_congress_of_YCP"
+			SZC_improve_YCP_legitimacy_effect = yes
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_technique_of_relief
+		icon = GFX_goal_SZC_YCP_technique_of_relief
+		cost = 3
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_YCP_statism_arise
+
+		prerequisite = {
+			focus = SZC_YCP_the_ninth_congress_of_YCP
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_technique_of_relief"
 		}
 	}
 

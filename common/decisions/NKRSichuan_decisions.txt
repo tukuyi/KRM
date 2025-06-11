@@ -177,6 +177,20 @@ SZC_debug_category = {
 			}
 		}
 	}
+	SZC_DEBUG_YCPpath_tangtakeover_decision = {
+		allowed = { tag = SZC }
+		visible = {
+			is_debug = yes
+		}
+		icon = GFX_decision_lkmt_flag
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_DEBUG_YCPpath_tangtakeover_decision target: [From.GetName]"
+			set_politics = {
+				ruling_party = paternal_autocrat
+			}
+			country_event = NKRsichuan.30
+		}
+	}
 }
 
 SZC_grand_sichuan_plan_category = {

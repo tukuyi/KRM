@@ -1,7 +1,7 @@
 SZC_CDL_power_balance = {
 	initial_value = 0.00
-	left_side = SHX_PWH_winning_side
-	right_side = SHX_CDL_winning_side
+	left_side = SZC_PWH_winning_side
+	right_side = SZC_CDL_winning_side
 	decision_category = SZC_CDL_balance_of_power_category
 
 	#潘文华/军方不满侧
@@ -97,6 +97,156 @@ SZC_CDL_power_balance = {
 					id = SZC_CDL_power_balance
 					side = SZC_bop_CDL_winning_side
 					gfx = GFX_bop_SZC_CDL_side
+				}
+			}
+		}
+	}
+}
+
+
+SZC_YCP_power_balance = {
+	initial_value = 0.00
+	left_side = SZC_li_winning_side
+	right_side = SZC_zeng_winning_side
+	decision_category = SZC_YCP_balance_of_power_category
+
+	#神社
+	side = {
+		id = SZC_bop_li_winning_side
+		icon = GFX_bop_SZC_li_side
+
+		range = {
+			id = SZC_bop_li_bit_stronger
+			min = -0.15
+			max = -0.00
+			modifier = {
+			}
+			on_activate = {
+
+			}
+			on_deactivate = {
+
+			}
+		}
+
+		range = {
+			id = SZC_bop_li_stronger
+			min = -0.45
+			max = -0.15
+			modifier = {
+			}
+			on_activate = {
+
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = SZC_bop_li_much_stronger
+			min = -0.85
+			max = -0.45
+			modifier = {
+			}
+			on_activate = {
+
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = SZC_bop_li_supremacy
+			min = -1.00
+			max = -0.85
+			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = SZC_YCP_power_balance
+					side = SZC_bop_li_winning_side
+					gfx = GFX_bop_SZC_li_improved_side
+				}
+
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = SZC_CDL_power_balance
+					side = SZC_bop_li_winning_side
+					gfx = GFX_bop_SZC_li_side
+				}
+			}
+		}
+	}
+
+	#行社
+	side = {
+		id = SZC_bop_zeng_winning_side
+		icon = GFX_bop_SZC_zeng_side
+
+		
+		id = SZC_bop_zeng_winning_side
+		icon = GFX_bop_SZC_zeng_side
+
+		range = {
+			id = SZC_bop_zeng_bit_stronger
+			min = 0.15
+			max = 0.00
+			modifier = {
+			}
+			on_activate = {
+
+			}
+			on_deactivate = {
+
+			}
+		}
+
+		range = {
+			id = SZC_bop_zeng_stronger
+			min = 0.45
+			max = 0.15
+			modifier = {
+			}
+			on_activate = {
+
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = SZC_bop_zeng_much_stronger
+			min = 0.85
+			max = 0.45
+			modifier = {
+			}
+			on_activate = {
+
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = SZC_bop_zeng_supremacy
+			min = 1.00
+			max = 0.85
+			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = SZC_YCP_power_balance
+					side = SZC_bop_zeng_winning_side
+					gfx = GFX_bop_SZC_zeng_improved_side
+				}
+
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = SZC_CDL_power_balance
+					side = SZC_bop_zeng_winning_side
+					gfx = GFX_bop_SZC_zeng_side
 				}
 			}
 		}

@@ -348,5 +348,51 @@ spriteTypes = {
 		name = "GFX_china_southern_zhili_alternative_2"
 		texturefile = "gfx/interface/gui/china/china_southern_zhili_alternative_2.png"
 	}
+
+
+	progressbartype = {
+		name = "GFX_SZC_YCP_lizeng_Progressbar"
+		textureFile1 = "gfx/interface/gui/SZC_YCP_lizeng_Progressbar_li.png"
+		textureFile2 = "gfx/interface/gui/SZC_YCP_lizeng_Progressbar_zeng.png"
+		size = { x = 496 y = 280 } 
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+		steps = 200
+	}
+	
+	spriteType = {
+		name = "GFX_SZC_YCP_lizeng_Progressbar_mid"
+		texturefile = "gfx/interface/gui/SZC_YCP_lizeng_Progressbar_mid.png"
+	}
+	
+	spriteType = {
+		name = "GFX_SZC_YCP_lizeng_Progressbar_li"
+		texturefile = "gfx/interface/gui/SZC_YCP_lizeng_Progressbar_li.png"
+	}
+	
+	spriteType = {
+		name = "GFX_SZC_YCP_lizeng_Progressbar_li_stronger"
+		texturefile = "gfx/interface/gui/SZC_YCP_lizeng_Progressbar_li_stronger.png"
+	}
+	
+	spriteType = {
+		name = "GFX_SZC_YCP_lizeng_Progressbar_li_much_stronger"
+		texturefile = "gfx/interface/gui/SZC_YCP_lizeng_Progressbar_li_much_stronger.png"
+	}
+	
+	spriteType = {
+		name = "GFX_SZC_YCP_lizeng_Progressbar_zeng"
+		texturefile = "gfx/interface/gui/SZC_YCP_lizeng_Progressbar_zeng.png"
+	}
+	
+	spriteType = {
+		name = "GFX_SZC_YCP_lizeng_Progressbar_zeng_stronger"
+		texturefile = "gfx/interface/gui/SZC_YCP_lizeng_Progressbar_zeng_stronger.png"
+	}
+	
+	spriteType = {
+		name = "GFX_SZC_YCP_lizeng_Progressbar_zeng_much_stronger"
+		texturefile = "gfx/interface/gui/SZC_YCP_lizeng_Progressbar_zeng_much_stronger.png"
+	}
 }
 

@@ -158,4 +158,35 @@ guiTypes = {
 			maxHeight = 20
 		}
 	}
+
+
+	
+	containerWindowType = {
+		name = "SZC_YCP_gui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 496 height = 280 }
+		orientation = center
+		clipping = no
+
+		### BoP Main Contents ###
+		containerWindowType = {
+			name = "SZC_YCP_bop_container"
+			position = { x = -248 y = -140 }
+			size = { width = 496 height = 280 }
+			clipping = no
+			
+
+			iconType = {
+				name = "lizeng_Meter"
+				spriteType = ""
+				position = { x = 0 y = 0 }
+				pdx_tooltip = SZC_YCP_lizeng_bar_tooltip
+				# pdx_tooltip_delayed = SZC_YCP_lizeng_Progressbar_tooltip_delayed
+				Orientation = "CENTER"
+			}
+
+
+		}
+			
+	}
 }

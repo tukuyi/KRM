@@ -1335,6 +1335,43 @@ characters = {
 				small = GFX_portrait_SZC_jiang_yungang_small
 			}
 		}
+		country_leader = {
+			desc = SZC_jiang_yungang_desc
+			ideology = national_populist_new_legalism_subtype
+			traits = { CHN_non_aligned }
+		}
+	}
+
+	#夏涛声
+	SZC_xia_taosheng = {
+		name = SZC_xia_taosheng
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_xia_taosheng_large
+				small = GFX_portrait_SZC_xia_taosheng_small
+			}
+		}
+		country_leader = {
+			desc = SZC_xia_taosheng_desc
+			ideology = social_conservative_new_legalism_subtype
+			traits = { CHN_non_aligned }
+		}
+	}
+
+	#张伯伦
+	SZC_zhang_bolun = {
+		name = SZC_zhang_bolun
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_zhang_bolun_large
+				small = GFX_portrait_SZC_zhang_bolun_small
+			}
+		}
+		country_leader = {
+			desc = SZC_zhang_bolun_desc
+			ideology = market_liberal_subtype
+			traits = { CHN_non_aligned }
+		}
 	}
 
 

@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_pan_free_china
+python focusgfxentry.py SZC_YCP_technique_of_relief
 pause
