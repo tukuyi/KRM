@@ -14247,10 +14247,10 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.349
 			}
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
 			add_to_coalition = yes
 			add_popularity = {
-				ideology = social_liberal
+				ideology = social_conservative
 				popularity = 0.03
 			}
 		}
@@ -14260,6 +14260,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_continue_our_work
 		icon = GFX_goal_SZC_pan_continue_our_work
+		cost = 2
 
 		x = -2
 		y = 2
@@ -14380,7 +14381,7 @@ focus_tree = {
 				ideology = radical_socialist
 				popularity = 0.03
 			}
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			set_temp_variable = { coalition_partner_var = token:radical_socialist }
 			add_to_coalition = yes
 		}
 	}
@@ -14389,6 +14390,7 @@ focus_tree = {
 	focus = {
 		id = SZC_pan_ensure_party_united
 		icon = GFX_goal_SZC_pan_ensure_party_united
+		cost = 2
 
 		x = 2
 		y = 2
@@ -14409,7 +14411,7 @@ focus_tree = {
 				popularity = -0.03
 			}
 			add_popularity = {
-				ideology = social_liberal
+				ideology = social_conservative
 				popularity = 0.03
 			}
 		}
@@ -14573,6 +14575,11 @@ focus_tree = {
 			add_ideas = {
 				SZC_pan_black_and_white_cats
 			}
+			add_timed_idea = {
+				idea = SZC_pan_constructing_highway
+				days = 180
+			}
+			custom_effect_tooltip = SZC_pan_national_highway_program_tt
 		}
 	}
 
@@ -14750,6 +14757,11 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_stop_army_overstep"
 			country_event = {
 				id = NKRsichuan.363
+			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = SZC_NDA_party_long
+				name = SZC_NDA_party
 			}
 		}
 	}

@@ -954,7 +954,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				send_volunteer_size = 24
-				send_volunteers_tension = -100
+				send_volunteers_tension = -0.100
 			}
 		}
 		SZC_pan_democratic_guofangjun = {#民主国防军
@@ -1008,7 +1008,8 @@ ideas = {
 				army_org_factor = 0.1
 				army_defence_factor = 0.25
 				send_volunteer_size = 12
-				send_volunteers_tension = -50
+				send_volunteers_tension = -0.50
+				unit_limit_bonus = -24
 			}
 		}
 		SZC_pan_panasian_transfers = {#泛亚转移支付
