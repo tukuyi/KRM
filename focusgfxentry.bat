@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_YCP_technique_of_relief
+python focusgfxentry.py SZC_YCP_tide_of_modernization
 pause
