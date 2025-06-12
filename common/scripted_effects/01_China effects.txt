@@ -106,15 +106,15 @@ set_potential_national_government = {
 			LKT_set_leader_effect = yes
 		}
 		else_if = {
-			limit = { check_variable = { country_leader:china_alignment = token:CHNsyndicalist } }
+			limit = { china_alignment_CHNsyndicalist = yes }
 			CSP_set_leader_effect = yes
 		}
 		else_if = {
-			limit = { check_variable = { country_leader:china_alignment = token:geacps } }
+			limit = { china_alignment_geacps = yes }
 			RGC_set_leader_effect = yes
 		}
 		else_if = {
-			limit = { check_variable = { country_leader:china_alignment = token:CHNbritish } }
+			limit = { china_alignment_CHNbritish = yes }
 			BCN_set_leader_effect = yes
 		}
 
@@ -2973,6 +2973,12 @@ china_set_character_alignment_chinese_southern_republican = {
 }
 china_set_character_alignment_geacps = {
 	event_target:system = { china_alignment_geacps = { set_variable = { PREV.PREV.china_alignment = THIS } } }
+}
+china_set_character_alignment_CHNsyndicalist = {
+	event_target:system = { china_alignment_CHNsyndicalist = { set_variable = { PREV.PREV.china_alignment = THIS } } }
+}
+china_set_character_alignment_CHNbritish = {
+	event_target:system = { china_alignment_CHNbritish = { set_variable = { PREV.PREV.china_alignment = THIS } } }
 }
 china_set_character_alignment_unaligned = {
 	clear_variable = china_alignment
