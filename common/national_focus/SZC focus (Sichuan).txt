@@ -16933,7 +16933,7 @@ focus_tree = {
 	focus = {
 		id = SZC_YCP_the_ninth_congress_of_YCP
 		icon = GFX_goal_SZC_YCP_the_ninth_congress_of_YCP
-		cost = 10
+		cost = 5
 
 		x = 0
 		y = 2
@@ -16950,27 +16950,66 @@ focus_tree = {
 				id = NKRsichuan.31
 				days = 1
 			}
+			country_event = {
+				id = NKRsichuan.405
+				days = 5
+			}
+			country_event = {
+				id = NKRsichuan.410
+				days = 7
+			}
+			country_event = {
+				id = NKRsichuan.411
+				days = 10
+			}
+			country_event = {
+				id = NKRsichuan.412
+				days = 13
+			}
+			country_event = {
+				id = NKRsichuan.413
+				days = 16
+			}
+			country_event = {
+				id = NKRsichuan.414
+				days = 20
+			}
+			country_event = {
+				id = NKRsichuan.415
+				days = 25
+			}
+			country_event = {
+				id = NKRsichuan.416
+				days = 30
+			}
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_the_ninth_congress_of_YCP"
 			SZC_improve_YCP_legitimacy_effect = yes
+			country_event = {
+				id = NKRsichuan.417
+			}
 		}
 	}
 
 	focus = {
-		id = SZC_YCP_technique_of_relief
-		icon = GFX_goal_SZC_YCP_technique_of_relief
+		id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+		icon = GFX_goal_SZC_YCP_secret_of_the_flowers_of_pheonmenon
 		cost = 3
 
 		x = 0
 		y = 3
 		relative_position_id = SZC_YCP_statism_arise
 
+		# visible = {
+		# 	has_completed_focus = SZC_YCP_the_ninth_congress_of_YCP
+		# }
+
 		prerequisite = {
 			focus = SZC_YCP_the_ninth_congress_of_YCP
 		}
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_YCP_technique_of_relief"
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_secret_of_the_flowers_of_pheonmenon"
 		}
 	}
 

@@ -1033,6 +1033,18 @@ characters = {
 				has_country_flag = YCP_advisors_available
 			}
 		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_zuo_shunsheng_sic
+			ledger = army
+			traits = { KR_spiritual_leader_sic }
+			cost = 0
+			can_be_fired = no
+			visible = {
+				has_country_flag = NKRsichuan_YCPpath
+			}
+			desc = SZC_zuo_shunsheng_sic_desc
+		}
 		country_leader = {
 			desc = SZC_zuo_shunsheng_desc
 			ideology = social_liberal_new_legalism_subtype

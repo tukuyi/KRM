@@ -1,0 +1,75 @@
+defined_text = {
+    name = SZC_bop_tooltip
+	text = {
+		trigger = {
+			is_power_balance_in_range = {
+				id = SZC_YCP_power_balance
+				range = SZC_bop_li_bit_stronger
+			}
+		}
+		localization_key = SZC_bop_li_bit_stronger
+	}
+	text = {
+		trigger = {
+			is_power_balance_in_range = {
+				id = SZC_YCP_power_balance
+				range = SZC_bop_li_stronger
+			}
+		}
+		localization_key = SZC_bop_li_stronger
+	}
+	text = {
+		trigger = {
+			is_power_balance_in_range = {
+				id = SZC_YCP_power_balance
+				range = SZC_bop_zeng_bit_stronger
+			}
+		}
+		localization_key = SZC_bop_zeng_bit_stronger
+	}
+	text = {
+		trigger = {
+			is_power_balance_in_range = {
+				id = SZC_YCP_power_balance
+				range = SZC_bop_li_much_stronger
+			}
+		}
+		localization_key = SZC_bop_li_much_stronger
+	}
+	text = {
+		trigger = {
+			is_power_balance_in_range = {
+				id = SZC_YCP_power_balance
+				range = SZC_bop_li_supremacy
+			}
+		}
+		localization_key = SZC_bop_li_supremacy
+	}
+	text = {
+		trigger = {
+			is_power_balance_in_range = {
+				id = SZC_YCP_power_balance
+				range = SZC_bop_zeng_stronger
+			}
+		}
+		localization_key = SZC_bop_zeng_stronger
+	}
+	text = {
+		trigger = {
+			is_power_balance_in_range = {
+				id = SZC_YCP_power_balance
+				range = SZC_bop_zeng_much_stronger
+			}
+		}
+		localization_key = SZC_bop_zeng_much_stronger
+	}
+	text = {
+		trigger = {
+			is_power_balance_in_range = {
+				id = SZC_YCP_power_balance
+				range = SZC_bop_zeng_supremacy
+			}
+		}
+		localization_key = SZC_bop_zeng_supremacy
+	}
+}
