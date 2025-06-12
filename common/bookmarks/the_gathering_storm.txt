@@ -4,7 +4,7 @@ bookmarks = {
 		desc = KR_scenario_desc
 		date = 1936.1.1.1
 		picture = GFX_select_date_1936
-		default_country = LEC
+		default_country = RUS
 		default = yes
 
 	### Americas ###
@@ -22,7 +22,7 @@ bookmarks = {
 			}
 		}
 
-		XXA = {
+		AAA = { #placeholder
 			ideology = national_populist
 			history = Debug_KR_gathering_storm_desc
 		}
@@ -105,7 +105,7 @@ bookmarks = {
 			}
 		}
 
-		XXA = {
+		AAA = { #placeholder
 			ideology = national_populist
 			history = Debug_KR_gathering_storm_desc
 		}
@@ -278,40 +278,39 @@ bookmarks = {
 		}
 
 	### SPOTLIGHT TAGS ###
-		XXA = {
+		AAA = { #placeholder
 			ideology = national_populist
 			history = Debug_KR_gathering_storm_desc
 		}
 
-		LEC = {
-			history = SHC_KR_gathering_storm_desc
-			ideology = market_liberal
+		RUS = {
+			history = RUS_KR_gathering_storm_desc
+			ideology = national_populist
 			ideas = {
-				LEC_neutrality
-				LEC_volunteer_force
-				LEC_currency_6
+				RUS_entrenched_opposition
+				RUS_german_economic_influence_8
 			}
 			focuses = {
-				LEC_zi_ben_jia_de_sheng_li
-				LEC_lu_xun_zhu_xi
-				SHC_xin_ming_zhu_jue_xing
+				RUS_third_russia
+				#RUS_democracy_restored
+				RUS_honour_romanovs
+				RUS_red_flag_over_kremlin
 			}
 		}
-		
 
-		HNN = {
+		KAZ = {
 			minor = yes
-			history = HNN_KR_gathering_storm_desc
-			ideology = social_conservative
+			history = KAZ_KR_gathering_storm_desc
+			ideology = national_populist
 			ideas = {
-				HNN_a_democratic_province
-				HNN_perilous_industrial_sector
-				HNN_intense_agricultural_imbalance
+				central_asia_land_of_wanderers
+				KAZ_ethnic_tensions_0
+				KAZ_alash_militias_0
 			}
 			focuses = {
-				HNN_victory_of_the_united_front
-				HNN_zhong_hua_ren_ming_gong_he_guo_di_yi_ci_ren_ming_dai_biao_da_hui
-				HNN_gongtuan
+				KAZ_independence_at_last
+				KAZ_tulpar_rises
+				KAZ_soar_above
 			}
 		}
 
@@ -331,22 +330,6 @@ bookmarks = {
 			}
 		}
 
-		RUS = {
-			history = RUS_KR_gathering_storm_desc
-			ideology = national_populist
-			minor = yes
-			ideas = {
-				RUS_entrenched_opposition
-				RUS_german_economic_influence_8
-			}
-			focuses = {
-				RUS_third_russia
-				#RUS_democracy_restored
-				RUS_honour_romanovs
-				RUS_red_flag_over_kremlin
-			}
-		}
-
 		TRK = {
 			minor = yes
 			history = TRK_KR_gathering_storm_desc
@@ -362,6 +345,23 @@ bookmarks = {
 				TRK_regime_of_the_red_basmachi
 			}
 		}
+
+		BUK = {
+			minor = yes
+			history = BUK_KR_gathering_storm_desc
+			ideology = authoritarian_democrat
+			ideas = {
+				BUK_struggling_bureaucracy
+				BUK_antiquated_army_0
+				BUK_russian_economic_control
+			}
+			focuses = {
+				BUK_untangling_the_administration
+				BUK_call_for_the_faithful
+				BUK_awaken_the_proletariats
+			}
+		}
+
 	#	NOR = {
 	#		minor = yes
 	#		history = NOR_KR_gathering_storm_desc
@@ -535,7 +535,7 @@ bookmarks = {
 			}
 		}
 
-		XXA = {
+		AAA = { #placeholder
 			ideology = national_populist
 			history = Debug_KR_gathering_storm_desc
 		}
@@ -620,7 +620,7 @@ bookmarks = {
 			}
 		}
 
-		XXA = {
+		AAA = { #placeholder
 			ideology = national_populist
 			history = Debug_KR_gathering_storm_desc
 		}
