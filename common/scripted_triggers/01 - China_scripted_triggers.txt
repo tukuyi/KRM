@@ -56,6 +56,12 @@ china_character_is_chinese_southern_republican = {
 china_character_is_geacps = {
 	event_target:system = { china_alignment_geacps = { check_variable = { PREV.PREV.china_alignment = THIS } } }
 }
+china_character_is_CHNsyndicalist = {
+	event_target:system = { china_alignment_CHNsyndicalist = { check_variable = { PREV.PREV.china_alignment = THIS } } }
+}
+china_character_is_CHNbritish = {
+	event_target:system = { china_alignment_CHNbritish = { check_variable = { PREV.PREV.china_alignment = THIS } } }
+}
 
 china_alignment_northern_zhili = {
 	var:country_leader = { china_character_is_northern_zhili = yes }
@@ -86,6 +92,12 @@ china_alignment_chinese_southern_republican = {
 }
 china_alignment_geacps = {
 	var:country_leader = { china_character_is_geacps = yes }
+}
+china_alignment_CHNbritish = {
+	var:country_leader = { china_character_is_CHNbritish = yes }
+}
+china_alignment_CHNsyndicalist = {
+	var:country_leader = { china_character_is_CHNsyndicalist = yes }
 }
 
 china_is_aligned_with_northern_zhili = {
@@ -194,8 +206,8 @@ china_is_aligned_with_CHNsyndicalist = {
 	custom_trigger_tooltip = {
 		tooltip = china_is_aligned_with_CHNsyndicalist
 		OR = {
-			check_variable = { country_leader:china_alignment = token:CHNsyndicalist }
-			check_variable = { country_leader:china_alignment = token:chinese_southern_republican }
+			china_is_aligned_with_CHNsyndicalist = yes
+			china_alignment_left_kmt = yes
 		}
 	}
 }
@@ -204,7 +216,7 @@ china_is_aligned_with_geacps = {
 	custom_trigger_tooltip = {
 		tooltip = china_is_aligned_with_geacps
 		OR = {
-			check_variable = { country_leader:china_alignment = token:geacps }
+			china_is_aligned_with_geacps = yes
 		}
 	}
 }
@@ -213,7 +225,7 @@ china_is_aligned_with_CHNbritish = {
 	custom_trigger_tooltip = {
 		tooltip = china_is_aligned_with_CHNbritish
 		OR = {
-			check_variable = { country_leader:china_alignment = token:CHNbritish }
+			china_alignment_CHNbritish = yes
 		}
 	}
 }
@@ -854,7 +866,7 @@ CHN_no_aligned_unifier_exists_trigger = {
 		}
 	}
 	else_if = {
-		limit = { check_variable = { country_leader:china_alignment = token:CHNsyndicalist } }
+		limit = { china_alignment_CHNsyndicalist = yes }
 		custom_trigger_tooltip = {
 			tooltip = CHN_No_Other_CSP_tt
 			OR = {
@@ -864,7 +876,7 @@ CHN_no_aligned_unifier_exists_trigger = {
 		}
 	}
 	else_if = {
-		limit = { check_variable = { country_leader:china_alignment = token:CHNbritish } }
+		limit = { china_alignment_CHNbritish = yes }
 		custom_trigger_tooltip = {
 			tooltip = CHN_No_Other_BCN_tt
 			OR = {
