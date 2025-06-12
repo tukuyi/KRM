@@ -3544,6 +3544,14 @@ chinese_unification = {
 			}
 		}
 		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete CHN_join_RKT_decision"
+			FROM = {
+				country_event = china_events.4
+				custom_effect_tooltip = if_they_accept_tt
+				effect_tooltip = { china_puppet_ROOT_effect = yes }
+			}
+		}
+	}
 	CHN_join_CSP_decision = {
 		icon = GFX_decision_eng_trade_unions_support
 		allowed = {
@@ -3636,7 +3644,8 @@ chinese_unification = {
 				NOT = { has_game_rule = { rule = SHX_forpol option = SHX_FORPOL_LKMT } }
 			}
 		}
-			log = "[GetLogRoot][GetLogFrom]: Decision complete CHN_join_LKT_decision"
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete CHN_join_CSP_decision"
 			FROM = {
 				country_event = china_events.4
 				custom_effect_tooltip = if_they_accept_tt
