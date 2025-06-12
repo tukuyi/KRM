@@ -1,0 +1,54 @@
+characters = {
+	system_placeholder_leader = {
+		name = system_placeholder_leader
+		portraits = {
+			civilian = {
+				large = GFX_portrait_unknown
+			}
+		}
+		country_leader = {
+			ideology = totalist_subtype
+		}
+		country_leader = {
+			ideology = syndicalist_subtype
+		}
+		country_leader = {
+			ideology = radical_socialist_subtype
+		}
+		country_leader = {
+			ideology = social_democrat_subtype
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+		}
+		country_leader = {
+			ideology = market_liberal_subtype
+		}
+		country_leader = {
+			ideology = social_conservative_subtype
+		}
+		country_leader = {
+			ideology = authoritarian_democrat_subtype
+		}
+		country_leader = {
+			ideology = paternal_autocrat_subtype
+		}
+		country_leader = {
+			ideology = national_populist_subtype
+		}
+	}
+
+	### China ###
+	china_alignment_northern_zhili = { name = northern_zhili }
+	china_alignment_southern_zhili = { name = southern_zhili }
+	china_alignment_manchu_qing = { name = manchu_qing }
+	china_alignment_fengtian = { name = fengtian }
+	china_alignment_beiyang = { name = beiyang }
+	china_alignment_federalists = { name = federalists }
+	china_alignment_left_kuomintang = { name = left_kuomintang }
+	china_alignment_right_kuomintang = { name = right_kuomintang }
+	china_alignment_chinese_southern_republican = { name = chinese_southern_republican }
+	china_alignment_geacps = { name = geacps }
+	china_alignment_CHNsyndicalist = { name = CHNsyndicalist }
+	china_alignment_CHNbritish = { name = CHNbritish }
+}

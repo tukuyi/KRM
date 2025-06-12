@@ -135,17 +135,17 @@ recruit_character = SZC_yang_bokai
 
 ### Character Setup ###
 SZC_yang_sen = {
-	set_variable = { china_alignment = token:northern_zhili }
+	china_set_character_alignment_northern_zhili = yes
 	set_character_flag = SZC_armament_leader
 	set_character_flag = CHN_original_unit_leader
 }
 SZC_liu_cunhou = {
-	set_variable = { china_alignment = token:northern_zhili }
+	china_set_character_alignment_northern_zhili = yes
 	set_character_flag = SZC_armament_leader
 	set_character_flag = CHN_original_unit_leader
 }
 SZC_zhang_lan = {
-	set_variable = { china_alignment = token:chinese_southern_republican }
+	china_set_character_alignment_chinese_southern_republican = yes
 }
 SZC_fan_shaozeng = {
 	set_character_flag = SZC_armament_leader
@@ -165,11 +165,11 @@ SZC_zhou_daogang = {
 }
 
 SZC_deng_xihou = {
-	set_variable = { china_alignment = token:chinese_southern_republican }
+	china_set_character_alignment_chinese_southern_republican = yes
 	set_character_flag = CHN_original_unit_leader
 }
 SZC_liu_wenhui = {
-	set_variable = { china_alignment = token:chinese_southern_republican }
+	china_set_character_alignment_chinese_southern_republican = yes
 	set_character_flag = CHN_original_unit_leader
 }
 
@@ -191,13 +191,13 @@ SZC_guo_xunqi = {
 }
 
 SZC_lu_chao = {
-	set_variable = { china_alignment = token:chinese_southern_republican }
+	china_set_character_alignment_chinese_southern_republican = yes
 	set_character_flag = SZC_officer_leader
 	set_character_flag = CHN_original_unit_leader
 	retire = yes
 }
 SZC_xiong_kewu = {
-	set_variable = { china_alignment = token:federalists }
+	china_set_character_alignment_federalists = yes
 	set_character_flag = SZC_officer_leader
 	set_character_flag = CHN_original_unit_leader
 	retire = yes

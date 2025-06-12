@@ -1480,9 +1480,7 @@ china_set_government_tag_specific_scripted_effect = {
 		}
 		else_if = {
 			limit = {
-				check_variable = {
-					country_leader:china_alignment = token:geacps
-				}
+				china_alignment_geacps = yes
 			}
 			set_cosmetic_tag = FNG_JAP
 		}
@@ -1510,7 +1508,7 @@ china_set_government_tag_specific_scripted_effect = {
 		}
 	}
 	else_if = {
-		limit = { check_variable = { country_leader:china_alignment = token:CHNsyndicalist } }
+		limit = { china_alignment_CHNsyndicalist = yes }
 		if = {
 			limit = {
 				original_tag = HNN
