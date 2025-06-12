@@ -16827,7 +16827,7 @@ focus_tree = {
 
 	inlay_window = {
 		id = SZC_YCP_inlay_window
-		position = { x = 630 y = 270 }
+		position = { x = 730 y = 270 }
 	}
 
 
@@ -17010,6 +17010,307 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_secret_of_the_flowers_of_pheonmenon"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_power_of_nationalspirit
+		icon = GFX_goal_SZC_YCP_power_of_nationalspirit
+		cost = 3
+
+		x = -4
+		y = 1
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_power_of_nationalspirit"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_a_revolutionary_party
+		icon = GFX_goal_SZC_YCP_a_revolutionary_party
+		cost = 3
+
+		x = -3
+		y = 2
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_power_of_nationalspirit
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_a_revolutionary_party"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_from_party_to_government
+		icon = GFX_goal_SZC_YCP_from_party_to_government
+		cost = 3
+
+		x = -5
+		y = 3
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_a_revolutionary_party
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_from_party_to_government"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_union_sacree
+		icon = GFX_goal_SZC_YCP_union_sacree
+		cost = 3
+
+		x = -3
+		y = 3
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_a_revolutionary_party
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_union_sacree"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_torch_of_progress
+		icon = GFX_goal_SZC_YCP_torch_of_progress
+		cost = 3
+
+		x = -4
+		y = 4
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_union_sacree
+		}
+		prerequisite = {
+			focus = SZC_YCP_from_party_to_government
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_torch_of_progress"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_time_to_act
+		icon = GFX_goal_SZC_YCP_time_to_act
+		cost = 3
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_time_to_act"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_central_military_commission
+		icon = GFX_goal_SZC_YCP_central_military_commission
+		cost = 3
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_time_to_act
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_central_military_commission"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_take_southernwest
+		icon = GFX_goal_SZC_YCP_take_southernwest
+		cost = 3
+
+		x = -1
+		y = 3
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_central_military_commission
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_take_southernwest"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_march_east
+		icon = GFX_goal_SZC_YCP_march_east
+		cost = 3
+
+		x = 1
+		y = 3
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_central_military_commission
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_march_east"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_north_expedition
+		icon = GFX_goal_SZC_YCP_north_expedition
+		cost = 3
+
+		x = 0
+		y = 4
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_take_southernwest
+		}
+		prerequisite = {
+			focus = SZC_YCP_march_east
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_north_expedition"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_energy_for_people
+		icon = GFX_goal_SZC_YCP_energy_for_people
+		cost = 3
+
+		x = 4
+		y = 1
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_energy_for_people"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_construct_sichuan
+		icon = GFX_goal_SZC_YCP_construct_sichuan
+		cost = 3
+
+		x = 3
+		y = 2
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_energy_for_people
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_construct_sichuan"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_liberate_knowledge
+		icon = GFX_goal_SZC_YCP_liberate_knowledge
+		cost = 3
+
+		x = 3
+		y = 3
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_construct_sichuan
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_liberate_knowledge"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_guarantee_budget_balance
+		icon = GFX_goal_SZC_YCP_guarantee_budget_balance
+		cost = 3
+
+		x = 5
+		y = 3
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_construct_sichuan
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_guarantee_budget_balance"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_tide_of_modernization
+		icon = GFX_goal_SZC_YCP_tide_of_modernization
+		cost = 3
+
+		x = 4
+		y = 4
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_liberate_knowledge
+		}
+		prerequisite = {
+			focus = SZC_YCP_guarantee_budget_balance
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_tide_of_modernization"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_wave_of_history_victory_of_ycp
+		icon = GFX_goal_SZC_YCP_wave_of_history_victory_of_ycp
+		cost = 3
+
+		x = 0
+		y = 5
+		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
+
+
+		prerequisite = {
+			focus = SZC_YCP_north_expedition
+		}
+		prerequisite = {
+			focus = SZC_YCP_torch_of_progress
+			focus = SZC_YCP_tide_of_modernization
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_wave_of_history_victory_of_ycp"
 		}
 	}
 
