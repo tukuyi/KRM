@@ -2250,6 +2250,38 @@
  SZC_YCP_legitimacy_2_desc: ""
  SZC_YCP_legitimacy_3: "党的合法性：§n姑且可信§!"
  SZC_YCP_legitimacy_3_desc: ""
+
+ SZC_YCP_construct_nationalspirit: "铸造国格"
+ SZC_YCP_construct_nationalspirit_desc: ""
+ SZC_YCP_national_progress: "国家进步"
+ SZC_YCP_national_progress_desc: ""
+ SZC_YCP_union_sacree_parties_idea: "神圣联合-党派联合"
+ SZC_YCP_union_sacree_parties_idea_desc: ""
+ SZC_YCP_union_sacree_classes_idea: "神圣联合-阶层联合"
+ SZC_YCP_union_sacree_classes_idea_desc: ""
+ SZC_YCP_CMC_idea: "青年党中央军委会"
+ SZC_YCP_CMC_idea_desc: ""
+ SZC_YCP_revolution_against_old_idea: "反古革命"
+ SZC_YCP_revolution_against_old_idea_desc: ""
+ SZC_YCP_liberate_mind_idea: "解放思想"
+ SZC_YCP_liberate_mind_idea_desc: ""
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 
 
@@ -2823,6 +2855,7 @@
  SZC_YCP_tide_of_modernization_desc: ""
  SZC_YCP_wave_of_history_victory_of_ycp: "历史之波\n青年之胜"
  SZC_YCP_wave_of_history_victory_of_ycp_desc: ""
+ SZC_YCP_wave_of_history_victory_of_ycp_tooltip: "§m国家主义，救亡图存。§!\n§M我们将开始作为关内唯一合法政府的国家重建工作，并且将新一届的代表大会提上日程。§!"
  
  
  
@@ -3852,7 +3885,7 @@
  NKRsichuan.428.d: "#简介一下神圣联合，曾琦很喜欢这个概念"
  NKRsichuan.428.a: "中国青年党应该成为新神圣联合的领袖！"
  NKRsichuan.429.t: "公理对强权"
- NKRsichuan.429.d: "#第一次神圣联合失败了，这不代表公理失败，我们的新神圣联合肯定会成功的。总之曾琦这么演讲，希望和外党合作。神社有些不满"
+ NKRsichuan.429.d: "#法国的第一次神圣联合随着战败失败了，这不代表公理失败，我们的新神圣联合肯定会成功的。总之曾琦这么演讲，希望和外党合作。神社有些不满"
  NKRsichuan.429.a: "国之不保，党于何有？"
  NKRsichuan.430.t: "吴天墀发言"
  NKRsichuan.430.d: "#青年党来了个年轻人：国有国法党有党章，你上来就喊要拉着我们一起和其他党搞神圣联合是几个意思？"
@@ -3871,51 +3904,55 @@
  NKRsichuan.434.t: "木槿花丛"
  NKRsichuan.434.d: "#左舜生在花园中散步，这些木槿花绽放很华丽，凋谢也很快，“我将来能不能走到一个自由最多的地方去死， 而有幸福与这类的自由之鬼为邻呢？ ”"
  NKRsichuan.434.a: "我不知道。"
- NKRsichuan.435.t: ""
- NKRsichuan.435.d: "#"
- NKRsichuan.435.a: ""
- NKRsichuan.436.t: ""
- NKRsichuan.436.d: "#"
- NKRsichuan.436.a: ""
- NKRsichuan.437.t: ""
- NKRsichuan.437.d: "#"
- NKRsichuan.437.a: ""
- NKRsichuan.438.t: ""
- NKRsichuan.438.d: "#"
- NKRsichuan.438.a: ""
- NKRsichuan.439.t: ""
- NKRsichuan.439.d: "#"
- NKRsichuan.439.a: ""
- NKRsichuan.440.t: ""
- NKRsichuan.440.d: "#"
- NKRsichuan.440.a: ""
- NKRsichuan.441.t: ""
- NKRsichuan.441.d: "#"
- NKRsichuan.441.a: ""
- NKRsichuan.442.t: ""
- NKRsichuan.442.d: "#"
- NKRsichuan.442.a: ""
- NKRsichuan.443.t: ""
- NKRsichuan.443.d: "#"
- NKRsichuan.443.a: ""
- NKRsichuan.444.t: ""
- NKRsichuan.444.d: "#"
- NKRsichuan.444.a: ""
- NKRsichuan.445.t: ""
- NKRsichuan.445.d: "#"
- NKRsichuan.445.a: ""
- NKRsichuan.446.t: ""
- NKRsichuan.446.d: "#"
- NKRsichuan.446.a: ""
- NKRsichuan.447.t: ""
- NKRsichuan.447.d: "#"
- NKRsichuan.447.a: ""
- NKRsichuan.448.t: ""
- NKRsichuan.448.d: "#"
- NKRsichuan.448.a: ""
- NKRsichuan.449.t: ""
- NKRsichuan.449.d: "#"
- NKRsichuan.449.a: ""
+ NKRsichuan.435.t: "国家主义革命"
+ NKRsichuan.435.d: "#以前都是些什么辛亥革命国民革命社会主义革命，现在我们国家主义者终于扶摇直上咯"
+ NKRsichuan.435.a: "热血真诚，奉献为国。"
+ NKRsichuan.436.t: "孙传芳的遗产"
+ NKRsichuan.436.d: "#当初我们YCP在孙传芳那边的南京军校是安插了很多人的，虽然没法直接接管，但也还是挺有用。不过有个问题就是我们当初没想着人人发党籍，现在是时候给了，只不过他们的态度嘛"
+ NKRsichuan.436.a: "军官们普遍支持行社。"
+ NKRsichuan.436.b: "军官们对神社抱有同情。"
+ NKRsichuan.437.t: "军政部改组"
+ NKRsichuan.437.d: "#王师曾原来是军政部长，但其实没啥屌用毕竟原来又不直接控制军队。现在改组为正式的中央军事委员会，采取合议制，曾琦、李璜、王师曾任常任委员，王师曾兼任主席"
+ NKRsichuan.437.a: "国家统一的重要一步。"
+ NKRsichuan.438.t: "北伐宣言"
+ NKRsichuan.438.d: "#属于青年党的北伐宣言，溥仪你看着嗷我给不给你吊死就完事了"
+ NKRsichuan.438.a: "前进！"
+ NKRsichuan.439.t: "现代化大方向"
+ NKRsichuan.439.d: "#左舜生邀来陈启天谈经济发展，农业机械化识不识？总之就是要现代化；要把机械普及，要让电力扩散，要让人人都能享受现代化的成果。陈启天望了望一串红"
+ NKRsichuan.439.a: "电的力量啊。"
+ NKRsichuan.440.t: "工人救国联合会"
+ NKRsichuan.440.d: "#青年党新成立的官方工会组织，其实还是挺好的，确实在保障工人权利，还有夜校啥的"
+ NKRsichuan.440.a: "工人是全民革命不可或缺的一环。"
+ NKRsichuan.441.t: "国工两党属工会不满"
+ NKRsichuan.441.d: "#这两党对工人运动的掌控一直很持久，有传言说他们对我们插手工人运动很不爽啊"
+ NKRsichuan.441.a: "得提着个心眼。"
+ NKRsichuan.442.t: "王思懿事件"
+ NKRsichuan.442.d: "#一个加入了青年党工会的重庆哥们在夜校教学的时候突然被一群人围住暴打了一顿，好在警察来的快没打死。这也是历史上有的，只不过人名不一样并且打死了。这已经不是神社和行社的对立问题，少壮派呼吁立刻做出行动，而曾琦李璜都希望克制"
+ NKRsichuan.442.a: "激进的怒吼盖过了理智的声音"
+ NKRsichuan.442.b: "冷静最终占据了主流。"
+ NKRsichuan.443.t: "报复"
+ NKRsichuan.443.d: "#激进了导致的，直接去拿枪打死了六个工团党工运分子"
+ NKRsichuan.443.a: "唉！再怎么说也是活生生的人命啊。"
+ NKRsichuan.444.t: "左舜生谈人道主义"
+ NKRsichuan.444.d: "#大家理智一点好不好，人道主义应该在第一位。不过左舜生不是很喜欢革命这个词所以有人也不是很爽。结果就是大家对主流派系更支持了"
+ NKRsichuan.444.a: "好在没出人命。"
+ NKRsichuan.445.t: "科学和实验室"
+ NKRsichuan.445.d: "# “而这更有效的工作是什么呢？ 一则曰科学， 二则曰科学， 三则科学； 这更有效的场所是什么地方？ 一则曰实验室， 二则曰实验室， 三则曰实验室。 ”这是常燕生说的。反正YCP很强调科学就对了"
+ NKRsichuan.445.a: "中国的一切滥污，只能用科学洗涤！"
+ NKRsichuan.446.t: "党费自由"
+ NKRsichuan.446.d: "#爽死了，党费终于不像以前扣扣嗖嗖了。KMT能够拿法国人的钱，别的能拿政府拨款，我们全他妈靠自己。现在有了四川，终于不用九折发工资了"
+ NKRsichuan.446.a: "#哦耶"
+ NKRsichuan.447.t: "青年党的坚持"
+ NKRsichuan.447.d: "#青年党没有国际背景， 也没有武力后盾， 靠什么为党奋这么之久？一靠他的爱国热情与办党毅力， 二靠他的宣传能力， 三靠他坚持国家主义与民主政治的救国主张， 四靠他有广泛交游之支援。现在我们终于有钱了。这是陈启天再发言"
+ NKRsichuan.447.a: "台下热泪盈眶。"
+ NKRsichuan.448.t: "三色堇的真名"
+ NKRsichuan.448.d: "#平泽进reference，陈启天也在花园里面转，他盯着三色堇思考良久，又望了望远处拔地而起的工厂"
+ NKRsichuan.448.a: "我们在创造历史。"
+ NKRsichuan.449.t: "工业现代化"
+ NKRsichuan.449.d: "#我们的现代化正在有条不紊的进行，不过钱毕竟有限，该怎么投呢"
+ NKRsichuan.449.a: "我们的民用工业是重点所需。"
+ NKRsichuan.449.b: "没有强大的军工业如何继续革命？！"
+ NKRsichuan.449.c: "不妨选一个相对平衡的方案。"
  NKRsichuan.450.t: ""
  NKRsichuan.450.d: "#"
  NKRsichuan.450.a: ""
@@ -4010,6 +4047,28 @@
  SZC_resist_the_silver_offensive_mission: "抵抗银元攻势"
  SZC_resist_the_silver_offensive_mission_desc: ""
 
+ SZC_YCP_focus_on_party_construction_decision: "聚焦党建"
+ SZC_YCP_focus_on_party_construction_decision_desc: ""
+ SZC_YCP_enforce_party_orthodoxy_decision: "强调党的正统路线"
+ SZC_YCP_enforce_party_orthodoxy_decision_desc: ""
+ SZC_YCP_emphasis_on_popular_revolution_decision: "聚焦全民革命"
+ SZC_YCP_emphasis_on_popular_revolution_decision_desc: ""
+ SZC_YCP_attack_dictatorship_tendencies_decision: "攻击独裁倾向"
+ SZC_YCP_attack_dictatorship_tendencies_decision_desc: ""
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+ 
 
 
  #copyKRKMT建设决议
@@ -4152,3 +4211,5 @@
  SZC_DEBUG_panpath_pantakeover_decision: "潘文华掌权"
  SZC_DEBUG_panpath_CDLpath_decision: "民盟线"
  SZC_DEBUG_panpath_lkmt_decision: "四川易帜"
+ SZC_DEBUG_panpath_letters_decision: "写信"
+ SZC_DEBUG_YCPpath_tangtakeover_decision: "唐式遵掌权"

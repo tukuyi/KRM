@@ -1108,6 +1108,35 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
+		SZC_YCP_CMC_idea = {#青年党中央军事委员会
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_CMC_idea" }
+			picture = generic_research_increase
+			modifier = {
+				training_time_army_factor = -0.15
+				army_org_factor = 0.05
+				max_planning_factor = 0.1
+				planning_speed = 0.1
+				experience_gain_army_unit_factor = 0.10
+				command_power_gain = 0.15
+			}
+		}
+		SZC_YCP_revolution_against_old_idea = {#反古革命
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_revolution_against_old_idea" }
+			picture = generic_research_increase
+			targeted_modifier = {
+				tag = QIE
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		SZC_YCP_liberate_mind_idea = {#解放思想
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_liberate_mind_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}
 	}
 
 }

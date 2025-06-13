@@ -3127,3 +3127,90 @@ SZC_peoples_commune_reform_category = {
 		}
 	}
 }
+
+SZC_YCP_balance_of_power_category = {
+	SZC_YCP_focus_on_party_construction_decision = {
+		icon = GFX_decision_generic_political_discourse
+		fire_only_once = no
+		days_re_enable = 180
+		cost = 35
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete SZC_YCP_focus_on_party_construction_decision"
+			add_power_balance_value = {
+				id = SZC_YCP_power_balance
+				value = 0.05
+				tooltip_side = SZC_bop_zeng_winning_side
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.03
+			}
+		}
+	}
+	SZC_YCP_enforce_party_orthodoxy_decision = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		fire_only_once = no
+		days_re_enable = 180
+		custom_cost_trigger = {
+			has_war_support > 0.10
+		}
+		custom_cost_text = war_support10
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete SZC_YCP_enforce_party_orthodoxy_decision"
+			add_power_balance_value = {
+				id = SZC_YCP_power_balance
+				value = 0.05
+				tooltip_side = SZC_bop_zeng_winning_side
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.03
+			}
+			hidden_effect = {
+				add_war_support = -0.10
+			}
+		}
+	}
+	SZC_YCP_emphasis_on_popular_revolution_decision = {
+		icon = GFX_decision_eng_blackshirt_march
+		fire_only_once = no
+		days_re_enable = 180
+		cost = 35
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete SZC_YCP_emphasis_on_popular_revolution_decision"
+			add_power_balance_value = {
+				id = SZC_YCP_power_balance
+				value = -0.05
+				tooltip_side = SZC_bop_li_winning_side
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.03
+			}
+		}
+	}
+	SZC_YCP_attack_dictatorship_tendencies_decision = {
+		icon = GFX_decision_generic_speech
+		fire_only_once = no
+		days_re_enable = 180
+		custom_cost_trigger = {
+			has_stability > 0.10
+		}
+		custom_cost_text = stability10
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete SZC_YCP_attack_dictatorship_tendencies_decision"
+			add_power_balance_value = {
+				id = SZC_YCP_power_balance
+				value = -0.05
+				tooltip_side = SZC_bop_li_winning_side
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.03
+			}
+			hidden_effect = {
+				add_stability = -0.10
+			}
+		}
+	}
+}

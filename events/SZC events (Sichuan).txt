@@ -15380,7 +15380,7 @@ country_event = { #决定
 		name = NKRsichuan.421.a
 		add_power_balance_value = {
 			id = SZC_YCP_power_balance
-			value = -0.03
+			value = -0.05
 			tooltip_side = SZC_bop_li_winning_side
 		}
 	}
@@ -15389,7 +15389,7 @@ country_event = { #决定
 		name = NKRsichuan.421.b
 		add_power_balance_value = {
 			id = SZC_YCP_power_balance
-			value = 0.03
+			value = 0.05
 			tooltip_side = SZC_bop_zeng_winning_side
 		}
 		add_popularity = {
@@ -15446,7 +15446,7 @@ country_event = { #革命宪政？
 		name = NKRsichuan.424.a
 		add_power_balance_value = {
 			id = SZC_YCP_power_balance
-			value = -0.05
+			value = -0.08
 			tooltip_side = SZC_bop_li_winning_side
 		}
 		add_popularity = {
@@ -15459,7 +15459,7 @@ country_event = { #革命宪政？
 		name = NKRsichuan.424.b
 		add_power_balance_value = {
 			id = SZC_YCP_power_balance
-			value = 0.05
+			value = 0.08
 			tooltip_side = SZC_bop_zeng_winning_side
 		}
 		add_popularity = {
@@ -15495,7 +15495,7 @@ country_event = { #昔日空谈，今日实干
 		}
 		add_power_balance_value = {
 			id = SZC_YCP_power_balance
-			value = -0.07
+			value = -0.10
 			tooltip_side = SZC_bop_li_winning_side
 		}
 	}
@@ -15513,7 +15513,7 @@ country_event = { #昔日空谈，今日实干
 		}
 		add_power_balance_value = {
 			id = SZC_YCP_power_balance
-			value = 0.07
+			value = 0.10
 			tooltip_side = SZC_bop_zeng_winning_side
 		}
 	}
@@ -15551,7 +15551,7 @@ country_event = { #文化界的联系
 		add_political_power = 50
 		add_power_balance_value = {
 			id = SZC_YCP_power_balance
-			value = -0.05
+			value = -0.07
 			tooltip_side = SZC_bop_li_winning_side
 		}
 	}
@@ -15561,7 +15561,7 @@ country_event = { #文化界的联系
 		add_political_power = 50
 		add_power_balance_value = {
 			id = SZC_YCP_power_balance
-			value = 0.05
+			value = 0.07
 			tooltip_side = SZC_bop_zeng_winning_side
 		}
 	}
@@ -15656,7 +15656,7 @@ country_event = { #和谁联合？
 		}
 		add_power_balance_value = {
 			id = SZC_YCP_power_balance
-			value = 0.10
+			value = 0.15
 			tooltip_side = SZC_bop_zeng_winning_side
 		}
 		add_ideas = {
@@ -15672,7 +15672,7 @@ country_event = { #和谁联合？
 		}
 		add_power_balance_value = {
 			id = SZC_YCP_power_balance
-			value = -0.10
+			value = -0.15
 			tooltip_side = SZC_bop_li_winning_side
 		}
 		add_ideas = {
@@ -15701,7 +15701,7 @@ country_event = { #社会进步
 		add_stability = 0.03
 		add_power_balance_value = {
 			id = SZC_YCP_power_balance
-			value = -0.05
+			value = -0.08
 			tooltip_side = SZC_bop_li_winning_side
 		}
 	}
@@ -15715,7 +15715,7 @@ country_event = { #社会进步
 		add_stability = -0.03
 		add_power_balance_value = {
 			id = SZC_YCP_power_balance
-			value = 0.05
+			value = 0.08
 			tooltip_side = SZC_bop_zeng_winning_side
 		}
 	}
@@ -15738,7 +15738,7 @@ country_event = { #木槿花丛
 	}
 }
 
-country_event = { #
+country_event = { #国家主义革命
 	id = NKRsichuan.435
 	title = NKRsichuan.435.t
 	desc = NKRsichuan.435.d
@@ -15748,13 +15748,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#热血真诚，奉献为国。
 		log = "[GetLogInfo]: event NKRsichuan.435 option NKRsichuan.435.a"
 		name = NKRsichuan.435.a
 	}
 }
 
-country_event = { #
+country_event = { #孙传芳的遗产
 	id = NKRsichuan.436
 	title = NKRsichuan.436.t
 	desc = NKRsichuan.436.d
@@ -15764,13 +15764,39 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
-		log = "[GetLogInfo]: event NKRsichuan.436 option NKRsichuan.4366.a"
+	option = {#军官们普遍支持行社。
+		log = "[GetLogInfo]: event NKRsichuan.436 option NKRsichuan.436.a"
 		name = NKRsichuan.436.a
+		army_experience = 50
+		add_command_power = 50
+		add_power_balance_value = {
+			id = SZC_YCP_power_balance
+			value = 0.012
+			tooltip_side = SZC_bop_zeng_winning_side
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.03
+		}
+	}
+	option = {#军官们对神社抱有同情。
+		log = "[GetLogInfo]: event NKRsichuan.436 option NKRsichuan.436.b"
+		name = NKRsichuan.436.b
+		army_experience = 50
+		add_command_power = 50
+		add_power_balance_value = {
+			id = SZC_YCP_power_balance
+			value = -0.012
+			tooltip_side = SZC_bop_li_winning_side
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.03
+		}
 	}
 }
 
-country_event = { #
+country_event = { #军政部改组
 	id = NKRsichuan.437
 	title = NKRsichuan.437.t
 	desc = NKRsichuan.437.d
@@ -15780,13 +15806,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#国家统一的重要一步。
 		log = "[GetLogInfo]: event NKRsichuan.437 option NKRsichuan.437.a"
 		name = NKRsichuan.437.a
 	}
 }
 
-country_event = { #
+country_event = { #北伐宣言
 	id = NKRsichuan.438
 	title = NKRsichuan.438.t
 	desc = NKRsichuan.438.d
@@ -15796,13 +15822,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#前进！
 		log = "[GetLogInfo]: event NKRsichuan.438 option NKRsichuan.438.a"
 		name = NKRsichuan.438.a
 	}
 }
 
-country_event = { #
+country_event = { #现代化大方向
 	id = NKRsichuan.439
 	title = NKRsichuan.439.t
 	desc = NKRsichuan.439.d
@@ -15812,13 +15838,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#电的力量啊。
 		log = "[GetLogInfo]: event NKRsichuan.439 option NKRsichuan.439.a"
 		name = NKRsichuan.439.a
 	}
 }
 
-country_event = { #
+country_event = { #工人救国联合会
 	id = NKRsichuan.440
 	title = NKRsichuan.440.t
 	desc = NKRsichuan.440.d
@@ -15828,13 +15854,14 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#工人是全民革命不可或缺的一环。
 		log = "[GetLogInfo]: event NKRsichuan.440 option NKRsichuan.440.a"
 		name = NKRsichuan.440.a
+		add_political_power = 25
 	}
 }
 
-country_event = { #
+country_event = { #国工两党属工会不满
 	id = NKRsichuan.441
 	title = NKRsichuan.441.t
 	desc = NKRsichuan.441.d
@@ -15844,13 +15871,19 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#得提着个心眼。
 		log = "[GetLogInfo]: event NKRsichuan.441 option NKRsichuan.441.a"
 		name = NKRsichuan.441.a
+		add_stability = -0.05
+		add_war_support = -0.05
+		country_event = {
+			id = NKRsichuan.442
+			days = 20
+		}
 	}
 }
 
-country_event = { #
+country_event = { #王思懿事件
 	id = NKRsichuan.442
 	title = NKRsichuan.442.t
 	desc = NKRsichuan.442.d
@@ -15860,13 +15893,65 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#激进的怒吼盖过了理智的声音
 		log = "[GetLogInfo]: event NKRsichuan.442 option NKRsichuan.442.a"
 		name = NKRsichuan.442.a
+		if = {
+			limit = {
+				power_balance_value = {
+					id = SZC_YCP_power_balance
+					value > 0
+				}
+			}
+			add_power_balance_value = {
+				id = SZC_YCP_power_balance
+				value = -0.10
+				tooltip_side = SZC_bop_li_winning_side
+			}
+		}
+		if = {
+			limit = {
+				power_balance_value = {
+					id = SZC_YCP_power_balance
+					value < 0
+				}
+			}
+			add_power_balance_value = {
+				id = SZC_YCP_power_balance
+				value = 0.10
+				tooltip_side = SZC_bop_zeng_winning_side
+			}
+		}
+		add_stability = -0.01
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.443
+				days = 3
+			}
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.02
+		}
+	}
+	option = {#冷静最终占据了主流。
+		log = "[GetLogInfo]: event NKRsichuan.442 option NKRsichuan.442.b"
+		name = NKRsichuan.442.b
+		add_political_power = -50
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.444
+				days = 3
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #报复
 	id = NKRsichuan.443
 	title = NKRsichuan.443.t
 	desc = NKRsichuan.443.d
@@ -15876,13 +15961,48 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#唉！再怎么说也是活生生的人命啊。
 		log = "[GetLogInfo]: event NKRsichuan.443 option NKRsichuan.443.a"
 		name = NKRsichuan.443.a
+		add_manpower = -6
+		if = {
+			limit = {
+				power_balance_value = {
+					id = SZC_YCP_power_balance
+					value > 0
+				}
+			}
+			add_power_balance_value = {
+				id = SZC_YCP_power_balance
+				value = -0.05
+				tooltip_side = SZC_bop_li_winning_side
+			}
+		}
+		if = {
+			limit = {
+				power_balance_value = {
+					id = SZC_YCP_power_balance
+					value < 0
+				}
+			}
+			add_power_balance_value = {
+				id = SZC_YCP_power_balance
+				value = 0.05
+				tooltip_side = SZC_bop_zeng_winning_side
+			}
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.01
+		}
 	}
 }
 
-country_event = { #
+country_event = { #左舜生谈人道主义
 	id = NKRsichuan.444
 	title = NKRsichuan.444.t
 	desc = NKRsichuan.444.d
@@ -15892,13 +16012,43 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#好在没出人命。
 		log = "[GetLogInfo]: event NKRsichuan.444 option NKRsichuan.444.a"
-		name = NKRsichuan.44374.a
+		name = NKRsichuan.444.a
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.05
+		}
+		if = {
+			limit = {
+				power_balance_value = {
+					id = SZC_YCP_power_balance
+					value < 0
+				}
+			}
+			add_power_balance_value = {
+				id = SZC_YCP_power_balance
+				value = -0.08
+				tooltip_side = SZC_bop_li_winning_side
+			}
+		}
+		if = {
+			limit = {
+				power_balance_value = {
+					id = SZC_YCP_power_balance
+					value > 0
+				}
+			}
+			add_power_balance_value = {
+				id = SZC_YCP_power_balance
+				value = 0.08
+				tooltip_side = SZC_bop_zeng_winning_side
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #科学和实验室
 	id = NKRsichuan.445
 	title = NKRsichuan.445.t
 	desc = NKRsichuan.445.d
@@ -15908,13 +16058,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#中国的一切滥污，只能用科学洗涤！
 		log = "[GetLogInfo]: event NKRsichuan.445 option NKRsichuan.445.a"
 		name = NKRsichuan.445.a
 	}
 }
 
-country_event = { #
+country_event = { #党费自由
 	id = NKRsichuan.446
 	title = NKRsichuan.446.t
 	desc = NKRsichuan.446.d
@@ -15927,10 +16077,11 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.446 option NKRsichuan.4466.a"
 		name = NKRsichuan.446.a
+		add_political_power = 150
 	}
 }
 
-country_event = { #
+country_event = { #青年党的坚持
 	id = NKRsichuan.447
 	title = NKRsichuan.447.t
 	desc = NKRsichuan.447.d
@@ -15940,13 +16091,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#台下热泪盈眶。
 		log = "[GetLogInfo]: event NKRsichuan.447 option NKRsichuan.447.a"
 		name = NKRsichuan.447.a
 	}
 }
 
-country_event = { #
+country_event = { #三色堇的真名
 	id = NKRsichuan.448
 	title = NKRsichuan.448.t
 	desc = NKRsichuan.448.d
@@ -15956,13 +16107,14 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#我们在创造历史。
 		log = "[GetLogInfo]: event NKRsichuan.448 option NKRsichuan.448.a"
 		name = NKRsichuan.448.a
+		add_political_power = 1
 	}
 }
 
-country_event = { #
+country_event = { #工业现代化
 	id = NKRsichuan.449
 	title = NKRsichuan.449.t
 	desc = NKRsichuan.449.d
@@ -15972,9 +16124,35 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#我们的民用工业是重点所需。
 		log = "[GetLogInfo]: event NKRsichuan.449 option NKRsichuan.449.a"
 		name = NKRsichuan.449.a
+		add_one_random_civilian_factory = yes
+		add_one_random_civilian_factory = yes
+		add_one_random_civilian_factory = yes
+		add_power_balance_value = {
+			id = SZC_YCP_power_balance
+			value = -0.08
+			tooltip_side = SZC_bop_li_winning_side
+		}
+	}
+	option = {#没有强大的军工业如何继续革命？！
+		log = "[GetLogInfo]: event NKRsichuan.449 option NKRsichuan.449.b"
+		name = NKRsichuan.449.b
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_one_random_military_factory = yes
+		add_power_balance_value = {
+			id = SZC_YCP_power_balance
+			value = 0.08
+			tooltip_side = SZC_bop_zeng_winning_side
+		}
+	}
+	option = {#不妨选一个相对平衡的方案。
+		log = "[GetLogInfo]: event NKRsichuan.449 option NKRsichuan.449.c"
+		name = NKRsichuan.449.c
+		add_one_random_civilian_factory = yes
+		add_one_random_military_factory = yes
 	}
 }
 

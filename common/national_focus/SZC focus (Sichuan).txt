@@ -11341,8 +11341,7 @@ focus_tree = {
 		relative_position_id = SZC_pan_the_new_sun_rises
 
 		allow_branch = {
-			always = yes
-			# has_country_flag = NKRSZC_CDLpath_phase2
+			has_country_flag = NKRSZC_CDLpath_phase2
 		}
 
 		select_effect = {
@@ -17001,7 +17000,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = SZC_YCP_statism_arise
 
-		# visible = {
+		# allow_branch = {
 		# 	has_completed_focus = SZC_YCP_the_ninth_congress_of_YCP
 		# }
 
@@ -17210,6 +17209,24 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_time_to_act"
+			army_experience = 25
+
+			add_doctrine_cost_reduction = {
+				name = SZC_YCP_time_to_act
+				cost_reduction = 0.75
+				uses = 2
+				category = land_doctrine
+			}
+			
+			country_event = {
+				id = NKRsichuan.435
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.436
+					days = 5
+				}
+			}
 		}
 	}
 
@@ -17228,6 +17245,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_central_military_commission"
+			add_ideas = {
+				SZC_YCP_CMC_idea
+			}
+			country_event = {
+				id = NKRsichuan.437
+			}
 		}
 	}
 
@@ -17246,6 +17269,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_take_southernwest"
+			activate_targeted_decision = { decision = china_demand_submission target = YUN }
+			activate_targeted_decision = { decision = china_demand_submission target = HNN }
 		}
 	}
 
@@ -17264,6 +17289,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_march_east"
+			activate_targeted_decision = { decision = china_demand_submission target = GXC }
+			activate_targeted_decision = { decision = china_demand_submission target = CHI }
+			activate_targeted_decision = { decision = china_demand_submission target = ANQ }
+			activate_targeted_decision = { decision = china_demand_submission target = LEP }
+			activate_targeted_decision = { decision = china_demand_submission target = SHD }
+			hidden_effect = {
+				if = {
+					SHC = {
+						exist = yes
+					}
+					activate_targeted_decision = { decision = china_demand_submission target = SHC }
+				}
+			}
 		}
 	}
 
@@ -17285,6 +17323,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_north_expedition"
+			activate_targeted_decision = { decision = china_demand_submission target = QIE }
+			activate_targeted_decision = { decision = china_demand_submission target = SHX }
+			country_event = {
+				id = NKRsichuan.438
+			}
+			add_timed_idea = {
+				idea = SZC_YCP_revolution_against_old_idea
+				days = 180
+			}
 		}
 	}
 
@@ -17303,6 +17350,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_energy_for_people"
+			country_event = {
+				id = NKRsichuan.439
+			}
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 		}
 	}
 
@@ -17321,6 +17375,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_construct_sichuan"
+			unlock_decision_category_tooltip = SZC_grand_sichuan_plan_category
+			set_country_flag = SZC_grand_sichuan_plan_available
+			country_event = {
+				id = NKRsichuan.440
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.441
+					days = 10
+				}
+			}
 		}
 	}
 
@@ -17339,6 +17404,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_liberate_knowledge"
+			add_research_slot = 1
+			add_ideas = {
+				SZC_YCP_liberate_mind_idea
+			}
+			country_event = {
+				id = NKRsichuan.445
+			}
 		}
 	}
 
@@ -17351,12 +17423,29 @@ focus_tree = {
 		y = 3
 		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
 
+		select_effect = {
+			country_event = {
+				id = NKRsichuan.446
+				days = 3
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_construct_sichuan
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_guarantee_budget_balance"
+			country_event = {
+				id = NKRsichuan.447
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = electronics
+				name = SZC_YCP_guarantee_budget_balance
+			}
 		}
 	}
 
@@ -17378,18 +17467,43 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_tide_of_modernization"
+			country_event = {
+				id = NKRsichuan.449
+			}
+			add_tech_bonus = {
+				name = SZC_YCP_tide_of_modernization
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+			add_one_random_civilian_factory = yes
+			add_one_random_military_factory = yes
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.448
+					days = 3
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = SZC_YCP_wave_of_history_victory_of_ycp
 		icon = GFX_goal_SZC_YCP_wave_of_history_victory_of_ycp
-		cost = 3
+		cost = 5
 
 		x = 0
 		y = 5
 		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
 
+		available = {
+			controls_state = 613
+			controls_state = 608
+		}
+
+		select_effect = {
+			
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_north_expedition
@@ -17400,6 +17514,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_wave_of_history_victory_of_ycp"
+			custom_effect_tooltip = SZC_YCP_wave_of_history_victory_of_ycp_tooltip
+			set_country_flag = NKRSZC_YCPpath_phase2
 		}
 	}
 
