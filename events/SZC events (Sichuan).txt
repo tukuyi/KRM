@@ -6,6 +6,7 @@
 add_namespace = sichuan
 add_namespace = NKRsichuan
 add_namespace = NKRsichuanmisc
+add_namespace = SZCDEBUG
 
 ### System Events ###
 
@@ -9137,22 +9138,22 @@ country_event = { #中国青年党浮出水面
 		log = "[GetLogInfo]: event NKRsichuan.31 option NKRsichuan.31.a"
 		name = NKRsichuan.31.a
 		SZC_li_huang = {
-			promote_character = authoritarian_democrat_new_legalism_subtype
+			promote_character = authoritarian_democrat_statist_subtype
 		}
 		SZC_zeng_qi = {
-			promote_character = paternal_autocrat_new_legalism_subtype
+			promote_character = paternal_autocrat_statist_subtype
 		}
 		SZC_zhang_bolun = {
 			promote_character = market_liberal_subtype
 		}
 		SZC_xia_taosheng = {
-			promote_character = social_conservative_new_legalism_subtype
+			promote_character = social_conservative_statist_subtype
 		}
 		SZC_jiang_yungang = {
-			promote_character = national_populist_new_legalism_subtype
+			promote_character = national_populist_strum_drang_statist_subtype
 		}
 		SZC_zuo_shunsheng = {
-			promote_character = social_liberal_new_legalism_subtype
+			promote_character = social_liberal_constitutional_statist_subtype
 		}
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -16553,3 +16554,53 @@ unit_leader_event = {
 	}
 }
 
+
+
+
+country_event = { #DEBUG-意识形态切换
+	id = SZCDEBUG.1
+	title = SZCDEBUG.1.t
+	desc = SZCDEBUG.1.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		name = SZCDEBUG.1.a
+		set_country_leader_ideology = social_liberal_constitutional_statist_subtype
+	}
+	option = {#
+		name = SZCDEBUG.1.b
+		set_country_leader_ideology = social_conservative_statist_subtype
+	}
+	option = {#
+		name = SZCDEBUG.1.c
+		set_country_leader_ideology = social_conservative_anarchist_statist_subtype
+	}
+	option = {#
+		name = SZCDEBUG.1.e
+		set_country_leader_ideology = authoritarian_democrat_statist_subtype
+	}
+	option = {#
+		name = SZCDEBUG.1.f
+		set_country_leader_ideology = authoritarian_democrat_new_legalist_statist_subtype
+	}
+	option = {#
+		name = SZCDEBUG.1.g
+		set_country_leader_ideology = paternal_autocrat_statist_subtype
+	}
+	option = {#
+		name = SZCDEBUG.1.h
+		set_country_leader_ideology = paternal_autocrat_revolutionary_statist_subtype
+	}
+	option = {#
+		name = SZCDEBUG.1.i
+		set_country_leader_ideology = national_populist_strum_drang_statist_subtype
+	}
+	option = {#
+		name = SZCDEBUG.1.j
+		set_country_leader_ideology = national_populist_national_reconstructist_subtype
+	}
+}
