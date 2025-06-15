@@ -59,6 +59,12 @@ BCN_set_leader_effect = {
 	save_global_event_target_as = BCN_leader
 }
 
+YCP_set_leader_effect = {
+	#CHNbritish
+	custom_effect_tooltip = YCP_set_leader_tt
+	save_global_event_target_as = YCP_leader
+}
+
 set_potential_national_government = {
 
 	#DEV NOTE - MAKE SURE YOU DO NOT USE THIS EFFECT WITHOUT CHECKING IF CHN_no_aligned_unifier_exists_trigger is TRUE FIRST, OTHERWISE WILL DOUBLE UP TAG ALIASES
@@ -116,6 +122,10 @@ set_potential_national_government = {
 		else_if = {
 			limit = { china_alignment_CHNbritish = yes }
 			BCN_set_leader_effect = yes
+		}
+		else_if = {
+			limit = { china_alignment_statist = yes }
+			YCP_set_leader_effect = yes
 		}
 
 		if = {
@@ -2978,6 +2988,9 @@ china_set_character_alignment_CHNsyndicalist = {
 china_set_character_alignment_CHNbritish = {
 	event_target:system = { china_alignment_CHNbritish = { set_variable = { PREV.PREV.china_alignment = THIS } } }
 }
+china_set_character_alignment_statist = {
+	event_target:system = { china_alignment_statist = { set_variable = { PREV.PREV.china_alignment = THIS } } }
+}
 china_set_character_alignment_unaligned = {
 	clear_variable = china_alignment
 }
@@ -3044,6 +3057,18 @@ CHN_calculate_china_alignment_gui_effect = {
 	if = {
 		limit = { country_exists = RKT } #Right Kuomintang
 		RKT = { CHN_build_faction_alignment_array = yes }
+	}
+	if = {
+		limit = { country_exists = BCN } #British
+		BCN = { CHN_build_faction_alignment_array = yes }
+	}
+	if = {
+		limit = { country_exists = CSP } #Syndicalist
+		CSP = { CHN_build_faction_alignment_array = yes }
+	}
+	if = {
+		limit = { country_exists = YCP } #statist
+		YCP = { CHN_build_faction_alignment_array = yes }
 	}
 	if = {
 		limit = { country_exists = NPA } #National Protection Alliance

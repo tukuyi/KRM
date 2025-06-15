@@ -1249,6 +1249,13 @@ defined_text = {
 		}
 		localization_key = "GFX_china_CHNbritish_CHN"
 	}
+	text = {
+		trigger = {
+			check_variable = { china_alignment_leader = YCP }
+			check_variable = { china_alignment_leader = CHN }
+		}
+		localization_key = "GFX_china_statist"
+	}
 	# Non-CHN Alignment
 	text = {
 		trigger = { check_variable = { china_alignment_leader = NZH } }
@@ -1293,6 +1300,10 @@ defined_text = {
 	text = {
 		trigger = { check_variable = { china_alignment_leader = BCN } }
 		localization_key = "GFX_china_CHNbritish"
+	}
+	text = {
+		trigger = { check_variable = { china_alignment_leader = YCP } }
+		localization_key = "GFX_china_statist"
 	}
 	# CHN Independent Alignment
 	text = {
@@ -1365,6 +1376,10 @@ defined_text = {
 	text = {
 		trigger = { check_variable = { china_alignment_leader = BCN } }
 		localization_key = china_faction_tenets_CHNbritish_desc
+	}
+	text = {
+		trigger = { check_variable = { china_alignment_leader = YCP } }
+		localization_key = china_faction_tenets_statist_desc
 	}
 	text = {
 		localization_key = china_faction_tenets_independent_desc

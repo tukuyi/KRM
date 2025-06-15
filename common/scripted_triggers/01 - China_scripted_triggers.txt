@@ -62,6 +62,9 @@ china_character_is_CHNsyndicalist = {
 china_character_is_CHNbritish = {
 	event_target:system = { china_alignment_CHNbritish = { check_variable = { PREV.PREV.china_alignment = THIS } } }
 }
+china_character_is_statist = {
+	event_target:system = { china_alignment_statist = { check_variable = { PREV.PREV.china_alignment = THIS } } }
+}
 
 china_alignment_northern_zhili = {
 	var:country_leader = { china_character_is_northern_zhili = yes }
@@ -98,6 +101,9 @@ china_alignment_CHNbritish = {
 }
 china_alignment_CHNsyndicalist = {
 	var:country_leader = { china_character_is_CHNsyndicalist = yes }
+}
+china_alignment_statist = {
+	var:country_leader = { china_character_is_statist = yes }
 }
 
 china_is_aligned_with_northern_zhili = {
@@ -230,6 +236,15 @@ china_is_aligned_with_CHNbritish = {
 	}
 }
 
+china_is_aligned_with_statist = {
+	custom_trigger_tooltip = {
+		tooltip = china_is_aligned_with_statist
+		OR = {
+			china_alignment_statist = yes
+		}
+	}
+}
+
 
 china_is_aligned_with_republicans = {
 	custom_trigger_tooltip = {
@@ -239,6 +254,7 @@ china_is_aligned_with_republicans = {
 			china_is_aligned_with_right_kmt = yes
 			china_is_aligned_with_federalists = yes
 			china_is_aligned_with_CHNsyndicalist = yes
+			china_is_aligned_with_statist = yes
 		}
 	}
 }
@@ -304,6 +320,10 @@ china_compatible_alignment_to_PREV = {
 			china_is_aligned_with_left_kmt = yes
 			PREV = { china_is_aligned_with_CHNsyndicalist = yes }
 		}
+		AND = {
+			china_is_aligned_with_statist = yes
+			PREV = { china_is_aligned_with_statist = yes }
+		}
 	}
 }
 
@@ -349,6 +369,10 @@ china_compatible_alignment_to_FROM = {
 		AND = {
 			china_is_aligned_with_left_kmt = yes
 			FROM = { china_is_aligned_with_CHNsyndicalist = yes }
+		}
+		AND = {
+			china_is_aligned_with_statist = yes
+			PREV = { china_is_aligned_with_statist = yes }
 		}
 	}
 }
@@ -878,6 +902,16 @@ CHN_no_aligned_unifier_exists_trigger = {
 			OR = {
 				NOT = { country_exists = BCN }
 				tag = BCN
+			}
+		}
+	}
+	else_if = {
+		limit = { china_alignment_statist = yes }
+		custom_trigger_tooltip = {
+			tooltip = CHN_No_Other_YCP_tt
+			OR = {
+				NOT = { country_exists = YCP }
+				tag = YCP
 			}
 		}
 	}
