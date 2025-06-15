@@ -16604,3 +16604,26 @@ country_event = { #DEBUG-意识形态切换
 		set_country_leader_ideology = national_populist_national_reconstructist_subtype
 	}
 }
+
+
+country_event = { #DEBUG-wtfjiang
+	id = SZCDEBUG.2
+	title = SZCDEBUG.2.t
+	desc = SZCDEBUG.2.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		name = SZCDEBUG.1.a
+		SZC_jiang_yungang = {
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_SZC_jiang_yungang_WTF
+				}
+			}
+		}
+	}
+}
