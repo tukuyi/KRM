@@ -15736,6 +15736,16 @@ country_event = { #木槿花丛
 		log = "[GetLogInfo]: event NKRsichuan.434 option NKRsichuan.434.a"
 		name = NKRsichuan.434.a
 		add_political_power = -1
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.451
+				days = 30
+			}
+			country_event = {
+				id = NKRsichuan.450
+				days = 49
+			}
+		}
 	}
 }
 
@@ -16157,7 +16167,7 @@ country_event = { #工业现代化
 	}
 }
 
-country_event = { #
+country_event = { #《死水》
 	id = NKRsichuan.450
 	title = NKRsichuan.450.t
 	desc = NKRsichuan.450.d
@@ -16167,13 +16177,14 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#“寡妇”兄好诗！
 		log = "[GetLogInfo]: event NKRsichuan.450 option NKRsichuan.450.a"
 		name = NKRsichuan.450.a
+		add_political_power = 10
 	}
 }
 
-country_event = { #
+country_event = { #国家主义妇女运动
 	id = NKRsichuan.451
 	title = NKRsichuan.451.t
 	desc = NKRsichuan.451.d
@@ -16183,13 +16194,14 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#国家解放离不开妇女解放！
 		log = "[GetLogInfo]: event NKRsichuan.451 option NKRsichuan.451.a"
 		name = NKRsichuan.451.a
+		add_political_power = 10
 	}
 }
 
-country_event = { #
+country_event = { #华南方略
 	id = NKRsichuan.452
 	title = NKRsichuan.452.t
 	desc = NKRsichuan.452.d
@@ -16199,13 +16211,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#让我们来看看...
 		log = "[GetLogInfo]: event NKRsichuan.452 option NKRsichuan.452.a"
 		name = NKRsichuan.452.a
 	}
 }
 
-country_event = { #
+country_event = { #无能为力
 	id = NKRsichuan.453
 	title = NKRsichuan.453.t
 	desc = NKRsichuan.453.d
@@ -16215,13 +16227,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#唯有一个选择，战。
 		log = "[GetLogInfo]: event NKRsichuan.453 option NKRsichuan.453.a"
 		name = NKRsichuan.453.a
 	}
 }
 
-country_event = { #
+country_event = { #权力空窗期
 	id = NKRsichuan.454
 	title = NKRsichuan.454.t
 	desc = NKRsichuan.454.d
@@ -16231,13 +16243,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#值得一试。
 		log = "[GetLogInfo]: event NKRsichuan.454 option NKRsichuan.454.a"
 		name = NKRsichuan.45374.a
 	}
 }
 
-country_event = { #
+country_event = { #孤立无援的反租界派
 	id = NKRsichuan.455
 	title = NKRsichuan.455.t
 	desc = NKRsichuan.455.d
@@ -16247,13 +16259,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#值得一试。
 		log = "[GetLogInfo]: event NKRsichuan.455 option NKRsichuan.455.a"
 		name = NKRsichuan.455.a
 	}
 }
 
-country_event = { #
+country_event = { #成都的消息
 	id = NKRsichuan.456
 	title = NKRsichuan.456.t
 	desc = NKRsichuan.456.d
@@ -16263,13 +16275,84 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
-		log = "[GetLogInfo]: event NKRsichuan.456 option NKRsichuan.4566.a"
+	option = {#很好，我们同意。
+		log = "[GetLogInfo]: event NKRsichuan.456 option NKRsichuan.456.a"
 		name = NKRsichuan.456.a
+		
+		ai_chance = {
+			base = 50
+			modifier = { #Measure Military Strength
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.75
+				}
+			}
+			modifier = { #Measure Military Strength
+				factor = 3
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.5
+				}
+			}
+			modifier = { #Feds don't want multiple wars
+				factor = 3
+				has_war = yes
+			}
+			modifier = { #If the political situation in China has drastically changed
+				factor = 5
+				OR = {
+					QIE = { exists = no }
+					FNG = { exists = no }
+					any_other_country = {
+						is_chinese_tag = yes
+						has_war_with = JAP
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				SZC = { SZC_zuo_shunsheng = { is_second_in_command = yes } }
+			}
+		}
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+		set_country_flag = SZC_LEP_NAP_flag
+		FROM = { hidden_effect = { country_event = { id = NKRsichuan.457 days = 3 } } } #[FROM.GetNameDefCap] Accepts Our Pact!
+	}
+
+	option = {#他算个鸡巴！
+		log = "[GetLogInfo]: event NKRsichuan.456 option NKRsichuan.456.b"
+		name = NKRsichuan.457.b
+		ai_chance = {
+			base = 50
+			modifier = { #Measure Military Strength
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio > 1.3
+				}
+			}
+			modifier = { #Measure Military Strength
+				factor = 3
+				strength_ratio = {
+					tag = FROM
+					ratio > 2
+				}
+			}
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_hates_govt
+		}
+		FROM = { hidden_effect = { country_event = { id = NKRsichuan.458 days = 3 } } } #[FROM.GetNameDefCap] Rejects Our Pact!
 	}
 }
 
-country_event = { #
+country_event = { #LEP接受我方条约！
 	id = NKRsichuan.457
 	title = NKRsichuan.457.t
 	desc = NKRsichuan.457.d
@@ -16279,13 +16362,21 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#必须小心留意...
 		log = "[GetLogInfo]: event NKRsichuan.457 option NKRsichuan.457.a"
 		name = NKRsichuan.457.a
+		effect_tooltip = {
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		add_popularity = { ideology = social_liberal popularity = 0.03 }
 	}
 }
 
-country_event = { #
+country_event = { #LEP拒绝我方条约！
 	id = NKRsichuan.458
 	title = NKRsichuan.458.t
 	desc = NKRsichuan.458.d
@@ -16295,13 +16386,17 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#军阀本性！
 		log = "[GetLogInfo]: event NKRsichuan.458 option NKRsichuan.458.a"
 		name = NKRsichuan.458.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_hates_govt
+		}
 	}
 }
 
-country_event = { #
+country_event = { #成都的消息
 	id = NKRsichuan.459
 	title = NKRsichuan.459.t
 	desc = NKRsichuan.459.d
@@ -16311,13 +16406,85 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#青年党和我们的议程一致。
 		log = "[GetLogInfo]: event NKRsichuan.459 option NKRsichuan.459.a"
 		name = NKRsichuan.459.a
+		
+		
+		ai_chance = {
+			base = 50
+			modifier = { #Measure Military Strength
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.75
+				}
+			}
+			modifier = { #Measure Military Strength
+				factor = 3
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.5
+				}
+			}
+			modifier = { #Feds don't want multiple wars
+				factor = 3
+				has_war = yes
+			}
+			modifier = { #If the political situation in China has drastically changed
+				factor = 5
+				OR = {
+					QIE = { exists = no }
+					FNG = { exists = no }
+					any_other_country = {
+						is_chinese_tag = yes
+						has_war_with = JAP
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				SZC = { SZC_zuo_shunsheng = { is_second_in_command = yes } }
+			}
+		}
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+		set_country_flag = SZC_ANQ_NAP_flag
+		FROM = { hidden_effect = { country_event = { id = NKRsichuan.460 days = 3 } } } #[FROM.GetNameDefCap] Accepts Our Pact!
+	}
+
+	option = {#一群臭书生还指挥到我头上来了？
+		log = "[GetLogInfo]: event NKRsichuan.456 option NKRsichuan.456.b"
+		name = NKRsichuan.457.b
+		ai_chance = {
+			base = 50
+			modifier = { #Measure Military Strength
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio > 1.3
+				}
+			}
+			modifier = { #Measure Military Strength
+				factor = 3
+				strength_ratio = {
+					tag = FROM
+					ratio > 2
+				}
+			}
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_hates_govt
+		}
+		FROM = { hidden_effect = { country_event = { id = NKRsichuan.461 days = 3 } } } #[FROM.GetNameDefCap] Rejects Our Pact!
 	}
 }
 
-country_event = { #
+country_event = { #ANQ接受我方条约！
 	id = NKRsichuan.460
 	title = NKRsichuan.460.t
 	desc = NKRsichuan.460.d
@@ -16327,13 +16494,21 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#陈长官做出了正确的抉择。
 		log = "[GetLogInfo]: event NKRsichuan.460 option NKRsichuan.460.a"
 		name = NKRsichuan.460.a
+		effect_tooltip = {
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		add_popularity = { ideology = social_liberal popularity = 0.03 }
 	}
 }
 
-country_event = { #
+country_event = { #ANQ拒绝我方条约！
 	id = NKRsichuan.461
 	title = NKRsichuan.461.t
 	desc = NKRsichuan.461.d
@@ -16343,13 +16518,17 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#军阀本性！
 		log = "[GetLogInfo]: event NKRsichuan.461 option NKRsichuan.461.a"
 		name = NKRsichuan.461.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_hates_govt
+		}
 	}
 }
 
-country_event = { #
+country_event = { #联省大联合？
 	id = NKRsichuan.462
 	title = NKRsichuan.462.t
 	desc = NKRsichuan.462.d
@@ -16359,13 +16538,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#发出我们的邀请！
 		log = "[GetLogInfo]: event NKRsichuan.462 option NKRsichuan.462.a"
 		name = NKRsichuan.462.a
 	}
 }
 
-country_event = { #
+country_event = { #联省大联合？
 	id = NKRsichuan.463
 	title = NKRsichuan.463.t
 	desc = NKRsichuan.463.d
@@ -16375,13 +16554,86 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	
+	option = {#北伐大计必须共和派联合起来。
 		log = "[GetLogInfo]: event NKRsichuan.463 option NKRsichuan.463.a"
 		name = NKRsichuan.463.a
+		
+		
+		ai_chance = {
+			base = 50
+			modifier = { #Measure Military Strength
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.75
+				}
+			}
+			modifier = { #Measure Military Strength
+				factor = 3
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.5
+				}
+			}
+			modifier = { #Feds don't want multiple wars
+				factor = 3
+				has_war = yes
+			}
+			modifier = { #If the political situation in China has drastically changed
+				factor = 5
+				OR = {
+					QIE = { exists = no }
+					FNG = { exists = no }
+					any_other_country = {
+						is_chinese_tag = yes
+						has_war_with = JAP
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				SZC = { SZC_zuo_shunsheng = { is_second_in_command = yes } }
+			}
+		}
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+		set_country_flag = SZC_FED_NAP_flag
+		FROM = { hidden_effect = { country_event = { id = NKRsichuan.464 days = 3 } } } #[FROM.GetNameDefCap] Accepts Our Pact!
+	}
+
+	option = {#我看他们归根结底就是一群独裁者！
+		log = "[GetLogInfo]: event NKRsichuan.463 option NKRsichuan.463.b"
+		name = NKRsichuan.463.b
+		ai_chance = {
+			base = 50
+			modifier = { #Measure Military Strength
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio > 1.3
+				}
+			}
+			modifier = { #Measure Military Strength
+				factor = 3
+				strength_ratio = {
+					tag = FROM
+					ratio > 2
+				}
+			}
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_hates_govt
+		}
+		FROM = { hidden_effect = { country_event = { id = NKRsichuan.465 days = 3 } } } #[FROM.GetNameDefCap] Rejects Our Pact!
 	}
 }
 
-country_event = { #
+country_event = { #FED接受我方条约！
 	id = NKRsichuan.464
 	title = NKRsichuan.464.t
 	desc = NKRsichuan.464.d
@@ -16391,13 +16643,21 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#共和派联合起来！
 		log = "[GetLogInfo]: event NKRsichuan.464 option NKRsichuan.464.a"
-		name = NKRsichuan.46374.a
+		name = NKRsichuan.464.a
+		effect_tooltip = {
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		add_popularity = { ideology = social_liberal popularity = 0.03 }
 	}
 }
 
-country_event = { #
+country_event = { #FED拒绝我方条约！
 	id = NKRsichuan.465
 	title = NKRsichuan.465.t
 	desc = NKRsichuan.465.d
@@ -16407,9 +16667,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#军阀本性！
 		log = "[GetLogInfo]: event NKRsichuan.465 option NKRsichuan.465.a"
 		name = NKRsichuan.465.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_hates_govt
+		}
 	}
 }
 
