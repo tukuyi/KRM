@@ -209,7 +209,7 @@ china_is_aligned_with_kmt = {
 
 
 china_is_aligned_with_CHNsyndicalist = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_CHNsyndicalist
 		OR = {
 			china_alignment_CHNsyndicalist = yes
@@ -219,7 +219,7 @@ china_is_aligned_with_CHNsyndicalist = {
 }
 
 china_is_aligned_with_geacps = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_geacps
 		OR = {
 			china_is_aligned_with_geacps = yes
@@ -228,7 +228,7 @@ china_is_aligned_with_geacps = {
 }
 
 china_is_aligned_with_CHNbritish = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_CHNbritish
 		OR = {
 			china_alignment_CHNbritish = yes
@@ -237,7 +237,7 @@ china_is_aligned_with_CHNbritish = {
 }
 
 china_is_aligned_with_statist = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_statist
 		OR = {
 			china_alignment_statist = yes
@@ -265,7 +265,7 @@ china_is_unaligned = {
 }
 
 china_is_aligned = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_unaligned_NOT
 		NOT = { check_variable = { country_leader:china_alignment = 0 } }
 	}
@@ -885,7 +885,7 @@ CHN_no_aligned_unifier_exists_trigger = {
 	}
 	else_if = {
 		limit = { china_alignment_CHNsyndicalist = yes }
-		custom_trigger_tooltip = {
+		custom_override_tooltip = {
 			tooltip = CHN_No_Other_CSP_tt
 			OR = {
 				NOT = { country_exists = CSP }
@@ -895,7 +895,7 @@ CHN_no_aligned_unifier_exists_trigger = {
 	}
 	else_if = {
 		limit = { china_alignment_CHNbritish = yes }
-		custom_trigger_tooltip = {
+		custom_override_tooltip = {
 			tooltip = CHN_No_Other_BCN_tt
 			OR = {
 				NOT = { country_exists = BCN }
@@ -905,7 +905,7 @@ CHN_no_aligned_unifier_exists_trigger = {
 	}
 	else_if = {
 		limit = { china_alignment_statist = yes }
-		custom_trigger_tooltip = {
+		custom_override_tooltip = {
 			tooltip = CHN_No_Other_YCP_tt
 			OR = {
 				NOT = { country_exists = YCP }
