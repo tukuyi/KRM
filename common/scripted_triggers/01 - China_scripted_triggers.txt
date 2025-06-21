@@ -5,7 +5,7 @@ is_fully_controlled_by_ROOT_and_is_not_core_of_ROOT = {
 }
 
 german_alligned_chinese_tag_controlled = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = german_alligned_chinese_tag_controlled_tooltip
 		controller = {
 			OR = {
@@ -107,7 +107,7 @@ china_alignment_statist = {
 }
 
 china_is_aligned_with_northern_zhili = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_northern_zhili
 		OR = {
 			china_alignment_northern_zhili = yes
@@ -117,7 +117,7 @@ china_is_aligned_with_northern_zhili = {
 }
 
 china_is_aligned_with_southern_zhili = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_southern_zhili
 		OR = {
 			china_alignment_southern_zhili = yes
@@ -127,7 +127,7 @@ china_is_aligned_with_southern_zhili = {
 }
 
 china_is_aligned_with_zhili = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_zhili
 		OR = {
 			china_is_aligned_with_northern_zhili = yes
@@ -137,7 +137,7 @@ china_is_aligned_with_zhili = {
 }
 
 china_is_aligned_with_manchu = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_manchu
 		OR = {
 			china_alignment_manchu_qing = yes
@@ -147,7 +147,7 @@ china_is_aligned_with_manchu = {
 }
 
 china_is_aligned_with_fengtian = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_fengtian
 		OR = {
 			china_alignment_fengtian = yes
@@ -157,7 +157,7 @@ china_is_aligned_with_fengtian = {
 }
 
 china_is_aligned_with_beiyang = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_beiyang
 		OR = {
 			china_is_aligned_with_zhili = yes
@@ -168,7 +168,7 @@ china_is_aligned_with_beiyang = {
 }
 
 china_is_aligned_with_federalists = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_federalists
 		OR = {
 			china_alignment_chinese_southern_republican = yes
@@ -178,7 +178,7 @@ china_is_aligned_with_federalists = {
 }
 
 china_is_aligned_with_left_kmt = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_left_kmt
 		OR = {
 			china_alignment_chinese_southern_republican = yes
@@ -188,7 +188,7 @@ china_is_aligned_with_left_kmt = {
 }
 
 china_is_aligned_with_right_kmt = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_right_kmt
 		OR = {
 			china_alignment_chinese_southern_republican = yes
@@ -198,7 +198,7 @@ china_is_aligned_with_right_kmt = {
 }
 
 china_is_aligned_with_kmt = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_kmt
 		OR = {
 			china_is_aligned_with_left_kmt = yes
@@ -247,20 +247,18 @@ china_is_aligned_with_statist = {
 
 
 china_is_aligned_with_republicans = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_republicans
 		OR = {
 			china_is_aligned_with_left_kmt = yes
 			china_is_aligned_with_right_kmt = yes
 			china_is_aligned_with_federalists = yes
-			china_is_aligned_with_CHNsyndicalist = yes
-			china_is_aligned_with_statist = yes
 		}
 	}
 }
 
 china_is_unaligned = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_unaligned
 		check_variable = { country_leader:china_alignment = 0 }
 	}
@@ -283,8 +281,8 @@ china_same_alignment_as_PREVPREV = {
 
 china_compatible_alignment_to_PREV = {
 	hidden_trigger = {
-		china_is_aligned = yes
-		PREV = { china_is_aligned = yes }
+		china_is_unaligned = no
+		PREV = { china_is_unaligned = no }
 	}
 	OR = {
 		china_same_alignment_as_PREV = yes
@@ -333,8 +331,8 @@ china_same_alignment_as_FROM = {
 
 china_compatible_alignment_to_FROM = {
 	hidden_trigger = {
-		china_is_aligned = yes
-		FROM = { china_is_aligned = yes }
+		china_is_unaligned = no
+		FROM = { china_is_unaligned = no }
 	}
 	OR = {
 		FROM = { check_variable = { country_leader:china_alignment = PREV.country_leader:china_alignment } }
@@ -402,7 +400,7 @@ china_is_potential_government = {
 }
 
 china_refused_alliance = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_refused_alliance
 		has_country_flag = china_refused_alliance_@PREV
 	}
@@ -414,7 +412,7 @@ china_is_valid_government_to_join = {
 	is_subject = no
 	NOT = {
 		has_war_with = ROOT
-		custom_trigger_tooltip = {
+		custom_override_tooltip = {
 			tooltip = china_refused_alliance
 			has_country_flag = china_refused_alliance_@ROOT
 		}
@@ -793,7 +791,7 @@ china_is_chinese_core_or_claim_trigger = {
 }
 
 china_is_the_unifier_of_china_trigger = {
-	custom_trigger_tooltip = {
+	custom_override_tooltip = {
 		tooltip = china_is_the_chinese_unifier_tt
 		has_global_flag = china_united
 		china_is_potential_government = yes
@@ -805,7 +803,7 @@ CHN_no_aligned_unifier_exists_trigger = {
 	#Aka Highlander Rules - Either You Kill the Old Boss Or Wait For Them To Die
 	if = {
 		limit = { china_alignment_northern_zhili = yes }
-		custom_trigger_tooltip = {
+		custom_override_tooltip = {
 			tooltip = CHN_No_Other_NZH_tt
 			OR = {
 				NOT = { country_exists = NZH }
@@ -815,7 +813,7 @@ CHN_no_aligned_unifier_exists_trigger = {
 	}
 	else_if = {
 		limit = { china_alignment_southern_zhili = yes }
-		custom_trigger_tooltip = {
+		custom_override_tooltip = {
 			tooltip = CHN_No_Other_SZH_tt
 			OR = {
 				NOT = { country_exists = SZH }
@@ -826,7 +824,7 @@ CHN_no_aligned_unifier_exists_trigger = {
 	}
 	else_if = {
 		limit = { china_alignment_manchu_qing = yes }
-		custom_trigger_tooltip = {
+		custom_override_tooltip = {
 			tooltip = CHN_No_Other_MCU_tt
 			OR = {
 				NOT = { country_exists = MCU }
@@ -836,7 +834,7 @@ CHN_no_aligned_unifier_exists_trigger = {
 	}
 	else_if = {
 		limit = { china_alignment_fengtian = yes }
-		custom_trigger_tooltip = {
+		custom_override_tooltip = {
 			tooltip = CHN_No_Other_AGJ_tt
 			OR = {
 				NOT = { country_exists = AGJ }
@@ -847,7 +845,7 @@ CHN_no_aligned_unifier_exists_trigger = {
 
 	else_if = {
 		limit = { china_alignment_federalists = yes }
-		custom_trigger_tooltip = {
+		custom_override_tooltip = {
 			tooltip = CHN_No_Other_UPC_tt
 			OR = {
 				NOT = { country_exists = UPC }
@@ -857,7 +855,7 @@ CHN_no_aligned_unifier_exists_trigger = {
 	}
 	else_if = {
 		limit = { china_alignment_left_kuomintang = yes }
-		custom_trigger_tooltip = {
+		custom_override_tooltip = {
 			tooltip = CHN_No_Other_LKT_tt
 			OR = {
 				NOT = { country_exists = LKT }
@@ -867,7 +865,7 @@ CHN_no_aligned_unifier_exists_trigger = {
 	}
 	else_if = {
 		limit = { china_alignment_right_kuomintang = yes }
-		custom_trigger_tooltip = {
+		custom_override_tooltip = {
 			tooltip = CHN_No_Other_RKT_tt
 			OR = {
 				NOT = { country_exists = RKT }
@@ -877,7 +875,7 @@ CHN_no_aligned_unifier_exists_trigger = {
 	}
 	else_if = {
 		limit = { china_alignment_geacps = yes }
-		custom_trigger_tooltip = {
+		custom_override_tooltip = {
 			tooltip = CHN_No_Other_RGC_tt
 			OR = {
 				NOT = { country_exists = RGC }

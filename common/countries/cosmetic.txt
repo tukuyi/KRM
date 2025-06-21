@@ -169,11 +169,6 @@ CHT = {
 	color_ui = rgb { 20 20 20 }
 }
 
-MAF_germany = {
-	color = rgb { 93 93 61 }
-	color_ui = rgb { 138 155 116 }
-}
-
 BUL_YUG = {
 	color = rgb { 44 110 100 }
 	color_ui = rgb { 44 110 100 }
@@ -331,6 +326,11 @@ GEO_TCU = {
 }
 
 EGY_khedivate = {
+	color = rgb { 140 0 0 }
+	color_ui = rgb { 140 0 0 }
+}
+
+OTT_client = {
 	color = rgb { 140 0 0 }
 	color_ui = rgb { 140 0 0 }
 }
@@ -651,6 +651,10 @@ TRK_RUS = {
 }
 
 ### AMERICAS ###
+USA_ACW = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
 america_blue = {
 	color = rgb { 20 133 237 }
 	color_ui = rgb { 87 160 255 }
@@ -720,10 +724,6 @@ FOP_puppet = {
 MAF_SWA = {
 	color = rgb { 125 142 108 }
 	color_ui = rgb { 125 142 108 }
-}
-MAF_germany_in_exile = {
-	color = rgb { 93 93 61 }
-	color_ui = rgb { 93 93 61 }
 }
 
 KEN_KIK = {
@@ -1009,6 +1009,9 @@ LEC_CHD_Y = {
 LEC_HD = {
 	color = rgb { 255 128 0 }
 	color_ui = rgb { 255 128 0 }
+SAF_socialist_civil_war = {
+	color = rgb { 193 43 43 }
+	color_ui = rgb { 193 43 43 }
 }
 SHC_YT = {
 	color = rgb { 255 128 0 }
