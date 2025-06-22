@@ -35,6 +35,23 @@ on_actions = {
 		}
 	}
 
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					tag = SZC
+					has_country_flag = NKRsichuan_YCPpath
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 608 } #Jingzhao
+					}
+					country_event = { id = NKRsichuan.466 days = 7 } #北京已入我手
+				}
+			}
+		}
+	}
+
 	# #ROOT is new controller #FROM is old controller #FROM.FROM is state ID
 	# on_state_control_changed = {
 	# 	effect = {
