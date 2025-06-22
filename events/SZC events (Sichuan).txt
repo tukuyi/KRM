@@ -6,6 +6,7 @@
 add_namespace = sichuan
 add_namespace = NKRsichuan
 add_namespace = NKRsichuanmisc
+add_namespace = NKRsichuanflavor
 add_namespace = SZCDEBUG
 
 ### System Events ###
@@ -17240,6 +17241,10 @@ country_event = { #少壮派浮出水面
 	option = {#我们需要思考一下。
 		log = "[GetLogInfo]: event NKRsichuan.485 option NKRsichuan.485.a"
 		name = NKRsichuan.485.a
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.03
+		}
 		hidden_effect = {
 			country_event = {
 				id = NKRsichuan.486
@@ -17265,6 +17270,10 @@ country_event = { #妥协方案得到认可
 		add_stability = 0.05
 		set_politics = {
 			ruling_party = social_conservative
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.1
 		}
 		hidden_effect = {
 			country_event = {
@@ -17297,19 +17306,24 @@ country_event = { #青年党十大闭幕
 	}
 }
 
-country_event = { #
+country_event = { #出乎意料的橄榄枝
 	id = NKRsichuan.488
 	title = NKRsichuan.488.t
 	desc = NKRsichuan.488.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhang_guotao
 
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#想要同我们合作的...赤色分子？
 		log = "[GetLogInfo]: event NKRsichuan.488 option NKRsichuan.488.a"
 		name = NKRsichuan.488.a
+		add_political_power = 10
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.03
+		}
 	}
 }
 
@@ -17726,6 +17740,7 @@ unit_leader_event = {
 		}
 	}
 }
+
 
 
 
