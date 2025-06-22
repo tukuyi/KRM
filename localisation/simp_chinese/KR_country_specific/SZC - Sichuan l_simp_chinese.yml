@@ -1882,6 +1882,12 @@ l_simp_chinese:
  SZC_KMT_SOUTHERNWEST: "西南政务委员会"
  SZC_KMT_SOUTHERNWEST_ADJ: "西南"
  SZC_KMT_SOUTHERNWEST_DEF: "西南政务委员会"
+ SZC_YCP_chengdu_goverment: "成都全民政府"
+ SZC_YCP_chengdu_goverment_ADJ: "成都全民政府"
+ SZC_YCP_chengdu_goverment_DEF: "成都全民政府"
+ SZC_YCP_beijing_goverment: "北京全民政府"
+ SZC_YCP_beijing_goverment_ADJ: "北京全民政府"
+ SZC_YCP_beijing_goverment_DEF: "北京全民政府"
 
 
 
@@ -2044,6 +2050,12 @@ l_simp_chinese:
  SZC_YCP_tishe_party: "中国青年党(惕社)"
  SZC_YCP_tishe_party_long: "中国青年党 - 惕社\n§g惕社和其他青年党派系最大的不同便是它更像是一个外围组织。惕社最初建立于成都，由张伯伦、彭云生、杨叔明等人成立，主要用于吸纳对国家主义抱有好感的外围学生。在青年党的发展过程中，惕社一直没有转化为一个实在的政治派系，加入它的也通常将其作为一个跳板而存在。因此，尽管惕社成立于青年党的龙兴之地四川，它依旧最多只能算作一个边缘角色而存在。§!\n"
 
+
+#联动#
+ NAU_YCP_party: "中国青年党(抗日义勇军)" #withLiHuang
+ NAU_YCP_party_long: "中国青年党 - 抗日义勇军\n§g在东三省落入日本控制后，关内的国家主义派将其视为救国兴党的机会，迅速北上，一方集结有志出关杀敌的爱国志士，一方策动东北军受国家主义思想熏陶的军官加入，建立了中国青年党抗日义勇军。\n\n作为党内的二号人物，李璜主动辞去了党内的其他职务亲自参与抗日义勇军的组织事宜。尽管青年党普遍笃信法式激进主义，但在东北乃至全中国得到彻底解放之前，他们会以铁的纪律对抗日本侵略者。§!\n"
+ NAU_YCP_noli_party: "中国青年党(抗日义勇军)" #noLiHuang
+ NAU_YCP_noli_party_long: "中国青年党 - 抗日义勇军\n§g在东三省落入日本控制后，关内的国家主义派将其视为救国兴党的机会，迅速北上，一方集结有志出关杀敌的爱国志士，一方策动东北军受国家主义思想熏陶的军官加入，建立了中国青年党抗日义勇军。\n\n在党内其他人物的劝说之下，李璜选择了放弃出关亲自指挥，而是支持了王捷侠与霍维周为首的东北出身青年党员领导抗日义勇军。尽管青年党普遍笃信法式激进主义，但在东北乃至全中国得到彻底解放之前，他们会以铁的纪律对抗日本侵略者。§!\n"
 
 
 
@@ -4196,7 +4208,7 @@ l_simp_chinese:
 
  #copyKRKMT建设决议
  SZC_national_reconstruction_category: "国家建设委员会"
- SZC_national_reconstruction_category_desc: "国家建设委员会是孙中山先总理的创意。他在著作中写道，在训政阶段，应该采取措施，为国家民主化和现代化保驾护航。如果中国要再次成为世界强国，就必须从头开始建设。\n\n第一次和第二次北伐大大阻碍了建设工作，但我们如今终于有机会完成1911年辛亥革命的“建设”目标。我们已经度过了革命的宣传和军事阶段，按先总理遗训，现在我们必须进入政治和经济建设阶段。我们会一步一个脚印，逐厂逐村重建国家的经济和政治基础，这样中国才能永远不被帝国主义奴役，走向辉煌的复兴。"
+ SZC_national_reconstruction_category_desc: "国家建设委员会是孙中山的创意。他在著作中写道，在训政阶段，应该采取措施，为国家民主化和现代化保驾护航。如果中国要再次成为世界强国，就必须从头开始建设。\n\n第一次和第二次北伐大大阻碍了建设工作，但我们如今终于有机会完成1911年辛亥革命的“建设”目标。我们已经度过了革命的宣传和军事阶段，按先总理遗训，现在我们必须进入政治和经济建设阶段。我们会一步一个脚印，逐厂逐村重建国家的经济和政治基础，这样中国才能永远不被帝国主义奴役，走向辉煌的复兴。"
  SZC_nationalise_nanjing_electrical_works: "国有化南京电气"
  SZC_nationalise_nanjing_electrical_works_desc: "南京电气公司的宏伟计划受到伦敦与巴黎城建的启发，旨在照亮祖国的伟大首都。为此，重组并国有化的电气公司将为黑夜中南京城里的千家万户带来光明。"
  SZC_establish_the_yongli_chemical_plant: "永利化工厂项目"
@@ -4296,6 +4308,8 @@ l_simp_chinese:
  SZC_open_the_port_decision_desc: ""
  SZC_inland_sez_decision: "在[From.GetName]发展内陆经济特区"
  SZC_inland_sez_decision_desc: ""
+
+
 
 
 

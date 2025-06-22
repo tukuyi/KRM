@@ -1518,6 +1518,15 @@ china_set_government_tag_specific_scripted_effect = {
 		}
 	}
 	else_if = {
+		limit = { china_alignment_statist = yes }
+		if = {
+			limit = {
+				original_tag = SZC
+			}
+			set_cosmetic_tag = SZC_YCP_chengdu_government
+		}
+	}
+	else_if = {
 		limit = { china_alignment_CHNsyndicalist = yes }
 		if = {
 			limit = {
