@@ -17491,19 +17491,20 @@ focus_tree = {
 	focus = {
 		id = SZC_YCP_wave_of_history_victory_of_ycp
 		icon = GFX_goal_SZC_YCP_wave_of_history_victory_of_ycp
-		cost = 5
+		cost = 7
 
 		x = 0
 		y = 5
 		relative_position_id = SZC_YCP_secret_of_the_flowers_of_pheonmenon
 
 		available = {
-			controls_state = 613
-			controls_state = 608
+			has_country_flag = SZC_YCP_can_2nd_congress
 		}
 
 		select_effect = {
-			
+			country_event = {
+				id = NKRsichuan.467
+			}
 		}
 
 		prerequisite = {
