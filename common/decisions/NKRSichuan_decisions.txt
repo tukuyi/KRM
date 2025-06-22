@@ -3214,3 +3214,231 @@ SZC_YCP_balance_of_power_category = {
 		}
 	}
 }
+
+foreign_politics = {
+	SZC_NAP_with_federalists_decision = { #Potential NAP with
+		allowed = { tag = SZC }
+
+		targets = { UPC }
+
+		visible = {
+			AND = {
+				has_country_flag = SZC_YCP_can_unite_someone
+			}
+		}
+		target_root_trigger = {
+
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = { is_subject_of = ROOT }
+				}
+				CHI_government_nap_available_trigger = yes
+				has_country_leader = {
+					character = GXC_chen_jiongming
+					ruling_only = yes
+				}
+			}
+		}
+		available = {
+			ROOT = { has_war = no }
+		}
+		fire_only_once = yes
+		icon = GFX_decision_peace_dove
+
+		cost = 50
+
+		cancel_if_not_visible = yes
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.75
+				}
+			}
+			modifier = {
+				factor = 3
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.50
+				}
+			}
+			modifier = {
+				factor = 3
+				FROM = { has_war = no }
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					QIE = { exists = no }
+					FNG = { exists = no }
+					any_other_country = {
+						is_chinese_tag = yes
+						has_war_with = JAP
+					}
+				}
+			}
+		}
+
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_NAP_with_federalists_decision"
+			country_event = {
+				id = NKRsichuan.462
+			}
+			FROM = { country_event = { id = NKRsichuan.463 days = 3 } } #联省大联合？
+			custom_effect_tooltip = CHI_negotiation_tt
+		}
+	}
+	SZC_NAP_with_qi_decision = { #Potential NAP with qi
+		allowed = { tag = SZC }
+
+		targets = { SZL }
+
+		visible = {
+			AND = {
+				has_country_flag = SZC_YCP_can_unite_someone
+			}
+		}
+		target_root_trigger = {
+
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = { is_subject_of = ROOT }
+				}
+				CHI_government_nap_available_trigger = yes
+				has_completed_focus = LEP_deepen_the_zhili_schism
+			}
+		}
+		available = {
+			ROOT = { has_war = no }
+		}
+		fire_only_once = yes
+		icon = GFX_decision_peace_dove
+
+		cost = 50
+
+		cancel_if_not_visible = yes
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.75
+				}
+			}
+			modifier = {
+				factor = 3
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.50
+				}
+			}
+			modifier = {
+				factor = 3
+				FROM = { has_war = no }
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					QIE = { exists = no }
+					FNG = { exists = no }
+					any_other_country = {
+						is_chinese_tag = yes
+						has_war_with = JAP
+					}
+				}
+			}
+		}
+
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_NAP_with_qi_decision"
+			FROM = { country_event = { id = NKRsichuan.456 days = 3 } } #成都的消息
+			custom_effect_tooltip = CHI_negotiation_tt
+		}
+	}
+	SZC_NAP_with_anq_decision = { #Potential NAP with anq
+		allowed = { tag = SZC }
+
+		targets = { ANQ }
+
+		visible = {
+			AND = {
+				has_country_flag = SZC_YCP_can_unite_someone
+			}
+		}
+		target_root_trigger = {
+
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = { is_subject_of = ROOT }
+				}
+				CHI_government_nap_available_trigger = yes
+				AND = {
+					china_alignment_fengtian = no
+					china_alignment_northern_zhili = no
+				}
+			}
+		}
+		available = {
+			ROOT = { has_war = no }
+		}
+		fire_only_once = yes
+		icon = GFX_decision_peace_dove
+
+		cost = 50
+
+		cancel_if_not_visible = yes
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.75
+				}
+			}
+			modifier = {
+				factor = 3
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.50
+				}
+			}
+			modifier = {
+				factor = 3
+				FROM = { has_war = no }
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					QIE = { exists = no }
+					FNG = { exists = no }
+					any_other_country = {
+						is_chinese_tag = yes
+						has_war_with = JAP
+					}
+				}
+			}
+		}
+
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_NAP_with_anq_decision"
+			FROM = { country_event = { id = NKRsichuan.459 days = 3 } } #成都的消息
+			custom_effect_tooltip = CHI_negotiation_tt
+		}
+	}
+}
