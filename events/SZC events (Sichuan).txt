@@ -9174,8 +9174,8 @@ country_event = { #中国青年党浮出水面
 			}
 			set_party_name = {
 				ideology = social_democrat
-				long_name = SZC_NUCA_party_long
-				name = SZC_NUCA_party
+				long_name = SZC_DSP_party_long
+				name = SZC_DSP_party
 			}
 			set_party_name = {
 				ideology = social_liberal
@@ -16718,6 +16718,21 @@ country_event = { #青年党第十次代表大会召开
 				id = NKRsichuan.468
 				days = 3
 			}
+			set_party_name = {
+				ideology = totalist
+				long_name = SZC_CSP_PYCP_party_long
+				name = SZC_CSP_PYCP_party
+			}
+			set_party_name = {
+				ideology = syndicalist
+				long_name = SZC_CSP_PYCP_party_long
+				name = SZC_CSP_PYCP_party
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				long_name = SZC_KMT_PYCP_party_long
+				name = SZC_KMT_PYCP_party
+			}
 		}
 	}
 }
@@ -17323,6 +17338,19 @@ country_event = { #出乎意料的橄榄枝
 		add_popularity = {
 			ideology = syndicalist
 			popularity = 0.03
+		}
+		set_party_name = {
+			ideology = totalist
+			long_name = SZC_CSP_O_party_long
+			name = SZC_CSP_O_party
+		}
+		set_party_name = {
+			ideology = syndicalist
+			long_name = SZC_CSSP_party_long
+			name = SZC_CSSP_party
+		}
+		SZC_zhang_guotao = {
+			promote_character = syndicalist_yellow_syndicalist_subtype
 		}
 	}
 }

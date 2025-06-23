@@ -1397,6 +1397,44 @@ characters = {
 		}
 	}
 
+	#闻一多
+	SZC_wen_yiduo = {
+		name = SZC_wen_yiduo
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_wen_yiduo_large
+				small = GFX_portrait_SZC_wen_yiduo_small
+			}
+		}
+	}
+
+	#谭惕吾
+	SZC_tan_tiwu = {
+		name = SZC_tan_tiwu
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_tan_tiwu_large
+				small = GFX_portrait_SZC_tan_tiwu_small
+			}
+		}
+	}
+
+	#张国焘
+	SZC_zhang_guotao = {
+		name = SZC_zhang_guotao
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_zhang_guotao_large
+				small = GFX_portrait_SZC_zhang_guotao_small
+			}
+		}
+		country_leader = {
+			desc = SZC_zhang_guotao_desc
+			ideology = syndicalist_yellow_syndicalist_subtype
+			traits = { CHN_statist_aligned }
+		}
+	}
+
 
 
 	#MMIC四川分署
