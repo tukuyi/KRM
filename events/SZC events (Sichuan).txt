@@ -16982,6 +16982,7 @@ country_event = { #曾琦凯旋
 			id = SZC_YCP_power_balance
 		}
 		hidden_effect = {
+			set_country_flag = SZC_YCP_zeng_hardline_path
 			country_event = {
 				id = NKRsichuan.477
 				days = 3
@@ -17001,6 +17002,7 @@ country_event = { #曾琦凯旋
 			id = SZC_YCP_power_balance
 		}
 		hidden_effect = {
+			set_country_flag = SZC_YCP_zeng_moderate_path
 			country_event = {
 				id = NKRsichuan.478
 				days = 3
@@ -17127,6 +17129,7 @@ country_event = { #反对派得胜
 			popularity = 0.05
 		}
 		hidden_effect = {
+			set_country_flag = SZC_YCP_li_path
 			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
 			add_to_coalition = yes
 			country_event = {
@@ -17235,6 +17238,7 @@ country_event = { #尴尬的结果
 		add_stability = -0.2
 		add_political_power = -100
 		hidden_effect = {
+			set_country_flag = SZC_YCP_young_turks_path
 			country_event = {
 				id = NKRsichuan.485
 				days = 3

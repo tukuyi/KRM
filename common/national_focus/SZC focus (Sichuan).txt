@@ -16849,7 +16849,7 @@ focus_tree = {
 		icon = GFX_goal_SZC_YCP_statism_arise
 		cost = 0
 
-		x = 4
+		x = 2
 		y = 0
 
 		available = {
@@ -17520,6 +17520,575 @@ focus_tree = {
 			set_country_flag = NKRSZC_YCPpath_phase2
 		}
 	}
+
+	#BEIJING GOVERNMENT#
+
+	focus = {
+		id = SZC_YCP_begin_national_reconstruction
+		icon = GFX_goal_SZC_YCP_begin_national_reconstruction
+		cost = 4
+
+		x = -9
+		y = 1
+		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
+
+		allow_branch = {
+			# has_country_flag = NKRSZC_YCPpath_phase2
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_wave_of_history_victory_of_ycp
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_begin_national_reconstruction"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_socialization_of_economy
+		icon = GFX_goal_SZC_YCP_socialization_of_economy
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_begin_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_YCP_begin_national_reconstruction
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_socialization_of_economy"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_union_question
+		icon = GFX_goal_SZC_YCP_union_question
+		cost = 4
+
+		x = -2
+		y = 1
+		relative_position_id = SZC_YCP_begin_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_YCP_begin_national_reconstruction
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_union_question"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_establish_central_economic_reform_office
+		icon = GFX_goal_SZC_YCP_establish_central_economic_reform_office
+		cost = 4
+
+		x = -1
+		y = 2
+		relative_position_id = SZC_YCP_begin_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_YCP_socialization_of_economy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_establish_central_economic_reform_office"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_nationalize_important_industries
+		icon = GFX_goal_SZC_YCP_nationalize_important_industries
+		cost = 4
+
+		x = 1
+		y = 2
+		relative_position_id = SZC_YCP_begin_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_YCP_socialization_of_economy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_nationalize_important_industries"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_eastern_socialpolitik
+		icon = GFX_goal_SZC_YCP_eastern_socialpolitik
+		cost = 4
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_YCP_begin_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_YCP_establish_central_economic_reform_office
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_nationalize_important_industries
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_eastern_socialpolitik"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_education_first
+		icon = GFX_goal_SZC_YCP_education_first
+		cost = 4
+
+		x = 2
+		y = 1
+		relative_position_id = SZC_YCP_begin_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_YCP_begin_national_reconstruction
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_education_first"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_to_kill_diseases
+		icon = GFX_goal_SZC_YCP_to_kill_diseases
+		cost = 4
+
+		x = 4
+		y = 1
+		relative_position_id = SZC_YCP_begin_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_YCP_begin_national_reconstruction
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_to_kill_diseases"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_found_CAS
+		icon = GFX_goal_SZC_YCP_found_CAS
+		cost = 4
+
+		x = 3
+		y = 2
+		relative_position_id = SZC_YCP_begin_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_YCP_education_first
+			focus = SZC_YCP_to_kill_diseases
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_found_CAS"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_agricultural_modernization
+		icon = GFX_goal_SZC_YCP_agricultural_modernization
+		cost = 4
+
+		x = 3
+		y = 3
+		relative_position_id = SZC_YCP_begin_national_reconstruction
+
+
+		prerequisite = {
+			focus = SZC_YCP_found_CAS
+		}
+		prerequisite = {
+			focus = SZC_YCP_nationalize_important_industries
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_agricultural_modernization"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_construct_legitimacy
+		icon = GFX_goal_SZC_YCP_construct_legitimacy
+		cost = 4
+
+		x = 9
+		y = 1
+		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
+
+		allow_branch = {
+			# has_country_flag = NKRSZC_YCPpath_phase2
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_wave_of_history_victory_of_ycp
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_construct_legitimacy"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_expand_our_party
+		icon = GFX_goal_SZC_expand_our_party
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_construct_legitimacy
+
+
+		prerequisite = {
+			focus = SZC_YCP_construct_legitimacy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_expand_our_party"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_female_rights
+		icon = GFX_goal_SZC_female_rights
+		cost = 4
+
+		x = 2
+		y = 1
+		relative_position_id = SZC_YCP_construct_legitimacy
+
+
+		prerequisite = {
+			focus = SZC_YCP_construct_legitimacy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_female_rights"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_voting_rights_issues
+		icon = GFX_goal_SZC_female_rights
+		cost = 4
+
+		x = 1
+		y = 2
+		relative_position_id = SZC_YCP_construct_legitimacy
+
+
+		prerequisite = {
+			focus = SZC_YCP_expand_our_party
+		}
+		prerequisite = {
+			focus = SZC_YCP_female_rights
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_voting_rights_issues"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_allow_left_parliament_parties
+		icon = GFX_goal_SZC_allow_left_parliament_parties
+		cost = 4
+
+		x = 3
+		y = 2
+		relative_position_id = SZC_YCP_construct_legitimacy
+
+		available = {
+			NOT = {
+				has_completed_focus = SZC_YCP_new_constitution
+			}
+		}
+
+
+		prerequisite = {
+			focus = SZC_YCP_expand_our_party
+			focus = SZC_YCP_female_rights
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_allow_left_parliament_parties"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_federalize_attempt
+		icon = GFX_goal_SZC_federalize_attempt
+		cost = 4
+
+		x = -2
+		y = 2
+		relative_position_id = SZC_YCP_construct_legitimacy
+
+
+		prerequisite = {
+			focus = SZC_YCP_construct_legitimacy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_federalize_attempt"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_new_constitution
+		icon = GFX_goal_SZC_new_constitution
+		cost = 4
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_YCP_construct_legitimacy
+
+
+		prerequisite = {
+			focus = SZC_YCP_federalize_attempt
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_voting_rights_issues
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_new_constitution"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_orthodox_stands
+		icon = GFX_goal_SZC_YCP_orthodox_stands
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
+
+		allow_branch = {
+			# has_country_flag = NKRSZC_YCPpath_phase2
+			# OR = {
+			# 	has_country_flag = SZC_YCP_zeng_hardline_path
+			# 	has_country_flag = SZC_YCP_zeng_moderate_path
+			# }
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_wave_of_history_victory_of_ycp
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_orthodox_stands"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_spirit_of_literati
+		icon = GFX_goal_SZC_YCP_spirit_of_literati
+		cost = 4
+
+		x = -1
+		y = 1
+		relative_position_id = SZC_YCP_orthodox_stands
+
+
+		prerequisite = {
+			focus = SZC_YCP_orthodox_stands
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_spirit_of_literati"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_legacy_of_research_clique
+		icon = GFX_goal_SZC_YCP_legacy_of_research_clique
+		cost = 4
+
+		x = 1
+		y = 1
+		relative_position_id = SZC_YCP_orthodox_stands
+
+
+		prerequisite = {
+			focus = SZC_YCP_orthodox_stands
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_legacy_of_research_clique"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_sword_and_shield_for_revolution
+		icon = GFX_goal_SZC_YCP_sword_and_shield_for_revolution
+		cost = 4
+
+		x = 3
+		y = 1
+		relative_position_id = SZC_YCP_orthodox_stands
+
+
+		prerequisite = {
+			focus = SZC_YCP_orthodox_stands
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_sword_and_shield_for_revolution"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_more_than_orthodox
+		icon = GFX_goal_SZC_YCP_more_than_orthodox
+		cost = 4
+
+		x = -3
+		y = 1
+		relative_position_id = SZC_YCP_orthodox_stands
+
+
+		prerequisite = {
+			focus = SZC_YCP_orthodox_stands
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_more_than_orthodox"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_will_of_salvation
+		icon = GFX_goal_SZC_YCP_will_of_salvation
+		cost = 4
+
+		x = -3
+		y = 2
+		relative_position_id = SZC_YCP_orthodox_stands
+
+
+		prerequisite = {
+			focus = SZC_YCP_more_than_orthodox
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_will_of_salvation"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_anti_syndicalist_first
+		icon = GFX_goal_SZC_YCP_anti_syndicalist_first
+		cost = 4
+
+		x = 2
+		y = 2
+		relative_position_id = SZC_YCP_orthodox_stands
+
+
+		prerequisite = {
+			focus = SZC_YCP_legacy_of_research_clique
+			focus = SZC_YCP_spirit_of_literati
+		}
+		prerequisite = {
+			focus = SZC_YCP_sword_and_shield_for_revolution
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_anti_syndicalist_first"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_charter_of_statist_revolution
+		icon = GFX_goal_SZC_YCP_charter_of_statist_revolution
+		cost = 4
+
+		x = -1
+		y = 2
+		relative_position_id = SZC_YCP_orthodox_stands
+
+
+		prerequisite = {
+			focus = SZC_YCP_spirit_of_literati
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_charter_of_statist_revolution"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_a_great_leader
+		icon = GFX_goal_SZC_YCP_a_great_leader
+		cost = 4
+
+		x = -1
+		y = 3
+		relative_position_id = SZC_YCP_orthodox_stands
+
+		mutually_exclusive = {
+			focus = SZC_YCP_our_purist_goal
+		}
+
+
+		prerequisite = {
+			focus = SZC_YCP_charter_of_statist_revolution
+		}
+		prerequisite = {
+			focus = SZC_YCP_anti_syndicalist_first
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_a_great_leader"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_our_purist_goal
+		icon = GFX_goal_SZC_YCP_our_purist_goal
+		cost = 4
+
+		x = 1
+		y = 3
+		relative_position_id = SZC_YCP_orthodox_stands
+
+		mutually_exclusive = {
+			focus = SZC_YCP_a_great_leader
+		}
+
+
+		prerequisite = {
+			focus = SZC_YCP_charter_of_statist_revolution
+		}
+		prerequisite = {
+			focus = SZC_YCP_anti_syndicalist_first
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_our_purist_goal"
+		}
+	}
+
 
 
 

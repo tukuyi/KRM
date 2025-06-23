@@ -44,8 +44,7 @@ SZC_YCP_inlay_window = {
 	window_name = SZC_YCP_gui_window
 	internal = yes
 	visible = {
-		# has_power_balance = { id = SZC_YCP_power_balance }
-		always = yes
+		has_power_balance = { id = SZC_YCP_power_balance }
 	}
 	scripted_images = {
 		lizeng_Meter = {
