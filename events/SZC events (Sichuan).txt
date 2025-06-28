@@ -10241,6 +10241,7 @@ country_event = { #国民党内战-开始
 		log = "[GetLogInfo]: event NKRsichuan.140 option NKRsichuan.141.a"
 		name = NKRsichuan.141.a
 		set_country_flag = NKRSZC_KMTcivilwar
+		complete_national_focus = SZC_pan_kuomintang_civil_war
 		activate_mission = SZC_resist_the_silver_offensive_mission
 		custom_effect_tooltip = CHI_focus_tree_will_change_tt
 		clr_country_flag = SZC_yang_shukan_available
