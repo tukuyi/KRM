@@ -14,9 +14,11 @@ defined_text = {
 	#Syndicalist
 	text = { trigger = { has_country_leader_ideology = syndicalist_market_syndicalist_subtype } localization_key = syndicalist_market_syndicalist_subtype }#市场工团主义
 	text = { trigger = { has_country_leader_ideology = syndicalist_yellow_syndicalist_subtype } localization_key = syndicalist_yellow_syndicalist_subtype }#黄色工团主义
+	text = { trigger = { has_country_leader_ideology = syndicalist_centrist_marxist_subtype } localization_key = syndicalist_centrist_marxist_subtype }#中间马克思主义
+	text = { trigger = { has_country_leader_ideology = syndicalist_revolutionary_tridemist_subtype } localization_key = syndicalist_revolutionary_tridemist_subtype }#革命三民主义
 	
 	#Radical Socialist
-	text = { trigger = { has_country_leader_ideology = radical_socialist_new_tridemist_subtype } localization_key = radical_socialist_new_tridemist_subtype }#新三民主义
+	text = { trigger = { has_country_leader_ideology = radical_socialist_revolutionary_tridemist_subtype } localization_key = radical_socialist_revolutionary_tridemist_subtype }#革命三民主义
 	text = { trigger = { has_country_leader_ideology = radical_socialist_birdcage_vanguardist_subtype } localization_key = radical_socialist_birdcage_vanguardist_subtype }#鸟笼先锋队主义
 	text = { trigger = { has_country_leader_ideology = radical_socialist_mao_zedong_thought_subtype } localization_key = radical_socialist_mao_zedong_thought_subtype }#毛泽东思想
 	text = { trigger = { has_country_leader_ideology = radical_socialist_utopian_technocracy_subtype } localization_key = radical_socialist_utopian_technocracy_subtype }#乌托邦技官主义
@@ -37,6 +39,7 @@ defined_text = {
 
 	#Social Conservative
 	text = { trigger = { has_country_leader_ideology = social_conservative_statist_subtype } localization_key = social_conservative_statist_subtype }#国家主义-社保
+	text = { trigger = { has_country_leader_ideology = social_conservative_statist_subtype } localization_key = social_conservative_orthodox_tridemist_subtype }#正统三民主义
 	text = { trigger = { has_country_leader_ideology = social_conservative_anarchist_statist_subtype } localization_key = social_conservative_anarchist_statist_subtype }#无政府国家主义
 
 	#Authoritarian Democrat
