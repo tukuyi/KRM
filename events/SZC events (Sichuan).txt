@@ -8729,6 +8729,7 @@ country_event = { #刘湘之死
 		hidden_effect = {
 			SZC_liu_xiang = {
 				retire_character = yes
+				retire = yes
 			}
 			SZC_power_vacuum = {
 				promote_character = paternal_autocrat_subtype
@@ -9057,12 +9058,7 @@ country_event = { #惨剧定性
 				days = 3
 			}
 		}
-		if_else = {
-			limit = {
-				NOT = {
-					has_country_flag = NKRsichuan_YCPpath
-				}
-			}
+		else = {
 			country_event = {
 				id = NKRsichuan.29
 				days = 3
@@ -9310,9 +9306,7 @@ country_event = { #四川易帜
 		name = NKRsichuan.104.a
 		custom_effect_tooltip = CHI_focus_tree_will_change_tt
 		SZC_pan_wenhua = {
-			set_variable = {
-				china_alignment = token:left_kuomintang
-			}
+			china_set_character_alignment_left_kuomintang = yes
 			country_leader = {
 				swap_country_leader_traits = {
 					remove = CHN_non_aligned
@@ -9896,6 +9890,7 @@ country_event = { #赤红的四川
 		name = NKRsichuan.125.a
 		SZC_qi_nanxun = {
 			promote_character = syndicalist_revolutionary_tridemist_subtype
+			china_set_character_alignment_left_kuomintang = yes
 		}
 		set_country_flag = NKRSZC_crisis_done
 		swap_ideas = {
@@ -10203,9 +10198,7 @@ country_event = { #庆功宴
 				remove = CHN_left_kuomintang_aligned
 				add = CHN__right_kuomintang_aligned
 			}
-			set_variable = {
-				china_alignment = token:right_kuomintang
-			}
+			china_set_character_alignment_right_kuomintang = yes
 		}
 	}
 }

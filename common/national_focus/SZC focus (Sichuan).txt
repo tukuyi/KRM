@@ -3834,7 +3834,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 10
 			tag = SZC
 		}
 	}
@@ -5463,6 +5463,7 @@ focus_tree = {
 			is_subject = no
 			is_in_faction = no
 			NOT = { has_idea = SZC_two_lius_war }
+			NOT = { has_country_flag = SZC_liu_xiang_dead }
 		}
 		allow_branch = {
 			NOT = {
@@ -16819,7 +16820,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 10
+			add = 0
 			tag = SZC
 		}
 	}
