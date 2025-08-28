@@ -8729,6 +8729,7 @@ country_event = { #刘湘之死
 			add_ideas = { SZC_after_liu }
 		}
 		country_lock_all_division_template = yes
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 
@@ -10229,6 +10230,7 @@ country_event = { #国民党内战-开始
 		activate_mission = SZC_resist_the_silver_offensive_mission
 		custom_effect_tooltip = CHI_focus_tree_will_change_tt
 		clr_country_flag = SZC_yang_shukan_available
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 
@@ -10251,6 +10253,7 @@ country_event = { #步入权力殿堂
 		CHN_setup_economic_devastation_normal_effect = yes
 		CHN_setup_military_disarray_normal_effect = yes
 		complete_national_focus = SZC_pan_revolution_secured
+		mark_focus_tree_layout_dirty = yes
 		hidden_effect = {
 			china_enable_concession_decisions = yes
 			china_enable_outskirts_decisions = yes

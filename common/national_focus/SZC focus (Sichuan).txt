@@ -5465,7 +5465,7 @@ focus_tree = {
 			NOT = { has_idea = SZC_two_lius_war }
 			NOT = { has_country_flag = SZC_liu_xiang_dead }
 		}
-		allow_branch = {
+		visible = {
 			NOT = {
 				has_country_flag = SZC_liu_xiang_dead
 			}
@@ -15314,9 +15314,7 @@ focus_tree = {
 		}
 
 		available = {
-			hidden_trigger = {
-				always = no
-			}
+			has_country_flag = NKRSZC_KMTcivilwar
 		}
 
 		completion_reward = {
