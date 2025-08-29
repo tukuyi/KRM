@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_YCP_agricultural_modernization
+python focusgfxentry.py SZC_YCP_our_purist_goal
 pause
