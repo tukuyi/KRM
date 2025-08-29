@@ -17517,6 +17517,12 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_wave_of_history_victory_of_ycp"
 			custom_effect_tooltip = SZC_YCP_wave_of_history_victory_of_ycp_tooltip
 			set_country_flag = NKRSZC_YCPpath_phase2
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.488
+					days = 15
+				}
+			}
 		}
 	}
 
@@ -17541,6 +17547,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_begin_national_reconstruction"
+			SZC_reconstruction_effect = yes
+			CHN_improve_economic_devastation_effect = yes
 		}
 	}
 
@@ -17560,6 +17568,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_socialization_of_economy"
+			country_event = {
+				id = NKRsichuan.489
+			}
+			add_ideas = {
+				SZC_YCP_socialize_economy_idea
+			}
 		}
 	}
 
@@ -17579,6 +17593,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_union_question"
+			custom_effect_tooltip = SZC_YCP_union_question_tt
+			country_event = {
+				id = NKRsichuan.490
+			}
 		}
 	}
 
@@ -17598,6 +17616,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_establish_central_economic_reform_office"
+			CHN_improve_economic_devastation_effect = yes
+			country_event = {
+				id = NKRsichuan.492
+			}
 		}
 	}
 
@@ -17617,6 +17639,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_nationalize_important_industries"
+			CHN_improve_economic_devastation_effect = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 		}
 	}
 
@@ -17640,6 +17667,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_eastern_socialpolitik"
+			add_ideas = {
+				SZC_YCP_state_socialpolitik_idea
+			}
+			country_event = {
+				id = NKRsichuan.493
+			}
+			every_owned_state = {
+				add_compliance = 5
+			}
 		}
 	}
 
@@ -17659,6 +17695,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_education_first"
+			add_research_slot = 1
 		}
 	}
 
@@ -17678,6 +17715,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_to_kill_diseases"
+			add_timed_idea = {
+				idea = SZC_YCP_health_project_idea
+				days = 180
+			}
+			custom_effect_tooltip = SZC_YCP_to_kill_diseases_tt
+			show_ideas_tooltip = SZC_YCP_destroy_diseases
+			country_event = {
+				id = NKRsichuan.494
+			}
 		}
 	}
 
@@ -17698,6 +17744,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_found_CAS"
+			country_event = {
+				id = NKRsichuan.495
+			}
+			set_country_flag = SZC_CAS_available
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = SZC_the_CAS
 		}
 	}
 
@@ -17720,6 +17773,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_agricultural_modernization"
+			add_ideas = {
+				SZC_YCP_modern_agriculture
+			}
+			add_one_random_infrastructure = yes
+			add_one_random_infrastructure = yes
+			add_one_random_infrastructure = yes
+			add_one_random_infrastructure = yes
 		}
 	}
 
@@ -17742,6 +17802,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_construct_legitimacy"
+			SZC_improve_YCP_legitimacy_effect = yes
+			set_variable = {
+				var = SZC_YCP_constitution_status
+				value = 0
+			}
 		}
 	}
 
@@ -17761,6 +17826,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_expand_our_party"
+			set_temp_variable = { ideology_change_var = 0.05 }
+			change_ruling_party_popularity = yes
+			country_event = {
+				id = NKRsichuan.496
+				days = 5
+			}
 		}
 	}
 
@@ -17780,6 +17851,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_female_rights"
+			add_stability = 0.05
+			add_war_support = 0.05
+			country_event = {
+				id = NKRsichuan.497
+			}
 		}
 	}
 
@@ -17802,6 +17878,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_voting_rights_issues"
+			country_event = {
+				id = NKRsichuan.498
+			}
 		}
 	}
 
@@ -17818,6 +17897,7 @@ focus_tree = {
 			NOT = {
 				has_completed_focus = SZC_YCP_new_constitution
 			}
+			has_completed_focus = SZC_YCP_union_question
 		}
 
 
@@ -17828,6 +17908,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_allow_left_parliament_parties"
+			add_popularity = {
+				ideology = syndicalism
+				popularity = 0.03
+			}
+			country_event = {
+				id = NKRsichuan.499
+			}
 		}
 	}
 
@@ -17847,6 +17934,20 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_federalize_attempt"
+			country_event = {
+				id = NKRsichuan.501
+			}
+			custom_effect_tooltip = SZC_YCP_union_sacree_tt
+			effect_tooltip = {
+				add_ideas = {
+					SZC_YCP_towards_federalist_provinces
+				}
+			}
+			effect_tooltip = {
+				add_ideas = {
+					SZC_YCP_centralized_federation
+				}
+			}
 		}
 	}
 
@@ -17870,6 +17971,57 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_new_constitution"
+			custom_effect_tooltip = SZC_YCP_new_constitution_tt
+			if = {
+				limit = {
+					AND = {
+						has_completed_focus = SZC_YCP_federalize_attempt
+						has_completed_focus = SZC_YCP_voting_rights_issues
+					}
+				}
+				SZC_improve_YCP_legitimacy_effect = yes
+				if = {
+					limit = {
+						check_variable = {
+							var = SZC_YCP_constitution_status
+							value = 3
+							compare = greater_than_or_equals
+						}
+					}
+					add_ideas = {
+						SZC_YCP_progress_constitution
+					}
+					country_event = {
+						id = NKRsichuan.502
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							var = SZC_YCP_constitution_status
+							value = -2
+							compare = less_than_or_equals
+						}
+					}
+					add_ideas = {
+						SZC_YCP_conservative_constitution
+					}
+					country_event = {
+						id = NKRsichuan.503
+					}
+				}
+				else = {
+					add_ideas = {
+						SZC_YCP_moderate_constitution
+					}
+					country_event = {
+						id = NKRsichuan.504
+					}
+				}
+			}
+			else = {
+
+			}
 		}
 	}
 

@@ -1070,6 +1070,29 @@ ideas = {
 				compliance_gain = -0.02
 			}
 		}
+		SZC_YCP_legitimacy_4 = {#党的合法性-全国政府
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_legitimacy_4" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				political_power_factor = -0.05
+				party_popularity_stability_factor = -0.05
+				compliance_gain = -0.02
+			}
+		}
+		SZC_YCP_legitimacy_5 = {#党的合法性-正统政府
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_legitimacy_5" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				party_popularity_stability_factor = 0.05
+				compliance_gain = -0.01
+			}
+		}
 		SZC_YCP_construct_nationalspirit = {#铸造国格
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_construct_nationalspirit" }
 			picture = chi_warlord_integration
@@ -1135,6 +1158,149 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				research_speed_factor = 0.10
+			}
+		}
+		SZC_YCP_socialize_economy_idea = {#社会化经济
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_socialize_economy_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				army_core_attack_factor = 0.05
+				local_resources_factor = 0.10
+				industrial_capacity_factory = 0.10
+			}
+		}
+		SZC_YCP_state_union_idea = {#国有工会
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_state_union_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				political_power_gain = -0.05
+			}
+		}
+		SZC_YCP_state_socialpolitik_idea = {#社会国家
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_state_socialpolitik_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.10
+				monthly_population = 0.2
+				production_factory_efficiency_gain_factor = 0.15 
+				compliance_growth = 0.1 
+				stability_weekly = 0.001
+			}
+		}
+		SZC_YCP_health_project_idea = {#医疗计划
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_health_project"}
+			allowed = { always = no }
+			picture = HNN_hopes_dashed
+			modifier = {#
+				consumer_goods_factor = 0.2
+			}
+			on_remove = {
+				add_ideas = {
+					SZC_YCP_destroy_diseases
+				}
+			}
+		}
+		SZC_YCP_destroy_diseases = {#消灭疾病
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_destroy_diseases"}
+			allowed = { always = no }
+			picture = HNN_hopes_dashed
+			modifier = {
+				monthly_population = 0.05
+				add_stability = 0.1
+			}
+		}
+		SZC_YCP_modern_agriculture = {#现代农业
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_modern_agriculture" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				monthly_population = 0.1
+				political_power_gain = 0.05
+				local_manpower = 0.15
+			}
+		}
+		SZC_YCP_towards_federalist_provinces = {#迈向联省自治
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_towards_federalist_provinces" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = 0.10
+			}
+		}
+		SZC_YCP_centralized_federation = {#集权式联省
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_centralized_federation" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.10
+			}
+		}
+		SZC_YCP_progress_constitution = {#进步宪法
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_progress_constitution" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.05
+				global_building_slots_factor = 0.10
+				party_popularity_stability_factor = -0.10
+			}
+		}
+		SZC_YCP_moderate_constitution = {#中庸宪法
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_moderate_constitution" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.10
+				global_building_slots_factor = 0.05
+				party_popularity_stability_factor = 0.10
+			}
+		}
+		SZC_YCP_conservative_constitution = {#保守宪法
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_conservative_constitution" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.15
+				party_popularity_stability_factor = 0.20
+			}
+		}
+	}
+	
+	industrial_concern = {
+
+		SZC_the_CAS = {#中国科学院
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_the_CAS"}
+			picture = SZC_the_CAS
+			allowed = { 
+				original_tag = SZC
+			}
+			available = {
+				OR = {
+                 	has_country_flag = SZC_CAS_available
+				}
+			}
+			traits = { mining_company }
+			modifier = {
+				local_resources_factor = 0.075
+				production_speed_infrastructure_factor = 0.10
+				trade_opinion_factor = 0.10
+			}
+			research_bonus = {
+				industry = 0.20
+				electronics = 0.10
+				synth_resources = 0.10
 			}
 		}
 	}

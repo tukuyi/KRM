@@ -1122,8 +1122,46 @@ SZC_improve_YCP_legitimacy_effect = {
 			add_idea = SZC_YCP_legitimacy_3
 		}
 	}
+	else_if = {
+		limit = { has_idea = SZC_YCP_legitimacy_3 }
+		swap_ideas = {
+			remove_idea = SZC_YCP_legitimacy_3
+			add_idea = SZC_YCP_legitimacy_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = SZC_YCP_legitimacy_4 }
+		swap_ideas = {
+			remove_idea = SZC_YCP_legitimacy_4
+			add_idea = SZC_YCP_legitimacy_5
+		}
+	}
 	else = {
 		set_temp_variable = { ideology_change_var = 0.05 }
 		change_ruling_party_popularity = yes
+	}
+}
+
+SZC_YCP_constitution_progress_greatly_effect = {
+	custom_effect_tooltip = SZC_YCP_constitution_progress_greatly_tt
+	add_to_variable = {
+		var = SZC_YCP_constitution_status
+		value = 2
+	}
+}
+
+SZC_YCP_constitution_progress_effect = {
+	custom_effect_tooltip = SZC_YCP_constitution_progress_tt
+	add_to_variable = {
+		var = SZC_YCP_constitution_status
+		value = 1
+	}
+}
+
+SZC_YCP_constitution_conservative_effect = {
+	custom_effect_tooltip = SZC_YCP_constitution_conservative_tt
+	add_to_variable = {
+		var = SZC_YCP_constitution_status
+		value = -1
 	}
 }
