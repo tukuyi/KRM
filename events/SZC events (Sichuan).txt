@@ -17726,7 +17726,7 @@ country_event = { #宪法出台
 	}
 }
 
-country_event = { #
+country_event = { #君子当行！
 	id = NKRsichuan.505
 	title = NKRsichuan.505.t
 	desc = NKRsichuan.505.d
@@ -17736,13 +17736,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#行动就在今日！
 		log = "[GetLogInfo]: event NKRsichuan.505 option NKRsichuan.505.a"
 		name = NKRsichuan.505.a
 	}
 }
 
-country_event = { #
+country_event = { #20世纪之士大夫
 	id = NKRsichuan.506
 	title = NKRsichuan.506.t
 	desc = NKRsichuan.506.d
@@ -17752,13 +17752,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#吾辈皆当作士大夫！
 		log = "[GetLogInfo]: event NKRsichuan.506 option NKRsichuan.5066.a"
 		name = NKRsichuan.506.a
 	}
 }
 
-country_event = { #
+country_event = { #国家主义再合流
 	id = NKRsichuan.507
 	title = NKRsichuan.507.t
 	desc = NKRsichuan.507.d
@@ -17768,13 +17768,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#同志再回首。
 		log = "[GetLogInfo]: event NKRsichuan.507 option NKRsichuan.507.a"
 		name = NKRsichuan.507.a
 	}
 }
 
-country_event = { #
+country_event = { #革命的正统国家主义
 	id = NKRsichuan.508
 	title = NKRsichuan.508.t
 	desc = NKRsichuan.508.d
@@ -17784,13 +17784,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#革命者，克里斯玛也
 		log = "[GetLogInfo]: event NKRsichuan.508 option NKRsichuan.508.a"
 		name = NKRsichuan.508.a
 	}
 }
 
-country_event = { #
+country_event = { #新思潮崛起
 	id = NKRsichuan.509
 	title = NKRsichuan.509.t
 	desc = NKRsichuan.509.d
@@ -17800,14 +17800,29 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#值得关注。
 		log = "[GetLogInfo]: event NKRsichuan.509 option NKRsichuan.509.a"
 		name = NKRsichuan.509.a
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.03
+		}
+		set_party_name = {
+			ideology = national_populist
+			name = SZC_ZGCP_party
+			long_name = SZC_ZGCP_party_long
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.510
+				days = 50
+			}
+		}
 	}
 }
 
 
-country_event = { #
+country_event = { #战国策派支持唯一元首
 	id = NKRsichuan.510
 	title = NKRsichuan.510.t
 	desc = NKRsichuan.510.d
@@ -17817,13 +17832,34 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#乐见其成。
 		log = "[GetLogInfo]: event NKRsichuan.510 option NKRsichuan.510.a"
 		name = NKRsichuan.510.a
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.02
+		}
+	}
+	option = {#我们可以推进他们的议程。
+		log = "[GetLogInfo]: event NKRsichuan.510 option NKRsichuan.510.bb"
+		name = NKRsichuan.510.b
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.08
+		}
+		set_country_flag = SZC_YCP_support_ZGCP
 	}
 }
 
-country_event = { #
+country_event = { #阻断赤潮
 	id = NKRsichuan.511
 	title = NKRsichuan.511.t
 	desc = NKRsichuan.511.d
@@ -17833,13 +17869,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#工团主义休想侵蚀大亚细亚！
 		log = "[GetLogInfo]: event NKRsichuan.511 option NKRsichuan.511.a"
 		name = NKRsichuan.511.a
 	}
 }
 
-country_event = { #
+country_event = { #论国家主义革命
 	id = NKRsichuan.512
 	title = NKRsichuan.512.t
 	desc = NKRsichuan.512.d
@@ -17849,13 +17885,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#救亡图存的当代理论纲领！
 		log = "[GetLogInfo]: event NKRsichuan.512 option NKRsichuan.512.a"
 		name = NKRsichuan.512.a
 	}
 }
 
-country_event = { #
+country_event = { #最伟大的元首
 	id = NKRsichuan.513
 	title = NKRsichuan.513.t
 	desc = NKRsichuan.513.d
@@ -17865,13 +17901,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#向委员长致敬！
 		log = "[GetLogInfo]: event NKRsichuan.513 option NKRsichuan.513.a"
 		name = NKRsichuan.513.a
 	}
 }
 
-country_event = { #
+country_event = { #民主的国家主义
 	id = NKRsichuan.514
 	title = NKRsichuan.514.t
 	desc = NKRsichuan.514.d
@@ -17881,7 +17917,7 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#一小步，一大步。
 		log = "[GetLogInfo]: event NKRsichuan.514 option NKRsichuan.514.a"
 		name = NKRsichuan.51374.a
 	}

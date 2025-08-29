@@ -18048,6 +18048,29 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_orthodox_stands"
+			if = {
+				limit = {
+					has_country_flag = SZC_YCP_zeng_moderate_path
+				}
+				custom_effect_tooltip = SZC_YCP_orthodox_stands_moderate_tt
+				add_popularity = {
+					ideology = authoritarian_democrat
+					popularity = 0.03
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = SZC_YCP_zeng_harline_path
+				}
+				custom_effect_tooltip = SZC_YCP_orthodox_stands_hardline_tt
+				add_popularity = {
+					ideology = paternal_autocrat
+					popularity = 0.03
+				}
+			}
+			country_event = {
+				id = NKRsichuan.505
+			}
 		}
 	}
 
@@ -18067,6 +18090,23 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_spirit_of_literati"
+			country_event = {
+				id = NKRsichuan.506
+			}
+			SZC_zeng_qi = {
+				add_trait = {
+					trait = SZC_YCP_literati_in_20C
+					ideology = paternal_autocrat
+				}
+			}
+			hidden_effect = {
+				SZC_zeng_qi = {
+					add_trait = {
+						trait = SZC_YCP_literati_in_20C
+						ideology = authoritarian_democrat
+					}
+				}
+			}
 		}
 	}
 
@@ -18086,6 +18126,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_legacy_of_research_clique"
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.05
+			}
+			add_stability = 0.03
+			country_event = {
+				id = NKRsichuan.507
+			}
 		}
 	}
 
@@ -18105,6 +18153,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_sword_and_shield_for_revolution"
+			create_intelligence_agency = yes
+			upgrade_intelligence_agency = upgrade_form_department
+			upgrade_intelligence_agency = upgrade_psycho_warfare
 		}
 	}
 
@@ -18122,8 +18173,31 @@ focus_tree = {
 			focus = SZC_YCP_orthodox_stands
 		}
 
+		available = {
+			has_country_flag = SZC_YCP_zeng_hardline_path
+		}
+
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_more_than_orthodox"
+			SZC_zeng_qi = {
+				add_trait = {
+					trait = SZC_YCP_machiavelli_today
+					ideology = paternal_autocrat
+				}
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.03
+			}
+			country_event = {
+				id = NKRsichuan.508
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.509
+					days = 50
+				}
+			}
 		}
 	}
 
@@ -18136,6 +18210,19 @@ focus_tree = {
 		y = 2
 		relative_position_id = SZC_YCP_orthodox_stands
 
+		available = {
+			if = {
+				limit = {
+					has_country_flag = SZC_YCP_support_ZGCP
+				}
+				has_country_flag = SZC_YCP_support_ZGCP
+				has_war_with = JAP
+			}
+			else = {
+				has_country_flag = SZC_YCP_will_of_salvation_wat
+			}
+		}
+
 
 		prerequisite = {
 			focus = SZC_YCP_more_than_orthodox
@@ -18143,6 +18230,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_will_of_salvation"
+			#zgcpissue
 		}
 	}
 
@@ -18166,6 +18254,32 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_anti_syndicalist_first"
+			add_ideas = {
+				SZC_YCP_anti_red_meance
+			}
+			country_event = {
+				id = NKRsichuan.511
+			}
+			add_popularity = {
+				ideology = totalist
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = -0.03
+			}
+			if = {
+				limit = {
+					has_country_flag = SZC_YCP_zhang_union
+				}
+				custom_effect_tooltip = SZC_YCP_anti_syndicalist_first_zhang_tt
+			}
+			else = {
+				add_popularity = {
+					ideology = syndicalist
+					popularity = -0.05
+				}
+			}
 		}
 	}
 
@@ -18185,6 +18299,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_charter_of_statist_revolution"
+			add_ideas = {
+				SZC_YCP_statist_revolutionary_charter_idea
+			}
+			country_event = {
+				id = NKRsichuan.512
+			}
 		}
 	}
 
@@ -18209,8 +18329,24 @@ focus_tree = {
 			focus = SZC_YCP_anti_syndicalist_first
 		}
 
+		available = {
+			has_country_flag = SZC_YCP_zeng_hardline_path
+		}
+
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_a_great_leader"
+			custom_effect_tooltip = SZC_YCP_a_great_leader_tt
+			SZC_zeng_qi = {
+				add_trait = {
+					trait = SZC_YCP_the_great_leader
+					ideology = paternal_autocrat
+				}
+			}
+			add_political_power = 50
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.05
+			}
 		}
 	}
 
@@ -18235,8 +18371,30 @@ focus_tree = {
 			focus = SZC_YCP_anti_syndicalist_first
 		}
 
+		available = {
+			has_country_flag = SZC_YCP_zeng_moderate_path
+		}
+
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_our_purist_goal"
+			custom_effect_tooltip = SZC_YCP_our_purist_goal_tt
+			add_political_power = 50
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.03
+			}
 		}
 	}
 

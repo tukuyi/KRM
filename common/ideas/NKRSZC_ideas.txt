@@ -1276,6 +1276,31 @@ ideas = {
 				party_popularity_stability_factor = 0.20
 			}
 		}
+		SZC_YCP_anti_red_meance = {#抵御赤恐
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_anti_red_meance" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				totalist_acceptance = -100
+				syndicalist_acceptance = -100
+				radical_socialist_acceptance = -100
+				stability_factor = 0.05
+			}
+		}
+		SZC_YCP_statist_revolutionary_charter_idea = {#国家主义革命宪章
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_statist_revolutionary_charter_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				mobilization_laws_cost_factor = -0.33
+				political_advisor_cost_factor = -0.33
+				high_command_cost_factor = -0.33
+				training_time_factor = -0.05
+				special_forces_training_time_factor = -0.05
+				experience_loss_factor = -0.10
+				skill_bonus_factor = 0.10
+			}
+		}
 	}
 	
 	industrial_concern = {
