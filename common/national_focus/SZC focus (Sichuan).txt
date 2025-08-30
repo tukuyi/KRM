@@ -18034,13 +18034,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
-		allow_branch = {
-			has_country_flag = NKRSZC_YCPpath_phase2
-			OR = {
-				has_country_flag = SZC_YCP_zeng_hardline_path
-				has_country_flag = SZC_YCP_zeng_moderate_path
-			}
-		}
+		# allow_branch = {
+		# 	has_country_flag = NKRSZC_YCPpath_phase2
+		# 	OR = {
+		# 		has_country_flag = SZC_YCP_zeng_hardline_path
+		# 		has_country_flag = SZC_YCP_zeng_moderate_path
+		# 	}
+		# }
 
 		prerequisite = {
 			focus = SZC_YCP_wave_of_history_victory_of_ycp
@@ -19181,12 +19181,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
-		# allow_branch = {
-		# 	has_country_flag = NKRSZC_YCPpath_phase2
-		# 	AND = {
-		# 		has_country_flag = SZC_YCP_new_legalist_path
-		# 	}
-		# }
+		allow_branch = {
+			has_country_flag = NKRSZC_YCPpath_phase2
+			AND = {
+				has_country_flag = SZC_YCP_new_legalist_path
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_wave_of_history_victory_of_ycp
