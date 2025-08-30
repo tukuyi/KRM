@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_YCP_our_purist_goal
+python focusgfxentry.py SZC_YCP_liberal_statist_revolution
 pause

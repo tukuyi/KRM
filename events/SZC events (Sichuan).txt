@@ -17633,7 +17633,7 @@ country_event = { #国家工团党加入政府！
 	id = NKRsichuan.500
 	title = NKRsichuan.500.t
 	desc = NKRsichuan.500.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhang_guotao
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -17647,8 +17647,14 @@ country_event = { #国家工团党加入政府！
 			popularity = 0.05
 		}
 		add_stability = -0.05
-		set_temp_variable = { coalition_partner_var = token:syndicalist }
-		add_to_coalition = yes
+		custom_effect_tooltip = NKRsichuan.500.tt
+		hidden_effect = {
+			set_temp_variable = { coalition_partner_var = token:syndicalist }
+			add_to_coalition = yes
+		}
+		set_country_flag = SZC_YCP_zhang_in_government
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = SZC_zhang_guotao_advisor
 	}
 }
 
@@ -17923,7 +17929,7 @@ country_event = { #民主的国家主义
 	}
 }
 
-country_event = { #
+country_event = { #拯救国家主义革命
 	id = NKRsichuan.515
 	title = NKRsichuan.515.t
 	desc = NKRsichuan.515.d
@@ -17933,13 +17939,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#前进！
 		log = "[GetLogInfo]: event NKRsichuan.515 option NKRsichuan.515.a"
 		name = NKRsichuan.515.a
 	}
 }
 
-country_event = { #
+country_event = { #保甲制的革新
 	id = NKRsichuan.516
 	title = NKRsichuan.516.t
 	desc = NKRsichuan.516.d
@@ -17949,13 +17955,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#李先生真知灼见！
 		log = "[GetLogInfo]: event NKRsichuan.516 option NKRsichuan.5166.a"
 		name = NKRsichuan.516.a
 	}
 }
 
-country_event = { #
+country_event = { #青年铁血军
 	id = NKRsichuan.517
 	title = NKRsichuan.517.t
 	desc = NKRsichuan.517.d
@@ -17965,13 +17971,33 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#青年铁血军万岁！
 		log = "[GetLogInfo]: event NKRsichuan.517 option NKRsichuan.517.a"
 		name = NKRsichuan.517.a
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.01
+		}
+	}
+	option = {#大众社会上都应该加以推广！
+		log = "[GetLogInfo]: event NKRsichuan.517 option NKRsichuan.517.b"
+		name = NKRsichuan.517.b
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.04
+		}
 	}
 }
 
-country_event = { #
+country_event = { #论国际主义和国家主义
 	id = NKRsichuan.518
 	title = NKRsichuan.518.t
 	desc = NKRsichuan.518.d
@@ -17981,13 +18007,33 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#正是如此！
 		log = "[GetLogInfo]: event NKRsichuan.518 option NKRsichuan.518.a"
 		name = NKRsichuan.518.a
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.01
+		}
+	}
+	option = {#我们必须摧毁国际主义！
+		log = "[GetLogInfo]: event NKRsichuan.518 option NKRsichuan.518.b"
+		name = NKRsichuan.518.b
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.04
+		}
 	}
 }
 
-country_event = { #
+country_event = { #李张会
 	id = NKRsichuan.519
 	title = NKRsichuan.519.t
 	desc = NKRsichuan.519.d
@@ -17997,14 +18043,40 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#怎么样呢？
 		log = "[GetLogInfo]: event NKRsichuan.519 option NKRsichuan.519.a"
 		name = NKRsichuan.519.a
+		hidden_effect = {
+			if = {
+				limit = {
+					has_idea = SZC_YCP_progress_constitution
+				}
+				country_event = {
+					id = NKRsichuan.522
+					days = 3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SZC_YCP_moderate_constitution
+				}
+				country_event = {
+					id = NKRsichuan.521
+					days = 3
+				}
+			}
+			else = {
+				country_event = {
+					id = NKRsichuan.520
+					days = 3
+				}
+			}
+		}
 	}
 }
 
 
-country_event = { #
+country_event = { #决裂
 	id = NKRsichuan.520
 	title = NKRsichuan.520.t
 	desc = NKRsichuan.520.d
@@ -18014,13 +18086,22 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#令人遗憾。
 		log = "[GetLogInfo]: event NKRsichuan.520 option NKRsichuan.520.a"
 		name = NKRsichuan.520.a
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.05
+		}
+		add_political_power = -50
 	}
 }
 
-country_event = { #
+country_event = { #青年党-国社党联合
 	id = NKRsichuan.521
 	title = NKRsichuan.521.t
 	desc = NKRsichuan.521.d
@@ -18030,13 +18111,25 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#真不错！
 		log = "[GetLogInfo]: event NKRsichuan.521 option NKRsichuan.521.a"
 		name = NKRsichuan.521.a
+		add_political_power = 10
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.03
+		}
+		set_temp_variable = { coalition_partner_var = token:social_democrat }
+		add_to_coalition = yes
+		set_country_flag = SZC_YCP_collaborate_with_NSP
 	}
 }
 
-country_event = { #
+country_event = { #国社党支持中社
 	id = NKRsichuan.522
 	title = NKRsichuan.522.t
 	desc = NKRsichuan.522.d
@@ -18046,13 +18139,24 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#这...
 		log = "[GetLogInfo]: event NKRsichuan.522 option NKRsichuan.522.a"
 		name = NKRsichuan.522.a
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.05
+		}
+		set_temp_variable = { coalition_partner_var = token:social_democrat }
+		add_to_coalition = yes
+		set_country_flag = SZC_YCP_collaborate_with_NSP
 	}
 }
 
-country_event = { #
+country_event = { #宪政大联盟
 	id = NKRsichuan.523
 	title = NKRsichuan.523.t
 	desc = NKRsichuan.523.d
@@ -18062,13 +18166,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#宪政！宪政！
 		log = "[GetLogInfo]: event NKRsichuan.523 option NKRsichuan.523.a"
 		name = NKRsichuan.523.a
 	}
 }
 
-country_event = { #
+country_event = { #未竟之事
 	id = NKRsichuan.524
 	title = NKRsichuan.524.t
 	desc = NKRsichuan.524.d
@@ -18078,13 +18182,17 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#科学！民主！
 		log = "[GetLogInfo]: event NKRsichuan.524 option NKRsichuan.524.a"
-		name = NKRsichuan.52374.a
+		name = NKRsichuan.524.a
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.03
+		}
 	}
 }
 
-country_event = { #
+country_event = { #人民至上
 	id = NKRsichuan.525
 	title = NKRsichuan.525.t
 	desc = NKRsichuan.525.d
@@ -18094,13 +18202,25 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#人民万岁！
 		log = "[GetLogInfo]: event NKRsichuan.525 option NKRsichuan.525.a"
 		name = NKRsichuan.525.a
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.03
+		}
+	}
+	option = {#不仅如此，我们必须破除幸福生活是恩赐的谬论！
+		log = "[GetLogInfo]: event NKRsichuan.525 option NKRsichuan.525.b"
+		name = NKRsichuan.525.b
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.08
+		}
 	}
 }
 
-country_event = { #
+country_event = { #书生的革命
 	id = NKRsichuan.526
 	title = NKRsichuan.526.t
 	desc = NKRsichuan.526.d
@@ -18110,13 +18230,29 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
-		log = "[GetLogInfo]: event NKRsichuan.526 option NKRsichuan.5266.a"
+	option = {#一心一德！
+		log = "[GetLogInfo]: event NKRsichuan.526 option NKRsichuan.526.a"
 		name = NKRsichuan.526.a
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.02
+		}
+	}
+	option = {#不忘初心！
+		log = "[GetLogInfo]: event NKRsichuan.526 option NKRsichuan.526.b"
+		name = NKRsichuan.526.b
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.03
+		}
 	}
 }
 
-country_event = { #
+country_event = { #现代社会，现代视野
 	id = NKRsichuan.527
 	title = NKRsichuan.527.t
 	desc = NKRsichuan.527.d
@@ -18126,9 +18262,21 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#与时俱进！
 		log = "[GetLogInfo]: event NKRsichuan.527 option NKRsichuan.527.a"
 		name = NKRsichuan.527.a
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.01
+		}
+	}
+	option = {#与德先生共进！
+		log = "[GetLogInfo]: event NKRsichuan.527 option NKRsichuan.527.b"
+		name = NKRsichuan.527.b
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.03
+		}
 	}
 }
 

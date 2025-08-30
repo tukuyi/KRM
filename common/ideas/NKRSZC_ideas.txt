@@ -1301,6 +1301,98 @@ ideas = {
 				skill_bonus_factor = 0.10
 			}
 		}
+		SZC_YCP_lianzhanfa_idea = {#联战法
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_lianzhanfa_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				army_core_defence_factor = 0.10
+				conscription_factor = 0.05
+				custom_modifier_tooltip = china_compliance_gain_plus_one
+			}
+			targeted_modifier = {
+				tag = LEP
+				hidden_modifier = { compliance_gain = 0.01 }
+			}
+			targeted_modifier = {
+				tag = ANQ
+				hidden_modifier = { compliance_gain = 0.01 }
+			}
+			targeted_modifier = {
+				tag = CHI
+				hidden_modifier = { compliance_gain = 0.01 }
+			}
+			targeted_modifier = {
+				tag = SHD
+				hidden_modifier = { compliance_gain = 0.01 }
+			}
+			targeted_modifier = {
+				tag = GXC
+				hidden_modifier = { compliance_gain = 0.01 }
+			}
+			targeted_modifier = {
+				tag = HNN
+				hidden_modifier = { compliance_gain = 0.01 }
+			}
+			targeted_modifier = {
+				tag = YUN
+				hidden_modifier = { compliance_gain = 0.01 }
+			}
+			targeted_modifier = {
+				tag = QIE
+				hidden_modifier = { compliance_gain = 0.01 }
+			}
+			targeted_modifier = {
+				tag = SHX
+				hidden_modifier = { compliance_gain = 0.01 }
+			}
+			targeted_modifier = {
+				tag = FNG
+				hidden_modifier = { compliance_gain = 0.01 }
+			}
+			targeted_modifier = {
+				tag = XSM
+				hidden_modifier = { compliance_gain = 0.01 }
+			}
+			targeted_modifier = {
+				tag = SIK
+				hidden_modifier = { compliance_gain = 0.01 }
+			}
+		}
+		SZC_YCP_young_iron_army_idea = {#青年铁血军
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_young_iron_army_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_morale_factor = 0.10
+			}
+		}
+		SZC_YCP_anti_internationale_idea = {#反对国际主义
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_anti_internationale_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				totalist_acceptance = -20
+				syndicalist_acceptance = -20
+				radical_socialist_acceptance = -20
+				stability_factor = 0.05
+			}
+		}
+		SZC_YCP_peoples_sovereignty_idea = {#人民主权
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_peoples_sovereignty_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				compliance_gain = 0.02
+				party_popularity_stability_factor = 0.05
+				stability_factor = 0.05
+				trade_laws_cost_factor = -0.3
+				mobilization_laws_cost_factor = -0.3
+				army_core_defence_factor = 0.1
+			}
+		}
 	}
 	
 	industrial_concern = {

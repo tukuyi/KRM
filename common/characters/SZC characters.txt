@@ -1433,6 +1433,17 @@ characters = {
 			ideology = syndicalist_yellow_syndicalist_subtype
 			traits = { CHN_statist_aligned }
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_zhang_guotao_advisor
+			available = {
+				has_country_flag = SZC_YCP_zhang_in_government
+			}
+			visible = {
+				has_country_flag = SZC_YCP_zhang_in_government
+			}
+			traits = { SZC_YCP_collaborative_yellow_syndicalist }
+		}
 	}
 
 

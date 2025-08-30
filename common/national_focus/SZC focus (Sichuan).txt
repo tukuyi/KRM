@@ -18035,11 +18035,11 @@ focus_tree = {
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
 		allow_branch = {
-			# has_country_flag = NKRSZC_YCPpath_phase2
-			# OR = {
-			# 	has_country_flag = SZC_YCP_zeng_hardline_path
-			# 	has_country_flag = SZC_YCP_zeng_moderate_path
-			# }
+			has_country_flag = NKRSZC_YCPpath_phase2
+			OR = {
+				has_country_flag = SZC_YCP_zeng_hardline_path
+				has_country_flag = SZC_YCP_zeng_moderate_path
+			}
 		}
 
 		prerequisite = {
@@ -18394,6 +18394,403 @@ focus_tree = {
 			add_popularity = {
 				ideology = social_democrat
 				popularity = 0.03
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_technique_of_relief
+		icon = GFX_goal_SZC_YCP_technique_of_relief
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
+
+		allow_branch = {
+			# has_country_flag = NKRSZC_YCPpath_phase2
+			# OR = {
+			# 	has_country_flag = SZC_YCP_li_path
+			# }
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_wave_of_history_victory_of_ycp
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_technique_of_relief"
+			custom_effect_tooltip = SZC_YCP_technique_of_relief_tt
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.03
+			}
+			add_political_power = 50
+			country_event = {
+				id = NKRsichuan.515
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_way_of_lianzhan
+		icon = GFX_goal_SZC_YCP_way_of_lianzhan
+		cost = 4
+
+		x = -3
+		y = 1
+		relative_position_id = SZC_YCP_technique_of_relief
+
+
+		prerequisite = {
+			focus = SZC_YCP_technique_of_relief
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_way_of_lianzhan"
+			add_ideas = {
+				SZC_YCP_lianzhanfa_idea
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.03
+			}
+			country_event = {
+				id = NKRsichuan.516
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_young_iron_blood_army
+		icon = GFX_goal_SZC_YCP_young_iron_blood_army
+		cost = 4
+
+		x = -4
+		y = 2
+		relative_position_id = SZC_YCP_technique_of_relief
+
+
+		prerequisite = {
+			focus = SZC_YCP_way_of_lianzhan
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_young_iron_blood_army"
+			army_experience = 50
+			country_event = {
+				id = NKRsichuan.517
+			}
+			add_ideas = {
+				SZC_YCP_young_iron_army_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_anti_internationale
+		icon = GFX_goal_SZC_YCP_anti_internationale
+		cost = 4
+
+		x = -2
+		y = 2
+		relative_position_id = SZC_YCP_technique_of_relief
+
+
+		prerequisite = {
+			focus = SZC_YCP_way_of_lianzhan
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_anti_internationale"
+			country_event = {
+				id = NKRsichuan.518
+			}
+			add_war_support = 0.1
+			add_ideas = {
+				SZC_YCP_anti_internationale_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_my_dear_friend_zhang
+		icon = GFX_goal_SZC_YCP_my_dear_friend_zhang
+		cost = 4
+
+		x = -1
+		y = 1
+		relative_position_id = SZC_YCP_technique_of_relief
+
+		available = {
+			has_completed_focus = SZC_YCP_new_constitution
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_technique_of_relief
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_my_dear_friend_zhang"
+			custom_effect_tooltip = SZC_YCP_my_dear_friend_zhang_tt
+			country_event = {
+				id = NKRsichuan.519
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_constitutional_union
+		icon = GFX_goal_SZC_YCP_constitutional_union
+		cost = 4
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_YCP_technique_of_relief
+
+
+		prerequisite = {
+			focus = SZC_YCP_technique_of_relief
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_constitutional_union"
+			
+			country_event = {
+				id = NKRsichuan.523
+			}
+			if = {
+				limit = {
+					has_country_flag = SZC_YCP_collaborate_with_NSP
+				}
+				custom_effect_tooltip = SZC_YCP_constitutional_union_NSP_has_tt
+				add_popularity = {
+					ideology = social_democrat
+					popularity = 0.03
+				}
+				add_political_power = 100
+			}
+			else = {
+				custom_effect_tooltip = SZC_YCP_constitutional_union_NSP_not_tt
+			}
+			if = {
+				limit = {
+					has_country_flag = SZC_YCP_collaborate_with_NSP
+				}
+				custom_effect_tooltip = SZC_YCP_constitutional_union_SSP_has_tt
+				add_popularity = {
+					ideology = syndicalist
+					popularity = 0.03
+				}
+				add_political_power = 50
+			}
+			else = {
+				custom_effect_tooltip = SZC_YCP_constitutional_union_SSP_not_tt
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_new_new_culture_movement
+		icon = GFX_goal_SZC_YCP_new_new_culture_movement
+		cost = 4
+
+		x = 2
+		y = 1
+		relative_position_id = SZC_YCP_technique_of_relief
+
+
+		prerequisite = {
+			focus = SZC_YCP_technique_of_relief
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_new_new_culture_movement"
+			country_event = {
+				id = NKRsichuan.524
+			}
+			add_tech_bonus = {
+				bonus = 1
+				category = electronics
+				uses = 2
+			}
+			add_tech_bonus = {
+				bonus = 2
+				category = industry
+				uses = 2
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_peoples_sovereign
+		icon = GFX_goal_SZC_YCP_peoples_sovereign
+		cost = 4
+
+		x = 2
+		y = 2
+		relative_position_id = SZC_YCP_technique_of_relief
+
+
+		prerequisite = {
+			focus = SZC_YCP_new_new_culture_movement
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_peoples_sovereign"
+			country_event = {
+				id = NKRsichuan.525
+			}
+			add_ideas = {
+				SZC_YCP_peoples_sovereignty_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_modern_vision
+		icon = GFX_goal_SZC_YCP_modern_vision
+		cost = 4
+
+		x = 4
+		y = 2
+		relative_position_id = SZC_YCP_technique_of_relief
+
+
+		prerequisite = {
+			focus = SZC_YCP_new_new_culture_movement
+			focus = SZC_YCP_scholars_nature
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_modern_vision"
+			add_research_slot = 1
+			country_event = {
+				id = NKRsichuan.527
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_scholars_nature
+		icon = GFX_goal_SZC_YCP_scholars_nature
+		cost = 4
+
+		x = 5
+		y = 1
+		relative_position_id = SZC_YCP_technique_of_relief
+
+
+		prerequisite = {
+			focus = SZC_YCP_technique_of_relief
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_scholars_nature"
+			country_event = {
+				id = NKRsichuan.526
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
+			#advisor trait
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_young_china_and_young_democracy
+		icon = GFX_goal_SZC_YCP_young_china_and_young_democracy
+		cost = 4
+
+		x = -1
+		y = 3
+		relative_position_id = SZC_YCP_technique_of_relief
+
+		mutually_exclusive = {
+			focus = SZC_YCP_liberal_statist_revolution
+		}
+
+		available = {
+			authoritarian_democrat > party_popularity@social_liberal
+		}
+
+
+		prerequisite = {
+			focus = SZC_YCP_young_iron_blood_army
+		}
+		prerequisite = {
+			focus = SZC_YCP_anti_internationale
+		}
+		prerequisite = {
+			focus = SZC_YCP_constitutional_union
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_young_china_and_young_democracy"
+			custom_effect_tooltip = SZC_YCP_young_china_and_young_democracy_tt
+			SZC_li_huang = {
+				add_trait = {
+					trait = SZC_YCP_democratic_protector
+					ideology = authoritarian_democrat
+				}
+			}
+			hidden_effect = {
+				SZC_li_huang = {
+					add_trait = {
+						trait = SZC_YCP_democratic_protector
+						ideology = social_conservative
+					}
+				}
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_liberal_statist_revolution
+		icon = GFX_goal_SZC_YCP_liberal_statist_revolution
+		cost = 4
+
+		x = 1
+		y = 3
+		relative_position_id = SZC_YCP_technique_of_relief
+
+		mutually_exclusive = {
+			focus = SZC_YCP_young_china_and_young_democracy
+		}
+
+		available = {
+			social_liberal > party_popularity@authoritarian_democrat
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_peoples_sovereign
+		}
+		prerequisite = {
+			focus = SZC_YCP_modern_vision
+		}
+		prerequisite = {
+			focus = SZC_YCP_constitutional_union
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_liberal_statist_revolution"
+			custom_effect_tooltip = SZC_YCP_liberal_statist_revolution_tt
+			SZC_zuo_shunsheng = {
+				add_trait = {
+					trait = SZC_YCP_liberal_fighter
+					ideology = social_liberal
+				}
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.05
 			}
 		}
 	}

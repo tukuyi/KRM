@@ -8,7 +8,7 @@ leader_traits = {
 	}
 	SZC_YCP_literati_in_20C = {
 		random = no
-		political_advisor_cost = -0.33
+		political_advisor_cost_factor = -0.33
         research_speed_factor = 0.10
 	}
 	SZC_YCP_the_great_leader = {
@@ -17,6 +17,31 @@ leader_traits = {
         surrender_limit = 0.2
         war_support_factor = 0.1 
 		breakthrough_factor = 0.1
+	}
+	SZC_YCP_collaborative_yellow_syndicalist = {
+		random = no
+		stability_factor = 0.10
+        factory_output = -0.05   
+        consumer_goods_factor = -0.15
+        political_power_gain = -0.05   
+        trade_opinion_factor = 0.10      
+	}
+	SZC_YCP_democratic_protector = {
+		random = no
+		stability_factor = 0.10
+        war_support_factor = 0.10
+        army_org_factor = 0.05 
+	}
+	SZC_YCP_liberal_fighter = {
+		random = no
+        army_attack_factor = 0.10
+		political_power_factor = 0.1
+		party_popularity_stability_factor = -0.25
+	}
+	SZC_YCP_scholar_spirit = {
+		random = no
+        research_speed_factor = 0.1
+		war_support_factor = 0.1
 	}
 }
 	
