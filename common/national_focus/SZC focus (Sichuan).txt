@@ -18805,17 +18805,17 @@ focus_tree = {
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
 		allow_branch = {
-			# has_country_flag = NKRSZC_YCPpath_phase2
-			# AND = {
-			# 	has_country_flag = SZC_YCP_young_turks_path
-			# 	NOT = {
-			# 		OR = {
-						# has_country_flag = SZC_YCP_xia_real_path
-						# has_country_flag = SZC_YCP_new_legalist_path
-						# has_country_flag = SZC_YCP_zhang_guotao_path
-			# 		}
-			# 	}
-			# }
+			has_country_flag = NKRSZC_YCPpath_phase2
+			AND = {
+				has_country_flag = SZC_YCP_young_turks_path
+				NOT = {
+					OR = {
+						has_country_flag = SZC_YCP_xia_real_path
+						has_country_flag = SZC_YCP_new_legalist_path
+						has_country_flag = SZC_YCP_zhang_guotao_path
+					}
+				}
+			}
 		}
 
 		prerequisite = {
@@ -19086,6 +19086,10 @@ focus_tree = {
 		y = 3
 		relative_position_id = SZC_YCP_young_turks_rises
 
+		available = {
+			has_completed_focus = SZC_YCP_new_constitution
+		}
+
 		select_effect = {
 			if = {
 				limit = {
@@ -19166,7 +19170,232 @@ focus_tree = {
 			}
 		}
 	}
+	
+	
+	focus = {
+		id = SZC_YCP_new_legalist_victory
+		icon = GFX_goal_SZC_YCP_new_legalist_victory
+		cost = 4
 
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
+
+		# allow_branch = {
+		# 	has_country_flag = NKRSZC_YCPpath_phase2
+		# 	AND = {
+		# 		has_country_flag = SZC_YCP_new_legalist_path
+		# 	}
+		# }
+
+		prerequisite = {
+			focus = SZC_YCP_wave_of_history_victory_of_ycp
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_new_legalist_victory"
+			custom_effect_tooltip = SZC_YCP_new_legalist_victory_tt
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.03
+			}
+			add_political_power = 25
+			country_event ={
+				id = NKRsichuan.547
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_new_zhanguo_era
+		icon = GFX_goal_SZC_YCP_new_zhanguo_era
+		cost = 4
+
+		x = -1
+		y = 1
+		relative_position_id = SZC_YCP_new_legalist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_new_legalist_victory
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_new_zhanguo_era"
+			country_event = {
+				id = NKRsichuan.548
+			}
+			add_ideas = {
+				SZC_YCP_legalist_fuguoqiangbing_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_legalist_constitution
+		icon = GFX_goal_SZC_YCP_legalist_constitution
+		cost = 4
+
+		x = -2
+		y = 2
+		relative_position_id = SZC_YCP_new_legalist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_new_zhanguo_era
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_legalist_constitution"
+			country_event = {
+				id = NKRsichuan.549
+			}
+			if = {
+				limit = {
+					has_idea = SZC_YCP_progress_constitution
+				}
+				swap_ideas = {
+					remove_idea = SZC_YCP_progress_constitution
+					add_idea = SZC_YCP_legalist_constitution_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SZC_YCP_moderate_constitution
+				}
+				swap_ideas = {
+					remove_idea = SZC_YCP_moderate_constitution
+					add_idea = SZC_YCP_legalist_constitution_idea
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SZC_YCP_conservative_constitution
+				}
+				swap_ideas = {
+					remove_idea = SZC_YCP_conservative_constitution
+					add_idea = SZC_YCP_legalist_constitution_idea
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_biology_innovation
+		icon = GFX_goal_SZC_YCP_biology_innovation
+		cost = 4
+
+		x = 1
+		y = 1
+		relative_position_id = SZC_YCP_new_legalist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_new_legalist_victory
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_biology_innovation"
+			country_event = {
+				id = NKRsichuan.550
+			}
+			add_ideas = {
+				SZC_YCP_positivist_revolution_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_state_socialist
+		icon = GFX_goal_SZC_YCP_state_socialist
+		cost = 4
+
+		x = 2
+		y = 2
+		relative_position_id = SZC_YCP_new_legalist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_biology_innovation
+		}
+
+		available = {
+			has_completed_focus = SZC_YCP_eastern_socialpolitik
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_state_socialist"
+			country_event = {
+				id = NKRsichuan.551
+			}
+			add_war_support = 0.1
+			add_stability = 0.1
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_hanfeizi_today
+		icon = GFX_goal_SZC_YCP_hanfeizi_today
+		cost = 4
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_YCP_new_legalist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_new_legalist_victory
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_hanfeizi_today"
+			SZC_chen_qitian = {
+				add_trait = {
+					trait = SZC_YCP_hanfeizi_today
+					ideology = authoritarian_democrat
+				}
+			}
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_lordly_way
+		icon = GFX_goal_SZC_YCP_lordly_way
+		cost = 4
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_YCP_new_legalist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_hanfeizi_today
+		}
+		prerequisite = {
+			focus = SZC_YCP_state_socialist
+			focus = SZC_YCP_legalist_constitution
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_lordly_way"
+			custom_effect_tooltip = SZC_YCP_lordly_way_tt
+			country_event = {
+				id = NKRsichuan.552
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.08
+			}
+			add_ideas = {
+				SZC_YCP_lordly_way_idea
+			}
+		}
+	}
 
 
 

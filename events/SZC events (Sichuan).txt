@@ -18774,7 +18774,7 @@ country_event = { #混乱即阶梯
 	}
 }
 
-country_event = { #
+country_event = { #新法家双巨头
 	id = NKRsichuan.547
 	title = NKRsichuan.547.t
 	desc = NKRsichuan.547.d
@@ -18784,13 +18784,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#真是两位智者！
 		log = "[GetLogInfo]: event NKRsichuan.547 option NKRsichuan.547.a"
 		name = NKRsichuan.547.a
 	}
 }
 
-country_event = { #
+country_event = { #新战国时代已至！
 	id = NKRsichuan.548
 	title = NKRsichuan.548.t
 	desc = NKRsichuan.548.d
@@ -18800,13 +18800,14 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#正是如此！
 		log = "[GetLogInfo]: event NKRsichuan.548 option NKRsichuan.548.a"
 		name = NKRsichuan.548.a
+		add_war_support = 0.05
 	}
 }
 
-country_event = { #
+country_event = { #超然政府
 	id = NKRsichuan.549
 	title = NKRsichuan.549.t
 	desc = NKRsichuan.549.d
@@ -18816,16 +18817,17 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#唯有如此才能保政治之清朗！
 		log = "[GetLogInfo]: event NKRsichuan.549 option NKRsichuan.549.a"
 		name = NKRsichuan.549.a
+		add_stability = 0.05
 	}
 }
 
 
 
 
-country_event = { #
+country_event = { #思想大革命
 	id = NKRsichuan.550
 	title = NKRsichuan.550.t
 	desc = NKRsichuan.550.d
@@ -18835,13 +18837,14 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#中国的起死回生，便是法家大一统的复兴！
 		log = "[GetLogInfo]: event NKRsichuan.550 option NKRsichuan.550.a"
 		name = NKRsichuan.550.a
+		add_stability = -0.05
 	}
 }
 
-country_event = { #
+country_event = { #国际的国家社会主义
 	id = NKRsichuan.551
 	title = NKRsichuan.551.t
 	desc = NKRsichuan.551.d
@@ -18851,13 +18854,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#迈向全世界！
 		log = "[GetLogInfo]: event NKRsichuan.551 option NKRsichuan.551.a"
 		name = NKRsichuan.551.a
 	}
 }
 
-country_event = { #
+country_event = { #霸道
 	id = NKRsichuan.552
 	title = NKRsichuan.552.t
 	desc = NKRsichuan.552.d
@@ -18867,9 +18870,10 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#天下大势，分久必合，合久必分！
 		log = "[GetLogInfo]: event NKRsichuan.552 option NKRsichuan.552.a"
 		name = NKRsichuan.552.a
+		add_political_power = 50
 	}
 }
 
