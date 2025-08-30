@@ -18408,10 +18408,10 @@ focus_tree = {
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
 		allow_branch = {
-			# has_country_flag = NKRSZC_YCPpath_phase2
-			# OR = {
-			# 	has_country_flag = SZC_YCP_li_path
-			# }
+			has_country_flag = NKRSZC_YCPpath_phase2
+			OR = {
+				has_country_flag = SZC_YCP_li_path
+			}
 		}
 
 		prerequisite = {
@@ -18791,6 +18791,371 @@ focus_tree = {
 			add_popularity = {
 				ideology = social_liberal
 				popularity = 0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_young_turks_rises
+		icon = GFX_goal_SZC_YCP_young_turks_rises
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
+
+		allow_branch = {
+			# has_country_flag = NKRSZC_YCPpath_phase2
+			# OR = {
+			# 	has_country_flag = SZC_YCP_young_turks_path
+			# }
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_wave_of_history_victory_of_ycp
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_young_turks_rises"
+			custom_effect_tooltip = SZC_YCP_young_turks_rises_tt
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.03
+			}
+			add_political_power = 50
+			country_event = {
+				id = NKRsichuan.528
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_good_old_ways
+		icon = GFX_goal_SZC_YCP_good_old_ways
+		cost = 4
+
+		x = -1
+		y = 1
+		relative_position_id = SZC_YCP_young_turks_rises
+
+		mutually_exclusive = {
+			focus = SZC_YCP_accelerate_plan
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_young_turks_rises
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_good_old_ways"
+			country_event = {
+				id = NKRsichuan.529
+			}
+			add_tech_bonus = {
+				bonus = 1
+				category = industry
+				uses = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_accelerate_plan
+		icon = GFX_goal_SZC_YCP_accelerate_plan
+		cost = 4
+
+		x = -3
+		y = 1
+		relative_position_id = SZC_YCP_young_turks_rises
+
+		mutually_exclusive = {
+			focus = SZC_YCP_good_old_ways
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_young_turks_rises
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_accelerate_plan"
+			country_event = {
+				id = NKRsichuan.530
+			}
+			add_timed_idea = {
+				idea = SZC_YCP_accelerate_plan_idea
+				duration = 730
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_concord_factions
+		icon = GFX_goal_SZC_YCP_concord_factions
+		cost = 4
+
+		x = -1
+		y = 2
+		relative_position_id = SZC_YCP_young_turks_rises
+
+		mutually_exclusive = {
+			focus = SZC_YCP_zhaoxishe_supremacy
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_accelerate_plan
+			focus = SZC_YCP_good_old_ways
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_concord_factions"
+			add_stability = 0.15
+			add_war_support = 0.15
+			add_political_power = 100
+			country_event = {
+				id = NKRsichuan.531
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_zhaoxishe_supremacy
+		icon = GFX_goal_SZC_YCP_zhaoxishe_supremacy
+		cost = 4
+
+		x = -3
+		y = 2
+		relative_position_id = SZC_YCP_young_turks_rises
+
+		mutually_exclusive = {
+			focus = SZC_YCP_concord_factions
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_accelerate_plan
+			focus = SZC_YCP_good_old_ways
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_zhaoxishe_supremacy"
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.05
+			}
+			add_political_power = -50
+			country_event = {
+				id = NKRsichuan.532
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_standing_alone
+		icon = GFX_goal_SZC_YCP_standing_alone
+		cost = 4
+
+		x = 1
+		y = 1
+		relative_position_id = SZC_YCP_young_turks_rises
+
+		mutually_exclusive = {
+			focus = SZC_YCP_gain_support_from_dangwai
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_young_turks_rises
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_standing_alone"
+			country_event = {
+				id = NKRsichuan.533
+			}
+			add_stability = 0.05
+			add_popularity = {
+				ideology = syndicalist
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.03
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_gain_support_from_dangwai
+		icon = GFX_goal_SZC_YCP_gain_support_from_dangwai
+		cost = 4
+
+		x = 3
+		y = 1
+		relative_position_id = SZC_YCP_young_turks_rises
+
+		mutually_exclusive = {
+			focus = SZC_YCP_standing_alone
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_young_turks_rises
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_gain_support_from_dangwai"
+			custom_effect_tooltip = SZC_YCP_gain_support_from_dangwai_tt
+			country_event = {
+				id = NKRsichuan.534
+			}
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_statist_source
+		icon = GFX_goal_SZC_YCP_statist_source
+		cost = 4
+
+		x = 1
+		y = 2
+		relative_position_id = SZC_YCP_young_turks_rises
+
+		mutually_exclusive = {
+			focus = SZC_YCP_remember_mr_de
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_gain_support_from_dangwai
+			focus = SZC_YCP_standing_alone
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_statist_source"
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.03
+			}
+			country_event = {
+				id = NKRsichuan.537
+			}
+			#advisor trait
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_remember_mr_de
+		icon = GFX_goal_SZC_YCP_remember_mr_de
+		cost = 4
+
+		x = 3
+		y = 2
+		relative_position_id = SZC_YCP_young_turks_rises
+
+		mutually_exclusive = {
+			focus = SZC_YCP_statist_source
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_gain_support_from_dangwai
+			focus = SZC_YCP_standing_alone
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_remember_mr_de"
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.03
+			}
+			country_event = {
+				id = NKRsichuan.538
+			}
+			#advisor trait
+		}
+	}
+	
+	focus = {
+		id = SZC_YCP_my_job_be_done
+		icon = GFX_goal_SZC_YCP_my_job_be_done
+		cost = 4
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_YCP_young_turks_rises
+
+		select_effect = {
+			if = {
+				limit = {
+					AND = {
+						has_completed_focus = SZC_YCP_accelerate_plan
+						has_completed_focus = SZC_YCP_gain_support_from_dangwai
+						has_completed_focus = SZC_YCP_remember_mr_de
+						has_completed_focus = SZC_YCP_concord_factions
+						has_country_flag = SZC_YCP_zhang_supports_xia
+					}
+				}
+				country_event = {
+					id = NKRsichuan.542
+					days = 5
+				}
+			}
+		}
+
+
+		prerequisite = {
+			focus = SZC_YCP_zhaoxishe_supremacy
+			focus = SZC_YCP_concord_factions
+		}
+		prerequisite = {
+			focus = SZC_YCP_statist_source
+			focus = SZC_YCP_remember_mr_de
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_my_job_be_done"
+			custom_effect_tooltip = SZC_YCP_my_job_be_done_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						AND = {
+							has_completed_focus = SZC_YCP_accelerate_plan
+							has_completed_focus = SZC_YCP_gain_support_from_dangwai
+							has_completed_focus = SZC_YCP_remember_mr_de
+							has_completed_focus = SZC_YCP_concord_factions
+							has_country_flag = SZC_YCP_zhang_supports_xia
+						}
+					}
+					country_event = {
+						id = NKRsichuan.543
+					}
+				}
+				else_if = {
+					limit = {
+						AND = {
+							has_completed_focus = SZC_YCP_accelerate_plan
+							has_completed_focus = SZC_YCP_gain_support_from_dangwai
+							has_completed_focus = SZC_YCP_remember_mr_de
+							has_completed_focus = SZC_YCP_zhaoxishe_supremacy
+						}
+					}
+					country_event = {
+						id = NKRsichuan.541
+					}
+				}
+				else_if = {
+					limit = {
+						AND = {
+							has_completed_focus = SZC_YCP_good_old_ways
+							has_completed_focus = SZC_YCP_concord_factions
+							has_completed_focus = SZC_YCP_standing_alone
+							has_completed_focus = SZC_YCP_statist_source
+						}
+					}
+					country_event = {
+						id = NKRsichuan.539
+					}
+				}
+				else = {
+					country_event = {
+						id = NKRsichuan.540
+					}
+				}
 			}
 		}
 	}

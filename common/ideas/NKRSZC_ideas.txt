@@ -1393,6 +1393,15 @@ ideas = {
 				army_core_defence_factor = 0.1
 			}
 		}
+		SZC_YCP_accelerate_plan_idea = {#加速战略
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_peoples_sovereignty_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				cic_construction_boost = 0.35
+				consumer_goods_factor = 0.25
+			}
+		}
 	}
 	
 	industrial_concern = {
