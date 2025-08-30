@@ -18806,8 +18806,15 @@ focus_tree = {
 
 		allow_branch = {
 			# has_country_flag = NKRSZC_YCPpath_phase2
-			# OR = {
+			# AND = {
 			# 	has_country_flag = SZC_YCP_young_turks_path
+			# 	NOT = {
+			# 		OR = {
+						# has_country_flag = SZC_YCP_xia_real_path
+						# has_country_flag = SZC_YCP_new_legalist_path
+						# has_country_flag = SZC_YCP_zhang_guotao_path
+			# 		}
+			# 	}
 			# }
 		}
 
