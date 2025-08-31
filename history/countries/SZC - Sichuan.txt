@@ -120,7 +120,6 @@ recruit_character = SZC_zhang_bolun
 recruit_character = SZC_wang_shizeng
 recruit_character = SZC_wen_yiduo
 recruit_character = SZC_tan_tiwu
-recruit_character = SZC_zhang_guotao
 
 
 recruit_character = SZC_liu_congyun
@@ -136,6 +135,15 @@ recruit_character = SZC_shen_junru
 recruit_character = SZC_luo_longji
 recruit_character = SZC_pan_guangdan
 recruit_character = SZC_yang_bokai
+
+
+#西路军大舞台
+
+recruit_character = SZC_zhang_guotao
+recruit_character = SZC_chen_zaidao
+recruit_character = SZC_chen_xilian
+recruit_character = SZC_wang_shusheng
+recruit_character = SZC_han_xianchu
 
 ### Character Setup ###
 SZC_yang_sen = {
@@ -242,4 +250,22 @@ SZC_zhang_bolun = {
 }
 SZC_tang_shizun = {
 	china_set_character_alignment_statist = yes
+}
+
+
+SZC_zhang_guotao= {
+	china_set_character_alignment_statist = yes
+	retire = yes
+}
+SZC_chen_zaidao = {
+	retire = yes
+}
+SZC_chen_xilian = {
+	retire = yes
+}
+SZC_wang_shusheng = {
+	retire = yes
+}
+SZC_han_xianchu = {
+	retire = yes
 }

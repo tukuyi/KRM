@@ -17337,6 +17337,7 @@ country_event = { #出乎意料的橄榄枝
 			name = SZC_CSSP_party
 		}
 		SZC_zhang_guotao = {
+			SZC_recruit_character_effect = yes
 			promote_character = syndicalist_yellow_syndicalist_subtype
 		}
 	}
@@ -18771,6 +18772,18 @@ country_event = { #混乱即阶梯
 		}
 		set_country_flag = SZC_YCP_zhang_guotao_path
 		mark_focus_tree_layout_dirty = yes
+		SZC_chen_zaidao = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_chen_xilian = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_wang_shusheng = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_han_xianchu = {
+			SZC_recruit_character_effect = yes
+		}
 	}
 }
 

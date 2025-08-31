@@ -1419,6 +1419,8 @@ characters = {
 		}
 	}
 
+	#西路军抽象大舞台#
+
 	#张国焘
 	SZC_zhang_guotao = {
 		name = SZC_zhang_guotao
@@ -1443,6 +1445,86 @@ characters = {
 				has_country_flag = SZC_YCP_zhang_in_government
 			}
 			traits = { SZC_YCP_collaborative_yellow_syndicalist }
+		}
+	}
+
+	#陈载道
+	SZC_chen_zaidao = {
+		name = SZC_chen_zaidao
+		portraits = {
+			military = {
+				large = GFX_portrait_SZC_chen_zaidao_large
+				small = GFX_portrait_SZC_chen_zaidao_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_chen_zaidao_commander_desc
+			traits = { light_infantry_officer naval_invader reckless }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	#陈锡联
+	SZC_chen_xilian = {
+		name = SZC_chen_xilian
+		portraits = {
+			military = {
+				large = GFX_portrait_SZC_chen_xilian_large
+				small = GFX_portrait_SZC_chen_xilian_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_chen_xilian_commander_desc
+			traits = { infantry_officer reckless commando }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+
+	#王树声
+	SZC_wang_shusheng = {
+		name = SZC_wang_shusheng
+		portraits = {
+			military = {
+				large = GFX_portrait_SZC_wang_shusheng_large
+				small = GFX_portrait_SZC_wang_shusheng_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_wang_shusheng_commander_desc
+			traits = { infantry_officer trait_engineer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	#韩先楚
+	SZC_chen_zaidao = {
+		name = SZC_chen_zaidao
+		portraits = {
+			military = {
+				large = GFX_portrait_SZC_chen_zaidao_large
+				small = GFX_portrait_SZC_chen_zaidao_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_chen_zaidao_commander_desc
+			traits = { infantry_officer naval_invader reckless }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
 		}
 	}
 
