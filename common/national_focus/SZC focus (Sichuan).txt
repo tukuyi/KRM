@@ -18034,13 +18034,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
-		# allow_branch = {
-		# 	has_country_flag = NKRSZC_YCPpath_phase2
-		# 	OR = {
-		# 		has_country_flag = SZC_YCP_zeng_hardline_path
-		# 		has_country_flag = SZC_YCP_zeng_moderate_path
-		# 	}
-		# }
+		allow_branch = {
+			has_country_flag = NKRSZC_YCPpath_phase2
+			OR = {
+				has_country_flag = SZC_YCP_zeng_hardline_path
+				has_country_flag = SZC_YCP_zeng_moderate_path
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_wave_of_history_victory_of_ycp
@@ -19393,6 +19393,465 @@ focus_tree = {
 			}
 			add_ideas = {
 				SZC_YCP_lordly_way_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_destiny_architect
+		icon = GFX_goal_SZC_YCP_destiny_architect
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
+
+		allow_branch = {
+			has_country_flag = NKRSZC_YCPpath_phase2
+			OR = {
+				has_country_flag = SZC_YCP_xia_real_path
+			}
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_wave_of_history_victory_of_ycp
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_destiny_architect"
+			custom_effect_tooltip = SZC_YCP_destiny_architect_tt
+			add_political_power = 50
+			country_event = {
+				id = NKRsichuan.553
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_when_i_was_young
+		icon = GFX_goal_SZC_YCP_when_i_was_young
+		cost = 4
+
+		x = -1
+		y = 1
+		relative_position_id = SZC_YCP_destiny_architect
+
+		available = {
+			has_idea = SZC_YCP_progress_constitution
+			NOT = {
+				has_idea = SZC_YCP_state_union_idea
+			}
+		}
+
+		mutually_exclusive = {
+			focus = SZC_YCP_wind_of_reform
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_destiny_architect
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_when_i_was_young"
+			country_event = {
+				id = NKRsichuan.554
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.05
+			}
+			add_political_power = 100
+			add_stability = -0.2
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_beyond_impossible
+		icon = GFX_goal_SZC_YCP_beyond_impossible
+		cost = 4
+
+		x = -1
+		y = 2
+		relative_position_id = SZC_YCP_destiny_architect
+
+		prerequisite = {
+			focus = SZC_YCP_when_i_was_young
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_beyond_impossible"
+			country_event = {
+				id = NKRsichuan.555
+			}
+			add_ideas = {
+				SZC_YCP_beyond_impossible_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_together_with_world_society
+		icon = GFX_goal_SZC_YCP_together_with_world_society
+		cost = 4
+
+		x = -3
+		y = 2
+		relative_position_id = SZC_YCP_destiny_architect
+
+		prerequisite = {
+			focus = SZC_YCP_when_i_was_young
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_together_with_world_society"
+			country_event = {
+				id = NKRsichuan.556
+			}
+			set_party_name = {
+				ideology = social_democrat
+				name = SZC_world_society_party
+				long_name = SZC_world_society_party_long
+			}
+			set_temp_variable = { coalition_partner_var = token:social_democrat }
+			add_to_coalition = yes
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_anarchist_mama_statist_son
+		icon = GFX_goal_SZC_YCP_anarchist_mama_statist_son
+		cost = 4
+
+		x = -2
+		y = 3
+		relative_position_id = SZC_YCP_destiny_architect
+
+		prerequisite = {
+			focus = SZC_YCP_beyond_impossible
+		}
+		prerequisite = {
+			focus = SZC_YCP_together_with_world_society
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_anarchist_mama_statist_son"
+			custom_effect_tooltip = SZC_YCP_anarchist_mama_statist_son_tt
+			swap_ideas = {
+				remove_idea = SZC_YCP_beyond_impossible_idea
+				add_idea = SZC_YCP_become_impossible_idea
+			}
+			country_event = {
+				id = NKRsichuan.557
+			}
+			SZC_xia_taosheng = {
+				set_country_leader_ideology = social_conservative_anarchist_statist_subtype
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_wind_of_reform
+		icon = GFX_goal_SZC_YCP_wind_of_reform
+		cost = 4
+
+		x = 1
+		y = 1
+		relative_position_id = SZC_YCP_destiny_architect
+
+		mutually_exclusive = {
+			focus = SZC_YCP_when_i_was_young
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_destiny_architect
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_wind_of_reform"
+			country_event = {
+				id = NKRsichuan.558
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = -0.03
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_free_china_goal
+		icon = GFX_goal_SZC_YCP_free_china_goal
+		cost = 4
+
+		x = 1
+		y = 2
+		relative_position_id = SZC_YCP_destiny_architect
+
+		prerequisite = {
+			focus = SZC_YCP_wind_of_reform
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_free_china_goal"
+			country_event = {
+				id = NKRsichuan.559
+			}
+			add_ideas = {
+				SZC_YCP_liberal_media_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_liberal_new_friends
+		icon = GFX_goal_SZC_YCP_liberal_new_friends
+		cost = 4
+
+		x = 3
+		y = 2
+		relative_position_id = SZC_YCP_destiny_architect
+
+		prerequisite = {
+			focus = SZC_YCP_wind_of_reform
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_liberal_new_friends"
+			country_event = {
+				id = NKRsichuan.560
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.05
+			}
+			#advisors hushih etc
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_dissolve_the_YCP
+		icon = GFX_goal_SZC_YCP_dissolve_the_YCP
+		cost = 4
+
+		x = 2
+		y = 3
+		relative_position_id = SZC_YCP_destiny_architect
+
+		prerequisite = {
+			focus = SZC_YCP_free_china_goal
+		}
+		prerequisite = {
+			focus = SZC_YCP_liberal_new_friends
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_dissolve_the_YCP"
+			custom_effect_tooltip = SZC_YCP_dissolve_the_YCP_tt
+			custom_effect_tooltip = SZC_YCP_dissolve_the_YCP_tt_2
+			country_event = {
+				id = NKRsichuan.561
+			}
+			add_ideas = {
+				SZC_YCP_break_dictatorship_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_a_statist_syndicalist
+		icon = GFX_goal_SZC_YCP_a_statist_syndicalist
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
+
+		# allow_branch = {
+		# 	has_country_flag = NKRSZC_YCPpath_phase2
+		# 	OR = {
+		# 		has_country_flag = SZC_YCP_zhang_guotao_path
+		# 	}
+		# }
+
+		prerequisite = {
+			focus = SZC_YCP_wave_of_history_victory_of_ycp
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_a_statist_syndicalist"
+			custom_effect_tooltip = SZC_YCP_a_statist_syndicalist_tt
+			add_political_power = 50
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.03
+			}
+			country_event = {
+				id = NKRsichuan.562
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_reapproach_leftists
+		icon = GFX_goal_SZC_YCP_reapproach_leftists
+		cost = 4
+
+		x = -1
+		y = 1
+		relative_position_id = SZC_YCP_a_statist_syndicalist
+
+		prerequisite = {
+			focus = SZC_YCP_a_statist_syndicalist
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_reapproach_leftists"
+			country_event = {
+				id = NKRsichuan.563
+			}
+			set_temp_variable = { coalition_partner_var = token:radical_socialist }
+			add_to_coalition = yes
+			set_party_name = {
+				ideology = radical_socialist
+				name = SZC_CCSP_SCP_party
+				long_name = SZC_CCSP_SCP_party_long
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.03
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_state_socialist_revolution_front
+		icon = GFX_goal_SZC_YCP_state_socialist_revolution_front
+		cost = 4
+
+		x = -1
+		y = 2
+		relative_position_id = SZC_YCP_a_statist_syndicalist
+
+		prerequisite = {
+			focus = SZC_YCP_reapproach_leftists
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_state_socialist_revolution_front"
+			country_event = {
+				id = NKRsichuan.564
+			}
+			set_temp_variable = { coalition_partner_var = token:social_democrat }
+			add_to_coalition = yes
+			add_ideas = {
+				SZC_YCP_state_socialist_front_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_appease_the_YCP
+		icon = GFX_goal_SZC_YCP_appease_the_YCP
+		cost = 4
+
+		x = 1
+		y = 1
+		relative_position_id = SZC_YCP_a_statist_syndicalist
+
+		prerequisite = {
+			focus = SZC_YCP_a_statist_syndicalist
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_appease_the_YCP"
+			country_event = {
+				id = NKRsichuan.565
+			}
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			add_to_coalition = yes
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.03
+			}
+			add_political_power = 100
+			add_stability = 0.1
+			#advisor
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_strengthen_role_of_military
+		icon = GFX_goal_SZC_YCP_strengthen_role_of_military
+		cost = 4
+
+		x = 1
+		y = 2
+		relative_position_id = SZC_YCP_a_statist_syndicalist
+
+		prerequisite = {
+			focus = SZC_YCP_appease_the_YCP
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_strengthen_role_of_military"
+			country_event = {
+				id = NKRsichuan.566
+			}
+			army_experience = 50
+			SZC_chen_zaidao = {
+				add_attack = 2
+			}
+			add_ideas = {
+				SZC_YCP_an_army_with_state_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_yellow_syndicalist_achieve
+		icon = GFX_goal_SZC_YCP_yellow_syndicalist_achieve
+		cost = 4
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_YCP_a_statist_syndicalist
+
+		prerequisite = {
+			focus = SZC_YCP_strengthen_role_of_military
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_state_socialist_revolution_front
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_yellow_syndicalist_achieve"
+			custom_effect_tooltip = SZC_YCP_yellow_syndicalist_achieve_tt
+			country_event = {
+				id = NKRsichuan.567
+			}
+			add_ideas = {
+				SZC_YCP_yellow_syndicalist_state_idea
 			}
 		}
 	}

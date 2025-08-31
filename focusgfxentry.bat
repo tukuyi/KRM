@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_YCP_lordly_way
+python focusgfxentry.py SZC_YCP_yellow_syndicalist_achieve
 pause

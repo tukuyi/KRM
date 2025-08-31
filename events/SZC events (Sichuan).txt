@@ -18890,7 +18890,7 @@ country_event = { #霸道
 	}
 }
 
-country_event = { #
+country_event = { #造就我自己的命运
 	id = NKRsichuan.553
 	title = NKRsichuan.553.t
 	desc = NKRsichuan.553.d
@@ -18900,13 +18900,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#耐人寻味。
 		log = "[GetLogInfo]: event NKRsichuan.553 option NKRsichuan.553.a"
 		name = NKRsichuan.553.a
 	}
 }
 
-country_event = { #
+country_event = { #年轻的革命家
 	id = NKRsichuan.554
 	title = NKRsichuan.554.t
 	desc = NKRsichuan.554.d
@@ -18916,13 +18916,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#无政府主义革命，就一定要实现！
 		log = "[GetLogInfo]: event NKRsichuan.554 option NKRsichuan.554.a"
 		name = NKRsichuan.55374.a
 	}
 }
 
-country_event = { #
+country_event = { #思想者的疯狂
 	id = NKRsichuan.555
 	title = NKRsichuan.555.t
 	desc = NKRsichuan.555.d
@@ -18932,13 +18932,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#啥？！
 		log = "[GetLogInfo]: event NKRsichuan.555 option NKRsichuan.555.a"
 		name = NKRsichuan.555.a
 	}
 }
 
-country_event = { #
+country_event = { #夏曦社-世界社合作
 	id = NKRsichuan.556
 	title = NKRsichuan.556.t
 	desc = NKRsichuan.556.d
@@ -18948,13 +18948,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#无治主义万岁！
 		log = "[GetLogInfo]: event NKRsichuan.556 option NKRsichuan.5566.a"
 		name = NKRsichuan.556.a
 	}
 }
 
-country_event = { #
+country_event = { #无治国家主义成真
 	id = NKRsichuan.557
 	title = NKRsichuan.557.t
 	desc = NKRsichuan.557.d
@@ -18964,13 +18964,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#待到中华统一，便能更进一步...
 		log = "[GetLogInfo]: event NKRsichuan.557 option NKRsichuan.557.a"
 		name = NKRsichuan.557.a
 	}
 }
 
-country_event = { #
+country_event = { #改变
 	id = NKRsichuan.558
 	title = NKRsichuan.558.t
 	desc = NKRsichuan.558.d
@@ -18980,13 +18980,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#时代变了。
 		log = "[GetLogInfo]: event NKRsichuan.558 option NKRsichuan.558.a"
 		name = NKRsichuan.558.a
 	}
 }
 
-country_event = { #
+country_event = { #《自由中国》
 	id = NKRsichuan.559
 	title = NKRsichuan.559.t
 	desc = NKRsichuan.559.d
@@ -18996,7 +18996,7 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#发生什么事了？
 		log = "[GetLogInfo]: event NKRsichuan.559 option NKRsichuan.559.a"
 		name = NKRsichuan.559.a
 	}
@@ -19004,7 +19004,7 @@ country_event = { #
 
 
 
-country_event = { #
+country_event = { #从未见过的挚友
 	id = NKRsichuan.560
 	title = NKRsichuan.560.t
 	desc = NKRsichuan.560.d
@@ -19014,13 +19014,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#没什么，我们继续吧？
 		log = "[GetLogInfo]: event NKRsichuan.560 option NKRsichuan.560.a"
 		name = NKRsichuan.560.a
 	}
 }
 
-country_event = { #
+country_event = { #中国青年党的终结
 	id = NKRsichuan.561
 	title = NKRsichuan.561.t
 	desc = NKRsichuan.561.d
@@ -19030,9 +19030,57 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#再见了，青年党...
 		log = "[GetLogInfo]: event NKRsichuan.561 option NKRsichuan.561.a"
 		name = NKRsichuan.561.a
+		SZC_xia_taosheng = {
+			promote_character = market_liberal_subtype
+		}
+		set_politics = {
+			ruling_party = market_liberal
+		}
+		set_party_name = {
+			ideology = market_liberal
+			name = SZC_PYCP_CDP_party
+			long_name = SZC_PYCP_CDP_party_long
+		}
+		set_party_name = {
+			ideology = social_conservative
+			name = SZC_PYCP_CDP_party
+			long_name = SZC_PYCP_CDP_party_long
+		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			name = SZC_PYCP_CDYP_party
+			long_name = SZC_PYCP_CDYP_party_long
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = SZC_PYCP_CUP_party
+			long_name = SZC_PYCP_CUP_party_long
+		}
+		set_party_name = {
+			ideology = national_populist
+			name = SZC_PYCP_IGP_party
+			long_name = SZC_PYCP_IGP_party_long
+		}
+		set_party_name = {
+			ideology = social_liberal
+			name = SZC_PYCP_DPP_party
+			long_name = SZC_PYCP_DPP_party_long
+		}
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		add_to_coalition = yes
+		hidden_effect = {
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.15
+			}
+		}
 	}
 }
 
