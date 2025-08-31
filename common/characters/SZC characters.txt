@@ -1452,7 +1452,7 @@ characters = {
 	SZC_chen_zaidao = {
 		name = SZC_chen_zaidao
 		portraits = {
-			military = {
+			army = {
 				large = GFX_portrait_SZC_chen_zaidao_large
 				small = GFX_portrait_SZC_chen_zaidao_small
 			}
@@ -1472,7 +1472,7 @@ characters = {
 	SZC_chen_xilian = {
 		name = SZC_chen_xilian
 		portraits = {
-			military = {
+			army = {
 				large = GFX_portrait_SZC_chen_xilian_large
 				small = GFX_portrait_SZC_chen_xilian_small
 			}
@@ -1492,7 +1492,7 @@ characters = {
 	SZC_wang_shusheng = {
 		name = SZC_wang_shusheng
 		portraits = {
-			military = {
+			army = {
 				large = GFX_portrait_SZC_wang_shusheng_large
 				small = GFX_portrait_SZC_wang_shusheng_small
 			}
@@ -1509,16 +1509,16 @@ characters = {
 	}
 
 	#韩先楚
-	SZC_chen_zaidao = {
-		name = SZC_chen_zaidao
+	SZC_han_xianchu = {
+		name = SZC_han_xianchu
 		portraits = {
-			military = {
-				large = GFX_portrait_SZC_chen_zaidao_large
-				small = GFX_portrait_SZC_chen_zaidao_small
+			army = {
+				large = GFX_portrait_SZC_han_xianchu_large
+				small = GFX_portrait_SZC_han_xianchu_small
 			}
 		}
 		corps_commander = {
-			desc = SZC_chen_zaidao_commander_desc
+			desc = SZC_han_xianchu_commander_desc
 			traits = { infantry_officer naval_invader reckless }
 			skill = 2
 			attack_skill = 3
