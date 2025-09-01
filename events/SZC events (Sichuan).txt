@@ -9306,6 +9306,14 @@ country_event = { #四川易帜
 					ideology = paternal_autocrat_subtype
 				}
 			}
+			set_portraits = {
+				army = {
+					large = GFX_portrait_SZC_pan_wenhua_kmt_large
+				}
+				civilian = {
+					large = GFX_portrait_SZC_pan_wenhua_kmt_large
+				}
+			}
 		}
 		set_temp_variable = { coalition_partner_var = token:radical_socialist }
 		add_to_coalition = yes
