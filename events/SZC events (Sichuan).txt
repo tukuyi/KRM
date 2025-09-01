@@ -11341,6 +11341,11 @@ country_event = { #中国民主同盟
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.208 option NKRsichuan.208.a"
 		name = NKRsichuan.208.a
+		set_cosmetic_tag = SZC_CDL_NANKING
+		set_capital = {
+			state = 613
+			remember_old_capital = no
+		}
 		set_party_name = {
 			ideology = social_democrat
 			long_name = SZC_CDL_party_long
