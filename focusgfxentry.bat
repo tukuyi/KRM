@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_YCP_yellow_syndicalist_achieve
+python focusgfxentry.py SZC_YCP_age_of_historical_art
 pause

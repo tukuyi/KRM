@@ -19111,7 +19111,7 @@ country_event = { #中国青年党的终结
 	}
 }
 
-country_event = { #
+country_event = { #野心家的完胜
 	id = NKRsichuan.562
 	title = NKRsichuan.562.t
 	desc = NKRsichuan.562.d
@@ -19121,13 +19121,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#张主席万岁！
 		log = "[GetLogInfo]: event NKRsichuan.562 option NKRsichuan.562.a"
 		name = NKRsichuan.562.a
 	}
 }
 
-country_event = { #
+country_event = { #左翼合流
 	id = NKRsichuan.563
 	title = NKRsichuan.563.t
 	desc = NKRsichuan.563.d
@@ -19137,13 +19137,17 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#效忠换来权势。
 		log = "[GetLogInfo]: event NKRsichuan.563 option NKRsichuan.563.a"
 		name = NKRsichuan.563.a
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.10
+		}
 	}
 }
 
-country_event = { #
+country_event = { #统一国家社会主义
 	id = NKRsichuan.564
 	title = NKRsichuan.564.t
 	desc = NKRsichuan.564.d
@@ -19153,13 +19157,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#阵线愈发强大。
 		log = "[GetLogInfo]: event NKRsichuan.564 option NKRsichuan.564.a"
 		name = NKRsichuan.56374.a
 	}
 }
 
-country_event = { #
+country_event = { #继续朝曦社合作
 	id = NKRsichuan.565
 	title = NKRsichuan.565.t
 	desc = NKRsichuan.565.d
@@ -19169,13 +19173,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#有趣。
 		log = "[GetLogInfo]: event NKRsichuan.565 option NKRsichuan.565.a"
 		name = NKRsichuan.565.a
 	}
 }
 
-country_event = { #
+country_event = { #百万雄师
 	id = NKRsichuan.566
 	title = NKRsichuan.566.t
 	desc = NKRsichuan.566.d
@@ -19185,13 +19189,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#杀！
 		log = "[GetLogInfo]: event NKRsichuan.566 option NKRsichuan.5666.a"
 		name = NKRsichuan.566.a
 	}
 }
 
-country_event = { #
+country_event = { #去他妈的！
 	id = NKRsichuan.567
 	title = NKRsichuan.567.t
 	desc = NKRsichuan.567.d
@@ -19201,13 +19205,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#哈！
 		log = "[GetLogInfo]: event NKRsichuan.567 option NKRsichuan.567.a"
 		name = NKRsichuan.567.a
 	}
 }
 
-country_event = { #
+country_event = { #让贤
 	id = NKRsichuan.568
 	title = NKRsichuan.568.t
 	desc = NKRsichuan.568.d
@@ -19217,13 +19221,22 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#自由，宪政，民主！
 		log = "[GetLogInfo]: event NKRsichuan.568 option NKRsichuan.568.a"
 		name = NKRsichuan.568.a
+		set_politics = {
+			ruling_party = social_liberal
+		}
+		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+		add_to_coalition = yes
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.10
+		}
 	}
 }
 
-country_event = { #
+country_event = { #年轻的民主
 	id = NKRsichuan.569
 	title = NKRsichuan.569.t
 	desc = NKRsichuan.569.d
@@ -19233,15 +19246,19 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#造梦之旅。
 		log = "[GetLogInfo]: event NKRsichuan.569 option NKRsichuan.569.a"
 		name = NKRsichuan.569.a
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.10
+		}
 	}
 }
 
 
 
-country_event = { #
+country_event = { #造梦之终
 	id = NKRsichuan.570
 	title = NKRsichuan.570.t
 	desc = NKRsichuan.570.d
@@ -19251,13 +19268,21 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#签了吧，幼椿兄。
 		log = "[GetLogInfo]: event NKRsichuan.570 option NKRsichuan.570.a"
 		name = NKRsichuan.570.a
+		add_manpower = -114
+		add_stability = -0.1
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.571
+				days = 1
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #终局
 	id = NKRsichuan.571
 	title = NKRsichuan.571.t
 	desc = NKRsichuan.571.d
@@ -19267,9 +19292,17 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#狂飙启程！
 		log = "[GetLogInfo]: event NKRsichuan.571 option NKRsichuan.571.a"
 		name = NKRsichuan.571.a
+		set_country_flag = SZC_YCP_jiang_path
+		set_politics = {
+			ruling_party = national_populist
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.10
+		}
 	}
 }
 

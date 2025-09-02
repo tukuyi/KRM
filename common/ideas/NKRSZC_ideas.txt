@@ -1550,6 +1550,40 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.1
 			}
 		}
+		SZC_YCP_ubermensch_idea = {#超人
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_ubermensch_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
+				army_morale_factor = 0.25
+				training_time_army_factor = 0.5
+				political_power_factor = -0.2
+			}
+		}
+		SZC_YCP_national_units_1_idea = {#国家单元1
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_national_units_1_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.05
+				non_core_manpower = 0.01
+				stability_factor = 0.05
+				construction_speed_factor = 0.05
+			}
+		}
+		SZC_YCP_national_units_2_idea = {#国家单元2
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_national_units_2_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.10
+				non_core_manpower = 0.05
+				stability_factor = 0.10
+				construction_speed_factor = 0.15
+			}
+		}
 	}
 	
 	industrial_concern = {
