@@ -8591,8 +8591,6 @@ country_event = { #中国青年党简介
 		log = "[GetLogInfo]: event NKRsichuan.1 option NKRsichuan.3.a"
 		name = NKRsichuan.3.a
 		custom_effect_tooltip = available_political_advisor
-		show_ideas_tooltip = SZC_zuo_shunsheng_advisor
-		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_chen_qitian_advisor
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_zeng_qi_advisor
@@ -8600,6 +8598,15 @@ country_event = { #中国青年党简介
 		show_ideas_tooltip = SZC_li_huang_advisor
 		set_country_flag = YCP_advisors_available
 		hidden_effect = {
+			SZC_zeng_qi = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_li_huang = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_chen_qitian = {
+				SZC_recruit_character_effect = yes
+			}
 			country_event = {
 				id = NKRsichuan.5
 				days = 2
@@ -9136,12 +9143,15 @@ country_event = { #中国青年党浮出水面
 			promote_character = market_liberal_subtype
 		}
 		SZC_xia_taosheng = {
+			SZC_recruit_character_effect = yes
 			promote_character = social_conservative_statist_subtype
 		}
 		SZC_jiang_yungang = {
+			SZC_recruit_character_effect = yes
 			promote_character = national_populist_strum_drang_statist_subtype
 		}
 		SZC_zuo_shunsheng = {
+			SZC_recruit_character_effect = yes
 			promote_character = social_liberal_constitutional_statist_subtype
 		}
 		set_politics = {
