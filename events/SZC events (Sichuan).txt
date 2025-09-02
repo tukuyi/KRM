@@ -9309,10 +9309,14 @@ country_event = { #四川易帜
 			set_portraits = {
 				army = {
 					large = GFX_portrait_SZC_pan_wenhua_kmt_large
+					small = GFX_portrait_SZC_pan_wenhua_kmt_small
 				}
-				civilian = {
-					large = GFX_portrait_SZC_pan_wenhua_kmt_large
-				}
+			}
+		}
+		SZC_li_hongkun = {
+			army = {
+				large = GFX_portrait_SZC_li_hongkun_kmt_large
+				small = GFX_portrait_SZC_li_hongkun_kmt_small
 			}
 		}
 		set_temp_variable = { coalition_partner_var = token:radical_socialist }
@@ -13242,7 +13246,7 @@ country_event = { #总理人选
 		
 		SZC_li_hongkun = {
 			set_portraits = {
-				army = {
+				civilian = {
 					small = GFX_portrait_SZC_li_hongkun_civilian_small
 					large = GFX_portrait_SZC_li_hongkun_civilian_large
 				}
@@ -17030,7 +17034,7 @@ country_event = { #党章修改通过！
 			}
 			SZC_zeng_qi = {
 				set_portraits = {
-					civilian = {
+					army = {
 						large = GFX_portrait_SZC_zeng_qi_suit_large
 						small = GFX_portrait_SZC_zeng_qi_suit_small
 					}
