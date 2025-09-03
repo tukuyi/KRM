@@ -18033,13 +18033,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
-		allow_branch = {
-			has_country_flag = NKRSZC_YCPpath_phase2
-			OR = {
-				has_country_flag = SZC_YCP_zeng_hardline_path
-				has_country_flag = SZC_YCP_zeng_moderate_path
-			}
-		}
+		# allow_branch = {
+		# 	has_country_flag = NKRSZC_YCPpath_phase2
+		# 	OR = {
+		# 		has_country_flag = SZC_YCP_zeng_hardline_path
+		# 		has_country_flag = SZC_YCP_zeng_moderate_path
+		# 	}
+		# }
 
 		prerequisite = {
 			focus = SZC_YCP_wave_of_history_victory_of_ycp
@@ -19895,12 +19895,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
-		# allow_branch = {
-		# 	has_country_flag = NKRSZC_YCPpath_phase2
-		# 	OR = {
-		# 		has_country_flag = SZC_YCP_jiang_path
-		# 	}
-		# }
+		allow_branch = {
+			has_country_flag = NKRSZC_YCPpath_phase2
+			OR = {
+				has_country_flag = SZC_YCP_jiang_path
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_wave_of_history_victory_of_ycp
@@ -20051,6 +20051,503 @@ focus_tree = {
 				remove_idea = SZC_YCP_national_units_1_idea
 				add_idea = SZC_YCP_national_units_2_idea
 			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_national_unification
+		icon = GFX_goal_SZC_YCP_national_unification
+		cost = 4
+
+		x = 0
+		y = 6
+		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
+
+		# allow_branch = {
+		# 	has_country_flag = NKRSZC_YCPpath_phase3
+		# 	china_united = yes
+		# }
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_national_unification"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_statist_revolution_prevails
+		icon = GFX_goal_SZC_YCP_statist_revolution_prevails
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_national_unification
+
+		# allow_branch = {
+		# 	china_united = yes
+		# 	AND = {
+		# 		has_country_flag = NKRSZC_YCPpath_phase3
+		# 		OR = {
+		# 			has_country_flag = SZC_YCP_zeng_moderate_path
+		# 			has_country_flag = SZC_YCP_zeng_hardline_path
+		# 		}
+		# 	}
+		# }
+
+		prerequisite = {
+			focus = SZC_YCP_national_unification
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_statist_revolution_prevails"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_chinese_vozhd
+		icon = GFX_goal_SZC_YCP_chinese_vozhd
+		cost = 4
+
+		x = -5
+		y = 1
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_statist_revolution_prevails
+		}
+
+		mutually_exclusive = {
+			focus = SZC_YCP_revolutionary_president
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_chinese_vozhd"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_kill_traitors
+		icon = GFX_goal_SZC_YCP_kill_traitors
+		cost = 4
+
+		x = -5
+		y = 2
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_chinese_vozhd
+		}
+
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_kill_traitors"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_new_age_patriotism
+		icon = GFX_goal_SZC_YCP_new_age_patriotism
+		cost = 4
+
+		x = -6
+		y = 3
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_kill_traitors
+		}
+
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_new_age_patriotism"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_empower_the_chairman
+		icon = GFX_goal_SZC_YCP_empower_the_chairman
+		cost = 4
+
+		x = -5
+		y = 4
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_kill_traitors
+		}
+
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_empower_the_chairman"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_philosopher_president
+		icon = GFX_goal_SZC_YCP_philosopher_president
+		cost = 4
+
+		x = -5
+		y = 5
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_empower_the_chairman
+		}
+
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_philosopher_president"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_revolutionary_president
+		icon = GFX_goal_SZC_YCP_revolutionary_president
+		cost = 4
+
+		x = 5
+		y = 1
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_statist_revolution_prevails
+		}
+
+		mutually_exclusive = {
+			focus = SZC_YCP_chinese_vozhd
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_revolutionary_president"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_expand_parties_involvement
+		icon = GFX_goal_SZC_YCP_expand_parties_involvement
+		cost = 4
+
+		x = 6
+		y = 2
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_revolutionary_president
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_expand_parties_involvement"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_liberal_heart
+		icon = GFX_goal_SZC_YCP_liberal_heart
+		cost = 4
+
+		x = 4
+		y = 2
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_revolutionary_president
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_liberal_heart"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_as_la_giovine_italia
+		icon = GFX_goal_SZC_YCP_as_la_giovine_italia
+		cost = 4
+
+		x = 5
+		y = 3
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_expand_parties_involvement
+		}
+		prerequisite = {
+			focus = SZC_YCP_liberal_heart
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_as_la_giovine_italia"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_post_war_thaw
+		icon = GFX_goal_SZC_YCP_post_war_thaw
+		cost = 4
+
+		x = 6
+		y = 4
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_as_la_giovine_italia
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_post_war_thaw"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_radical_days
+		icon = GFX_goal_SZC_YCP_radical_days
+		cost = 4
+
+		x = 5
+		y = 5
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_as_la_giovine_italia
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_radical_days"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_statist_education_revolution
+		icon = GFX_goal_SZC_YCP_statist_education_revolution
+		cost = 4
+
+		x = -2
+		y = 2
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_chinese_vozhd
+			focus = SZC_YCP_revolutionary_president
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_statist_education_revolution"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_deal_with_inner_radicals
+		icon = GFX_goal_SZC_YCP_deal_with_inner_radicals
+		cost = 4
+
+		x = 2
+		y = 2
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_chinese_vozhd
+			focus = SZC_YCP_revolutionary_president
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_deal_with_inner_radicals"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_popular_revolution_era
+		icon = GFX_goal_SZC_YCP_popular_revolution_era
+		cost = 4
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_chinese_vozhd
+			focus = SZC_YCP_revolutionary_president
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_popular_revolution_era"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_chinese_corporatism
+		icon = GFX_goal_SZC_YCP_chinese_corporatism
+		cost = 4
+
+		x = -2
+		y = 3
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_popular_revolution_era
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_chinese_corporatism"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_peace_nationality
+		icon = GFX_goal_SZC_YCP_peace_nationality
+		cost = 4
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_popular_revolution_era
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_peace_nationality"
+		}
+	}
+
+
+	focus = {
+		id = SZC_YCP_popular_land_reform
+		icon = GFX_goal_SZC_YCP_popular_land_reform
+		cost = 4
+
+		x = 2
+		y = 3
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_popular_revolution_era
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_popular_land_reform"
+		}
+	}
+
+
+	focus = {
+		id = SZC_YCP_no_room_for_militarism
+		icon = GFX_goal_SZC_YCP_no_room_for_militarism
+		cost = 4
+
+		x = -3
+		y = 4
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_popular_land_reform
+		}
+		prerequisite = {
+			focus = SZC_YCP_chinese_corporatism
+		}
+		prerequisite = {
+			focus = SZC_YCP_peace_nationality
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_no_room_for_militarism"
+		}
+	}
+
+
+	focus = {
+		id = SZC_YCP_statist_youth_league
+		icon = GFX_goal_SZC_YCP_statist_youth_league
+		cost = 4
+
+		x = 3
+		y = 4
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_popular_land_reform
+		}
+		prerequisite = {
+			focus = SZC_YCP_chinese_corporatism
+		}
+		prerequisite = {
+			focus = SZC_YCP_peace_nationality
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_statist_youth_league"
+		}
+	}
+
+
+	focus = {
+		id = SZC_YCP_nations_father
+		icon = GFX_goal_SZC_YCP_nations_father
+		cost = 4
+
+		x = -4
+		y = 6
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_no_room_for_militarism
+		}
+		prerequisite = {
+			focus = SZC_YCP_philosopher_president
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_nations_father"
+			custom_effect_tooltip = SZC_YCP_nations_father_tt
+		}
+	}
+
+
+	focus = {
+		id = SZC_YCP_flowers_of_revolution
+		icon = GFX_goal_SZC_YCP_flowers_of_revolution
+		cost = 4
+
+		x = 4
+		y = 6
+		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		prerequisite = {
+			focus = SZC_YCP_statist_youth_league
+		}
+		prerequisite = {
+			focus = SZC_YCP_radical_days
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_flowers_of_revolution"
+			custom_effect_tooltip = SZC_YCP_flowers_of_revolution_tt
 		}
 	}
 
