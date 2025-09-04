@@ -1534,6 +1534,24 @@ characters = {
 	}
 
 
+	#PUPPET
+	
+	#佩皮诺·加里波第
+	SZC_peppino_garibaldi = {
+		name = SZC_peppino_garibaldi
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_peppino_garibaldi_small
+				large = GFX_portrait_SZC_peppino_garibaldi_large
+			}
+		}
+		country_leader = {
+			desc = SZC_peppino_garibaldi_desc
+			ideology = authoritarian_democrat_statist_subtype
+			traits = { CHN_statist_aligned }
+		}
+	}
+
 
 	#MMIC四川分署
 	SZC_MMIC = {

@@ -19774,7 +19774,7 @@ country_event = { #革命之花绽放
 	}
 }
 
-country_event = { #
+country_event = { #新生的意大利
 	id = NKRsichuan.599
 	title = NKRsichuan.599.t
 	desc = NKRsichuan.599.d
@@ -19784,9 +19784,26 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#意大利新生，如中华一般。
 		log = "[GetLogInfo]: event NKRsichuan.599 option NKRsichuan.599.a"
 		name = NKRsichuan.599.a
+		custom_effect_tooltip = NKRsichuan.599.tt
+		hidden_effect = {
+			SZC_peppino_garibaldi = {
+				set_nationality = ITA
+			}
+			ITA = {
+				SZC_peppino_garibaldi = {
+					promote_character = authoritarian_democrat_statist_subtype
+				}
+				set_cosmetic_tag = ITA_YCP
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = ITA_YCP_party
+					long_name = ITA_YCP_party_long
+				}
+			}
+		}
 	}
 }
 
