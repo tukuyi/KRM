@@ -20117,8 +20117,8 @@ focus_tree = {
 			}
 			SZC_zeng_qi = {
 				swap_country_leader_traits = {
-					remove_trait = SZC_YCP_the_great_leader
-					add_trait = SZC_YCP_the_great_vozhd
+					remove = SZC_YCP_the_great_leader
+					add = SZC_YCP_the_great_vozhd
 					ideology = paternal_autocrat_revolutionary_statist_subtype
 				}
 			}
@@ -20219,8 +20219,8 @@ focus_tree = {
 			}
 			SZC_zeng_qi = {
 				swap_country_leader_traits = {
-					remove_trait = SZC_YCP_machiavelli_today
-					add_trait = SZC_YCP_machiavelli_today_2
+					remove = SZC_YCP_machiavelli_today
+					add = SZC_YCP_machiavelli_today_2
 					ideology = paternal_autocrat_revolutionary_statist_subtype
 				}
 			}
@@ -20538,9 +20538,31 @@ focus_tree = {
 				id = NKRsichuan.593
 			}
 			add_political_power = 150
-			ROOT = {
-				activate_targeted_decision = { target = PREV decision = SZC_YCP_expand_popular_revolution_decision }
-			}
+			
+			activate_targeted_decision = { target = 594 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 325 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 1051 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 602 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 605 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 1048 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 1044 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 606 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 596 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 613 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 597 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 1059 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 608 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 1072 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 799 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 283 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 348 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 604 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 617 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 621 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 612 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 716 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 886 decision = SZC_expand_popular_revolution_decision }
+			activate_targeted_decision = { target = 714 decision = SZC_expand_popular_revolution_decision }
 		}
 	}
 
