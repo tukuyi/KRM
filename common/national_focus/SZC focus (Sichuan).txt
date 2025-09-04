@@ -18095,14 +18095,14 @@ focus_tree = {
 			SZC_zeng_qi = {
 				add_trait = {
 					trait = SZC_YCP_literati_in_20C
-					ideology = paternal_autocrat
+					ideology = paternal_autocrat_revolutionary_statist_subtype
 				}
 			}
 			hidden_effect = {
 				SZC_zeng_qi = {
 					add_trait = {
 						trait = SZC_YCP_literati_in_20C
-						ideology = authoritarian_democrat
+						ideology = authoritarian_democrat_statist_subtype
 					}
 				}
 			}
@@ -18181,7 +18181,7 @@ focus_tree = {
 			SZC_zeng_qi = {
 				add_trait = {
 					trait = SZC_YCP_machiavelli_today
-					ideology = paternal_autocrat
+					ideology = paternal_autocrat_revolutionary_statist_subtype
 				}
 			}
 			add_popularity = {
@@ -18338,7 +18338,7 @@ focus_tree = {
 			SZC_zeng_qi = {
 				add_trait = {
 					trait = SZC_YCP_the_great_leader
-					ideology = paternal_autocrat
+					ideology = paternal_autocrat_revolutionary_statist_subtype
 				}
 			}
 			add_political_power = 50
@@ -20115,12 +20115,9 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.579
 			}
-			SZC_zeng_qi = {
-				swap_country_leader_traits = {
-					remove = SZC_YCP_the_great_leader
-					add = SZC_YCP_the_great_vozhd
-					ideology = paternal_autocrat_revolutionary_statist_subtype
-				}
+			swap_ruler_traits = {
+				remove = SZC_YCP_the_great_leader
+				add = SZC_YCP_the_great_vozhd
 			}
 		}
 	}
@@ -20217,12 +20214,9 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.582
 			}
-			SZC_zeng_qi = {
-				swap_country_leader_traits = {
-					remove = SZC_YCP_machiavelli_today
-					add = SZC_YCP_machiavelli_today_2
-					ideology = paternal_autocrat_revolutionary_statist_subtype
-				}
+			swap_ruler_traits = {
+				remove = SZC_YCP_machiavelli_today
+				add = SZC_YCP_machiavelli_today_2
 			}
 		}
 	}

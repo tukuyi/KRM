@@ -10210,7 +10210,7 @@ country_event = { #庆功宴
 		SZC_pan_wenhua = {
 			swap_country_leader_traits = {
 				remove = CHN_left_kuomintang_aligned
-				add = CHN__right_kuomintang_aligned
+				add = CHN_right_kuomintang_aligned
 			}
 			china_set_character_alignment_right_kuomintang = yes
 		}
@@ -17044,7 +17044,7 @@ country_event = { #党章修改通过！
 			}
 			SZC_zeng_qi = {
 				set_portraits = {
-					army = {
+					civilian = {
 						large = GFX_portrait_SZC_zeng_qi_suit_large
 						small = GFX_portrait_SZC_zeng_qi_suit_small
 					}
