@@ -191,6 +191,128 @@ SZC_debug_category = {
 			country_event = NKRsichuan.30
 		}
 	}
+	SZC_DEBUG_YCPpath_YCPphase1_decision = {
+		allowed = { tag = SZC }
+		visible = {
+			is_debug = yes
+		}
+		icon = GFX_decision_lkmt_flag
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_DEBUG_YCPpath_YCPphase1_decision target: [From.GetName]"
+			hidden_effect = {
+				SZC_zeng_qi = {
+					SZC_recruit_character_effect = yes
+				}
+				SZC_li_huang = {
+					SZC_recruit_character_effect = yes
+				}
+				SZC_chen_qitian = {
+					SZC_recruit_character_effect = yes
+				}
+				country_event = {
+					id = NKRsichuan.5
+					days = 2
+				}
+			}
+			SZC_li_huang = {
+				promote_character = authoritarian_democrat_statist_subtype
+			}
+			SZC_zeng_qi = {
+				promote_character = paternal_autocrat_statist_subtype
+			}
+			SZC_zhang_bolun = {
+				promote_character = market_liberal_subtype
+			}
+			SZC_xia_taosheng = {
+				SZC_recruit_character_effect = yes
+				promote_character = social_conservative_statist_subtype
+			}
+			SZC_jiang_yungang = {
+				SZC_recruit_character_effect = yes
+				promote_character = national_populist_strum_drang_statist_subtype
+			}
+			SZC_zuo_shunsheng = {
+				SZC_recruit_character_effect = yes
+				promote_character = social_liberal_constitutional_statist_subtype
+			}
+			set_politics = {
+				ruling_party = paternal_autocrat
+				elections_allowed = no
+			}
+			custom_effect_tooltip = SZC_politic_changes_tt
+			hidden_effect = {
+				set_party_name = {
+					ideology = paternal_autocrat
+					long_name = SZC_YCP_xingshe_party_long
+					name = SZC_YCP_xingshe_party
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					long_name = SZC_YCP_shenshe_party_long
+					name = SZC_YCP_shenshe_party
+				}
+				set_party_name = {
+					ideology = social_democrat
+					long_name = SZC_NSP_party_long
+					name = SZC_NSP_party
+				}
+				set_party_name = {
+					ideology = social_liberal
+					long_name = SZC_YCP_zhongshe_party_long
+					name = SZC_YCP_zhongshe_party
+				}
+				set_party_name = {
+					ideology = market_liberal
+					long_name = SZC_YCP_tishe_party_long
+					name = SZC_YCP_tishe_party
+				}
+				set_party_name = {
+					ideology = social_conservative
+					long_name = SZC_YCP_zhaoxishe_party_long
+					name = SZC_YCP_zhaoxishe_party
+				}
+				set_party_name = {
+					ideology = national_populist
+					long_name = SZC_YCP_guohunshe_party_long
+					name = SZC_YCP_guohunshe_party
+				}
+				set_temp_variable = { coalition_partner_var = token:social_liberal }
+				add_to_coalition = yes
+				set_temp_variable = { coalition_partner_var = token:market_liberal }
+				add_to_coalition = yes
+				set_temp_variable = { coalition_partner_var = token:national_populist }
+				add_to_coalition = yes
+				set_temp_variable = { coalition_partner_var = token:social_conservative }
+				add_to_coalition = yes
+				set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+				add_to_coalition = yes
+				add_popularity = {
+					ideology = authoritarian_democrat
+					popularity = 0.15
+				}
+				add_popularity = {
+					ideology = paternal_autocrat
+					popularity = 0.15
+				}
+				add_popularity = {
+					ideology = social_conservative
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = social_liberal
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = market_liberal
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = national_populist
+					popularity = 0.05
+				}
+			}
+		}
+	}
 }
 
 SZC_grand_sichuan_plan_category = {

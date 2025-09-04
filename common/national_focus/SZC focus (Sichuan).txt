@@ -18033,13 +18033,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
-		# allow_branch = {
-		# 	has_country_flag = NKRSZC_YCPpath_phase2
-		# 	OR = {
-		# 		has_country_flag = SZC_YCP_zeng_hardline_path
-		# 		has_country_flag = SZC_YCP_zeng_moderate_path
-		# 	}
-		# }
+		allow_branch = {
+			has_country_flag = NKRSZC_YCPpath_phase2
+			OR = {
+				has_country_flag = SZC_YCP_zeng_hardline_path
+				has_country_flag = SZC_YCP_zeng_moderate_path
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_wave_of_history_victory_of_ycp
@@ -18412,15 +18412,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
-		allow_branch = {
-			has_country_flag = NKRSZC_YCPpath_phase2
-			AND = {
-				has_country_flag = SZC_YCP_li_path
-				NOT = {
-					has_country_flag = SZC_YCP_jiang_path
-				}
-			}
-		}
+		# allow_branch = {
+		# 	has_country_flag = NKRSZC_YCPpath_phase2
+		# 	AND = {
+		# 		has_country_flag = SZC_YCP_li_path
+		# 		NOT = {
+		# 			has_country_flag = SZC_YCP_jiang_path
+		# 		}
+		# 	}
+		# }
 
 		prerequisite = {
 			focus = SZC_YCP_wave_of_history_victory_of_ycp
@@ -20067,16 +20067,16 @@ focus_tree = {
 			has_global_flag = china_united
 		}
 
-		# allow_branch = {
-		# 	has_global_flag = china_united
-		# 	AND = {
-		# 		has_country_flag = NKRSZC_YCPpath_phase3
-		# 		OR = {
-		# 			has_country_flag = SZC_YCP_zeng_moderate_path
-		# 			has_country_flag = SZC_YCP_zeng_hardline_path
-		# 		}
-		# 	}
-		# }
+		allow_branch = {
+			has_global_flag = china_united
+			AND = {
+				has_country_flag = NKRSZC_YCPpath_phase3
+				OR = {
+					has_country_flag = SZC_YCP_zeng_moderate_path
+					has_country_flag = SZC_YCP_zeng_hardline_path
+				}
+			}
+		}
 
 
 		completion_reward = {
@@ -20761,6 +20761,339 @@ focus_tree = {
 				remove_idea = SZC_YCP_legitimacy_5
 				add_idea = SZC_YCP_legitimacy_7
 			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_spirit_renewed
+		icon = GFX_goal_SZC_YCP_spirit_renewed
+		cost = 4
+
+		x = 0
+		y = 6
+		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
+
+		available = {
+			has_global_flag = china_united
+		}
+
+		# allow_branch = {
+		# 	has_global_flag = china_united
+		# 	AND = {
+		# 		has_country_flag = NKRSZC_YCPpath_phase3
+		# 		OR = {
+		# 			has_completed_focus = SZC_YCP_young_china_and_young_democracy
+		# 			has_completed_focus = SZC_YCP_liberal_statist_revolution
+		# 		}
+		# 	}
+		# }
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_spirit_renewed"
+			custom_effect_tooltip = SZC_YCP_spirit_renewed_tt
+			add_political_power = 150
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_state_eternal
+		icon = GFX_goal_SZC_YCP_state_eternal
+		cost = 4
+
+		x = -3
+		y = 1
+		relative_position_id = SZC_YCP_spirit_renewed
+
+		prerequisite = {
+			focus = SZC_YCP_spirit_renewed
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_state_eternal"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_federalist_mind
+		icon = GFX_goal_SZC_YCP_federalist_mind
+		cost = 4
+
+		x = -4
+		y = 2
+		relative_position_id = SZC_YCP_spirit_renewed
+
+		prerequisite = {
+			focus = SZC_YCP_state_eternal
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_federalist_mind"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_patriotic_front
+		icon = GFX_goal_SZC_YCP_patriotic_front
+		cost = 4
+
+		x = -2
+		y = 3
+		relative_position_id = SZC_YCP_spirit_renewed
+
+		prerequisite = {
+			focus = SZC_YCP_state_eternal
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_allow_leftys
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_patriotic_front"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_allow_leftys
+		icon = GFX_goal_SZC_YCP_allow_leftys
+		cost = 4
+
+		x = -1
+		y = 2
+		relative_position_id = SZC_YCP_spirit_renewed
+
+		prerequisite = {
+			focus = SZC_YCP_state_eternal
+			focus = SZC_YCP_the_end_of_struggle_days
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_allow_leftys"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_free_voice
+		icon = GFX_goal_SZC_YCP_free_voice
+		cost = 4
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_YCP_spirit_renewed
+
+		available = {
+			NOT = {
+				has_completed_focus = SZC_YCP_east_asia_democracy_crusader
+			}
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_allow_leftys
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_free_voice"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_statist_coalition
+		icon = GFX_goal_SZC_YCP_statist_coalition
+		cost = 4
+
+		x = 1
+		y = 2
+		relative_position_id = SZC_YCP_spirit_renewed
+
+		prerequisite = {
+			focus = SZC_YCP_state_eternal
+			focus = SZC_YCP_the_end_of_struggle_days
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_statist_coalition"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_provinces_constitusions
+		icon = GFX_goal_SZC_YCP_provinces_constitusions
+		cost = 4
+
+		x = -3
+		y = 4
+		relative_position_id = SZC_YCP_spirit_renewed
+
+		prerequisite = {
+			focus = SZC_YCP_federalist_mind
+		}
+		prerequisite = {
+			focus = SZC_YCP_patriotic_front
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_provinces_constitusions"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_the_end_of_struggle_days
+		icon = GFX_goal_SZC_YCP_the_end_of_struggle_days
+		cost = 4
+
+		x = 3
+		y = 1
+		relative_position_id = SZC_YCP_spirit_renewed
+
+		prerequisite = {
+			focus = SZC_YCP_spirit_renewed
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_the_end_of_struggle_days"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_liberate_peasants
+		icon = GFX_goal_SZC_YCP_liberate_peasants
+		cost = 4
+
+		x = 3
+		y = 2
+		relative_position_id = SZC_YCP_spirit_renewed
+
+		prerequisite = {
+			focus = SZC_YCP_the_end_of_struggle_days
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_liberate_peasants"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_connect_provinces
+		icon = GFX_goal_SZC_YCP_connect_provinces
+		cost = 4
+
+		x = 2
+		y = 3
+		relative_position_id = SZC_YCP_spirit_renewed
+
+		prerequisite = {
+			focus = SZC_YCP_liberate_peasants
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_connect_provinces"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_expand_labour_law
+		icon = GFX_goal_SZC_YCP_expand_labour_law
+		cost = 4
+
+		x = 4
+		y = 3
+		relative_position_id = SZC_YCP_spirit_renewed
+
+		prerequisite = {
+			focus = SZC_YCP_liberate_peasants
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_expand_labour_law"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_a_defense_force
+		icon = GFX_goal_SZC_YCP_a_defense_force
+		cost = 4
+
+		x = 1
+		y = 4
+		relative_position_id = SZC_YCP_spirit_renewed
+
+		prerequisite = {
+			focus = SZC_YCP_expand_labour_law
+		}
+		prerequisite = {
+			focus = SZC_YCP_connect_provinces
+		}
+		prerequisite = {
+			focus = SZC_YCP_statist_coalition
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_a_defense_force"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_constitutional_normal_way
+		icon = GFX_goal_SZC_YCP_constitutional_normal_way
+		cost = 4
+
+		x = -1
+		y = 5
+		relative_position_id = SZC_YCP_spirit_renewed
+
+		mutually_exclusive = {
+			focus = SZC_YCP_east_asia_democracy_crusader
+		}
+
+		available = {
+			has_completed_focus = SZC_YCP_free_voice
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_provinces_constitusions
+		}
+		prerequisite = {
+			focus = SZC_YCP_a_defense_force
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_constitutional_normal_way"
+			custom_effect_tooltip = SZC_YCP_constitutional_normal_way_tt
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_east_asia_democracy_crusader
+		icon = GFX_goal_SZC_YCP_east_asia_democracy_crusader
+		cost = 4
+
+		x = 1
+		y = 5
+		relative_position_id = SZC_YCP_spirit_renewed
+
+		mutually_exclusive = {
+			focus = SZC_YCP_constitutional_normal_way
+		}
+
+		available = {
+			NOT = {
+				has_completed_focus = SZC_YCP_free_voice
+			}
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_provinces_constitusions
+		}
+		prerequisite = {
+			focus = SZC_YCP_a_defense_force
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_east_asia_democracy_crusader"
+			custom_effect_tooltip = SZC_YCP_east_asia_democracy_crusader_tt
 		}
 	}
 
