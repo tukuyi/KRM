@@ -19577,10 +19577,14 @@ country_event = { #东方烧炭党人
 	option = {#两个梦想，一个结果。
 		log = "[GetLogInfo]: event NKRsichuan.587 option NKRsichuan.587.a"
 		name = NKRsichuan.587.a
+		custom_effect_tooltip = NKRsichuan.587.tt
 		if = {
 			limit = {
-				SRI = {
-					exists = yes
+				AND = {
+					SRI = {
+						exists = yes
+					}
+					is_ai = no
 				}
 			}
 			create_wargoal = {

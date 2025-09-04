@@ -18095,7 +18095,7 @@ focus_tree = {
 			SZC_zeng_qi = {
 				add_trait = {
 					trait = SZC_YCP_literati_in_20C
-					ideology = paternal_autocrat_revolutionary_statist_subtype
+					ideology = paternal_autocrat_statist_subtype
 				}
 			}
 			hidden_effect = {
@@ -18181,7 +18181,7 @@ focus_tree = {
 			SZC_zeng_qi = {
 				add_trait = {
 					trait = SZC_YCP_machiavelli_today
-					ideology = paternal_autocrat_revolutionary_statist_subtype
+					ideology = paternal_autocrat_statist_subtype
 				}
 			}
 			add_popularity = {
@@ -18338,7 +18338,7 @@ focus_tree = {
 			SZC_zeng_qi = {
 				add_trait = {
 					trait = SZC_YCP_the_great_leader
-					ideology = paternal_autocrat_revolutionary_statist_subtype
+					ideology = paternal_autocrat_statist_subtype
 				}
 			}
 			add_political_power = 50
@@ -18742,14 +18742,14 @@ focus_tree = {
 			SZC_li_huang = {
 				add_trait = {
 					trait = SZC_YCP_democratic_protector
-					ideology = authoritarian_democrat
+					ideology = authoritarian_democrat_statist_subtype
 				}
 			}
 			hidden_effect = {
 				SZC_li_huang = {
 					add_trait = {
 						trait = SZC_YCP_democratic_protector
-						ideology = social_conservative
+						ideology = social_conservative_statist_subtype
 					}
 				}
 			}
@@ -18811,7 +18811,7 @@ focus_tree = {
 			SZC_zuo_shunsheng = {
 				add_trait = {
 					trait = SZC_YCP_liberal_fighter
-					ideology = social_liberal
+					ideology = social_liberal_constitutional_statist_subtype
 				}
 			}
 			add_popularity = {
@@ -19386,7 +19386,7 @@ focus_tree = {
 			SZC_chen_qitian = {
 				add_trait = {
 					trait = SZC_YCP_hanfeizi_today
-					ideology = authoritarian_democrat
+					ideology = authoritarian_democrat_new_legalist_statist_subtype
 				}
 			}
 			add_political_power = 100
@@ -20256,6 +20256,10 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = SZC_YCP_statist_revolution_prevails
+
+		available = {
+			has_country_flag = SZC_YCP_zeng_moderate_path
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_statist_revolution_prevails
