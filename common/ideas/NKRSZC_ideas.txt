@@ -1093,6 +1093,34 @@ ideas = {
 				compliance_gain = -0.01
 			}
 		}
+		SZC_YCP_legitimacy_6 = {#党的合法性-永恒革命
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_legitimacy_6" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.20
+				war_support_factor = 0.20
+				party_popularity_stability_factor = 0.20
+				compliance_growth = 0.1
+				consumer_goods_expected_value = -0.2
+				army_org_factor = 0.15
+			}
+		}
+		SZC_YCP_legitimacy_7 = {#党的合法性-革命民主
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_legitimacy_7" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				party_popularity_stability_factor = 0.1
+				compliance_gain = 0.01
+				consumer_goods_expected_value = -0.1
+				compliance_growth = 0.25
+				trade_opinion_factor = 0.15
+				political_power_gain = 0.15
+			}
+		}
 		SZC_YCP_construct_nationalspirit = {#铸造国格
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_construct_nationalspirit" }
 			picture = chi_warlord_integration
@@ -1582,6 +1610,111 @@ ideas = {
 				non_core_manpower = 0.05
 				stability_factor = 0.10
 				construction_speed_factor = 0.15
+			}
+		}
+		SZC_YCP_new_age_patriotism_idea = {#新时代爱国主义
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_new_age_patriotism_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				weekly_manpower = 200
+				non_core_manpower = 0.08
+				political_power_factor = 0.10
+			}
+		}
+		SZC_YCP_philosophers_idea = {#哲人团
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_philosophers_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_advisor_cost_factor = -66
+				political_power_factor = 0.10
+				consumer_goods_factor = -0.05
+			}
+		}
+		SZC_YCP_statist_construction_age_idea = {#国家主义建设阶段
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_statist_construction_age_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				mobilization_laws_cost_factor = -0.66
+				political_advisor_cost_factor = -0.66
+				cic_construction_boost = 0.25
+				experience_loss_factor = -0.10
+				skill_bonus_factor = 0.10
+			}
+		}
+		SZC_YCP_liberate_mind_2_idea = {#解放思想2
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_liberate_mind_2_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.20
+			}
+		}
+		SZC_YCP_carbonari_idea = {#东方烧炭党
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_carbonari_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				compliance_gain = 0.03
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		SZC_YCP_anti_red_meance_2 = {#抵御赤恐
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_anti_red_meance_2" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				totalist_acceptance = -50
+				syndicalist_acceptance = -50
+				radical_socialist_acceptance = -50
+				stability_factor = 0.10
+			}
+		}
+		SZC_YCP_we_the_radicals_idea = {#我们，激进党人
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_we_the_radicals_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.05
+				resistance_growth = -0.2
+			}
+		}
+		SZC_YCP_peace_nationality_idea = {#和平民族性
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_peace_nationality_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				army_attack_against_major_factor = 0.15
+				army_defence_against_major_factor = 0.15
+				training_time_army_factor = 0.1
+				recruitable_population = -0.01
+				recruitable_population_factor= -0.1
+			}
+		}
+		SZC_YCP_chinese_corporatism_idea = {#中式法团主义
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_chinese_corporatism_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				army_core_attack_factor = 0.05
+				local_resources_factor = 0.25
+				industrial_capacity_factory = 0.25
+			}
+		}
+		SZC_YCP_peace_nationality_2_idea = {#和平民族性
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_peace_nationality_2_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				army_attack_against_major_factor = 0.3
+				army_defence_against_major_factor = 0.3
+				training_time_army_factor = 0.15
+				recruitable_population = -0.025
+				recruitable_population_factor= -0.2
 			}
 		}
 	}

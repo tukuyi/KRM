@@ -6,6 +6,12 @@ leader_traits = {
 		stability_factor = -0.05
 		agency_upgrade_time = -0.25
 	}
+	SZC_YCP_machiavelli_today_2 = {
+		random = no
+		political_power_gain = 0.15
+		stability_factor = -0.10
+		agency_upgrade_time = -0.50
+	}
 	SZC_YCP_literati_in_20C = {
 		random = no
 		political_advisor_cost_factor = -0.33
@@ -17,6 +23,13 @@ leader_traits = {
         surrender_limit = 0.2
         war_support_factor = 0.1 
 		breakthrough_factor = 0.1
+	}
+	SZC_YCP_the_great_vozhd = {
+		random = no
+        political_power_gain = 0.10
+        surrender_limit = 0.3
+        war_support_factor = 0.15 
+		breakthrough_factor = 0.15
 	}
 	SZC_YCP_collaborative_yellow_syndicalist = {
 		random = no

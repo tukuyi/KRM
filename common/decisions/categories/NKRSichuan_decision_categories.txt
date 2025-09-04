@@ -54,6 +54,13 @@ SZC_peoples_commune_reform_category = {
 	}
 }
 
+SZC_YCP_party_issues_category = {
+	icon = GFX_decision_category_qing_hall
+	allowed = { original_tag = SZC }
+	visible = { has_country_flag = NKRsichuan_YCPpath }
+	priority = 114514
+}
+
 SZC_YCP_balance_of_power_category = {
 	icon = GFX_decision_category_power_struggle
 	allowed = { original_tag = SZC }
