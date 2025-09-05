@@ -1121,6 +1121,36 @@ ideas = {
 				political_power_gain = 0.15
 			}
 		}
+		SZC_YCP_legitimacy_8 = {#党的合法性-宪政常道
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_legitimacy_8" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.25
+				war_support_factor = 0.1
+				party_popularity_stability_factor = 0.1
+				compliance_gain = 0.05
+				compliance_growth = 0.2
+				trade_opinion_factor = 0.15
+				consumer_goods_expected_value = -0.1
+			}
+		}
+		SZC_YCP_legitimacy_9 = {#党的合法性-民主卫士
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_legitimacy_9" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.3
+				party_popularity_stability_factor = 0.25
+				compliance_gain = 0.03
+				compliance_growth = 0.05
+				trade_opinion_factor = 0.1
+				consumer_goods_expected_value = -0.05
+				army_org_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
 		SZC_YCP_construct_nationalspirit = {#铸造国格
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_construct_nationalspirit" }
 			picture = chi_warlord_integration
@@ -1715,6 +1745,96 @@ ideas = {
 				training_time_army_factor = 0.15
 				recruitable_population = -0.025
 				recruitable_population_factor= -0.2
+			}
+		}
+		SZC_YCP_state_exist_theory_idea = {#国家存在论
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_state_exist_theory_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				non_core_manpower = 0.15
+				political_power_factor = 0.20
+				cic_construction_boost = 0.1
+				stability_factor = 0.1
+			}
+		}
+		SZC_YCP_towards_federalist_provinces_2 = {#迈向联省自治2
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_towards_federalist_provinces_2" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = 0.35
+
+			}
+		}
+		SZC_YCP_centralized_federation_2 = {#集权式联省2
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_centralized_federation_2" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				consumer_goods_factor = -0.20
+				industrial_capacity_factory = 0.25
+			}
+		}
+		SZC_YCP_anti_internationale_2_idea = {#反对国际主义2
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_anti_internationale_2_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				totalist_acceptance = -10
+				syndicalist_acceptance = -10
+				radical_socialist_acceptance = -10
+				stability_factor = 0.05
+			}
+		}
+		SZC_YCP_statist_parties_coalition_idea = {#国家主义政党联合
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_statist_parties_coalition_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		SZC_YCP_concord_state_idea = {#协和之国
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_concord_state_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				army_core_defence_factor = 0.20
+				stability_weekly = 0.02
+				compliance_gain = 0.02
+				conscription_factor = 0.10
+				cic_construction_boost = 0.1
+			}
+		}
+		SZC_YCP_state_socialpolitik_2_idea = {#社会国家2
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_state_socialpolitik_2_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.15
+				monthly_population = 0.35
+				production_factory_efficiency_gain_factor = 0.30
+				compliance_growth = 0.2
+				stability_weekly = 0.005
+			}
+		}
+		SZC_YCP_young_iron_army_2_idea = {#青年铁血军2
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_young_iron_army_2_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				army_attack_factor = 0.10
+				army_defence_factor = 0.15
+				army_morale_factor = 0.10
 			}
 		}
 	}

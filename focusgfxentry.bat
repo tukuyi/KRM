@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_YCP_nations_father
+python focusgfxentry.py SZC_YCP_east_asia_democracy_crusader
 pause

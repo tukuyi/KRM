@@ -19819,7 +19819,7 @@ country_event = { #新生的意大利
 	}
 }
 
-country_event = { #
+country_event = { #青年民主的演化
 	id = NKRsichuan.600
 	title = NKRsichuan.600.t
 	desc = NKRsichuan.600.d
@@ -19832,6 +19832,35 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.600 option NKRsichuan.600.a"
 		name = NKRsichuan.600.a
+			set_temp_variable = { YCP_authdem_popularity_temp_var = party_popularity@authoritarian_democrat }
+			multiply_temp_variable = { YCP_authdem_popularity_temp_var = 0.75 }
+			set_temp_variable = { YCP_neg_authdem_popularity_temp_var = YCP_authdem_popularity_temp_var }
+			multiply_temp_variable = { YCP_neg_authdem_popularity_temp_var = -1 }
+			add_popularity = { ideology = authoritarian_democrat popularity = YCP_neg_authdem_popularity_temp_var }
+			add_popularity = { ideology = social_conservative popularity = YCP_authdem_popularity_temp_var }
+			SZC_li_huang = {
+				promote_character = social_conservative_statist_subtype
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_SZC_li_huang_suit_large
+						small = GFX_portrait_SZC_li_huang_suit_small
+					}
+				}
+			}
+			set_party_name = {
+				ideology = social_conservative
+				long_name = SZC_YCP_shenshe_party_long
+				name = SZC_YCP_shenshe_party
+			}
+			set_politics = {
+				ruling_party = social_conservative
+			}
+			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			add_to_coalition = yes
+			set_country_flag = NKRSZC_YCPpath_phase3
+			mark_focus_tree_layout_dirty = yes
 	}
 }
 
