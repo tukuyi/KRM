@@ -18780,7 +18780,7 @@ focus_tree = {
 	
 	focus = {
 		id = SZC_YCP_liberal_statist_struggle
-		icon = GFX_goal_SZC_YCP_liberal_statist_struggle
+		icon = GFX_goal_SZC_YCP_liberal_statist_revolution
 		cost = 4
 
 		x = 1
@@ -21274,15 +21274,15 @@ focus_tree = {
 			has_global_flag = china_united
 		}
 
-		allow_branch = {
-			has_global_flag = china_united
-			# AND = {
-			# 	has_country_flag = NKRSZC_YCPpath_phase3
-			# 	OR = {
-			# 		has_completed_focus = SZC_YCP_liberal_statist_struggle
-			# 	}
-			# }
-		}
+		# allow_branch = {
+		# 	has_global_flag = china_united
+		# 	# AND = {
+		# 	# 	has_country_flag = NKRSZC_YCPpath_phase3
+		# 	# 	OR = {
+		# 	# 		has_completed_focus = SZC_YCP_liberal_statist_struggle
+		# 	# 	}
+		# 	# }
+		# }
 
 
 		completion_reward = {
@@ -21291,6 +21291,333 @@ focus_tree = {
 			add_political_power = 150
 			add_stability = 0.1
 			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_world_of_science
+		icon = GFX_goal_SZC_YCP_world_of_science
+		cost = 4
+
+		x = -5
+		y = 1
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_wind_of_liberalism
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_world_of_science"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_chinese_modernization
+		icon = GFX_goal_SZC_YCP_chinese_modernization
+		cost = 4
+
+		x = -6
+		y = 2
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_world_of_science
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_chinese_modernization"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_remember_mr_science
+		icon = GFX_goal_SZC_YCP_remember_mr_science
+		cost = 4
+
+		x = -4
+		y = 2
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_world_of_science
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_remember_mr_science"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_expand_agricultural_mechanization
+		icon = GFX_goal_SZC_YCP_expand_agricultural_mechanization
+		cost = 4
+
+		x = -4
+		y = 3
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_chinese_modernization
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_remember_mr_science
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_expand_agricultural_mechanization"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_not_by_civil_servant_nor_party
+		icon = GFX_goal_SZC_YCP_not_by_civil_servant_nor_party
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_wind_of_liberalism
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_not_by_civil_servant_nor_party"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_patriotic_liberalism
+		icon = GFX_goal_SZC_YCP_patriotic_liberalism
+		cost = 4
+
+		x = -2
+		y = 2
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_world_of_science
+			focus = SZC_YCP_not_by_civil_servant_nor_party
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_patriotic_liberalism"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_a_society_ruled_by_law
+		icon = GFX_goal_SZC_YCP_a_society_ruled_by_law
+		cost = 4
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_not_by_civil_servant_nor_party
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_a_society_ruled_by_law"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_humanitarianism_first
+		icon = GFX_goal_SZC_YCP_humanitarianism_first
+		cost = 4
+
+		x = 5
+		y = 1
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_wind_of_liberalism
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_humanitarianism_first"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_stop_political_persecution
+		icon = GFX_goal_SZC_YCP_stop_political_persecution
+		cost = 4
+
+		x = 5
+		y = 3
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_humanitarianism_first
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_stop_political_persecution"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_against_syndicalist_imperialism
+		icon = GFX_goal_SZC_YCP_against_syndicalist_imperialism
+		cost = 4
+
+		x = 3
+		y = 3
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_humanitarianism_first
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_against_syndicalist_imperialism"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_speak_as_you_want
+		icon = GFX_goal_SZC_YCP_speak_as_you_want
+		cost = 4
+
+		x = 2
+		y = 2
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_humanitarianism_first
+			focus = SZC_YCP_not_by_civil_servant_nor_party
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_speak_as_you_want"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_the_end_of_revolution
+		icon = GFX_goal_SZC_YCP_the_end_of_revolution
+		cost = 4
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_a_society_ruled_by_law
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_patriotic_liberalism
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_the_end_of_revolution"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_establish_healthy_multiparties_system
+		icon = GFX_goal_SZC_YCP_establish_healthy_multiparties_system
+		cost = 4
+
+		x = 2
+		y = 4
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_speak_as_you_want
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_against_syndicalist_imperialism
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_stop_political_persecution
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_establish_healthy_multiparties_system"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_establish_national_democratic_morality
+		icon = GFX_goal_SZC_YCP_establish_national_democratic_morality
+		cost = 4
+
+		x = -2
+		y = 4
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_expand_agricultural_mechanization
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_the_end_of_revolution
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_establish_national_democratic_morality"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_shatter_old_empire
+		icon = GFX_goal_SZC_YCP_shatter_old_empire
+		cost = 4
+
+		x = 0
+		y = 5
+		relative_position_id = SZC_YCP_wind_of_liberalism
+
+		prerequisite = {
+			focus = SZC_YCP_establish_healthy_multiparties_system
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_establish_national_democratic_morality
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_shatter_old_empire"
+			custom_effect_tooltip = SZC_YCP_shatter_old_empire_tt
+			
 		}
 	}
 
