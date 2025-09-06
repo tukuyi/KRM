@@ -18718,7 +18718,7 @@ focus_tree = {
 		relative_position_id = SZC_YCP_technique_of_relief
 
 		mutually_exclusive = {
-			focus = SZC_YCP_liberal_statist_revolution
+			focus = SZC_YCP_liberal_statist_struggle
 		}
 
 		available = {
@@ -18779,8 +18779,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SZC_YCP_liberal_statist_revolution
-		icon = GFX_goal_SZC_YCP_liberal_statist_revolution
+		id = SZC_YCP_liberal_statist_struggle
+		icon = GFX_goal_SZC_YCP_liberal_statist_struggle
 		cost = 4
 
 		x = 1
@@ -18806,8 +18806,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_YCP_liberal_statist_revolution"
-			custom_effect_tooltip = SZC_YCP_liberal_statist_revolution_tt
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_liberal_statist_struggle"
+			custom_effect_tooltip = SZC_YCP_liberal_statist_struggle_tt
 			SZC_zuo_shunsheng = {
 				add_trait = {
 					trait = SZC_YCP_liberal_fighter
@@ -21279,7 +21279,7 @@ focus_tree = {
 			# AND = {
 			# 	has_country_flag = NKRSZC_YCPpath_phase3
 			# 	OR = {
-			# 		has_completed_focus = SZC_YCP_liberal_statist_revolution
+			# 		has_completed_focus = SZC_YCP_liberal_statist_struggle
 			# 	}
 			# }
 		}
