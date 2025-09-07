@@ -18412,15 +18412,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
-		# allow_branch = {
-		# 	has_country_flag = NKRSZC_YCPpath_phase2
-		# 	AND = {
-		# 		has_country_flag = SZC_YCP_li_path
-		# 		NOT = {
-		# 			has_country_flag = SZC_YCP_jiang_path
-		# 		}
-		# 	}
-		# }
+		allow_branch = {
+			has_country_flag = NKRSZC_YCPpath_phase2
+			AND = {
+				has_country_flag = SZC_YCP_li_path
+				NOT = {
+					has_country_flag = SZC_YCP_jiang_path
+				}
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_wave_of_history_victory_of_ycp
@@ -19210,12 +19210,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
-		allow_branch = {
-			has_country_flag = NKRSZC_YCPpath_phase2
-			AND = {
-				has_country_flag = SZC_YCP_new_legalist_path
-			}
-		}
+		# allow_branch = {
+		# 	has_country_flag = NKRSZC_YCPpath_phase2
+		# 	AND = {
+		# 		has_country_flag = SZC_YCP_new_legalist_path
+		# 	}
+		# }
 
 		prerequisite = {
 			focus = SZC_YCP_wave_of_history_victory_of_ycp
@@ -21274,15 +21274,15 @@ focus_tree = {
 			has_global_flag = china_united
 		}
 
-		# allow_branch = {
-		# 	has_global_flag = china_united
-		# 	# AND = {
-		# 	# 	has_country_flag = NKRSZC_YCPpath_phase3
-		# 	# 	OR = {
-		# 	# 		has_completed_focus = SZC_YCP_liberal_statist_struggle
-		# 	# 	}
-		# 	# }
-		# }
+		allow_branch = {
+			has_global_flag = china_united
+			# AND = {
+			# 	has_country_flag = NKRSZC_YCPpath_phase3
+			# 	OR = {
+			# 		has_completed_focus = SZC_YCP_liberal_statist_struggle
+			# 	}
+			# }
+		}
 
 
 		completion_reward = {
@@ -21731,6 +21731,425 @@ focus_tree = {
 				add_idea = SZC_YCP_legitimacy_10
 			}
 			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_renew_legalist
+		icon = GFX_goal_SZC_YCP_renew_legalist
+		cost = 4
+
+		x = 0
+		y = 6
+		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
+
+		available = {
+			has_global_flag = china_united
+		}
+
+		# allow_branch = {
+		# 	has_global_flag = china_united
+		# 	AND = {
+		# 		has_country_flag = NKRSZC_YCPpath_phase3
+		# 		has_country_flag = SZC_YCP_new_legalist_path
+		# 	}
+		# }
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_renew_legalist"
+			custom_effect_tooltip = SZC_YCP_renew_legalist_tt
+			add_political_power = 150
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_zhangjuzhengs_legacy
+		icon = GFX_goal_SZC_YCP_zhangjuzhengs_legacy
+		cost = 4
+
+		x = -3
+		y = 1
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_renew_legalist
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_zhangjuzhengs_legacy"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_legal_well_rule_well
+		icon = GFX_goal_SZC_YCP_legal_well_rule_well
+		cost = 4
+
+		x = -4
+		y = 2
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_zhangjuzhengs_legacy
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_legal_well_rule_well"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_educated_civil_servants
+		icon = GFX_goal_SZC_YCP_educated_civil_servants
+		cost = 4
+
+		x = -5
+		y = 3
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_legal_well_rule_well
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_educated_civil_servants"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_deemphasize_confucianism
+		icon = GFX_goal_SZC_YCP_deemphasize_confucianism
+		cost = 4
+
+		x = -2
+		y = 2
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_zhangjuzhengs_legacy
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_deemphasize_confucianism"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_zero_tolerance_for_corruption
+		icon = GFX_goal_SZC_YCP_zero_tolerance_for_corruption
+		cost = 4
+
+		x = -3
+		y = 4
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_force_to_solve_land_issues
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_zero_tolerance_for_corruption"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_force_to_solve_land_issues
+		icon = GFX_goal_SZC_YCP_force_to_solve_land_issues
+		cost = 4
+
+		x = -3
+		y = 3
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_legal_well_rule_well
+			focus = SZC_YCP_deemphasize_confucianism
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_force_to_solve_land_issues"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_modern_legalism_for_people
+		icon = GFX_goal_SZC_YCP_modern_legalism_for_people
+		cost = 4
+
+		x = 1
+		y = 2
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_zhangjuzhengs_legacy
+			focus = SZC_YCP_shangyangs_legacy
+		}
+
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_modern_legalism_for_people"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_shangyangs_legacy
+		icon = GFX_goal_SZC_YCP_shangyangs_legacy
+		cost = 4
+
+		x = 3
+		y = 1
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_renew_legalist
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_shangyangs_legacy"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_shangwu_fengqi
+		icon = GFX_goal_SZC_YCP_shangwu_fengqi
+		cost = 4
+
+		x = 3
+		y = 2
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_shangyangs_legacy
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_shangwu_fengqi"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_democratic_militarism
+		icon = GFX_goal_SZC_YCP_democratic_militarism
+		cost = 4
+
+		x = 3
+		y = 4
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_shangwu_fengqi
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_art_of_war
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_democratic_militarism"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_art_of_war
+		icon = GFX_goal_SZC_YCP_art_of_war
+		cost = 4
+
+		x = 4
+		y = 3
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_shangwu_fengqi
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_art_of_war"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_democratic_constitution_the_realpolitik
+		icon = GFX_goal_SZC_YCP_democratic_constitution_the_realpolitik
+		cost = 4
+
+		x = 1
+		y = 3
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_shangwu_fengqi
+			focus = SZC_YCP_modern_legalism_for_people
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_democratic_constitution_the_realpolitik"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_cross_parties_national_unity_government
+		icon = GFX_goal_SZC_YCP_cross_parties_national_unity_government
+		cost = 4
+
+		x = -1
+		y = 3
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_modern_legalism_for_people
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_deemphasize_confucianism
+		}
+
+		available = {
+			has_completed_focus = SZC_YCP_educated_civil_servants
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_cross_parties_national_unity_government"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_fight_against_individualism
+		icon = GFX_goal_SZC_YCP_fight_against_individualism
+		cost = 4
+
+		x = 0
+		y = 4
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_cross_parties_national_unity_government
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_democratic_constitution_the_realpolitik
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_fight_against_individualism"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_guild_represent
+		icon = GFX_goal_SZC_YCP_guild_represent
+		cost = 4
+
+		x = -2
+		y = 5
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_fight_against_individualism
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_zero_tolerance_for_corruption
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_guild_represent"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_strong_democratic_leadership
+		icon = GFX_goal_SZC_YCP_strong_democratic_leadership
+		cost = 4
+
+		x = 2
+		y = 5
+		relative_position_id = SZC_YCP_renew_legalist
+
+		prerequisite = {
+			focus = SZC_YCP_fight_against_individualism
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_democratic_militarism
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_strong_democratic_leadership"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_rule_by_people_and_law
+		icon = GFX_goal_SZC_YCP_rule_by_people_and_law
+		cost = 4
+
+		x = 1
+		y = 6
+		relative_position_id = SZC_YCP_renew_legalist
+
+		mutually_exclusive = {
+			focus = SZC_YCP_state_socialism_fights_on
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_guild_represent
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_strong_democratic_leadership
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_rule_by_people_and_law"
+			custom_effect_tooltip = SZC_YCP_rule_by_people_and_law_tt
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_state_socialism_fights_on
+		icon = GFX_goal_SZC_YCP_state_socialism_fights_on
+		cost = 4
+
+		x = -1
+		y = 6
+		relative_position_id = SZC_YCP_renew_legalist
+
+		mutually_exclusive = {
+			focus = SZC_YCP_rule_by_people_and_law
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_guild_represent
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_strong_democratic_leadership
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_state_socialism_fights_on"
+			custom_effect_tooltip = SZC_YCP_state_socialism_fights_on_tt
 		}
 	}
 
