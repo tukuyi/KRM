@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_YCP_shatter_old_empire
+python focusgfxentry.py SZC_YCP_legal_well_rule_well
 pause
