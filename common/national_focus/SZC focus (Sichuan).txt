@@ -21310,7 +21310,16 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_world_of_science"
-			
+			country_event = {
+				id = NKRsichuan.621
+			}
+			add_research_slot = 1
+			hidden_effect = {
+				country = {
+					id = NKRsichuan.618
+					days = 30
+				}
+			}
 		}
 	}
 
@@ -21330,7 +21339,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_chinese_modernization"
-			
+			country_event = {
+				id = NKRsichuan.622
+			}
+			add_ideas = {
+				SZC_YCP_modernization_with_chinese_characteristic_idea
+			}
 		}
 	}
 
@@ -21351,6 +21365,13 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_remember_mr_science"
 			
+			country_event = {
+				id = NKRsichuan.623
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_liberate_mind_idea
+				add_idea = SZC_YCP_liberate_mind_2_idea
+			}
 		}
 	}
 
@@ -21374,7 +21395,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_expand_agricultural_mechanization"
-			
+			country_event = {
+				id = NKRsichuan.624
+			}
+			china_generic_land_reform_setup = yes
 		}
 	}
 
@@ -21394,7 +21418,16 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_not_by_civil_servant_nor_party"
-			
+			country_event = {
+				id = NKRsichuan.625
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.05
+			}
+			add_stability = 0.15
+			add_war_support = 0.05
+			add_political_power = 100
 		}
 	}
 
@@ -21415,7 +21448,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_patriotic_liberalism"
-			
+			country_event = {
+				id = NKRsichuan.626
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_national_progress
+				add_idea = SZC_YCP_patrioc_liberalism_idea
+			}
 		}
 	}
 
@@ -21435,7 +21474,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_a_society_ruled_by_law"
-			
+			country_event = {
+				id = NKRsichuan.627
+			}
+			add_stability = 0.1
+			#advisor law
 		}
 	}
 
@@ -21455,7 +21498,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_humanitarianism_first"
-			
+			country_event = {
+				id = NKRsichuan.628
+			}
+			add_ideas = {
+				SZC_YCP_protect_human_rights_idea
+			}
 		}
 	}
 
@@ -21475,7 +21523,28 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_stop_political_persecution"
-			
+			country_event = {
+				id = NKRsichuan.629
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_protect_human_rights_idea
+				add_idea = SZC_YCP_protect_human_rights_2_idea
+			}
+			#advisors
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.03
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.630
+					days = 15
+				}
+			}
 		}
 	}
 
@@ -21488,6 +21557,10 @@ focus_tree = {
 		y = 3
 		relative_position_id = SZC_YCP_wind_of_liberalism
 
+		available = {
+			has_completed_focus = SZC_YCP_anti_internationale
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_humanitarianism_first
 		}
@@ -21495,7 +21568,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_against_syndicalist_imperialism"
-			
+			country_event = {
+				id = NKRsichuan.631
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_anti_internationale_idea
+				add_idea = SZC_YCP_anti_syndicalist_imperialism_idea
+			}
 		}
 	}
 
@@ -21516,7 +21595,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_speak_as_you_want"
-			
+			country_event = {
+				id = NKRsichuan.633
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.03
+			}
+			add_political_power = 100
 		}
 	}
 
@@ -21540,7 +21630,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_the_end_of_revolution"
-			
+			country_event = {
+				id = NKRsichuan.632
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_state_socialpolitik_idea
+				add_idea = SZC_YCP_state_socialpolitik_without_revolution_idea
+			}
 		}
 	}
 
@@ -21568,7 +21664,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_establish_healthy_multiparties_system"
-			
+			#ADVISORS GANG AND DECISIONS
+			country_event = {
+				id = NKRsichuan.635
+			}
 		}
 	}
 
@@ -21592,7 +21691,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_establish_national_democratic_morality"
-			
+			country_event = {
+				id = NKRsichuan.634
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_peoples_sovereignty_idea
+				add_idea = SZC_YCP_peoples_sovereignty_2_idea
+			}
 		}
 	}
 
@@ -21617,6 +21722,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_shatter_old_empire"
 			custom_effect_tooltip = SZC_YCP_shatter_old_empire_tt
+			country_event = {
+				id = NKRsichuan.636
+			}
+
+			swap_ideas = {
+				remove_idea = SZC_YCP_legitimacy_5
+				add_idea = SZC_YCP_legitimacy_10
+			}
 			
 		}
 	}

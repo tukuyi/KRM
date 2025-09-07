@@ -1140,6 +1140,21 @@ ideas = {
 			picture = chi_warlord_integration
 			allowed = { always = no }
 			modifier = {
+				stability_factor = 0.3
+				war_support_factor = 0.1
+				compliance_gain = 0.02
+				compliance_growth = 0.03
+				trade_opinion_factor = 0.35
+				consumer_goods_expected_value = -0.10
+				army_org_factor = 0.10
+				army_attack_factor = 0.05
+			}
+		}
+		SZC_YCP_legitimacy_10 = {#党的合法性-历史终结
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_legitimacy_10" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
 				stability_factor = 0.2
 				war_support_factor = 0.3
 				party_popularity_stability_factor = 0.25
@@ -1149,6 +1164,7 @@ ideas = {
 				consumer_goods_expected_value = -0.05
 				army_org_factor = 0.05
 				army_attack_factor = 0.05
+				political_power_gain = 0.1
 			}
 		}
 		SZC_YCP_construct_nationalspirit = {#铸造国格
@@ -1835,6 +1851,81 @@ ideas = {
 				army_attack_factor = 0.10
 				army_defence_factor = 0.15
 				army_morale_factor = 0.10
+			}
+		}
+		SZC_YCP_modernization_with_chinese_characteristic_idea = {#中国式现代化
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_modernization_with_chinese_characteristic_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_expected_value = -0.1
+				cic_construction_boost = 0.3
+				production_speed_industrial_complex_factor = 0.2
+				add_political_power = -0.2
+			}
+		}
+		SZC_YCP_patrioc_liberalism_idea = {#爱国的自由主义
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_patrioc_liberalism_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				non_core_manpower = 0.08
+				political_power_factor = 0.15
+			}
+		}
+		SZC_YCP_protect_human_rights_idea = {#保障人权
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_protect_human_rights_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = 0.05
+				monthly_population = 0.2
+			}
+		}
+		SZC_YCP_protect_human_rights_2_idea = {#保障人权2
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_protect_human_rights_2_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = 0.05
+				monthly_population = 0.25
+				stability_factor = 0.15
+			}
+		}
+		SZC_YCP_anti_syndicalist_imperialism_idea = {#反对工团帝国主义
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_anti_syndicalist_imperialism_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				totalist_acceptance = -50
+				syndicalist_acceptance = -20
+				stability_factor = 0.10
+				political_power_factor = 0.05
+			}
+		}
+		SZC_YCP_state_socialpolitik_without_revolution_idea = {#没有革命的社会国家
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_state_socialpolitik_without_revolution_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.15
+				monthly_population = 0.2
+				production_factory_efficiency_gain_factor = 0.30
+				compliance_growth = 0.15
+				stability_weekly = 0.005
+			}
+		}
+		SZC_YCP_peoples_sovereignty_2_idea = {#人民主权2
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_peoples_sovereignty_2_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				compliance_gain = 0.05
+				party_popularity_stability_factor = 0.05
+				stability_factor = 0.15
+				trade_laws_cost_factor = -0.6
+				mobilization_laws_cost_factor = -0.6
+				army_core_defence_factor = 0.25
 			}
 		}
 	}

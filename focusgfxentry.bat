@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_YCP_east_asia_democracy_crusader
+python focusgfxentry.py SZC_YCP_shatter_old_empire
 pause
