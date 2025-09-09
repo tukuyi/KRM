@@ -19443,12 +19443,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
-		allow_branch = {
-			has_country_flag = NKRSZC_YCPpath_phase2
-			OR = {
-				has_country_flag = SZC_YCP_xia_real_path
-			}
-		}
+		# allow_branch = {
+		# 	has_country_flag = NKRSZC_YCPpath_phase2
+		# 	OR = {
+		# 		has_country_flag = SZC_YCP_xia_real_path
+		# 	}
+		# }
 
 		prerequisite = {
 			focus = SZC_YCP_wave_of_history_victory_of_ycp
@@ -19903,12 +19903,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
-		# allow_branch = {
-		# 	has_country_flag = NKRSZC_YCPpath_phase2
-		# 	OR = {
-		# 		has_country_flag = SZC_YCP_jiang_path
-		# 	}
-		# }
+		allow_branch = {
+			has_country_flag = NKRSZC_YCPpath_phase2
+			OR = {
+				has_country_flag = SZC_YCP_jiang_path
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_wave_of_history_victory_of_ycp
@@ -22335,13 +22335,13 @@ focus_tree = {
 			has_global_flag = china_united
 		}
 
-		# allow_branch = {
-		# 	has_global_flag = china_united
-		# 	AND = {
-		# 		has_country_flag = NKRSZC_YCPpath_phase3
-		# 		has_country_flag = SZC_YCP_jiang_path
-		# 	}
-		# }
+		allow_branch = {
+			has_global_flag = china_united
+			AND = {
+				has_country_flag = NKRSZC_YCPpath_phase3
+				has_country_flag = SZC_YCP_jiang_path
+			}
+		}
 
 
 		completion_reward = {
@@ -22889,6 +22889,38 @@ focus_tree = {
 				remove_idea = SZC_YCP_legitimacy_5
 				add_idea = SZC_YCP_legitimacy_13
 			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_post_YCP_days
+		icon = GFX_goal_SZC_YCP_post_YCP_days
+		cost = 4
+
+		x = 0
+		y = 6
+		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
+
+		available = {
+			has_global_flag = china_united
+		}
+
+		# allow_branch = {
+		# 	has_global_flag = china_united
+		# 	AND = {
+		# 		has_country_flag = NKRSZC_YCPpath_phase3
+		# 		has_country_flag = SZC_YCP_xia_real_path
+		# 		has_completed_focus = SZC_YCP_dissolve_the_YCP
+		# 	}
+		# }
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_post_YCP_days"
+			custom_effect_tooltip = SZC_YCP_post_YCP_days_tt
+			add_political_power = 150
+			add_stability = 0.1
+			add_war_support = 0.1
 		}
 	}
 
