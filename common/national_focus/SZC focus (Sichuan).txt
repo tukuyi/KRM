@@ -19210,12 +19210,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
-		# allow_branch = {
-		# 	has_country_flag = NKRSZC_YCPpath_phase2
-		# 	AND = {
-		# 		has_country_flag = SZC_YCP_new_legalist_path
-		# 	}
-		# }
+		allow_branch = {
+			has_country_flag = NKRSZC_YCPpath_phase2
+			AND = {
+				has_country_flag = SZC_YCP_new_legalist_path
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_wave_of_history_victory_of_ycp
@@ -19903,12 +19903,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
-		allow_branch = {
-			has_country_flag = NKRSZC_YCPpath_phase2
-			OR = {
-				has_country_flag = SZC_YCP_jiang_path
-			}
-		}
+		# allow_branch = {
+		# 	has_country_flag = NKRSZC_YCPpath_phase2
+		# 	OR = {
+		# 		has_country_flag = SZC_YCP_jiang_path
+		# 	}
+		# }
 
 		prerequisite = {
 			focus = SZC_YCP_wave_of_history_victory_of_ycp
@@ -21755,13 +21755,13 @@ focus_tree = {
 			has_global_flag = china_united
 		}
 
-		# allow_branch = {
-		# 	has_global_flag = china_united
-		# 	AND = {
-		# 		has_country_flag = NKRSZC_YCPpath_phase3
-		# 		has_country_flag = SZC_YCP_new_legalist_path
-		# 	}
-		# }
+		allow_branch = {
+			has_global_flag = china_united
+			AND = {
+				has_country_flag = NKRSZC_YCPpath_phase3
+				has_country_flag = SZC_YCP_new_legalist_path
+			}
+		}
 
 
 		completion_reward = {
@@ -22318,6 +22318,576 @@ focus_tree = {
 					ideology = social_democrat
 					popularity = 0.25
 				}
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_new_phase_of_sturm_drang
+		icon = GFX_goal_SZC_YCP_new_phase_of_sturm_drang
+		cost = 4
+
+		x = 0
+		y = 6
+		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
+
+		available = {
+			has_global_flag = china_united
+		}
+
+		# allow_branch = {
+		# 	has_global_flag = china_united
+		# 	AND = {
+		# 		has_country_flag = NKRSZC_YCPpath_phase3
+		# 		has_country_flag = SZC_YCP_jiang_path
+		# 	}
+		# }
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_new_phase_of_sturm_drang"
+			custom_effect_tooltip = SZC_YCP_new_phase_of_sturm_drang_tt
+			add_political_power = 150
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_economic_unit
+		icon = GFX_goal_SZC_YCP_economic_unit
+		cost = 4
+
+		x = -5
+		y = 1
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_new_phase_of_sturm_drang
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_economic_unit"
+			country_event = {
+				id = NKRsichuan.657
+			}
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_focus_on_borders_resources
+		icon = GFX_goal_SZC_YCP_focus_on_borders_resources
+		cost = 4
+
+		x = -6
+		y = 2
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_economic_unit
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_focus_on_borders_resources"
+			country_event = {
+				id = NKRsichuan.658
+			}
+			add_ideas = {
+				SZC_YCP_border_resources_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_liberate_rural_workforce
+		icon = GFX_goal_SZC_YCP_liberate_rural_workforce
+		cost = 4
+
+		x = -5
+		y = 3
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_economic_unit
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_focus_on_borders_resources
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_liberate_rural_workforce"
+			country_event = {
+				id = NKRsichuan.659
+			}
+			china_generic_land_reform_setup = yes
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_develop_border_areas
+		icon = GFX_goal_SZC_YCP_develop_border_areas
+		cost = 4
+
+		x = -6
+		y = 4
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_liberate_rural_workforce
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_develop_border_areas"
+			#decision
+			country_event = {
+				id = NKRsichuan.660
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_invest_on_industrial_acceleration
+		icon = GFX_goal_SZC_YCP_invest_on_industrial_acceleration
+		cost = 4
+
+		x = -4
+		y = 4
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_liberate_rural_workforce
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_invest_on_industrial_acceleration"
+			country_event = {
+				id = NKRsichuan.661
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_socialize_economy_idea
+				add_idea = SZC_YCP_nextgen_socialize_economy_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_political_unit
+		icon = GFX_goal_SZC_YCP_political_unit
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_new_phase_of_sturm_drang
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_political_unit"
+			country_event = {
+				id = NKRsichuan.662
+			}
+			add_stability = -0.05
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_push_centralize
+		icon = GFX_goal_SZC_YCP_push_centralize
+		cost = 4
+
+		x = -3
+		y = 2
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_political_unit
+			focus = SZC_YCP_economic_unit
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_push_centralize"
+			country_event = {
+				id = NKRsichuan.663
+			}
+			if = {
+				limit = {
+					has_idea = SZC_YCP_towards_federalist_provinces
+				}
+				swap_ideas = {
+					remove_idea = SZC_YCP_towards_federalist_provinces
+					add_idea = SZC_YCP_return_centralize_tradition
+				}
+				add_political_power = -100
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SZC_YCP_centralized_federation
+					add_idea = SZC_YCP_return_centralize_tradition
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_destroy_opposition
+		icon = GFX_goal_SZC_YCP_destroy_opposition
+		cost = 4
+
+		x = -2
+		y = 3
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_push_centralize
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_destroy_opposition"
+			country_event = {
+				id = NKRsichuan.664
+			}
+			add_stability = -0.15
+			add_political_power = -50
+			#remove advisors
+
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_the_dragon_in_the_sky_will_regret
+		icon = GFX_goal_SZC_YCP_the_dragon_in_the_sky_will_regret
+		cost = 4
+
+		x = -1
+		y = 2
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_political_unit
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_the_dragon_in_the_sky_will_regret"
+			country_event = {
+				id = NKRsichuan.665
+			}
+			SZC_jiang_yungang = {
+				add_trait = {
+					trait = SZC_YCP_eastern_spengler
+					ideology = national_populist_strum_drang_statist_subtype
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_social_progress_for_human_happiness
+		icon = GFX_goal_SZC_YCP_social_progress_for_human_happiness
+		cost = 4
+
+		x = -1
+		y = 4
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_the_dragon_in_the_sky_will_regret
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_destroy_opposition
+		}
+
+		available = {
+			has_completed_focus = SZC_YCP_eastern_socialpolitik
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_social_progress_for_human_happiness"
+			country_event = {
+				id = NKRsichuan.666
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_state_socialpolitik_idea
+				add_idea = SZC_YCP_socialpolitik_for_humanity_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_joy_from_suffering
+		icon = GFX_goal_SZC_YCP_joy_from_suffering
+		cost = 4
+
+		x = 1
+		y = 2
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_political_unit
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_joy_from_suffering"
+			country_event = {
+				id = NKRsichuan.667
+			}
+			add_political_power = 100
+			swap_ideas = {
+				remove_idea = SZC_YCP_national_progress
+				add_idea = SZC_YCP_joy_from_suffering_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_ideal_gensokyo
+		icon = GFX_goal_SZC_YCP_ideal_gensokyo
+		cost = 4
+
+		x = 1
+		y = 3
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_joy_from_suffering
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_ideal_gensokyo"
+			country_event = {
+				id = NKRsichuan.668
+			}
+			#advisors
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_fight_against_barbarian
+		icon = GFX_goal_SZC_YCP_fight_against_barbarian
+		cost = 4
+
+		x = 3
+		y = 3
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_joy_from_suffering
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_fight_against_barbarian"
+			country_event = {
+				id = NKRsichuan.669
+			}
+			#decision against major bonus
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_no_peace_but_victory
+		icon = GFX_goal_SZC_YCP_no_peace_but_victory
+		cost = 4
+
+		x = 1
+		y = 4
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_ideal_gensokyo
+		}
+		prerequisite = {
+			focus = SZC_YCP_fight_against_barbarian
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_no_peace_but_victory"
+			country_event = {
+				id = NKRsichuan.670
+			}
+			#bonusmore decision
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_cultural_unit
+		icon = GFX_goal_SZC_YCP_cultural_unit
+		cost = 4
+
+		x = 5
+		y = 1
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_new_phase_of_sturm_drang
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_cultural_unit"
+			country_event = {
+				id = NKRsichuan.671
+			}
+			add_political_power = -100
+			add_stability = -0.1
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.03
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_education_of_chinese_view
+		icon = GFX_goal_SZC_YCP_education_of_chinese_view
+		cost = 4
+
+		x = 4
+		y = 2
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_political_unit
+			focus = SZC_YCP_cultural_unit
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_education_of_chinese_view"
+			country_event = {
+				id = NKRsichuan.672
+			}
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_eliminate_nature_of_borders
+		icon = GFX_goal_SZC_YCP_eliminate_nature_of_borders
+		cost = 4
+
+		x = 6
+		y = 2
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_cultural_unit
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_eliminate_nature_of_borders"
+			country_event = {
+				id = NKRsichuan.673
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_national_units_2_idea
+				add_idea = SZC_YCP_national_units_3_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_cultural_assilmilation
+		icon = GFX_goal_SZC_YCP_cultural_assilmilation
+		cost = 4
+
+		x = 5
+		y = 3
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_education_of_chinese_view
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_eliminate_nature_of_borders
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_cultural_assilmilation"
+			country_event = {
+				id = NKRsichuan.674
+			}
+			every_owned_state = {
+				tooltip = JAP_all_states_with_less_than_three_infra
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+					infrastructure < 3
+				}
+				add_building_construction = { type = infrastructure level = 1 }
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_anti_law_of_jungle
+		icon = GFX_goal_SZC_YCP_anti_law_of_jungle
+		cost = 4
+
+		x = 5
+		y = 4
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_cultural_assilmilation
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_anti_law_of_jungle"
+			country_event = {
+				id = NKRsichuan.675
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_national_units_3_idea
+				add_idea = SZC_YCP_national_units_4_idea
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_social_philosophy
+		icon = GFX_goal_SZC_YCP_social_philosophy
+		cost = 4
+
+		x = 0
+		y = 5
+		relative_position_id = SZC_YCP_new_phase_of_sturm_drang
+
+		prerequisite = {
+			focus = SZC_YCP_develop_border_areas
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_invest_on_industrial_acceleration
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_social_progress_for_human_happiness
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_no_peace_but_victory
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_anti_law_of_jungle
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_social_philosophy"
+			custom_effect_tooltip = SZC_YCP_social_philosophy_tt
+			country_event = {
+				id = NKRsichuan.676
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_legitimacy_5
+				add_idea = SZC_YCP_legitimacy_13
 			}
 		}
 	}

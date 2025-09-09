@@ -1179,7 +1179,7 @@ ideas = {
 				trade_opinion_factor = 0.05
 				consumer_goods_expected_value = -0.3
 				army_org_factor = 0.1
-				army_defence_factor = 0.2
+				army_defence_factor = 0.15
 				political_power_gain = 0.25
 			}
 		}
@@ -1195,8 +1195,24 @@ ideas = {
 				trade_opinion_factor = 0.3
 				consumer_goods_expected_value = -0.1
 				army_org_factor = 0.05
-				army_attack_factor = 0.2
+				army_attack_factor = 0.15
 				political_power_factor = 0.25
+			}
+		}
+		SZC_YCP_legitimacy_13 = {#党的合法性-社会哲学
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_legitimacy_13" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.01
+				war_support_factor = 0.35
+				party_popularity_stability_factor = 0.35
+				compliance_gain = 0.01
+				army_attack_factor = 0.25
+				army_defence_factor = -0.05
+				political_power_factor = 0.25
+				trade_opinion_factor = -0.1
+				consumer_goods_factor = -0.05
 			}
 		}
 		SZC_YCP_construct_nationalspirit = {#铸造国格
@@ -2032,6 +2048,80 @@ ideas = {
 				industrial_capacity_factory = 0.3
 				consumer_goods_expected_value = 0.05
 				political_power_gain = -0.05
+			}
+		}
+		SZC_YCP_border_resources_idea = {#边区资源
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_border_resources_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				local_resources_factor = 0.15
+			}
+		}
+		SZC_YCP_nextgen_socialize_economy_idea = {#次世代社会化经济
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_nextgen_socialize_economy_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				army_core_attack_factor = 0.05
+				local_resources_factor = 0.2
+				industrial_capacity_factory = 0.25
+				consumer_goods_factor = -0.1
+			}
+		}
+		SZC_YCP_return_centralize_tradition = {#重返集权传统
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_return_centralize_tradition" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.3
+				industrial_capacity_factory = 0.15
+			}
+		}
+		SZC_YCP_socialpolitik_for_humanity_idea = {#为人性的社会政策
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_socialpolitik_for_humanity_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.15
+				monthly_population = 0.3
+				production_factory_efficiency_gain_factor = 0.2 
+				compliance_growth = 0.15 
+				stability_weekly = 0.003
+			}
+		}
+		SZC_YCP_joy_from_suffering_idea = {#苦中作乐
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_joy_from_suffering_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				war_support_factor = 0.2
+				stability_factor = 0.1
+			}
+		}
+		SZC_YCP_national_units_3_idea = {#国家单元3
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_national_units_3_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				non_core_manpower = 0.08
+				stability_factor = 0.15
+				construction_speed_factor = 0.15
+			}
+		}
+		SZC_YCP_national_units_4_idea = {#国家单元4
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_national_units_4_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.175
+				non_core_manpower = 0.10
+				stability_factor = 0.2
+				construction_speed_factor = 0.2
 			}
 		}
 	}

@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_YCP_legal_well_rule_well
+python focusgfxentry.py SZC_YCP_social_philosophy
 pause

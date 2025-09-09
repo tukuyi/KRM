@@ -20790,7 +20790,7 @@ country_event = { #东方——国家社会主义之春
 	}
 }
 
-country_event = { #
+country_event = { #狂飙！永恒的狂飙！
 	id = NKRsichuan.656
 	title = NKRsichuan.656.t
 	desc = NKRsichuan.656.d
@@ -20800,13 +20800,23 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#突进！
 		log = "[GetLogInfo]: event NKRsichuan.656 option NKRsichuan.6566.a"
 		name = NKRsichuan.656.a
+		SZC_jiang_yungang= {
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_SZC_jiang_yungang_cool_large
+					small = GFX_portrait_SZC_jiang_yungang_cool_small
+				}
+			}
+		}
+		set_country_flag = NKRSZC_YCPpath_phase3
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 
-country_event = { #
+country_event = { #笨蛋！问题在于经济
 	id = NKRsichuan.657
 	title = NKRsichuan.657.t
 	desc = NKRsichuan.657.d
@@ -20816,13 +20826,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#请大家把目光转移到边区上！
 		log = "[GetLogInfo]: event NKRsichuan.657 option NKRsichuan.657.a"
 		name = NKRsichuan.657.a
 	}
 }
 
-country_event = { #
+country_event = { #资源利用
 	id = NKRsichuan.658
 	title = NKRsichuan.658.t
 	desc = NKRsichuan.658.d
@@ -20838,7 +20848,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #土地技术跃进
 	id = NKRsichuan.659
 	title = NKRsichuan.659.t
 	desc = NKRsichuan.659.d
@@ -20848,13 +20858,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#西部等待着我们！
 		log = "[GetLogInfo]: event NKRsichuan.659 option NKRsichuan.659.a"
 		name = NKRsichuan.659.a
 	}
 }
 
-country_event = { #
+country_event = { #设立建设兵团
 	id = NKRsichuan.660
 	title = NKRsichuan.660.t
 	desc = NKRsichuan.660.d
@@ -20864,13 +20874,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#好！
 		log = "[GetLogInfo]: event NKRsichuan.660 option NKRsichuan.660.a"
 		name = NKRsichuan.660.a
 	}
 }
 
-country_event = { #
+country_event = { #技术革新
 	id = NKRsichuan.661
 	title = NKRsichuan.661.t
 	desc = NKRsichuan.661.d
@@ -20886,7 +20896,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #民主？专制？
 	id = NKRsichuan.662
 	title = NKRsichuan.662.t
 	desc = NKRsichuan.662.d
@@ -20896,13 +20906,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#并无实在区别！
 		log = "[GetLogInfo]: event NKRsichuan.662 option NKRsichuan.662.a"
 		name = NKRsichuan.662.a
 	}
 }
 
-country_event = { #
+country_event = { #中央集权的必然性
 	id = NKRsichuan.663
 	title = NKRsichuan.663.t
 	desc = NKRsichuan.663.d
@@ -20912,13 +20922,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#经得起历史考验的正确道路。
 		log = "[GetLogInfo]: event NKRsichuan.663 option NKRsichuan.663.a"
 		name = NKRsichuan.663.a
 	}
 }
 
-country_event = { #
+country_event = { #开门！
 	id = NKRsichuan.664
 	title = NKRsichuan.664.t
 	desc = NKRsichuan.664.d
@@ -20928,13 +20938,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#滚进监狱吧！
 		log = "[GetLogInfo]: event NKRsichuan.664 option NKRsichuan.664.a"
 		name = NKRsichuan.66374.a
 	}
 }
 
-country_event = { #
+country_event = { #老子所言
 	id = NKRsichuan.665
 	title = NKRsichuan.665.t
 	desc = NKRsichuan.665.d
@@ -20944,13 +20954,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#飞龙在天！
 		log = "[GetLogInfo]: event NKRsichuan.665 option NKRsichuan.665.a"
 		name = NKRsichuan.665.a
 	}
 }
 
-country_event = { #
+country_event = { #历史的教训
 	id = NKRsichuan.666
 	title = NKRsichuan.666.t
 	desc = NKRsichuan.666.d
@@ -20960,13 +20970,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#为了人民的福祉！
 		log = "[GetLogInfo]: event NKRsichuan.666 option NKRsichuan.6666.a"
 		name = NKRsichuan.666.a
 	}
 }
 
-country_event = { #
+country_event = { #屈辱史
 	id = NKRsichuan.667
 	title = NKRsichuan.667.t
 	desc = NKRsichuan.667.d
@@ -20976,13 +20986,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#没有乐，怎么能坚忍？
 		log = "[GetLogInfo]: event NKRsichuan.667 option NKRsichuan.667.a"
 		name = NKRsichuan.667.a
 	}
 }
 
-country_event = { #
+country_event = { #桃花源记
 	id = NKRsichuan.668
 	title = NKRsichuan.668.t
 	desc = NKRsichuan.668.d
@@ -20992,13 +21002,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#为理想乡而战！
 		log = "[GetLogInfo]: event NKRsichuan.668 option NKRsichuan.668.a"
 		name = NKRsichuan.668.a
 	}
 }
 
-country_event = { #
+country_event = { #未开智的蛮人
 	id = NKRsichuan.669
 	title = NKRsichuan.669.t
 	desc = NKRsichuan.669.d
@@ -21008,13 +21018,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#对抗野蛮！
 		log = "[GetLogInfo]: event NKRsichuan.669 option NKRsichuan.669.a"
 		name = NKRsichuan.669.a
 	}
 }
 
-country_event = { #
+country_event = { #赴战
 	id = NKRsichuan.670
 	title = NKRsichuan.670.t
 	desc = NKRsichuan.670.d
@@ -21024,13 +21034,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#唯有胜利！
 		log = "[GetLogInfo]: event NKRsichuan.670 option NKRsichuan.670.a"
 		name = NKRsichuan.670.a
 	}
 }
 
-country_event = { #
+country_event = { #统合大业
 	id = NKRsichuan.671
 	title = NKRsichuan.671.t
 	desc = NKRsichuan.671.d
@@ -21040,13 +21050,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#我们的事业。
 		log = "[GetLogInfo]: event NKRsichuan.671 option NKRsichuan.671.a"
 		name = NKRsichuan.671.a
 	}
 }
 
-country_event = { #
+country_event = { #中华民族
 	id = NKRsichuan.672
 	title = NKRsichuan.672.t
 	desc = NKRsichuan.672.d
@@ -21062,7 +21072,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #何为边疆？
 	id = NKRsichuan.673
 	title = NKRsichuan.673.t
 	desc = NKRsichuan.673.d
@@ -21072,13 +21082,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#必须消除现有的边疆性。
 		log = "[GetLogInfo]: event NKRsichuan.673 option NKRsichuan.673.a"
 		name = NKRsichuan.673.a
 	}
 }
 
-country_event = { #
+country_event = { #合为一体
 	id = NKRsichuan.674
 	title = NKRsichuan.674.t
 	desc = NKRsichuan.674.d
@@ -21088,13 +21098,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#有些消失，有些长存。
 		log = "[GetLogInfo]: event NKRsichuan.674 option NKRsichuan.674.a"
 		name = NKRsichuan.67374.a
 	}
 }
 
-country_event = { #
+country_event = { #弱肉强食的新诠释
 	id = NKRsichuan.675
 	title = NKRsichuan.675.t
 	desc = NKRsichuan.675.d
@@ -21104,13 +21114,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#如是，复兴。
 		log = "[GetLogInfo]: event NKRsichuan.675 option NKRsichuan.675.a"
 		name = NKRsichuan.675.a
 	}
 }
 
-country_event = { #
+country_event = { #公理之哲学
 	id = NKRsichuan.676
 	title = NKRsichuan.676.t
 	desc = NKRsichuan.676.d
@@ -21120,13 +21130,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#哲学至上。
 		log = "[GetLogInfo]: event NKRsichuan.676 option NKRsichuan.6766.a"
 		name = NKRsichuan.676.a
 	}
 }
 
-country_event = { #
+country_event = { #保守革命的遗产
 	id = NKRsichuan.677
 	title = NKRsichuan.677.t
 	desc = NKRsichuan.677.d
@@ -21136,9 +21146,33 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#骑士精神再现。
 		log = "[GetLogInfo]: event NKRsichuan.677 option NKRsichuan.677.a"
 		name = NKRsichuan.677.a
+		custom_effect_tooltip = NKRsichuan.677.tt
+		hidden_effect = {
+			SZC_edgar_jung = {
+				set_nationality = GRU
+			}
+			GRU = {
+				SZC_edgar_jung = {
+					promote_character = national_populist_strum_drang_statist_subtype
+				}
+				set_cosmetic_tag = GRU_HRR
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = GRU_BDR_party
+					long_name = GRU_BDR_party_long
+				}
+				add_popularity = {
+					ideology = national_populist
+					popularity = 0.4
+				}
+			}
+		}
 	}
 }
 
