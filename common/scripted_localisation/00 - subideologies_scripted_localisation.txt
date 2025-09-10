@@ -14,7 +14,7 @@ defined_text = {
 	#Syndicalist
 	text = { trigger = { has_country_leader_ideology = syndicalist_market_syndicalist_subtype } localization_key = syndicalist_market_syndicalist_subtype }#市场工团主义
 	text = { trigger = { has_country_leader_ideology = syndicalist_yellow_syndicalist_subtype } localization_key = syndicalist_yellow_syndicalist_subtype }#黄色工团主义
-	text = { trigger = { has_country_leader_ideology = syndicalist_centrist_marxist_subtype } localization_key = syndicalist_centrist_marxist_subtype }#中间马克思主义
+	text = { trigger = { has_country_leader_ideology = syndicalist_peoples_democracy_subtype } localization_key = syndicalist_centrist_marxist_subtype }#人民民主
 	text = { trigger = { has_country_leader_ideology = syndicalist_revolutionary_tridemist_subtype } localization_key = syndicalist_revolutionary_tridemist_subtype }#革命三民主义
 	
 	#Radical Socialist
@@ -37,6 +37,9 @@ defined_text = {
 	text = { trigger = { has_country_leader_ideology = social_liberal_liberal_socialist_subtype } localization_key = social_liberal_liberal_socialist_subtype }#自由社会主义
 	text = { trigger = { has_country_leader_ideology = social_liberal_constitutional_statist_subtype } localization_key = social_liberal_constitutional_statist_subtype }#宪政国家主义
 	text = { trigger = { has_country_leader_ideology = social_liberal_liberal_technocracy_subtype } localization_key = social_liberal_liberal_technocracy_subtype }#自由技官主义
+
+	#Market Liberal
+	text = { trigger = { has_country_leader_ideology = market_liberal_clientelist_subtype } localization_key = market_liberal_clientelist_subtype }#庇护主义
 
 	#Social Conservative
 	text = { trigger = { has_country_leader_ideology = social_conservative_statist_subtype } localization_key = social_conservative_statist_subtype }#国家主义-社保

@@ -22924,6 +22924,243 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = SZC_YCP_democracy_mandate
+		icon = GFX_goal_SZC_YCP_democracy_mandate
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_post_YCP_days
+
+		prerequisite = {
+			focus = SZC_YCP_post_YCP_days
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_democracy_mandate"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_privitize_the_best_medicine
+		icon = GFX_goal_SZC_YCP_democracy_mandate
+		cost = 4
+
+		x = -2
+		y = 2
+		relative_position_id = SZC_YCP_post_YCP_days
+
+		prerequisite = {
+			focus = SZC_YCP_democracy_mandate
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_privitize_the_best_medicine"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_introduce_commercial_agriculture
+		icon = GFX_goal_SZC_YCP_democracy_mandate
+		cost = 4
+
+		x = -3
+		y = 3
+		relative_position_id = SZC_YCP_post_YCP_days
+
+		prerequisite = {
+			focus = SZC_YCP_privitize_the_best_medicine
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_introduce_commercial_agriculture"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_shock_therapy
+		icon = GFX_goal_SZC_YCP_shock_therapy
+		cost = 4
+
+		x = -1
+		y = 3
+		relative_position_id = SZC_YCP_post_YCP_days
+
+		prerequisite = {
+			focus = SZC_YCP_privitize_the_best_medicine
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_shock_therapy"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_new_china_market_economy
+		icon = GFX_goal_SZC_YCP_new_china_market_economy
+		cost = 4
+
+		x = -2
+		y = 4
+		relative_position_id = SZC_YCP_post_YCP_days
+
+		prerequisite = {
+			focus = SZC_YCP_introduce_commercial_agriculture
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_shock_therapy
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_new_china_market_economy"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_reopen_up
+		icon = GFX_goal_SZC_YCP_reopen_up
+		cost = 4
+
+		x = 2
+		y = 2
+		relative_position_id = SZC_YCP_post_YCP_days
+
+		prerequisite = {
+			focus = SZC_YCP_democracy_mandate
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_reopen_up"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_peace_to_the_world
+		icon = GFX_goal_SZC_YCP_peace_to_the_world
+		cost = 4
+
+		x = 1
+		y = 3
+		relative_position_id = SZC_YCP_post_YCP_days
+
+		prerequisite = {
+			focus = SZC_YCP_reopen_up
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_peace_to_the_world"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_liberal_coalition
+		icon = GFX_goal_SZC_YCP_liberal_coalition
+		cost = 4
+
+		x = 2
+		y = 4
+		relative_position_id = SZC_YCP_post_YCP_days
+
+		prerequisite = {
+			focus = SZC_YCP_reopen_up
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_peace_to_the_world
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_liberal_coalition"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_attract_investments
+		icon = GFX_goal_SZC_YCP_attract_investments
+		cost = 4
+
+		x = 0
+		y = 4
+		relative_position_id = SZC_YCP_post_YCP_days
+
+		prerequisite = {
+			focus = SZC_YCP_peace_to_the_world
+			focus = SZC_YCP_shock_therapy
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_attract_investments"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_china_free_from_tyrants
+		icon = GFX_goal_SZC_YCP_china_free_from_tyrants
+		cost = 4
+
+		x = 0
+		y = 5
+		relative_position_id = SZC_YCP_post_YCP_days
+
+		prerequisite = {
+			focus = SZC_YCP_new_china_market_economy
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_attract_investments
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_liberal_coalition
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_china_free_from_tyrants"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_bombard_the_parliament
+		icon = GFX_goal_SZC_YCP_bombard_the_parliament
+		cost = 4
+
+		x = 0
+		y = 6
+		relative_position_id = SZC_YCP_post_YCP_days
+
+		prerequisite = {
+			focus = SZC_YCP_china_free_from_tyrants
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_bombard_the_parliament"
+			
+		}
+	}
+
 
 }
 
