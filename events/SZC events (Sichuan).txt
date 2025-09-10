@@ -21358,7 +21358,7 @@ country_event = { #快餐店
 	id = NKRsichuan.688
 	title = NKRsichuan.688.t
 	desc = NKRsichuan.688.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_KFC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -21367,6 +21367,10 @@ country_event = { #快餐店
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.688 option NKRsichuan.688.a"
 		name = NKRsichuan.688.a
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.03
+		}
 	}
 }
 
@@ -21471,6 +21475,9 @@ country_event = { #电话
 	option = {#“夏总统，我们一定支持您的行动。”
 		log = "[GetLogInfo]: event NKRsichuan.693 option NKRsichuan.693.a"
 		name = NKRsichuan.693.a
+		set_country_flag = SZC_CDP_haha_real_time
+		complete_national_focus = SZC_YCP_china_free_from_tyrants
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 

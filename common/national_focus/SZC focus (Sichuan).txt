@@ -23255,9 +23255,9 @@ focus_tree = {
 		y = 6
 		relative_position_id = SZC_YCP_post_YCP_days
 
-		# allow_branch = {
-		# 	has_country_flag = SZC_CDP_haha_real_time
-		# }
+		allow_branch = {
+			has_country_flag = SZC_CDP_haha_real_time
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_china_free_from_tyrants
@@ -23306,6 +23306,25 @@ focus_tree = {
 			add_political_power = 150
 			add_stability = 0.1
 			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_against_all_odds
+		icon = GFX_goal_SZC_YCP_against_all_odds
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_anarcho_statist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_anarcho_statist_victory
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_against_all_odds"
 		}
 	}
 
