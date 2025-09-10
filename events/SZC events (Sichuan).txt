@@ -21548,7 +21548,7 @@ country_event = { #至高权力
 	}
 }
 
-country_event = { #
+country_event = { #fake
 	id = NKRsichuan.696
 	title = NKRsichuan.696.t
 	desc = NKRsichuan.696.d
@@ -21561,6 +21561,8 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.696 option NKRsichuan.6966.a"
 		name = NKRsichuan.696.a
+		add_stability = -1000
+		add_war_support = -1000
 	}
 }
 

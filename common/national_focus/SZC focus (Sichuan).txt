@@ -23209,7 +23209,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = SZC_YCP_post_YCP_days
 
-		select = {
+		select_effect = {
 			hidden_effect = {
 				country_event = {
 					id = NKRsichuan.689
@@ -23240,7 +23240,7 @@ focus_tree = {
 					add_idea = SZC_YCP_legitimacy_14
 				}
 				country_event = {
-					id = NKRsichuan.689
+					id = NKRsichuan.696
 				}
 			}
 		}
@@ -23314,7 +23314,7 @@ focus_tree = {
 		icon = GFX_goal_SZC_YCP_against_all_odds
 		cost = 4
 
-		x = 0
+		x = -3
 		y = 1
 		relative_position_id = SZC_YCP_anarcho_statist_victory
 
@@ -23325,6 +23325,240 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_against_all_odds"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_forced_collectvization
+		icon = GFX_goal_SZC_YCP_forced_collectvization
+		cost = 4
+
+		x = -4
+		y = 2
+		relative_position_id = SZC_YCP_anarcho_statist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_against_all_odds
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_forced_collectvization"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_abandon_old_labour_system
+		icon = GFX_goal_SZC_YCP_abandon_old_labour_system
+		cost = 4
+
+		x = -5
+		y = 3
+		relative_position_id = SZC_YCP_anarcho_statist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_forced_collectvization
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_confucius_legacy
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_abandon_old_labour_system"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_confucius_legacy
+		icon = GFX_goal_SZC_YCP_confucius_legacy
+		cost = 4
+
+		x = -2
+		y = 2
+		relative_position_id = SZC_YCP_anarcho_statist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_against_all_odds
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_confucius_legacy"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_datong_true_love
+		icon = GFX_goal_SZC_YCP_datong_true_love
+		cost = 4
+
+		x = -3
+		y = 3
+		relative_position_id = SZC_YCP_anarcho_statist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_confucius_legacy
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_datong_true_love"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_state_the_tool_towards_anarchy
+		icon = GFX_goal_SZC_YCP_state_the_tool_towards_anarchy
+		cost = 4
+
+		x = 3
+		y = 1
+		relative_position_id = SZC_YCP_anarcho_statist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_anarcho_statist_victory
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_state_the_tool_towards_anarchy"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_reunite_tridemism
+		icon = GFX_goal_SZC_YCP_reunite_tridemism
+		cost = 4
+
+		x = 2
+		y = 2
+		relative_position_id = SZC_YCP_anarcho_statist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_state_the_tool_towards_anarchy
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_reunite_tridemism"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_reorganise_society
+		icon = GFX_goal_SZC_YCP_reorganise_society
+		cost = 4
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_YCP_anarcho_statist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_state_the_tool_towards_anarchy
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_reorganise_society"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_republican_revolution_along_with_anarchist_revolution
+		icon = GFX_goal_SZC_YCP_republican_revolution_along_with_anarchist_revolution
+		cost = 4
+
+		x = 4
+		y = 2
+		relative_position_id = SZC_YCP_anarcho_statist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_state_the_tool_towards_anarchy
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_republican_revolution_along_with_anarchist_revolution"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_against_authoritarian_syndicalists
+		icon = GFX_goal_SZC_YCP_reorganise_society
+		cost = 4
+
+		x = 6
+		y = 2
+		relative_position_id = SZC_YCP_anarcho_statist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_state_the_tool_towards_anarchy
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_against_authoritarian_syndicalists"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_shut_up_the_old
+		icon = GFX_goal_SZC_YCP_shut_up_the_old
+		cost = 4
+
+		x = 3
+		y = 3
+		relative_position_id = SZC_YCP_anarcho_statist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_against_authoritarian_syndicalists
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_republican_revolution_along_with_anarchist_revolution
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_reunite_tridemism
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_reorganise_society
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_shut_up_the_old"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_morning_will_come
+		icon = GFX_goal_SZC_YCP_morning_will_come
+		cost = 4
+
+		x = 0
+		y = 4
+		relative_position_id = SZC_YCP_anarcho_statist_victory
+
+		prerequisite = {
+			focus = SZC_YCP_shut_up_the_old
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_abandon_old_labour_system
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_datong_true_love
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_morning_will_come"
+			custom_effect_tooltip = SZC_YCP_morning_will_come_tt
 		}
 	}
 
