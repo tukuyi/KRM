@@ -1215,6 +1215,35 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
+		SZC_YCP_legitimacy_14 = {#党的合法性-自由中国，但是假的哈哈
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_legitimacy_14" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.1
+				compliance_gain = 0.05
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.1
+				trade_opinion_factor = 0.4
+				army_org_factor = 0.05
+			}
+		}
+		SZC_YCP_legitimacy_15 = {#党的合法性-无形之手
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_legitimacy_15" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.05
+				party_popularity_stability_factor = 0.35
+				political_power_factor = 0.25
+				trade_opinion_factor = 0.6
+				consumer_goods_factor = -0.2
+				monthly_population = -0.25
+				production_factory_max_efficiency_factor = 0.2
+			}
+		}
 		SZC_YCP_construct_nationalspirit = {#铸造国格
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_construct_nationalspirit" }
 			picture = chi_warlord_integration
@@ -2122,6 +2151,58 @@ ideas = {
 				non_core_manpower = 0.10
 				stability_factor = 0.2
 				construction_speed_factor = 0.2
+			}
+		}
+		SZC_YCP_sell_sell_sell_idea = {#卖卖卖！
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_sell_sell_sell_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				consumer_goods_factor = -0.15
+			}
+		}
+		SZC_YCP_shock_therapy_idea = {#休克疗法
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_shock_therapy_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.30
+				compliance_growth = -0.1
+				stability_weekly = -0.003
+			}
+		}
+		SZC_YCP_liberal_days_idea = {#自由之日
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_liberal_days_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = -0.15
+			}
+		}
+		SZC_YCP_no_intervation_principle_idea = {#不干涉原则
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_no_intervation_principle_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = -0.05
+				justify_wargoal_time_factor = 0.66
+				army_defence_factor = 0.15
+				army_defence_against_major_factor = 0.1
+			}
+		}
+		SZC_YCP_presidental_constitution_idea = {#总统宪法
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_presidental_constitution_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.35
+				party_popularity_stability_factor = 0.3
+				stability_factor = 0.1
+				command_power_gain = 0.05
 			}
 		}
 	}
