@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_YCP_social_philosophy
+python focusgfxentry.py SZC_YCP_bombard_the_parliament
 pause
