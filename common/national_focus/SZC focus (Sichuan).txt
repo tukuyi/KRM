@@ -10859,7 +10859,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 50
 			tag = SZC
 		}
 	}
@@ -16817,7 +16817,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 50
+			add = 0
 			tag = SZC
 		}
 	}
@@ -19719,12 +19719,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
-		# allow_branch = {
-		# 	has_country_flag = NKRSZC_YCPpath_phase2
-		# 	OR = {
-		# 		has_country_flag = SZC_YCP_zhang_guotao_path
-		# 	}
-		# }
+		allow_branch = {
+			has_country_flag = NKRSZC_YCPpath_phase2
+			OR = {
+				has_country_flag = SZC_YCP_zhang_guotao_path
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_wave_of_history_victory_of_ycp
@@ -23697,13 +23697,13 @@ focus_tree = {
 			has_global_flag = china_united
 		}
 
-		# allow_branch = {
-		# 	has_global_flag = china_united
-		# 	AND = {
-		# 		has_country_flag = NKRSZC_YCPpath_phase3
-		# 		has_country_flag = SZC_YCP_zhang_guotao_path
-		# 	}
-		# }
+		allow_branch = {
+			has_global_flag = china_united
+			AND = {
+				has_country_flag = NKRSZC_YCPpath_phase3
+				has_country_flag = SZC_YCP_zhang_guotao_path
+			}
+		}
 
 
 		completion_reward = {

@@ -9335,6 +9335,7 @@ country_event = { #四川易帜
 		add_to_coalition = yes
 		set_country_flag = NKRSZC_joinkmt
 		complete_national_focus = SZC_pan_a_red_sichuan
+		mark_focus_tree_layout_dirty = yes
 		swap_ideas = {
 			remove_idea = SZC_pan_legitimacy_3
 			add_idea = SZC_pan_legitimacy_4
