@@ -1259,6 +1259,37 @@ ideas = {
 				monthly_population = 0.2
 			}
 		}
+		SZC_YCP_legitimacy_17 = {#党的合法性-奥古斯都
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_legitimacy_17" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.3
+				party_popularity_stability_factor = 0.5
+				compliance_gain = 0.01
+				planning_speed = 0.35
+				max_planning_factor = 0.2
+				army_attack_factor = 0.15
+				army_experience_factor = 0.3
+				army_org_factor = 0.15
+			}
+		}
+		SZC_YCP_legitimacy_18 = {#党的合法性-黄色协和
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_legitimacy_18" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.35
+				war_support_factor = 0.1
+				party_popularity_stability_factor = 0.3
+				compliance_gain = 0.03
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.2
+				research_speed_factor = 0.1
+				monthly_population = 0.05
+			}
+		}
 		SZC_YCP_construct_nationalspirit = {#铸造国格
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_construct_nationalspirit" }
 			picture = chi_warlord_integration
@@ -2265,6 +2296,107 @@ ideas = {
 				totalist_acceptance = -500
 				syndicalist_acceptance = -10
 				stability_factor = 0.10
+			}
+		}
+		SZC_YCP_pragmatism_first_idea = {#实用主义至上
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_pragmatism_first_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				non_core_manpower = 0.05
+				political_power_factor = 0.15
+			}
+		}
+		SZC_YCP_yellow_syndicalist_state_2_idea = {#黄色工团主义之国2
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_yellow_syndicalist_state_2_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				supply_node_range = 0.15
+				resistance_growth_on_our_occupied_states = -0.15
+				resistance_target_on_our_occupied_states = -0.15
+				production_factory_efficiency_gain_factor = 0.25
+				production_factory_max_efficiency_factor = 0.15
+			}
+		}
+		SZC_YCP_an_army_with_state_2_idea = {#拥有国家的军队2
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_an_army_with_state_2_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_gain= -0.125
+				stability_factor = -0.325
+				army_attack_factor = 0.225
+				army_defence_factor = 0.225
+				training_time_army_factor = -0.25
+				consumer_goods_factor = 0.325
+				
+			}
+		}
+		SZC_YCP_an_army_with_state_3_idea = {#拥有国家的军队3
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_an_army_with_state_3_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_gain= -0.15
+				stability_factor = -0.35
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
+				training_time_army_factor = -0.30
+				consumer_goods_factor = 0.35
+				
+			}
+		}
+		SZC_YCP_state_socialist_front_2_idea = {#国家社会主义阵线_2
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_state_socialist_front_2_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_gain= 0.125
+				stability_factor = 0.175
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.175
+			}
+		}
+		SZC_YCP_state_socialist_front_3_idea = {#国家社会主义阵线_3
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_state_socialist_front_3_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				political_power_gain= 0.15
+				stability_factor = 0.2
+				consumer_goods_factor = -0.20
+				production_factory_max_efficiency_factor = 0.2
+			}
+		}
+		SZC_YCP_yellow_corporatism_idea = {#黄色法团主义
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_yellow_corporatism_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				local_resources_factor = 0.175
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = -0.05
+			}
+		}
+		SZC_YCP_east_asia_model_idea = {#东亚模式
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_east_asia_model_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				compliance_growth = 0.05
+			}
+		}
+		SZC_YCP_east_asia_model_2_idea = {#东亚模式2
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_east_asia_2_model_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_efficiency_gain_factor = 0.1
+				compliance_growth = 0.025
 			}
 		}
 	}

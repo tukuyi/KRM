@@ -21802,7 +21802,7 @@ country_event = { #朝曦
 	}
 }
 
-country_event = { #
+country_event = { #日出
 	id = NKRsichuan.710
 	title = NKRsichuan.710.t
 	desc = NKRsichuan.710.d
@@ -21812,13 +21812,29 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#黄色的胜利。
 		log = "[GetLogInfo]: event NKRsichuan.710 option NKRsichuan.710.a"
 		name = NKRsichuan.710.a
+		set_country_flag = NKRSZC_YCPpath_phase3
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = SZC_CSSP_M_party
+			long_name = SZC_CSSP_M_party_long
+		}
+		mark_focus_tree_layout_dirty = yes
+		set_variable = {
+			variable = SZC_zhang_army_value
+			value = 0
+		}
+		set_variable = {
+			variable = SZC_zhang_civilian_value
+			value = 0
+		}
+
 	}
 }
 
-country_event = { #
+country_event = { #清洗
 	id = NKRsichuan.711
 	title = NKRsichuan.711.t
 	desc = NKRsichuan.711.d
@@ -21828,13 +21844,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#打死这群狗日的！
 		log = "[GetLogInfo]: event NKRsichuan.711 option NKRsichuan.711.a"
 		name = NKRsichuan.711.a
 	}
 }
 
-country_event = { #
+country_event = { #新政治学
 	id = NKRsichuan.712
 	title = NKRsichuan.712.t
 	desc = NKRsichuan.712.d
@@ -21850,7 +21866,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #实用原则
 	id = NKRsichuan.713
 	title = NKRsichuan.713.t
 	desc = NKRsichuan.713.d
@@ -21866,7 +21882,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #革命司令部
 	id = NKRsichuan.714
 	title = NKRsichuan.714.t
 	desc = NKRsichuan.714.d
@@ -21876,13 +21892,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#杀！！！
 		log = "[GetLogInfo]: event NKRsichuan.714 option NKRsichuan.714.a"
 		name = NKRsichuan.71374.a
 	}
 }
 
-country_event = { #
+country_event = { #打倒旧世界
 	id = NKRsichuan.715
 	title = NKRsichuan.715.t
 	desc = NKRsichuan.715.d
@@ -21892,13 +21908,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#建立新世界！
 		log = "[GetLogInfo]: event NKRsichuan.715 option NKRsichuan.715.a"
 		name = NKRsichuan.715.a
 	}
 }
 
-country_event = { #
+country_event = { #红包拿来
 	id = NKRsichuan.716
 	title = NKRsichuan.716.t
 	desc = NKRsichuan.716.d
@@ -21908,13 +21924,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#张总统确实没忘了我们啊，哈哈。
 		log = "[GetLogInfo]: event NKRsichuan.716 option NKRsichuan.7166.a"
 		name = NKRsichuan.716.a
 	}
 }
 
-country_event = { #
+country_event = { #二张会
 	id = NKRsichuan.717
 	title = NKRsichuan.717.t
 	desc = NKRsichuan.717.d
@@ -21924,13 +21940,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#...国社党也没得选，对吧？
 		log = "[GetLogInfo]: event NKRsichuan.717 option NKRsichuan.717.a"
 		name = NKRsichuan.717.a
 	}
 }
 
-country_event = { #
+country_event = { #天文台
 	id = NKRsichuan.718
 	title = NKRsichuan.718.t
 	desc = NKRsichuan.718.d
@@ -21946,7 +21962,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #一根烟
 	id = NKRsichuan.719
 	title = NKRsichuan.719.t
 	desc = NKRsichuan.719.d
@@ -21956,13 +21972,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#但愿如此。
 		log = "[GetLogInfo]: event NKRsichuan.719 option NKRsichuan.719.a"
 		name = NKRsichuan.719.a
 	}
 }
 
-country_event = { #
+country_event = { #新国会
 	id = NKRsichuan.720
 	title = NKRsichuan.720.t
 	desc = NKRsichuan.720.d
@@ -21972,13 +21988,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#不错。
 		log = "[GetLogInfo]: event NKRsichuan.720 option NKRsichuan.720.a"
 		name = NKRsichuan.720.a
 	}
 }
 
-country_event = { #
+country_event = { #投票
 	id = NKRsichuan.721
 	title = NKRsichuan.721.t
 	desc = NKRsichuan.721.d
@@ -21988,13 +22004,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#这就是民主。
 		log = "[GetLogInfo]: event NKRsichuan.721 option NKRsichuan.721.a"
 		name = NKRsichuan.721.a
 	}
 }
 
-country_event = { #
+country_event = { #新卫队
 	id = NKRsichuan.722
 	title = NKRsichuan.722.t
 	desc = NKRsichuan.722.d
@@ -22010,7 +22026,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #大山脉
 	id = NKRsichuan.723
 	title = NKRsichuan.723.t
 	desc = NKRsichuan.723.d
@@ -22026,7 +22042,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #中央经济改革办的新班子
 	id = NKRsichuan.724
 	title = NKRsichuan.724.t
 	desc = NKRsichuan.724.d
@@ -22042,7 +22058,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #土地“革命”
 	id = NKRsichuan.725
 	title = NKRsichuan.725.t
 	desc = NKRsichuan.725.d
@@ -22052,13 +22068,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#哦操。
 		log = "[GetLogInfo]: event NKRsichuan.725 option NKRsichuan.725.a"
 		name = NKRsichuan.725.a
 	}
 }
 
-country_event = { #
+country_event = { #黄色法团主义
 	id = NKRsichuan.726
 	title = NKRsichuan.726.t
 	desc = NKRsichuan.726.d
@@ -22074,7 +22090,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #大紧缩
 	id = NKRsichuan.727
 	title = NKRsichuan.727.t
 	desc = NKRsichuan.727.d
@@ -22084,13 +22100,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#钱要花在刀刃上！
 		log = "[GetLogInfo]: event NKRsichuan.727 option NKRsichuan.727.a"
 		name = NKRsichuan.727.a
 	}
 }
 
-country_event = { #
+country_event = { #重组国立总工会
 	id = NKRsichuan.728
 	title = NKRsichuan.728.t
 	desc = NKRsichuan.728.d
@@ -22100,13 +22116,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#啊...
 		log = "[GetLogInfo]: event NKRsichuan.728 option NKRsichuan.728.a"
 		name = NKRsichuan.728.a
 	}
 }
 
-country_event = { #
+country_event = { #中国模式，东亚模式
 	id = NKRsichuan.729
 	title = NKRsichuan.729.t
 	desc = NKRsichuan.729.d
@@ -22122,7 +22138,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #不详的动静
 	id = NKRsichuan.730
 	title = NKRsichuan.730.t
 	desc = NKRsichuan.730.d
@@ -22132,13 +22148,19 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#给我接陈再道！
 		log = "[GetLogInfo]: event NKRsichuan.730 option NKRsichuan.730.a"
 		name = NKRsichuan.730.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuan.731
+				days = 1
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #政变
 	id = NKRsichuan.731
 	title = NKRsichuan.731.t
 	desc = NKRsichuan.731.d
@@ -22148,13 +22170,85 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#尘埃落定。
 		log = "[GetLogInfo]: event NKRsichuan.731 option NKRsichuan.731.a"
 		name = NKRsichuan.731.a
+		SZC_zhang_guotao = {
+			kill_character = yes
+		}
+		SZC_chen_zaidao = {
+			promote_character = paternal_autocrat_stratocracy_subtype
+			add_trait = {
+				trait = SZC_YCP_supreme_marshall
+				ideology = paternal_autocrat_stratocracy_subtype
+			}
+			add_trait = {
+				trait = SZC_YCP_the_lion
+				ideology = paternal_autocrat_stratocracy_subtype
+			}
+			set_portraits = {
+				army = {
+					large = GFX_portrait_SZC_chen_zaidao_marshall_large
+					small = GFX_portrait_SZC_chen_zaidao_marshall_small
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		uncomplete_national_focus = {
+			focus = SZC_YCP_use_civilian_parties
+			uncomplete_children = no
+			refund_political_power = no
+		}
+		uncomplete_national_focus = {
+			focus = SZC_YCP_YCPs_legacy
+			uncomplete_children = no
+			refund_political_power = no
+		}
+		uncomplete_national_focus = {
+			focus = SZC_YCP_restore_parliament_as_rubber_stamp
+			uncomplete_children = no
+			refund_political_power = no
+		}
+		uncomplete_national_focus = {
+			focus = SZC_YCP_presidents_advisors
+			uncomplete_children = no
+			refund_political_power = no
+		}
+		unlock_national_focus = SZC_YCP_expand_army_allowances
+		unlock_national_focus = SZC_YCP_generals_know_best
+		unlock_national_focus = SZC_YCP_new_age_of_peoples_democracy
+		unlock_national_focus = SZC_YCP_national_guard
+		
+		swap_ideas = {
+			remove_idea = SZC_YCP_state_socialist_front_3_idea
+			add_idea = SZC_YCP_an_army_with_state_3_idea
+		}
+		hidden_effect = {
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.35
+			}
+			remove_idea = SZC_YCP_an_army_with_state_idea
+			every_subject_country = {
+				limit = {
+					has_socialist_government = yes
+				}
+				set_politics = {
+					ruling_party = paternal_autocrat
+					elections_allowed = no
+				}
+			}
+			country_event = {
+				id = NKRsichuan.732
+				days = 3650
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #误会
 	id = NKRsichuan.732
 	title = NKRsichuan.732.t
 	desc = NKRsichuan.732.d
@@ -22164,13 +22258,16 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#哎呦，王八蛋，别打了...啊！
 		log = "[GetLogInfo]: event NKRsichuan.732 option NKRsichuan.732.a"
 		name = NKRsichuan.732.a
+		SZC_chen_zaidao = {
+			kill_character = yes
+		}
 	}
 }
 
-country_event = { #
+country_event = { #至高元帅
 	id = NKRsichuan.733
 	title = NKRsichuan.733.t
 	desc = NKRsichuan.733.d
@@ -22180,13 +22277,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#张总统命令往下传！
 		log = "[GetLogInfo]: event NKRsichuan.733 option NKRsichuan.733.a"
 		name = NKRsichuan.733.a
 	}
 }
 
-country_event = { #
+country_event = { #雄狮怒吼
 	id = NKRsichuan.734
 	title = NKRsichuan.734.t
 	desc = NKRsichuan.734.d
@@ -22196,13 +22293,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#百万之众！
 		log = "[GetLogInfo]: event NKRsichuan.734 option NKRsichuan.734.a"
 		name = NKRsichuan.73374.a
 	}
 }
 
-country_event = { #
+country_event = { #新路线开拓
 	id = NKRsichuan.735
 	title = NKRsichuan.735.t
 	desc = NKRsichuan.735.d
@@ -22212,7 +22309,7 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#向世界展示我们的伟大！
 		log = "[GetLogInfo]: event NKRsichuan.735 option NKRsichuan.735.a"
 		name = NKRsichuan.735.a
 	}

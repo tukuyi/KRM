@@ -84,5 +84,18 @@ leader_traits = {
 		army_morale_factor = 0.05
 		breakthrough_factor = 0.05
 	}
+	SZC_YCP_supreme_marshall = {
+		random = no
+		political_power_gain = 0.15
+		army_attack_factor = 0.1
+		breakthrough_factor = 0.05
+		command_power_gain = 0.075
+		max_command_power_mult = 0.75
+	}
+	SZC_YCP_the_lion = {
+		random = no
+		political_power_gain = 0.1
+		naval_invasion_penalty = -0.3
+	}
 }
 	

@@ -1526,13 +1526,17 @@ chinese_unification = {
 							limit = {
 								has_completed_focus = SZC_YCP_anarchist_mama_statist_son
 							}
+							country_event = {
+								id = NKRsichuan.697
+								days = 1
+							}
 						}
 						else_if = {
 							limit = {
 								has_completed_focus = SZC_YCP_dissolve_the_YCP
 							}
 							country_event = {
-								id = NKRsichuan.697
+								id = NKRsichuan.678
 								days = 1
 							}
 						}
@@ -1548,6 +1552,10 @@ chinese_unification = {
 						else_if = {
 							limit = {
 								has_country_flag = SZC_YCP_zhang_guotao_path
+							}
+							country_event = {
+								id = NKRsichuan.710
+								days = 1
 							}
 						}
 					}
