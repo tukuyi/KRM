@@ -1244,6 +1244,21 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.2
 			}
 		}
+		SZC_YCP_legitimacy_16 = {#党的合法性-黄老之学
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_legitimacy_16" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				party_popularity_stability_factor = 0.3
+				compliance_gain = 0.08
+				compliance_growth = 0.15
+				consumer_goods_factor = -0.15
+				planning_speed = 0.3
+				monthly_population = 0.2
+			}
+		}
 		SZC_YCP_construct_nationalspirit = {#铸造国格
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_construct_nationalspirit" }
 			picture = chi_warlord_integration
@@ -2203,6 +2218,53 @@ ideas = {
 				party_popularity_stability_factor = 0.3
 				stability_factor = 0.1
 				command_power_gain = 0.05
+			}
+		}
+		SZC_YCP_decentralize_economy_idea = {#去中心经济
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_decentralize_economy_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				army_core_defense_factor = 0.10
+				local_resources_factor = 0.125
+				industrial_capacity_factory = 0.2
+			}
+		}
+		SZC_YCP_datong_true_love_idea = {#大同真爱
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_datong_true_love_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.25
+				political_power_gain = -0.35
+				resistance_growth = -0.25
+				army_org_factor = 0.2
+				consumer_goods_factor = -0.25
+				production_factory_max_efficiency_factor = -0.2
+				production_lack_of_resource_penalty_factor = -0.25
+				production_factory_efficiency_gain_factor = 0.75
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
+				non_core_manpower = 0.10
+			}
+		}
+		SZC_YCP_anarchist_idea_idea = {#无治主义理想
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_anarchist_idea_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				non_core_manpower = 0.125
+				political_power_factor = -0.25
+			}
+		}
+		SZC_YCP_anti_authoritarian_syndicalist_idea = {#反对威权工团主义
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SZC_YCP_anti_authoritarian_syndicalist_idea" }
+			picture = chi_warlord_integration
+			allowed = { always = no }
+			modifier = {
+				totalist_acceptance = -500
+				syndicalist_acceptance = -10
+				stability_factor = 0.10
 			}
 		}
 	}
