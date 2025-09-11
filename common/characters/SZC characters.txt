@@ -1445,6 +1445,11 @@ characters = {
 			ideology = syndicalist_yellow_syndicalist_subtype
 			traits = { CHN_statist_aligned }
 		}
+		country_leader = {
+			desc = SZC_zhang_guotao_desc
+			ideology = paternal_autocrat_stratocracy_subtype
+			traits = { CHN_statist_aligned }
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_zhang_guotao_advisor
@@ -1466,6 +1471,11 @@ characters = {
 				large = GFX_portrait_SZC_chen_zaidao_large
 				small = GFX_portrait_SZC_chen_zaidao_small
 			}
+		}
+		country_leader = {
+			desc = SZC_chen_zaidao_desc
+			ideology = paternal_autocrat_stratocracy_subtype
+			traits = { CHN_statist_aligned }
 		}
 		corps_commander = {
 			desc = SZC_chen_zaidao_commander_desc
