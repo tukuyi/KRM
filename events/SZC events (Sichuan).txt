@@ -7,6 +7,7 @@ add_namespace = sichuan
 add_namespace = NKRsichuan
 add_namespace = NKRsichuanmisc
 add_namespace = NKRsichuanflavor
+add_namespace = NKRsichuanpuppet
 add_namespace = SZCDEBUG
 
 ### System Events ###
@@ -22937,6 +22938,613 @@ unit_leader_event = {
 }
 
 
+
+
+country_event = { #516革命-工团
+	id = NKRsichuanpuppet.1
+	title = NKRsichuanpuppet.1.t
+	desc = NKRsichuanpuppet.1.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			SZC_park_chunghee = {
+				SZC_recruit_character_effect = yes
+				set_nationality = KOR
+			}
+			KOR = {
+				SZC_park_chunghee = {
+					promote_character = syndicalist_market_syndicalist_subtype
+				}
+				set_politics = {
+					ruling_party = syndicalist
+				}
+				set_party_name = {
+					ideology = syndicalist
+					name = KOR_park_party
+					long_name = KOR_park_name_long
+				}
+				add_popularity = {
+					ideology = syndicalist
+					popularity = 0.3
+				}
+			}
+		}
+	}
+	
+
+	option = {#我们承认他的革命
+		log = "[GetLogInfo]: event NKRsichuanpuppet.1 option NKRsichuanpuppet.1.a"
+		name = NKRsichuanpuppet.1.a
+		add_stability = -0.05
+		add_political_power = -50
+	}
+	option = {#什么？立刻出兵汉城！
+		log = "[GetLogInfo]: event NKRsichuanpuppet.1 option NKRsichuanpuppet.1.b"
+		name = NKRsichuanpuppet.1.b
+		set_autonomy = {
+			target = KOR
+			autonomy_state = autonomy_free
+		}
+		KOR = {
+			leave_faction = yes
+		}
+		declare_war_on = {
+			target = KOR
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #516革命-革命三民
+	id = NKRsichuanpuppet.2
+	title = NKRsichuanpuppet.2.t
+	desc = NKRsichuanpuppet.2.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			SZC_park_chunghee = {
+				SZC_recruit_character_effect = yes
+				set_nationality = KOR
+			}
+			KOR = {
+				SZC_park_chunghee = {
+					promote_character = radical_socialist_revolutionary_tridemist_subtype
+				}
+				set_politics = {
+					ruling_party = radical_socialist
+				}
+				set_party_name = {
+					ideology = radical_socialist
+					name = KOR_park_party
+					long_name = KOR_park_name_long
+				}
+				add_popularity = {
+					ideology = radical_socialist
+					popularity = 0.3
+				}
+			}
+		}
+	}
+	
+
+	option = {#我们承认他的革命
+		log = "[GetLogInfo]: event NKRsichuanpuppet.2 option NKRsichuanpuppet.2.a"
+		name = NKRsichuanpuppet.2.a
+		add_stability = -0.05
+		add_political_power = -50
+	}
+	option = {#什么？立刻出兵汉城！
+		log = "[GetLogInfo]: event NKRsichuanpuppet.2 option NKRsichuanpuppet.2.b"
+		name = NKRsichuanpuppet.2.b
+		set_autonomy = {
+			target = KOR
+			autonomy_state = autonomy_free
+		}
+		KOR = {
+			leave_faction = yes
+		}
+		declare_war_on = {
+			target = KOR
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #516革命-军头
+	id = NKRsichuanpuppet.3
+	title = NKRsichuanpuppet.3.t
+	desc = NKRsichuanpuppet.3.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			SZC_park_chunghee = {
+				SZC_recruit_character_effect = yes
+				set_nationality = KOR
+			}
+			KOR = {
+				SZC_park_chunghee = {
+					promote_character = paternal_autocrat_subtype
+				}
+				set_politics = {
+					ruling_party = paternal_autocrat
+				}
+				set_party_name = {
+					ideology = paternal_autocrat
+					name = KOR_park_party
+					long_name = KOR_park_name_long
+				}
+				add_popularity = {
+					ideology = paternal_autocrat
+					popularity = 0.3
+				}
+			}
+		}
+	}
+	
+
+	option = {#我们承认他的革命
+		log = "[GetLogInfo]: event NKRsichuanpuppet.3 option NKRsichuanpuppet.3.a"
+		name = NKRsichuanpuppet.3.a
+		add_stability = -0.05
+		add_political_power = -50
+	}
+	option = {#什么？立刻出兵汉城！
+		log = "[GetLogInfo]: event NKRsichuanpuppet.3 option NKRsichuanpuppet.3.b"
+		name = NKRsichuanpuppet.3.b
+		set_autonomy = {
+			target = KOR
+			autonomy_state = autonomy_free
+		}
+		KOR = {
+			leave_faction = yes
+		}
+		declare_war_on = {
+			target = KOR
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #516革命-国家主义
+	id = NKRsichuanpuppet.4
+	title = NKRsichuanpuppet.4.t
+	desc = NKRsichuanpuppet.4.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			SZC_park_chunghee = {
+				SZC_recruit_character_effect = yes
+				set_nationality = KOR
+			}
+			KOR = {
+				SZC_park_chunghee = {
+					promote_character = authoritarian_democrat_statist_subtype
+				}
+				set_politics = {
+					ruling_party = authoritarian_democrat
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = KOR_park_party
+					long_name = KOR_park_name_long
+				}
+				add_popularity = {
+					ideology = authoritarian_democrat
+					popularity = 0.3
+				}
+			}
+		}
+	}
+	
+
+	option = {#我们承认他的革命
+		log = "[GetLogInfo]: event NKRsichuanpuppet.4 option NKRsichuanpuppet.4.a"
+		name = NKRsichuanpuppet.4.a
+		add_stability = -0.05
+		add_political_power = -50
+	}
+	option = {#什么？立刻出兵汉城！
+		log = "[GetLogInfo]: event NKRsichuanpuppet.4 option NKRsichuanpuppet.4.b"
+		name = NKRsichuanpuppet.4.b
+		set_autonomy = {
+			target = KOR
+			autonomy_state = autonomy_free
+		}
+		KOR = {
+			leave_faction = yes
+		}
+		declare_war_on = {
+			target = KOR
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #516革命-正统三民
+	id = NKRsichuanpuppet.5
+	title = NKRsichuanpuppet.5.t
+	desc = NKRsichuanpuppet.5.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			SZC_park_chunghee = {
+				SZC_recruit_character_effect = yes
+				set_nationality = KOR
+			}
+			KOR = {
+				SZC_park_chunghee = {
+					promote_character = social_conservative_orthodox_tridemist_subtype
+				}
+				set_politics = {
+					ruling_party = social_conservative
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = KOR_park_party
+					long_name = KOR_park_name_long
+				}
+				add_popularity = {
+					ideology = social_conservative
+					popularity = 0.3
+				}
+			}
+		}
+	}
+	
+
+	option = {#我们承认他的革命
+		log = "[GetLogInfo]: event NKRsichuanpuppet.5 option NKRsichuanpuppet.5.a"
+		name = NKRsichuanpuppet.5.a
+		add_stability = -0.05
+		add_political_power = -50
+	}
+	option = {#什么？立刻出兵汉城！
+		log = "[GetLogInfo]: event NKRsichuanpuppet.5 option NKRsichuanpuppet.5.b"
+		name = NKRsichuanpuppet.5.b
+		set_autonomy = {
+			target = KOR
+			autonomy_state = autonomy_free
+		}
+		KOR = {
+			leave_faction = yes
+		}
+		declare_war_on = {
+			target = KOR
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #516革命-狂飙
+	id = NKRsichuanpuppet.6
+	title = NKRsichuanpuppet.6.t
+	desc = NKRsichuanpuppet.6.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			SZC_park_chunghee = {
+				SZC_recruit_character_effect = yes
+				set_nationality = KOR
+			}
+			KOR = {
+				SZC_park_chunghee = {
+					promote_character = national_populist_strum_drang_statist_subtype
+				}
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = KOR_park_party
+					long_name = KOR_park_name_long
+				}
+				add_popularity = {
+					ideology = national_populist
+					popularity = 0.3
+				}
+			}
+		}
+	}
+	
+
+	option = {#我们承认他的革命
+		log = "[GetLogInfo]: event NKRsichuanpuppet.6 option NKRsichuanpuppet.6.a"
+		name = NKRsichuanpuppet.6.a
+		add_stability = -0.05
+		add_political_power = -50
+	}
+	option = {#什么？立刻出兵汉城！
+		log = "[GetLogInfo]: event NKRsichuanpuppet.6 option NKRsichuanpuppet.6.b"
+		name = NKRsichuanpuppet.6.b
+		set_autonomy = {
+			target = KOR
+			autonomy_state = autonomy_free
+		}
+		KOR = {
+			leave_faction = yes
+		}
+		declare_war_on = {
+			target = KOR
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #516革命-革命国家主义
+	id = NKRsichuanpuppet.7
+	title = NKRsichuanpuppet.7.t
+	desc = NKRsichuanpuppet.7.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			SZC_park_chunghee = {
+				SZC_recruit_character_effect = yes
+				set_nationality = KOR
+			}
+			KOR = {
+				SZC_park_chunghee = {
+					promote_character = paternal_autocrat_subtype
+				}
+				set_politics = {
+					ruling_party = paternal_autocrat
+				}
+				set_party_name = {
+					ideology = paternal_autocrat
+					name = KOR_park_party
+					long_name = KOR_park_name_long
+				}
+				add_popularity = {
+					ideology = paternal_autocrat
+					popularity = 0.3
+				}
+				set_country_leader_ideology = paternal_autocrat_revolutionary_statist_subtype
+			}
+		}
+	}
+	
+
+	option = {#我们承认他的革命
+		log = "[GetLogInfo]: event NKRsichuanpuppet.7 option NKRsichuanpuppet.7.a"
+		name = NKRsichuanpuppet.7.a
+		add_stability = -0.05
+		add_political_power = -50
+	}
+	option = {#什么？立刻出兵汉城！
+		log = "[GetLogInfo]: event NKRsichuanpuppet.7 option NKRsichuanpuppet.7.b"
+		name = NKRsichuanpuppet.7.b
+		set_autonomy = {
+			target = KOR
+			autonomy_state = autonomy_free
+		}
+		KOR = {
+			leave_faction = yes
+		}
+		declare_war_on = {
+			target = KOR
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.8
+	title = NKRsichuanpuppet.8.t
+	desc = NKRsichuanpuppet.8.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.8 option NKRsichuanpuppet.8.a"
+		name = NKRsichuanpuppet.8.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.9
+	title = NKRsichuanpuppet.9.t
+	desc = NKRsichuanpuppet.9.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.9 option NKRsichuanpuppet.9.a"
+		name = NKRsichuanpuppet.9.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.10
+	title = NKRsichuanpuppet.10.t
+	desc = NKRsichuanpuppet.10.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.10 option NKRsichuanpuppet.10.a"
+		name = NKRsichuanpuppet.10.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.11
+	title = NKRsichuanpuppet.11.t
+	desc = NKRsichuanpuppet.11.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.11 option NKRsichuanpuppet.11.a"
+		name = NKRsichuanpuppet.11.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.12
+	title = NKRsichuanpuppet.12.t
+	desc = NKRsichuanpuppet.12.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.12 option NKRsichuanpuppet.12.a"
+		name = NKRsichuanpuppet.12.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.13
+	title = NKRsichuanpuppet.13.t
+	desc = NKRsichuanpuppet.13.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.13 option NKRsichuanpuppet.13.a"
+		name = NKRsichuanpuppet.13.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.14
+	title = NKRsichuanpuppet.14.t
+	desc = NKRsichuanpuppet.14.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.14 option NKRsichuanpuppet.14.a"
+		name = NKRsichuanpuppet.14.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.15
+	title = NKRsichuanpuppet.15.t
+	desc = NKRsichuanpuppet.15.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.15 option NKRsichuanpuppet.15.a"
+		name = NKRsichuanpuppet.15.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.16
+	title = NKRsichuanpuppet.16.t
+	desc = NKRsichuanpuppet.16.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.16 option NKRsichuanpuppet.16.a"
+		name = NKRsichuanpuppet.16.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.17
+	title = NKRsichuanpuppet.17.t
+	desc = NKRsichuanpuppet.17.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.17 option NKRsichuanpuppet.17.a"
+		name = NKRsichuanpuppet.17.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.18
+	title = NKRsichuanpuppet.18.t
+	desc = NKRsichuanpuppet.18.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.18 option NKRsichuanpuppet.18.a"
+		name = NKRsichuanpuppet.18.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.19
+	title = NKRsichuanpuppet.19.t
+	desc = NKRsichuanpuppet.19.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.19 option NKRsichuanpuppet.19.a"
+		name = NKRsichuanpuppet.19.a
+	}
+}
 
 
 

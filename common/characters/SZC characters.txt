@@ -1582,6 +1582,47 @@ characters = {
 			traits = { CHN_statist_aligned }
 		}
 	}
+	
+	#朴正熙
+	SZC_park_chunghee = {
+		name = SZC_park_chunghee
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_park_chunghee_small
+				large = GFX_portrait_SZC_park_chunghee_large
+			}
+		}
+		country_leader = {
+			desc = SZC_park_chunghee_desc
+			ideology = syndicalist_market_syndicalist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = SZC_park_chunghee_desc
+			ideology = radical_socialist_revolutionary_tridemist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = SZC_park_chunghee_desc
+			ideology = social_conservative_orthodox_tridemist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = SZC_park_chunghee_desc
+			ideology = authoritarian_democrat_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = SZC_park_chunghee_desc
+			ideology = paternal_autocrat_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = SZC_park_chunghee_desc
+			ideology = national_populist_strum_drang_statist_subtype
+			traits = { }
+		}
+	}
 
 
 	#MMIC四川分署
