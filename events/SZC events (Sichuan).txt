@@ -8597,7 +8597,6 @@ country_event = { #中国青年党简介
 		show_ideas_tooltip = SZC_zeng_qi_advisor
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_li_huang_advisor
-		set_country_flag = YCP_advisors_available
 		hidden_effect = {
 			SZC_zeng_qi = {
 				SZC_recruit_character_effect = yes
@@ -9330,6 +9329,11 @@ country_event = { #四川易帜
 				small = GFX_portrait_SZC_li_hongkun_kmt_small
 			}
 		}
+		SZC_wang_shimu = {
+			SZC_recruit_character_effect = yes
+		}
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = SZC_wang_shimu_advisor
 		set_temp_variable = { coalition_partner_var = token:radical_socialist }
 		add_to_coalition = yes
 		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
@@ -9351,6 +9355,7 @@ country_event = { #四川易帜
 				days = 14
 			}
 			SZC_liu_bocheng = {
+				SZC_recruit_character_effect = yes
 				unit_leader_event = {
 					id = NKRsichuanmisc.3
 					days = 10
@@ -9468,7 +9473,9 @@ country_event = { #杨专员
 	option = {#南京的触角无处不在。
 		log = "[GetLogInfo]: event NKRsichuan.106 option NKRsichuan.106.a"
 		name = NKRsichuan.106.a
-		set_country_flag = SZC_yang_shukan_available
+		SZC_yang_shukan = {
+			SZC_recruit_character_effect = yes
+		}
 		activate_advisor = SZC_yang_shukan_advisor
 		add_popularity = {
 			ideology = radical_socialist
@@ -9522,7 +9529,9 @@ country_event = { #新蜀报
 	option = {#有趣...
 		log = "[GetLogInfo]: event NKRsichuan.108 option NKRsichuan.108.a"
 		name = NKRsichuan.108.a
-		set_country_flag = SZC_qi_nanxun_available
+		SZC_qi_nanxun = {
+			SZC_recruit_character_effect = yes
+		}
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_qi_nanxun_advisor
 		add_popularity = {
@@ -9787,6 +9796,7 @@ country_event = { #刘伯承掌控局势
 		set_politics = {
 			ruling_party = syndicalist
 		}
+		deactivate_advisor = SZC_li_hongkun_sic
 		hidden_effect = {
 			country_event = {
 				id = NKRsichuan.123
@@ -9835,6 +9845,7 @@ country_event = { #刘伯承控制川军
 		set_politics = {
 			ruling_party = syndicalist
 		}
+		deactivate_advisor = SZC_li_hongkun_sic
 		hidden_effect = {
 			SZC_assorted_leaders = {
 				promote_character = paternal_autocrat_subtype
@@ -9909,10 +9920,12 @@ country_event = { #赤红的四川
 			china_set_character_alignment_left_kuomintang = yes
 		}
 		set_country_flag = NKRSZC_crisis_done
+		activate_advisor = SZC_liu_bocheng_sic
 		swap_ideas = {
 			remove_idea = SZC_pan_legitimacy_4
 			add_idea = SZC_pan_legitimacy_6
 		}
+
 	}
 }
 
@@ -10216,6 +10229,15 @@ country_event = { #庆功宴
 			}
 			china_set_character_alignment_right_kuomintang = yes
 		}
+		SZC_xie_chi = {
+			SZC_recruit_character_effect = yes
+		}
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = SZC_xie_chi_advisor
+		SZC_dai_jitao = {
+			SZC_recruit_character_effect = yes
+		}
+		activate_advisor = SZC_dai_jitao_sic
 	}
 }
 
@@ -10249,11 +10271,13 @@ country_event = { #国民党内战-开始
 	option = {#我们要打到南京去！
 		log = "[GetLogInfo]: event NKRsichuan.140 option NKRsichuan.141.a"
 		name = NKRsichuan.141.a
+		SZC_yang_shukan = {
+			retire = yes
+		}
 		set_country_flag = NKRSZC_KMTcivilwar
 		complete_national_focus = SZC_pan_kuomintang_civil_war
 		activate_mission = SZC_resist_the_silver_offensive_mission
 		custom_effect_tooltip = CHI_focus_tree_will_change_tt
-		clr_country_flag = SZC_yang_shukan_available
 		mark_focus_tree_layout_dirty = yes
 	}
 }
@@ -11465,7 +11489,6 @@ country_event = { #就职典礼
 		set_politics = {
 			ruling_party = social_democrat
 		}
-		set_country_flag = SZC_fan_piaozhai_available
 		activate_advisor = SZC_fan_piaozhai_sic
 		set_temp_variable = { coalition_partner_var = token:social_liberal }
 		add_to_coalition = yes
@@ -23543,6 +23566,310 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.19 option NKRsichuanpuppet.19.a"
 		name = NKRsichuanpuppet.19.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.1
+	title = NKRsichuanflavor.1.t
+	desc = NKRsichuanflavor.1.d
+	picture = GFX_report_event_SZC_56
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.1 option NKRsichuanflavor.1.a"
+		name = NKRsichuanflavor.1.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.2
+	title = NKRsichuanflavor.2.t
+	desc = NKRsichuanflavor.2.d
+	picture = GFX_report_event_SZC_56
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.2 option NKRsichuanflavor.2.a"
+		name = NKRsichuanflavor.2.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.3
+	title = NKRsichuanflavor.3.t
+	desc = NKRsichuanflavor.3.d
+	picture = GFX_report_event_SZC_56
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.3 option NKRsichuanflavor.3.a"
+		name = NKRsichuanflavor.3.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.4
+	title = NKRsichuanflavor.4.t
+	desc = NKRsichuanflavor.4.d
+	picture = GFX_report_event_SZC_56
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.4 option NKRsichuanflavor.4.a"
+		name = NKRsichuanflavor.4.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.5
+	title = NKRsichuanflavor.5.t
+	desc = NKRsichuanflavor.5.d
+	picture = GFX_report_event_SZC_56
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.5 option NKRsichuanflavor.5.a"
+		name = NKRsichuanflavor.5.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.6
+	title = NKRsichuanflavor.6.t
+	desc = NKRsichuanflavor.6.d
+	picture = GFX_report_event_SZC_56
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.6 option NKRsichuanflavor.6.a"
+		name = NKRsichuanflavor.6.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.7
+	title = NKRsichuanflavor.7.t
+	desc = NKRsichuanflavor.7.d
+	picture = GFX_report_event_SZC_56
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.7 option NKRsichuanflavor.7.a"
+		name = NKRsichuanflavor.7.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.8
+	title = NKRsichuanflavor.8.t
+	desc = NKRsichuanflavor.8.d
+	picture = GFX_report_event_SZC_56
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.8 option NKRsichuanflavor.8.a"
+		name = NKRsichuanflavor.8.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.9
+	title = NKRsichuanflavor.9.t
+	desc = NKRsichuanflavor.9.d
+	picture = GFX_report_event_SZC_56
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.9 option NKRsichuanflavor.9.a"
+		name = NKRsichuanflavor.9.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.10
+	title = NKRsichuanflavor.10.t
+	desc = NKRsichuanflavor.10.d
+	picture = GFX_report_event_SZC_56
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.10 option NKRsichuanflavor.10.a"
+		name = NKRsichuanflavor.10.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.11
+	title = NKRsichuanflavor.11.t
+	desc = NKRsichuanflavor.11.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.11 option NKRsichuanflavor.11.a"
+		name = NKRsichuanflavor.11.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.12
+	title = NKRsichuanflavor.12.t
+	desc = NKRsichuanflavor.12.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.12 option NKRsichuanflavor.12.a"
+		name = NKRsichuanflavor.12.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.13
+	title = NKRsichuanflavor.13.t
+	desc = NKRsichuanflavor.13.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.13 option NKRsichuanflavor.13.a"
+		name = NKRsichuanflavor.13.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.14
+	title = NKRsichuanflavor.14.t
+	desc = NKRsichuanflavor.14.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.14 option NKRsichuanflavor.14.a"
+		name = NKRsichuanflavor.14.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.15
+	title = NKRsichuanflavor.15.t
+	desc = NKRsichuanflavor.15.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.15 option NKRsichuanflavor.15.a"
+		name = NKRsichuanflavor.15.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.16
+	title = NKRsichuanflavor.16.t
+	desc = NKRsichuanflavor.16.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.16 option NKRsichuanflavor.16.a"
+		name = NKRsichuanflavor.16.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.17
+	title = NKRsichuanflavor.17.t
+	desc = NKRsichuanflavor.17.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.17 option NKRsichuanflavor.17.a"
+		name = NKRsichuanflavor.17.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.18
+	title = NKRsichuanflavor.18.t
+	desc = NKRsichuanflavor.18.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.18 option NKRsichuanflavor.18.a"
+		name = NKRsichuanflavor.18.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.19
+	title = NKRsichuanflavor.19.t
+	desc = NKRsichuanflavor.19.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.19 option NKRsichuanflavor.19.a"
+		name = NKRsichuanflavor.19.a
 	}
 }
 

@@ -106,12 +106,15 @@ characters = {
 			logistics_skill = 2
 		}
 		advisor = {
+			slot = second_in_command
+			idea_token = SZC_liu_bocheng_sic
+			desc = SZC_liu_bocheng_high_command_desc
+			traits = { SZC_liu_bowen_sic }
+		}
+		advisor = {
 			slot = political_advisor
 			idea_token = SZC_liu_bocheng_advisor
 			desc = SZC_liu_bocheng_high_command_desc
-			available = {
-				not_already_hired_except_as = political_advisor
-			}
 			traits = { KR_patriotic_socialist }
 		}
 		advisor = {
@@ -869,9 +872,447 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_yang_shukan_advisor
-			traits = { KR_silent_workhorse }
+			traits = { SZC_come_from_nanking }
+			can_be_fired = no
 		}
 	}
+	#李宏锟
+	SZC_li_hongkun = {
+		name = SZC_li_hongkun
+		portraits = {
+			army = {
+				small = GFX_portrait_SZC_li_hongkun_small
+				large = GFX_portrait_SZC_li_hongkun_large
+			}
+			civilian = {
+				small = GFX_portrait_SZC_li_hongkun_civilian_small
+				large = GFX_portrait_SZC_li_hongkun_civilian_large
+			}
+		}
+		corps_commander = {
+			desc = SZC_li_hongkun_desc
+			traits = { light_infantry_officer }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_li_hongkun_sic
+			traits = { KR_spiritual_leader_sic }
+			cost = 0
+			can_be_fired = no
+			visible = {
+				has_country_flag = NKRSZCpanpath
+			}
+			desc = SZC_li_hongkun_advisor_desc
+		}
+
+	}
+	#杨庶堪
+	SZC_yang_shukan = {
+		name = SZC_yang_shukan
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_yang_shukan_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_yang_shukan_advisor
+			ledger = civilian
+			traits = { KR_influential_intellectual }
+			cost = 100
+			can_be_fired = no
+			desc = SZC_yang_shukan_desc
+		}
+
+	}
+	#漆南薰
+	SZC_qi_nanxun = {
+		name = SZC_qi_nanxun
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_qi_nanxun_small
+				large = GFX_portrait_SZC_qi_nanxun_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_qi_nanxun_advisor
+			ledger = civilian
+			traits = { KR_patriotic_socialist }
+			available = {
+				NOT = {
+					has_country_leader = SZC_qi_nanxun
+				}
+			}
+			cost = 100
+			desc = SZC_qi_nanxun_advisor_desc
+		}
+		country_leader = {
+			ideology = syndicalist_revolutionary_tridemist_subtype
+			traits = {
+				CHN_left_kuomintang_aligned
+			}
+			desc = SZC_qi_nanxun_desc
+		}
+
+	}
+	#谢持
+	SZC_xie_chi = {
+		name = SZC_xie_chi
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_xie_chi_small
+				large = GFX_portrait_SZC_xie_chi_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_xie_chi_advisor
+			ledger = civilian
+			traits = { SZC_the_old_right }
+			available = {
+				NOT = {
+					has_country_leader = SZC_xie_chi
+				}
+			}
+			cost = 100
+			desc = SZC_xie_chi_advisor_desc
+		}
+		country_leader = {
+			ideology = social_conservative_orthodox_tridemist_subtype
+			traits = {
+				CHN_right_kuomintang_aligned
+			}
+			desc = SZC_xie_chi_desc
+		}
+
+	}
+
+	#張瀾
+	SZC_zhang_lan = {
+		name = SZC_zhang_lan
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_zhang_lan_civilian_large
+				small = GFX_portrait_SZC_zhang_lan_civilian_small
+			}
+		}
+		country_leader = {
+			ideology = social_democrat_subtype
+			desc = SZC_zhang_lan_desc
+			traits = { CHN_southern_republican_aligned }
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			desc = SZC_zhang_lan_desc
+			traits = { CHN_southern_republican_aligned }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_zhang_lan_advisor
+			available = {
+				has_left_democratic_government = yes
+				NOT = {
+					has_country_leader = SZC_zhang_lan
+				}
+			}
+			traits = { KR_ideological_crusader }
+		}
+	}
+
+	#范朴斋
+	SZC_fan_piaozhai = {
+		name = SZC_fan_piaozhai
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_fan_piaozhai_large
+				small = GFX_portrait_SZC_fan_piaozhai_small
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_fan_piaozhai_sic
+			cost = 0
+			can_be_fired = no
+			traits = { SZC_democratic_student_sic }
+		}
+		country_leader = {
+			ideology = social_democrat_subtype
+			desc = SZC_fan_piaozhai_desc
+			traits = { CHN_southern_republican_aligned }
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			desc = SZC_fan_piaozhai_desc
+			traits = { CHN_southern_republican_aligned }
+		}
+	}
+
+	#沈钧儒
+	SZC_shen_junru = {
+		name = SZC_shen_junru
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_shen_junru_large
+				small = GFX_portrait_SZC_shen_junru_small
+			}
+		}
+		
+		country_leader = {
+			ideology = social_democrat_subtype
+			desc = SZC_shen_junru_desc
+			traits = { CHN_southern_republican_aligned }
+		}
+		country_leader = {
+			ideology = social_liberal_subtype
+			desc = SZC_shen_junru_desc
+			traits = { CHN_southern_republican_aligned }
+		}
+		country_leader = {
+			ideology = authoritarian_democrat_dominant_party_system_subtype
+			desc = SZC_shen_junru_desc
+			traits = { CHN_southern_republican_aligned }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_shen_junru_advisor
+			ledger = civilian
+			traits = { SZC_old_scholar }
+			available = {
+				NOT = {
+					has_country_leader = SZC_shen_junru
+				}
+			}
+			cost = 150
+			can_be_fired = no
+			desc = SZC_shen_junru_desc
+		}
+	}
+
+	#罗隆基
+	SZC_luo_longji = {
+		name = SZC_luo_longji
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_luo_longji_large
+				small = GFX_portrait_SZC_luo_longji_small
+			}
+		}
+		
+		country_leader = {
+			ideology = social_liberal_liberal_technocracy_subtype
+			desc = SZC_luo_longji_desc
+			traits = { CHN_southern_republican_aligned }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_luo_longji_advisor
+			ledger = civilian
+			traits = { SZC_a_liberal_statist }
+			available = {
+				NOT = {
+					has_country_leader = SZC_luo_longji
+				}
+			}
+			cost = 150
+			can_be_fired = no
+			desc = SZC_luo_longji_desc
+		}
+	}
+
+	#杨伯恺
+	SZC_yang_bokai = {
+		name = SZC_yang_bokai
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_yang_bokai_large
+				small = GFX_portrait_SZC_yang_bokai_small
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_yang_bokai_sic
+			cost = 0
+			can_be_fired = no
+			traits = { SZC_tolerant_pragmatist_sic }
+			desc = SZC_yang_bokai_desc
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_yang_bokai_advisor
+			ledger = civilian
+			traits = { SZC_genetic_sociologist }
+			cost = 150
+			can_be_fired = no
+			desc = SZC_yang_bokai_desc
+		}
+	}
+
+	#潘光旦
+	SZC_pan_guangdan = {
+		name = SZC_pan_guangdan
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_pan_guangdan_large
+				small = GFX_portrait_SZC_pan_guangdan_small
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_pan_guangdan_sic
+			cost = 0
+			can_be_fired = no
+			traits = { SZC_genetic_sociologist_sic }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_pan_guangdan_advisor
+			ledger = civilian
+			traits = { SZC_genetic_sociologist }
+			cost = 150
+			can_be_fired = no
+			desc = SZC_pan_guangdan_desc
+		}
+	}
+
+	#潘昌猷
+	SZC_pan_changyou = {
+		name = SZC_pan_changyou
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_pan_changyou_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_pan_changyou_advisor
+			ledger = civilian
+			traits = { SZC_pans_banker }
+			cost = 150
+			can_be_fired = no
+			desc = SZC_pan_changyou_desc
+		}
+	}
+
+	#钟体乾
+	SZC_zhong_tiqian = {
+		name = SZC_zhong_tiqian
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zhong_tiqian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_zhong_tiqian_advisor
+			ledger = civilian
+			traits = { SZC_grand_old }
+			cost = 150
+			can_be_fired = no
+			desc = SZC_zhong_tiqian_desc
+		}
+	}
+
+	#费孝通
+	SZC_fei_xiaotong = {
+		name = SZC_fei_xiaotong
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_fei_xiaotong_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_fei_xiaotong_advisor
+			ledger = civilian
+			traits = { SZC_agricultural_sociologist }
+			cost = 150
+			can_be_fired = no
+			desc = SZC_fei_xiaotong_desc
+		}
+	}
+
+	#史良
+	SZC_shi_liang = {
+		name = SZC_shi_liang
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_shi_liang_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_shi_liang_advisor
+			ledger = civilian
+			traits = { KR_chinese_feminist }
+			cost = 150
+			can_be_fired = no
+			desc = SZC_shi_liang_desc
+		}
+	}
+
+	#胡愈之
+	SZC_hu_yuzhi = {
+		name = SZC_hu_yuzhi
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_hu_yuzhi_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_hu_yuzhi_advisor
+			ledger = civilian
+			traits = { SZC_esperanto_scientist }
+			cost = 150
+			can_be_fired = no
+			desc = SZC_hu_yuzhi_desc
+		}
+	}
+
+	#王右木
+	SZC_wang_shimu = {
+		name = SZC_wang_shimu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_wang_shimu_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_wang_shimu_advisor
+			ledger = civilian
+			traits = { SZC_socialist_activator }
+			cost = 150
+			can_be_fired = no
+			desc = SZC_wang_shimu_desc
+		}
+	}
+
+	#戴季陶
+	SZC_dai_jitao = {
+		name = SZC_dai_jitao
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_dai_jitao_small
+			}
+		}
+		
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_dai_jitao_sic
+			cost = 0
+			can_be_fired = no
+			traits = { SZC_knowledgeable_theorist_sic }
+		}
+	}
+
+
 
 
 	#############醒      狮#############
@@ -947,9 +1388,6 @@ characters = {
 			idea_token = SZC_chen_qitian_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_chen_qitian_advisor_desc
-			visible = {
-				has_country_flag = YCP_advisors_available
-			}
 		}
 		country_leader = {
 			desc = SZC_chen_qitian_desc
@@ -976,9 +1414,6 @@ characters = {
 			idea_token = SZC_zeng_qi_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_zeng_qi_advisor_desc
-			visible = {
-				has_country_flag = YCP_advisors_available
-			}
 		}
 		country_leader = {
 			desc = SZC_zeng_qi_desc
@@ -1005,9 +1440,6 @@ characters = {
 			idea_token = SZC_li_huang_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_li_huang_advisor_desc
-			visible = {
-				has_country_flag = YCP_advisors_available
-			}
 		}
 		country_leader = {
 			desc = SZC_li_huang_desc
@@ -1034,10 +1466,8 @@ characters = {
 			idea_token = SZC_zuo_shunsheng_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_zuo_shunsheng_advisor_desc
-			visible = {
-				has_country_flag = YCP_advisors_available
-			}
 		}
+
 		advisor = {
 			slot = second_in_command
 			idea_token = SZC_zuo_shunsheng_sic
@@ -1070,9 +1500,6 @@ characters = {
 			idea_token = SZC_liu_congyun_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_liu_congyun_advisor_desc
-			visible = {
-				has_country_flag = YGD_advisors_available
-			}
 		}
 		country_leader = {
 			desc = SZC_liu_congyun_desc
@@ -1080,269 +1507,6 @@ characters = {
 			traits = { CHN_non_aligned }
 		}
 	}
-	#李宏锟
-	SZC_li_hongkun = {
-		name = SZC_li_hongkun
-		portraits = {
-			army = {
-				small = GFX_portrait_SZC_li_hongkun_small
-				large = GFX_portrait_SZC_li_hongkun_large
-			}
-			civilian = {
-				small = GFX_portrait_SZC_li_hongkun_civilian_small
-				large = GFX_portrait_SZC_li_hongkun_civilian_large
-			}
-		}
-		corps_commander = {
-			desc = SZC_li_hongkun_desc
-			traits = { light_infantry_officer }
-			skill = 1
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-		}
-		advisor = {
-			slot = second_in_command
-			idea_token = SZC_li_hongkun_sic
-			ledger = army
-			traits = { KR_spiritual_leader_sic }
-			cost = 0
-			can_be_fired = no
-			visible = {
-				has_country_flag = NKRSZCpanpath
-			}
-			desc = SZC_li_hongkun_advisor_desc
-		}
-
-	}
-	#杨庶堪
-	SZC_yang_shukan = {
-		name = SZC_yang_shukan
-		portraits = {
-			civilian = {
-				small = GFX_portrait_SZC_yang_shukan_small
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SZC_yang_shukan_advisor
-			ledger = civilian
-			traits = { KR_influential_intellectual }
-			cost = 100
-			can_be_fired = no
-			visible = {
-				has_country_flag = SZC_yang_shukan_available
-			}
-			desc = SZC_yang_shukan_desc
-		}
-
-	}
-	#漆南薰
-	SZC_qi_nanxun = {
-		name = SZC_qi_nanxun
-		portraits = {
-			civilian = {
-				small = GFX_portrait_SZC_qi_nanxun_small
-				large = GFX_portrait_SZC_qi_nanxun_large
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SZC_qi_nanxun_advisor
-			ledger = civilian
-			traits = { KR_patriotic_socialist }
-			cost = 100
-			visible = {
-				has_country_flag = SZC_qi_nanxun_available
-			}
-			desc = SZC_qi_nanxun_advisor_desc
-		}
-		country_leader = {
-			ideology = syndicalist_revolutionary_tridemist_subtype
-			traits = {
-				CHN_left_kuomintang_aligned
-			}
-			desc = SZC_qi_nanxun_desc
-		}
-
-	}
-	#谢持
-	SZC_xie_chi = {
-		name = SZC_xie_chi
-		portraits = {
-			civilian = {
-				small = GFX_portrait_SZC_xie_chi_small
-				large = GFX_portrait_SZC_xie_chi_large
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SZC_xie_chi_advisor
-			ledger = civilian
-			traits = {  }
-			cost = 100
-			visible = {
-				has_country_flag = SZC_xie_chi_available
-			}
-			desc = SZC_qi_nanxun_advisor_desc
-		}
-		country_leader = {
-			ideology = social_conservative_orthodox_tridemist_subtype
-			traits = {
-				CHN_right_kuomintang_aligned
-			}
-			desc = SZC_xie_chi_desc
-		}
-
-	}
-
-	#張瀾
-	SZC_zhang_lan = {
-		name = SZC_zhang_lan
-		portraits = {
-			civilian = {
-				large = GFX_portrait_SZC_zhang_lan_civilian_large
-				small = GFX_portrait_SZC_zhang_lan_civilian_small
-			}
-		}
-		country_leader = {
-			ideology = social_democrat_subtype
-			desc = SZC_zhang_lan_desc
-			traits = { CHN_southern_republican_aligned }
-		}
-		country_leader = {
-			ideology = social_liberal_subtype
-			desc = SZC_zhang_lan_desc
-			traits = { CHN_southern_republican_aligned }
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SZC_zhang_lan_advisor
-			available = {
-				has_left_democratic_government = yes
-				NOT = {
-					has_country_leader = SZC_zhang_lan
-				}
-			}
-			traits = { KR_ideological_crusader }
-		}
-	}
-
-	#范朴斋
-	SZC_fan_piaozhai = {
-		name = SZC_fan_piaozhai
-		portraits = {
-			civilian = {
-				large = GFX_portrait_SZC_fan_piaozhai_large
-				small = GFX_portrait_SZC_fan_piaozhai_small
-			}
-		}
-		advisor = {
-			slot = second_in_command
-			idea_token = SZC_fan_piaozhai_sic
-			visible = {
-				has_country_flag = SZC_fan_piaozhai_available
-			}
-			cost = 0
-			can_be_fired = no
-			traits = { KR_parliament_sic }
-		}
-		country_leader = {
-			ideology = social_democrat_subtype
-			desc = SZC_fan_piaozhai_desc
-			traits = { CHN_southern_republican_aligned }
-		}
-		country_leader = {
-			ideology = social_liberal_subtype
-			desc = SZC_fan_piaozhai_desc
-			traits = { CHN_southern_republican_aligned }
-		}
-	}
-
-	#沈钧儒
-	SZC_shen_junru = {
-		name = SZC_shen_junru
-		portraits = {
-			civilian = {
-				large = GFX_portrait_SZC_shen_junru_large
-				small = GFX_portrait_SZC_shen_junru_small
-			}
-		}
-		
-		country_leader = {
-			ideology = social_democrat_subtype
-			desc = SZC_shen_junru_desc
-			traits = { CHN_southern_republican_aligned }
-		}
-		country_leader = {
-			ideology = social_liberal_subtype
-			desc = SZC_shen_junru_desc
-			traits = { CHN_southern_republican_aligned }
-		}
-		country_leader = {
-			ideology = authoritarian_democrat_dominant_party_system_subtype
-			desc = SZC_shen_junru_desc
-			traits = { CHN_southern_republican_aligned }
-		}
-	}
-
-	#罗隆基
-	SZC_luo_longji = {
-		name = SZC_luo_longji
-		portraits = {
-			civilian = {
-				large = GFX_portrait_SZC_luo_longji_large
-				small = GFX_portrait_SZC_luo_longji_small
-			}
-		}
-		
-		country_leader = {
-			ideology = social_liberal_liberal_technocracy_subtype
-			desc = SZC_luo_longji_desc
-			traits = { CHN_southern_republican_aligned }
-		}
-	}
-
-	#杨伯恺
-	SZC_yang_bokai = {
-		name = SZC_yang_bokai
-		portraits = {
-			civilian = {
-				large = GFX_portrait_SZC_yang_bokai_large
-				small = GFX_portrait_SZC_yang_bokai_small
-			}
-		}
-		advisor = {
-			slot = second_in_command
-			idea_token = SZC_yang_bokai_sic
-			cost = 0
-			can_be_fired = no
-			traits = { KR_parliament_sic }
-			visible = {
-				has_completed_focus = SZC_pan_call_me_mrpresident
-			}
-		}
-	}
-
-	#潘光旦
-	SZC_pan_guangdan = {
-		name = SZC_pan_guangdan
-		portraits = {
-			civilian = {
-				large = GFX_portrait_SZC_pan_guangdan_large
-				small = GFX_portrait_SZC_pan_guangdan_small
-			}
-		}
-		advisor = {
-			slot = second_in_command
-			idea_token = SZC_pan_guangdan_sic
-			cost = 0
-			can_be_fired = no
-			traits = { KR_parliament_sic }
-		}
-	}
-
 	#姜蕴刚
 	SZC_jiang_yungang = {
 		name = SZC_jiang_yungang
@@ -1637,9 +1801,6 @@ characters = {
 			slot = theorist
 			idea_token = SZC_MMIC_theorist
 			ledger = military
-			visible = {
-				has_country_flag = SZC_MMIC_available
-			}
 			traits = { KR_council_of_theorists }
 			cost = 100
 		}

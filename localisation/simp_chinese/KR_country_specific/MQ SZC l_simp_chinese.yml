@@ -101,6 +101,8 @@
  SZC_qi_nanxun: "漆南熏"
  SZC_qi_nanxun_advisor_desc: ""
  SZC_qi_nanxun_desc: ""
+ SZC_qi_nanxun_will_be_helpful_tt: "§Y§r漆南熏§!若作为顾问，将有利于§r社会主义§!思潮的传播！§!"
+ SZC_qi_nanxun_is_helpful_tt: "§G§r漆南熏§!作为顾问有利于§r社会主义§!思潮的传播！§!"
  SZC_xie_chi: "谢持"
  SZC_xie_chi_advisor_desc: ""
  SZC_xie_chi_desc: ""
@@ -108,19 +110,69 @@
  SZC_fan_piaozhai_desc: ""
  SZC_shen_junru: "沈钧儒"
  SZC_shen_junru_desc: ""
+ SZC_shen_junru_will_be_helpful_tt: "§Y§S沈钧儒§!若作为顾问，将有利于维护维护民主阵线！§!"
+ SZC_shen_junru_is_helpful_tt: "§G§S沈钧儒§!作为顾问有利于维护民主阵线！§!"
  SZC_luo_longji: "罗隆基"
  SZC_luo_longji_desc: ""
+ SZC_luo_longji_will_be_helpful_tt: "§Y§l罗隆基§!若作为顾问，将有利于推进§l新月社§!的议程！§!"
+ SZC_luo_longji_is_helpful_tt: "§G§l罗隆基§!若作为顾问，将有利于推进§l新月社§!的议程！§!"
  SZC_pan_guangdan: "潘光旦"
  SZC_pan_guangdan_desc: ""
  SZC_yang_bokai: "杨伯恺"
  SZC_yang_bokai_desc: ""
-
-
+ SZC_dai_jitao: "戴季陶"
+ SZC_dai_jitao_desc: ""
+ SZC_pan_changyou: "潘昌猷"
+ SZC_pan_changyou_desc: ""
+ SZC_pan_changyou_will_be_helpful_tt: "§Y§a潘昌猷§!若作为顾问，将有利于经济发展！§!"
+ SZC_pan_changyou_is_helpful_tt: "§G§a潘昌猷§!作为顾问有利于经济发展！§!"
+ SZC_pan_changyou_improved: "§a潘昌猷§!获得§Y银行界大佬§!特质，其效果为：\n-$MODIFIER_POLITICAL_POWER_GAIN$：$RIGHT|+=$§R-0.10§!\n-$MODIFIER_CONSUMER_GOODS_FACTOR$：$RIGHT|+=%0$§Y-25%§!"
+ SZC_zhong_tiqian: "钟体乾"
+ SZC_zhong_tiqian_desc: ""
+ SZC_fei_xiaotong: "费孝通"
+ SZC_fei_xiaotong_desc: ""
+ SZC_fei_xiaotong_will_be_helpful_tt: "§Y§S费孝通§!若作为顾问，将有利于乡土建设！§!"
+ SZC_fei_xiaotong_is_helpful_tt: "§G§S费孝通§!作为顾问有利于乡土建设！§!"
+ SZC_shi_liang: "史良"
+ SZC_shi_liang_desc: ""
+ SZC_shi_liang_will_be_helpful_tt: "§Y§S史良§!若作为顾问，将有利于地方民政！§!"
+ SZC_shi_liang_is_helpful_tt: "§G§S史良§!作为顾问有利于地方民政！§!"
+ SZC_hu_yuzhi: "胡愈之"
+ SZC_hu_yuzhi_desc: ""
+ SZC_hu_yuzhi_will_be_helpful_tt: "§Y§l胡愈之§!若作为顾问，将有利于科学技术的进步！§!"
+ SZC_hu_yuzhi_is_helpful_tt: "§G§l胡愈之§!作为顾问有利于科学技术的进步！§!"
+ SZC_wang_shimu: "王右木"
+ SZC_wang_shimu_desc: ""
+ SZC_wang_shimu_will_be_helpful_tt: "§Y§r王右木§!若作为顾问，将有利于§r社会主义§!在四川扎根！§!"
+ SZC_wang_shimu_is_helpful_tt: "§G§r王右木§!作为顾问有利于§r社会主义§!在四川扎根！§!"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
  ###############
  ####TRAIT######
  ###############
+
+ SZC_PAN_great_anti_imperialist: "伟大的反帝国主义者"
+ SZC_PAN_great_anti_imperialist: ""
+ SZC_PAN_second_cai_e: "第二蔡锷"
+ SZC_PAN_second_cai_e_desc: ""
+ SZC_PAN_listen_to_nations_father: "谨遵国父"
+ SZC_PAN_listen_to_nations_father_desc: ""
+
  SZC_YCP_machiavelli_today: "当代马基雅维利"
  SZC_YCP_machiavelli_today_desc: ""
  SZC_YCP_machiavelli_today_2: "当代马基雅维利"
@@ -150,6 +202,29 @@
  SZC_YCP_the_lion: "雄狮"
  SZC_YCP_the_lion_desc: ""
 
+
+#ADVISORS
+ SZC_pans_banker: "鹞子的银行家"
+ SZC_grand_old: "牢大"
+ SZC_agricultural_sociologist: "乡土社会学家"
+ SZC_esperanto_scientist: "世界语科学家"
+ SZC_socialist_activator: "社会主义活动家"
+ SZC_genetic_sociologist: "基因社会学家"
+ SZC_education_reformer: "教育改革家"
+ SZC_a_liberal_statist: "自由国家主义者"
+ SZC_old_scholar: "老秀才"
+ SZC_the_old_right: "老右派"
+ SZC_come_from_nanking: "南京的专员"
+ 
+ SZC_knowledgeable_theorist_sic: "知识渊博的理论家"
+ SZC_genetic_sociologist_sic: "基因社会学家"
+ SZC_tolerant_pragmatist_sic: "隐忍的实用主义者"
+ SZC_social_fighter_sic: "社会斗士"
+ SZC_democratic_student_sic: "民主的学生"
+ SZC_democratic_student_2_sic: "民主的学生"
+ SZC_liu_bowen_sic: "刘伯温"
+ 
+ 
  SZC_YCP_collaborative_yellow_syndicalist: "协作黄色工团主义者"
  SZC_YCP_collaborative_yellow_syndicalist_desc: ""
 

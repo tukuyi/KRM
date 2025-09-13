@@ -1,5 +1,27 @@
 leader_traits = {
 
+	SZC_PAN_great_anti_imperialist = {
+		random = no
+		political_power_gain = 0.05
+		stability_factor = 0.05
+		justify_wargoal_time_factor = -0.60
+	}
+
+	SZC_PAN_second_cai_e = {
+		random = no
+		political_power_gain = 0.25
+		stability_factor = 0.15
+		army_org_factor = 0.1
+	}
+
+	SZC_PAN_listen_to_nations_father = {
+		random = no
+		political_power_gain = 0.1
+		stability_factor = 0.1
+		war_support_factor = 0.1
+		consumer_goods_factor = -0.05
+	}
+
 	SZC_YCP_machiavelli_today = {
 		random = no
 		political_power_gain = 0.10

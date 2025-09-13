@@ -1,0 +1,123 @@
+leader_traits = {
+
+	SZC_pans_banker = {
+		random = no
+		consumer_goods_factor = -0.15
+		political_power_factor = -0.05
+	}
+	SZC_pans_big_banker = {
+		random = no
+		consumer_goods_factor = -0.25
+		political_power_factor = -0.10
+	}
+	SZC_grand_old = {
+		random = no
+		political_power_factor = 0.15
+		stability_factor = 0.1
+	}
+	SZC_agricultural_sociologist = {
+		random = no
+		monthly_population = 0.1
+		stability_factor = 0.05
+		compliance_gain = 0.03
+	}
+	SZC_esperanto_scientist = {
+		random = no
+		research_speed_factor = 0.15
+		political_power_cost = 0.05
+	}
+	SZC_socialist_activator = {
+		random = no
+		political_power_gain = 0.15
+		compliance_growth = 0.15
+		stability_factor = -0.05
+	}
+	SZC_genetic_sociologist = {
+		random = no
+		stability_factor = 0.05
+		cic_construction_boost = 0.05
+		production_factory_efficiency_gain_factor = 0.1
+	}
+	SZC_education_reformer = {
+		random = no
+		stability_factor = 0.1
+		research_speed_factor = 0.1
+	}
+	SZC_a_liberal_statist = {
+		random = no
+		stability_factor = 0.05
+		party_popularity_stability_factor = -0.1
+		production_factory_max_efficiency_factor = 0.05
+	}
+	SZC_old_scholar = {
+		random = no
+		stability_factor = 0.2
+		war_support_factor = 0.05
+		research_speed_factor = 0.05
+	}
+	SZC_the_old_right = {
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.15
+		production_factory_max_efficiency_factor = 0.05
+		party_popularity_stability_factor = 0.25
+		syndicalist_acceptance = -50
+		totalist_acceptance = -50
+		radical_socialist_acceptance = -50
+	}
+	SZC_come_from_nanking = {
+		random = no
+		stability_factor = -0.05
+		war_support_factor = -0.15
+	}
+
+
+	#SICSICSICSIC
+	
+	SZC_knowledgeable_theorist_sic = {
+		random = no
+		political_power_gain = 0.2
+		compliance_growth = 0.3
+		compliance_gain = 0.02
+		production_factory_max_efficiency_factor = 0.05
+		resistance_growth = -0.25
+	}
+	SZC_genetic_sociologist_sic = {
+		random = no
+		stability_factor = 0.1
+		cic_construction_boost = 0.1
+		production_factory_efficiency_gain_factor = 0.15
+	}
+	SZC_tolerant_pragmatist_sic = {
+		random = no
+		stability_factor = 0.25
+		research_speed_factor = 0.05
+		party_popularity_stability_factor = 0.15
+		resistance_growth = -0.1
+	}
+	SZC_social_fighter_sic = {
+		random = no
+		stability_factor = 0.1
+		research_speed_factor = 0.05
+		monthly_population = 0.1
+	}
+	SZC_democratic_student_sic = {
+		random = no
+		stability_factor = 0.15
+		political_power_factor = 0.1
+	}
+	SZC_democratic_student_2_sic = {
+		random = no
+		stability_factor = 0.2
+		political_power_factor = 0.15
+	}
+	SZC_liu_bowen_sic = {
+		random = no
+		stability_factor = 0.1
+		production_factory_max_efficiency_factor = 0.05
+		consumer_goods_factor = -0.1
+		army_attack_factor = 0.1
+	}
+
+}
+	

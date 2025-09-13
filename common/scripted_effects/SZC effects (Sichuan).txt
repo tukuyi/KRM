@@ -1165,3 +1165,28 @@ SZC_YCP_constitution_conservative_effect = {
 		value = -1
 	}
 }
+
+SZC_remove_industrial_ideas_effect = {
+	hidden_effect = {
+		remove_ideas = {
+			SZC_rural_reconstruction_1
+			SZC_rural_reconstruction_2
+			SZC_rural_reconstruction_3
+			SZC_rural_reconstruction_4
+			SZC_rural_reconstruction_5
+			SZC_rural_reconstruction_6
+			SZC_commercial_expansion_1
+			SZC_commercial_expansion_2
+			SZC_commercial_expansion_3
+			SZC_commercial_expansion_4
+			SZC_industrial_planning_committee_1
+			SZC_industrial_planning_committee_2
+			SZC_industrial_planning_committee_3
+			SZC_industrial_planning_committee_4
+			SZC_industrial_planning_committee_5
+			SZC_industrial_planning_committee_6
+			SZC_industrial_planning_committee_7
+			SZC_industrial_planning_committee_8
+		}
+	}
+}
