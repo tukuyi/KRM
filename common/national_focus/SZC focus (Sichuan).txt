@@ -16499,6 +16499,747 @@ focus_tree = {
 
 
 
+	focus = {
+		id = SZC_pan_FORPOL_spread_our_revolution
+		icon = GFX_goal_SZC_pan_FORPOL_spread_our_revolution
+		cost = 2
+
+		x = -6
+		y = 10
+
+		available = {
+			OR = {
+				has_completed_focus = SZC_pan_towards_liberation_of_all_asia
+				has_completed_focus = SZC_pan_abandon_the_foolish_internationalism
+			}
+		}
+
+		# allow_branch = {
+		# 	has_country_flag = NKRSZC_kmtpostwar
+		# }
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_spread_our_revolution"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_frontier_issue
+		icon = GFX_goal_SZC_pan_FORPOL_frontier_issue
+		cost = 2
+
+		x = -1
+		y = 1
+
+		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_spread_our_revolution
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_frontier_issue"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_to_end_national_humiliation
+		icon = GFX_goal_SZC_pan_FORPOL_to_end_national_humiliation
+		cost = 2
+
+		x = 1
+		y = 1
+
+		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_spread_our_revolution
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_to_end_national_humiliation"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_taiwan_undividable
+		icon = GFX_goal_SZC_pan_FORPOL_taiwan_undividable
+		cost = 2
+
+		x = 3
+		y = 1
+
+		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_spread_our_revolution
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_taiwan_undividable"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_tangnu_what
+		icon = GFX_goal_SZC_pan_FORPOL_tangnu_what
+		cost = 2
+
+		x = -1
+		y = 2
+
+		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_frontier_issue
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_tangnu_what"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_march_into_indochina
+		icon = GFX_goal_SZC_pan_FORPOL_march_into_indochina
+		cost = 2
+
+		x = 0
+		y = 3
+
+		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_frontier_issue
+		}
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_to_end_national_humiliation
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_march_into_indochina"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_secure_the_subcontinent
+		icon = GFX_goal_SZC_pan_FORPOL_secure_the_subcontinent
+		cost = 2
+
+		x = 1
+		y = 2
+
+		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_frontier_issue
+		}
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_to_end_national_humiliation
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_secure_the_subcontinent"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_fate_of_two_sun
+		icon = GFX_goal_SZC_pan_FORPOL_fate_of_two_sun
+		cost = 2
+
+		x = 3
+		y = 2
+
+		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_taiwan_undividable
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_fate_of_two_sun"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_pacify_pacific_ocean
+		icon = GFX_goal_SZC_pan_FORPOL_pacify_pacific_ocean
+		cost = 2
+
+		x = 2
+		y = 3
+
+		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_fate_of_two_sun
+		}
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_secure_the_subcontinent
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_pacify_pacific_ocean"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_china_shining_over_the_world
+		icon = GFX_goal_SZC_pan_FORPOL_china_shining_over_the_world
+		cost = 2
+
+		x = 0
+		y = 4
+
+		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
+
+		available = {
+			has_completed_focus = SZC_pan_FORPOL_tangnu_what
+		}
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_pacify_pacific_ocean
+		}
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_march_into_indochina
+		}
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_what_they_called_neocolonialism
+			focus = SZC_pan_FORPOL_limited_sovereignity_theory
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_china_shining_over_the_world"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_CSAT
+		icon = GFX_goal_SZC_pan_FORPOL_CSAT
+		cost = 2
+
+		x = -4
+		y = 1
+
+		mutually_exclusive = {
+			focus = SZC_pan_FORPOL_kaiser_and_president
+			focus = SZC_pan_FORPOL_global_revolution_cause
+			focus = SZC_pan_FORPOL_eastern_internationale
+			focus = SZC_pan_FORPOL_friendship_across_pacific_ocean
+		}
+
+		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_spread_our_revolution
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_CSAT"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_geopolitics_first
+		icon = GFX_goal_SZC_pan_FORPOL_geopolitics_first
+		cost = 2
+
+		x = -1
+		y = 1
+
+		relative_position_id = SZC_pan_FORPOL_CSAT
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_CSAT
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_geopolitics_first"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_capital_expansion
+		icon = GFX_goal_SZC_pan_FORPOL_capital_expansion
+		cost = 2
+
+		x = 1
+		y = 1
+
+		relative_position_id = SZC_pan_FORPOL_CSAT
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_CSAT
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_capital_expansion"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_what_they_called_neocolonialism
+		icon = GFX_goal_SZC_pan_FORPOL_what_they_called_neocolonialism
+		cost = 2
+
+		x = 0
+		y = 2
+
+		relative_position_id = SZC_pan_FORPOL_CSAT
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_geopolitics_first
+		}
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_capital_expansion
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_what_they_called_neocolonialism"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_eastern_internationale
+		icon = GFX_goal_SZC_pan_FORPOL_eastern_internationale
+		cost = 2
+
+		x = -7
+		y = 1
+
+		mutually_exclusive = {
+			focus = SZC_pan_FORPOL_kaiser_and_president
+			focus = SZC_pan_FORPOL_global_revolution_cause
+			focus = SZC_pan_FORPOL_CSAT
+			focus = SZC_pan_FORPOL_friendship_across_pacific_ocean
+		}
+
+		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_spread_our_revolution
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_eastern_internationale"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_aid_revolutionaries_freely
+		icon = GFX_goal_SZC_pan_FORPOL_aid_revolutionaries_freely
+		cost = 2
+
+		x = 0
+		y = 1
+
+		relative_position_id = SZC_pan_FORPOL_eastern_internationale
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_eastern_internationale
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_aid_revolutionaries_freely"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_socialist_reorganize
+		icon = GFX_goal_SZC_pan_FORPOL_socialist_reorganize
+		cost = 2
+
+		x = 1
+		y = 2
+
+		relative_position_id = SZC_pan_FORPOL_eastern_internationale
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_eastern_internationale
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_socialist_reorganize"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_limited_sovereignity_theory
+		icon = GFX_goal_SZC_pan_FORPOL_limited_sovereignity_theory
+		cost = 2
+
+		x = -1
+		y = 2
+
+		relative_position_id = SZC_pan_FORPOL_eastern_internationale
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_aid_revolutionaries_freely
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_limited_sovereignity_theory"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_global_revolution_cause
+		icon = GFX_goal_SZC_pan_FORPOL_global_revolution_cause
+		cost = 2
+
+		x = -10
+		y = 1
+
+		mutually_exclusive = {
+			focus = SZC_pan_FORPOL_kaiser_and_president
+			focus = SZC_pan_FORPOL_friendship_across_pacific_ocean
+			focus = SZC_pan_FORPOL_eastern_internationale
+			focus = SZC_pan_FORPOL_CSAT
+		}
+
+		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_spread_our_revolution
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_global_revolution_cause"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_expand_MMIC_mission
+		icon = GFX_goal_SZC_pan_FORPOL_expand_MMIC_mission
+		cost = 2
+
+		x = -1
+		y = 1
+
+		relative_position_id = SZC_pan_FORPOL_global_revolution_cause
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_global_revolution_cause
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_expand_MMIC_mission"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_socialist_solidarity
+		icon = GFX_goal_SZC_pan_FORPOL_socialist_solidarity
+		cost = 2
+
+		x = 1
+		y = 1
+
+		relative_position_id = SZC_pan_FORPOL_global_revolution_cause
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_global_revolution_cause
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_socialist_solidarity"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_the_last_struggle
+		icon = GFX_goal_SZC_pan_FORPOL_the_last_struggle
+		cost = 2
+
+		x = 0
+		y = 2
+
+		relative_position_id = SZC_pan_FORPOL_global_revolution_cause
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_socialist_solidarity
+		}
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_expand_MMIC_mission
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_the_last_struggle"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_a_world_set_free
+		icon = GFX_goal_SZC_pan_FORPOL_a_world_set_free
+		cost = 2
+
+		x = 0
+		y = 3
+
+		relative_position_id = SZC_pan_FORPOL_global_revolution_cause
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_the_last_struggle
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_a_world_set_free"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_kaiser_and_president
+		icon = GFX_goal_SZC_pan_FORPOL_kaiser_and_president
+		cost = 2
+
+		x = -13
+		y = 1
+
+		mutually_exclusive = {
+			focus = SZC_pan_FORPOL_friendship_across_pacific_ocean
+			focus = SZC_pan_FORPOL_global_revolution_cause
+			focus = SZC_pan_FORPOL_eastern_internationale
+			focus = SZC_pan_FORPOL_CSAT
+		}
+
+		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_spread_our_revolution
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_kaiser_and_president"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_observer_of_mittleeuropa
+		icon = GFX_goal_SZC_pan_FORPOL_observer_of_mittleeuropa
+		cost = 2
+
+		x = 0
+		y = 1
+
+		relative_position_id = SZC_pan_FORPOL_kaiser_and_president
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_kaiser_and_president
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_observer_of_mittleeuropa"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_german_east_asia_issue
+		icon = GFX_goal_SZC_pan_FORPOL_german_east_asia_issue
+		cost = 2
+
+		x = 1
+		y = 2
+
+		relative_position_id = SZC_pan_FORPOL_kaiser_and_president
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_observer_of_mittleeuropa
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_german_east_asia_issue"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_integrate_into_reichspakt_system
+		icon = GFX_goal_SZC_pan_FORPOL_integrate_into_reichspakt_system
+		cost = 2
+
+		x = -1
+		y = 2
+
+		relative_position_id = SZC_pan_FORPOL_kaiser_and_president
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_observer_of_mittleeuropa
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_integrate_into_reichspakt_system"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_age_of_eagle_and_sun
+		icon = GFX_goal_SZC_pan_FORPOL_age_of_eagle_and_sun
+		cost = 2
+
+		x = 0
+		y = 3
+
+		relative_position_id = SZC_pan_FORPOL_kaiser_and_president
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_observer_of_mittleeuropa
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_age_of_eagle_and_sun"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_friendship_across_pacific_ocean
+		icon = GFX_goal_SZC_pan_FORPOL_friendship_across_pacific_ocean
+		cost = 2
+
+		x = -16
+		y = 1
+
+		mutually_exclusive = {
+			focus = SZC_pan_FORPOL_kaiser_and_president
+			focus = SZC_pan_FORPOL_global_revolution_cause
+			focus = SZC_pan_FORPOL_eastern_internationale
+			focus = SZC_pan_FORPOL_CSAT
+		}
+
+		allow_branch = {
+			#ACW END BLA BLA BLA
+		}
+
+		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_spread_our_revolution
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_friendship_across_pacific_ocean"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_our_ocean
+		icon = GFX_goal_SZC_pan_FORPOL_our_ocean
+		cost = 2
+
+		x = -1
+		y = 1
+
+		relative_position_id = SZC_pan_FORPOL_friendship_across_pacific_ocean
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_friendship_across_pacific_ocean
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_our_ocean"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_new_powers_against_old_empires
+		icon = GFX_goal_SZC_pan_FORPOL_new_powers_against_old_empires
+		cost = 2
+
+		x = 1
+		y = 1
+
+		relative_position_id = SZC_pan_FORPOL_friendship_across_pacific_ocean
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_friendship_across_pacific_ocean
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_new_powers_against_old_empires"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_economic_cooperation_binding
+		icon = GFX_goal_SZC_pan_FORPOL_economic_cooperation_binding
+		cost = 2
+
+		x = 0
+		y = 2
+
+		relative_position_id = SZC_pan_FORPOL_friendship_across_pacific_ocean
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_new_powers_against_old_empires
+		}
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_our_ocean
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_economic_cooperation_binding"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_pan_FORPOL_world_new_order
+		icon = GFX_goal_SZC_pan_FORPOL_world_new_order
+		cost = 2
+
+		x = 0
+		y = 3
+
+		relative_position_id = SZC_pan_FORPOL_friendship_across_pacific_ocean
+
+		prerequisite = {
+			focus = SZC_pan_FORPOL_economic_cooperation_binding
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_world_new_order"
+			
+		}
+	}
+
 
 	
 }
