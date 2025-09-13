@@ -15,9 +15,9 @@ shared_focus = {
 	x = 24
 	y = 14
 
-	allow_branch = {
-		always = no
-	}
+	# allow_branch = {
+	# 	always = no
+	# }
 	available = {
 		is_subject = no
 	}
@@ -600,7 +600,7 @@ shared_focus = {
 			factor = 0
 			var:629.owner = {
 				naval_strength_ratio = {
-					tag = CHI
+					tag = SZC
 					ratio > 1
 				}
 			}
@@ -636,16 +636,16 @@ shared_focus = {
 		is_faction_leader = yes
 		custom_trigger_tooltip = {
 			tooltip = CHI_freed_core_tt
-			KOR = { is_ally_with = CHI }
-			JAP = { is_ally_with = CHI }
-			PHI = { is_ally_with = CHI }
+			KOR = { is_ally_with = SZC }
+			JAP = { is_ally_with = SZC }
+			PHI = { is_ally_with = SZC }
 			OR = {
 				AND = {
-					VIN = { is_ally_with = CHI }
-					CAM = { is_ally_with = CHI }
-					LAO = { is_ally_with = CHI }
+					VIN = { is_ally_with = SZC }
+					CAM = { is_ally_with = SZC }
+					LAO = { is_ally_with = SZC }
 				}
-				INC = { is_ally_with = CHI }
+				INC = { is_ally_with = SZC }
 			}
 			408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
 			336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
@@ -714,16 +714,16 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus SZC_FORPOL_imperialism_crushed_forevermore"
 		if = {
-			limit = { has_idea = SZC_FORPOL_lead_the_liberation_of_asia_wang_idea }
+			limit = { has_idea = CHI_FORPOL_lead_the_liberation_of_asia_wang_idea }
 			swap_ideas = {
-				remove_idea = SZC_FORPOL_lead_the_liberation_of_asia_wang_idea
-				add_idea = SZC_FORPOL_lead_the_liberation_of_asia_2_idea
+				remove_idea = CHI_FORPOL_lead_the_liberation_of_asia_wang_idea
+				add_idea = CHI_FORPOL_lead_the_liberation_of_asia_2_idea
 			}
 		}
 		else = {
 			swap_ideas = {
-				remove_idea = SZC_FORPOL_lead_the_liberation_of_asia_idea
-				add_idea = SZC_FORPOL_lead_the_liberation_of_asia_2_idea
+				remove_idea = CHI_FORPOL_lead_the_liberation_of_asia_idea
+				add_idea = CHI_FORPOL_lead_the_liberation_of_asia_2_idea
 			}
 		}
 		country_event = CHI.endgame.050
