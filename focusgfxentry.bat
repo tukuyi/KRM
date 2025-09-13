@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_YCP_shining_star_of_yellow_syndicalist
+python focusgfxentry.py SZC_pan_FORPOL_world_new_order
 pause
