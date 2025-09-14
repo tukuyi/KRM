@@ -4295,7 +4295,7 @@ SZC_pan_foreign_policy_category = {
 	SZC_KMT_invite_into_economic_sphere = {
 		icon = GFX_decision_global_trade
 
-		allowed = { always = no }
+		allowed = { is_economic_sphere_leader = yes }
 
 		visible = {
 			OR = {
@@ -4324,6 +4324,25 @@ SZC_pan_foreign_policy_category = {
 				}
 			}
 		}
+		target_trigger = {
+			FROM = {
+				is_ally_with = SZC
+				NOT = { has_country_flag = SZC_was_invited_into_partnership }
+				NOT = {
+					is_in_economic_sphere = yes
+				}
+				any_owned_state = {
+					is_capital = yes
+					OR = {
+						is_on_continent = asia
+						is_on_continent = australia
+						is_on_continent = india
+						is_on_continent = middle_east
+						is_on_continent = africa
+					}
+				}
+			}
+		}
 		ai_will_do = { factor = 50 }
 		target_non_existing = yes
 		cost = 50
@@ -4344,10 +4363,8 @@ SZC_pan_foreign_policy_category = {
 		allowed = { has_completed_focus = SZC_pan_FORPOL_socialist_reorganize }
 
 		visible = {
+			has_completed_focus = SZC_pan_FORPOL_socialist_reorganize
 			OR = {
-				AND = {
-					has_completed_focus = SZC_pan_FORPOL_socialist_reorganize
-				}
 				FROM = {
 					is_ally_with = SZC
 					NOT = { has_country_flag = SZC_FORPOL_reorganized }

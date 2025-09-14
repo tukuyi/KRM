@@ -1238,10 +1238,10 @@ SZC_ECON_SPHERE_ADD = {
 					has_completed_focus = SZC_pan_FORPOL_what_they_called_neocolonialism
 				}
 			}
-			add_idea = SZC_KMT_CSAT_member_2_idea
+			add_ideas = { SZC_KMT_CSAT_member_2_idea }
 		}
 		else = {
-			add_idea = SZC_KMT_CSAT_member_idea
+			add_ideas = { SZC_KMT_CSAT_member_idea }
 		}
 	}
 	if = {
@@ -1256,10 +1256,10 @@ SZC_ECON_SPHERE_ADD = {
 					has_completed_focus = SZC_pan_FORPOL_limited_sovereignity_theory
 				}
 			}
-			add_idea = SZC_KMT_EI_member_2_idea
+			add_ideas = { SZC_KMT_EI_member_2_idea }
 		}
 		else = {
-			add_idea = SZC_KMT_EI_member_idea
+			add_ideas = { SZC_KMT_EI_member_idea }
 		}
 	}
 	if = {
@@ -1268,7 +1268,7 @@ SZC_ECON_SPHERE_ADD = {
 				has_completed_focus = SZC_pan_FORPOL_kaiser_and_president
 			}
 		}
-		add_idea = SZC_KMT_member_of_sino_german_sphere_idea
+		add_ideas = { SZC_KMT_member_of_sino_german_sphere_idea }
 	}
 	if = {
 		limit = {
@@ -1276,7 +1276,7 @@ SZC_ECON_SPHERE_ADD = {
 				has_completed_focus = SZC_pan_FORPOL_friendship_across_pacific_ocean
 			}
 		}
-		add_idea = SZC_KMT_TPP_member_idea
+		add_ideas = { SZC_KMT_TPP_member_idea }
 	}
 	hidden_effect = {
 		set_temp_variable = { sphere_target = THIS }

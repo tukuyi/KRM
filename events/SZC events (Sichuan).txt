@@ -9325,9 +9325,11 @@ country_event = { #四川易帜
 			}
 		}
 		SZC_li_hongkun = {
-			army = {
-				large = GFX_portrait_SZC_li_hongkun_kmt_large
-				small = GFX_portrait_SZC_li_hongkun_kmt_small
+			set_portraits = {
+				army = {
+					large = GFX_portrait_SZC_li_hongkun_kmt_large
+					small = GFX_portrait_SZC_li_hongkun_kmt_small
+				}
 			}
 		}
 		SZC_wang_shimu = {
@@ -23610,7 +23612,6 @@ country_event = { #SZC邀请
 	picture = GFX_report_event_SZC_56
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#ojbk
@@ -23671,7 +23672,6 @@ country_event = { #FROM 加入
 	picture = GFX_report_event_SZC_56
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#nb
@@ -23750,7 +23750,6 @@ country_event = { #不加入你爸
 	picture = GFX_report_event_SZC_56
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#CS78
@@ -23770,7 +23769,6 @@ country_event = { #SZC要我们进经济圈
 	picture = GFX_report_event_SZC_56
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#OK
@@ -23794,7 +23792,6 @@ country_event = { #加了
 	picture = GFX_report_event_SZC_56
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#ok
@@ -23810,7 +23807,6 @@ country_event = { #没加
 	picture = GFX_report_event_SZC_56
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#司马了
@@ -23830,7 +23826,6 @@ country_event = { #中国希望加入帝国公约
 	picture = GFX_report_event_SZC_56
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#OK
@@ -23855,7 +23850,6 @@ country_event = { #加入辣
 	picture = GFX_report_event_generic_diplomacy3
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#哦耶
@@ -23871,7 +23865,6 @@ country_event = { #傻逼德国人
 	picture = GFX_report_event_SZC_56
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#草泥马
@@ -23892,7 +23885,6 @@ country_event = { #中国希望加入第三国际
 	picture = GFX_report_event_SZC_56
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#加加加
@@ -23917,7 +23909,6 @@ country_event = { #加入辣
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#哦耶
@@ -23933,7 +23924,6 @@ country_event = { #傻逼法国人
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#草泥马
@@ -23954,7 +23944,6 @@ country_event = { #中国希望和我们共进
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	
@@ -23989,7 +23978,6 @@ country_event = { #美国同意
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#中美，牢不可破！
@@ -24005,7 +23993,6 @@ country_event = { #傻逼美帝
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#草泥马
@@ -24026,7 +24013,6 @@ country_event = { #CSAT的地缘政治
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#
@@ -24042,7 +24028,6 @@ country_event = { #无偿援助革命
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#
@@ -24058,7 +24043,6 @@ country_event = { #最后的斗争
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#
@@ -24074,7 +24058,6 @@ country_event = { #中国希望接管德属东亚
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#这扯不扯兄弟
@@ -24109,7 +24092,6 @@ country_event = { #这扯不扯，gea就送我了
 	picture = GFX_report_event_SZC_56
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#提着昨日种种千辛万苦
@@ -24125,7 +24107,6 @@ country_event = { #回绝
 	picture = GFX_report_event_SZC_526
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 
 	option = {#寄人篱下...
