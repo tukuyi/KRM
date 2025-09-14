@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_TPP_sphere
+python focusgfxentry.py SZC_pan_CDL_FORPOL_seize_leadership_of_entente
 pause
