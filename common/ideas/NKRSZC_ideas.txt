@@ -1021,6 +1021,255 @@ ideas = {
 				stability_factor = -0.2
 			}
 		}	
+		SZC_KMT_lead_the_liberation_of_asia_idea = {#领导全亚太的解放
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_KMT_lead_the_liberation_of_asia_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				justify_war_goal_time = -0.3
+				stability_factor = 0.35
+				political_power_gain = 0.25
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+			}
+		}
+		SZC_KMT_eastern_leader_of_german_sphere_idea = {#德意志于东方的领袖
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_KMT_eastern_leader_of_german_sphere_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.1
+				targeted_modifier = {
+					tag = GER
+					trade_cost_for_target_factor = -0.35
+					extra_trade_to_target_factor = 0.35
+				}
+			}
+		}
+		SZC_KMT_giants_between_pacific_ocean_idea = {#太平洋两岸的巨人
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_KMT_giants_between_pacific_ocean_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.3
+				production_factory_max_efficiency_factor = 0.05
+				trade_opinion_factor = 20
+				if = {
+					limit = {
+						USA = {
+							exists = no
+						}
+						ACC = {
+							exists = no
+						}
+					}
+					targeted_modifier = {
+						tag = APG
+						trade_cost_for_target_factor = -0.2
+						extra_trade_to_target_factor = 0.2
+						cic_to_target_factor = 0.05
+					}
+				}
+				if = {
+					limit = {
+						APG = {
+							exists = no
+						}
+						ACC = {
+							exists = no
+						}
+					}
+					targeted_modifier = {
+						tag = USA
+						trade_cost_for_target_factor = -0.2
+						extra_trade_to_target_factor = 0.2
+						cic_to_target_factor = 0.05
+					}
+				}
+				if = {
+					limit = {
+						APG = {
+							exists = no
+						}
+						USA = {
+							exists = no
+						}
+					}
+					targeted_modifier = {
+						tag = ACC
+						trade_cost_for_target_factor = -0.2
+						extra_trade_to_target_factor = 0.2
+						cic_to_target_factor = 0.05
+					}
+				}
+				targeted_modifier = {
+					tag = SZC
+					trade_cost_for_target_factor = -0.2
+					extra_trade_to_target_factor = 0.2
+					cic_to_target_factor = 0.05
+				}
+			}
+		}
+		SZC_KMT_CSAT_leader_idea = {#广协同盟领袖
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_KMT_CSAT_leader_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.15
+				research_speed_factor = 0.1
+			}
+		}
+		SZC_KMT_EI_leader_idea = {#东方国际领袖
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_KMT_EI_leader_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.15
+				consumer_goods_factor = -0.2
+				production_factory_max_efficiency_factor = 0.05
+				research_speed_factor = 0.15
+				justify_war_goal_time_factor = -0.3
+			}
+		}
+		
+		SZC_KMT_member_of_sino_german_sphere_idea = {#中德势力圈成员
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_KMT_member_of_sino_german_sphere_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				construction_speed_factor = 0.2
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				army_org_factor = 0.05
+				targeted_modifier = {
+					tag = SZC
+					trade_cost_for_target_factor = -0.35
+					extra_trade_to_target_factor = 0.35
+				}
+				targeted_modifier = {
+					tag = GER
+					trade_cost_for_target_factor = -0.35
+					extra_trade_to_target_factor = 0.35
+				}
+			}
+		}
+		SZC_KMT_TPP_member_idea = {#TPP成员
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_KMT_TPP_member_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				construction_speed_factor = 0.3
+				trade_opinion_factor = 20
+				if = {
+					limit = {
+						USA = {
+							exists = no
+						}
+						ACC = {
+							exists = no
+						}
+					}
+					targeted_modifier = {
+						tag = APG
+						trade_cost_for_target_factor = -0.2
+						extra_trade_to_target_factor = 0.2
+						cic_to_target_factor = 0.1
+					}
+				}
+				if = {
+					limit = {
+						APG = {
+							exists = no
+						}
+						ACC = {
+							exists = no
+						}
+					}
+					targeted_modifier = {
+						tag = USA
+						trade_cost_for_target_factor = -0.2
+						extra_trade_to_target_factor = 0.2
+						cic_to_target_factor = 0.1
+					}
+				}
+				if = {
+					limit = {
+						APG = {
+							exists = no
+						}
+						USA = {
+							exists = no
+						}
+					}
+					targeted_modifier = {
+						tag = ACC
+						trade_cost_for_target_factor = -0.2
+						extra_trade_to_target_factor = 0.2
+						cic_to_target_factor = 0.1
+					}
+				}
+				targeted_modifier = {
+					tag = SZC
+					trade_cost_for_target_factor = -0.2
+					extra_trade_to_target_factor = 0.2
+					cic_to_target_factor = 0.1
+				}
+			}
+		}
+		SZC_KMT_CSAT_member_idea = {#广协同盟成员
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_KMT_CSAT_member_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.075
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.05
+				targeted_modifier = {
+					tag = SZC
+					trade_cost_for_target_factor = -0.2
+					extra_trade_to_target_factor = 0.2
+					cic_to_target_factor = 0.05
+				}
+			}
+		}
+		SZC_KMT_EI_member_idea = {#东方国际成员
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_KMT_EI_member_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.15
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				research_speed_factor = 0.075
+				targeted_modifier = {
+					tag = SZC
+					trade_cost_for_target_factor = -0.2
+					extra_trade_to_target_factor = 0.2
+					cic_to_target_factor = 0.05
+				}
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

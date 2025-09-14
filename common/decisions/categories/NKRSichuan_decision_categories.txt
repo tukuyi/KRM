@@ -67,3 +67,16 @@ SZC_YCP_balance_of_power_category = {
 	visible = { has_power_balance = { id = SZC_YCP_power_balance } }
 	priority = 0
 }
+
+SZC_pan_foreign_policy_category = {
+	
+	icon = GFX_decision_category_qing_hall
+	allowed = { original_tag = SZC }
+	visible = { 
+		OR = {
+			has_completed_focus = SZC_pan_FORPOL_spread_our_revolution
+		}
+	 }
+	priority = 1919
+	visible_when_empty = yes
+}

@@ -1190,3 +1190,47 @@ SZC_remove_industrial_ideas_effect = {
 		}
 	}
 }
+
+SZC_ECON_SPHERE_ADD = {
+	if = {
+		limit = {
+			SZC = {
+				has_completed_focus = SZC_pan_FORPOL_CSAT
+			}
+		}
+		add_idea = SZC_KMT_CSAT_member_idea
+	}
+	if = {
+		limit = {
+			SZC = {
+				has_completed_focus = SZC_pan_FORPOL_eastern_internationale
+			}
+		}
+		add_idea = SZC_KMT_EI_member_idea
+	}
+	if = {
+		limit = {
+			SZC = {
+				has_completed_focus = SZC_pan_FORPOL_kaiser_and_president
+			}
+		}
+		add_idea = SZC_KMT_member_of_sino_german_sphere_idea
+	}
+	if = {
+		limit = {
+			SZC = {
+				has_completed_focus = SZC_pan_FORPOL_friendship_across_pacific_ocean
+			}
+		}
+		add_idea = SZC_KMT_TPP_member_idea
+	}
+	hidden_effect = {
+		set_temp_variable = { sphere_target = THIS }
+		SZC = {
+			add_to_economic_sphere = yes
+			remove_opinion_modifier = { target = PREV modifier = KR_disapproves_of_govt }
+			remove_opinion_modifier = { target = PREV modifier = KR_hates_govt }
+			remove_opinion_modifier = { target = PREV modifier = KR_outraged }
+		}
+	}
+}

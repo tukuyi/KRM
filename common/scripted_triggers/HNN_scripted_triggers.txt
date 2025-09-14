@@ -8,3 +8,17 @@ uses_governorate_autonomy_state = {
 	overlord = { is_chinese_tag = yes }
 	is_chinese_tag = yes
 }
+
+SZC_KMT_is_socialist_or_allied_trigger = {
+	OR = {
+		AND = {
+			is_ally_with = SZC
+		}
+		AND = {
+			SZC = {
+				has_socialist_government = yes
+			}
+			has_socialist_government = yes
+		}
+	}
+}

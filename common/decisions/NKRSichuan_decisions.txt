@@ -4205,3 +4205,185 @@ foreign_politics = {
 		}
 	}
 }
+
+SZC_pan_foreign_policy_category = {
+	SZC_KMT_invite_countries_to_faction = {
+		icon = generic_agreement
+
+		allowed = { always = no }
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = SZC_KMT_invite_countries_to_faction_peace_requirement_tt
+				OR = {
+					AND = {
+						at_peace_or_same_enemies_as_FROM = yes
+						FROM = { at_peace_or_same_enemies_as_ROOT = yes }
+					}
+					FROM = { tag = HAW }
+				}
+			}
+			if = {
+				limit = {
+					FROM = { tag = ARM }
+				}
+				OR = {
+					is_in_faction_with = PER
+					is_in_faction_with = TUR
+				}
+			}
+		}
+
+		target_non_existing = yes
+		visible = {
+			is_faction_leader = yes
+			FROM = {
+				exists = yes
+				is_subject = no
+				has_capitulated = no
+				OR = {
+					is_in_faction = no
+					AND = {
+						original_tag = HAW
+						is_in_faction_with = INT
+					}
+					AND = {
+						original_tag = HND
+						is_faction_leader = yes
+						NOT = { is_in_faction_with = INT }
+					}
+					AND = {
+						original_tag = PER
+						is_faction_leader = yes
+						NOT = { is_in_faction_with = INT }
+					}
+				}
+				OR = {
+					AND = {
+						has_socialist_government = yes
+						FROM = { has_socialist_government = yes }
+					}
+					KMT_FROM_has_compatible_government_trigger = yes
+				}
+			}
+		}
+		cost = 10
+		days_remove = 7
+		fire_only_once = yes
+		ai_will_do = { base = 500 }
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_KMT_invite_countries_to_faction"
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove SZC_KMT_invite_countries_to_faction"
+			custom_effect_tooltip = KMT_invite_countries_to_faction_tt
+			if = {
+				limit = {
+					FROM = { original_tag = HAW }
+				}
+				custom_effect_tooltip = CHI_invite_HAW_warning_tt
+			}
+			FROM = { country_event = { id = NKRsichuanFP.1 days = 1 random_days = 3 } }
+		}
+	}
+
+	SZC_KMT_invite_into_economic_sphere = {
+		icon = GFX_decision_global_trade
+
+		allowed = { always = no }
+
+		visible = {
+			OR = {
+				AND = {
+					NOT = {
+						has_completed_focus = SZC_pan_FORPOL_kaiser_and_president
+					}
+					FROM = {
+						is_ally_with = SZC
+						NOT = { has_country_flag = SZC_was_invited_into_partnership }
+					}
+				}
+				FROM = {
+					is_ally_with = SZC
+					NOT = { has_country_flag = SZC_was_invited_into_partnership }
+					any_owned_state = {
+						is_capital = yes
+						OR = {
+							is_on_continent = asia
+							is_on_continent = australia
+							is_on_continent = india
+							is_on_continent = middle_east
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = { factor = 50 }
+		target_non_existing = yes
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_KMT_invite_into_economic_sphere"
+			FROM = {
+				set_country_flag = SZC_was_invited_into_partnership
+				country_event = { id = NKRsichuanFP.4 days = 3 } #An Invitation to the Minsheng Partnership
+			}
+		}
+	}
+
+	SZC_KMT_liberation_war_decision = {
+		icon = GFX_decision_lkmt_flag
+		allowed = { always = no }
+		available = {
+			can_declare_war_on = FROM
+			is_subject = no
+		}
+		visible = {
+			hidden_trigger = {
+				FROM = {
+					OR = {
+						any_owned_state = { OR = { is_claim_or_core_of_ROOT = yes } }
+					}
+					any_owned_state = {
+						OR = {
+							is_on_continent = asia
+							is_on_continent = australia
+							is_on_continent = india
+							is_on_continent = middle_east
+						}
+					}
+				}
+			}
+		}
+
+		cost = 35
+		days_remove = 30
+		fire_only_once = yes
+		war_with_target_on_remove = yes
+		cancel_if_not_visible = yes
+
+		cancel_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision cancel SZC_KMT_liberation_war_decision"
+			clear_decision_attack_AI = yes
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_KMT_liberation_war_decision"
+			FROM = { incoming_war_notification_effect = yes }
+			setup_decision_attack_AI = yes
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove SZC_KMT_liberation_war_decision"
+			clear_decision_attack_AI = yes
+			create_wargoal = {
+				target = FROM
+				type = topple_government
+			}
+		}
+	}
+
+}
