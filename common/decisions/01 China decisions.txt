@@ -1599,14 +1599,14 @@ chinese_unification = {
 						hidden_effect = { news_event = china_events.309 }
 					}
 					else = {
-						set_cosmetic_tag = LKT_united_china
+						set_cosmetic_tag = SZC_LKT_united_china
 						activate_targeted_decision = { decision = china_move_capital target = ROOT }
 						hidden_effect = { news_event = china_events.308 }
 					}
 				}
 				else_if = {
 					limit = { china_alignment_left_kuomintang = yes }
-					set_cosmetic_tag = SZC_LKT_united_china
+					set_cosmetic_tag = LKT_united_china
 					log = "KR_Event_Logging;CHINA UNITED BY Left-KMT"
 					hidden_effect = { news_event = china_events.308 }
 					add_ideas = GXC_kmt_demobilisation
