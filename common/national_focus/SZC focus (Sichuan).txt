@@ -16174,6 +16174,9 @@ focus_tree = {
 			NOT = {
 				has_completed_focus = SZC_pan_towards_liberation_of_all_asia
 			}
+			NOT = {
+				has_completed_focus = SZC_pan_panyaozi_the_true_revolutionary
+			}
 			OR = {
 				has_completed_focus = SZC_pan_a_party_for_all_chinese
 				has_completed_focus = SZC_pan_suns_true_heir
@@ -16511,6 +16514,14 @@ focus_tree = {
 			OR = {
 				has_completed_focus = SZC_pan_towards_liberation_of_all_asia
 				has_completed_focus = SZC_pan_abandon_the_foolish_internationalism
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						character = SZC_pan_wenhua
+					}
+				}
+				has_completed_focus = SZC_pan_panyaozi_the_true_revolutionary
 			}
 		}
 
@@ -17414,6 +17425,7 @@ focus_tree = {
 
 		available = {
 			has_completed_focus = SZC_pan_towards_liberation_of_all_asia
+			has_socialist_government = yes
 			INT = {
 				exists = yes
 			}
