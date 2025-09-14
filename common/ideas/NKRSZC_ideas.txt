@@ -1210,53 +1210,11 @@ ideas = {
 				construction_speed_factor = 0.3
 				trade_opinion_factor = 20
 			}
-			if = {
-				limit = {
-					USA = {
-						exists = no
-					}
-					ACC = {
-						exists = no
-					}
-				}
-				targeted_modifier = {
-					tag = APG
-					trade_cost_for_target_factor = -0.2
-					extra_trade_to_target_factor = 0.2
-					cic_to_target_factor = 0.1
-				}
-			}
-			if = {
-				limit = {
-					APG = {
-						exists = no
-					}
-					ACC = {
-						exists = no
-					}
-				}
-				targeted_modifier = {
-					tag = USA
-					trade_cost_for_target_factor = -0.2
-					extra_trade_to_target_factor = 0.2
-					cic_to_target_factor = 0.1
-				}
-			}
-			if = {
-				limit = {
-					APG = {
-						exists = no
-					}
-					USA = {
-						exists = no
-					}
-				}
-				targeted_modifier = {
-					tag = ACC
-					trade_cost_for_target_factor = -0.2
-					extra_trade_to_target_factor = 0.2
-					cic_to_target_factor = 0.1
-				}
+			targeted_modifier = {
+				tag = var:361.owner
+				trade_cost_for_target_factor = -0.2
+				extra_trade_to_target_factor = 0.2
+				cic_to_target_factor = 0.1
 			}
 			targeted_modifier = {
 				tag = SZC
