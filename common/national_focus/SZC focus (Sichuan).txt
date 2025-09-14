@@ -10063,7 +10063,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 50
+			add = 0
 			tag = SZC
 		}
 	}
@@ -15667,6 +15667,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_towards_liberation_of_all_asia"
+			complete_national_focus = SZC_pan_FORPOL_spread_our_revolution
 		}
 	}
 
@@ -16190,6 +16191,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_abandon_the_foolish_internationalism"
+			complete_national_focus = SZC_pan_FORPOL_spread_our_revolution
 		}
 	}
 
