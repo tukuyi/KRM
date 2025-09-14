@@ -15550,11 +15550,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_goal_GFX_goal_SZC_EI_sphere_shine"
-		texturefile = "gfx/interface/goals/SZC/GFX_goal_SZC_EI_sphere.png"
+		name = "GFX_goal_SZC_EI_sphere_shine"
+		texturefile = "gfx/interface/goals/SZC/SZC_EI_sphere.png"
 				effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/SZC/GFX_goal_SZC_EI_sphere.png"
+			animationmaskfile = "gfx/interface/goals/SZC/SZC_EI_sphere.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -15568,7 +15568,7 @@ spriteTypes = {
 
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/SZC/GFX_goal_SZC_EI_sphere.PNG"
+			animationmaskfile = "gfx/interface/goals/SZC/SZC_EI_sphere.PNG"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)

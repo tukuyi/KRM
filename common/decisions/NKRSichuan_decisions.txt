@@ -4263,7 +4263,10 @@ SZC_pan_foreign_policy_category = {
 						has_socialist_government = yes
 						FROM = { has_socialist_government = yes }
 					}
-					KMT_FROM_has_compatible_government_trigger = yes
+					SZC_MT_FROM_has_compatible_government_trigger = yes
+					SZC = {
+						has_completed_focus = SZC_pan_FORPOL_CSAT
+					}
 				}
 			}
 		}
@@ -4315,6 +4318,7 @@ SZC_pan_foreign_policy_category = {
 							is_on_continent = australia
 							is_on_continent = india
 							is_on_continent = middle_east
+							is_on_continent = africa
 						}
 					}
 				}

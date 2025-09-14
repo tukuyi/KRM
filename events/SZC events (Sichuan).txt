@@ -10232,6 +10232,7 @@ country_event = { #庆功宴
 		}
 		SZC_xie_chi = {
 			SZC_recruit_character_effect = yes
+			china_set_character_alignment_right_kuomintang = yes
 		}
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_xie_chi_advisor
@@ -23800,33 +23801,38 @@ country_event = { #中国希望加入帝国公约
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#OK
 		log = "[GetLogInfo]: event NKRsichuanFP.7 option NKRsichuanFP.7.a"
 		name = NKRsichuanFP.7.a
+		ai_chance = { base = 100 }
+		hidden_effect = { FROM = { country_event = { id = NKRsichuanFP.8 days = 4 } } }
+		faction_leader = { add_to_faction = FROM }
 	}
-	option = {#
+	option = {#爬
 		log = "[GetLogInfo]: event NKRsichuanFP.7 option NKRsichuanFP.7.b"
 		name = NKRsichuanFP.7.b
+		ai_chance = { base = 0 }
+		hidden_effect = { FROM = { country_event = { id = NKRsichuanFP.9 days = 4 } } }
 	}
 }
 
-country_event = { #
+country_event = { #加入辣
 	id = NKRsichuanFP.8
 	title = NKRsichuanFP.8.t
 	desc = NKRsichuanFP.8.d
-	picture = GFX_report_event_SZC_56
+	picture = GFX_report_event_generic_diplomacy3
 
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#哦耶
 		log = "[GetLogInfo]: event NKRsichuanFP.8 option NKRsichuanFP.8.a"
 		name = NKRsichuanFP.8.a
 	}
 }
 
-country_event = { #
+country_event = { #傻逼德国人
 	id = NKRsichuanFP.9
 	title = NKRsichuanFP.9.t
 	desc = NKRsichuanFP.9.d
@@ -23836,13 +23842,18 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#草泥马
 		log = "[GetLogInfo]: event NKRsichuanFP.9 option NKRsichuanFP.9.a"
 		name = NKRsichuanFP.9.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_disapproves_of_govt
+		}
+		uncomplete_national_focus = SZC_pan_FORPOL_kaiser_and_president
 	}
 }
 
-country_event = { #
+country_event = { #中国希望加入第三国际
 	id = NKRsichuanFP.10
 	title = NKRsichuanFP.10.t
 	desc = NKRsichuanFP.10.d
@@ -23852,13 +23863,22 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#加加加
 		log = "[GetLogInfo]: event NKRsichuanFP.10 option NKRsichuanFP.10.a"
 		name = NKRsichuanFP.10.a
+		ai_chance = { base = 100 }
+		hidden_effect = { FROM = { country_event = { id = NKRsichuanFP.8 days = 4 } } }
+		faction_leader = { add_to_faction = FROM }
+	}
+	option = {#爬
+		log = "[GetLogInfo]: event NKRsichuanFP.10 option NKRsichuanFP.10.b"
+		name = NKRsichuanFP.10.b
+		ai_chance = { base = 0 }
+		hidden_effect = { FROM = { country_event = { id = NKRsichuanFP.9 days = 4 } } }
 	}
 }
 
-country_event = { #
+country_event = { #加入辣
 	id = NKRsichuanFP.11
 	title = NKRsichuanFP.11.t
 	desc = NKRsichuanFP.11.d
@@ -23868,13 +23888,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#哦耶
 		log = "[GetLogInfo]: event NKRsichuanFP.11 option NKRsichuanFP.11.a"
 		name = NKRsichuanFP.11.a
 	}
 }
 
-country_event = { #
+country_event = { #傻逼法国人
 	id = NKRsichuanFP.12
 	title = NKRsichuanFP.12.t
 	desc = NKRsichuanFP.12.d
@@ -23884,13 +23904,18 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#草泥马
 		log = "[GetLogInfo]: event NKRsichuanFP.12 option NKRsichuanFP.12.a"
 		name = NKRsichuanFP.12.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_disapproves_of_govt
+		}
+		uncomplete_national_focus = SZC_pan_FORPOL_global_revolution_cause
 	}
 }
 
-country_event = { #
+country_event = { #中国希望和我们共进
 	id = NKRsichuanFP.13
 	title = NKRsichuanFP.13.t
 	desc = NKRsichuanFP.13.d
@@ -23900,13 +23925,32 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	
+	option = {#加加加
 		log = "[GetLogInfo]: event NKRsichuanFP.13 option NKRsichuanFP.13.a"
 		name = NKRsichuanFP.13.a
+		ai_chance = { base = 100 }
+		hidden_effect = { FROM = { country_event = { id = NKRsichuanFP.14 days = 4 } } }
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			add_to_faction = FROM
+		}
+		else = {
+			create_faction = SZC_NATO_faction
+			add_to_faction = FROM
+		}
+	}
+	option = {#爬
+		log = "[GetLogInfo]: event NKRsichuanFP.13 option NKRsichuanFP.13.b"
+		name = NKRsichuanFP.13.b
+		ai_chance = { base = 0 }
+		hidden_effect = { FROM = { country_event = { id = NKRsichuanFP.15 days = 4 } } }
 	}
 }
 
-country_event = { #
+country_event = { #美国同意
 	id = NKRsichuanFP.14
 	title = NKRsichuanFP.14.t
 	desc = NKRsichuanFP.14.d
@@ -23916,13 +23960,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#中美，牢不可破！
 		log = "[GetLogInfo]: event NKRsichuanFP.14 option NKRsichuanFP.14.a"
 		name = NKRsichuanFP.14.a
 	}
 }
 
-country_event = { #
+country_event = { #傻逼美帝
 	id = NKRsichuanFP.15
 	title = NKRsichuanFP.15.t
 	desc = NKRsichuanFP.15.d
@@ -23932,13 +23976,18 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#草泥马
 		log = "[GetLogInfo]: event NKRsichuanFP.15 option NKRsichuanFP.15.a"
 		name = NKRsichuanFP.15.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_disapproves_of_govt
+		}
+		uncomplete_national_focus = SZC_pan_FORPOL_friendship_across_pacific_ocean
 	}
 }
 
-country_event = { #
+country_event = { #CSAT的地缘政治
 	id = NKRsichuanFP.16
 	title = NKRsichuanFP.16.t
 	desc = NKRsichuanFP.16.d
@@ -23954,7 +24003,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #无偿援助革命
 	id = NKRsichuanFP.17
 	title = NKRsichuanFP.17.t
 	desc = NKRsichuanFP.17.d
@@ -23970,7 +24019,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #最后的斗争
 	id = NKRsichuanFP.18
 	title = NKRsichuanFP.18.t
 	desc = NKRsichuanFP.18.d
@@ -23986,7 +24035,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #中国希望接管德属东亚
 	id = NKRsichuanFP.19
 	title = NKRsichuanFP.19.t
 	desc = NKRsichuanFP.19.d
@@ -23996,14 +24045,32 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#这扯不扯兄弟
 		log = "[GetLogInfo]: event NKRsichuanFP.19 option NKRsichuanFP.19.a"
 		name = NKRsichuanFP.19.a
+		ai_chance = { base = 100 }
+		hidden_effect = { FROM = { country_event = { id = NKRsichuanFP.20 days = 2 } } }
+		every_state = {
+			limit = {
+				is_controlled_by = GEA
+				is_claimed_by = SZC
+			}
+			transfer_state_to = SZC
+		}
+		SZC = {
+			puppet = GEA
+		}
+	}
+	option = {#爬
+		log = "[GetLogInfo]: event NKRsichuanFP.19 option NKRsichuanFP.19.b"
+		name = NKRsichuanFP.19.b
+		ai_chance = { base = 0 }
+		hidden_effect = { FROM = { country_event = { id = NKRsichuanFP.21 days = 2 } } }
 	}
 }
 
 
-country_event = { #
+country_event = { #这扯不扯，gea就送我了
 	id = NKRsichuanFP.20
 	title = NKRsichuanFP.20.t
 	desc = NKRsichuanFP.20.d
@@ -24013,13 +24080,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#提着昨日种种千辛万苦
 		log = "[GetLogInfo]: event NKRsichuanFP.20 option NKRsichuanFP.20.a"
 		name = NKRsichuanFP.20.a
 	}
 }
 
-country_event = { #
+country_event = { #回绝
 	id = NKRsichuanFP.21
 	title = NKRsichuanFP.21.t
 	desc = NKRsichuanFP.21.d
@@ -24029,13 +24096,40 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#寄人篱下...
 		log = "[GetLogInfo]: event NKRsichuanFP.21 option NKRsichuanFP.21.a"
 		name = NKRsichuanFP.21.a
+		add_political_power = -150
+		add_stability = -0.1
+		add_war_support = 0.05
+	}
+
+	option = {#我草泥马
+		log = "[GetLogInfo]: event NKRsichuanFP.21 option NKRsichuanFP.21.b"
+		name = NKRsichuanFP.21.b
+		uncomplete_national_focus = {
+			focus = SZC_pan_FORPOL_kaiser_and_president
+			uncomplete_children = yes
+			refund_political_power = no
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_disapproves_of_govt
+		}
+		leave_faction = yes
+		remove_from_economic_sphere = yes
+		remove_ideas = {
+			SZC_KMT_eastern_leader_of_german_sphere_idea
+		}
+		hidden_effect = {
+			every_country = {
+				remove_idea = SZC_KMT_member_of_sino_german_sphere_idea
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #中德联合军事演习
 	id = NKRsichuanFP.22
 	title = NKRsichuanFP.22.t
 	desc = NKRsichuanFP.22.d
@@ -24045,13 +24139,16 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#牛逼
 		log = "[GetLogInfo]: event NKRsichuanFP.22 option NKRsichuanFP.22.a"
 		name = NKRsichuanFP.22.a
+		army_experience = 100
+		air_experience = 100
+		navy_experience = 100
 	}
 }
 
-country_event = { #
+country_event = { #雄鹰，白日
 	id = NKRsichuanFP.23
 	title = NKRsichuanFP.23.t
 	desc = NKRsichuanFP.23.d
@@ -24061,13 +24158,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#牛逼
 		log = "[GetLogInfo]: event NKRsichuanFP.23 option NKRsichuanFP.23.a"
 		name = NKRsichuanFP.23.a
 	}
 }
 
-country_event = { #
+country_event = { #反对旧世界
 	id = NKRsichuanFP.24
 	title = NKRsichuanFP.24.t
 	desc = NKRsichuanFP.24.d
@@ -24077,13 +24174,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#牛逼
 		log = "[GetLogInfo]: event NKRsichuanFP.24 option NKRsichuanFP.24.a"
 		name = NKRsichuanFP.24.a
 	}
 }
 
-country_event = { #
+country_event = { #新秩序
 	id = NKRsichuanFP.25
 	title = NKRsichuanFP.25.t
 	desc = NKRsichuanFP.25.d
@@ -24093,7 +24190,7 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#中美，巨人共同前行。
 		log = "[GetLogInfo]: event NKRsichuanFP.25 option NKRsichuanFP.25.a"
 		name = NKRsichuanFP.25.a
 	}

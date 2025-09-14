@@ -22,3 +22,41 @@ SZC_KMT_is_socialist_or_allied_trigger = {
 		}
 	}
 }
+SZC_KMT_FROM_has_compatible_government_trigger = {
+	#Remember this is scoped to FROM
+	is_monarchy = no
+	OR = {
+		#South East Asia
+		AND = {
+			tag = BRM
+			NOT = { ROOT = { is_ally_with = SIA } } #Burma won't ally with KMT if they are allied with Siam
+			OR = {
+				has_elected_government = yes
+				has_government = paternal_autocrat
+			}
+		}
+		AND = {
+			tag = PHI
+		}
+		AND = {
+			tag = INS
+			has_country_leader = { character = INS_sukarno }
+		}
+		AND = {
+			OR = {
+				tag = VIN
+				tag = INC
+			}
+			INC_has_VNQDD_government_trigger = yes
+		}
+
+		#Middle East
+		AND = {
+			tag = TUR
+			OR = {
+				has_country_leader = { character = TUR_ismet_inonu }
+				has_country_leader = { character = TUR_mehmet_recep_peker }
+			}
+		}
+	}
+}

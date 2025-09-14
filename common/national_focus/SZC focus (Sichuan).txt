@@ -16976,7 +16976,7 @@ focus_tree = {
 		available = {
 			is_faction_leader = yes
 			custom_override_tooltip = {
-				tooltip =  SZC_KMT_reed_core_tt
+				tooltip =  SZC_KMT_freed_core_tt
 				KOR = { is_ally_with = CHI }
 				JAP = { is_ally_with = CHI }
 				PHI = { is_ally_with = CHI }
@@ -17047,7 +17047,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_china_shining_over_the_world"
 			country_event = {
-				id = NKRsichuan.185
+				id = NKRsichuanFP.26
 			}
 			add_ideas = {
 				SZC_KMT_lead_the_liberation_of_asia_idea
@@ -17071,7 +17071,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_completed_decision = SZC_pan_abandon_the_foolish_internationalism
+			has_completed_focus = SZC_pan_abandon_the_foolish_internationalism
 		}
 
 		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
@@ -17086,7 +17086,9 @@ focus_tree = {
 			custom_effect_tooltip = SZC_pan_FORPOL_CSAT_tt
 			save_global_event_target_as = KR_CSAT_leader
 			create_economic_sphere = yes
-			add_idea = SZC_KMT_CSAT_leader_idea
+			add_ideas = {
+				SZC_KMT_CSAT_leader_idea
+			}
 			var:economic_sphere = {
 				set_character_name = SZC_CSAT_sphere
 				var:icon = { set_character_name = "GFX_goal_SZC_CSAT_sphere" }
@@ -17095,6 +17097,7 @@ focus_tree = {
 				set_variable = { green = 0.101 }
 				set_variable = { blue = 0.101 }
 			}
+			SZC_ECON_SPHERE_INVITE_SETUP = yes
 			hidden_effect = {
 				for_each_scope_loop = {
 					array = global.asian_tags_array
@@ -17150,7 +17153,27 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_geopolitics_first"
-			
+			country_event = {
+				id = NKRsichuanFP.16
+			}
+			custom_effect_tooltip = SZC_pan_FORPOL_geopolitics_first_tt
+			for_every_scople_loop = {
+				array = global.african_tags_array
+				if = {
+					limit = {
+						NOT = {
+							tag = MAF
+							tag = NFA
+						}
+					}
+					ROOT = {
+						activate_targeted_decision = { target = PREV decision = SZC_KMT_invite_countries_to_faction }
+					}
+					ROOT = {
+						activate_targeted_decision = { target = PREV decision = SZC_KMT_invite_into_economic_sphere }
+					}
+				}
+			}
 		}
 	}
 
@@ -17170,7 +17193,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_capital_expansion"
-			
+			swap_ideas = {
+				remove_idea = SZC_KMT_CSAT_leader_idea
+				add_idea = SZC_KMT_CSAT_leader_2_idea
+			}
+			add_political_power = 100
 		}
 	}
 
@@ -17194,7 +17221,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_what_they_called_neocolonialism"
-			
+			every_country = {
+				limit = {
+					is_in_faction_with = SZC
+					has_idea = SZC_KMT_CSAT_member_idea
+				}
+				swap_ideas = {
+					remove_idea = SZC_KMT_CSAT_member_idea
+					add_idea = SZC_KMT_CSAT_member_2_idea
+				}
+			}
+			add_political_power = 100
+			#puppet decision government
 		}
 	}
 
@@ -17214,7 +17252,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_completed_decision = SZC_pan_towards_liberation_of_all_asia
+			has_completed_focus = SZC_pan_towards_liberation_of_all_asia
 		}
 
 		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
@@ -17227,7 +17265,9 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_eastern_internationale"
 			create_faction = SZC_eastern_internationale_faction
 			custom_effect_tooltip = SZC_pan_FORPOL_eastern_internationale_tt
-			add_idea = SZC_KMT_EI_leader_idea
+			add_ideas = {
+				SZC_KMT_EI_leader_idea
+			}
 			save_global_event_target_as = KR_EI_leader
 			create_economic_sphere = yes
 			var:economic_sphere = {
@@ -17238,6 +17278,7 @@ focus_tree = {
 				set_variable = { green = 0.094 }
 				set_variable = { blue = 0.094 }
 			}
+			SZC_ECON_SPHERE_INVITE_SETUP = yes
 			hidden_effect = {
 				for_each_scope_loop = {
 					array = global.asian_tags_array
@@ -17294,7 +17335,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_aid_revolutionaries_freely"
-			
+			country_event = {
+				id = NKRsichuanFP.17
+			}
+			swap_idea = {
+				remove_idea = SZC_KMT_EI_leader_idea
+				add_idea = SZC_KMT_EI_leader_2_idea
+			}
 		}
 	}
 
@@ -17314,7 +17361,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_socialist_reorganize"
-			
+			add_political_power = 100
+			#puppet government
 		}
 	}
 
@@ -17335,6 +17383,17 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_limited_sovereignity_theory"
 			
+			every_country = {
+				limit = {
+					is_in_faction_with = SZC
+					has_idea = SZC_KMT_EI_member_idea
+				}
+				swap_ideas = {
+					remove_idea = SZC_KMT_EI_member_idea
+					add_idea = SZC_KMT_EI_member_2_idea
+				}
+			}
+			add_political_power = 100
 		}
 	}
 
@@ -17354,7 +17413,10 @@ focus_tree = {
 		}
 
 		available = {
-			has_completed_decision = SZC_pan_towards_liberation_of_all_asia
+			has_completed_focus = SZC_pan_towards_liberation_of_all_asia
+			INT = {
+				exists = yes
+			}
 		}
 
 		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
@@ -17365,7 +17427,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_global_revolution_cause"
-			
+			INT = {
+				country_event = {
+					id = NKRsichuanFP.10
+				}
+				custom_effect_tooltip = if_they_accept_tt
+				event_option_tooltip = NKRsichuanFP.10.a
+			}
 		}
 	}
 
@@ -17385,7 +17453,28 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_expand_MMIC_mission"
-			
+			add_timed_idea = {
+				idea = CHI_mmic_nra_cooperation_idea
+				days = 365
+			}
+			hidden_effect = {
+				remove_trait = {
+					character = SZC_MMIC
+					slot = theorist
+					trait = KR_council_of_theorists
+				}
+				add_trait = {
+					character = SZC_MMIC
+					slot = theorist
+					trait = KR_mmic_2
+				}
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = CHI_MMIC_idea
+					add_idea = CHI_MMIC_2_idea
+				}
+			}
 		}
 	}
 
@@ -17405,7 +17494,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_socialist_solidarity"
-			
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_ideas = {
+				SZC_KMT_merge_into_internationale_idea
+			}
 		}
 	}
 
@@ -17429,7 +17522,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_the_last_struggle"
-			
+			country_event = {
+				id = NKRsichuanFP.18
+			}
+			add_ideas = {
+				SZC_KMT_the_last_struggle_idea
+			}
 		}
 	}
 
@@ -17442,6 +17540,79 @@ focus_tree = {
 		y = 3
 
 		relative_position_id = SZC_pan_FORPOL_global_revolution_cause
+		available = {
+			OR = {
+				is_faction_leader = yes
+				is_in_faction_with = INT
+			}
+			custom_override_tooltip = {
+				tooltip =  SZC_KMT_freed_core_tt
+				KOR = { is_ally_with = CHI }
+				JAP = { is_ally_with = CHI }
+				PHI = { is_ally_with = CHI }
+				OR = {
+					AND = {
+						VIN = { is_ally_with = CHI }
+						CAM = { is_ally_with = CHI }
+						LAO = { is_ally_with = CHI }
+					}
+					INC = { is_ally_with = CHI }
+				}
+				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
+				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
+			}
+			#Outer Sphere - Just needs to be socialist
+			custom_override_tooltip = {
+				tooltip =  SZC_KMT_freed_india_tt
+				RAJ = { exists = no }
+				PRF = { exists = no }
+				var:320.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Madras
+				var:321.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Goa
+				var:323.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Nepal
+				var:324.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Bhutan
+				var:422.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Ceylon
+				var:426.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Orissa
+				var:427.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Hyderabad
+				var:428.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Gujarat
+				var:429.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Bombay
+				var:430.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #East Bengal
+				var:432.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Assam
+				var:433.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Rajputana
+				var:439.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Delhi
+				var:818.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Pondicherry
+				var:891.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Lahore
+			}
+			custom_override_tooltip = {
+				tooltip =  SZC_KMT_freed_SEA_tt
+				GEA = { exists = no }
+				DEI = { exists = no }
+				var:288.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Rangoon
+				var:289.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Bangkok
+				var:333.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #North Borneo
+				var:672.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Sumatra
+				var:1016.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #South Borneo
+				var:1020.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Batavia
+				var:721.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #East Timor
+			}
+			custom_override_tooltip = {
+				tooltip = SZC_KMT_freed_CEA_tt
+				var:267.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Kabul
+				var:405.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Bukhara
+				var:407.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Tashkent
+				var:861.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Khorezm
+				var:810.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Semipalatinsk
+			}
+			custom_override_tooltip = {
+				tooltip = SZC_KMT_freed_AST_tt
+				var:985.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Canberra
+				var:284.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #North Island
+				var:523.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #SE. New Guinea
+			}
+			custom_override_tooltip = {
+				tooltip = SZC_KMT_freed_HAW_tt
+				var:629.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Hawaii
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_pan_FORPOL_the_last_struggle
@@ -17449,7 +17620,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_a_world_set_free"
-			
+			country_event = {
+				id = NKRsichuanFP.26
+			}
+			add_ideas = {
+				SZC_KMT_lead_the_liberation_of_asia_idea
+			}
 		}
 	}
 
@@ -17469,7 +17645,10 @@ focus_tree = {
 		}
 
 		available = {
-			has_completed_decision = SZC_pan_abandon_the_foolish_internationalism
+			has_completed_focus = SZC_pan_abandon_the_foolish_internationalism
+			GER = {
+				exists = yes
+			}
 		}
 
 		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
@@ -17480,6 +17659,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_kaiser_and_president"
+			GER = {
+				country_event = {
+					id = NKRsichuanFP.7
+				}
+				custom_effect_tooltip = if_they_accept_tt
+				event_option_tooltip = NKRsichuanFP.7.a
+			}
 		}
 	}
 
@@ -17502,7 +17688,9 @@ focus_tree = {
 			custom_effect_tooltip = SZC_pan_FORPOL_observer_of_mittleeuropa_tt
 			save_global_event_target_as = KR_EME_leader
 			create_economic_sphere = yes
-			add_idea = SZC_KMT_eastern_leader_of_german_sphere_idea
+			add_ideas = {
+				SZC_KMT_eastern_leader_of_german_sphere_idea
+			}
 			var:economic_sphere = {
 				set_character_name = SZC_EME_sphere
 				var:icon = { set_character_name = "GFX_goal_SZC_EME_sphere" }
@@ -17511,7 +17699,24 @@ focus_tree = {
 				set_variable = { green = 0.329 }
 				set_variable = { blue = 0.352 }
 			}
-			
+			SZC_ECON_SPHERE_INVITE_SETUP = yes
+			for_every_scople_loop = {
+				array = global.african_tags_array
+				if = {
+					limit = {
+						NOT = {
+							tag = MAF
+							tag = NFA
+						}
+					}
+					ROOT = {
+						activate_targeted_decision = { target = PREV decision = SZC_KMT_invite_countries_to_faction }
+					}
+					ROOT = {
+						activate_targeted_decision = { target = PREV decision = SZC_KMT_invite_into_economic_sphere }
+					}
+				}
+			}
 		}
 	}
 
@@ -17531,7 +17736,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_german_east_asia_issue"
-			
+			GER = {
+				country_event = {
+					id = NKRsichuanFP.19
+				}
+				custom_effect_tooltip = if_they_accept_tt
+				event_option_tooltip = NKRsichuanFP.19.a
+			}
 		}
 	}
 
@@ -17551,7 +17762,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_integrate_into_reichspakt_system"
-			
+			country_event = {
+				id = NKRsichuanFP.22
+			}
+			swap_ideas = {
+				remove_idea = SZC_KMT_eastern_leader_of_german_sphere_idea
+				add_idea = SZC_KMT_eastern_leader_of_german_sphere_2_idea
+			}
 		}
 	}
 
@@ -17565,13 +17782,100 @@ focus_tree = {
 
 		relative_position_id = SZC_pan_FORPOL_kaiser_and_president
 
+		available = {
+			has_completed_focus = SZC_pan_FORPOL_german_east_asia_issue
+			has_completed_focus = SZC_pan_FORPOL_integrate_into_reichspakt_system
+		}
+		available = {
+			OR = {
+				is_faction_leader = yes
+				is_in_faction_with = GER
+			}
+			custom_override_tooltip = {
+				tooltip =  SZC_KMT_freed_core_tt
+				KOR = { is_ally_with = CHI }
+				JAP = { is_ally_with = CHI }
+				PHI = { is_ally_with = CHI }
+				OR = {
+					AND = {
+						VIN = { is_ally_with = CHI }
+						CAM = { is_ally_with = CHI }
+						LAO = { is_ally_with = CHI }
+					}
+					INC = { is_ally_with = CHI }
+				}
+				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
+				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
+			}
+			#Outer Sphere - Just needs to be socialist
+			custom_override_tooltip = {
+				tooltip =  SZC_KMT_freed_india_tt
+				RAJ = { exists = no }
+				PRF = { exists = no }
+				var:320.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Madras
+				var:321.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Goa
+				var:323.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Nepal
+				var:324.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Bhutan
+				var:422.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Ceylon
+				var:426.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Orissa
+				var:427.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Hyderabad
+				var:428.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Gujarat
+				var:429.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Bombay
+				var:430.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #East Bengal
+				var:432.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Assam
+				var:433.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Rajputana
+				var:439.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Delhi
+				var:818.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Pondicherry
+				var:891.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Lahore
+			}
+			custom_override_tooltip = {
+				tooltip =  SZC_KMT_freed_SEA_tt
+				GEA = { exists = no }
+				DEI = { exists = no }
+				var:288.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Rangoon
+				var:289.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Bangkok
+				var:333.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #North Borneo
+				var:672.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Sumatra
+				var:1016.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #South Borneo
+				var:1020.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Batavia
+				var:721.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #East Timor
+			}
+			custom_override_tooltip = {
+				tooltip = SZC_KMT_freed_CEA_tt
+				var:267.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Kabul
+				var:405.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Bukhara
+				var:407.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Tashkent
+				var:861.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Khorezm
+				var:810.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Semipalatinsk
+			}
+			custom_override_tooltip = {
+				tooltip = SZC_KMT_freed_AST_tt
+				var:985.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Canberra
+				var:284.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #North Island
+				var:523.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #SE. New Guinea
+			}
+			custom_override_tooltip = {
+				tooltip = SZC_KMT_freed_HAW_tt
+				var:629.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Hawaii
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_pan_FORPOL_observer_of_mittleeuropa
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_age_of_eagle_and_sun"
-			
+			country_event = {
+				id = NKRsichuanFP.23
+			}
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 100
+			swap_ideas = {
+				remove_idea = SZC_KMT_eastern_leader_of_german_sphere_2_idea
+				add_idea = SZC_KMT_eastern_leader_of_german_sphere_3_idea
+			}
 		}
 	}
 
@@ -17592,10 +17896,24 @@ focus_tree = {
 
 		available = {
 			has_completed_decision = SZC_pan_abandon_the_foolish_internationalism
+			has_global_flag = USA_civil_war_over_flag
+			if = {
+				limit = {
+					var:361.owner = {
+						is_american_tag = yes
+						has_socialist_government = no
+						OR = {
+							in_faction = no
+							is_faction_leader = yes
+						}
+					}
+				}
+			}
 		}
 
 		allow_branch = {
 			#ACW END BLA BLA BLA
+			# has_global_flag = USA_civil_war_over_flag
 		}
 
 		relative_position_id = SZC_pan_FORPOL_spread_our_revolution
@@ -17606,7 +17924,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_friendship_across_pacific_ocean"
-			
+			var:361.owner = {
+				country_event = {
+					id = NKRsichuanFP.13
+				}
+				custom_effect_tooltip = if_they_accept_tt
+				event_option_tooltip = NKRsichuanFP.13.a
+			}
 		}
 	}
 
@@ -17626,7 +17950,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_our_ocean"
-			
+			add_ideas = {
+				USA_Rules_the_waves_idea
+			}
+			navy_experience = 200
 		}
 	}
 
@@ -17646,7 +17973,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_new_powers_against_old_empires"
-			
+			country_event = {
+				id = NKRsichuanFP.24
+			}
+			add_war_support = 0.15
+			add_stability = 0.05
+			add_political_power = 100
 		}
 	}
 
@@ -17672,7 +18004,18 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_economic_cooperation_binding"
 			custom_effect_tooltip = SZC_pan_FORPOL_economic_cooperation_binding_tt
 			save_global_event_target_as = KR_TPP_leader
-			add_idea = SZC_KMT_giants_between_pacific_ocean_idea 
+			add_ideas = {
+				SZC_KMT_giants_between_pacific_ocean_idea
+			}
+			var:361.owner = {
+				add_ideas = {
+					SZC_KMT_giants_between_pacific_ocean_idea
+				}
+				set_temp_variable = { sphere_target = THIS }
+			}
+			SZC = {
+				add_to_economic_sphere = yes
+			}
 			create_economic_sphere = yes
 			var:economic_sphere = {
 				set_character_name = SZC_TPP_sphere
@@ -17681,6 +18024,24 @@ focus_tree = {
 				set_variable = { red = 0.231 }
 				set_variable = { green = 0.401 }
 				set_variable = { blue = 0.839 }
+			}
+			SZC_ECON_SPHERE_INVITE_SETUP = yes
+			for_every_scople_loop = {
+				array = global.african_tags_array
+				if = {
+					limit = {
+						NOT = {
+							tag = MAF
+							tag = NFA
+						}
+					}
+					ROOT = {
+						activate_targeted_decision = { target = PREV decision = SZC_KMT_invite_countries_to_faction }
+					}
+					ROOT = {
+						activate_targeted_decision = { target = PREV decision = SZC_KMT_invite_into_economic_sphere }
+					}
+				}
 			}
 		}
 	}
@@ -17694,6 +18055,79 @@ focus_tree = {
 		y = 3
 
 		relative_position_id = SZC_pan_FORPOL_friendship_across_pacific_ocean
+		available = {
+			OR = {
+				is_faction_leader = yes
+				is_in_faction_with = var:361.owner
+			}
+			custom_override_tooltip = {
+				tooltip =  SZC_KMT_freed_core_tt
+				KOR = { is_ally_with = CHI }
+				JAP = { is_ally_with = CHI }
+				PHI = { is_ally_with = CHI }
+				OR = {
+					AND = {
+						VIN = { is_ally_with = CHI }
+						CAM = { is_ally_with = CHI }
+						LAO = { is_ally_with = CHI }
+					}
+					INC = { is_ally_with = CHI }
+				}
+				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
+				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
+			}
+			#Outer Sphere - Just needs to be socialist
+			custom_override_tooltip = {
+				tooltip =  SZC_KMT_freed_india_tt
+				RAJ = { exists = no }
+				PRF = { exists = no }
+				var:320.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Madras
+				var:321.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Goa
+				var:323.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Nepal
+				var:324.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Bhutan
+				var:422.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Ceylon
+				var:426.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Orissa
+				var:427.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Hyderabad
+				var:428.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Gujarat
+				var:429.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Bombay
+				var:430.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #East Bengal
+				var:432.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Assam
+				var:433.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Rajputana
+				var:439.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Delhi
+				var:818.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Pondicherry
+				var:891.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Lahore
+			}
+			custom_override_tooltip = {
+				tooltip =  SZC_KMT_freed_SEA_tt
+				GEA = { exists = no }
+				DEI = { exists = no }
+				var:288.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Rangoon
+				var:289.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Bangkok
+				var:333.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #North Borneo
+				var:672.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Sumatra
+				var:1016.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #South Borneo
+				var:1020.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Batavia
+				var:721.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #East Timor
+			}
+			custom_override_tooltip = {
+				tooltip = SZC_KMT_freed_CEA_tt
+				var:267.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Kabul
+				var:405.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Bukhara
+				var:407.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Tashkent
+				var:861.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Khorezm
+				var:810.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Semipalatinsk
+			}
+			custom_override_tooltip = {
+				tooltip = SZC_KMT_freed_AST_tt
+				var:985.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Canberra
+				var:284.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #North Island
+				var:523.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #SE. New Guinea
+			}
+			custom_override_tooltip = {
+				tooltip = SZC_KMT_freed_HAW_tt
+				var:629.owner = { SZC_KMT_is_socialist_or_allied_trigger = yes } #Hawaii
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_pan_FORPOL_economic_cooperation_binding
@@ -17701,7 +18135,19 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_world_new_order"
-			
+			country_event = {
+				id = NKRsichuanFP.25
+			}
+			swap_ideas = {
+				remove_idea = SZC_KMT_giants_between_pacific_ocean_idea
+				add_idea = SZC_KMT_giants_between_pacific_ocean_2_idea
+			}
+			var:361.owner = {
+				swap_ideas = {
+					remove_idea = SZC_KMT_giants_between_pacific_ocean_idea
+					add_idea = SZC_KMT_giants_between_pacific_ocean_2_idea
+				}
+			}
 		}
 	}
 
