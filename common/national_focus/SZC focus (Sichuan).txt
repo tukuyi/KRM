@@ -16949,9 +16949,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_pacify_pacific_ocean"
-		activate_targeted_decision = { target = AST decision = SZC_KMT_KMT_liberation_war_decision }
-		activate_targeted_decision = { target = NZL decision = SZC_KMT_KMT_liberation_war_decision }
-		activate_targeted_decision = { target = var:629.owner decision = SZC_KMT_KMT_liberation_war_decision } #Honolulu
+		activate_targeted_decision = { target = AST decision = SZC_KMT_Kiberation_war_decision }
+		activate_targeted_decision = { target = NZL decision = SZC_KMT_liberation_war_decision }
+		activate_targeted_decision = { target = var:629.owner decision = SZC_KMT_liberation_war_decision } #Honolulu
 		if = {
 			limit = { var:629.owner = { NOT = { tag = HAW } } }
 			activate_targeted_decision = { target = HAW decision = SZC_KMT_liberation_war_decision }
