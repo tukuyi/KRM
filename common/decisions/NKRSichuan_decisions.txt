@@ -4338,6 +4338,62 @@ SZC_pan_foreign_policy_category = {
 		}
 	}
 
+	SZC_KMT_force_to_accept_our_doctrine = {
+		icon = GFX_decision_global_trade
+
+		allowed = { has_completed_focus = SZC_pan_FORPOL_socialist_reorganize }
+
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = SZC_pan_FORPOL_socialist_reorganize
+				}
+				FROM = {
+					is_ally_with = SZC
+					NOT = { has_country_flag = SZC_FORPOL_reorganized }
+					any_owned_state = {
+						is_capital = yes
+						OR = {
+							is_on_continent = asia
+							is_on_continent = australia
+							is_on_continent = india
+							is_on_continent = middle_east
+							is_on_continent = africa
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = { factor = 50 }
+		target_non_existing = yes
+		cost = 150
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_KMT_invite_into_economic_sphere"
+			
+			FROM = {
+				set_country_flag = SZC_FORPOL_reorganized
+				set_politics = {
+					ruling_party = var:current_party_ideology_group
+				}
+				if = {
+					limit = {
+						SZC = {
+							has_completed_focus = SZC_pan_socialist_solidarity
+						}
+						
+					set_country_leader_ideology = syndicalist_peoples_democracy_subtype
+					}
+				}
+				else = {
+					set_country_leader_ideology = radical_socialist_revolutionary_tridemist_subtype
+					set_country_leader_ideology = syndicalist_revolutionary_tridemist_subtype
+				}
+			}
+		}
+	}
+
 	SZC_KMT_liberation_war_decision = {
 		icon = GFX_decision_lkmt_flag
 		allowed = { always = no }
