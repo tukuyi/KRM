@@ -10063,7 +10063,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 50
 			tag = SZC
 		}
 	}
@@ -10570,9 +10570,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_pan_the_new_sun_rises
 
-		allow_branch = {
-			has_country_flag = NKRSZC_CDLpath_phase2
-		}
+		# allow_branch = {
+		# 	has_country_flag = NKRSZC_CDLpath_phase2
+		# }
 
 		select_effect = {
 			country_event = {
@@ -11548,9 +11548,9 @@ focus_tree = {
 		x = 4
 		y = 16
 
-		allow_branch = {
-			has_country_flag = NKRSZC_CDLpath_PWHcoup
-		}
+		# allow_branch = {
+		# 	has_country_flag = NKRSZC_CDLpath_PWHcoup
+		# }
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_iron_and_blood"
