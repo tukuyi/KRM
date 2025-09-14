@@ -1235,7 +1235,7 @@ SZC_ECON_SPHERE_ADD = {
 		if = {
 			limit = {
 				SZC = {
-					complete_national_focus = SZC_pan_FORPOL_what_they_called_neocolonialism
+					has_completed_focus = SZC_pan_FORPOL_what_they_called_neocolonialism
 				}
 			}
 			add_idea = SZC_KMT_CSAT_member_2_idea
@@ -1253,7 +1253,7 @@ SZC_ECON_SPHERE_ADD = {
 		if = {
 			limit = {
 				SZC = {
-					complete_national_focus = SZC_pan_FORPOL_limited_sovereignity_theory
+					has_completed_focus = SZC_pan_FORPOL_limited_sovereignity_theory
 				}
 			}
 			add_idea = SZC_KMT_EI_member_2_idea

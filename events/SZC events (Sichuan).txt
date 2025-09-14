@@ -10837,6 +10837,38 @@ country_event = { #革命志士
 			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
 			add_to_coalition = yes
 		}
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					has_socialist_government = no
+					NOT = {
+						original_tag = JAP
+						original_tag = KOR
+					}
+				}
+				set_politics = {
+					ruling_party = radical_socialist
+					elections_allowed = no
+				}
+			}
+			if = {
+				limit = { has_subject = JAP }
+				JAP_socialist_government = yes
+			}
+			if = {
+				limit = { has_subject = KOR }
+				KOR = {
+					drop_cosmetic_tag = yes
+					KOR_socialist_government = yes
+				}
+			}
+			if = {
+				limit = { has_subject = INC }
+				INC = {
+					INC_puppet_setup = yes
+				}
+			}
+		}
 	}
 }
 
@@ -23745,6 +23777,7 @@ country_event = { #SZC要我们进经济圈
 		log = "[GetLogInfo]: event NKRsichuanFP.4 option NKRsichuanFP.4.a"
 		name = NKRsichuanFP.4.a
 		hidden_effect = { FROM = { country_event = { id = NKRsichuanFP.5 days = 4 } } }
+		SZC_ECON_SPHERE_ADD = yes
 	}
 	option = {#pa
 		log = "[GetLogInfo]: event NKRsichuanFP.4 option NKRsichuanFP.4.b"
@@ -23767,7 +23800,6 @@ country_event = { #加了
 	option = {#ok
 		log = "[GetLogInfo]: event NKRsichuanFP.5 option NKRsichuanFP.5.a"
 		name = NKRsichuanFP.5.a
-		SZC_ECON_SPHERE_ADD = yes
 	}
 }
 

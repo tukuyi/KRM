@@ -4364,8 +4364,24 @@ SZC_pan_foreign_policy_category = {
 				}
 			}
 		}
+		target_trigger = {
+			FROM = {
+				is_ally_with = SZC
+				NOT = { has_country_flag = SZC_FORPOL_reorganized }
+				any_owned_state = {
+					is_capital = yes
+					OR = {
+						is_on_continent = asia
+						is_on_continent = australia
+						is_on_continent = india
+						is_on_continent = middle_east
+						is_on_continent = africa
+					}
+				}
+			}
+		}
 		ai_will_do = { factor = 50 }
-		target_non_existing = yes
+		target_non_existing = no
 		cost = 150
 		fire_only_once = yes
 
@@ -4374,19 +4390,21 @@ SZC_pan_foreign_policy_category = {
 			
 			FROM = {
 				set_country_flag = SZC_FORPOL_reorganized
-				set_politics = {
-					ruling_party = var:current_party_ideology_group
-				}
 				if = {
 					limit = {
 						SZC = {
 							has_completed_focus = SZC_pan_socialist_solidarity
 						}
-						
-					set_country_leader_ideology = syndicalist_peoples_democracy_subtype
 					}
+					set_politics = {
+						ruling_party = syndicalist
+					}
+					set_country_leader_ideology = syndicalist_peoples_democracy_subtype
 				}
 				else = {
+					set_politics = {
+						ruling_party = radical_socialist
+					}
 					set_country_leader_ideology = radical_socialist_revolutionary_tridemist_subtype
 					set_country_leader_ideology = syndicalist_revolutionary_tridemist_subtype
 				}
