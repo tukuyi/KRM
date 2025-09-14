@@ -10075,7 +10075,7 @@ focus_tree = {
 
 
 	default = no
-	continuous_focus_position = { x = 2350 y = 850 }
+	continuous_focus_position = { x = 4350 y = 850 }
 
 	shared_focus = SZC_Chengdu_Chongqing_Railway
 	shared_focus = SZC_Rebuild_The_Sichuanese_Army
@@ -14427,9 +14427,9 @@ focus_tree = {
 		y = 3
 		relative_position_id = SZC_pan_situation_under_control
 
-		# allow_branch = {
-		# 	has_country_flag = NKRSZC_joinkmt
-		# }
+		allow_branch = {
+			has_country_flag = NKRSZC_joinkmt
+		}
 
 		prerequisite = {
 			focus = SZC_pan_rally_our_men
@@ -15097,9 +15097,9 @@ focus_tree = {
 		x = 8
 		y = 12
 
-		# allow_branch = {
-		# 	has_country_flag = NKRSZC_kmtpostwar
-		# }
+		allow_branch = {
+			has_country_flag = NKRSZC_kmtpostwar
+		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_revolution_secured"
@@ -16527,9 +16527,9 @@ focus_tree = {
 			}
 		}
 
-		# allow_branch = {
-		# 	has_country_flag = NKRSZC_kmtpostwar
-		# }
+		allow_branch = {
+			has_country_flag = NKRSZC_kmtpostwar
+		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_spread_our_revolution"
