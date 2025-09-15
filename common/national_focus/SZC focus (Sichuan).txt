@@ -10063,7 +10063,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 30
 			tag = SZC
 		}
 	}
@@ -10075,11 +10075,11 @@ focus_tree = {
 
 
 	default = no
-	continuous_focus_position = { x = 4350 y = 850 }
+	continuous_focus_position = { x = 3350 y = 2250 }
 
 	shared_focus = SZC_Chengdu_Chongqing_Railway
-	shared_focus = SZC_Rebuild_The_Sichuanese_Army
-	shared_focus = SZC_Rebuild_The_Officer_Corps
+	# shared_focus = SZC_Rebuild_The_Sichuanese_Army
+	# shared_focus = SZC_Rebuild_The_Officer_Corps
 
 	shared_focus = CHS_reintegrate_academies
 	shared_focus = CHS_standardised_arsenals
@@ -19844,6 +19844,682 @@ focus_tree = {
 					add_idea = SZC_KMT_giants_between_pacific_ocean_2_idea
 				}
 			}
+		}
+	}
+
+	#潘鹞子军事树
+
+	focus = {
+		id = SZC_pan_rebuild_military_discipline
+		icon = GFX_goal_SZC_pan_rebuild_military_discipline
+		cost = 4
+
+		x = 31
+		y = 0
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_rebuild_military_discipline"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_reorganise_new_army
+		icon = GFX_goal_SZC_pan_reorganise_new_army
+		cost = 4
+
+		x = -3
+		y = 1
+
+		relative_position_id = SZC_pan_rebuild_military_discipline
+
+		prerequisite = {
+			focus = SZC_pan_rebuild_military_discipline
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_reorganise_new_army"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_infantry_core_role
+		icon = GFX_goal_SZC_pan_infantry_core_role
+		cost = 4
+
+		x = -4
+		y = 2
+
+		relative_position_id = SZC_pan_rebuild_military_discipline
+
+		prerequisite = {
+			focus = SZC_pan_reorganise_new_army
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_infantry_core_role"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_focus_on_artillery_power
+		icon = GFX_goal_SZC_pan_focus_on_artillery_power
+		cost = 4
+
+		x = -2
+		y = 2
+
+		relative_position_id = SZC_pan_rebuild_military_discipline
+
+		prerequisite = {
+			focus = SZC_pan_reorganise_new_army
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_focus_on_artillery_power"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_firepower_daze
+		icon = GFX_goal_SZC_pan_firepower_daze
+		cost = 4
+
+		x = -3
+		y = 3
+
+		relative_position_id = SZC_pan_rebuild_military_discipline
+
+		prerequisite = {
+			focus = SZC_pan_infantry_core_role
+		}
+
+		prerequisite = {
+			focus = SZC_pan_focus_on_artillery_power
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_firepower_daze"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_dark_man
+		icon = GFX_goal_SZC_pan_dark_man
+		cost = 4
+
+		x = 0
+		y = 1
+
+		relative_position_id = SZC_pan_rebuild_military_discipline
+
+		prerequisite = {
+			focus = SZC_pan_rebuild_military_discipline
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_dark_man"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_loyal_to_our_cause
+		icon = GFX_goal_SZC_pan_loyal_to_our_cause
+		cost = 4
+
+		x = 0
+		y = 3
+
+		relative_position_id = SZC_pan_rebuild_military_discipline
+
+		prerequisite = {
+			focus = SZC_pan_dark_man
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_loyal_to_our_cause"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_lius_radio
+		icon = GFX_goal_SZC_pan_lius_radio
+		cost = 4
+
+		x = 1
+		y = 2
+
+		relative_position_id = SZC_pan_rebuild_military_discipline
+
+		prerequisite = {
+			focus = SZC_pan_dark_man
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_lius_radio"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_new_military_doctrine
+		icon = GFX_goal_SZC_pan_new_military_doctrine
+		cost = 4
+
+		x = 4
+		y = 1
+
+		relative_position_id = SZC_pan_rebuild_military_discipline
+
+		prerequisite = {
+			focus = SZC_pan_rebuild_military_discipline
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_new_military_doctrine"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_lead_by_example
+		icon = GFX_goal_SZC_pan_lead_by_example
+		cost = 4
+
+		x = 3
+		y = 2
+
+		relative_position_id = SZC_pan_rebuild_military_discipline
+
+		prerequisite = {
+			focus = SZC_pan_new_military_doctrine
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_lead_by_example"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_deep_operations
+		icon = GFX_goal_SZC_pan_deep_operations
+		cost = 4
+
+		x = 4
+		y = 3
+
+		relative_position_id = SZC_pan_rebuild_military_discipline
+
+		prerequisite = {
+			focus = SZC_pan_lead_by_example
+		}
+
+		prerequisite = {
+			focus = SZC_pan_new_military_doctrine
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_deep_operations"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_go_out_of_sichuan
+		icon = GFX_goal_SZC_pan_go_out_of_sichuan
+		cost = 4
+
+		x = 0
+		y = 4
+
+		relative_position_id = SZC_pan_rebuild_military_discipline
+
+		prerequisite = {
+			focus = SZC_pan_loyal_to_our_cause
+		}
+
+		prerequisite = {
+			focus = SZC_pan_firepower_daze
+			focus = SZC_pan_deep_operations
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_go_out_of_sichuan"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_whampoa_spirit
+		icon = GFX_goal_SZC_pan_whampoa_spirit
+		cost = 4
+
+		x = 0
+		y = 1
+
+		relative_position_id = SZC_pan_go_out_of_sichuan
+
+		prerequisite = {
+			focus = SZC_pan_go_out_of_sichuan
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_whampoa_spirit"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_reform_military_academacy
+		icon = GFX_goal_SZC_pan_reform_military_academacy
+		cost = 4
+
+		x = -4
+		y = 1
+
+		relative_position_id = SZC_pan_whampoa_spirit
+
+		prerequisite = {
+			focus = SZC_pan_whampoa_spirit
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_reform_military_academacy"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_professionalize_officers
+		icon = GFX_goal_SZC_pan_professionalize_officers
+		cost = 4
+
+		x = -6
+		y = 2
+
+		relative_position_id = SZC_pan_whampoa_spirit
+
+		prerequisite = {
+			focus = SZC_pan_reform_military_academacy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_professionalize_officers"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_standardize_train
+		icon = GFX_goal_SZC_pan_standardize_train
+		cost = 4
+
+		x = -4
+		y = 2
+
+		relative_position_id = SZC_pan_whampoa_spirit
+
+		prerequisite = {
+			focus = SZC_pan_reform_military_academacy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_standardize_train"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_political_first
+		icon = GFX_goal_SZC_pan_political_first
+		cost = 4
+
+		x = -2
+		y = 2
+
+		relative_position_id = SZC_pan_whampoa_spirit
+
+		prerequisite = {
+			focus = SZC_pan_reform_military_academacy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_political_first"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_new_gen_of_whampoa
+		icon = GFX_goal_SZC_pan_new_gen_of_whampoa
+		cost = 4
+
+		x = -4
+		y = 4
+
+		relative_position_id = SZC_pan_whampoa_spirit
+
+		prerequisite = {
+			focus = SZC_pan_professionalize_officers
+		}
+
+		prerequisite = {
+			focus = SZC_pan_standardize_train
+		}
+
+		prerequisite = {
+			focus = SZC_pan_political_first
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_new_gen_of_whampoa"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_reform_logistics_system
+		icon = GFX_goal_SZC_pan_reform_logistics_system
+		cost = 4
+
+		x = 1
+		y = 1
+
+		relative_position_id = SZC_pan_whampoa_spirit
+
+		prerequisite = {
+			focus = SZC_pan_whampoa_spirit
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_reform_logistics_system"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_mingans_legacy
+		icon = GFX_goal_SZC_pan_mingans_legacy
+		cost = 4
+
+		x = 0
+		y = 2
+
+		relative_position_id = SZC_pan_whampoa_spirit
+
+		prerequisite = {
+			focus = SZC_pan_reform_logistics_system
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_mingans_legacy"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_powerful_engineer_corps
+		icon = GFX_goal_SZC_pan_powerful_engineer_corps
+		cost = 4
+
+		x = -1
+		y = 3
+
+		relative_position_id = SZC_pan_whampoa_spirit
+
+		prerequisite = {
+			focus = SZC_pan_mingans_legacy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_powerful_engineer_corps"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_seize_radar_technology
+		icon = GFX_goal_SZC_pan_seize_radar_technology
+		cost = 4
+
+		x = -2
+		y = 4
+
+		relative_position_id = SZC_pan_whampoa_spirit
+
+		prerequisite = {
+			focus = SZC_pan_powerful_engineer_corps
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_seize_radar_technology"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_long_live_baiqiuen
+		icon = GFX_goal_SZC_pan_long_live_baiqiuen
+		cost = 4
+
+		x = 0
+		y = 4
+
+		relative_position_id = SZC_pan_whampoa_spirit
+
+		prerequisite = {
+			focus = SZC_pan_mingans_legacy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_long_live_baiqiuen"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_mobilized_forces
+		icon = GFX_goal_SZC_pan_mobilized_forces
+		cost = 4
+
+		x = 2
+		y = 2
+
+		relative_position_id = SZC_pan_whampoa_spirit
+
+		prerequisite = {
+			focus = SZC_pan_reform_logistics_system
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_mobilized_forces"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_centralized_armored_forces
+		icon = GFX_goal_SZC_pan_centralized_armored_forces
+		cost = 4
+
+		x = 2
+		y = 3
+
+		relative_position_id = SZC_pan_whampoa_spirit
+
+		prerequisite = {
+			focus = SZC_pan_mobilized_forces
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_centralized_armored_forces"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_unitary_commands
+		icon = GFX_goal_SZC_pan_unitary_commands
+		cost = 4
+
+		x = 2
+		y = 4
+
+		relative_position_id = SZC_pan_whampoa_spirit
+
+		prerequisite = {
+			focus = SZC_pan_centralized_armored_forces
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_unitary_commands"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_qizhengpiaopiao
+		icon = GFX_goal_SZC_pan_qizhengpiaopiao
+		cost = 4
+
+		x = 0
+		y = 5
+
+		relative_position_id = SZC_pan_whampoa_spirit
+
+		prerequisite = {
+			focus = SZC_pan_unitary_commands
+		}
+
+		prerequisite = {
+			focus = SZC_pan_new_gen_of_whampoa
+		}
+
+		prerequisite = {
+			focus = SZC_pan_seize_radar_technology
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_qizhengpiaopiao"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_contact_patriotic_bussinessmen
+		icon = GFX_goal_SZC_pan_contact_patriotic_bussinessmen
+		cost = 4
+
+		x = 8
+		y = 1
+
+		relative_position_id = SZC_pan_go_out_of_sichuan
+
+		prerequisite = {
+			focus = SZC_pan_go_out_of_sichuan
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_contact_patriotic_bussinessmen"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_expand_central_research
+		icon = GFX_goal_SZC_pan_expand_central_research
+		cost = 4
+
+		x = -2
+		y = 1
+
+		relative_position_id = SZC_pan_contact_patriotic_bussinessmen
+
+		prerequisite = {
+			focus = SZC_pan_contact_patriotic_bussinessmen
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_expand_central_research"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_based_on_firepower_doctrine
+		icon = GFX_goal_SZC_pan_based_on_firepower_doctrine
+		cost = 4
+
+		x = -3
+		y = 2
+
+		relative_position_id = SZC_pan_contact_patriotic_bussinessmen
+
+		prerequisite = {
+			focus = SZC_pan_expand_central_research
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_based_on_firepower_doctrine"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_bigger_is_better
+		icon = GFX_goal_SZC_pan_bigger_is_better
+		cost = 4
+
+		x = -2
+		y = 3
+
+		relative_position_id = SZC_pan_contact_patriotic_bussinessmen
+
+		prerequisite = {
+			focus = SZC_pan_expand_central_research
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_bigger_is_better"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_what_used_to_forget
+		icon = GFX_goal_SZC_pan_what_used_to_forget
+		cost = 4
+
+		x = 4
+		y = 1
+
+		relative_position_id = SZC_pan_contact_patriotic_bussinessmen
+
+		prerequisite = {
+			focus = SZC_pan_contact_patriotic_bussinessmen
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_what_used_to_forget"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_new_flying_lessons
+		icon = GFX_goal_SZC_pan_new_flying_lessons
+		cost = 4
+
+		x = -3
+		y = 1
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_what_used_to_forget
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_new_flying_lessons"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_beiyang_navy_legacy
+		icon = GFX_goal_SZC_pan_beiyang_navy_legacy
+		cost = 4
+
+		x = 3
+		y = 1
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_what_used_to_forget
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_beiyang_navy_legacy"
 		}
 	}
 
