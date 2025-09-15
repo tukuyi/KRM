@@ -1229,6 +1229,24 @@ SZC_ECON_SPHERE_ADD = {
 	if = {
 		limit = {
 			SZC = {
+				has_completed_focus = SZC_pan_CDL_FORPOL_gold_brick_cooperation
+			}
+		}
+		if = {
+			limit = {
+				SZC = {
+					has_completed_focus = SZC_pan_CDL_FORPOL_expand_economic_influence
+				}
+			}
+			add_ideas = { SZC_CDL_PPO_member_2_idea }
+		}
+		else = {
+			add_ideas = { SZC_CDL_PPO_member_idea }
+		}
+	}
+	if = {
+		limit = {
+			SZC = {
 				has_completed_focus = SZC_pan_FORPOL_CSAT
 			}
 		}
@@ -1265,7 +1283,10 @@ SZC_ECON_SPHERE_ADD = {
 	if = {
 		limit = {
 			SZC = {
-				has_completed_focus = SZC_pan_FORPOL_kaiser_and_president
+				OR = {
+					has_completed_focus = SZC_pan_FORPOL_kaiser_and_president
+					has_completed_focus = SZC_pan_CDL_FORPOL_kaiser_and_president
+				}
 			}
 		}
 		add_ideas = { SZC_KMT_member_of_sino_german_sphere_idea }
@@ -1273,7 +1294,10 @@ SZC_ECON_SPHERE_ADD = {
 	if = {
 		limit = {
 			SZC = {
-				has_completed_focus = SZC_pan_FORPOL_friendship_across_pacific_ocean
+				OR = {
+					has_completed_focus = SZC_pan_FORPOL_friendship_across_pacific_ocean
+					has_completed_focus = SZC_pan_CDL_FORPOL_friendship_across_pacific_ocean
+				}
 			}
 		}
 		add_ideas = { SZC_KMT_TPP_member_idea }

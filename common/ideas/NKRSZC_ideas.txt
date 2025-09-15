@@ -1153,6 +1153,44 @@ ideas = {
 				research_speed_factor = 0.15
 			}
 		}
+		SZC_CDL_PPO_leader_idea = {#金砖合作国家领袖
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_CDL_PPO_leader_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.05
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				research_speed_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		SZC_CDL_PPO_leader_2_idea = {#金砖合作国家领袖
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_CDL_PPO_leader_2_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.3
+				war_support_factor = 0.075
+				consumer_goods_factor = -0.2
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.15
+				production_speed_industrial_complex_factor = 0.3
+			}
+		}
+		SZC_CDL_PPO_leader_3_idea = {#金砖合作国家领袖
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_CDL_PPO_leader_3_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.5
+				consumer_goods_factor = -0.25
+				production_factory_max_efficiency_factor = 0.2
+				research_speed_factor = 0.3
+				production_speed_industrial_complex_factor = 0.5
+			}
+		}
 		SZC_KMT_EI_leader_idea = {#东方国际领袖
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_KMT_EI_leader_idea" }
 			picture = CHI_liberation_of_east_asia
@@ -1261,6 +1299,40 @@ ideas = {
 				cic_to_target_factor = 0.15
 			}
 		}
+		SZC_CDL_PPO_member_idea = {#金砖合作国家成员
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_CDL_PPO_member_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.2
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.05
+				production_speed_industrial_complex_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = SZC
+				trade_cost_for_target_factor = -0.2
+				extra_trade_to_target_factor = 0.2
+				cic_to_target_factor = 0.05
+			}
+		}
+		SZC_CDL_PPO_member_2_idea = {#金砖合作国家成员
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_CDL_PPO_member_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.2
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.05
+				production_speed_industrial_complex_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = SZC
+				trade_cost_for_target_factor = -0.25
+				extra_trade_to_target_factor = 0.25
+				cic_to_target_factor = 0.1
+			}
+		}
 		SZC_KMT_EI_member_idea = {#东方国际成员
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_KMT_EI_member_idea" }
 			picture = CHI_liberation_of_east_asia
@@ -1323,6 +1395,41 @@ ideas = {
 				war_support_factor = 0.15
 				army_attack_against_major_factor = 0.15
 				army_defence_against_major_factor = 0.15
+			}
+		}
+		SZC_CDL_united_nations_member = {#联合国成员
+			on_add = { log = "[GetLogRoot]: add idea SZC_CDL_united_nations_member" }
+			name = GER_Union_of_Nations
+			picture = advisors_germany
+			allowed = { always = no }
+			modifier = {
+				justify_war_goal_time = 0.5
+				consumer_goods_factor = -0.15
+			}
+			targeted_modifier = {
+				tag = SZC
+				extra_trade_to_target_factor = 0.3
+				trade_cost_for_target_factor = -0.3
+			}
+		}
+		SZC_CDL_HK_cooperation_idea = {#香港合作
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_CDL_HK_cooperation_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_industrial_complex_factor = 0.25
+			}
+		}
+		SZC_CDL_help_reconstruction_idea = {#帮助重建
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_CDL_help_reconstruction_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.4
 			}
 		}
 

@@ -14680,43 +14680,6 @@ focus_tree = {
 				}
 				activate_targeted_decision = { target = var:1100.owner decision = SZC_KMT_liberation_war_decision } #Gwanbuk
 			}
-			
-		}
-	}
-
-	focus = {
-		id = SZC_pan_CDL_FORPOL_secure_safety_zone
-		icon = GFX_goal_SZC_pan_CDL_FORPOL_secure_safety_zone
-		cost = 2
-
-		x = 0
-		y = 3
-
-		relative_position_id = SZC_pan_CDL_FORPOL_return_to_world_stage
-
-		available = {
-			owns_state = 524 #Taiwan
-			owns_state = 743 #Shanghai
-			JAP = {
-				OR = {
-					has_war_with = ROOT
-					exists = no
-					has_capitulated = yes
-					is_subject = yes
-				}
-			}
-		}
-
-		prerequisite = {
-			focus = SZC_pan_CDL_FORPOL_tangnu_what
-		}
-
-		prerequisite = {
-			focus = SZC_pan_CDL_FORPOL_secure_the_subcontinent
-		}
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_secure_safety_zone"
 					
 			activate_targeted_decision = { target = GEA decision = SZC_KMT_liberation_war_decision }
 			activate_targeted_decision = { target = INC decision = SZC_KMT_liberation_war_decision }
@@ -14784,6 +14747,49 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SZC_pan_CDL_FORPOL_secure_safety_zone
+		icon = GFX_goal_SZC_pan_CDL_FORPOL_secure_safety_zone
+		cost = 2
+
+		x = 0
+		y = 3
+
+		relative_position_id = SZC_pan_CDL_FORPOL_return_to_world_stage
+
+		available = {
+			owns_state = 524 #Taiwan
+			owns_state = 743 #Shanghai
+			JAP = {
+				OR = {
+					has_war_with = ROOT
+					exists = no
+					has_capitulated = yes
+					is_subject = yes
+				}
+			}
+		}
+
+		prerequisite = {
+			focus = SZC_pan_CDL_FORPOL_tangnu_what
+		}
+
+		prerequisite = {
+			focus = SZC_pan_CDL_FORPOL_secure_the_subcontinent
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_secure_safety_zone"
+			activate_targeted_decision = { target = AST decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = NZL decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = var:629.owner decision = SZC_KMT_liberation_war_decision } #Honolulu
+			if = {
+				limit = { var:629.owner = { NOT = { tag = HAW } } }
+				activate_targeted_decision = { target = HAW decision = SZC_KMT_liberation_war_decision }
+			}
+		}
+	}
+
+	focus = {
 		id = SZC_pan_CDL_FORPOL_pacific_pact_organisation
 		icon = GFX_goal_SZC_pan_CDL_FORPOL_pacific_pact_organisation
 		cost = 2
@@ -14797,9 +14803,17 @@ focus_tree = {
 			focus = SZC_pan_CDL_FORPOL_return_to_world_stage
 		}
 
+		available = {
+			is_in_faction = no
+		}
+
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_pacific_pact_organisation"
 			
+			create_faction = SZC_PPO_faction
+			country_event = {
+				id = NKRsichuanFP.27
+			}
 			
 			
 		}
@@ -14822,8 +14836,21 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_gold_brick_cooperationn"
 			
-			
-			
+			custom_effect_tooltip = SZC_pan_CDL_FORPOL_gold_brick_cooperation_tt
+			save_global_event_target_as = KR_PPO_leader
+			create_economic_sphere = yes
+			add_ideas = {
+				SZC_CDL_PPO_leader_idea
+			}
+			var:economic_sphere = {
+				set_character_name = SZC_PPO_sphere
+				var:icon = { set_character_name = "GFX_goal_SZC_PPO_sphere" }
+				var:desc = { set_character_name = KR_PPO_desc }
+				set_variable = { red = 0.250 }
+				set_variable = { green = 0.608 }
+				set_variable = { blue = 0.898 }
+			}
+			SZC_ECON_SPHERE_INVITE_SETUP = yes
 		}
 	}
 
@@ -14841,10 +14868,23 @@ focus_tree = {
 			focus = SZC_pan_CDL_FORPOL_pacific_pact_organisation
 		}
 
+		available = {
+			has_completed_focus = SZC_pan_CDL_FORPOL_gold_brick_cooperation
+		}
+
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_expand_economic_influence"
-			
-			
+			add_political_power = 100
+			every_country = {
+				limit = {
+					is_in_faction_with = SZC
+					has_idea = SZC_CDL_PPO_member_idea
+				}
+				swap_ideas = {
+					remove_idea = SZC_CDL_PPO_member_idea
+					add_idea = SZC_CDL_PPO_member_2_idea
+				}
+			}
 			
 		}
 	}
@@ -14865,9 +14905,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_restore_cultural_exchange_legacy"
-			
-			
-			
+			add_political_power = 200
+			every_other_country = {
+				limit = {
+					is_in_faction_with = SZC
+				}
+				add_political_power = 100
+				add_stability = 0.1
+			}
+			country_event = {
+				id = NKRsichuanFP.28
+			}
 		}
 	}
 
@@ -14881,13 +14929,59 @@ focus_tree = {
 
 		relative_position_id = SZC_pan_CDL_FORPOL_pacific_pact_organisation
 
+		available = {
+			if = {
+				limit = { country_exists = USA }
+				ic_ratio = { tag = USA ratio > 1 }
+			}
+			else_if = {
+				limit = { country_exists = WCA }
+				ic_ratio = { tag = WCA ratio > 1 }
+			}
+			else_if = {
+				limit = { country_exists = ACC }
+				ic_ratio = { tag = ACC ratio > 1 }
+			}
+			else_if = {
+				limit = { country_exists = AUS }
+				ic_ratio = { tag = AUS ratio > 1 }
+			}
+			else_if = {
+				limit = { country_exists = NEE }
+				ic_ratio = { tag = NEE ratio > 1 }
+			}
+			if = {
+				limit = { country_exists = FRA }
+				ic_ratio = { tag = FRA ratio > 1 }
+			}
+			else_if = {
+				limit = { country_exists = NFA }
+				ic_ratio = { tag = NFA ratio > 1 }
+			}
+			if = {
+				limit = { country_exists = ENG }
+				ic_ratio = { tag = ENG ratio > 1 }
+			}
+			else_if = {
+				limit = { country_exists = IMP }
+				ic_ratio = { tag = IMP ratio > 1 }
+			}
+			if = {
+				limit = { country_exists = GER }
+				ic_ratio = { tag = GER ratio > 1 }
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_pan_CDL_FORPOL_pacific_pact_organisation
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_an_unavoidable_superpower_in_the_world"
-			
+			swap_ideas = {
+				remove_idea = SZC_CDL_PPO_leader_idea
+				add_idea = SZC_CDL_PPO_leader_2_idea
+			}
 			
 			
 		}
@@ -14903,13 +14997,35 @@ focus_tree = {
 
 		relative_position_id = SZC_pan_CDL_FORPOL_pacific_pact_organisation
 
+		available = {
+			has_completed_focus = SZC_pan_CDL_FORPOL_an_unavoidable_superpower_in_the_world
+		}
+
 		prerequisite = {
 			focus = SZC_pan_CDL_FORPOL_pacific_pact_organisation
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_proposal_of_united_nations"
-			
+			every_other_country = {
+				limit = {
+					NOT = {
+						has_war_with = SZC
+					}
+				}
+				country_event = NKRsichuanFP.29
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				every_other_country = {
+					limit = {
+						NOT = {
+							has_war_with = SZC
+						}
+					}
+					add_ideas = SZC_CDL_united_nations_member
+				}
+			}
 			
 			
 		}
@@ -14924,6 +15040,100 @@ focus_tree = {
 		y = 4
 
 		relative_position_id = SZC_pan_CDL_FORPOL_return_to_world_stage
+		
+		available = {
+			if = {
+				limit = { country_exists = USA }
+				USA = {
+					OR = {
+						has_idea = SZC_CDL_united_nations_member
+						is_in_faction_with = SZC
+					}
+				}
+			}
+			else_if = {
+				limit = { country_exists = WCA }
+				WCA = {
+					OR = {
+						has_idea = SZC_CDL_united_nations_member
+						is_in_faction_with = SZC
+					}
+				}
+			}
+			else_if = {
+				limit = { country_exists = ACC }
+				ACC = {
+					OR = {
+						has_idea = SZC_CDL_united_nations_member
+						is_in_faction_with = SZC
+					}
+				}
+			}
+			else_if = {
+				limit = { country_exists = AUS }
+				AUS = {
+					OR = {
+						has_idea = SZC_CDL_united_nations_member
+						is_in_faction_with = SZC
+					}
+				}
+			}
+			else_if = {
+				limit = { country_exists = NEE }
+				NEE = {
+					OR = {
+						has_idea = SZC_CDL_united_nations_member
+						is_in_faction_with = SZC
+					}
+				}
+			}
+			if = {
+				limit = { country_exists = FRA }
+				FRA = {
+					OR = {
+						has_idea = SZC_CDL_united_nations_member
+						is_in_faction_with = SZC
+					}
+				}
+			}
+			else_if = {
+				limit = { country_exists = NFA }
+				NFA = {
+					OR = {
+						has_idea = SZC_CDL_united_nations_member
+						is_in_faction_with = SZC
+					}
+				}
+			}
+			if = {
+				limit = { country_exists = ENG }
+				ENG = {
+					OR = {
+						has_idea = SZC_CDL_united_nations_member
+						is_in_faction_with = SZC
+					}
+				}
+			}
+			else_if = {
+				limit = { country_exists = IMP }
+				IMP = {
+					OR = {
+						has_idea = SZC_CDL_united_nations_member
+						is_in_faction_with = SZC
+					}
+				}
+			}
+			if = {
+				limit = { country_exists = GER }
+				GER = {
+					OR = {
+						has_idea = SZC_CDL_united_nations_member
+						is_in_faction_with = SZC
+					}
+				}
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_pan_CDL_FORPOL_proposal_of_united_nations
 		}
@@ -14938,9 +15148,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_peace_of_our_era"
-			
-			
-			
+			country_event = {
+				id = NKRsichuanFP.30
+			}
+			add_stability = 0.3
+			add_war_support = -0.3
+			swap_ideas = {
+				remove_idea = SZC_CDL_PPO_leader_2_idea
+				add_idea = SZC_CDL_PPO_leader_3_idea
+			}
 		}
 	}
 
@@ -15006,7 +15222,7 @@ focus_tree = {
 			}
 			var:economic_sphere = {
 				set_character_name = SZC_EME_sphere
-				var:icon = { set_character_name = "GFX_goal_SZC_EME_sphere" }
+				var:icon = { set_character_name = "GFX_goal_SZC_EME_sphere_nonKMT" }
 				var:desc = { set_character_name = KR_EME_desc }
 				set_variable = { red = 0.329 }
 				set_variable = { green = 0.329 }
@@ -15312,7 +15528,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_economic_cooperation_binding"
-			custom_effect_tooltip = SZC_pan_CDL_FORPOL_economic_cooperation_binding_tt
+			custom_effect_tooltip = SZC_pan_FORPOL_economic_cooperation_binding_tt
 			save_global_event_target_as = KR_TPP_leader
 			add_ideas = {
 				SZC_KMT_giants_between_pacific_ocean_idea
@@ -15492,7 +15708,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_once_the_devil_though"
-			
+			IMP = {
+				country_event = {
+					id = NKRsichuanFP.31
+				}
+				custom_effect_tooltip = if_they_accept_tt
+				event_option_tooltip = NKRsichuanFP.31.a
+			}
 		}
 	}
 
@@ -15514,7 +15736,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_equal_sinoanglo_relationship"
-			
+			add_ideas = {
+				SZC_CDL_HK_cooperation_idea
+			}
+			set_country_flag = CAN_invited_to_iedc
+			custom_effect_tooltip = CAN_joins_iedc
+			set_temp_variable = { ENT_pp_investment = 25 }
+			CAN_add_iedc_pp = yes
+			hidden_effect = {
+				FROM = { country_event = entente.3 }
+				country_event = { id = entente.5 days = 1 }
+			}
 		}
 	}
 
@@ -15526,7 +15758,16 @@ focus_tree = {
 		x = -1
 		y = 2
 
-		
+		available = {
+			OR = {
+				GBR = {
+					exists = yes
+				}
+				16 = {
+					is_controlled_by = NFA
+				}
+			}
+		}
 
 		relative_position_id = SZC_pan_CDL_FORPOL_once_the_devil_though
 
@@ -15536,7 +15777,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_help_reconstruction"
-			
+			add_timed_idea = {
+				idea = SZC_CDL_help_reconstruction_idea
+				days = 365
+			}
+			add_political_power = -100
 		}
 	}
 
@@ -15548,6 +15793,16 @@ focus_tree = {
 		x = 1
 		y = 2
 
+		available = {
+			NFA = {
+				exists = yes
+			}
+			IMP = {
+				NOT = {
+					original_tag = NFA
+				}
+			}
+		}
 		
 
 		relative_position_id = SZC_pan_CDL_FORPOL_once_the_devil_though
@@ -15558,7 +15813,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_deal_with_french"
-			
+			custom_effect_tooltip = SZC_pan_CDL_FORPOL_deal_with_french_tt
+			NFA = {
+				country_event = {
+					id = NKRsichuanFP.34
+				}
+			}
 		}
 	}
 
@@ -15570,6 +15830,9 @@ focus_tree = {
 		x = 0
 		y = 3
 
+		available = {
+			has_country_flag = SZC_CDL_FORPOL_french_accepted
+		}
 		
 
 		relative_position_id = SZC_pan_CDL_FORPOL_once_the_devil_though
@@ -15584,7 +15847,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_seize_leadership_of_entente"
-			
+			IMP = {
+				country_event = {
+					id = NKRsichuanFP.37
+				}
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			event_option_tooltip = NKRsichuanFP.37.a
 		}
 	}
 
@@ -18134,13 +18403,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_pacify_pacific_ocean"
-		activate_targeted_decision = { target = AST decision = SZC_KMT_liberation_war_decision }
-		activate_targeted_decision = { target = NZL decision = SZC_KMT_liberation_war_decision }
-		activate_targeted_decision = { target = var:629.owner decision = SZC_KMT_liberation_war_decision } #Honolulu
-		if = {
-			limit = { var:629.owner = { NOT = { tag = HAW } } }
-			activate_targeted_decision = { target = HAW decision = SZC_KMT_liberation_war_decision }
-		}
+			activate_targeted_decision = { target = AST decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = NZL decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = var:629.owner decision = SZC_KMT_liberation_war_decision } #Honolulu
+			if = {
+				limit = { var:629.owner = { NOT = { tag = HAW } } }
+				activate_targeted_decision = { target = HAW decision = SZC_KMT_liberation_war_decision }
+			}
 			
 		}
 	}
