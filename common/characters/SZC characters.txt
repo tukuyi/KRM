@@ -1302,6 +1302,24 @@ characters = {
 		}
 	}
 
+	#夏道平
+	SZC_xia_daoping = {
+		name = SZC_xia_daoping
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_xia_daoping_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_xia_daoping_advisor
+			ledger = civilian
+			traits = { SZC_austrian_economist }
+			cost = 150
+			desc = SZC_xia_daoping_desc
+		}
+	}
+
 
 
 

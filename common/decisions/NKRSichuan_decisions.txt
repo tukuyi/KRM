@@ -4481,4 +4481,76 @@ SZC_pan_foreign_policy_category = {
 		}
 	}
 
+	SZC_CDL_invite_into_federation_system = {
+		icon = GFX_decision_global_trade
+
+		allowed = { is_economic_sphere_leader = yes }
+
+		visible = {
+			has_completed_focus = SZC_pan_dream_of_a_federation
+		}
+		target_trigger = {
+			FROM = {
+				is_ally_with = ROOT
+				NOT = {
+					is_puppet_of = ROOT
+				}
+				any_owned_state = {
+					is_capital = yes
+					OR = {
+						is_on_continent = asia
+					}
+				}
+			}
+		}
+		ai_will_do = { factor = 50 }
+		target_non_existing = yes
+		cost = 250
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_CDL_invite_into_federation_system"
+			puppet = FROM
+		}
+	}
+
+	SZC_CDL_integrate_into_panasian_federation = {
+		icon = GFX_decision_global_trade
+
+		allowed = { is_economic_sphere_leader = yes }
+
+		visible = {
+			has_completed_focus = SZC_pan_our_finest_hours
+		}
+		target_trigger = {
+			FROM = {
+				is_puppet_of = ROOT
+				any_owned_state = {
+					is_capital = yes
+					OR = {
+						is_on_continent = asia
+					}
+				}
+			}
+		}
+		ai_will_do = { factor = 50 }
+		target_non_existing = yes
+		cost = 250
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_CDL_integrate_into_panasian_federation"
+			every_state = {
+				limit = {
+					is_controlled_by = FROM
+				}
+				add_core_of = ROOT
+			}
+			annex_country = {
+				target = FROM
+				transfer_troops = yes
+			}
+		}
+	}
+
 }

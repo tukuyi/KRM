@@ -11548,9 +11548,9 @@ focus_tree = {
 		x = 4
 		y = 16
 
-		# allow_branch = {
-		# 	has_country_flag = NKRSZC_CDLpath_PWHcoup
-		# }
+		allow_branch = {
+			has_country_flag = NKRSZC_CDLpath_PWHcoup
+		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_iron_and_blood"
@@ -11792,6 +11792,22 @@ focus_tree = {
 			add_ideas = {
 				SZC_pan_normalization_idea
 			}
+			if = {
+				limit = {
+					SZC_xia_daoping = {
+						is_political_advisor = yes
+					}
+				}
+				custom_effect_tooltip = SZC_xia_daoping_is_helpful_tt
+				custom_effect_tooltip = tooltip_white_line
+				add_one_random_civilian_factory = yes
+				add_one_random_civilian_factory = yes
+
+			}
+			else = {
+				custom_effect_tooltip = SZC_xia_daoping_will_be_helpful_tt
+				custom_effect_tooltip = tooltip_white_line
+			}
 		}
 	}
 	
@@ -11975,6 +11991,22 @@ focus_tree = {
 			add_ideas = {
 				SZC_pan_militarist_state_economy
 			}
+			if = {
+				limit = {
+					SZC_xia_daoping = {
+						is_political_advisor = yes
+					}
+				}
+				custom_effect_tooltip = SZC_xia_daoping_is_helpful_tt
+				custom_effect_tooltip = tooltip_white_line
+				add_one_random_military_factory = yes
+				add_one_random_military_factory = yes
+
+			}
+			else = {
+				custom_effect_tooltip = SZC_xia_daoping_will_be_helpful_tt
+				custom_effect_tooltip = tooltip_white_line
+			}
 		}
 	}
 	
@@ -12047,6 +12079,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_laissez_faire_policy"
+			SZC_xia_daoping = {
+				SZC_recruit_character_effect = yes
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SZC_xia_daoping_advisor
 			country_event = {
 				id = NKRsichuan.303
 			}
@@ -12149,9 +12186,27 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_reduce_unnecessarty_expenses"
-			add_timed_idea = {
-				idea = SZC_pan_more_money
-				days = 365
+			if = {
+				limit = {
+					SZC_xia_daoping = {
+						is_political_advisor = yes
+					}
+				}
+				custom_effect_tooltip = SZC_xia_daoping_is_helpful_tt
+				custom_effect_tooltip = tooltip_white_line
+				add_timed_idea = {
+					idea = SZC_pan_more_money
+					days = 400
+				}
+			}
+			else = {
+				custom_effect_tooltip = SZC_xia_daoping_will_be_helpful_tt
+				custom_effect_tooltip = tooltip_white_line
+				
+				add_timed_idea = {
+					idea = SZC_pan_more_money
+					days = 183
+				}
 			}
 			country_event = {
 				id = NKRsichuan.304
@@ -12233,6 +12288,19 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = SZC_pan_austrian_economy
 				add_idea = SZC_pan_austrian_economy_2
+			}
+			custom_effect_tooltip = SZC_pan_changyou_improved
+			hidden_effect = {
+				remove_trait = {
+					character = SZC_pan_changyou
+					slot = political_advisor
+					trait = SZC_pans_banker
+				}
+				add_trait = {
+					character = SZC_pan_changyou
+					slot = political_advisor
+					trait = SZC_pans_big_banker
+				}
 			}
 		}
 	}
@@ -12471,21 +12539,51 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.312
 			}
-			add_popularity = {
-				ideology = syndicalist
-				popularity = 0.03
+			if = {
+				limit = {
+					SZC_luo_longji = {
+						is_political_advisor = yes
+					}
+				}
+				custom_effect_tooltip = SZC_luo_longji_is_helpful_tt
+				custom_effect_tooltip = tooltip_white_line
+				
+				add_popularity = {
+					ideology = syndicalist
+					popularity = 0.06
+				}
+				add_popularity = {
+					ideology = radical_socialist
+					popularity = 0.06
+				}
+				add_popularity = {
+					ideology = social_democrat
+					popularity = 0.06
+				}
+				add_popularity = {
+					ideology = social_liberal
+					popularity = 0.06
+				}
 			}
-			add_popularity = {
-				ideology = radical_socialist
-				popularity = 0.03
-			}
-			add_popularity = {
-				ideology = social_democrat
-				popularity = 0.03
-			}
-			add_popularity = {
-				ideology = social_liberal
-				popularity = 0.03
+			else = {
+				custom_effect_tooltip = SZC_luo_longji_will_be_helpful_tt
+				custom_effect_tooltip = tooltip_white_line
+				add_popularity = {
+					ideology = syndicalist
+					popularity = 0.03
+				}
+				add_popularity = {
+					ideology = radical_socialist
+					popularity = 0.03
+				}
+				add_popularity = {
+					ideology = social_democrat
+					popularity = 0.03
+				}
+				add_popularity = {
+					ideology = social_liberal
+					popularity = 0.03
+				}
 			}
 			add_stability = 0.05
 		}
@@ -12934,9 +13032,28 @@ focus_tree = {
 				id = NKRsichuan.324
 				days = 7
 			}
-			add_to_variable = {
-				SZC_PS_mon_pop_var = 0.15
-				SZC_PS_con_good_var = 0.1
+			if = {
+				limit = {
+					SZC_fei_xiaotong = {
+						is_political_advisor = yes
+					}
+				}
+				custom_effect_tooltip = SZC_fei_xiaotong_is_helpful_tt
+				custom_effect_tooltip = tooltip_white_line
+				
+				add_to_variable = {
+					SZC_PS_mon_pop_var = 0.3
+					SZC_PS_con_good_var = 0.15
+				}
+			}
+			else = {
+				custom_effect_tooltip = SZC_fei_xiaotong_will_be_helpful_tt
+				custom_effect_tooltip = tooltip_white_line
+				
+				add_to_variable = {
+					SZC_PS_mon_pop_var = 0.15
+					SZC_PS_con_good_var = 0.1
+				}
 			}
 			custom_effect_tooltip = SZC_pan_poverty_alleviation_program_tt
 		}
@@ -12958,8 +13075,25 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_technology_innovation"
-			add_to_variable = {
-				SZC_PS_research_var = 0.2
+			if = {
+				limit = {
+					SZC_hu_yuzhi = {
+						is_political_advisor = yes
+					}
+				}
+				custom_effect_tooltip = SZC_hu_yuzhi_is_helpful_tt
+				custom_effect_tooltip = tooltip_white_line
+				add_to_variable = {
+					SZC_PS_research_var = 0.25
+				}
+			}
+			else = {
+				custom_effect_tooltip = SZC_hu_yuzhi_will_be_helpful_tt
+				custom_effect_tooltip = tooltip_white_line
+				
+				add_to_variable = {
+					SZC_PS_research_var = 0.2
+				}
 			}
 			custom_effect_tooltip = SZC_pan_technology_innovation_tt
 			country_event = {
@@ -12984,9 +13118,28 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_invest_technical_schools"
-			add_to_variable = {
-				SZC_PS_research_var = 0.05
-				SZC_PS_fac_max_var = 0.05
+			if = {
+				limit = {
+					SZC_hu_yuzhi = {
+						is_political_advisor = yes
+					}
+				}
+				custom_effect_tooltip = SZC_hu_yuzhi_is_helpful_tt
+				custom_effect_tooltip = tooltip_white_line
+				
+				add_to_variable = {
+					SZC_PS_research_var = 0.1
+					SZC_PS_fac_max_var = 0.1
+				}
+			}
+			else = {
+				custom_effect_tooltip = SZC_hu_yuzhi_will_be_helpful_tt
+				custom_effect_tooltip = tooltip_white_line
+				
+				add_to_variable = {
+					SZC_PS_research_var = 0.05
+					SZC_PS_fac_max_var = 0.05
+				}
 			}
 			custom_effect_tooltip = SZC_pan_invest_technical_schools_tt
 			country_event = {
@@ -13684,9 +13837,9 @@ focus_tree = {
 		x = 4
 		y = 16
 
-		allow_branch = {
-			has_country_flag = NKRSZC_CDLpath_ZLpresidency
-		}
+		# allow_branch = {
+		# 	has_country_flag = NKRSZC_CDLpath_ZLpresidency
+		# }
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_zhang_lan_presidency"
@@ -13849,6 +14002,19 @@ focus_tree = {
 			}
 			custom_effect_tooltip = SZC_pan_restore_centrist_marxism_tt
 			set_country_leader_ideology = social_democrat_centrist_marxist_subtype
+			custom_effect_tooltip = SZC_fan_piaozhai_improved
+			hidden_effect = {
+				remove_trait = {
+					character = piaozhai
+					slot = second_in_command
+					trait = SZC_democratic_student_sic
+				}
+				add_trait = {
+					character = piaozhai
+					slot = second_in_command
+					trait = SZC_democratic_student_2_sic
+				}
+			}
 		}
 	}
 
@@ -14348,6 +14514,17 @@ focus_tree = {
 			focus = SZC_pan_zhang_lan_presidency
 		}
 
+		available = {
+			has_completed_focus = SZC_pan_CDL_FORPOL_once_our_student
+			has_completed_focus = SZC_pan_CDL_FORPOL_pacific_pact_organisation
+			JAP = {
+				is_in_faction_with = ROOT
+			}
+			KOR = {
+				is_in_faction_with = ROOT
+			}
+		}
+
 		relative_position_id = SZC_pan_zhang_lan_presidency
 
 		completion_reward = {
@@ -14375,11 +14552,30 @@ focus_tree = {
 			focus = SZC_pan_east_asia_optimism
 		}
 
+		available = {
+			NOT = {
+				any_state_in = {
+					continent = asia
+					
+					is_owned_by_ROOT_or_ally = no
+				}
+			}
+		}
+
 		relative_position_id = SZC_pan_zhang_lan_presidency
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_dream_of_a_federation"
-			#没做，外交线弄了再说
+			unlock_decision_tooltip = SZC_CDL_invite_into_federation_system
+			every_state = {
+				limit = {
+					is_on_continent = asia
+				}
+				add_claim_by = ROOT
+			}
+			country_event = {
+				id = NKRsichuan.366
+			}
 		}
 	}
 
@@ -14396,11 +14592,33 @@ focus_tree = {
 			focus = SZC_pan_dream_of_a_federation
 		}
 
+		
+
+		available = {
+			NOT = {
+				any_state_in = {
+					continent = asia
+					
+					is_owned_by_ROOT_or_subject = no
+				}
+			}
+		}
+
 		relative_position_id = SZC_pan_zhang_lan_presidency
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_our_finest_hours"
-			#没做，外交线弄了再说
+			unlock_decision_tooltip = SZC_CDL_invite_into_federation_system
+			every_state = {
+				limit = {
+					is_on_continent = asia
+				}
+				enable_state_integration_80_compliance = yes
+			}
+			country_event = {
+				id = NKRsichuan.367
+			}
+			set_cosmetic_tag = SZC_PAF
 		}
 	}
 
@@ -15173,9 +15391,12 @@ focus_tree = {
 		}
 
 		available = {
-			GER = {
-				has_democratic_government = yes
-				has_authoritarian_government = no
+			OR = {
+				GER = {
+					has_democratic_government = yes
+					has_authoritarian_government = no
+				}
+				has_country_flag = NKRSZC_CDLpath_PWHcoup
 			}
 		}
 
@@ -15423,16 +15644,11 @@ focus_tree = {
 
 		available = {
 			has_global_flag = USA_civil_war_over_flag
-			if = {
-				limit = {
-					var:361.owner = {
-						is_american_tag = yes
-						has_socialist_government = no
-						OR = {
-							in_faction = no
-							is_faction_leader = yes
-						}
-					}
+			var:361.owner = {
+				has_socialist_government = no
+				OR = {
+					is_in_faction = no
+					is_faction_leader = yes
 				}
 			}
 		}
@@ -15747,6 +15963,16 @@ focus_tree = {
 				FROM = { country_event = entente.3 }
 				country_event = { id = entente.5 days = 1 }
 			}
+			if = {
+				limit = {
+					326 = {
+						is_controlled_by = AST
+					}
+				}
+				326 = {
+					transfer_state_to = ROOT
+				}
+			}
 		}
 	}
 
@@ -15782,6 +16008,13 @@ focus_tree = {
 				days = 365
 			}
 			add_political_power = -100
+			every_other_country = {
+				limit = {
+					is_in_faction_with = SZC
+				}
+				add_political_power = 850
+				add_stability = 0.15
+			}
 		}
 	}
 
@@ -19365,16 +19598,11 @@ focus_tree = {
 		available = {
 			has_completed_decision = SZC_pan_abandon_the_foolish_internationalism
 			has_global_flag = USA_civil_war_over_flag
-			if = {
-				limit = {
-					var:361.owner = {
-						is_american_tag = yes
-						has_socialist_government = no
-						OR = {
-							in_faction = no
-							is_faction_leader = yes
-						}
-					}
+			var:361.owner = {
+				has_socialist_government = no
+				OR = {
+					is_in_faction = no
+					is_faction_leader = yes
 				}
 			}
 		}
