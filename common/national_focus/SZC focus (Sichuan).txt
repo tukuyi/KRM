@@ -20505,6 +20505,171 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SZC_pan_expand_airport
+		icon = GFX_goal_SZC_pan_expand_airport
+		cost = 4
+
+		x = -4
+		y = 2
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_new_flying_lessons
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_expand_airport"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_develop_air_industry
+		icon = GFX_goal_SZC_pan_develop_air_industry
+		cost = 4
+
+		x = -4
+		y = 3
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_expand_airport
+		}
+
+		prerequisite = {
+			focus = SZC_pan_bigger_is_better
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_develop_air_industry"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_hiring_foreign_instructors
+		icon = GFX_goal_SZC_pan_hiring_foreign_instructors
+		cost = 4
+
+		x = -2
+		y = 2
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_new_flying_lessons
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_hiring_foreign_instructors"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_joint_air_combat
+		icon = GFX_goal_SZC_pan_joint_air_combat
+		cost = 4
+
+		x = -2
+		y = 3
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_hiring_foreign_instructors
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_joint_air_combat"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_flying_bears
+		icon = GFX_goal_SZC_pan_flying_bears
+		cost = 4
+
+		x = -1
+		y = 4
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_joint_air_combat
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_flying_bears"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_iron_rain
+		icon = GFX_goal_SZC_pan_iron_rain
+		cost = 4
+
+		x = -3
+		y = 4
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_joint_air_combat
+			focus = SZC_pan_develop_air_industry
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_iron_rain"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_air_ground_collaboration
+		icon = GFX_goal_SZC_pan_air_ground_collaboration
+		cost = 4
+
+		x = -5
+		y = 4
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_develop_air_industry
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_air_ground_collaboration"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_victory_in_the_sky
+		icon = GFX_goal_SZC_pan_victory_in_the_sky
+		cost = 4
+
+		x = -3
+		y = 5
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_air_ground_collaboration
+		}
+
+		prerequisite = {
+			focus = SZC_pan_iron_rain
+		}
+
+		prerequisite = {
+			focus = SZC_pan_flying_bears
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_victory_in_the_sky"
+		}
+	}
+
+	focus = {
 		id = SZC_pan_beiyang_navy_legacy
 		icon = GFX_goal_SZC_pan_beiyang_navy_legacy
 		cost = 4
@@ -20520,6 +20685,256 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_beiyang_navy_legacy"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_airport_on_sea
+		icon = GFX_goal_SZC_pan_beiyang_navy_legacy
+		cost = 4
+
+		x = 2
+		y = 2
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		mutually_exclusive = {
+			focus = SZC_pan_weltkrieg_experience
+		}
+
+		prerequisite = {
+			focus = SZC_pan_beiyang_navy_legacy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_beiyang_navy_legacy"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_weltkrieg_experience
+		icon = GFX_goal_SZC_pan_weltkrieg_experience
+		cost = 4
+
+		x = 4
+		y = 2
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		mutually_exclusive = {
+			focus = SZC_pan_airport_on_sea
+		}
+
+		prerequisite = {
+			focus = SZC_pan_beiyang_navy_legacy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_weltkrieg_experience"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_catch_the_rainbow
+		icon = GFX_goal_SZC_pan_catch_the_rainbow
+		cost = 4
+
+		x = 0
+		y = 3
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_airport_on_sea
+		}
+
+		prerequisite = {
+			focus = SZC_pan_new_flying_lessons
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_catch_the_rainbow"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_new_construction_plan
+		icon = GFX_goal_SZC_pan_new_construction_plan
+		cost = 4
+
+		x = 3
+		y = 3
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_airport_on_sea
+			focus = SZC_pan_weltkrieg_experience
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_new_construction_plan"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_high_speed_theory
+		icon = GFX_goal_SZC_pan_high_speed_theory
+		cost = 4
+
+		x = 1
+		y = 4
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_new_construction_plan
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_high_speed_theory"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_man_the_guns
+		icon = GFX_goal_SZC_pan_man_the_guns
+		cost = 4
+
+		x = 3
+		y = 4
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_new_construction_plan
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_man_the_guns"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_landing_combat_focus
+		icon = GFX_goal_SZC_pan_landing_combat_focus
+		cost = 4
+
+		x = 5
+		y = 4
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_new_construction_plan
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_landing_combat_focus"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_rule_the_waves
+		icon = GFX_goal_SZC_pan_rule_the_waves
+		cost = 4
+
+		x = 3
+		y = 5
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_landing_combat_focus
+		}
+		prerequisite = {
+			focus = SZC_pan_man_the_guns
+		}
+		prerequisite = {
+			focus = SZC_pan_high_speed_theory
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_rule_the_waves"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_sword_under_the_sea
+		icon = GFX_goal_SZC_pan_sword_under_the_sea
+		cost = 4
+
+		x = 6
+		y = 2
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_beiyang_navy_legacy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_sword_under_the_sea"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_leviathan
+		icon = GFX_goal_SZC_pan_leviathan
+		cost = 4
+
+		x = 5
+		y = 3
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_sword_under_the_sea
+		}
+		prerequisite = {
+			focus = SZC_pan_weltkrieg_experience
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_leviathan"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_expand_dockyard
+		icon = GFX_goal_SZC_pan_expand_dockyard
+		cost = 4
+
+		x = 8
+		y = 2
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_beiyang_navy_legacy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_expand_dockyard"
+		}
+	}
+
+	focus = {
+		id = SZC_pan_purchase_foreign_warships
+		icon = GFX_goal_SZC_pan_purchase_foreign_warships
+		cost = 4
+
+		x = 8
+		y = 3
+
+		relative_position_id = SZC_pan_what_used_to_forget
+
+		prerequisite = {
+			focus = SZC_pan_expand_dockyard
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_purchase_foreign_warships"
 		}
 	}
 
