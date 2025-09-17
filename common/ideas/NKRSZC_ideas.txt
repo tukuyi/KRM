@@ -1447,6 +1447,248 @@ ideas = {
 			}
 		}
 
+		SZC_pan_produce_plane_idea = {#扩大飞机生产
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_produce_plane_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			equipment_bonus = {
+				mio_cat_eq_all_aircraft = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+
+		SZC_pan_joint_air_combat_idea = {#联合空战
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_joint_air_combat_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				air_accidents_factor = -0.1
+				air_mission_efficiency = 0.15
+				air_mission_xp_gain_factor = 0.05
+			}
+		}
+
+		SZC_pan_joint_air_combat_2_idea = {#联合空战
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_joint_air_combat_2_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				air_accidents_factor = -0.15
+				air_mission_efficiency = 0.3
+				air_mission_xp_gain_factor = 0.15
+			}
+		}
+
+		SZC_pan_iron_rain_idea = {#铁雨
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_iron_rain_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				air_night_penalty = -0.2
+				air_strategic_bomber_bombing_factor = 0.3
+				air_strategic_bomber_night_penalty = -0.2
+				ground_attack_factor = 0.15
+			}
+		}
+
+		SZC_pan_local_support_from_air_idea = {#从天而降的支援
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_local_support_from_air_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				air_range_factor = 0.1
+				air_cas_efficiency = 0.2
+				air_cas_present_factor = 0.15
+			}
+		}
+
+		SZC_pan_airforce_the_best_idea = {#最好的空军
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_airforce_the_best_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				air_accidents_factor = -0.25
+				air_mission_efficiency = 0.35
+				air_mission_xp_gain_factor = 0.15
+				air_night_penalty = -0.25
+				air_strategic_bomber_bombing_factor = 0.3
+				air_strategic_bomber_night_penalty = -0.25
+				ground_attack_factor = 0.15
+				air_range_factor = 0.1
+				air_cas_efficiency = 0.25
+				air_cas_present_factor = 0.2
+				air_attack_factor = 0.15
+			}
+		}
+
+		SZC_pan_carrier_focus_idea = {#聚焦航母
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_carrier_focus_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				navy_carrier_air_agility_factor = 0.1
+				navy_carrier_air_attack_factor = 0.1
+				navy_screen_attack_factor = 0.1
+			}
+		}
+
+		SZC_pan_catch_the_rainbow_idea = {#彩虹捕手
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_catch_the_rainbow_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				navy_carrier_air_agility_factor = 0.15
+				navy_carrier_air_attack_factor = 0.15
+				navy_screen_attack_factor = 0.15
+				naval_night_attack = 0.3
+				navy_max_range_factor = 0.1
+				navy_carrier_air_agility_factor = 0.2
+				navy_carrier_air_attack_factor = 0.15
+				navy_carrier_air_targetting_factor = 0.1
+			}
+		}
+
+		SZC_pan_battleship_focus_idea = {#聚焦战列舰
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_battleship_focus_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				strike_force_movement_org_loss = -0.1
+				naval_coordination = 0.1
+			}
+		}
+
+		SZC_pan_leviathan_on_sea_idea = {#海上利维坦
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_leviathan_on_sea_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				strike_force_movement_org_loss = -0.3
+				naval_coordination = 0.25
+				naval_heavy_gun_hit_chance_factor = 0.25
+				navy_screen_defence_factor = 0.2
+				naval_damage_factor = 0.15
+			}
+		}
+
+		SZC_pan_ten_year_build_idea = {#十年大建
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_ten_year_build_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				refit_ic_cost = -0.35
+				refit_speed = 0.3
+				repair_speed_factor = 0.25
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+				screen_ship = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+				capital_ship = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+				carrier = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+			}
+		}
+
+		SZC_pan_fast_fleet_idea = {#高速舰队
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_fast_fleet_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			equipment_bonus = {
+				convoy = {
+					naval_speed = 0.1
+					instant = yes
+				}
+				submarine = {
+					naval_speed = 0.1
+					instant = yes
+				}
+				screen_ship = {
+					naval_speed = 0.1
+					instant = yes
+				}
+				capital_ship = {
+					naval_speed = 0.1
+					instant = yes
+				}
+				carrier = {
+					naval_speed = 0.1
+					instant = yes
+				}
+			}
+		}
+
+		SZC_pan_man_the_guns_idea = {#炮手就位
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_man_the_guns_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				naval_damage_factor = 0.1
+				naval_defense_factor = 0.1
+				naval_morale_factor = 0.15
+			}
+		}
+
+		SZC_pan_marine_focus_idea = {#登录专精
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_marine_focus_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				naval_invasion_prep_speed = 0.5
+			}
+		}
+
+		SZC_pan_rule_the_waves_idea = {#统治海洋
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_rule_the_waves_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				naval_invasion_prep_speed = 0.5
+				naval_damage_factor = 0.15
+				naval_defense_factor = 0.15
+				naval_morale_factor = 0.2
+				navy_org_factor = 0.15
+			}
+			equipment_bonus = {
+				convoy = {
+					naval_speed = 0.15
+					instant = yes
+				}
+				submarine = {
+					naval_speed = 0.15
+					instant = yes
+				}
+				screen_ship = {
+					naval_speed = 0.15
+					instant = yes
+				}
+				capital_ship = {
+					naval_speed = 0.15
+					instant = yes
+				}
+				carrier = {
+					naval_speed = 0.15
+					instant = yes
+				}
+			}
+		}
+
 
 
 
