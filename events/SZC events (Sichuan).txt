@@ -12518,6 +12518,7 @@ country_event = { #南京，朝阳升起
 		name = NKRsichuan.263.a
 		custom_effect_tooltip = CHI_focus_tree_will_change_tt
 		set_country_flag = NKRSZC_CDLpath_PWHcoup
+		set_country_flag = NKRSZC_CDLpath_phase3
 		add_manpower = -89
 		complete_national_focus = SZC_pan_against_all_odds
 		complete_national_focus = SZC_pan_iron_and_blood
@@ -12839,6 +12840,7 @@ country_event = { #就职典礼
 		log = "[GetLogInfo]: event NKRsichuan.275 option NKRsichuan.275.a"
 		name = NKRsichuan.275.a
 		set_country_flag = NKRSZC_CDLpath_ZLpresidency
+		set_country_flag = NKRSZC_CDLpath_phase3
 		custom_effect_tooltip = CHI_focus_tree_will_change_tt
 		complete_national_focus = SZC_pan_against_all_odds
 		complete_national_focus = SZC_pan_zhang_lan_presidency
@@ -12978,6 +12980,7 @@ country_event = { #就职典礼
 		log = "[GetLogInfo]: event NKRsichuan.279 option NKRsichuan.279.a"
 		name = NKRsichuan.279.a
 		set_country_flag = NKRSZC_CDLpath_LLJpresidency
+		set_country_flag = NKRSZC_CDLpath_phase3
 		custom_effect_tooltip = CHI_focus_tree_will_change_tt
 		complete_national_focus = SZC_pan_against_all_odds
 		complete_national_focus = SZC_pan_luo_longji_presidency
@@ -13170,6 +13173,7 @@ country_event = { #就职典礼
 		log = "[GetLogInfo]: event NKRsichuan.285 option NKRsichuan.285.a"
 		name = NKRsichuan.285.a
 		set_country_flag = NKRSZC_CDLpath_SJRpresidency
+		set_country_flag = NKRSZC_CDLpath_phase3
 		custom_effect_tooltip = CHI_focus_tree_will_change_tt
 		complete_national_focus = SZC_pan_against_all_odds
 		complete_national_focus = SZC_pan_shen_junru_presidency
@@ -25006,6 +25010,486 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanflavor.19 option NKRsichuanflavor.19.a"
 		name = NKRsichuanflavor.19.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.20
+	title = NKRsichuanflavor.20.t
+	desc = NKRsichuanflavor.20.d
+	picture = GFX_report_event_SZC_56
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.20 option NKRsichuanflavor.20.a"
+		name = NKRsichuanflavor.20.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.21
+	title = NKRsichuanflavor.21.t
+	desc = NKRsichuanflavor.21.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.21 option NKRsichuanflavor.21.a"
+		name = NKRsichuanflavor.21.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.22
+	title = NKRsichuanflavor.22.t
+	desc = NKRsichuanflavor.22.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.22 option NKRsichuanflavor.22.a"
+		name = NKRsichuanflavor.22.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.23
+	title = NKRsichuanflavor.23.t
+	desc = NKRsichuanflavor.23.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.23 option NKRsichuanflavor.23.a"
+		name = NKRsichuanflavor.23.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.24
+	title = NKRsichuanflavor.24.t
+	desc = NKRsichuanflavor.24.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.24 option NKRsichuanflavor.24.a"
+		name = NKRsichuanflavor.24.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.25
+	title = NKRsichuanflavor.25.t
+	desc = NKRsichuanflavor.25.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.25 option NKRsichuanflavor.25.a"
+		name = NKRsichuanflavor.25.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.26
+	title = NKRsichuanflavor.26.t
+	desc = NKRsichuanflavor.26.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.26 option NKRsichuanflavor.26.a"
+		name = NKRsichuanflavor.26.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.27
+	title = NKRsichuanflavor.27.t
+	desc = NKRsichuanflavor.27.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.27 option NKRsichuanflavor.27.a"
+		name = NKRsichuanflavor.27.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.28
+	title = NKRsichuanflavor.28.t
+	desc = NKRsichuanflavor.28.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.28 option NKRsichuanflavor.28.a"
+		name = NKRsichuanflavor.28.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.29
+	title = NKRsichuanflavor.29.t
+	desc = NKRsichuanflavor.29.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.29 option NKRsichuanflavor.29.a"
+		name = NKRsichuanflavor.29.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.30
+	title = NKRsichuanflavor.30.t
+	desc = NKRsichuanflavor.30.d
+	picture = GFX_report_event_SZC_56
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.30 option NKRsichuanflavor.30.a"
+		name = NKRsichuanflavor.30.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.31
+	title = NKRsichuanflavor.31.t
+	desc = NKRsichuanflavor.31.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.31 option NKRsichuanflavor.31.a"
+		name = NKRsichuanflavor.31.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.32
+	title = NKRsichuanflavor.32.t
+	desc = NKRsichuanflavor.32.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.32 option NKRsichuanflavor.32.a"
+		name = NKRsichuanflavor.32.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.33
+	title = NKRsichuanflavor.33.t
+	desc = NKRsichuanflavor.33.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.33 option NKRsichuanflavor.33.a"
+		name = NKRsichuanflavor.33.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.34
+	title = NKRsichuanflavor.34.t
+	desc = NKRsichuanflavor.34.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.34 option NKRsichuanflavor.34.a"
+		name = NKRsichuanflavor.34.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.35
+	title = NKRsichuanflavor.35.t
+	desc = NKRsichuanflavor.35.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.35 option NKRsichuanflavor.35.a"
+		name = NKRsichuanflavor.35.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.36
+	title = NKRsichuanflavor.36.t
+	desc = NKRsichuanflavor.36.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.36 option NKRsichuanflavor.36.a"
+		name = NKRsichuanflavor.36.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.37
+	title = NKRsichuanflavor.37.t
+	desc = NKRsichuanflavor.37.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.37 option NKRsichuanflavor.37.a"
+		name = NKRsichuanflavor.37.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.38
+	title = NKRsichuanflavor.38.t
+	desc = NKRsichuanflavor.38.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.38 option NKRsichuanflavor.38.a"
+		name = NKRsichuanflavor.38.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.39
+	title = NKRsichuanflavor.39.t
+	desc = NKRsichuanflavor.39.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.39 option NKRsichuanflavor.39.a"
+		name = NKRsichuanflavor.39.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.40
+	title = NKRsichuanflavor.40.t
+	desc = NKRsichuanflavor.40.d
+	picture = GFX_report_event_SZC_56
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.40 option NKRsichuanflavor.40.a"
+		name = NKRsichuanflavor.40.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.41
+	title = NKRsichuanflavor.41.t
+	desc = NKRsichuanflavor.41.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.41 option NKRsichuanflavor.41.a"
+		name = NKRsichuanflavor.41.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.42
+	title = NKRsichuanflavor.42.t
+	desc = NKRsichuanflavor.42.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.42 option NKRsichuanflavor.42.a"
+		name = NKRsichuanflavor.42.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.43
+	title = NKRsichuanflavor.43.t
+	desc = NKRsichuanflavor.43.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.43 option NKRsichuanflavor.43.a"
+		name = NKRsichuanflavor.43.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.44
+	title = NKRsichuanflavor.44.t
+	desc = NKRsichuanflavor.44.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.44 option NKRsichuanflavor.44.a"
+		name = NKRsichuanflavor.44.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.45
+	title = NKRsichuanflavor.45.t
+	desc = NKRsichuanflavor.45.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.45 option NKRsichuanflavor.45.a"
+		name = NKRsichuanflavor.45.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.46
+	title = NKRsichuanflavor.46.t
+	desc = NKRsichuanflavor.46.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.46 option NKRsichuanflavor.46.a"
+		name = NKRsichuanflavor.46.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.47
+	title = NKRsichuanflavor.47.t
+	desc = NKRsichuanflavor.47.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.47 option NKRsichuanflavor.47.a"
+		name = NKRsichuanflavor.47.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.48
+	title = NKRsichuanflavor.48.t
+	desc = NKRsichuanflavor.48.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.48 option NKRsichuanflavor.48.a"
+		name = NKRsichuanflavor.48.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.49
+	title = NKRsichuanflavor.49.t
+	desc = NKRsichuanflavor.49.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.49 option NKRsichuanflavor.49.a"
+		name = NKRsichuanflavor.49.a
 	}
 }
 

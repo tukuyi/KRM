@@ -14637,9 +14637,9 @@ focus_tree = {
 			#wait
 		}
 
-		# allow_branch = {
-		# 	has_country_flag = NKRSZC_CDLpath_phase3
-		# }
+		allow_branch = {
+			has_country_flag = NKRSZC_CDLpath_phase3
+		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_return_to_world_stage"
@@ -19864,6 +19864,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_rebuild_military_discipline"
+			add_war_support = 0.03
+			set_temp_variable = { ideology_change_var = 0.02 }
+			change_ruling_party_popularity = yes
+			army_experience = 50
 		}
 	}
 
@@ -19883,6 +19887,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_reorganise_new_army"
+			add_war_support = 0.02
+			add_command_power = 20
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				name = SZC_pan_reorganise_new_army
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -19901,7 +19913,19 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_pan_infantry_core_role"
+			log = "[GetLogRoot]: Focus Completed SZC_pan_infantry_core_role"		
+			add_tech_bonus = {
+				name = SZC_pan_infantry_core_role
+				bonus = 0.75
+				uses = 1
+				category = infantry_tech
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+				producer = SZC
+			}
+			enable_tech_mountain_warfare = yes
 		}
 	}
 
@@ -19921,6 +19945,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_focus_on_artillery_power"
+			add_tech_bonus = {
+				name = SZC_pan_focus_on_artillery_power
+				bonus = 0.75
+				uses = 1
+				category = artillery_tech
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500
+				producer = SZC
+			}
 		}
 	}
 
@@ -19944,6 +19979,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_firepower_daze"
+			army_experience = 20
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500
+				producer = SZC
+			}
+			enable_tech_anti_fortification_artillery = yes
 		}
 	}
 
@@ -19963,6 +20005,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_dark_man"
+			add_stability = -0.05
+			add_war_support = 0.1
+			add_command_power = 50
+			upgrade_intelligence_agency = upgrade_psycho_warfare
 		}
 	}
 
@@ -19982,6 +20028,22 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_loyal_to_our_cause"
+			every_character = {
+				limit = {
+					is_army_leader = yes
+					skill < 3
+				}
+				random_select_amount = 3
+				gain_xp = 500
+				add_max_trait = 1
+			}
+			every_character = {
+				limit = {
+					is_army_leader = yes
+				}
+				add_attack = 1
+			}
+			add_command_power = 50
 		}
 	}
 
@@ -20001,6 +20063,27 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_lius_radio"
+			if = {
+				limit = {
+					has_tech = radio
+				}
+				add_tech_bonus = {
+					name = SZC_pan_lius_radio
+					bonus = 1
+					uses = 1
+					category = electronics
+				}
+			}
+			else = {
+				set_technology = {
+					radio = 1
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 750
+				producer = SZC
+			}
 		}
 	}
 
@@ -20020,6 +20103,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_new_military_doctrine"
+			if = {
+				limit = { has_country_flag = china_has_poor_army }
+				china_army_reform_increase_step = yes
+			}
+			else = {
+				army_experience = 100
+			}
 		}
 	}
 
@@ -20039,6 +20129,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_lead_by_example"
+			set_technology = { tech_assault_battalion = 1 }
+			add_war_support = 0.05
 		}
 	}
 
@@ -20062,6 +20154,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_deep_operations"
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.8
+				name = SZC_pan_deep_operations
+				uses = 1
+				category = land_doctrine
+			}
+			every_character = {
+				limit = {
+					is_army_leader = yes
+				}
+				add_planning = 1
+			}
 		}
 	}
 
@@ -20086,6 +20190,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_go_out_of_sichuan"
+			add_ideas = {
+				SZC_pan_chuanjun_go_out_idea
+			}
 		}
 	}
 
@@ -27352,6 +27459,12 @@ focus_tree = {
 			}
 		}
 
+		allow_branch = {
+			NOT = {
+				has_country_flag = SZC_CDP_haha_real_time
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_new_china_market_economy
 		}
@@ -27386,7 +27499,7 @@ focus_tree = {
 		cost = 4
 
 		x = 0
-		y = 6
+		y = 5
 		relative_position_id = SZC_YCP_post_YCP_days
 
 		allow_branch = {
@@ -27394,7 +27507,15 @@ focus_tree = {
 		}
 
 		prerequisite = {
-			focus = SZC_YCP_china_free_from_tyrants
+			focus = SZC_YCP_new_china_market_economy
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_attract_investments
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_liberal_coalition
 		}
 
 

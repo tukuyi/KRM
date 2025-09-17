@@ -1435,6 +1435,20 @@ ideas = {
 
 
 
+		SZC_pan_chuanjun_go_out_idea = {#川军出川
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea 	SZC_pan_chuanjun_go_out_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.025
+				max_command_power_mult = 0.1
+			}
+		}
+
+
+
 
 
 
