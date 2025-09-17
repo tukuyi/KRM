@@ -21451,7 +21451,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_purchase_foreign_warships"
-			#unavailable now
+			custom_effect_tooltip = QIE_sicilyships_tt
+			custom_effect_tooltip = QIE_sic_ships_warning
+			hidden_effect = {
+				activate_targeted_decision = { target = FROM decision = SZC_sic_destroyers }
+				activate_targeted_decision = { target = FROM decision = SZC_sic_subs }
+				activate_targeted_decision = { target = FROM decision = SZC_sic_cruisers }
+				activate_targeted_decision = { target = FROM decision = SZC_sic_convoys }
+			}
 		}
 	}
 

@@ -4553,4 +4553,190 @@ SZC_pan_foreign_policy_category = {
 		}
 	}
 
+	SZC_sic_destroyers = {
+		icon = generic_naval
+
+		allowed = { always = no } #activated by SZC_utilising_european_dockyard or SZC_manchu_naval_academy (Manchu)
+
+		available = {
+			117 = { owner = { has_war = no } } #Campania
+			naval_base > 0
+		}
+
+		cancel_trigger = {
+			OR = {
+				117 = { owner = { has_war = yes } } #Campania
+				naval_base < 1
+			}
+		}
+
+		days_remove = 70
+		cost = 75
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				naval_strength_ratio = { tag = JAP ratio < 1 }
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision cancel SZC_sic_destroyers"
+			add_political_power = 75
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_sic_destroyers"
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove SZC_sic_destroyers"
+			QIE_create_variant_destroyer = yes
+			QIE_spawn_destroyers = yes
+			hidden_effect = {
+				remove_targeted_decision = { decision = SZC_sic_destroyers target = FROM }
+			}
+		}
+	}
+	SZC_sic_subs = {
+		icon = generic_naval
+
+		allowed = { always = no } #activated by SZC_utilising_european_dockyard or SZC_manchu_naval_academy (Manchu)
+
+		available = {
+			117 = { owner = { has_war = no } } #Campania
+			naval_base > 0
+		}
+
+		cancel_trigger = {
+			OR = {
+				117 = { owner = { has_war = yes } } #Campania
+				naval_base < 1
+			}
+		}
+
+		days_remove = 70
+		cost = 75
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				naval_strength_ratio = { tag = JAP ratio < 1 }
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision cancel SZC_sic_subs"
+			add_political_power = 75
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_sic_subs"
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove SZC_sic_subs"
+			QIE_create_variant_submarine = yes
+			QIE_spawn_submarines = yes
+			hidden_effect = {
+				remove_targeted_decision = { decision = SZC_sic_subs target = FROM }
+			}
+		}
+	}
+	SZC_sic_cruisers = {
+		icon = generic_naval
+
+		allowed = { always = no } #activated by SZC_utilising_european_dockyard or SZC_manchu_naval_academy (Manchu)
+
+		available = {
+			117 = { owner = { has_war = no } } #Campania
+			naval_base > 0
+		}
+
+		cancel_trigger = {
+			OR = {
+				117 = { owner = { has_war = yes } } #Campania
+				naval_base < 1
+			}
+		}
+
+		days_remove = 120
+		cost = 125
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				naval_strength_ratio = { tag = JAP ratio < 1 }
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision cancel SZC_sic_cruisers"
+			add_political_power = 125
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_sic_cruisers"
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove SZC_sic_cruisers"
+			QIE_create_variant_cruiser = yes
+			QIE_spawn_cruisers = yes
+			hidden_effect = {
+				remove_targeted_decision = { decision = SZC_sic_cruisers target = FROM }
+			}
+		}
+	}
+	SZC_sic_convoys = {
+		icon = generic_naval
+		allowed = { always = no }
+		available = { # Activated by focus SZC_utilising_european_dockyard or SZC_manchu_naval_academy (Manchu)
+			117 = { owner = { has_war = no } } #Campania
+			naval_base > 0
+		}
+
+		cancel_trigger = {
+			OR = {
+				117 = { owner = { has_war = yes } } #Campania
+				naval_base < 1
+			}
+		}
+
+		days_remove = 60
+		cost = 50
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 20
+				naval_strength_ratio = { tag = JAP ratio < 1 }
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision cancel SZC_sic_convoys"
+			add_political_power = 50
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_sic_convoys"
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove SZC_sic_convoys"
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 50
+			}
+			hidden_effect = {
+				remove_targeted_decision = { decision = SZC_sic_convoys target = FROM }
+			}
+		}
+	}
+
+
 }
