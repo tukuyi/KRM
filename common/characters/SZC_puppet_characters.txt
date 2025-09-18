@@ -1,0 +1,113 @@
+characters = {
+
+	#PUPPET
+	
+	#佩皮诺·加里波第
+	SZC_peppino_garibaldi = {
+		name = SZC_peppino_garibaldi
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_peppino_garibaldi_small
+				large = GFX_portrait_SZC_peppino_garibaldi_large
+			}
+		}
+		country_leader = {
+			desc = SZC_peppino_garibaldi_desc
+			ideology = authoritarian_democrat_statist_subtype
+			traits = { CHN_statist_aligned }
+		}
+	}
+	
+	#埃德加·荣格
+	SZC_edgar_jung = {
+		name = SZC_edgar_jung
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_edgar_jung_small
+				large = GFX_portrait_SZC_edgar_jung_large
+			}
+		}
+		country_leader = {
+			desc = SZC_edgar_jung_desc
+			ideology = national_populist_strum_drang_statist_subtype
+			traits = { CHN_statist_aligned }
+		}
+	}
+	
+	#朴正熙
+	SZC_park_chunghee = {
+		name = SZC_park_chunghee
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_park_chunghee_small
+				large = GFX_portrait_SZC_park_chunghee_large
+			}
+		}
+		country_leader = {
+			desc = SZC_park_chunghee_desc
+			ideology = syndicalist_market_syndicalist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = SZC_park_chunghee_desc
+			ideology = radical_socialist_revolutionary_tridemist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = SZC_park_chunghee_desc
+			ideology = social_conservative_orthodox_tridemist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = SZC_park_chunghee_desc
+			ideology = authoritarian_democrat_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = SZC_park_chunghee_desc
+			ideology = paternal_autocrat_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = SZC_park_chunghee_desc
+			ideology = national_populist_strum_drang_statist_subtype
+			traits = { }
+		}
+	}
+
+	JAP_shigemitsu_mamoru = {
+		name = JAP_shigemitsu_mamoru
+		portraits = {
+			civilian = {
+				small = GFX_portrait_JAP_shigemitsu_mamoru_small
+				large = GFX_portrait_JAP_shigemitsu_mamoru_large
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = JAP_shigemitsu_mamoru_sic
+			traits = {  }
+			cost = 0
+			can_be_fired = no
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
