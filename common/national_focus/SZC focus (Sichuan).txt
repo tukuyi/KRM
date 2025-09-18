@@ -19854,7 +19854,7 @@ focus_tree = {
 		icon = GFX_goal_SZC_pan_rebuild_military_discipline
 		cost = 4
 
-		x = 31
+		x = 40
 		y = 0
 
 		available = {
@@ -20236,6 +20236,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_whampoa_spirit"
+			swap_ideas = {
+				remove_idea = SZC_pan_chuanjun_go_out_idea
+				add_idea = SZC_pan_whampoa_spirit_idea
+			}
+			hidden_effect = {
+				country_event = NKRsichuanflavor.14
+				days = 3
+			}
 		}
 	}
 
@@ -20255,6 +20263,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_reform_military_academacy"
+			if = {
+				limit = { has_country_flag = china_has_poor_army }
+				china_army_reform_increase_step = yes
+			}
+			else = {
+				army_experience = 100
+			}
 		}
 	}
 
@@ -20274,6 +20289,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_professionalize_officers"
+			army_experience = 50
+			every_character = {
+				limit = {
+					is_army_leader = yes
+				}
+				add_planning = 1
+			}
 		}
 	}
 
@@ -20293,6 +20315,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_standardize_train"
+			swap_ideas = {
+				remove_idea = SZC_pan_whampoa_spirit_idea
+				add_idea = SZC_pan_whampoa_spirit_2_idea
+			}
 		}
 	}
 
@@ -20312,6 +20338,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_political_first"
+			add_political_power = 150
+			add_command_power = 100
+			every_character = {
+				limit = {
+					is_army_leader = yes
+				}
+				add_timed_unit_leader_trait = {
+					trait = trait_determined
+					days = 100
+				}
+			}
 		}
 	}
 
@@ -20339,6 +20376,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_new_gen_of_whampoa"
+			swap_ideas = {
+				remove_idea = SZC_pan_whampoa_spirit_2_idea
+				add_idea = SZC_pan_whampoa_spirit_3_idea
+			}
+			hidden_effect = {
+				country_event = NKRsichuanflavor.15
+				days = 3
+			}
 		}
 	}
 
@@ -20358,6 +20403,23 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_reform_logistics_system"
+			every_character = {
+				limit = {
+					is_army_leader = yes
+				}
+				add_logistics = 1
+			}
+			add_tech_bonus = {
+				category = motorized_equipment
+				bonus = 1.5
+				uses = 2
+				name = SZC_pan_reform_logistics_system
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+				producer = SZC
+			}
 		}
 	}
 
@@ -20377,6 +20439,16 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_mingans_legacy"
+			if = {
+				limit = { NOT = { has_tech = tech_militias } }
+				set_technology = { tech_militias = 1 }
+			}
+			add_doctrine_cost_reduction = {
+				name = SZC_pan_mingans_legacy
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -20396,6 +20468,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_powerful_engineer_corps"
+			army_experience = 20
+			enable_tech_expanded_engineer_corps = yes
 		}
 	}
 
@@ -20415,6 +20489,26 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_seize_radar_technology"
+			if = {
+				limit = {
+					NOT = { is_special_project_completed = sp:sp_air_radar }
+				}
+				complete_special_project = sp:sp_air_radar
+				add_tech_bonus = {
+					name = SZC_pan_seize_radar_technology
+					bonus = 1
+					uses = 1
+					category = radar_tech
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = SZC_pan_seize_radar_technology
+					bonus = 2
+					uses = 3
+					category = radar_tech
+				}
+			}
 		}
 	}
 
@@ -20434,6 +20528,19 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_long_live_baiqiuen"
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = hospital_tech
+				name = SZC_pan_long_live_baiqiuen
+			}
+			add_ideas = {
+				SZC_pan_baiqiuen_hospital_idea
+			}
+			hidden_effect = {
+				country_event = NKRsichuanflavor.16
+				days = 3
+			}
 		}
 	}
 
@@ -20453,6 +20560,20 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_mobilized_forces"
+			if = {
+				limit = { NOT = { has_tech = sp_armored_motorized_military_police_tech
+ } }
+				set_technology = { sp_armored_motorized_military_police_tech
+				= 1 }
+			}
+			else = {
+				army_experience = 20
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+				producer = SZC
+			}
 		}
 	}
 
@@ -20472,6 +20593,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_centralized_armored_forces"
+			add_ideas = {
+				SZC_pan_mobile_forces_idea
+			}
+			add_tech_bonus = {
+				bonus = 1.75
+				uses = 2
+				category = armor
+				name = SZC_pan_centralized_armored_forces
+			}
 		}
 	}
 
@@ -20491,6 +20621,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_unitary_commands"
+			swap_ideas = {
+				remove_idea = SZC_pan_mobile_forces_idea
+				add_idea = SZC_pan_mobile_forces_2_idea
+			}
+			add_command_power = 100
+			add_doctrine_cost_reduction = {
+				name = SZC_pan_mingans_legacy
+				cost_reduction = 0.75
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -20518,6 +20659,16 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_qizhengpiaopiao"
+			custom_effect_tooltip = SZC_pan_qizhengpiaopiao_tt
+			add_ideas = {
+				SZC_pan_QZPP_idea
+			}
+			hidden_effect = {
+				remove_ideas = {
+					SZC_pan_mobile_forces_2_idea
+					SZC_pan_whampoa_spirit_3_idea
+				}
+			}
 		}
 	}
 
@@ -20779,6 +20930,12 @@ focus_tree = {
 			else = {
 				add_one_random_military_factory = yes
 			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanflavor.10
+					days = 3
+				}
+			}
 		}
 	}
 
@@ -20895,6 +21052,12 @@ focus_tree = {
 			}
 			add_ideas = {
 				SZC_pan_iron_rain_idea
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanflavor.11
+					days = 3
+				}
 			}
 		}
 	}
@@ -21183,6 +21346,12 @@ focus_tree = {
 			add_ideas = {
 				SZC_pan_battleship_focus_idea
 			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanflavor.12
+					days = 3
+				}
+			}
 		}
 	}
 
@@ -21458,6 +21627,12 @@ focus_tree = {
 				activate_targeted_decision = { target = FROM decision = SZC_sic_subs }
 				activate_targeted_decision = { target = FROM decision = SZC_sic_cruisers }
 				activate_targeted_decision = { target = FROM decision = SZC_sic_convoys }
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanflavor.13
+					days = 3
+				}
 			}
 		}
 	}

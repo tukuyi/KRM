@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_pan_purchase_foreign_warships
+python focusgfxentry.py SZC_pan_qizhengpiaopiao
 pause
