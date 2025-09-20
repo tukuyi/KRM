@@ -20221,8 +20221,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SZC_pan_new_standard_army
-		icon = GFX_goal_SZC_pan_new_standard_army
+		id = SZC_pan_new_model_army
+		icon = GFX_goal_SZC_pan_new_model_army
 		cost = 4
 
 		x = -12
@@ -20235,7 +20235,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_pan_new_standard_army"
+			log = "[GetLogRoot]: Focus Completed SZC_pan_new_model_army"
 			
 		}
 	}
@@ -20248,10 +20248,10 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
-			focus = SZC_pan_new_standard_army
+			focus = SZC_pan_new_model_army
 		}
 
 		completion_reward = {
@@ -20268,7 +20268,7 @@ focus_tree = {
 		x = -3
 		y = 2
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
 			focus = SZC_pan_eastern_cromwell
@@ -20288,7 +20288,7 @@ focus_tree = {
 		x = -3
 		y = 3
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
 			focus = SZC_pan_reform_old_logistics
@@ -20308,7 +20308,7 @@ focus_tree = {
 		x = -3
 		y = 4
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
 			focus = SZC_pan_modernize_infantry_tactics
@@ -20328,7 +20328,7 @@ focus_tree = {
 		x = 0
 		y = 2
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
 			focus = SZC_pan_eastern_cromwell
@@ -20348,7 +20348,7 @@ focus_tree = {
 		x = -1
 		y = 3
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
 			focus = SZC_pan_reorganise_command_system
@@ -20368,7 +20368,7 @@ focus_tree = {
 		x = -1
 		y = 4
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
 			focus = SZC_pan_step_on_white
@@ -20388,7 +20388,7 @@ focus_tree = {
 		x = 1
 		y = 3
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
 			focus = SZC_pan_reorganise_command_system
@@ -20408,7 +20408,7 @@ focus_tree = {
 		x = 1
 		y = 4
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
 			focus = SZC_pan_beiwei
@@ -20428,7 +20428,7 @@ focus_tree = {
 		x = 2
 		y = 5
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
 			focus = SZC_pan_beiwei
@@ -20449,7 +20449,7 @@ focus_tree = {
 		x = 3
 		y = 3
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
 			focus = SZC_pan_eastern_cromwell
@@ -20469,7 +20469,7 @@ focus_tree = {
 		x = 5
 		y = 4
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
 			focus = SZC_pan_western_military_school
@@ -20489,7 +20489,7 @@ focus_tree = {
 		x = 4
 		y = 5
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
 			focus = SZC_pan_western_military_school
@@ -20513,7 +20513,7 @@ focus_tree = {
 		x = 0
 		y = 5
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
 			focus = SZC_pan_move_like_lighting
@@ -20537,7 +20537,7 @@ focus_tree = {
 		x = 0
 		y = 6
 
-		relative_position_id = SZC_pan_new_standard_army
+		relative_position_id = SZC_pan_new_model_army
 
 		prerequisite = {
 			focus = SZC_pan_gather_strength_hold_flag
