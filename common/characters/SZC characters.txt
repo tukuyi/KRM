@@ -961,6 +961,44 @@ characters = {
 		}
 
 	}
+	#陈达三
+	SZC_chen_dasan = {
+		name = SZC_chen_dasan
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_chen_dasan_large
+				small = GFX_portrait_SZC_chen_dasan_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_chen_dasan_desc
+			traits = { light_infantry_officer irregulars_officer rising_star }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	#冉钧
+	SZC_ran_jun = {
+		name = SZC_ran_jun
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_ran_jun_large
+				small = GFX_portrait_SZC_ran_jun_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_ran_jun_desc
+			traits = { light_infantry_officer irregulars_officer rising_star }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
 	#谢持
 	SZC_xie_chi = {
 		name = SZC_xie_chi
