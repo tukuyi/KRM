@@ -1547,6 +1547,144 @@ ideas = {
 		}
 
 
+		SZC_pan_new_model_army_idea = {#新模范军
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_pan_new_model_army_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.075
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				attrition = -0.025
+				max_command_power_mult = 0.15
+			}
+		}
+
+
+		SZC_pan_new_model_army_2_idea = {#新模范军
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_pan_new_model_army_2_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.075
+				attrition = -0.05
+				max_command_power_mult = 0.15
+			}
+		}
+
+
+		SZC_pan_joint_research_GER_idea = {#联合研究-德国
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_pan_joint_research_GER_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_speed_factor = 0.1
+			}
+		}
+
+		SZC_pan_joint_research_NFA_idea = {#联合研究-法国
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_pan_joint_research_NFA_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				army_artillery_attack_factor = 0.25
+			}
+		}
+
+		SZC_pan_joint_research_USA_idea = {#联合研究-美国
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_pan_joint_research_USA_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				air_superiority_efficiency = 0.25
+			}
+		}
+
+		SZC_pan_modern_beiwei_idea = {#现代背嵬军
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_pan_modern_beiwei_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				breakthrough_factor = 0.1
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.75
+			}
+		}
+
+		SZC_pan_go_faster_idea = {#快速行进
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_pan_go_faster_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				army_attack_speed_factor = 0.15
+				army_speed_factor = 0.1
+			}
+		}
+
+
+		SZC_pan_new_model_army_3_idea = {#新模范军
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_pan_new_model_army_3_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.1
+				attrition = -0.05
+				max_command_power_mult = 0.15
+				max_planning_factor = 0.15
+				max_dig_in_factor = 0.2
+			}
+		}
+
+
+		SZC_pan_new_academy_idea = {#新军校
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_pan_new_academy_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				planning_speed = 0.15
+				max_planning_factor = 0.1
+			}
+		}
+
+		SZC_pan_new_academy_2_idea = {#新军校
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_pan_new_academy_2_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				planning_speed = 0.15
+				max_planning_factor = 0.15
+				special_forces_cap = 0.05
+			}
+		}
+
+		SZC_pan_new_model_army_4_idea = {#新模范军
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_pan_new_model_army_4_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.1
+				army_attack_factor = 0.075
+				army_defence_factor = 0.1
+				attrition = -0.1
+				max_command_power_mult = 0.15
+				max_planning_factor = 0.35
+				max_dig_in_factor = 0.2
+				planning_speed = 0.2
+				special_forces_cap = 0.05
+				army_attack_speed_factor = 0.15
+				army_speed_factor = 0.125
+				breakthrough_factor = 0.1
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.75
+			}
+		}
+
+
 
 
 
