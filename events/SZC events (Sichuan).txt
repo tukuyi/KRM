@@ -9340,6 +9340,14 @@ country_event = { #四川易帜
 				}
 			}
 		}
+		SZC_fan_shaozeng = {
+			set_portraits = {
+				army = {
+					large = GFX_portrait_SZC_fan_shaozeng_kmt_large
+					small = GFX_portrait_SZC_fan_shaozeng_kmt_small
+				}
+			}
+		}
 		SZC_wang_shimu = {
 			SZC_recruit_character_effect = yes
 		}
@@ -11540,6 +11548,7 @@ country_event = { #就职典礼
 		add_to_coalition = yes
 		set_temp_variable = { coalition_partner_var = token:social_conservative }
 		add_to_coalition = yes
+		china_enable_alliances_decisions = yes
 	}
 }
 

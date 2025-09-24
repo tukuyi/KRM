@@ -1498,8 +1498,6 @@ shared_focus = {
 		OR = {
 			has_focus_tree = Sichuan_Clique_Armament
 			has_focus_tree = Sichuan_Clique_Zhili
-			has_focus_tree = Sichuan_Clique_Panwenhua
-			has_focus_tree = Sichuan_Clique_YCP
 		}
 	}
 	mutually_exclusive = {
@@ -1829,8 +1827,6 @@ shared_focus = {
 		OR = {
 			has_focus_tree = Sichuan_Clique_Armament
 			has_focus_tree = Sichuan_Clique_Zhili
-			has_focus_tree = Sichuan_Clique_Panwenhua
-			has_focus_tree = Sichuan_Clique_YCP
 		}
 	}
 	mutually_exclusive = {
@@ -10071,12 +10067,6 @@ focus_tree = {
 	continuous_focus_position = { x = 3350 y = 2250 }
 
 	shared_focus = SZC_Chengdu_Chongqing_Railway
-	# shared_focus = SZC_Rebuild_The_Sichuanese_Army
-	# shared_focus = SZC_Rebuild_The_Officer_Corps
-
-	shared_focus = CHS_reintegrate_academies
-	shared_focus = CHS_standardised_arsenals
-	shared_focus = CHS_southern_fleets_legacy
 
 	focus = {
 		id = SZC_Pan_Victory
@@ -15742,9 +15732,6 @@ focus_tree = {
 			add_ideas = {
 				SZC_KMT_giants_between_pacific_ocean_idea
 			}
-			SZC = {
-				add_to_economic_sphere = yes
-			}
 			create_economic_sphere = yes
 			var:economic_sphere = {
 				set_character_name = SZC_TPP_sphere
@@ -15760,6 +15747,9 @@ focus_tree = {
 					SZC_KMT_giants_between_pacific_ocean_idea
 				}
 				set_temp_variable = { sphere_target = THIS }
+			}
+			SZC = {
+				add_to_economic_sphere = yes
 			}
 			for_every_scople_loop = {
 				array = global.african_tags_array
@@ -19705,9 +19695,6 @@ focus_tree = {
 			add_ideas = {
 				SZC_KMT_giants_between_pacific_ocean_idea
 			}
-			SZC = {
-				add_to_economic_sphere = yes
-			}
 			create_economic_sphere = yes
 			var:economic_sphere = {
 				set_character_name = SZC_TPP_sphere
@@ -19723,6 +19710,9 @@ focus_tree = {
 					SZC_KMT_giants_between_pacific_ocean_idea
 				}
 				set_temp_variable = { sphere_target = THIS }
+			}
+			SZC = {
+				add_to_economic_sphere = yes
 			}
 			for_every_scople_loop = {
 				array = global.african_tags_array
@@ -19858,7 +19848,7 @@ focus_tree = {
 
 		x = 40
 		y = 0
-		
+
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_rebuild_military_discipline"
 			add_war_support = 0.03
@@ -22150,7 +22140,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 50
 			tag = SZC
 		}
 	}
@@ -22162,16 +22152,11 @@ focus_tree = {
 
 
 	default = no
-	continuous_focus_position = { x = 2350 y = 850 }
+	continuous_focus_position = { x = 3350 y = 850 }
 
 	shared_focus = SZC_Chengdu_Chongqing_Railway
-	shared_focus = SZC_Rebuild_The_Sichuanese_Army
-	shared_focus = SZC_Rebuild_The_Officer_Corps
-
-	shared_focus = CHS_provisional_government
-	shared_focus = CHS_reintegrate_academies
-	shared_focus = CHS_standardised_arsenals
-	shared_focus = CHS_southern_fleets_legacy
+	# shared_focus = SZC_Rebuild_The_Sichuanese_Army
+	# shared_focus = SZC_Rebuild_The_Officer_Corps
 
 	focus = {
 		id = SZC_YCP_statism_arise
@@ -28554,7 +28539,7 @@ focus_tree = {
 			}
 		}
 
-		allow_branch = {
+		visible = {
 			NOT = {
 				has_country_flag = SZC_CDP_haha_real_time
 			}
@@ -28597,7 +28582,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = SZC_YCP_post_YCP_days
 
-		allow_branch = {
+		visible = {
 			has_country_flag = SZC_CDP_haha_real_time
 		}
 
@@ -29891,6 +29876,25 @@ focus_tree = {
 				remove_idea = SZC_YCP_legitimacy_5
 				add_idea = SZC_YCP_legitimacy_18
 			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_mandate_heaven_of_china
+		icon = GFX_goal_SZC_YCP_mandate_heaven_of_china
+		cost = 2
+
+		x = 23
+		y = 12
+
+		allow_branch = {
+
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_mandate_heaven_of_china"
+			
 		}
 	}
 
