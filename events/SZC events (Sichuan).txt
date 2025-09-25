@@ -9085,6 +9085,7 @@ country_event = { #潘文华巩固政权
 		complete_national_focus = SZC_Pan_Victory
 		SZC_pan_wenhua = {
 			promote_character = paternal_autocrat_subtype
+			promote_leader = yes
 		}
 		swap_ideas = {
 			remove_idea = SZC_after_liu
@@ -9112,6 +9113,7 @@ country_event = { #让贤唐式遵
 		complete_national_focus = SZC_YCP_statism_arise
 		SZC_tang_shizun = {
 			promote_character = paternal_autocrat_subtype
+			promote_leader = yes
 		}
 		swap_ideas = {
 			remove_idea = SZC_after_liu
@@ -9229,6 +9231,22 @@ country_event = { #中国青年党浮出水面
 			add_popularity = {
 				ideology = national_populist
 				popularity = 0.05
+			}
+			SZC_tang_shizun = {
+				set_portraits = {
+					army = {
+						large = GFX_portrait_SZC_tang_shizun_ycp_large
+						small = GFX_portrait_SZC_tang_shizun_ycp_small
+					}
+				}
+			}
+			SZC_fan_shaozeng = {
+				set_portraits = {
+					army = {
+						large = GFX_portrait_SZC_fan_shaozeng_ycp_large
+						small = GFX_portrait_SZC_fan_shaozeng_ycp_small
+					}
+				}
 			}
 		}
 	}
@@ -15391,6 +15409,21 @@ country_event = { #暗流涌动
 			right_side = SZC_bop_zeng_winning_side
 			set_value = 0.03
 		}
+		hidden_effect = {
+			SZC_li_jiayu = {
+				SZC_recruit_character_effect = yes
+				set_portraits = {
+					army = {
+						large = GFX_portrait_SZC_li_jiayu_army_large
+						small = GFX_portrait_SZC_li_jiayu_army_small
+					}
+				}
+				unit_leader_event = { 
+					id = NKRsichuanflavor.22
+					days = 2
+				}
+			}
+		}
 	}
 }
 
@@ -15910,6 +15943,55 @@ country_event = { #军政部改组
 	option = {#国家统一的重要一步。
 		log = "[GetLogInfo]: event NKRsichuan.437 option NKRsichuan.437.a"
 		name = NKRsichuan.437.a
+		hidden_effect = {
+			SZC_wang_shizeng = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_weng_zhaoyuan = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_miao_kexiu = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_liang_sizhong = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_zhu_wenbo = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_wu_lvxun = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_niu_xianming = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_sun_yuanliang = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_xie_ruchuan = {
+				SZC_recruit_character_effect = yes
+			}
+		}
+		custom_effect_tooltip = characters_will_be_recruited
+		character_list_tooltip = {
+			limit = {
+				OR = {
+					is_character = SZC_wang_shizeng
+					is_character = SZC_weng_zhaoyuan
+					is_character = SZC_miao_kexiu
+					is_character = SZC_liang_sizhong
+					is_character = SZC_zhu_wenbo
+					is_character = SZC_wu_lvxun
+					is_character = SZC_niu_xianming
+					is_character = SZC_sun_yuanliang
+					is_character = SZC_xie_ruchuan
+				}
+			}
+		}
+		country_event = {
+			id = NKRsichuanflavor.23
+			days = 21
+		}
 	}
 }
 
@@ -25819,7 +25901,7 @@ country_event = { #联合军事研究
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#德国的装甲经验值得借鉴！
 		log = "[GetLogInfo]: event NKRsichuanflavor.18 option NKRsichuanflavor.18.a"
 		name = NKRsichuanflavor.18.a
 		trigger = {
@@ -25833,7 +25915,7 @@ country_event = { #联合军事研究
 		}
 	}
 
-	option = {#
+	option = {#法国人对炮兵的运用由来已久了。
 		log = "[GetLogInfo]: event NKRsichuanflavor.18 option NKRsichuanflavor.18.b"
 		name = NKRsichuanflavor.18.b
 		trigger = {
@@ -25844,7 +25926,7 @@ country_event = { #联合军事研究
 		}
 	}
 
-	option = {#
+	option = {#我们的美国盟友对空军很有造诣！
 		log = "[GetLogInfo]: event NKRsichuanflavor.18 option NKRsichuanflavor.18.c"
 		name = NKRsichuanflavor.18.c
 		trigger = {
@@ -25856,7 +25938,7 @@ country_event = { #联合军事研究
 	}
 }
 
-country_event = { #
+country_event = { #忍耐
 	id = NKRsichuanflavor.19
 	title = NKRsichuanflavor.19.t
 	desc = NKRsichuanflavor.19.d
@@ -25866,13 +25948,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#我从来不怕，泼冷水！
 		log = "[GetLogInfo]: event NKRsichuanflavor.19 option NKRsichuanflavor.19.a"
 		name = NKRsichuanflavor.19.a
 	}
 }
 
-country_event = { #
+country_event = { #军校一天
 	id = NKRsichuanflavor.20
 	title = NKRsichuanflavor.20.t
 	desc = NKRsichuanflavor.20.d
@@ -25882,13 +25964,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#我们会亲切的告诉你们！
 		log = "[GetLogInfo]: event NKRsichuanflavor.20 option NKRsichuanflavor.20.a"
 		name = NKRsichuanflavor.20.a
 	}
 }
 
-country_event = { #
+country_event = { #新军之名
 	id = NKRsichuanflavor.21
 	title = NKRsichuanflavor.21.t
 	desc = NKRsichuanflavor.21.d
@@ -25898,29 +25980,31 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#不负新模范军之名！
 		log = "[GetLogInfo]: event NKRsichuanflavor.21 option NKRsichuanflavor.21.a"
 		name = NKRsichuanflavor.21.a
 	}
 }
 
-country_event = { #
+unit_leader_event = { #李家钰归来
 	id = NKRsichuanflavor.22
 	title = NKRsichuanflavor.22.t
 	desc = NKRsichuanflavor.22.d
-	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#让你受委屈了...
 		log = "[GetLogInfo]: event NKRsichuanflavor.22 option NKRsichuanflavor.22.a"
 		name = NKRsichuanflavor.22.a
+		SZC_li_jiayu = {
+			SZC_recruit_character_effect = yes
+		}
 	}
 }
 
-country_event = { #
+country_event = { #军队的纯净
 	id = NKRsichuanflavor.23
 	title = NKRsichuanflavor.23.t
 	desc = NKRsichuanflavor.23.d
@@ -25930,9 +26014,37 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#啧。
 		log = "[GetLogInfo]: event NKRsichuanflavor.23 option NKRsichuanflavor.23.a"
 		name = NKRsichuanflavor.23.a
+		add_stability = 0.1
+		add_political_power = 100
+		army_experience = 20
+		custom_effect_tooltip = characters_will_be_retired
+		character_list_tooltip = {
+			limit = { 
+				OR = {
+					is_character = SZC_wang_lingji
+					is_character = SZC_li_hongkun
+					is_character = SZC_pan_wenhua
+					is_character = SZC_tian_songyao
+				}	
+			}
+		}
+		hidden_effect = {
+			SZC_wang_lingji = {
+				retire = yes
+			}
+			SZC_li_hongkun = {
+				retire = yes
+			}
+			SZC_pan_wenhua = {
+				retire = yes
+			}
+			SZC_tian_songyao = {
+				retire = yes
+			}
+		}
 	}
 }
 

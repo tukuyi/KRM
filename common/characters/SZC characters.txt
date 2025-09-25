@@ -258,7 +258,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_li_jiayu_high_command_desc
-			traits = { infantry_officer war_hero trait_reckless }
+			traits = { member_of_YCP infantry_officer trait_reckless }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 3
@@ -592,7 +592,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_tang_shizun_commander_desc
-			traits = { trickster infantry_officer war_hero }
+			traits = { member_of_YCP trickster infantry_officer war_hero }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
@@ -891,7 +891,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_li_hongkun_desc
-			traits = { light_infantry_officer }
+			traits = { light_infantry_officer war_hero }
 			skill = 1
 			attack_skill = 2
 			defense_skill = 1
@@ -1615,6 +1615,15 @@ characters = {
 				small = GFX_portrait_SZC_wang_shizeng_small
 			}
 		}
+		corps_commander = {
+			desc = SZC_wang_shizeng_desc
+			traits = { member_of_YCP media_personality politically_connected skilled_staffer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
 	}
 
 	#闻一多
@@ -1650,9 +1659,9 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_weng_zhaoyuan_desc
-			traits = {  }
+			traits = { member_of_YCP brilliant_strategist commando trickster media_personality war_hero }
 			skill = 2
-			attack_skill = 2
+			attack_skill = 3
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 2
@@ -1670,12 +1679,12 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_miao_kexiu_desc
-			traits = {  }
-			skill = 2
-			attack_skill = 2
+			traits = { member_of_YCP media_personality war_hero trait_reckless }
+			skill = 1
+			attack_skill = 1
 			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 2
+			logistics_skill = 1
 		}
 	}
 
@@ -1690,11 +1699,11 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_liang_sizhong_desc
-			traits = {  }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
+			traits = { member_of_YCP infantry_officer politically_connected career_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
 			logistics_skill = 2
 		}
 	}
@@ -1710,12 +1719,12 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_zhu_wenbo_desc
-			traits = {  }
-			skill = 2
+			traits = { member_of_YCP infantry_officer career_officer }
+			skill = 1
 			attack_skill = 2
-			defense_skill = 2
+			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 2
+			logistics_skill = 1
 		}
 	}
 
@@ -1730,12 +1739,12 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_wu_lvxun_desc
-			traits = {  }
-			skill = 2
-			attack_skill = 2
+			traits = { member_of_YCP career_officer inflexible_strategist }
+			skill = 1
+			attack_skill = 1
 			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 2
+			logistics_skill = 1
 		}
 	}
 
@@ -1750,12 +1759,12 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_niu_xianming_desc
-			traits = {  }
+			traits = { member_of_YCP engineer_officer trait_cautious organizer trait_engineer }
 			skill = 2
-			attack_skill = 2
+			attack_skill = 1
 			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
 		}
 	}
 
@@ -1770,12 +1779,12 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_sun_yuanliang_desc
-			traits = {  }
-			skill = 2
-			attack_skill = 2
+			traits = { member_of_YCP infantry_officer trait_cautious  }
+			skill = 1
+			attack_skill = 1
 			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
 		}
 	}
 
@@ -1790,32 +1799,12 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_xie_ruchuan_desc
-			traits = {  }
+			traits = { member_of_YCP infantry_officer brilliant_strategist war_hero trait_reckless commando }
 			skill = 2
-			attack_skill = 2
+			attack_skill = 3
 			defense_skill = 2
 			planning_skill = 1
-			logistics_skill = 2
-		}
-	}
-
-	#李家钰
-	SZC_li_jiayu = {
-		name = SZC_li_jiayu
-		portraits = {
-			army = {
-				large = GFX_portrait_SZC_li_jiayu_large
-				small = GFX_portrait_SZC_li_jiayu_small
-			}
-		}
-		corps_commander = {
-			desc = SZC_li_jiayu_desc
-			traits = {  }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
+			logistics_skill = 3
 		}
 	}
 

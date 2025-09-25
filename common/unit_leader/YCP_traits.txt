@@ -1,0 +1,12 @@
+leader_traits = {
+	member_of_YCP = {
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+}

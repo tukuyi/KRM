@@ -91,8 +91,10 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					SZC = {
+						has_country_flag = NKRSZCpathbruh
+					}
 					FROM = { tag = SZC }
-					has_country_flag = NKRSZCpathbruh
 					ROOT = { has_trait = war_hero }
 				}
 				unit_leader_event = NKRsichuanmisc.1 #Champion Event
