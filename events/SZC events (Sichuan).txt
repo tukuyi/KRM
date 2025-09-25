@@ -15939,37 +15939,47 @@ country_event = { #军政部改组
 	is_triggered_only = yes
 	fire_only_once = yes
 	
+	immediate = {
+		SZC_wang_shizeng = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_weng_zhaoyuan = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_miao_kexiu = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_liang_sizhong = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zhu_wenbo = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_wu_lvxun = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_niu_xianming = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_sun_yuanliang = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_xie_ruchuan = {
+			SZC_recruit_character_effect = yes
+		}
+	}
 
 	option = {#国家统一的重要一步。
 		log = "[GetLogInfo]: event NKRsichuan.437 option NKRsichuan.437.a"
 		name = NKRsichuan.437.a
 		hidden_effect = {
-			SZC_wang_shizeng = {
-				SZC_recruit_character_effect = yes
+			country_event = {
+				id = NKRsichuanflavor.23
+				days = 21
 			}
-			SZC_weng_zhaoyuan = {
-				SZC_recruit_character_effect = yes
-			}
-			SZC_miao_kexiu = {
-				SZC_recruit_character_effect = yes
-			}
-			SZC_liang_sizhong = {
-				SZC_recruit_character_effect = yes
-			}
-			SZC_zhu_wenbo = {
-				SZC_recruit_character_effect = yes
-			}
-			SZC_wu_lvxun = {
-				SZC_recruit_character_effect = yes
-			}
-			SZC_niu_xianming = {
-				SZC_recruit_character_effect = yes
-			}
-			SZC_sun_yuanliang = {
-				SZC_recruit_character_effect = yes
-			}
-			SZC_xie_ruchuan = {
-				SZC_recruit_character_effect = yes
+			country_event = {
+				id = NKRsichuanflavor.24
+				days = 14
 			}
 		}
 		custom_effect_tooltip = characters_will_be_recruited
@@ -15987,10 +15997,6 @@ country_event = { #军政部改组
 					is_character = SZC_xie_ruchuan
 				}
 			}
-		}
-		country_event = {
-			id = NKRsichuanflavor.23
-			days = 21
 		}
 	}
 }
@@ -26056,25 +26062,39 @@ country_event = { #
 
 	is_triggered_only = yes
 	fire_only_once = yes
+	hidden = yes
 	
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanflavor.24 option NKRsichuanflavor.24.a"
 		name = NKRsichuanflavor.24.a
+		QIE = {
+			QIE_zhang_yinwu = {
+				SZC_recruit_character_effect = yes
+				set_portraits = {
+					army = {
+						large = GFX_portrait_SZC_zhang_yinwu_large
+						small = GFX_portrait_SZC_zhang_yinwu_small
+					}
+				}
+				unit_leader_event = {
+					id = NKRsichuanflavor.25
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+unit_leader_event = { #张荫梧来投
 	id = NKRsichuanflavor.25
 	title = NKRsichuanflavor.25.t
 	desc = NKRsichuanflavor.25.d
-	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#张将军真是胸怀大义！
 		log = "[GetLogInfo]: event NKRsichuanflavor.25 option NKRsichuanflavor.25.a"
 		name = NKRsichuanflavor.25.a
 	}
