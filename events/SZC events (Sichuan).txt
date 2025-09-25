@@ -15940,32 +15940,34 @@ country_event = { #军政部改组
 	fire_only_once = yes
 	
 	immediate = {
-		SZC_wang_shizeng = {
-			SZC_recruit_character_effect = yes
-		}
-		SZC_weng_zhaoyuan = {
-			SZC_recruit_character_effect = yes
-		}
-		SZC_miao_kexiu = {
-			SZC_recruit_character_effect = yes
-		}
-		SZC_liang_sizhong = {
-			SZC_recruit_character_effect = yes
-		}
-		SZC_zhu_wenbo = {
-			SZC_recruit_character_effect = yes
-		}
-		SZC_wu_lvxun = {
-			SZC_recruit_character_effect = yes
-		}
-		SZC_niu_xianming = {
-			SZC_recruit_character_effect = yes
-		}
-		SZC_sun_yuanliang = {
-			SZC_recruit_character_effect = yes
-		}
-		SZC_xie_ruchuan = {
-			SZC_recruit_character_effect = yes
+		hidden_effect = {
+			SZC_wang_shizeng = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_weng_zhaoyuan = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_miao_kexiu = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_liang_sizhong = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_zhu_wenbo = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_wu_lvxun = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_niu_xianming = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_sun_yuanliang = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_xie_ruchuan = {
+				SZC_recruit_character_effect = yes
+			}
 		}
 	}
 
