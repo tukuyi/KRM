@@ -3,36 +3,321 @@ characters = {
 	#PUPPET
 	
 	#佩皮诺·加里波第
-	SZC_peppino_garibaldi = {
-		name = SZC_peppino_garibaldi
+	ITA_peppino_garibaldi = {
+		name = ITA_peppino_garibaldi
 		portraits = {
 			civilian = {
-				small = GFX_portrait_SZC_peppino_garibaldi_small
-				large = GFX_portrait_SZC_peppino_garibaldi_large
+				small = GFX_portrait_ITA_peppino_garibaldi_small
+				large = GFX_portrait_ITA_peppino_garibaldi_large
 			}
 		}
 		country_leader = {
-			desc = SZC_peppino_garibaldi_desc
+			desc = ITA_peppino_garibaldi_desc
 			ideology = authoritarian_democrat_statist_subtype
-			traits = { CHN_statist_aligned }
+			traits = { }
 		}
 	}
 	
 	#埃德加·荣格
-	SZC_edgar_jung = {
-		name = SZC_edgar_jung
+	GRU_edgar_jung = {
+		name = GRU_edgar_jung
 		portraits = {
 			civilian = {
-				small = GFX_portrait_SZC_edgar_jung_small
-				large = GFX_portrait_SZC_edgar_jung_large
+				small = GFX_portrait_GRU_edgar_jung_small
+				large = GFX_portrait_GRU_edgar_jung_large
 			}
 		}
 		country_leader = {
-			desc = SZC_edgar_jung_desc
+			desc = GRU_edgar_jung_desc
 			ideology = national_populist_strum_drang_statist_subtype
-			traits = { CHN_statist_aligned }
+			traits = { }
 		}
 	}
+	
+	#道尔夫·斯滕贝尔格
+	GRU_dolf_sternbergr = {
+		name = GRU_dolf_sternbergr
+		portraits = {
+			civilian = {
+				small = GFX_portrait_GRU_dolf_sternbergr_small
+				large = GFX_portrait_GRU_dolf_sternbergr_large
+			}
+		}
+		country_leader = {
+			desc = GRU_dolf_sternbergr_desc
+			ideology = social_democrat_new_legalist_state_socialist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = GRU_dolf_sternbergr_desc
+			ideology = social_liberal_constitutional_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = GRU_dolf_sternbergr_desc
+			ideology = social_conservative_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = GRU_dolf_sternbergr_desc
+			ideology = authoritarian_democrat_new_legalist_statist_subtype
+			traits = { }
+		}
+	}
+	
+	#约翰·麦克默里
+	ENG_john_macmurray = {
+		name = ENG_john_macmurray
+		portraits = {
+			civilian = {
+				small = GFX_portrait_ENG_john_macmurray_small
+				large = GFX_portrait_ENG_john_macmurray_large
+			}
+		}
+		country_leader = {
+			desc = ENG_john_macmurray_desc
+			ideology = social_democrat_new_legalist_state_socialist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = ENG_john_macmurray_desc
+			ideology = social_liberal_constitutional_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = ENG_john_macmurray_desc
+			ideology = social_conservative_statist_subtype
+			traits = { }
+		}
+	}
+	
+	#加斯东·里乌
+	FRA_gaston_riou = {
+		name = FRA_gaston_riou
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FRA_gaston_riou_small
+				large = GFX_portrait_FRA_gaston_riou_large
+			}
+		}
+		country_leader = {
+			desc = FRA_gaston_riou_desc
+			ideology = social_democrat_new_legalist_state_socialist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = FRA_gaston_riou_desc
+			ideology = social_liberal_constitutional_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = FRA_gaston_riou_desc
+			ideology = social_conservative_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = FRA_gaston_riou_desc
+			ideology = authoritarian_democrat_new_legalist_statist_subtype
+			traits = { }
+		}
+	}
+	
+	#弗朗蒂谢克·兰格
+	CZE_frantisek_langer = {
+		name = CZE_frantisek_langer
+		portraits = {
+			civilian = {
+				small = GFX_portrait_CZE_frantisek_langer_small
+				large = GFX_portrait_CZE_frantisek_langer_large
+			}
+		}
+		country_leader = {
+			desc = CZE_frantisek_langer_desc
+			ideology = social_liberal_constitutional_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = CZE_frantisek_langer_desc
+			ideology = social_conservative_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = CZE_frantisek_langer_desc
+			ideology = authoritarian_democrat_statist_subtype
+			traits = { }
+		}
+	}
+	
+	#塔德乌什·普鲁什科夫斯基
+	POL_tadeusz_pruszkowski = {
+		name = POL_tadeusz_pruszkowski
+		portraits = {
+			civilian = {
+				small = GFX_portrait_POL_tadeusz_pruszkowski_small
+				large = GFX_portrait_POL_tadeusz_pruszkowski_large
+			}
+		}
+		country_leader = {
+			desc = POL_tadeusz_pruszkowski_desc
+			ideology = social_liberal_constitutional_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = POL_tadeusz_pruszkowski_desc
+			ideology = social_conservative_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = POL_tadeusz_pruszkowski_desc
+			ideology = authoritarian_democrat_statist_subtype
+			traits = { }
+		}
+	}
+	
+	#尼古拉·康德拉季耶夫
+	RUS_nikolai_kondratiev = {
+		name = RUS_nikolai_kondratiev
+		portraits = {
+			civilian = {
+				small = GFX_portrait_RUS_nikolai_kondratiev_small
+				large = GFX_portrait_RUS_nikolai_kondratiev_large
+			}
+		}
+		country_leader = {
+			desc = RUS_nikolai_kondratiev_desc
+			ideology = social_democrat_new_legalist_state_socialist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = RUS_nikolai_kondratiev_desc
+			ideology = social_liberal_constitutional_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = RUS_nikolai_kondratiev_desc
+			ideology = social_conservative_statist_subtype
+			traits = { }
+		}
+	}
+	
+	#何塞·奥尔特加·伊·加塞特
+	SPA_jose_ortega_y_gasset = {
+		name = SPA_jose_ortega_y_gasset
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SPA_jose_ortega_y_gasset_small
+				large = GFX_portrait_SPA_jose_ortega_y_gasset_large
+			}
+		}
+		country_leader = {
+			desc = SPA_jose_ortega_y_gasset_desc
+			ideology = social_liberal_constitutional_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = SPA_jose_ortega_y_gasset_desc
+			ideology = social_conservative_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = SPA_jose_ortega_y_gasset_desc
+			ideology = authoritarian_democrat_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = SPA_jose_ortega_y_gasset_desc
+			ideology = paternal_autocrat_revolutionary_statist_subtype
+			traits = { }
+		}
+	}
+	
+	#雷沙特·努里·君特金
+	TUR_resat_nuri_guntekin = {
+		name = TUR_resat_nuri_guntekin
+		portraits = {
+			civilian = {
+				small = GFX_portrait_TUR_resat_nuri_guntekin_small
+				large = GFX_portrait_TUR_resat_nuri_guntekin_large
+			}
+		}
+		country_leader = {
+			desc = TUR_resat_nuri_guntekin_desc
+			ideology = social_democrat_new_legalist_state_socialist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = TUR_resat_nuri_guntekin_desc
+			ideology = social_liberal_constitutional_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = TUR_resat_nuri_guntekin_desc
+			ideology = social_conservative_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = TUR_resat_nuri_guntekin_desc
+			ideology = authoritarian_democrat_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = TUR_resat_nuri_guntekin_desc
+			ideology = paternal_autocrat_revolutionary_statist_subtype
+			traits = { }
+		}
+	}
+	
+	#赫伯特·阿加尔
+	USA_hebert_agar = {
+		name = USA_hebert_agar
+		portraits = {
+			civilian = {
+				small = GFX_portrait_USA_hebert_agar_small
+				large = GFX_portrait_USA_hebert_agar_large
+			}
+		}
+		country_leader = {
+			desc = USA_hebert_agar_desc
+			ideology = social_democrat_new_legalist_state_socialist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = USA_hebert_agar_desc
+			ideology = social_liberal_constitutional_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = USA_hebert_agar_desc
+			ideology = social_conservative_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = USA_hebert_agar_desc
+			ideology = authoritarian_democrat_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = USA_hebert_agar_desc
+			ideology = paternal_autocrat_revolutionary_statist_subtype
+			traits = { }
+		}
+	}
+	
+	# #
+	#  = {
+	# 	name = 
+	# 	portraits = {
+	# 		civilian = {
+	# 			small = GFX_portrait__small
+	# 			large = GFX_portrait__large
+	# 		}
+	# 	}
+	# 	country_leader = {
+	# 		desc = _desc
+	# 		ideology = 
+	# 		traits = { }
+	# 	}
+	# }
 	
 	#朴正熙
 	SZC_park_chunghee = {
@@ -75,6 +360,7 @@ characters = {
 		}
 	}
 
+	#重光葵
 	JAP_shigemitsu_mamoru = {
 		name = JAP_shigemitsu_mamoru
 		portraits = {

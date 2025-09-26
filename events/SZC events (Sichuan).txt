@@ -19975,11 +19975,11 @@ country_event = { #新生的意大利
 		name = NKRsichuan.599.a
 		custom_effect_tooltip = NKRsichuan.599.tt
 		hidden_effect = {
-			SZC_peppino_garibaldi = {
+			ITA_peppino_garibaldi = {
 				set_nationality = ITA
 			}
 			ITA = {
-				SZC_peppino_garibaldi = {
+				ITA_peppino_garibaldi = {
 					promote_character = authoritarian_democrat_statist_subtype
 				}
 				set_cosmetic_tag = ITA_YCP
@@ -21328,11 +21328,11 @@ country_event = { #保守革命的遗产
 		name = NKRsichuan.677.a
 		custom_effect_tooltip = NKRsichuan.677.tt
 		hidden_effect = {
-			SZC_edgar_jung = {
+			GRU_edgar_jung = {
 				set_nationality = GRU
 			}
 			GRU = {
-				SZC_edgar_jung = {
+				GRU_edgar_jung = {
 					promote_character = national_populist_strum_drang_statist_subtype
 				}
 				set_cosmetic_tag = GRU_HRR

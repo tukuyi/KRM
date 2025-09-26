@@ -128,10 +128,6 @@ recruit_character = SZC_niu_xianming
 recruit_character = SZC_sun_yuanliang
 recruit_character = SZC_xie_ruchuan
 
-recruit_character = SZC_peppino_garibaldi
-recruit_character = SZC_edgar_jung
-recruit_character = SZC_park_chunghee
-
 
 recruit_character = SZC_liu_congyun
 recruit_character = SZC_power_vacuum
@@ -360,16 +356,6 @@ SZC_zhang_bolun = {
 SZC_tang_shizun = {
 	china_set_character_alignment_statist = yes
 }
-SZC_peppino_garibaldi = {
-	retire = yes
-}
-SZC_edgar_jung = {
-	retire = yes
-}
-SZC_park_chunghee = {
-	retire = yes
-}
-
 
 SZC_zhang_guotao= {
 	china_set_character_alignment_statist = yes
@@ -397,7 +383,57 @@ SZC_MMIC = {
 
 
 #PUPPET
+
+recruit_character = ITA_peppino_garibaldi
+recruit_character = GRU_edgar_jung
+recruit_character = GRU_dolf_sternbergr
+recruit_character = ENG_john_macmurray
+recruit_character = FRA_gaston_riou
+recruit_character = CZE_frantisek_langer
+recruit_character = POL_tadeusz_pruszkowski
+recruit_character = RUS_nikolai_kondratiev
+recruit_character = SPA_jose_ortega_y_gasset
+recruit_character = TUR_resat_nuri_guntekin
+recruit_character = SZC_park_chunghee
 recruit_character = JAP_shigemitsu_mamoru
+recruit_character = USA_hebert_agar
+
+ITA_peppino_garibaldi = {
+	retire = yes
+}
+GRU_edgar_jung = {
+	retire = yes
+}
+GRU_dolf_sternbergr = {
+	retire = yes
+}
+ENG_john_macmurray = {
+	retire = yes
+}
+FRA_gaston_riou = {
+   retire = yes
+}
+CZE_frantisek_langer = {
+   retire = yes
+}
+POL_tadeusz_pruszkowski = {
+   retire = yes
+}
+RUS_nikolai_kondratiev = {
+   retire = yes
+}
+SPA_jose_ortega_y_gasset = {
+   retire = yes
+}
+TUR_resat_nuri_guntekin = {
+   retire = yes
+}
+SZC_park_chunghee = {
+	retire = yes
+}
 JAP_shigemitsu_mamoru = {
+	retire = yes
+}
+USA_hebert_agar = {
 	retire = yes
 }
