@@ -23892,7 +23892,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #青年德意志的复兴
 	id = NKRsichuanpuppet.30
 	title = NKRsichuanpuppet.30.t
 	desc = NKRsichuanpuppet.30.d
@@ -23905,10 +23905,53 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.30 option NKRsichuanpuppet.30.a"
 		name = NKRsichuanpuppet.30.a
+		hidden_effect = {
+			GRU_dolf_sternberger = {
+				set_nationality = GRU
+			}
+			GRU = {
+				GRU_dolf_sternberger = {
+					promote_character = social_democrat_new_legalist_state_socialist_subtype
+				}
+				GRU_dolf_sternberger = {
+					promote_character = social_liberal_constitutional_statist_subtype
+				}
+				GRU_dolf_sternberger = {
+					promote_character = social_conservative_statist_subtype
+				}
+				GRU_dolf_sternberger = {
+					promote_character = authoritarian_democrat_statist_subtype
+				}
+				set_cosmetic_tag = GRU_YCP
+				set_politics = {
+					ruling_party = social_democrat
+				}
+				set_party_name = {
+					ideology = social_democrat
+					name = GRU_YCP_party
+					long_name = GRU_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_liberal
+					name = GRU_YCP_party
+					long_name = GRU_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = GRU_YCP_party
+					long_name = GRU_YCP_party_long
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = GRU_YCP_party
+					long_name = GRU_YCP_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #新不列颠
 	id = NKRsichuanpuppet.31
 	title = NKRsichuanpuppet.31.t
 	desc = NKRsichuanpuppet.31.d
@@ -23921,10 +23964,53 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.31 option NKRsichuanpuppet.31.a"
 		name = NKRsichuanpuppet.31.a
+		hidden_effect = {
+			ENG_john_macmurray = {
+				set_nationality = GBP
+			}
+			GBP = {
+				ENG_john_macmurray = {
+					promote_character = social_democrat_new_legalist_state_socialist_subtype
+				}
+				ENG_john_macmurray = {
+					promote_character = social_liberal_constitutional_statist_subtype
+				}
+				ENG_john_macmurray = {
+					promote_character = social_conservative_statist_subtype
+				}
+				ENG_john_macmurray = {
+					promote_character = authoritarian_democrat_statist_subtype
+				}
+				set_cosmetic_tag = ENG_YCP
+				set_politics = {
+					ruling_party = social_liberal
+				}
+				set_party_name = {
+					ideology = social_democrat
+					name = ENG_YCP_party
+					long_name = ENG_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_liberal
+					name = ENG_YCP_party
+					long_name = ENG_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = ENG_YCP_party
+					long_name = ENG_YCP_party_long
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = ENG_YCP_party
+					long_name = ENG_YCP_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #民主党转变
 	id = NKRsichuanpuppet.32
 	title = NKRsichuanpuppet.32.t
 	desc = NKRsichuanpuppet.32.d
@@ -23937,10 +24023,53 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.32 option NKRsichuanpuppet.32.a"
 		name = NKRsichuanpuppet.32.a
+		hidden_effect = {
+			USA_hebert_agar = {
+				set_nationality = USA
+			}
+			USA = {
+				USA_hebert_agar = {
+					promote_character = social_democrat_new_legalist_state_socialist_subtype
+				}
+				USA_hebert_agar = {
+					promote_character = social_liberal_constitutional_statist_subtype
+				}
+				USA_hebert_agar = {
+					promote_character = social_conservative_statist_subtype
+				}
+				USA_hebert_agar = {
+					promote_character = authoritarian_democrat_statist_subtype
+				}
+				set_cosmetic_tag = USA_YCP
+				set_politics = {
+					ruling_party = authoritarian_democrat
+				}
+				set_party_name = {
+					ideology = social_democrat
+					name = USA_YCP_party
+					long_name = USA_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_liberal
+					name = USA_YCP_party
+					long_name = USA_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = USA_YCP_party
+					long_name = USA_YCP_party_long
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = USA_YCP_party
+					long_name = USA_YCP_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #青年波兰复兴
 	id = NKRsichuanpuppet.33
 	title = NKRsichuanpuppet.33.t
 	desc = NKRsichuanpuppet.33.d
@@ -23953,10 +24082,53 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.33 option NKRsichuanpuppet.33.a"
 		name = NKRsichuanpuppet.33.a
+		hidden_effect = {
+			POL_tadeusz_pruszkowski = {
+				set_nationality = POL
+			}
+			POL = {
+				POL_tadeusz_pruszkowski = {
+					promote_character = social_democrat_new_legalist_state_socialist_subtype
+				}
+				POL_tadeusz_pruszkowski = {
+					promote_character = social_liberal_constitutional_statist_subtype
+				}
+				POL_tadeusz_pruszkowski = {
+					promote_character = social_conservative_statist_subtype
+				}
+				POL_tadeusz_pruszkowski = {
+					promote_character = authoritarian_democrat_statist_subtype
+				}
+				set_cosmetic_tag = POL_YCP
+				set_politics = {
+					ruling_party = social_conservative
+				}
+				set_party_name = {
+					ideology = social_democrat
+					name = POL_YCP_party
+					long_name = POL_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_liberal
+					name = POL_YCP_party
+					long_name = POL_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = POL_YCP_party
+					long_name = POL_YCP_party_long
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = POL_YCP_party
+					long_name = POL_YCP_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #新社会革命党
 	id = NKRsichuanpuppet.34
 	title = NKRsichuanpuppet.34.t
 	desc = NKRsichuanpuppet.34.d
@@ -23969,10 +24141,45 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.34 option NKRsichuanpuppet.34.a"
 		name = NKRsichuanpuppet.34.a
+		hidden_effect = {
+			RUS_nikolai_kondratiev = {
+				set_nationality = RUS
+			}
+			RUS = {
+				RUS_nikolai_kondratiev = {
+					promote_character = social_liberal_constitutional_statist_subtype
+				}
+				RUS_nikolai_kondratiev = {
+					promote_character = social_conservative_statist_subtype
+				}
+				RUS_nikolai_kondratiev = {
+					promote_character = authoritarian_democrat_statist_subtype
+				}
+				set_cosmetic_tag = RUS_YCP
+				set_politics = {
+					ruling_party = social_liberal
+				}
+				set_party_name = {
+					ideology = social_liberal
+					name = RUS_YCP_party
+					long_name = RUS_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = RUS_YCP_party
+					long_name = RUS_YCP_party_long
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = RUS_YCP_party
+					long_name = RUS_YCP_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #起源之地
 	id = NKRsichuanpuppet.35
 	title = NKRsichuanpuppet.35.t
 	desc = NKRsichuanpuppet.35.d
@@ -23985,10 +24192,53 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.35 option NKRsichuanpuppet.35.a"
 		name = NKRsichuanpuppet.35.a
+		hidden_effect = {
+			FRA_gaston_riou = {
+				set_nationality = FRP
+			}
+			FRP = {
+				FRA_gaston_riou = {
+					promote_character = social_democrat_new_legalist_state_socialist_subtype
+				}
+				FRA_gaston_riou = {
+					promote_character = social_liberal_constitutional_statist_subtype
+				}
+				FRA_gaston_riou = {
+					promote_character = social_conservative_statist_subtype
+				}
+				FRA_gaston_riou = {
+					promote_character = authoritarian_democrat_statist_subtype
+				}
+				set_cosmetic_tag = FRA_YCP
+				set_politics = {
+					ruling_party = authoritarian_democrat
+				}
+				set_party_name = {
+					ideology = social_democrat
+					name = FRA_YCP_party
+					long_name = FRA_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_liberal
+					name = FRA_YCP_party
+					long_name = FRA_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = FRA_YCP_party
+					long_name = FRA_YCP_party_long
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = FRA_YCP_party
+					long_name = FRA_YCP_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #半岛之上
 	id = NKRsichuanpuppet.36
 	title = NKRsichuanpuppet.36.t
 	desc = NKRsichuanpuppet.36.d
@@ -24001,10 +24251,53 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.36 option NKRsichuanpuppet.36.a"
 		name = NKRsichuanpuppet.36.a
+		hidden_effect = {
+			SPA_jose_ortega_y_gasset = {
+				set_nationality = SPA
+			}
+			SPA = {
+				SPA_jose_ortega_y_gasset = {
+					promote_character = social_democrat_new_legalist_state_socialist_subtype
+				}
+				SPA_jose_ortega_y_gasset = {
+					promote_character = social_liberal_constitutional_statist_subtype
+				}
+				SPA_jose_ortega_y_gasset = {
+					promote_character = social_conservative_statist_subtype
+				}
+				SPA_jose_ortega_y_gasset = {
+					promote_character = authoritarian_democrat_statist_subtype
+				}
+				set_cosmetic_tag = SPA_YCP
+				set_politics = {
+					ruling_party = social_conservative
+				}
+				set_party_name = {
+					ideology = social_democrat
+					name = SPA_YCP_party
+					long_name = SPA_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_liberal
+					name = SPA_YCP_party
+					long_name = SPA_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = SPA_YCP_party
+					long_name = SPA_YCP_party_long
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = SPA_YCP_party
+					long_name = SPA_YCP_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #中欧书生
 	id = NKRsichuanpuppet.37
 	title = NKRsichuanpuppet.37.t
 	desc = NKRsichuanpuppet.37.d
@@ -24017,10 +24310,45 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.37 option NKRsichuanpuppet.37.a"
 		name = NKRsichuanpuppet.37.a
+		hidden_effect = {
+			CZE_frantisek_langer = {
+				set_nationality = CZE
+			}
+			CZE = {
+				CZE_frantisek_langer = {
+					promote_character = social_liberal_constitutional_statist_subtype
+				}
+				CZE_frantisek_langer = {
+					promote_character = social_conservative_statist_subtype
+				}
+				CZE_frantisek_langer = {
+					promote_character = authoritarian_democrat_statist_subtype
+				}
+				set_cosmetic_tag = CZE_YCP
+				set_politics = {
+					ruling_party = social_liberal
+				}
+				set_party_name = {
+					ideology = social_liberal
+					name = CZE_YCP_party
+					long_name = CZE_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = CZE_YCP_party
+					long_name = CZE_YCP_party_long
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = CZE_YCP_party
+					long_name = CZE_YCP_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #扫除异端
 	id = NKRsichuanpuppet.38
 	title = NKRsichuanpuppet.38.t
 	desc = NKRsichuanpuppet.38.d
@@ -24033,6 +24361,49 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.38 option NKRsichuanpuppet.38.a"
 		name = NKRsichuanpuppet.38.a
+		hidden_effect = {
+			TUR_resat_nuri_guntekin = {
+				set_nationality = TUR
+			}
+			TUR = {
+				TUR_resat_nuri_guntekin = {
+					promote_character = social_democrat_new_legalist_state_socialist_subtype
+				}
+				TUR_resat_nuri_guntekin = {
+					promote_character = social_liberal_constitutional_statist_subtype
+				}
+				TUR_resat_nuri_guntekin = {
+					promote_character = social_conservative_statist_subtype
+				}
+				TUR_resat_nuri_guntekin = {
+					promote_character = authoritarian_democrat_statist_subtype
+				}
+				set_cosmetic_tag = TUR_YCP
+				set_politics = {
+					ruling_party = social_democrat
+				}
+				set_party_name = {
+					ideology = social_democrat
+					name = TUR_YCP_party
+					long_name = TUR_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_liberal
+					name = TUR_YCP_party
+					long_name = TUR_YCP_party_long
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = TUR_YCP_party
+					long_name = TUR_YCP_party_long
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = TUR_YCP_party
+					long_name = TUR_YCP_party_long
+				}
+			}
+		}
 	}
 }
 
