@@ -24142,17 +24142,17 @@ country_event = { #新社会革命党
 		log = "[GetLogInfo]: event NKRsichuanpuppet.34 option NKRsichuanpuppet.34.a"
 		name = NKRsichuanpuppet.34.a
 		hidden_effect = {
-			RUS_nikolai_kondratiev = {
-				set_nationality = RUS
+			RSA_nikolai_kondratiev = {
+				set_nationality = RSA
 			}
-			RUS = {
-				RUS_nikolai_kondratiev = {
+			RSA = {
+				RSA_nikolai_kondratiev = {
 					promote_character = social_liberal_constitutional_statist_subtype
 				}
-				RUS_nikolai_kondratiev = {
+				RSA_nikolai_kondratiev = {
 					promote_character = social_conservative_statist_subtype
 				}
-				RUS_nikolai_kondratiev = {
+				RSA_nikolai_kondratiev = {
 					promote_character = authoritarian_democrat_statist_subtype
 				}
 				set_cosmetic_tag = RUS_YCP
@@ -24268,7 +24268,7 @@ country_event = { #半岛之上
 				SPA_jose_ortega_y_gasset = {
 					promote_character = authoritarian_democrat_statist_subtype
 				}
-				set_cosmetic_tag = SPA_YCP
+				set_cosmetic_tag = SPR_YCP
 				set_politics = {
 					ruling_party = social_conservative
 				}
