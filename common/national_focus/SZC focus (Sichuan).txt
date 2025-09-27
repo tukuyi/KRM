@@ -606,7 +606,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = SZC_Industrial_Silk
+	id = SZC_Industrial_fabric
 	icon = GFX_focus_CHL_enlarge_the_textile_industries
 	cost = 4
 
@@ -623,7 +623,7 @@ shared_focus = {
 	}
 	ai_will_do = { factor = 12 }
 	completion_reward = {
-		log = "[GetLogRoot]: Focus Completed SZC_Industrial_Silk"
+		log = "[GetLogRoot]: Focus Completed SZC_Industrial_fabric"
 		add_one_random_civilian_factory = yes
 		add_one_random_military_factory = yes
 		custom_effect_tooltip = tooltip_white_line
@@ -950,11 +950,19 @@ shared_focus = {
 			else = {
 				add_extra_state_shared_building_slots = 1
 				custom_effect_tooltip = tooltip_white_line
-				add_building_construction = {
-					type = dam
-					level = 1
-					province = 4999
-					instant_build = yes
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = dam
+						level = 1
+						province = 4999
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = dam
+						NUMBER = 1
+						VP = 4999
+					}
 				}
 			}
 			prioritize_state = yes
@@ -2481,9 +2489,37 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetLogRoot]: Focus Completed SZC_Creative_Solutions"
-		custom_effect_tooltip = SZC_Creative_Solutions_tooltip
-		hidden_effect = {
-			set_technology = { bicycle_infantry = 1 popup = no }
+		enable_tech_bicycle_battalion = yes
+		custom_effect_tooltip = tooltip_white_line
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "Fei Ge Juntuan Beifa"
+				LINE_1 = { localization_key = line_battalion_tt NAME = bicycle_battalion ICON = GFX_unit_bicycle_battalion_icon_small COUNT = 6 }
+			}
+			if = {
+				limit = { has_template = "Fei Ge Juntuan Beifa" }
+				delete_unit_template_and_units = { division_template = "Fei Ge Juntuan Beifa" disband = yes } #no cheating
+			}
+			division_template = {
+				name = "Fei Ge Juntuan Beifa"
+				division_names_group = CHYN_INF_01
+				regiments = {
+					bicycle_battalion = { x = 0 y = 0 }
+					bicycle_battalion = { x = 0 y = 1 }
+					bicycle_battalion = { x = 0 y = 2 }
+					bicycle_battalion = { x = 1 y = 0 }
+					bicycle_battalion = { x = 1 y = 1 }
+					bicycle_battalion = { x = 1 y = 2 }
+				}
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		add_tech_bonus = {
+			name = SZC_Creative_Solutions
+			bonus = 1
+			uses = 1
+			category = support_tech
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4387,11 +4423,19 @@ focus_tree = {
 				else = {
 					add_extra_state_shared_building_slots = 1
 					custom_effect_tooltip = tooltip_white_line
-					add_building_construction = {
-						type = dam
-						level = 1
-						province = 4999
-						instant_build = yes
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = dam
+							level = 1
+							province = 4999
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_victory_point
+							BUILDING = dam
+							NUMBER = 1
+							VP = 4999
+						}
 					}
 				}
 			}
@@ -4467,11 +4511,11 @@ focus_tree = {
 		y = 3
 
 		available = {
-			OR = {
-				owns_state = 601 #Xikang
-				owns_state = 693 #Chamdo
-			}
 			NOT = { has_war_with = TIB }
+			owns_any_state_of = {
+				601 #Xikang
+				693 #Chamdo
+			}
 		}
 		prerequisite = {
 			focus = SZC_Buddhist_Influence
@@ -4499,7 +4543,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_Industrial_Victory
-		icon = GFX_goal_SZC_Industrial_Victory
+		icon = GFX_goal_SZC_flag
 		cost = 0
 
 		x = 4
@@ -5174,8 +5218,6 @@ focus_tree = {
 				prioritize_state = yes
 			}
 			add_one_random_infrastructure = yes
-			add_one_random_military_factory = yes
-			add_one_random_military_factory = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -5205,7 +5247,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_Republican_Triumph
-		icon = GFX_goal_SZC_
+		icon = GFX_goal_SZC_flag
 		cost = 0
 
 		x = 6
@@ -7104,12 +7146,8 @@ focus_tree = {
 					is_neighbor_of = GXC
 					any_subject_country = { is_neighbor_of = GXC }
 					GXC = { any_subject_country = { is_neighbor_of = ROOT } }
+					is_neighbor_of = GXC.overlord
 				}
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_country_flag = SZC_opium_crisis_solved }
-				GXC = { is_subject = yes }
 			}
 		}
 		will_lead_to_war_with = GXC
@@ -7205,10 +7243,6 @@ focus_tree = {
 			factor = 100
 			modifier = {
 				factor = 0
-				NOT = { has_country_flag = SZC_opium_crisis_solved }
-			}
-			modifier = {
-				factor = 0
 				has_wargoal_against = GXC
 				NOT = { GXC = { is_ally_with = 608.owner } }
 			}
@@ -7230,16 +7264,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_From_Chongqing_To_Beijing"
-			if = {
-				limit = { can_declare_war_on = QIE }
-				activate_targeted_decision = { target = QIE decision = china_attack_decision }
-			}
-			else = {
-				create_wargoal = {
-					target = 608.owner
-					type = annex_everything
-				}
-			}
+			activate_targeted_decision = { target = 608.owner decision = china_attack_decision }
 		}
 	}
 
@@ -7266,10 +7291,6 @@ focus_tree = {
 			factor = 100
 			modifier = {
 				factor = 0
-				NOT = { has_country_flag = SZC_opium_crisis_solved }
-			}
-			modifier = {
-				factor = 0
 				OR = {
 					has_country_flag = china_attack_decision_one_month_cooldown
 					country_is_in_dangerous_war = yes
@@ -7282,10 +7303,6 @@ focus_tree = {
 					is_neighbor_of = 716.owner
 					any_subject_country = { is_neighbor_of = 716.owner }
 				}
-			}
-			modifier = {
-				factor = 0
-				china_proper_not_united = yes
 			}
 			modifier = {
 				factor = 0
@@ -7304,7 +7321,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_Liberate_the_Northeast"
-			if = {
 				limit = {
 					can_declare_war_on = FNG
 				}
@@ -7424,62 +7440,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SZC_From_Chongqing_To_Beijing
 		}
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 0
-				OR = {
-					CHI = {
-						can_declare_war_on = ROOT
-						china_is_aligned_with_kmt = yes
-						OR = {
-							default_attack_AI_trigger = yes
-							NOT = {
-								is_neighbor_of = ROOT
-								any_neighbor_country = { is_ally_with = ROOT }
-								any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
-							}
-						}
-					}
-					GXC = {
-						can_declare_war_on = ROOT
-						china_is_aligned_with_kmt = yes
-						OR = {
-							default_attack_AI_trigger = yes
-							NOT = {
-								is_neighbor_of = ROOT
-								any_neighbor_country = { is_ally_with = ROOT }
-								any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
-							}
-						}
-					}
-					HNN = {
-						can_declare_war_on = ROOT
-						china_is_aligned_with_kmt = yes
-						OR = {
-							default_attack_AI_trigger = yes
-							NOT = {
-								is_neighbor_of = ROOT
-								any_neighbor_country = { is_ally_with = ROOT }
-								any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
-							}
-						}
-					}
-					YUN = {
-						can_declare_war_on = ROOT
-						china_is_aligned_with_kmt = yes
-						OR = {
-							default_attack_AI_trigger = yes
-							NOT = {
-								is_neighbor_of = ROOT
-								any_neighbor_country = { is_ally_with = ROOT }
-								any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
-							}
-						}
-					}
-				}
-			}
-		}
+		ai_will_do = { factor = 100 }
 		will_lead_to_war_with = CHI
 		will_lead_to_war_with = GXC
 		will_lead_to_war_with = HNN
@@ -7543,7 +7504,6 @@ focus_tree = {
 
 	focus = {
 		id = SZC_The_Zhilis_Last_Stand
-		icon = GFX_goal_SZC__2
 		cost = 0
 
 		x = 7
@@ -7830,7 +7790,6 @@ focus_tree = {
 			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
 			add_to_coalition = yes
 			custom_effect_tooltip = tooltip_white_line
-			division_template = {
 				name = "Zhili Canbu Bubing Shi"
 				division_names_group = QIE_INF_01
 				is_locked = yes
@@ -7844,7 +7803,6 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = { 605 }
 				limit = { valid_state_for_spawning_friendly_unit = yes }
-				create_unit = {
 					division = "division_template = \"Zhili Canbu Bubing Shi\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
 					owner = ROOT
 					count = 4
@@ -7853,7 +7811,6 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = { 650 }
 				limit = { valid_state_for_spawning_friendly_unit = yes }
-				create_unit = {
 					division = "division_template = \"Zhili Canbu Bubing Shi\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
 					owner = ROOT
 					count = 3
@@ -7862,7 +7819,6 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = { 661 }
 				limit = { valid_state_for_spawning_friendly_unit = yes }
-				create_unit = {
 					division = "division_template = \"Zhili Canbu Bubing Shi\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
 					owner = ROOT
 					count = 3
@@ -8565,7 +8521,6 @@ focus_tree = {
 			add_command_power = 20
 			hidden_effect = {
 				var:country_leader = {
-					for_each_loop = {
 						array = global.ideologies
 						meta_effect = {
 							text = {
@@ -9129,19 +9084,15 @@ focus_tree = {
 					GXC = {
 						can_declare_war_on = ROOT
 						china_is_aligned_with_federalists = yes
-						OR = {
-							default_attack_AI_trigger = yes
-							NOT = {
-								is_neighbor_of = ROOT
-								any_neighbor_country = { is_ally_with = ROOT }
-								any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
-							}
+						NOT = {
+							is_neighbor_of = ROOT
+							any_neighbor_country = { is_ally_with = ROOT }
+							any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
 						}
 					}
 					HNN = {
 						can_declare_war_on = ROOT
 						china_is_aligned_with_federalists = yes
-						OR = {
 							default_attack_AI_trigger = yes
 							NOT = {
 								is_neighbor_of = ROOT
@@ -9153,12 +9104,26 @@ focus_tree = {
 					YUN = {
 						can_declare_war_on = ROOT
 						china_is_aligned_with_federalists = yes
+						NOT = {
+							is_neighbor_of = ROOT
+							any_neighbor_country = { is_ally_with = ROOT }
+							any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
+						}
+					}
+					AND = {
+						check_variable = { enemies^num > 1 }
 						OR = {
-							default_attack_AI_trigger = yes
-							NOT = {
-								is_neighbor_of = ROOT
-								any_neighbor_country = { is_ally_with = ROOT }
-								any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
+							AND = {
+								NOT = { has_war_with = GXC }
+								GXC = { china_is_aligned_with_federalists = yes }
+							}
+							AND = {
+								NOT = { has_war_with = HNN }
+								HNN = { china_is_aligned_with_federalists = yes }
+							}
+							AND = {
+								NOT = { has_war_with = YUN }
+								YUN = { china_is_aligned_with_federalists = yes }
 							}
 						}
 					}
@@ -9387,34 +9352,18 @@ focus_tree = {
 				factor = 0
 				OR = {
 					has_country_flag = china_attack_decision_one_month_cooldown
-					CHI = {
-						can_declare_war_on = ROOT
-						china_is_aligned_with_kmt = yes
-						OR = {
-							default_attack_AI_trigger = yes
-							NOT = {
-								is_neighbor_of = ROOT
-								any_neighbor_country = { is_ally_with = ROOT }
-								any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
-							}
-						}
-					}
 					GXC = {
 						can_declare_war_on = ROOT
 						china_is_aligned_with_kmt = yes
-						OR = {
-							default_attack_AI_trigger = yes
-							NOT = {
-								is_neighbor_of = ROOT
-								any_neighbor_country = { is_ally_with = ROOT }
-								any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
-							}
+						NOT = {
+							is_neighbor_of = ROOT
+							any_neighbor_country = { is_ally_with = ROOT }
+							any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
 						}
 					}
 					HNN = {
 						can_declare_war_on = ROOT
 						china_is_aligned_with_kmt = yes
-						OR = {
 							default_attack_AI_trigger = yes
 							NOT = {
 								is_neighbor_of = ROOT
@@ -9426,8 +9375,8 @@ focus_tree = {
 					YUN = {
 						can_declare_war_on = ROOT
 						china_is_aligned_with_kmt = yes
+						NOT = {
 						OR = {
-							default_attack_AI_trigger = yes
 							NOT = {
 								is_neighbor_of = ROOT
 								any_neighbor_country = { is_ally_with = ROOT }
@@ -9658,7 +9607,6 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = { has_global_flag = allow_sound_events_flag }
-					hidden_effect = { scoped_play_song = march_of_the_volunteers }
 				}
 			}
 		}
@@ -9826,10 +9774,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_unity_forged_through_tragedy"
+			add_stability = 0.05
 			effect_tooltip = { add_country_leader_trait = QIE_mediator_of_moderation }
 			hidden_effect = {
 				var:country_leader = {
-					for_each_loop = {
 						array = global.ideologies
 						meta_effect = {
 							text = {
@@ -9843,7 +9791,6 @@ focus_tree = {
 					}
 				}
 			}
-			add_political_power = 30
 			add_stability = 0.05
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
