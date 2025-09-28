@@ -24394,7 +24394,7 @@ country_event = { #扫除异端
 	}
 }
 
-country_event = { #
+country_event = { #起源之地-姜人
 	id = NKRsichuanpuppet.39
 	title = NKRsichuanpuppet.39.t
 	desc = NKRsichuanpuppet.39.d
@@ -24407,10 +24407,29 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.39 option NKRsichuanpuppet.39.a"
 		name = NKRsichuanpuppet.39.a
+		hidden_effect = {
+			FRA_robert_brasillach = {
+				set_nationality = FRP
+			}
+			FRP = {
+				FRA_robert_brasillach = {
+					promote_character = national_populist_strum_drang_statist_subtype
+				}
+				set_cosmetic_tag = FRA_YCP_SD
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = FRA_YCP_party
+					long_name = FRA_YCP_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #不列颠尼亚
 	id = NKRsichuanpuppet.40
 	title = NKRsichuanpuppet.40.t
 	desc = NKRsichuanpuppet.40.d
@@ -24423,10 +24442,29 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.40 option NKRsichuanpuppet.40.a"
 		name = NKRsichuanpuppet.40.a
+		hidden_effect = {
+			ENG_henry_williamson = {
+				set_nationality = GBP
+			}
+			GBP = {
+				ENG_henry_williamson = {
+					promote_character = national_populist_strum_drang_statist_subtype
+				}
+				set_cosmetic_tag = ENG_YCP_SD
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = ENG_YCP_SD_party
+					long_name = ENG_YCP_SD_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #啊，西班牙！
 	id = NKRsichuanpuppet.41
 	title = NKRsichuanpuppet.41.t
 	desc = NKRsichuanpuppet.41.d
@@ -24439,10 +24477,29 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.41 option NKRsichuanpuppet.41.a"
 		name = NKRsichuanpuppet.41.a
+		hidden_effect = {
+			SPA_jose_maria_peman = {
+				set_nationality = SPA
+			}
+			SPA = {
+				SPA_jose_maria_peman = {
+					promote_character = national_populist_strum_drang_statist_subtype
+				}
+				set_cosmetic_tag = SPA_YCP_SD
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = SPA_YCP_SD_party
+					long_name = SPA_YCP_SD_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #罗马重生
 	id = NKRsichuanpuppet.42
 	title = NKRsichuanpuppet.42.t
 	desc = NKRsichuanpuppet.42.d
@@ -24455,10 +24512,29 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.42 option NKRsichuanpuppet.42.a"
 		name = NKRsichuanpuppet.42.a
+		hidden_effect = {
+			ITA_julius_evola = {
+				set_nationality = ITA
+			}
+			ITA = {
+				ITA_julius_evola = {
+					promote_character = national_populist_strum_drang_statist_subtype
+				}
+				set_cosmetic_tag = ITA_YCP_SD
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = ITA_YCP_SD_party
+					long_name = ITA_YCP_SD_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #大突厥
 	id = NKRsichuanpuppet.43
 	title = NKRsichuanpuppet.43.t
 	desc = NKRsichuanpuppet.43.d
@@ -24471,10 +24547,29 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.43 option NKRsichuanpuppet.43.a"
 		name = NKRsichuanpuppet.43.a
+		hidden_effect = {
+			TUR_alparslan_turkes = {
+				set_nationality = TUR
+			}
+			TUR = {
+				TUR_alparslan_turkes = {
+					promote_character = national_populist_strum_drang_statist_subtype
+				}
+				set_cosmetic_tag = TUR_YCP_SD
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = TUR_YCP_SD_party
+					long_name = TUR_YCP_SD_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #帝权
 	id = NKRsichuanpuppet.44
 	title = NKRsichuanpuppet.44.t
 	desc = NKRsichuanpuppet.44.d
@@ -24487,10 +24582,29 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.44 option NKRsichuanpuppet.44.a"
 		name = NKRsichuanpuppet.44.a
+		hidden_effect = {
+			USA_francis_parker_yockey = {
+				set_nationality = USA
+			}
+			USA = {
+				USA_francis_parker_yockey = {
+					promote_character = national_populist_strum_drang_statist_subtype
+				}
+				set_cosmetic_tag = USA_YCP_SD
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = USA_YCP_SD_party
+					long_name = USA_YCP_SD_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #保卫同盟的合作者
 	id = NKRsichuanpuppet.45
 	title = NKRsichuanpuppet.45.t
 	desc = NKRsichuanpuppet.45.d
@@ -24503,6 +24617,38 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.45 option NKRsichuanpuppet.45.a"
 		name = NKRsichuanpuppet.45.a
+		hidden_effect = {
+			RUS = {
+				RUS_alisa_berkova = {
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_RSA_alisa_berkova_large
+							small = GFX_portrait_RSA_alisa_berkova_small
+						}
+					}
+					add_country_leader_role = {
+						country_leader = {
+							ideology = national_populist_strum_drang_statist_subtype
+						}
+					}
+					set_nationality = RSA
+				}
+			}
+			RSA = {
+				RUS_alisa_berkova = {
+					promote_character = national_populist_strum_drang_statist_subtype
+				}
+				set_cosmetic_tag = RUS_YCP_SD
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = RUS_YCP_SD_party
+					long_name = RUS_YCP_SD_party_long
+				}
+			}
+		}
 	}
 }
 
