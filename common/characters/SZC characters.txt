@@ -43,7 +43,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_lu_chao_army_chief_desc
-			traits = { politically_connected organizer skilled_staffer }
+			traits = { politically_connected organizer skilled_staffer CHN_SZC_officer }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 1
@@ -73,7 +73,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_xiong_kewu_army_chief_desc
-			traits = { war_hero politically_connected infantry_officer }
+			traits = { war_hero politically_connected infantry_officer CHN_SZC_officer }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 3
@@ -115,6 +115,9 @@ characters = {
 			slot = political_advisor
 			idea_token = SZC_liu_bocheng_advisor
 			desc = SZC_liu_bocheng_high_command_desc
+			available = {
+				not_already_hired_except_as = political_advisor
+			}
 			traits = { KR_patriotic_socialist }
 		}
 		advisor = {
@@ -124,7 +127,7 @@ characters = {
 			available = {
 				not_already_hired_except_as = high_command
 			}
-			traits = { KR_MHC_infantry_2 }
+			traits = { KR_MHC_irregular_3 }
 			cost = 100
 		}
 		country_leader = {
@@ -161,7 +164,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_deng_xihou_commander_desc
-			traits = { war_hero politically_connected infantry_leader }
+			traits = { war_hero politically_connected infantry_leader CHN_SZC_officer }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -185,7 +188,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_liu_wenhui_high_command_desc
-			traits = { career_officer artillery_officer artillery_specialist politically_connected }
+			traits = { career_officer artillery_officer artillery_specialist politically_connected CHN_SZC_officer }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -224,7 +227,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_wang_zuanxu_army_chief_desc
-			traits = { artillery_officer artillery_specialist politically_connected trait_reckless }
+			traits = { artillery_officer artillery_specialist politically_connected trait_reckless CHN_SZC_officer }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 2
@@ -287,7 +290,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_tian_songyao_high_command_desc
-			traits = { career_officer politically_connected cavalry_officer rising_star }
+			traits = { career_officer politically_connected cavalry_officer rising_star CHN_SZC_officer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -334,7 +337,7 @@ characters = {
 		}
 		field_marshal = {
 			desc = SZC_yang_sen_commander_desc
-			traits = { career_officer organizer inflexible_strategist infantry_officer politically_connected }
+			traits = { career_officer organizer inflexible_strategist infantry_officer politically_connected CHN_SZC_officer }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 3
@@ -358,7 +361,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_liu_cunhou_army_chief_desc
-			traits = { war_hero infantry_officer politically_connected trickster }
+			traits = { war_hero infantry_officer politically_connected trickster CHN_SZC_officer }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -411,7 +414,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_wang_lingji_army_chief_desc
-			traits = { brilliant_strategist infantry_officer infantry_leader media_personality }
+			traits = { brilliant_strategist infantry_officer infantry_leader media_personality CHN_SZC_officer }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 1
@@ -449,7 +452,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_he_guoguang_commander_desc
-			traits = { career_officer trait_cautious trickster }
+			traits = { career_officer trait_cautious trickster CHN_SZC_officer }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 3
@@ -468,7 +471,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_zhou_daogang_commander_desc
-			traits = { career_officer trait_reckless infantry_officer }
+			traits = { career_officer trait_reckless infantry_officer CHN_SZC_officer }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 3
@@ -500,7 +503,7 @@ characters = {
 		}
 		field_marshal = {
 			desc = SZC_liu_xiang_army_chief_desc
-			traits = { harsh_leader infantry_officer infantry_leader trickster fast_planner }
+			traits = { harsh_leader infantry_officer infantry_leader trickster fast_planner CHN_SZC_officer }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -622,7 +625,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_guo_xunqi_high_command_desc
-			traits = { politically_connected hill_fighter artillery_officer artillery_specialist }
+			traits = { politically_connected hill_fighter artillery_officer artillery_specialist CHN_SZC_officer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
