@@ -13291,15 +13291,34 @@ country_event = { #就职典礼
 	option = {#万岁！万岁！万岁！
 		log = "[GetLogInfo]: event NKRsichuan.289 option NKRsichuan.289.a"
 		name = NKRsichuan.289.a
-		SZC_pan_wenhua = {
-			set_portraits = {
-				civilian = {
-					large = GFX_portrait_SZC_pan_wenhua_civilian_large
-					small = GFX_portrait_SZC_pan_wenhua_civilian_small
+		if = {
+			limit = {
+				ruling_party = paternal_autocrat
+			}
+			SZC_pan_wenhua = {
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_SZC_pan_wenhua_marshall_large
+						small = GFX_portrait_SZC_pan_wenhua_marshall_small
+					}
+					army = {
+						large = GFX_portrait_SZC_pan_wenhua_marshall_large
+						small = GFX_portrait_SZC_pan_wenhua_marshall_small
+					}
 				}
-				army = {
-					large = GFX_portrait_SZC_pan_wenhua_marshall_large
-					small = GFX_portrait_SZC_pan_wenhua_marshall_small
+			}
+		}
+		else = {
+			SZC_pan_wenhua = {
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_SZC_pan_wenhua_civilian_large
+						small = GFX_portrait_SZC_pan_wenhua_civilian_small
+					}
+					army = {
+						large = GFX_portrait_SZC_pan_wenhua_marshall_large
+						small = GFX_portrait_SZC_pan_wenhua_marshall_small
+					}
 				}
 			}
 		}
@@ -13370,14 +13389,6 @@ country_event = { #总理人选
 			unit_leader_event = {
 				id = NKRsichuanmisc.8
 				days = 5
-			}
-		}
-		SZC_pan_wenhua = {
-			set_portraits = {
-				civilian = {
-					large = GFX_portrait_SZC_pan_wenhua_marshall_large
-					small = GFX_portrait_SZC_pan_wenhua_marshall_small
-				}
 			}
 		}
 		
