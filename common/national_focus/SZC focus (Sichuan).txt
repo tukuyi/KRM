@@ -3,9 +3,6 @@
 ## By Alpinia         ##
 ########################
 
-
-
-
 ### Economic Tree ###
 shared_focus = {
 	id = SZC_Chengdu_Chongqing_Railway
@@ -181,7 +178,7 @@ shared_focus = {
 shared_focus = {
 	id = SZC_Restart_The_Agricultural_Sector
 	icon = GFX_goal_agricultural_aid
-	cost = 3
+	cost = 4
 
 	relative_position_id = SZC_New_Commercial_Zones
 	x = 0
@@ -771,8 +768,9 @@ shared_focus = {
 				instant_build = yes
 			}
 			add_resource = {
-				type = steel
+				type = coal
 				amount = 4
+				show_state_in_tooltip = no
 			}
 		}
 		custom_effect_tooltip = tooltip_white_line
@@ -1314,6 +1312,12 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetLogRoot]: Focus Completed SZC_Rebuild_The_Sichuanese_Army"
 		army_experience = 25
+		add_doctrine_cost_reduction = {
+			name = SZC_Adopt_The_Southern_Doctrine
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_XP }
 }
@@ -1532,6 +1536,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetLogRoot]: Focus Completed SZC_Adopt_The_Southern_Doctrine"
+		add_doctrine_cost_reduction = {
+			name = SZC_Adopt_The_Southern_Doctrine
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
 		add_ideas = SZC_southern_doctrine_1
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }
@@ -2074,6 +2084,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetLogRoot]: Focus Completed SZC_Irregular_Tactics"
+		add_doctrine_cost_reduction = {
+			name = SZC_Adopt_The_Southern_Doctrine
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
 		add_ideas = SZC_irregular_tactics_1
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }
@@ -2368,11 +2384,11 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetLogRoot]: Focus Completed SZC_Doctrinal_Innovation"
-		add_doctrine_cost_reduction = {
+		add_mastery_bonus = {
 			name = SZC_Doctrinal_Innovation
-			cost_reduction = 0.5
-			uses = 1
-			category = land_doctrine
+			bonus = 0.10
+			days = 365
+			folder = land
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3088,7 +3104,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_Armament_Department_Holds_On
-		icon = GFX_goal_SZC_
+		icon = GFX_goal_SZC_flag
 		cost = 0
 
 		x = 6
@@ -3101,7 +3117,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_Armament_Department_Holds_On"
 			custom_effect_tooltip = unlock_focuses
 			hidden_effect = {
-				QIE = { country_event = qiefor.101 }
+				QIE = { country_event = qing_foreign_policy_events.101 }
 			}
 		}
 	}
@@ -3259,7 +3275,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_Armed_And_Ready
-		icon = GFX_goal_generic_armored_cars
+		icon = GFX_goal_generic_old_armoured_car
 		cost = 5
 
 		relative_position_id = SZC_Yang_Sens_Ambition
@@ -3490,7 +3506,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_A_Man_Of_The_People
-		icon = GFX_goal_SZC__2
+		icon = GFX_goal_SZC_flag_2
 		cost = 5
 
 		relative_position_id = SZC_Yang_Sens_Ambition
@@ -3739,7 +3755,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_A_Victory_From_Baoding
-		icon = GFX_goal_SZC_
+		icon = GFX_goal_SZC_flag
 		cost = 0
 
 		x = 5
@@ -7147,6 +7163,8 @@ focus_tree = {
 					any_subject_country = { is_neighbor_of = GXC }
 					GXC = { any_subject_country = { is_neighbor_of = ROOT } }
 					is_neighbor_of = GXC.overlord
+					any_subject_country = { is_neighbor_of = GXC.overlord }
+					var:GXC.overlord = { any_subject_country = { is_neighbor_of = ROOT } }
 				}
 			}
 		}
@@ -7321,17 +7339,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_Liberate_the_Northeast"
-				limit = {
-					can_declare_war_on = FNG
-				}
-				activate_targeted_decision = { target = FNG decision = china_attack_decision }
-			}
-			else = {
-				create_wargoal = {
-					target = 716.owner
-					type = annex_everything
-				}
-			}
+			activate_targeted_decision = { target = 716.owner decision = china_attack_decision }
 		}
 	}
 
@@ -7504,6 +7512,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_The_Zhilis_Last_Stand
+		icon = GFX_goal_SZC_flag_2
 		cost = 0
 
 		x = 7
@@ -7790,38 +7799,74 @@ focus_tree = {
 			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
 			add_to_coalition = yes
 			custom_effect_tooltip = tooltip_white_line
-				name = "Zhili Canbu Bubing Shi"
-				division_names_group = QIE_INF_01
-				is_locked = yes
-				regiments = {
-					irregular_infantry = { x = 0 y = 0 }
-					irregular_infantry = { x = 0 y = 1 }
-					irregular_infantry = { x = 1 y = 0 }
-					irregular_infantry = { x = 1 y = 1 }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_create_division_template
+					NAME = "Zhili Canbu Bubing Shi"
+					LINE_1 = { localization_key = line_battalion_tt NAME = irregular_infantry ICON = GFX_unit_irregular_infantry_icon_small COUNT = 4 }
+				}
+				if = {
+					limit = { has_template = "Zhili Canbu Bubing Shi" }
+					delete_unit_template_and_units = { division_template = "Zhili Canbu Bubing Shi" disband = yes } #no cheating
+				}
+				division_template = {
+					name = "Zhili Canbu Bubing Shi"
+					division_names_group = QIE_INF_01
+					is_locked = yes
+					regiments = {
+						irregular_infantry = { x = 0 y = 0 }
+						irregular_infantry = { x = 0 y = 1 }
+						irregular_infantry = { x = 1 y = 0 }
+						irregular_infantry = { x = 1 y = 1 }
+					}
 				}
 			}
 			random_owned_controlled_state = {
 				prioritize = { 605 }
 				limit = { valid_state_for_spawning_friendly_unit = yes }
-					division = "division_template = \"Zhili Canbu Bubing Shi\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
-					owner = ROOT
-					count = 4
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_spawn_units
+						COUNT = 4
+						TYPE = "Zhili Canbu Bubing Shi"
+					}
+					create_unit = {
+						division = "division_template = \"Zhili Canbu Bubing Shi\" start_experience_factor = 0.3"
+						owner = ROOT
+						count = 4
+					}
 				}
 			}
 			random_owned_controlled_state = {
 				prioritize = { 650 }
 				limit = { valid_state_for_spawning_friendly_unit = yes }
-					division = "division_template = \"Zhili Canbu Bubing Shi\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
-					owner = ROOT
-					count = 3
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_spawn_units
+						COUNT = 3
+						TYPE = "Zhili Canbu Bubing Shi"
+					}
+					create_unit = {
+						division = "division_template = \"Zhili Canbu Bubing Shi\" start_experience_factor = 0.3"
+						owner = ROOT
+						count = 3
+					}
 				}
 			}
 			random_owned_controlled_state = {
 				prioritize = { 661 }
 				limit = { valid_state_for_spawning_friendly_unit = yes }
-					division = "division_template = \"Zhili Canbu Bubing Shi\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
-					owner = ROOT
-					count = 3
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_spawn_units
+						COUNT = 3
+						TYPE = "Zhili Canbu Bubing Shi"
+					}
+					create_unit = {
+						division = "division_template = \"Zhili Canbu Bubing Shi\" start_experience_factor = 0.3"
+						owner = ROOT
+						count = 3
+					}
 				}
 			}
 			activate_targeted_decision = { decision = SZC_Reorganise_The_Remnant_Divisions target = ROOT }
@@ -8110,11 +8155,11 @@ focus_tree = {
 				idea = SZC_embracing_meritocracy
 				days = 160
 			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.25
+			add_mastery_bonus = {
 				name = SZC_a_state_run_by_competence
-				uses = 2
-				category = land_doctrine
+				bonus = 0.10
+				days = 365
+				folder = land
 			}
 			if = {
 				limit = { NOT = { has_government = paternal_autocrat } }
@@ -8521,21 +8566,9 @@ focus_tree = {
 			add_command_power = 20
 			hidden_effect = {
 				var:country_leader = {
-						array = global.ideologies
-						meta_effect = {
-							text = {
-								if = {
-									limit = { has_ideology = [IDEOLOGY] }
-									swap_country_leader_traits = {
-										remove = QIE_marshal_of_tianjin
-										add = QIE_marshal_of_tianjin_2
-										ideology = [IDEOLOGY]
-									}
-								}
-							}
-							IDEOLOGY = "[?v.GetTokenKey]"
-						}
-					}
+					set_temp_variable = { remove_trait_token = token:QIE_marshal_of_tianjin }
+					set_temp_variable = { add_trait_token = token:QIE_marshal_of_tianjin_2 }
+					swap_traits_in_all_country_leader_roles = yes
 				}
 			}
 		}
@@ -9093,12 +9126,10 @@ focus_tree = {
 					HNN = {
 						can_declare_war_on = ROOT
 						china_is_aligned_with_federalists = yes
-							default_attack_AI_trigger = yes
-							NOT = {
-								is_neighbor_of = ROOT
-								any_neighbor_country = { is_ally_with = ROOT }
-								any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
-							}
+						NOT = {
+							is_neighbor_of = ROOT
+							any_neighbor_country = { is_ally_with = ROOT }
+							any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
 						}
 					}
 					YUN = {
@@ -9364,23 +9395,35 @@ focus_tree = {
 					HNN = {
 						can_declare_war_on = ROOT
 						china_is_aligned_with_kmt = yes
-							default_attack_AI_trigger = yes
-							NOT = {
-								is_neighbor_of = ROOT
-								any_neighbor_country = { is_ally_with = ROOT }
-								any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
-							}
+						NOT = {
+							is_neighbor_of = ROOT
+							any_neighbor_country = { is_ally_with = ROOT }
+							any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
 						}
 					}
 					YUN = {
 						can_declare_war_on = ROOT
 						china_is_aligned_with_kmt = yes
 						NOT = {
+							is_neighbor_of = ROOT
+							any_neighbor_country = { is_ally_with = ROOT }
+							any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
+						}
+					}
+					AND = {
+						check_variable = { enemies^num > 1 }
 						OR = {
-							NOT = {
-								is_neighbor_of = ROOT
-								any_neighbor_country = { is_ally_with = ROOT }
-								any_subject_country = { any_neighbor_country = { is_ally_with = ROOT } }
+							AND = {
+								NOT = { has_war_with = GXC }
+								GXC = { china_is_aligned_with_kmt = yes }
+							}
+							AND = {
+								NOT = { has_war_with = HNN }
+								HNN = { china_is_aligned_with_kmt = yes }
+							}
+							AND = {
+								NOT = { has_war_with = YUN }
+								YUN = { china_is_aligned_with_kmt = yes }
 							}
 						}
 					}
@@ -9607,6 +9650,7 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = { has_global_flag = allow_sound_events_flag }
+					scoped_play_song = march_of_the_volunteers
 				}
 			}
 		}
@@ -9775,23 +9819,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_unity_forged_through_tragedy"
 			add_stability = 0.05
+			add_political_power = 30
 			effect_tooltip = { add_country_leader_trait = QIE_mediator_of_moderation }
 			hidden_effect = {
 				var:country_leader = {
-						array = global.ideologies
-						meta_effect = {
-							text = {
-								if = {
-									limit = { has_ideology = [IDEOLOGY] }
-									add_trait = { trait = QIE_mediator_of_moderation ideology = [IDEOLOGY] }
-								}
-							}
-							IDEOLOGY = "[?v.GetTokenKey]"
-						}
-					}
+					set_temp_variable = { trait_token = token:QIE_mediator_of_moderation }
+					add_trait_to_all_country_leader_roles = yes
 				}
 			}
-			add_stability = 0.05
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
@@ -9826,49 +9861,33 @@ focus_tree = {
 				days = 365
 			}
 			if = {
-				limit = {
-					has_dlc_mtg = yes
-				}
-				if = {
-					limit = { NOT = { has_tech = early_ship_hull_light } }
-					set_technology = { early_ship_hull_light = 1 }
-				}
-				if = {
-					limit = { NOT = { has_tech = early_ship_hull_cruiser } }
-					set_technology = { early_ship_hull_cruiser = 1 }
-				}
-				if = {
-					limit = { NOT = { has_tech = coastal_defense_ships } }
-					set_technology = { coastal_defense_ships = 1 }
-				}
-				if = {
-					limit = { NOT = { has_tech = coastal_defense_ships } }
-					set_technology = { coastal_defense_ships = 1 }
-				}
-				if = {
-					limit = { NOT = { has_tech = basic_naval_mines } }
-					set_technology = { basic_naval_mines = 1 }
-				}
-				if = {
-					limit = { NOT = { has_tech = basic_battery } }
-					set_technology = { basic_battery = 1 }
-				}
-				if = {
-					limit = { NOT = { has_tech = basic_torpedo } }
-					set_technology = { basic_torpedo = 1 }
-				}
+				limit = { NOT = { has_tech = early_ship_hull_light } }
+				set_technology = { early_ship_hull_light = 1 }
 			}
-			else = {
-				if = {
-					limit = { NOT = { has_tech = early_destroyer } }
-					set_technology = { early_destroyer = 1 }
-				}
-				if = {
-					limit = { NOT = { has_tech = early_submarine } }
-					set_technology = { early_submarine = 1 }
-				}
+			if = {
+				limit = { NOT = { has_tech = early_ship_hull_cruiser } }
+				set_technology = { early_ship_hull_cruiser = 1 }
 			}
-
+			if = {
+				limit = { NOT = { has_tech = coastal_defense_ships } }
+				set_technology = { coastal_defense_ships = 1 }
+			}
+			if = {
+				limit = { NOT = { has_tech = coastal_defense_ships } }
+				set_technology = { coastal_defense_ships = 1 }
+			}
+			if = {
+				limit = { NOT = { has_tech = basic_naval_mines } }
+				set_technology = { basic_naval_mines = 1 }
+			}
+			if = {
+				limit = { NOT = { has_tech = basic_battery } }
+				set_technology = { basic_battery = 1 }
+			}
+			if = {
+				limit = { NOT = { has_tech = basic_torpedo } }
+				set_technology = { basic_torpedo = 1 }
+			}
 			custom_effect_tooltip = tooltip_white_line
 			QIE = {
 				custom_effect_tooltip = characters_will_be_recruited
