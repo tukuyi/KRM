@@ -8535,6 +8535,11 @@ country_event = { #安抚委员会宣告成立
 	option = {
 		log = "[GetLogInfo]: event NKRsichuan.1 option NKRsichuan.1.a"
 		name = NKRsichuan.1.a
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = SZC_NRA_party
+			long_name = SZC_NRA_party_long
+		}
 		hidden_effect = {
 			country_event = {
 				id = NKRsichuan.2
@@ -9073,6 +9078,7 @@ country_event = { #潘文华巩固政权
 		SZC_pan_wenhua = {
 			promote_character = paternal_autocrat_subtype
 			promote_leader = yes
+			promote_to_field_marshal = yes
 		}
 		swap_ideas = {
 			remove_idea = SZC_after_liu
@@ -9101,6 +9107,7 @@ country_event = { #让贤唐式遵
 		SZC_tang_shizun = {
 			promote_character = paternal_autocrat_subtype
 			promote_leader = yes
+			promote_to_field_marshal = yes
 		}
 		swap_ideas = {
 			remove_idea = SZC_after_liu
@@ -9395,15 +9402,15 @@ country_event = { #四川易帜
 			}
 			add_popularity = {
 				ideology = totalist
-				popularity = 0.5
+				popularity = 0.2
 			}
 			add_popularity = {
 				ideology = paternal_autocrat
-				popularity = 0.5
+				popularity = 0.2
 			}
 			add_popularity = {
 				ideology = authoritarian_democrat
-				popularity = 0.5
+				popularity = 0.2
 			}
 			set_party_name = {
 				ideology = paternal_autocrat
