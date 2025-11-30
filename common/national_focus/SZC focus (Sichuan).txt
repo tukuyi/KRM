@@ -14977,7 +14977,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_pacific_pact_organisation"
 			
-			create_faction = SZC_PPO_faction
+			create_faction_from_template = { template = faction_template_generic name = SZC_PPO_faction }
+			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			country_event = {
 				id = NKRsichuanFP.27
 			}
@@ -18740,7 +18741,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_CSAT"
-			create_faction = SZC_CSAT_faction
+			create_faction_from_template = { template = faction_template_generic name = SZC_CSAT_faction }
+			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			custom_effect_tooltip = SZC_pan_FORPOL_CSAT_tt
 			save_global_event_target_as = KR_CSAT_leader
 			create_economic_sphere = yes
@@ -18921,7 +18923,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_eastern_internationale"
-			create_faction = SZC_eastern_internationale_faction
+			create_faction_from_template = { template = faction_template_generic name = SZC_eastern_internationale_faction }
+			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			custom_effect_tooltip = SZC_pan_FORPOL_eastern_internationale_tt
 			add_ideas = {
 				SZC_KMT_EI_leader_idea

@@ -9242,6 +9242,14 @@ country_event = { #中国青年党浮出水面
 					}
 				}
 			}
+			SZC_wang_lingji = {
+				set_portraits = {
+					army = {
+						large = GFX_portrait_SZC_wang_lingji_ycp_large
+						small = GFX_portrait_SZC_wang_lingji_ycp_small
+					}
+				}
+			}
 		}
 	}
 }
@@ -13289,6 +13297,10 @@ country_event = { #就职典礼
 					large = GFX_portrait_SZC_pan_wenhua_civilian_large
 					small = GFX_portrait_SZC_pan_wenhua_civilian_small
 				}
+				army = {
+					large = GFX_portrait_SZC_pan_wenhua_marshall_large
+					small = GFX_portrait_SZC_pan_wenhua_marshall_small
+				}
 			}
 		}
 		add_stability = 0.05
@@ -13350,7 +13362,7 @@ country_event = { #总理人选
 		
 		SZC_li_hongkun = {
 			set_portraits = {
-				civilian = {
+				army = {
 					small = GFX_portrait_SZC_li_hongkun_civilian_small
 					large = GFX_portrait_SZC_li_hongkun_civilian_large
 				}
@@ -13358,6 +13370,14 @@ country_event = { #总理人选
 			unit_leader_event = {
 				id = NKRsichuanmisc.8
 				days = 5
+			}
+		}
+		SZC_pan_wenhua = {
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_SZC_pan_wenhua_marshall_large
+					small = GFX_portrait_SZC_pan_wenhua_marshall_small
+				}
 			}
 		}
 		
