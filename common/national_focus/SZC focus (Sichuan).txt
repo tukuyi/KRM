@@ -9850,11 +9850,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_reconstitute_the_beiyang_navy"
 			navy_experience = 25
-			add_doctrine_cost_reduction = {
+			add_mastery_bonus = {
 				name = SZC_reconstitute_the_beiyang_navy
-				cost_reduction = 0.5
-				uses = 2
-				category = naval_doctrine
+				bonus = 0.25
+				days = 365
+				folder = naval
 			}
 			add_timed_idea = {
 				idea = SZC_reconstituting_the_beiyang_navy
@@ -19846,11 +19846,11 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_reorganise_new_army"
 			add_war_support = 0.02
 			add_command_power = 20
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
+			add_mastery_bonus = {
 				name = SZC_pan_reorganise_new_army
-				uses = 2
-				category = land_doctrine
+				bonus = 0.125
+				days = 365
+				folder = land
 			}
 		}
 	}
@@ -20126,11 +20126,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_deep_operations"
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.8
+			add_mastery_bonus = {
 				name = SZC_pan_deep_operations
-				uses = 1
-				category = land_doctrine
+				bonus = 0.10
+				days = 365
+				folder = land
 			}
 			every_character = {
 				limit = {
@@ -20228,13 +20228,12 @@ focus_tree = {
 				add_idea = SZC_pan_new_model_army_2_idea
 			}
 			army_experience = 25
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.6
+			add_mastery_bonus = {
 				name = SZC_pan_eastern_cromwell
-				uses = 1
-				category = land_doctrine
+				bonus = 0.25
+				days = 365
+				folder = land
 			}
-			
 		}
 	}
 
@@ -20560,11 +20559,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_battlefield_exercises"
 			army_experience = 50
-			add_doctrine_cost_reduction = {
+			add_mastery_bonus = {
 				name = SZC_pan_battlefield_exercises
-				cost_reduction = 0.75
-				uses = 1
-				category = land_doctrine
+				bonus = 0.15
+				days = 365
+				folder = land
 			}
 		}
 	}
@@ -20901,11 +20900,11 @@ focus_tree = {
 				limit = { NOT = { has_tech = tech_militias } }
 				set_technology = { tech_militias = 1 }
 			}
-			add_doctrine_cost_reduction = {
+			add_mastery_bonus = {
 				name = SZC_pan_mingans_legacy
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
+				bonus = 0.15
+				days = 365
+				folder = land
 			}
 		}
 	}
@@ -21084,11 +21083,11 @@ focus_tree = {
 				add_idea = SZC_pan_mobile_forces_2_idea
 			}
 			add_command_power = 100
-			add_doctrine_cost_reduction = {
+			add_mastery_bonus = {
 				name = SZC_pan_mingans_legacy
-				cost_reduction = 0.75
-				uses = 1
-				category = land_doctrine
+				bonus = 0.3
+				days = 183
+				folder = land
 			}
 		}
 	}
@@ -21202,12 +21201,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_based_on_firepower_doctrine"
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.85
-				name = SZC_pan_based_on_firepower_doctrine
-				uses = 1
-				category = land_doctrine
-			}
+			army_experience	= 35
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
 				amount = 2000
@@ -21305,6 +21299,7 @@ focus_tree = {
 				uses = 2
 				category = air_doctrine
 			}
+			
 		}
 	}
 
@@ -21414,12 +21409,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_hiring_foreign_instructors"
 			air_experience = 10
-			
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.9
+			add_mastery_bonus = {
 				name = SZC_pan_hiring_foreign_instructors
-				uses = 1
-				category = air_doctrine
+				bonus = 0.10
+				days = 365
+				folder = air
 			}
 		}
 	}
@@ -21603,15 +21597,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_beiyang_navy_legacy"
 			navy_experience = 25
-			add_doctrine_cost_reduction = {
+			add_mastery_bonus = {
 				name = SZC_pan_beiyang_navy_legacy
-				cost_reduction = 0.5
-				uses = 2
-				category = naval_doctrine
-			}
-			add_timed_idea = {
-				idea = SZC_reconstituting_the_beiyang_navy
+				bonus = 0.10
 				days = 365
+				folder = naval
 			}
 			if = {
 				limit = {
@@ -22492,13 +22482,12 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_time_to_act"
 			army_experience = 25
 
-			add_doctrine_cost_reduction = {
+			add_mastery_bonus = {
 				name = SZC_YCP_time_to_act
-				cost_reduction = 0.75
-				uses = 2
-				category = land_doctrine
+				bonus = 0.2
+				days = 365
+				folder = land
 			}
-			
 			country_event = {
 				id = NKRsichuan.435
 			}
