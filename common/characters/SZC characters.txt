@@ -1609,6 +1609,22 @@ characters = {
 		}
 	}
 
+	#赖永清
+	SZC_lai_yongqing = {
+		name = SZC_lai_yongqing
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_lai_yongqing_large
+				small = GFX_portrait_SZC_lai_yongqing_small
+			}
+		}
+		country_leader = {
+			desc = SZC_lai_yongqing_desc
+			ideology = market_liberal_scheme_statist_subtype
+			traits = { CHN_statist_aligned SZC_YCP_crank }
+		}
+	}
+
 	#王师曾
 	SZC_wang_shizeng = {
 		name = SZC_wang_shizeng

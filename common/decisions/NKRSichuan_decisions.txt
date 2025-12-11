@@ -191,6 +191,33 @@ SZC_debug_category = {
 			country_event = NKRsichuan.30
 		}
 	}
+	SZC_DEBUG_YCPpath_DENGPAO_decision = {
+		allowed = { tag = SZC }
+		visible = {
+			is_debug = yes
+		}
+		icon = GFX_decision_lkmt_flag
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_DEBUG_YCPpath_DENGPAO_decision target: [From.GetName]"
+			set_politics = {
+				ruling_party = market_liberal
+			}
+			SZC_lai_yongqing = {
+				SZC_recruit_character_effect = yes
+				promote_character = market_liberal_scheme_statist_subtype
+			}
+			set_party_name = {
+				ideology = market_liberal
+				long_name = SZC_PYCP_CQSP_party_long
+				name = SZC_PYCP_CQSP_party
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 114514
+			}
+			
+		}
+	}
 	SZC_DEBUG_YCPpath_YCPphase1_decision = {
 		allowed = { tag = SZC }
 		visible = {
