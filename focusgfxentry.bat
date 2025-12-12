@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_pan_dragon_banner_stands
+python focusgfxentry.py SZC_YCP_FORPOL_world_socialist_goal
 pause
