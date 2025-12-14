@@ -30303,6 +30303,11 @@ focus_tree = {
 		}
 
 		available = {
+			hidden = {
+				NOT  = {
+					has_completed_focus = SZC_YCP_post_YCP_days
+				}
+			}
 			is_faction_leader = yes
 			custom_override_tooltip = {
 				tooltip =  SZC_KMT_freed_core_tt
@@ -30376,8 +30381,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_china_shining_over_the_world"
 			country_event = {
+				id = NKRsichuanFP.40
 			}
 			add_ideas = {
+				SZC_YCP_young_age_idea
 			}
 		}
 	}
@@ -30399,6 +30406,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_zeng_faction"
 			
+			create_faction_from_template = { template = faction_template_generic name = SZC_YRF_faction }
+			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			
 			
 		}
@@ -30435,6 +30444,12 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = SZC_YCP_FORPOL_zeng_faction
+
+		available = {
+			any_other_country = {
+				is_in_faction_with = SZC
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_zeng_faction
@@ -30514,6 +30529,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_li_faction"
 			
+			
+			create_faction_from_template = { template = faction_template_generic name = SZC_CEA_faction }
+			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			
 			
 		}
@@ -30658,6 +30676,9 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_zuo_faction"
 			
 			
+			create_faction_from_template = { template = faction_template_generic name = SZC_XHP_faction }
+			scope:faction = { set_variable = { non_ideological_faction = 1 } }
+			
 			
 		}
 	}
@@ -30771,6 +30792,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_chen_faction"
 			
+			
+			create_faction_from_template = { template = faction_template_generic name = SZC_NI_faction }
+			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			
 			
 		}
@@ -30916,6 +30940,9 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_jiang_faction"
 			
 			
+			create_faction_from_template = { template = faction_template_generic name = SZC_AOM_faction }
+			scope:faction = { set_variable = { non_ideological_faction = 1 } }
+			
 			
 		}
 	}
@@ -31053,6 +31080,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_anarkiddy"
 			
+			
+			create_faction_from_template = { template = faction_template_generic name = SZC_WZRC_faction }
+			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			
 			
 		}
@@ -31229,6 +31259,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_taozi_faction"
 			
+			
+			create_faction_from_template = { template = faction_template_generic name = SZC_YI_faction }
+			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			
 			
 		}
