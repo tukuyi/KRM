@@ -30408,6 +30408,10 @@ focus_tree = {
 			
 			create_faction_from_template = { template = faction_template_generic name = SZC_YRF_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
+
+			country_event = {
+				id = NKRsichuanFP.41
+			}
 			
 			
 		}
@@ -30429,7 +30433,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_spirit_of_revolution"
-			
+			add_ideas = {
+				SZC_YCP_output_revolution_idea
+			}
 			
 			
 		}
@@ -30457,7 +30463,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_brother_friendship"
-			
+			add_stability = 0.1
+			add_war_support = 0.1
+			country_event = {
+				id = NKRsichuanFP.42
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = SZC
+				}
+				add_stability = 0.1
+				add_war_support = 0.1
+			}
 			
 			
 		}
@@ -30484,7 +30501,21 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_new_silk_road"
-			
+			custom_effect_tooltip = SZC_YCP_FORPOL_new_silk_road_tt
+			save_global_event_target_as = KR_YRF_leader
+			create_economic_sphere = yes
+			add_ideas = {
+				SZC_YCP_YRF_leader_idea
+			}
+			var:economic_sphere = {
+				set_character_name = SZC_PPO_sphere
+				var:icon = { set_character_name = "GFX_goal_SZC_YF_sphere" }
+				var:desc = { set_character_name = KR_YRF_desc }
+				set_variable = { red = 0.250 }
+				set_variable = { green = 0.608 }
+				set_variable = { blue = 0.898 }
+			}
+			SZC_ECON_SPHERE_INVITE_SETUP = yes
 			
 			
 		}

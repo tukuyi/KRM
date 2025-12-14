@@ -16376,7 +16376,7 @@ country_event = { #《死水》
 	id = NKRsichuan.450
 	title = NKRsichuan.450.t
 	desc = NKRsichuan.450.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_wenyiduo
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -16386,6 +16386,13 @@ country_event = { #《死水》
 		log = "[GetLogInfo]: event NKRsichuan.450 option NKRsichuan.450.a"
 		name = NKRsichuan.450.a
 		add_political_power = 10
+		hidden_effect = {
+			SZC_wen_yiduo = {
+				SZC_recruit_character_effect = yes
+			}
+		}
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = SZC_wen_yiduo_advisor
 	}
 }
 
@@ -16393,7 +16400,7 @@ country_event = { #国家主义妇女运动
 	id = NKRsichuan.451
 	title = NKRsichuan.451.t
 	desc = NKRsichuan.451.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jean_darc
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -16403,6 +16410,13 @@ country_event = { #国家主义妇女运动
 		log = "[GetLogInfo]: event NKRsichuan.451 option NKRsichuan.451.a"
 		name = NKRsichuan.451.a
 		add_political_power = 10
+		hidden_effect = {
+			SZC_tan_tiwu = {
+				SZC_recruit_character_effect = yes
+			}
+		}
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = SZC_tan_tiwu_advisor
 	}
 }
 

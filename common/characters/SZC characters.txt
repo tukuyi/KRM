@@ -1654,6 +1654,14 @@ characters = {
 				small = GFX_portrait_SZC_wen_yiduo_small
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_wen_yiduo_advisor
+			ledger = civilian
+			traits = { SZC_widow }
+			cost = 150
+			desc = SZC_wen_yiduo_desc
+		}
 	}
 
 	#谭惕吾
@@ -1664,6 +1672,14 @@ characters = {
 				large = GFX_portrait_SZC_tan_tiwu_large
 				small = GFX_portrait_SZC_tan_tiwu_small
 			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_tan_tiwu_advisor
+			ledger = civilian
+			traits = { SZC_chinese_jean_darc }
+			cost = 150
+			desc = SZC_tan_tiwu_desc
 		}
 	}
 
