@@ -30508,15 +30508,14 @@ focus_tree = {
 				SZC_YCP_YRF_leader_idea
 			}
 			var:economic_sphere = {
-				set_character_name = SZC_PPO_sphere
-				var:icon = { set_character_name = "GFX_goal_SZC_YF_sphere" }
+				set_character_name = SZC_YRF_sphere
+				var:icon = { set_character_name = "GFX_goal_SZC_YRF_sphere" }
 				var:desc = { set_character_name = KR_YRF_desc }
-				set_variable = { red = 0.250 }
-				set_variable = { green = 0.608 }
-				set_variable = { blue = 0.898 }
+				set_variable = { red = 0.984 }
+				set_variable = { green = 0.879 }
+				set_variable = { blue = 0.164 }
 			}
 			SZC_ECON_SPHERE_INVITE_SETUP = yes
-			
 			
 		}
 	}
@@ -30530,6 +30529,27 @@ focus_tree = {
 		y = 3
 
 		relative_position_id = SZC_YCP_FORPOL_zeng_faction
+		available = {
+			OR = {
+				is_faction_leader = yes
+			}
+			custom_override_tooltip = {
+				tooltip =  SZC_KMT_freed_core_tt
+				KOR = { is_ally_with = SZC }
+				JAP = { is_ally_with = SZC }
+				PHI = { is_ally_with = SZC }
+				OR = {
+					AND = {
+						VIN = { is_ally_with = SZC }
+						CAM = { is_ally_with = SZC }
+						LAO = { is_ally_with = SZC }
+					}
+					INC = { is_ally_with = SZC }
+				}
+				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
+				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_new_silk_road
@@ -30537,8 +30557,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_young_asia"
-			
-			
+			country_event = {
+				id = NKRsichuanFP.43
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_YRF_leader_idea
+				add_idea = SZC_YCP_YRF_leader_2_idea
+			}
 			
 		}
 	}
@@ -30564,7 +30589,9 @@ focus_tree = {
 			create_faction_from_template = { template = faction_template_generic name = SZC_CEA_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			
-			
+			country_event = {
+				id = NKRsichuanFP.44
+			}
 		}
 	}
 
@@ -30584,8 +30611,20 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_strengthen_diplomatic_action"
-			
-			
+			every_country = {
+				limit = { is_major = yes }
+				add_opinion_modifier = { target = ROOT modifier = KR_approves_of_govt }
+			}
+			add_stability = 0.15
+			QIE = {
+				QIE_wellington_koo = {
+					SZC_recruit_character_effect = yes
+					add_trait = { trait = QIE_the_diplomatic_offensive ideology = authoritarian_democrat_subtype }
+				}
+			}
+			country_event = {
+				id = NKRsichuanFP.45
+			}
 			
 		}
 	}
@@ -30606,7 +30645,21 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_continent_trade_sphere"
-			
+			custom_effect_tooltip = SZC_YCP_FORPOL_continent_trade_sphere_tt
+			save_global_event_target_as = KR_CEA_leader
+			create_economic_sphere = yes
+			add_ideas = {
+				SZC_YCP_CEA_leader_idea
+			}
+			var:economic_sphere = {
+				set_character_name = SZC_YRF_sphere
+				var:icon = { set_character_name = "GFX_goal_SZC_CEA_sphere" }
+				var:desc = { set_character_name = KR_CEA_desc }
+				set_variable = { red = 0.984 }
+				set_variable = { green = 0.879 }
+				set_variable = { blue = 0.164 }
+			}
+			SZC_ECON_SPHERE_INVITE_SETUP = yes
 			
 			
 		}
@@ -30631,7 +30684,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_research_cooperation"
-			
+			set_faction_research_unlocked = yes
 			
 			
 		}
@@ -30647,6 +30700,10 @@ focus_tree = {
 
 		relative_position_id = SZC_YCP_FORPOL_li_faction
 
+		available = {
+			has_completed_focus = SZC_YCP_constitutional_normal_way
+		}
+
 		mutually_exclusive = {
 			focus = SZC_YCP_FORPOL_expand_democratization
 		}
@@ -30657,8 +30714,19 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_expand_free_trade"
-			
-			
+			country_event = {
+				id = NKRsichuanFP.46
+			}
+			custom_effect_tooltip = SZC_YCP_FORPOL_expand_free_trade_tt
+			every_other_country = {
+				limit = {
+					has_idea = SZC_YCP_CEA_member_idea
+				}
+				swap_ideas = {
+					remove_idea = SZC_YCP_CEA_member_idea
+					add_idea = SZC_YCP_CEA_member_2_idea
+				}
+			}
 			
 		}
 	}
@@ -30673,6 +30741,10 @@ focus_tree = {
 
 		relative_position_id = SZC_YCP_FORPOL_li_faction
 
+		available = {
+			has_completed_focus = SZC_YCP_east_asia_democracy_crusader
+		}
+
 		mutually_exclusive = {
 			focus = SZC_YCP_FORPOL_expand_free_trade
 		}
@@ -30683,8 +30755,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_expand_democratization"
-			
-			
+			country_event = {
+				id = NKRsichuanFP.47
+			}
+			custom_effect_tooltip = SZC_YCP_FORPOL_expand_democratization_tt
+			#解锁图非民主
 			
 		}
 	}
@@ -30709,7 +30784,9 @@ focus_tree = {
 			
 			create_faction_from_template = { template = faction_template_generic name = SZC_XHP_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
-			
+			country_event = {
+				id = NKRsichuanFP.48
+			}
 			
 		}
 	}
@@ -30730,8 +30807,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_voice_of_1848"
-			
-			
+			add_stability = 0.1
+			add_war_support = 0.1
+			country_event = {
+				id = NKRsichuanFP.49
+			}
+			add_ideas = {
+				SZC_YCP_output_revolution_idea
+			}
 			
 		}
 	}
@@ -30752,6 +30835,21 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_radicalism_reborn"
+			custom_effect_tooltip = SZC_YCP_FORPOL_radicalism_reborn_tt
+			save_global_event_target_as = KR_XHP_leader
+			create_economic_sphere = yes
+			add_ideas = {
+				SZC_YCP_XHP_leader_idea
+			}
+			var:economic_sphere = {
+				set_character_name = SZC_YRF_sphere
+				var:icon = { set_character_name = "GFX_goal_SZC_XHP_sphere" }
+				var:desc = { set_character_name = KR_XHP_desc }
+				set_variable = { red = 0.984 }
+				set_variable = { green = 0.879 }
+				set_variable = { blue = 0.164 }
+			}
+			SZC_ECON_SPHERE_INVITE_SETUP = yes
 			
 			
 			
@@ -30768,15 +30866,25 @@ focus_tree = {
 
 		relative_position_id = SZC_YCP_FORPOL_zuo_faction
 
+		available = {
+			has_completed_focus = SZC_YCP_world_of_science
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_voice_of_1848
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_age_of_transnational_scientific_century"
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanFP.50
+					days = 50
+				}
+			}
 			
-			
-			
+			set_faction_research_unlocked = yes
+			add_research_slot = 1
 		}
 	}
 
@@ -30789,6 +30897,28 @@ focus_tree = {
 		y = 3
 
 		relative_position_id = SZC_YCP_FORPOL_zuo_faction
+		
+		available = {
+			OR = {
+				is_faction_leader = yes
+			}
+			custom_override_tooltip = {
+				tooltip =  SZC_KMT_freed_core_tt
+				KOR = { is_ally_with = SZC }
+				JAP = { is_ally_with = SZC }
+				PHI = { is_ally_with = SZC }
+				OR = {
+					AND = {
+						VIN = { is_ally_with = SZC }
+						CAM = { is_ally_with = SZC }
+						LAO = { is_ally_with = SZC }
+					}
+					INC = { is_ally_with = SZC }
+				}
+				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
+				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_age_of_transnational_scientific_century
@@ -30800,8 +30930,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_the_new_testament_of_freedom"
-			
-			
+			country_event = {
+				id = NKRsichuanFP.51
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_XHP_leader_idea
+				add_idea = SZC_YCP_XHP_leader_2_idea
+			}
 			
 		}
 	}
@@ -30826,7 +30961,9 @@ focus_tree = {
 			
 			create_faction_from_template = { template = faction_template_generic name = SZC_NI_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
-			
+			country_event = {
+				id = NKRsichuanFP.52
+			}
 			
 		}
 	}
@@ -30847,8 +30984,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_fighting_in_the_new_warring_states"
-			
-			
+			every_army_leader = {
+				add_attack = 1
+				add_defence = 1
+			}
+			add_war_support = 0.15
+			add_political_power = 100
 			
 		}
 	}
@@ -30870,6 +31011,21 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_leader_of_the_nations"
 			
+			custom_effect_tooltip = SZC_YCP_FORPOL_leader_of_the_nations_tt
+			save_global_event_target_as = KR_NI_leader
+			create_economic_sphere = yes
+			add_ideas = {
+				SZC_YCP_NI_leader_idea
+			}
+			var:economic_sphere = {
+				set_character_name = SZC_NI_sphere
+				var:icon = { set_character_name = "GFX_goal_SZC_NI_sphere" }
+				var:desc = { set_character_name = KR_NI_desc }
+				set_variable = { red = 0.984 }
+				set_variable = { green = 0.879 }
+				set_variable = { blue = 0.164 }
+			}
+			SZC_ECON_SPHERE_INVITE_SETUP = yes
 			
 			
 		}
@@ -30895,8 +31051,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_shihuangdi_of_world_democracy"
-			
-			
+			country_event = {
+				id = NKRsichuanFP.53
+			}
+			set_faction_military_unlocked = yes
+			add_faction_initiative = 3
 			
 		}
 	}
@@ -30911,6 +31070,10 @@ focus_tree = {
 
 		relative_position_id = SZC_YCP_FORPOL_chen_faction
 
+		available = {
+			has_completed_focus = SZC_YCP_state_socialism_fights_on
+		}
+
 		mutually_exclusive = {
 			focus = SZC_YCP_FORPOL_to_rule_the_land
 		}
@@ -30921,8 +31084,20 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_world_socialist_goal"
-			
-			
+			#解锁输出法家社民 东亚联邦
+			country_event = {
+				id = NKRsichuanFP.54
+			}
+			custom_effect_tooltip = SZC_YCP_FORPOL_world_socialist_goal_tt
+			every_other_country = {
+				limit = {
+					has_idea = SZC_YCP_NI_member_idea
+				}
+				swap_ideas = {
+					remove_idea = SZC_YCP_NI_member_idea
+					add_idea = SZC_YCP_NI_member_2_idea
+				}
+			}
 			
 		}
 	}
@@ -30937,6 +31112,10 @@ focus_tree = {
 
 		relative_position_id = SZC_YCP_FORPOL_chen_faction
 
+		available = {
+			has_completed_focus = SZC_YCP_rule_by_people_and_law
+		}
+
 		mutually_exclusive = {
 			focus = SZC_YCP_FORPOL_world_socialist_goal
 		}
@@ -30947,7 +31126,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_to_rule_the_land"
-			
+			country_event = {
+				id = NKRsichuanFP.55
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_NI_leader_idea
+				add_idea = SZC_YCP_NI_leader_2_idea
+			}
 			
 			
 		}
@@ -30963,6 +31148,17 @@ focus_tree = {
 
 		relative_position_id = SZC_YCP_FORPOL_mandate_heaven_of_china
 
+		available = {
+			AND = {
+				KOR = {
+					is_puppet_of = ROOT
+				}
+				JAP = {
+					is_puppet_of = ROOT
+				}
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_mandate_heaven_of_china
 		}
@@ -30973,7 +31169,9 @@ focus_tree = {
 			
 			create_faction_from_template = { template = faction_template_generic name = SZC_AOM_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
-			
+			country_event = {
+				id = NKRsichuanFP.56
+			}
 			
 		}
 	}
@@ -30988,13 +31186,34 @@ focus_tree = {
 
 		relative_position_id = SZC_YCP_FORPOL_jiang_faction
 
+		available = {
+			has_completed_focus = SZC_YCP_education_of_chinese_view
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_jiang_faction
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_grand_china_view"
-			
+			country_event = {
+				id = NKRsichuanFP.57
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 408
+						state = 657
+						state = 560
+						state = 577
+						state = 537
+						state = 561
+						state = 1042
+						state = 1111
+					}
+				}
+				add_claim_by = ROOT
+			}
 			
 			
 		}
@@ -31016,7 +31235,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_homeland_front"
-			
+			every_army_leader = {
+				add_attack = 1
+				add_defence = 1
+			}
+			add_war_support = 0.15
+			add_political_power = 100
 			
 			
 		}
@@ -31039,6 +31263,21 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_wenmingkaihua"
+			custom_effect_tooltip = SZC_YCP_FORPOL_wenmingkaihua_tt
+			save_global_event_target_as = KR_AOM_leader
+			create_economic_sphere = yes
+			add_ideas = {
+				SZC_YCP_AOM_leader_idea
+			}
+			var:economic_sphere = {
+				set_character_name = SZC_AOM_sphere
+				var:icon = { set_character_name = "GFX_goal_SZC_AOM_sphere" }
+				var:desc = { set_character_name = KR_AOM_desc }
+				set_variable = { red = 0.984 }
+				set_variable = { green = 0.879 }
+				set_variable = { blue = 0.164 }
+			}
+			SZC_ECON_SPHERE_INVITE_SETUP = yes
 			
 			
 			
@@ -31062,8 +31301,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_all_under_the_heaven"
-			
-			
+			country_event = {
+				id = NKRsichuanFP.58
+			}
+			SZC_jiang_yungang = {
+				add_trait = {
+					trait = SZC_YCP_all_under_the_heaven_trait
+					ideology = national_populist_strum_drang_statist_subtype
+				}
+			}
 			
 		}
 	}
@@ -31078,6 +31324,29 @@ focus_tree = {
 
 		relative_position_id = SZC_YCP_FORPOL_jiang_faction
 
+		
+		available = {
+			OR = {
+				is_faction_leader = yes
+			}
+			custom_override_tooltip = {
+				tooltip =  SZC_KMT_freed_core_tt
+				KOR = { is_ally_with = SZC }
+				JAP = { is_ally_with = SZC }
+				PHI = { is_ally_with = SZC }
+				OR = {
+					AND = {
+						VIN = { is_ally_with = SZC }
+						CAM = { is_ally_with = SZC }
+						LAO = { is_ally_with = SZC }
+					}
+					INC = { is_ally_with = SZC }
+				}
+				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
+				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_all_under_the_heaven
 		}
@@ -31088,8 +31357,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_world_dominator"
-			
-			
+			country_event = {
+				id = NKRsichuanFP.59
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_AOM_leader_idea
+				add_idea = SZC_YCP_AOM_leader_2_idea
+			}
 			
 		}
 	}
@@ -31114,7 +31388,9 @@ focus_tree = {
 			
 			create_faction_from_template = { template = faction_template_generic name = SZC_WZRC_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
-			
+			country_event = {
+				id = NKRsichuanFP.60
+			}
 			
 		}
 	}
@@ -31135,7 +31411,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_against_the_world_alone"
-			
+			add_ideas = {
+				SZC_YCP_wuzhi_against_world_idea
+			}
 			
 			
 		}
@@ -31157,8 +31435,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_datong_for_every_race"
-			
-			
+			#解锁输出无政府主义，解锁特殊傀儡
+			country_event = {
+				id = NKRsichuanFP.61
+			}
 			
 		}
 	}
@@ -31173,15 +31453,43 @@ focus_tree = {
 
 		relative_position_id = SZC_YCP_FORPOL_anarkiddy
 
+		
+		available = {
+			OR = {
+				is_faction_leader = yes
+			}
+			custom_override_tooltip = {
+				tooltip =  SZC_KMT_freed_core_tt
+				KOR = { is_ally_with = SZC }
+				JAP = { is_ally_with = SZC }
+				PHI = { is_ally_with = SZC }
+				OR = {
+					AND = {
+						VIN = { is_ally_with = SZC }
+						CAM = { is_ally_with = SZC }
+						LAO = { is_ally_with = SZC }
+					}
+					INC = { is_ally_with = SZC }
+				}
+				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
+				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_datong_for_every_race
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_the_last_struggle"
-			
-			
-			
+			custom_effect_tooltip = SZC_YCP_FORPOL_the_last_struggle_tt
+			country_event = {
+				id = NKRsichuanFP.62
+			}
+			swap_ideas = {
+				remove_idea = SZC_YCP_wuzhi_against_world_idea
+				add_idea = SZC_YCP_wuzhi_against_world_2_idea
+			}
 		}
 	}
 
@@ -31201,8 +31509,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_libbro"
-			
-			
+			country_event = {
+				id = NKRsichuanFP.63
+			}
+			add_stability = 0.15
+			add_political_power = 150
 			
 		}
 	}
@@ -31223,8 +31534,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_multilaterial_markets"
-			
-			
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.05
+			}
+			every_country = {
+				limit = { is_major = yes }
+				add_opinion_modifier = { target = ROOT modifier = KR_approves_of_govt }
+			}
 			
 		}
 	}
@@ -31246,8 +31563,25 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_export_capital"
 			
+			custom_effect_tooltip = SZC_YCP_FORPOL_export_capital_tt
+			save_global_event_target_as = KR_lib_leader
+			create_economic_sphere = yes
+			add_ideas = {
+				SZC_YCP_lib_leader_idea
+			}
+			var:economic_sphere = {
+				set_character_name = SZC_lib_sphere
+				var:icon = { set_character_name = "GFX_goal_SZC_lib_sphere" }
+				var:desc = { set_character_name = KR_lib_desc }
+				set_variable = { red = 0.984 }
+				set_variable = { green = 0.879 }
+				set_variable = { blue = 0.164 }
+			}
+			SZC_ECON_SPHERE_INVITE_SETUP = yes
 			
-			
+			country_event = {
+				id = NKRsichuanFP.64
+			}
 		}
 	}
 
@@ -31261,14 +31595,20 @@ focus_tree = {
 
 		relative_position_id = SZC_YCP_FORPOL_libbro
 
+		available = {
+			#政治遗产到位
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_export_capital
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_my_legacy"
-			
-			
+			add_political_power = 1993
+			country_event = {
+				id = NKRsichuanFP.65
+			}
 			
 		}
 	}
@@ -31293,7 +31633,9 @@ focus_tree = {
 			
 			create_faction_from_template = { template = faction_template_generic name = SZC_YI_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
-			
+			country_event = {
+				id = NKRsichuanFP.66
+			}
 			
 		}
 	}
@@ -31314,8 +31656,26 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_our_friends_everywhere"
-			
-			
+			custom_effect_tooltip = SZC_YCP_FORPOL_our_friends_everywhere_tt
+			add_stability = 0.1
+			#advisor update
+			if = {
+				limit = {
+					has_country_leader = SZC_zhang_guotao
+					every_country = {
+						limit = {
+							OR = {
+								is_in_faction_with = SZC
+								tag = SZC
+							}
+						}
+						owns_state = 276
+					}
+				}
+				country_event = {
+					id = NKRsichuan.67
+				}
+			}
 			
 		}
 	}
@@ -31337,6 +31697,23 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_expand_yellow_revolution"
 			
+			custom_effect_tooltip = SZC_YCP_FORPOL_expand_yellow_revolution_tt
+			save_global_event_target_as = KR_YI_leader
+			create_economic_sphere = yes
+			add_ideas = {
+				SZC_YCP_YI_leader_idea
+			}
+			var:economic_sphere = {
+				set_character_name = SZC_YI_sphere
+				var:icon = { set_character_name = "GFX_goal_SZC_YI_sphere" }
+				var:desc = { set_character_name = KR_YI_desc }
+				set_variable = { red = 0.984 }
+				set_variable = { green = 0.879 }
+				set_variable = { blue = 0.164 }
+			}
+			SZC_ECON_SPHERE_INVITE_SETUP = yes
+			
+			
 			
 			
 		}
@@ -31352,13 +31729,47 @@ focus_tree = {
 
 		relative_position_id = SZC_YCP_FORPOL_taozi_faction
 
+		
+		available = {
+			OR = {
+				is_faction_leader = yes
+			}
+			custom_override_tooltip = {
+				tooltip =  SZC_KMT_freed_core_tt
+				KOR = { is_ally_with = SZC }
+				JAP = { is_ally_with = SZC }
+				PHI = { is_ally_with = SZC }
+				OR = {
+					AND = {
+						VIN = { is_ally_with = SZC }
+						CAM = { is_ally_with = SZC }
+						LAO = { is_ally_with = SZC }
+					}
+					INC = { is_ally_with = SZC }
+				}
+				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
+				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_expand_yellow_revolution
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_laodage_of_our_sphere"
-			
+			country_event = {
+				id = NKRsichuanFP.68
+			}
+			every_other_country = {
+				limit = {
+					has_idea = SZC_YCP_YI_member_idea
+				}
+				swap_ideas = {
+					remove_idea = SZC_YCP_YI_member_idea
+					add_idea = SZC_YCP_YI_member_2_idea
+				}
+			}
 			
 			
 		}

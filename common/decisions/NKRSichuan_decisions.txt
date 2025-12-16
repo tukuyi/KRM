@@ -215,6 +215,16 @@ SZC_debug_category = {
 				ideology = market_liberal
 				popularity = 114514
 			}
+			set_cosmetic_tag = SZC_YCP_dengpao
+			leave_faction = yes
+			overlord = {
+				set_temp_variable = { former_overlord = THIS }
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+			}
+			peace_out_non_neighbours_after_leaving_faction = yes
 			
 		}
 	}

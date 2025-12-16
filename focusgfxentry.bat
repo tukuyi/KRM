@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_YCP_FORPOL_laodage_of_our_sphere
+python focusgfxentry.py SZC_lib_sphere
 pause

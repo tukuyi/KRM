@@ -3346,6 +3346,414 @@ ideas = {
 				army_morale_factor = 0.05
 			}
 		}
+
+		SZC_YCP_YRF_leader_idea = {#青年革命阵线领袖
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_YRF_leader_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.05
+				political_power_factor = 0.1
+				resistance_growth = -0.1
+			}
+		}
+
+		SZC_YCP_YRF_leader_2_idea = {#青年革命阵线领袖2
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_YRF_leader_2_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.15
+				research_speed_factor = 0.1
+				political_power_factor = 0.1
+				resistance_growth = -0.2
+			}
+		}
+
+		SZC_YCP_YRF_member_idea = {#青年革命成员
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_YRF_member_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.075
+				research_speed_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = SZC
+				trade_cost_for_target_factor = -0.25
+				extra_trade_to_target_factor = 0.25
+				cic_to_target_factor = 0.05
+			}
+		}
+
+		SZC_YCP_CEA_leader_idea = {#大陆经济合作组织领袖
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_CEA_leader_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.05
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.15
+				construction_speed_factor = 0.25
+			}
+		}
+
+		SZC_YCP_CEA_member_idea = {#大陆经济合作组织成员
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_CEA_member_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.05
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				research_speed_factor = 0.1
+				construction_speed_factor = 0.3
+			}
+			targeted_modifier = {
+				tag = SZC
+				trade_cost_for_target_factor = -0.4
+				extra_trade_to_target_factor = 0.4
+				cic_to_target_factor = 0.025
+			}
+		}
+
+		SZC_YCP_CEA_member_2_idea = {#大陆经济合作组织成员2
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_CEA_member_2_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.05
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				research_speed_factor = 0.1
+				construction_speed_factor = 0.35
+			}
+			targeted_modifier = {
+				tag = SZC
+				trade_cost_for_target_factor = -0.6
+				extra_trade_to_target_factor = 0.6
+				cic_to_target_factor = 0.05
+			}
+		}
+
+		SZC_YCP_XHP_leader_idea = {#辛亥经联体领袖
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_XHP_leader_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.2
+				construction_speed_factor = 0.1
+				production_speed_dockyard_factor = 0.15
+				political_advisor_cost_factor = -0.33
+			}
+		}
+
+		SZC_YCP_XHP_leader_2_idea = {#辛亥经联体领袖
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_XHP_leader_2_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.3
+				construction_speed_factor = 0.15
+				production_speed_dockyard_factor = 0.3
+				political_advisor_cost_factor = -0.66
+			}
+		}
+
+		SZC_YCP_XHP_member_idea = {#辛亥经联体成员
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_XHP_member_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				research_speed_factor = 0.175
+				construction_speed_factor = 0.15
+				production_speed_dockyard_factor = 0.15
+				political_advisor_cost_factor = -0.33
+			}
+			targeted_modifier = {
+				tag = SZC
+				trade_cost_for_target_factor = -0.3
+				extra_trade_to_target_factor = 0.3
+				cic_to_target_factor = 0.05
+			}
+		}
+
+		SZC_YCP_NI_leader_idea = {#国际经济联盟领袖
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_NI_leader_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.15
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.05
+				construction_speed_factor = 0.15
+				production_speed_dockyard_factor = 0.1
+				army_experience_factor = 0.15
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		SZC_YCP_NI_leader_2_idea = {#国际经济联盟领袖
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_NI_leader_2_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.2
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.15
+				research_speed_factor = 0.075
+				construction_speed_factor = 0.2
+				production_speed_dockyard_factor = 0.2
+				army_experience_factor = 0.3
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		SZC_YCP_NI_member_idea = {#国际经济联盟成员
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_NI_member_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.15
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.05
+				construction_speed_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+				army_experience_factor = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = SZC
+				trade_cost_for_target_factor = -0.25
+				extra_trade_to_target_factor = 0.25
+				cic_to_target_factor = 0.075
+			}
+		}
+
+		SZC_YCP_NI_2_member_idea = {#国际经济联盟成员
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_NI_member_2_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.2
+				consumer_goods_factor = -0.2
+				production_factory_max_efficiency_factor = 0.15
+				research_speed_factor = 0.1
+				construction_speed_factor = 0.15
+				production_speed_dockyard_factor = 0.1
+				army_experience_factor = 0.1
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				social_democrat_drift = 0.05
+			}
+			targeted_modifier = {
+				tag = SZC
+				trade_cost_for_target_factor = -0.35
+				extra_trade_to_target_factor = 0.35
+				cic_to_target_factor = 0.1
+			}
+		}
+
+		SZC_YCP_AOM_leader_idea = {#中华圈领袖
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_AOM_leader_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.25
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.075
+				construction_speed_factor = 0.125
+				army_attack_factor = 0.1
+			}
+		}
+
+		SZC_YCP_AOM_leader_2_idea = {#中华圈领袖
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_AOM_leader_2_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.3
+				consumer_goods_factor = -0.175
+				production_factory_max_efficiency_factor = 0.175
+				research_speed_factor = 0.125
+				construction_speed_factor = 0.175
+				army_attack_factor = 0.15
+			}
+		}
+
+		SZC_YCP_AOM_member_idea = {#中华圈成员
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_AOM_member_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.25
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.1
+				construction_speed_factor = 0.125
+				army_attack_factor = 0.125
+			}
+			targeted_modifier = {
+				tag = SZC
+				trade_cost_for_target_factor = -0.55
+				extra_trade_to_target_factor = 0.55
+				cic_to_target_factor = 0.125
+			}
+		}
+
+		SZC_YCP_wuzhi_against_world_idea = {#无治主义反抗全世界
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_wuzhi_against_world_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				justify_war_goal_time = -0.999
+				enemy_justify_war_goal_time = -0.666
+				resistance_growth = -0.05
+				out_of_supply_factor = -0.25
+			}
+		}
+
+		SZC_YCP_wuzhi_against_world_2_idea = {#无治主义反抗全世界
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_wuzhi_against_world_2_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				justify_war_goal_time = -0.999
+				enemy_justify_war_goal_time = -0.999
+				resistance_growth = -0.25
+				compliance_growth = 0.25
+				out_of_supply_factor = -0.5
+			}
+		}
+
+		SZC_YCP_lib_leader_idea = {#世界经济论坛领袖
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_lib_leader_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.25
+				consumer_goods_factor = -0.25
+				production_factory_max_efficiency_factor = 0.15
+				research_speed_factor = 0.05
+				construction_speed_factor = 0.25
+			}
+		}
+
+		SZC_YCP_lib_member_idea = {#世界经济论坛成员
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_lib_member_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.125
+				research_speed_factor = 0.05
+				construction_speed_factor = 0.225
+			}
+			targeted_modifier = {
+				tag = SZC
+				trade_cost_for_target_factor = -0.85
+				extra_trade_to_target_factor = 0.85
+				cic_to_target_factor = 0.1
+			}
+		}
+
+		SZC_YCP_YI_leader_idea = {#经互会领袖
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_YI_leader_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.125
+				production_factory_max_efficiency_factor = 0.125
+				research_speed_factor = 0.1
+				construction_speed_factor = 0.15
+				army_attack_factor = 0.04
+				army_defence_factor = 0.04
+			}
+		}
+
+		SZC_YCP_YI_member_idea = {#经互会成员
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_YI_member_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.125
+				research_speed_factor = 0.075
+				construction_speed_factor = 0.125
+				army_attack_factor = 0.04
+				army_defence_factor = 0.04
+				syndicalist_drift = 0.03
+				paternal_autocrat_drift = 0.03
+			}
+			targeted_modifier = {
+				tag = SZC
+				trade_cost_for_target_factor = -0.35
+				extra_trade_to_target_factor = 0.35
+				cic_to_target_factor = 0.075
+			}
+		}
+
+		SZC_YCP_YI_2_member_idea = {#经互会成员
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_YI_member_2_idea" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.15
+				research_speed_factor = 0.075
+				construction_speed_factor = 0.175
+				army_attack_factor = 0.04
+				army_defence_factor = 0.04
+				syndicalist_drift = 0.05
+				paternal_autocrat_drift = 0.05
+			}
+			targeted_modifier = {
+				tag = SZC
+				trade_cost_for_target_factor = -0.55
+				extra_trade_to_target_factor = 0.55
+				cic_to_target_factor = 0.125
+			}
+		}
 	}
 	
 	industrial_concern = {
