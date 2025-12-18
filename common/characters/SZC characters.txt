@@ -1645,6 +1645,636 @@ characters = {
 		}
 	}
 
+	#黄石子
+	SZC_huang_shizi = {
+		name = SZC_huang_shizi
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_huang_shizi_small
+				large = GFX_portrait_SZC_huang_shizi_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_huang_shizi_advisor
+			traits = { KR_silent_workhorse }
+			desc = SZC_huang_shizi_desc
+		}
+
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_huang_shizi_sic
+			ledger = army
+			traits = { KR_spiritual_leader_sic }
+			cost = 0
+			can_be_fired = no
+			visible = {
+				has_country_flag = NKRsichuan_YCPpath
+			}
+			desc = SZC_huang_shizi_desc
+		}
+	}
+
+	#魏时珍
+	SZC_wei_shizhen = {
+		name = SZC_wei_shizhen
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_wei_shizhen_small
+				large = GFX_portrait_SZC_wei_shizhen_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_wei_shizhen_advisor
+			traits = { KR_silent_workhorse }
+			desc = SZC_wei_shizhen_desc
+		}
+
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_wei_shizhen_sic
+			ledger = army
+			traits = { KR_spiritual_leader_sic }
+			cost = 0
+			can_be_fired = no
+			visible = {
+				has_country_flag = NKRsichuan_YCPpath
+			}
+			desc = SZC_wei_shizhen_desc
+		}
+	}
+
+	#吴天墀
+	SZC_wu_tianchi = {
+		name = SZC_wu_tianchi
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_wu_tianchi_small
+				large = GFX_portrait_SZC_wu_tianchi_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_wu_tianchi_advisor
+			traits = { KR_silent_workhorse }
+			desc = SZC_wu_tianchi_desc
+		}
+
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_wu_tianchi_sic
+			ledger = army
+			traits = { KR_spiritual_leader_sic }
+			cost = 0
+			can_be_fired = no
+			visible = {
+				has_country_flag = NKRsichuan_YCPpath
+			}
+			desc = SZC_wu_tianchi_desc
+		}
+	}
+
+	#常燕生
+	SZC_chang_yansheng = {
+		name = SZC_chang_yansheng
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_chang_yansheng_small
+				large = GFX_portrait_SZC_chang_yansheng_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_chang_yansheng_advisor
+			traits = { KR_silent_workhorse }
+			desc = SZC_chang_yansheng_desc
+		}
+
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_chang_yansheng_sic
+			ledger = army
+			traits = { KR_spiritual_leader_sic }
+			cost = 0
+			can_be_fired = no
+			visible = {
+				has_country_flag = NKRsichuan_YCPpath
+			}
+			desc = SZC_chang_yansheng_desc
+		}
+	}
+
+	#雷震
+	SZC_lei_zhen = {
+		name = SZC_lei_zhen
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_lei_zhen_small
+				large = GFX_portrait_SZC_lei_zhen_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_lei_zhen_advisor
+			traits = {  }
+			desc = SZC_lei_zhen_desc
+		}
+	}
+
+	#高语罕
+	SZC_gao_yuhan = {
+		name = SZC_gao_yuhan
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_gao_yuhan_small
+				large = GFX_portrait_SZC_gao_yuhan_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_gao_yuhan_advisor
+			traits = {  }
+			desc = SZC_gao_yuhan_desc
+		}
+	}
+
+	#廖上柯
+	SZC_liao_shangke = {
+		name = SZC_liao_shangke
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_liao_shangke_small
+				large = GFX_portrait_SZC_liao_shangke_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_liao_shangke_advisor
+			traits = {  }
+			desc = SZC_liao_shangke_desc
+		}
+	}
+
+	#张子柱
+	SZC_zhang_zizhu = {
+		name = SZC_zhang_zizhuSZC_zhang_zizhu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zhang_zizhu_small
+				large = GFX_portrait_SZC_zhang_zizhu_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_zhang_zizhu_advisor
+			traits = {  }
+			desc = SZC_zhang_zizhu_desc
+		}
+	}
+
+	#魏时珍
+	SZC_wei_shizhen = {
+		name = SZC_wei_shizhen
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_wei_shizhen_small
+				large = GFX_portrait_SZC_wei_shizhen_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_wei_shizhen_advisor
+			traits = {  }
+			desc = SZC_wei_shizhen_desc
+		}
+	}
+
+	#郑振文
+	SZC_zheng_zhenwen = {
+		name = SZC_zheng_zhenwen
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zheng_zhenwen_small
+				large = GFX_portrait_SZC_zheng_zhenwen_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_zheng_zhenwen_advisor
+			traits = {  }
+			desc = SZC_zheng_zhenwen_desc
+		}
+	}
+
+	#谢澄平
+	SZC_xie_chengping = {
+		name = SZC_xie_chengping
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_xie_chengping_small
+				large = GFX_portrait_SZC_xie_chengping_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_xie_chengping_advisor
+			traits = {  }
+			desc = SZC_xie_chengping_desc
+		}
+	}
+
+	#胡阜贤
+	SZC_hu_fuxian = {
+		name = SZC_hu_fuxian
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_hu_fuxian_small
+				large = GFX_portrait_SZC_hu_fuxian_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_hu_fuxian_advisor
+			traits = {  }
+			desc = SZC_hu_fuxian_desc
+		}
+	}
+
+	#刘静远
+	SZC_liu_jingyuan = {
+		name = SZC_liu_jingyuan
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_liu_jingyuan_small
+				large = GFX_portrait_SZC_liu_jingyuan_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_liu_jingyuan_advisor
+			traits = {  }
+			desc = SZC_liu_jingyuan_desc
+		}
+	}
+
+	#李不韪
+	SZC_li_buwei = {
+		name = SZC_li_buwei
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_li_buwei_small
+				large = GFX_portrait_SZC_li_buwei_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_li_buwei_advisor
+			traits = {  }
+			desc = SZC_li_buwei_desc
+		}
+	}
+
+	#吴天墀
+	SZC_wu_tianchi = {
+		name = SZC_wu_tianchi
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_wu_tianchi_small
+				large = GFX_portrait_SZC_wu_tianchi_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_wu_tianchi_advisor
+			traits = {  }
+			desc = SZC_wu_tianchi_desc
+		}
+	}
+
+	#胡国伟
+	SZC_hu_guowei = {
+		name = SZC_hu_guowei
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_hu_guowei_small
+				large = GFX_portrait_SZC_hu_guowei_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_hu_guowei_advisor
+			traits = {  }
+			desc = SZC_hu_guowei_desc
+		}
+	}
+
+	#刘泗英
+	SZC_liu_siying = {
+		name = SZC_liu_siying
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_liu_siying_small
+				large = GFX_portrait_SZC_liu_siying_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_liu_siying_advisor
+			traits = {  }
+			desc = SZC_liu_siying_desc
+		}
+	}
+
+	#喻孝权
+	SZC_yu_xiaoquan = {
+		name = SZC_yu_xiaoquan
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_yu_xiaoquan_small
+				large = GFX_portrait_SZC_yu_xiaoquan_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_yu_xiaoquan_advisor
+			traits = {  }
+			desc = SZC_yu_xiaoquan_desc
+		}
+	}
+
+	#刘东岩
+	SZC_liu_dongyan = {
+		name = SZC_liu_dongyan
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_liu_dongyan_small
+				large = GFX_portrait_SZC_liu_dongyan_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_liu_dongyan_advisor
+			traits = {  }
+			desc = SZC_liu_dongyan_desc
+		}
+	}
+
+	#王岚僧
+	SZC_wang_lanseng = {
+		name = SZC_wang_lanseng
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_wang_lanseng_small
+				large = GFX_portrait_SZC_wang_lanseng_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_wang_lanseng_advisor
+			traits = {  }
+			desc = SZC_wang_lanseng_desc
+		}
+	}
+
+	#刘永济
+	SZC_liu_yongji = {
+		name = SZC_liu_yongji
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_liu_yongji_small
+				large = GFX_portrait_SZC_liu_yongji_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_liu_yongji_advisor
+			traits = {  }
+			desc = SZC_liu_yongji_desc
+		}
+	}
+
+	#王光祈
+	SZC_wang_guangqi = {
+		name = SZC_wang_guangqi
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_wang_guangqi_small
+				large = GFX_portrait_SZC_wang_guangqi_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_wang_guangqi_advisor
+			traits = {  }
+			desc = SZC_wang_guangqi_desc
+		}
+	}
+
+	#陈善新
+	SZC_chen_shanxin = {
+		name = SZC_chen_shanxin
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_chen_shanxin_small
+				large = GFX_portrait_SZC_chen_shanxin_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_chen_shanxin_advisor
+			traits = {  }
+			desc = SZC_chen_shanxin_desc
+		}
+	}
+
+	#于复先
+	SZC_yu_fuxian = {
+		name = SZC_yu_fuxian
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_yu_fuxian_small
+				large = GFX_portrait_SZC_yu_fuxian_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_yu_fuxian_advisor
+			traits = {  }
+			desc = SZC_yu_fuxian_desc
+		}
+	}
+
+	#林可玑
+	SZC_lin_keji = {
+		name = SZC_lin_keji
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_lin_keji_small
+				large = GFX_portrait_SZC_lin_keji_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_lin_keji_advisor
+			traits = {  }
+			desc = SZC_lin_keji_desc
+		}
+	}
+
+	#余家菊
+	SZC_yu_jiaju = {
+		name = SZC_yu_jiaju
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_yu_jiaju_small
+				large = GFX_portrait_SZC_yu_jiaju_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_yu_jiaju_advisor
+			traits = {  }
+			desc = SZC_yu_jiaju_desc
+		}
+	}
+
+	#何鲁之
+	SZC_he_luzhi = {
+		name = SZC_he_luzhi
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_he_luzhi_small
+				large = GFX_portrait_SZC_he_luzhi_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_he_luzhi_advisor
+			traits = {  }
+			desc = SZC_he_luzhi_desc
+		}
+	}
+
+	#梁实秋
+	SZC_liang_shiqiu = {
+		name = SZC_liang_shiqiu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_liang_shiqiu_small
+				large = GFX_portrait_SZC_liang_shiqiu_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_liang_shiqiu_advisor
+			traits = {  }
+			desc = SZC_liang_shiqiu_desc
+		}
+	}
+
+	#张葆恩
+	SZC_zhang_baoen = {
+		name = SZC_zhang_baoen
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zhang_baoen_small
+				large = GFX_portrait_SZC_zhang_baoen_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_zhang_baoen_advisor
+			traits = {  }
+			desc = SZC_zhang_baoen_desc
+		}
+	}
+
+	#夏尔康
+	SZC_xia_erkang = {
+		name = SZC_xia_erkang
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_xia_erkang_small
+				large = GFX_portrait_SZC_xia_erkang_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_xia_erkang_advisor
+			traits = {  }
+			desc = SZC_xia_erkang_desc
+		}
+	}
+
+	#赵毓松
+	SZC_zhao_yusong = {
+		name = SZC_zhao_yusong
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zhao_yusong_small
+				large = GFX_portrait_SZC_zhao_yusong_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_zhao_yusong_advisor
+			traits = {  }
+			desc = SZC_zhao_yusong_desc
+		}
+	}
+
+	#段震寰
+	SZC_duan_zhenhuan = {
+		name = SZC_duan_zhenhuan
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_duan_zhenhuan_small
+				large = GFX_portrait_SZC_duan_zhenhuan_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_duan_zhenhuan_advisor
+			traits = {  }
+			desc = SZC_duan_zhenhuan_desc
+		}
+	}
+
+	#沈云龙
+	SZC_shen_yunlong = {
+		name = SZC_shen_yunlong
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_shen_yunlong_small
+				large = GFX_portrait_SZC_shen_yunlong_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_shen_yunlong_advisor
+			traits = {  }
+			desc = SZC_shen_yunlong_desc
+		}
+	}
+
+	#张梦九
+	SZC_zhang_mengjiu = {
+		name = SZC_zhang_mengjiu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zhang_mengjiu_small
+				large = GFX_portrait_SZC_zhang_mengjiu_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_zhang_mengjiu_advisor
+			traits = {  }
+			desc = SZC_zhang_mengjiu_desc
+		}
+	}
+
 	#闻一多
 	SZC_wen_yiduo = {
 		name = SZC_wen_yiduo
