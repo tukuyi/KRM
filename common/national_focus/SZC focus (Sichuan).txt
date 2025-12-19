@@ -4560,7 +4560,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = SZC_Chongqing_Victory
-		x = -3
+		x = 0
 		y = 1
 
 		prerequisite = {
@@ -4580,11 +4580,11 @@ focus_tree = {
 	focus = {
 		id = SZC_Align_The_Minor_Warlords
 		icon = GFX_goal_ANQ_invite_governors
-		cost = 5
+		cost = 2
 
 		relative_position_id = SZC_Consolidate_The_Province
-		x = 0
-		y = 2
+		x = 2
+		y = 1
 
 		prerequisite = {
 			focus = SZC_Consolidate_The_Province
@@ -4594,6 +4594,14 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_Align_The_Minor_Warlords"
 			SZC_political_recovery = yes
 			army_experience = 15
+			hidden_effect = {
+				SZC_fan_shaozeng = {
+					SZC_recruit_character_effect = yes
+					unit_leader_event = {
+						id = NKRsichuanmisc.2
+					}
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
@@ -4601,10 +4609,10 @@ focus_tree = {
 	focus = {
 		id = SZC_Entice_The_Urban_Merchants
 		icon = GFX_focus_mex_privatisation
-		cost = 5
+		cost = 2
 
 		relative_position_id = SZC_Consolidate_The_Province
-		x = -1
+		x = -2
 		y = 1
 
 		prerequisite = {
@@ -4620,19 +4628,43 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SZC_liu_xiangs_cabinets
+		icon = GFX_goal_SZC_liu_xiangs_cabinets
+		cost = 2
+
+		relative_position_id = SZC_Consolidate_The_Province
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = SZC_Consolidate_The_Province
+		}
+		ai_will_do = { factor = 5 }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_liu_xiangs_cabinets"
+			custom_effect_tooltip =  SZC_liu_xiangs_cabinets_tooltip
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
 		id = SZC_Family_Matters
 		icon = GFX_goal_SZC_family_matters
 		cost = 6
 
 		relative_position_id = SZC_Consolidate_The_Province
-		x = -1
-		y = 3
+		x = 0
+		y = 2
 
 		prerequisite = {
 			focus = SZC_Align_The_Minor_Warlords
 		}
 		prerequisite = {
 			focus = SZC_Entice_The_Urban_Merchants
+		}
+		
+		prerequisite = {
+			focus = SZC_liu_xiangs_cabinets
 		}
 		select_effect = {
 			log = "[GetLogRoot]: Select Focus SZC_Family_Matters"
@@ -4650,169 +4682,94 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SZC_Form_The_National_Protection_Alliance
-		icon = GFX_goal_volunteer_alliance
+		id = SZC_Sichuan_Fowards
+		icon = GFX_goal_SZC_Sichuan_Fowards
 		cost = 5
 
 		relative_position_id = SZC_Family_Matters
-		x = 2
-		y = 1
+		x = -1
+		y = 2
 
 		available = {
 			is_subject = no
 			is_in_faction = no
 			NOT = { has_idea = SZC_two_lius_war }
+			NOT = { has_country_flag = SZC_liu_xiang_dead }
 		}
-		bypass = {
-			china_is_potential_government = yes
-		}
-		mutually_exclusive = {
-			focus = SZC_A_Grandiose_Plan
-			focus = SZC_The_Lord_Of_Sichuan
+		visible = {
+			NOT = {
+				has_country_flag = SZC_liu_xiang_dead
+			}
 		}
 		prerequisite = {
 			focus = SZC_Family_Matters
 		}
-		ai_will_do = {
-			factor = 4
-			modifier = {
-				factor = 0
-				has_dynamic_modifier = { modifier = SZC_major_famine }
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_game_rule = { rule = SZC_forpol option = DEFAULT } }
-				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_FORM_NPA } }
-				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_NPA } }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_NPA }
-				NOT = { country_exists = NPA }
+		prerequisite = {
+			focus = SZC_Famine_Relief_Corps
+		}
+		prerequisite = {
+			focus = SZC_Urban_Expansion
+		}
+		select_effect = {
+			log = "[GetLogRoot]: Select Focus SZC_Sichuan_Fowards"
+			country_event = {
+				id = NKRsichuan.11
+				days = 7
 			}
 		}
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Form_The_National_Protection_Alliance"
-			if = {
-				limit = {
-					NOT = { country_exists = NPA }
-				}
-				country_event = national_protection_alliance_events.1
-			}
-			else_if = {
-				limit = {
-					NOT = { has_war_with = NPA }
-				}
-				NPA = { country_event = national_protection_alliance_events.2 }
-			}
-			else = {
+			log = "[GetLogRoot]: Focus Completed SZC_Sichuan_Fowards"
+			custom_effect_tooltip = SZC_Sichuan_Fowards_tooltip
+			effect_tooltip = {
 				set_potential_national_government = yes
-				china_enable_all_demand_submission_decisions = yes
+				custom_effect_tooltip = tooltip_white_line
+				china_enable_all_attack_decisions = yes
+				custom_effect_tooltip = tooltip_white_line
+				custom_effect_tooltip = china_can_core_through_compliance
 			}
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = china_can_core_through_compliance
 		}
 	}
-
+	
 	focus = {
-		id = SZC_A_Grandiose_Plan
-		icon = GFX_goal_QIE_purge_zhili
-		cost = 5
+		id = SZC_what_now
+		icon = GFX_goal_SZC_what_now
+		cost = 1
 
 		relative_position_id = SZC_Family_Matters
-		x = -2
-		y = 1
+		x = -1
+		y = 2
 
-		available = {
-			is_subject = no
-			is_in_faction = no
-			NOT = { has_idea = SZC_two_lius_war }
-		}
-		mutually_exclusive = {
-			focus = SZC_Form_The_National_Protection_Alliance
-			focus = SZC_The_Lord_Of_Sichuan
+		allow_branch = {
+			has_country_flag = SZC_liu_xiang_dead
 		}
 		prerequisite = {
 			focus = SZC_Family_Matters
 		}
-		ai_will_do = {
-			factor = 6
-			modifier = {
-				factor = 0
-				has_dynamic_modifier = { modifier = SZC_major_famine }
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_game_rule = { rule = SZC_forpol option = DEFAULT } }
-				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_SZC } }
-			}
-		}
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_A_Grandiose_Plan"
-			set_potential_national_government = yes
-			custom_effect_tooltip = tooltip_white_line
-			china_enable_all_attack_decisions = yes
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = china_can_core_through_compliance
-		}
-	}
-
-	focus = {
-		id = SZC_The_Lord_Of_Sichuan
-		icon = GFX_goal_SZC_the_lord_of_sichuan
-		cost = 5
-
-		relative_position_id = SZC_Family_Matters
-		x = 0
-		y = 1
-
-		available = {
-			NOT = { has_idea = SZC_two_lius_war }
-		}
-		mutually_exclusive = {
-			focus = SZC_A_Grandiose_Plan
-			focus = SZC_Form_The_National_Protection_Alliance
+		prerequisite = {
+			focus = SZC_Famine_Relief_Corps
 		}
 		prerequisite = {
-			focus = SZC_Family_Matters
-		}
-		ai_will_do = {
-			factor = 4
-			modifier = {
-				factor = 0
-				has_dynamic_modifier = { modifier = SZC_major_famine }
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_SZC }
-					has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_FORM_NPA }
-					has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_NPA }
-				}
-			}
+			focus = SZC_Urban_Expansion
 		}
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_The_Lord_Of_Sichuan"
-			add_political_power = 100
-			if = {
-				limit = { is_subject = no }
-				custom_effect_tooltip = SZC_The_Lord_Of_Sichuan_tooltip
+			log = "[GetLogRoot]: Focus Completed what_now"
+			custom_effect_tooltip = SZC_what_now_tooltip
+			country_event = {
+				id = NKRsichuan.14
 			}
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
 		id = SZC_Famine_Relief_Corps
 		icon = GFX_goal_PAL_Irrigation_Program
-		cost = 5
+		cost = 3
 
 		relative_position_id = SZC_Chongqing_Victory
-		x = -1
-		y = 1
+		x = 3
+		y = 3
 
 		bypass = {
-			hidden_trigger = { date > 1937.1.1 }
 			NOT = { has_dynamic_modifier = { modifier = SZC_major_famine } }
 		}
 		prerequisite = {
@@ -4828,10 +4785,10 @@ focus_tree = {
 	focus = {
 		id = SZC_Aggressive_Modernisation
 		icon = GFX_goal_social_reforms
-		cost = 5
+		cost = 3
 
 		relative_position_id = SZC_Chongqing_Victory
-		x = 1
+		x = -5
 		y = 1
 
 		prerequisite = {
@@ -4847,6 +4804,7 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
+			china_add_research_slots = yes
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -4854,11 +4812,11 @@ focus_tree = {
 	focus = {
 		id = SZC_Fund_The_Construction_Industry
 		icon = GFX_goal_construction
-		cost = 5
+		cost = 3
 
 		relative_position_id = SZC_Aggressive_Modernisation
-		x = -2
-		y = 2
+		x = -1
+		y = 1
 
 		prerequisite = {
 			focus = SZC_Aggressive_Modernisation
@@ -4904,35 +4862,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 	}
 
-	focus = {
-		id = SZC_Expand_Arms_Production
-		icon = GFX_focus_generic_tank_production
-		cost = 5
-
-		relative_position_id = SZC_Aggressive_Modernisation
-		x = -3
-		y = 3
-
-		prerequisite = {
-			focus = SZC_Fund_The_Construction_Industry
-		}
-		ai_will_do = { factor = 3 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Expand_Arms_Production"
-			add_one_random_military_factory = yes
-			add_one_random_military_factory = yes
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
 
 	focus = {
 		id = SZC_The_Riches_Of_Xikang
 		icon = GFX_goal_generic_coal_mining
-		cost = 5
+		cost = 2
 
 		relative_position_id = SZC_Aggressive_Modernisation
-		x = -1
-		y = 3
+		x = -2
+		y = 2
 
 		available = {
 			has_completed_focus = SZC_Family_Matters
@@ -4964,28 +4902,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SZC_Mass_Education_Campaigns
-		icon = GFX_goal_military_research
-		cost = 5
-
-		relative_position_id = SZC_Aggressive_Modernisation
-		x = -1
-		y = 1
-
-		prerequisite = {
-			focus = SZC_Aggressive_Modernisation
-		}
-		ai_will_do = { factor = 3 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Mass_Education_Campaigns"
-			china_add_research_slots = yes
-		}
-	}
-
-	focus = {
 		id = SZC_Currency_Reform
 		icon = GFX_goal_ANQ_Dalu_Yinhang
-		cost = 5
+		cost = 3
 
 		relative_position_id = SZC_Aggressive_Modernisation
 		x = 1
@@ -5018,7 +4937,7 @@ focus_tree = {
 	focus = {
 		id = SZC_Sichuan_Central_Bank
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 5
+		cost = 3
 
 		relative_position_id = SZC_Aggressive_Modernisation
 		x = 0
@@ -5064,11 +4983,11 @@ focus_tree = {
 	focus = {
 		id = SZC_Standardise_Land_Tax
 		icon = GFX_goal_agency
-		cost = 5
+		cost = 2
 
 		relative_position_id = SZC_Aggressive_Modernisation
-		x = 1
-		y = 3
+		x = 2
+		y = 2
 
 		prerequisite = {
 			focus = SZC_Currency_Reform
@@ -5114,11 +5033,11 @@ focus_tree = {
 	focus = {
 		id = SZC_Urban_Expansion
 		icon = GFX_goal_generic_build_housing
-		cost = 6
+		cost = 3
 
 		relative_position_id = SZC_Aggressive_Modernisation
 		x = 0
-		y = 4
+		y = 3
 
 		available = {
 			650 = { is_owned_and_controlled_by = ROOT }
@@ -7794,6 +7713,9 @@ focus_tree = {
 			custom_effect_tooltip = SZC_United_Front_tt
 			activate_targeted_decision = { decision = SZC_united_anti_japanese_front target = ROOT }
 		}
+	}
+}
+
 focus_tree = {
 	id = Sichuan_Clique_Panwenhua
 	country = {
