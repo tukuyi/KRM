@@ -156,6 +156,7 @@ is_dutch_tag = {
 			original_tag = FLA
 			original_tag = DEI
 			original_tag = SUR
+			original_tag = CUR
 		}
 	}
 }
@@ -459,6 +460,12 @@ is_indian_tag = {
 		original_tag = TRV
 	}
 	#}
+}
+is_indo_aryan_speaking_tag = {
+	OR = {
+		is_indian_tag = yes
+		original_tag = NEP
+	}
 }
 is_farsi_speaking_tag = {
 	custom_override_tooltip = {

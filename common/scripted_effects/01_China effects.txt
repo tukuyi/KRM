@@ -24,23 +24,268 @@ AGJ_set_leader_effect = {
 }
 
 UPC_set_leader_effect = {
-	#Anguojun/Fengtian
+	#Federalists
 	custom_effect_tooltip = UPC_set_leader_tt
 	save_global_event_target_as = UPC_leader
+
+	#Set Up the alliances
+	add_to_array = { china_possible_allies_array = SZC }
+	add_to_array = { china_possible_allies_array = YUN }
+	add_to_array = { china_possible_allies_array = HNN }
+	add_to_array = { china_possible_allies_array = GXC }
+	add_to_array = { china_possible_allies_array = SHX }
+	add_to_array = { china_possible_allies_array_northwest = XSM }
+	add_to_array = { china_possible_allies_array_northwest = SIK }
+
+	#This is super annoying because set_power_balance doesnt accept variables for the set_value = <decimal>.
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { global.UPC_democratic_enthusiasm_var = 1.0 } }
+			set_variable = { global.UPC_democratic_enthusiasm_var = 1.0 }
+			set_power_balance = {
+				id = UPC_power_balance
+				set_value = 1.0
+				left_side = UPC_low_enthusiasm_side
+				right_side = UPC_high_enthusiasm_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.UPC_democratic_enthusiasm_var > 0.89 } }
+			set_variable = { global.UPC_democratic_enthusiasm_var = 0.9 }
+			set_power_balance = {
+				id = UPC_power_balance
+				set_value = 0.8
+				left_side = UPC_low_enthusiasm_side
+				right_side = UPC_high_enthusiasm_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.UPC_democratic_enthusiasm_var > 0.79 } }
+			set_variable = { global.UPC_democratic_enthusiasm_var = 0.8 }
+			set_power_balance = {
+				id = UPC_power_balance
+				set_value = 0.6
+				left_side = UPC_low_enthusiasm_side
+				right_side = UPC_high_enthusiasm_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.UPC_democratic_enthusiasm_var > 0.69 } }
+			set_variable = { global.UPC_democratic_enthusiasm_var = 0.7 }
+			set_power_balance = {
+				id = UPC_power_balance
+				set_value = 0.4
+				left_side = UPC_low_enthusiasm_side
+				right_side = UPC_high_enthusiasm_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.UPC_democratic_enthusiasm_var > 0.59 } }
+			set_variable = { global.UPC_democratic_enthusiasm_var = 0.6 }
+			set_power_balance = {
+				id = UPC_power_balance
+				set_value = 0.2
+				left_side = UPC_low_enthusiasm_side
+				right_side = UPC_high_enthusiasm_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.UPC_democratic_enthusiasm_var > 0.49 } }
+			set_variable = { global.UPC_democratic_enthusiasm_var = 0.5 }
+			set_power_balance = {
+				id = UPC_power_balance
+				set_value = 0.0
+				left_side = UPC_low_enthusiasm_side
+				right_side = UPC_high_enthusiasm_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.UPC_democratic_enthusiasm_var > 0.39 } }
+			set_variable = { global.UPC_democratic_enthusiasm_var = 0.4 }
+			set_power_balance = {
+				id = UPC_power_balance
+				set_value = -0.2
+				left_side = UPC_low_enthusiasm_side
+				right_side = UPC_high_enthusiasm_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.UPC_democratic_enthusiasm_var > 0.29 } }
+			set_variable = { global.UPC_democratic_enthusiasm_var = 0.3 }
+			set_power_balance = {
+				id = UPC_power_balance
+				set_value = -0.4
+				left_side = UPC_low_enthusiasm_side
+				right_side = UPC_high_enthusiasm_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.UPC_democratic_enthusiasm_var > 0.19 } }
+			set_variable = { global.UPC_democratic_enthusiasm_var = 0.2 }
+			set_power_balance = {
+				id = UPC_power_balance
+				set_value = -0.6
+				left_side = UPC_low_enthusiasm_side
+				right_side = UPC_high_enthusiasm_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.UPC_democratic_enthusiasm_var > 0.09 } }
+			set_variable = { global.UPC_democratic_enthusiasm_var = 0.1 }
+			set_power_balance = {
+				id = UPC_power_balance
+				set_value = -0.8
+				left_side = UPC_low_enthusiasm_side
+				right_side = UPC_high_enthusiasm_side
+			}
+		}
+		else = {
+			set_variable = { global.UPC_democratic_enthusiasm_var = 0.05 }
+			set_power_balance = {
+				id = UPC_power_balance
+				set_value = -0.9
+				left_side = UPC_low_enthusiasm_side
+				right_side = UPC_high_enthusiasm_side
+			}
+		}
+	}
+}
+
+KMT_kuomintang_enable_alliance_decisions = {
+	add_to_array = { china_possible_allies_array = SZC }
+	add_to_array = { china_possible_allies_array = YUN }
+	add_to_array = { china_possible_allies_array = HNN }
+	add_to_array = { china_possible_allies_array = GXC }
+	add_to_array = { china_possible_allies_array = SHX }
+	add_to_array = { china_possible_allies_array_northwest = XSM }
+	add_to_array = { china_possible_allies_array_northwest = SIK }
 }
 
 LKT_set_leader_effect = {
 	#Left Kuomintang
 	custom_effect_tooltip = LKT_set_leader_tt
 	save_global_event_target_as = LKT_leader
+	KMT_kuomintang_enable_alliance_decisions = yes
 }
 
 RKT_set_leader_effect = {
 	#Right Kuomintang
 	custom_effect_tooltip = RKT_set_leader_tt
 	save_global_event_target_as = RKT_leader
+	KMT_kuomintang_enable_alliance_decisions = yes
+	#This is super annoying because set_power_balance doesnt accept variables for the set_value = <decimal>.
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { global.RKT_revolutionary_zeal_var = 1.0 } }
+			set_variable = { global.RKT_revolutionary_zeal_var = 1.0 }
+			set_power_balance = {
+				id = RKT_power_balance
+				set_value = 1.0
+				left_side = RKT_low_zeal_side
+				right_side = RKT_high_zeal_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.89 } }
+			set_variable = { global.RKT_revolutionary_zeal_var = 0.9 }
+			set_power_balance = {
+				id = RKT_power_balance
+				set_value = 0.8
+				left_side = RKT_low_zeal_side
+				right_side = RKT_high_zeal_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.79 } }
+			set_variable = { global.RKT_revolutionary_zeal_var = 0.8 }
+			set_power_balance = {
+				id = RKT_power_balance
+				set_value = 0.6
+				left_side = RKT_low_zeal_side
+				right_side = RKT_high_zeal_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.69 } }
+			set_variable = { global.RKT_revolutionary_zeal_var = 0.7 }
+			set_power_balance = {
+				id = RKT_power_balance
+				set_value = 0.4
+				left_side = RKT_low_zeal_side
+				right_side = RKT_high_zeal_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.59 } }
+			set_variable = { global.RKT_revolutionary_zeal_var = 0.6 }
+			set_power_balance = {
+				id = RKT_power_balance
+				set_value = 0.2
+				left_side = RKT_low_zeal_side
+				right_side = RKT_high_zeal_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.49 } }
+			set_variable = { global.RKT_revolutionary_zeal_var = 0.5 }
+			set_power_balance = {
+				id = RKT_power_balance
+				set_value = 0.0
+				left_side = RKT_low_zeal_side
+				right_side = RKT_high_zeal_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.39 } }
+			set_variable = { global.RKT_revolutionary_zeal_var = 0.4 }
+			set_power_balance = {
+				id = RKT_power_balance
+				set_value = -0.2
+				left_side = RKT_low_zeal_side
+				right_side = RKT_high_zeal_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.29 } }
+			set_variable = { global.RKT_revolutionary_zeal_var = 0.3 }
+			set_power_balance = {
+				id = RKT_power_balance
+				set_value = -0.4
+				left_side = RKT_low_zeal_side
+				right_side = RKT_high_zeal_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.19 } }
+			set_variable = { global.RKT_revolutionary_zeal_var = 0.2 }
+			set_power_balance = {
+				id = RKT_power_balance
+				set_value = -0.6
+				left_side = RKT_low_zeal_side
+				right_side = RKT_high_zeal_side
+			}
+		}
+		else_if = {
+			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.09 } }
+			set_variable = { global.RKT_revolutionary_zeal_var = 0.1 }
+			set_power_balance = {
+				id = RKT_power_balance
+				set_value = -0.8
+				left_side = RKT_low_zeal_side
+				right_side = RKT_high_zeal_side
+			}
+		}
+		else = {
+			set_variable = { global.RKT_revolutionary_zeal_var = 0.05 }
+			set_power_balance = {
+				id = RKT_power_balance
+				set_value = -0.9
+				left_side = RKT_low_zeal_side
+				right_side = RKT_high_zeal_side
+			}
+		}
+	}
 }
-
 RGC_set_leader_effect = {
 	#GEACPS
 	custom_effect_tooltip = RGC_set_leader_tt
@@ -168,6 +413,16 @@ set_potential_national_government = {
 				set_variable = { ambition_area_@PREV = 1 }
 			}
 			CHI_warn_of_rkmt_government_effect = yes #If its a RKMT leader, effect will fire an event for CHI
+			if = {
+				limit = {
+					OR = {
+						tag = GXC
+						tag = YUN
+						tag = HNN
+					}
+				}
+				activate_targeted_decision = { target = ROOT decision = china_provisional_capital }
+			}
 		}
 	}
 }
@@ -185,10 +440,6 @@ clear_potential_national_government = {
 			else_if = {
 				limit = { has_cosmetic_tag = KUM_government_yaonan }
 				set_cosmetic_tag = KUM_xinjiang
-			}
-			else_if = {
-				limit = { has_cosmetic_tag = national_protection_alliance_guangxi }
-				set_cosmetic_tag = GXC_guangxi
 			}
 			else = {
 				drop_cosmetic_tag = yes
@@ -670,7 +921,7 @@ china_puppet_setup = {
 	hidden_effect = { clear_potential_national_government = yes }
 	if = {
 		limit = { tag = CHI }
-		set_cosmetic_tag = KMT_united_china
+		set_cosmetic_tag = LKMT_united_china_cosmetic
 		CHI_puppet_setup_effect = yes
 	}
 	else_if = {
@@ -782,214 +1033,165 @@ china_puppet_setup = {
 	}
 	else_if = {
 		limit = { tag = FNG }
+		set_cosmetic_tag = FNG_JAP
+		clear_global_event_target = AGJ_leader
+		save_global_event_target_as = RGC_leader
+		set_global_flag = FNG_projapan
 		if = {
-			limit = { FNG_JAP_hostile = no }
-			set_cosmetic_tag = united_china
-			set_politics = {
-				ruling_party = paternal_autocrat
-				elections_allowed = no
-			}
-			hidden_effect = {
-				set_popularities = {
-					totalist = 0
-					radical_socialist = 0
-					syndicalist = 0
-					social_democrat = 0
-					social_liberal = 0
-					market_liberal = 42
-					social_conservative = 10
-					authoritarian_democrat = 28
-					paternal_autocrat = 20
-					national_populist = 0
-				}
-			}
+			limit = { has_character = FNG_zhang_zuolin }
+			retire_character = FNG_zhang_zuolin
 		}
-		else = {
-			set_cosmetic_tag = FNG_JAP
-			clear_global_event_target = AGJ_leader
-			save_global_event_target_as = RGC_leader
-			set_global_flag = FNG_projapan
+		if = {
+			limit = { has_character = FNG_zhang_xueliang }
+			retire_character = FNG_zhang_xueliang
+		}
+		if = {
+			limit = { has_character = FNG_wu_junsheng }
+			retire_character = FNG_wu_junsheng
+		}
+		FNG_tang_shaoyi = {
 			if = {
-				limit = { has_character = FNG_zhang_zuolin }
-				retire_character = FNG_zhang_zuolin
+				limit = { has_ideology = paternal_autocrat_subtype }
+				promote_character = paternal_autocrat_subtype
 			}
-			if = {
-				limit = { has_character = FNG_zhang_xueliang }
-				retire_character = FNG_zhang_xueliang
-			}
-			if = {
-				limit = { has_character = FNG_wu_junsheng }
-				retire_character = FNG_wu_junsheng
-			}
-			FNG_tang_shaoyi = {
-				if = {
-					limit = { has_ideology = paternal_autocrat_subtype }
-					promote_character = paternal_autocrat_subtype
-				}
-				else = {
-					add_country_leader_role = {
-						country_leader = {
-							desc = FNG_tang_shaoyi_leader_desc
-							ideology = paternal_autocrat_subtype
-							traits = { CHN_geacps_aligned }
-						}
-						promote_leader = yes
+			else = {
+				add_country_leader_role = {
+					country_leader = {
+						desc = FNG_tang_shaoyi_leader_desc
+						ideology = paternal_autocrat_subtype
+						traits = { CHN_geacps_aligned FNG_unwilling_participant }
 					}
+					promote_leader = yes
 				}
 			}
-			custom_effect_tooltip = FNG_paternal_autocrat_rgoc_rename_tooltip
-			set_politics = {
-				ruling_party = paternal_autocrat
-				elections_allowed = no
-			}
-			add_popularity = {
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = FNG_new_peoples_society
+			long_name = FNG_new_peoples_society_tt
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.2
+		}
+		activate_advisor = FNG_wang_yitang_sic
+		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		add_to_coalition = yes
+		hidden_effect = {
+			set_party_name = {
 				ideology = paternal_autocrat
-				popularity = 0.2
+				name = FNG_new_peoples_society
+				long_name = FNG_new_peoples_society_long
 			}
-			add_popularity = {
-				ideology = market_liberal
-				popularity = 0.4
+			set_popularities = {
+				totalist = 1
+				radical_socialist = 5
+				syndicalist = 1
+				social_democrat = 5
+				social_liberal = 8
+				market_liberal = 10
+				social_conservative = 20
+				authoritarian_democrat = 20
+				paternal_autocrat = 20
+				national_populist = 10
 			}
-			activate_advisor = FNG_ruan_zhenduo_sic
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			add_to_coalition = yes
-			hidden_effect = {
-				set_party_name = {
-					ideology = paternal_autocrat
-					name = FNG_paternal_autocrat_rgoc_rename
-					long_name = FNG_paternal_autocrat_rgoc_rename_long
-				}
-				remove_ideas = {
-					FNG_Disastrous_Governance
-					FNG_Plutocratic_Exploitation
-					FNG_Expel_the_Japanese_Bandits
-				}
-				# FNG_grand_marshals_favor_category
-				remove_targeted_decision = { target = THIS decision = FNG_favor_concordia_association }
-				remove_targeted_decision = { target = THIS decision = FNG_favor_communications_clique }
-				remove_targeted_decision = { target = THIS decision = FNG_favor_recovery_league }
-				remove_targeted_decision = { target = THIS decision = FNG_favor_zhang_clique }
-				# FNG_fixing_the_economy_category
-				remove_targeted_decision = { target = THIS decision = FNG_Centralise_the_Banks }
-				remove_targeted_decision = { target = THIS decision = FNG_Re_Introduce_the_Fengtian_Dollar }
-				remove_targeted_decision = { target = THIS decision = FNG_Fill_the_Silver_Reserve }
-				remove_targeted_decision = { target = THIS decision = FNG_Encourage_Japanese_Investment }
-				remove_targeted_decision = { target = THIS decision = FNG_Encourage_Chinese_Investment }
-				# china_army_decisions
-				remove_targeted_decision = { target = THIS decision = FNG_Revise_our_Position_on_Looting }
-				remove_targeted_decision = { target = THIS decision = FNG_Rebuild_the_Second_Army }
-				remove_targeted_decision = { target = THIS decision = FNG_Raise_Independent_Brigades_in_Dezhou }
-				remove_targeted_decision = { target = THIS decision = FNG_Raise_Independent_Brigades_in_Kaifeng }
-				remove_targeted_decision = { target = THIS decision = FNG_Raise_Independent_Brigades_in_Ruyang }
-				remove_targeted_decision = { target = THIS decision = FNG_Raise_Independent_Brigades_in_Guanzhong }
-				remove_targeted_decision = { target = THIS decision = FNG_Raise_the_Baoding_Cadet_Corps }
-				# FNG_Preparing_For_The_Princes_Visit
-				remove_targeted_decision = { target = THIS decision = FNG_increase_security_in_shenyang }
-				remove_targeted_decision = { target = THIS decision = FNG_investigate_the_junior_officer_corps }
-				remove_targeted_decision = { target = THIS decision = FNG_reinforce_soldierly_discipline }
-				remove_targeted_decision = { target = THIS decision = FNG_present_chinese_modernity }
-				remove_targeted_decision = { target = THIS decision = FNG_Fortress_Manchuria }
-				# FNG_railways
-				remove_targeted_decision = { target = THIS decision = FNG_The_Jinhan_Railway }
-				remove_targeted_decision = { target = THIS decision = FNG_The_Jinpu_Railway }
-				remove_targeted_decision = { target = THIS decision = FNG_The_Yuehan_Railway }
-				remove_targeted_decision = { target = THIS decision = FNG_Railway_Construction_Jilin_Shenyang }
-				remove_targeted_decision = { target = THIS decision = FNG_Railway_Construction_Pingqi }
-				remove_targeted_decision = { target = THIS decision = FNG_Railway_Construction_Shenyang_Chengde }
-				# FNG_foreign_policy
-				remove_targeted_decision = { target = QIE decision = FNG_Denounce_Qing_Monarchism }
-				remove_targeted_decision = { target = GER decision = FNG_Denounce_German_Imperialism }
-				remove_targeted_decision = { target = THIS decision = FNG_National_Irredentism }
-				remove_targeted_decision = { target = THIS decision = FNG_Wu_Wang_Zai_Ju }
-				remove_targeted_decision = { target = THIS decision = FNG_Escalate_the_Propaganda_War }
-				remove_targeted_decision = { target = THIS decision = FNG_The_Yanshan_Plan }
-				remove_targeted_decision = { target = THIS decision = FNG_Shanhaiguan_Infiltration }
-				remove_targeted_decision = { target = SHD decision = FNG_Annex_Shandong_Anqing_Puppet }
-				# FNG_Commission_Japanese_Ships
-				remove_targeted_decision = { target = JAP decision = FNG_JAP_destroyers }
-				remove_targeted_decision = { target = JAP decision = FNG_JAP_subs }
-				remove_targeted_decision = { target = JAP decision = FNG_JAP_cruisers }
-				remove_targeted_decision = { target = JAP decision = FNG_JAP_convoys }
-			}
-		}
-	}
-	else = {
-		if = {
-			limit = { ROOT = { has_authoritarian_government = yes } }
-			set_cosmetic_tag = RKT_united_china
-			load_focus_tree = KR_RKMT
-			if = {
-				limit = { original_tag = GXC }
-				GXC_li_zongren = {
-					set_nationality = GXC
-					promote_character = yes
-				}
-			}
-			set_politics = {
-				ruling_party = authoritarian_democrat
-				elections_allowed = no
-			}
-			set_political_party = {
-				ideology = authoritarian_democrat
-				popularity = 60
-			}
-		}
-		else = {
-			set_cosmetic_tag = UPC_united_china
-			load_focus_tree = Federalist_China_Tree
-			save_global_event_target_as = UPC_leader
-			set_politics = {
-				ruling_party = social_liberal
-				elections_allowed = no
-			}
-			set_political_party = {
+			set_party_name = {
 				ideology = social_liberal
-				popularity = 60
+				long_name = CHN_republicans_party_long
+				name = CHN_republicans_party
 			}
-			hidden_effect = {
-				remove_ideas = {
-					GXC_RKMT_angry_merchants
-					GXC_RKMT_appeased_merchants
-					GXC_RKMT_weary_gentry
-					GXC_RKMT_rent_caps
-					GXC_kmt_comissar_idea
-					GXC_provisional_yuan_idea
-					GXC_legislative_yuan_idea
-					KR_RKMT_popular_support_1
-					KR_RKMT_popular_support_2
-					KR_RKMT_popular_support_3
-					KR_RKMT_popular_support_4
-					KR_RKMT_popular_support_5
-					GXC_rkmt_spy_idea
-					GXC_economic_instability
-					GXC_economic_instability2
-					GXC_economic_instability3
-					GXC_economic_instability4
-					GXC_economic_instability5
-					GXC_low_literacy
-					GXC_low_literacy2
-					GXC_low_literacy3
-					GXC_low_literacy4
-					GXC_golden_decade
-					GXC_rkmt_revolution
-					GXC_rkmt_revolution2
-					GXC_rkmt_revolution3
-					GXC_kmt_cic_idea
-					GXC_nra_idea
-					GXC_kmt_demobilisation
-					GXC_kmt_demobilisation2
-					GXC_kmt_demobilisation3
-					GXC_kmt_demobilisation4
-					GXC_kmt_naval_reforms1
-					GXC_kmt_naval_reforms2
-					GXC_kmt_naval_reforms3
-					GXC_kmt_naval_reforms4
-					GXC_kmt_naval_reforms5
-					GXC_kmt_naval_reforms6
-				}
+			set_party_name = {
+				ideology = social_democrat
+				long_name = CHN_FCDP_party_long
+				name = CHN_FCDP_party
 			}
+			set_party_name = {
+				ideology = market_liberal
+				long_name = CHN_CCP_party_long
+				name = CHN_CCP_party
+			}
+			promote_character = {
+				character = FNG_assorted_leaders
+				ideology = social_democrat_subtype
+			}
+			promote_character = {
+				character = FNG_assorted_leaders
+				ideology = market_liberal_subtype
+			}
+			remove_ideas = {
+				FNG_Disastrous_Governance
+				FNG_Plutocratic_Exploitation
+				FNG_Expel_the_Japanese_Bandits
+			}
+			add_ideas = {
+				FNG_an_army_of_traitors
+				FNG_hollowed_out_economy
+				FNG_collaboration_the_great_evil
+			}
+			# FNG_grand_marshals_favor_category
+			remove_targeted_decision = { target = THIS decision = FNG_favor_shikan_clique }
+			remove_targeted_decision = { target = THIS decision = FNG_favor_communications_clique }
+			remove_targeted_decision = { target = THIS decision = FNG_favor_recovery_league }
+			remove_targeted_decision = { target = THIS decision = FNG_favor_zhang_clique }
+			# FNG_fixing_the_economy_category
+			remove_targeted_decision = { target = THIS decision = FNG_Centralise_the_Banks }
+			remove_targeted_decision = { target = THIS decision = FNG_Re_Introduce_the_Fengtian_Dollar }
+			remove_targeted_decision = { target = THIS decision = FNG_Fill_the_Silver_Reserve }
+			remove_targeted_decision = { target = THIS decision = FNG_Encourage_Japanese_Investment }
+			remove_targeted_decision = { target = THIS decision = FNG_Encourage_Chinese_Investment }
+			# china_army_decisions
+			remove_targeted_decision = { target = THIS decision = FNG_Revise_our_Position_on_Looting }
+			remove_targeted_decision = { target = THIS decision = FNG_Rebuild_the_Second_Army }
+			remove_targeted_decision = { target = THIS decision = FNG_Raise_Independent_Brigades_in_Dezhou }
+			remove_targeted_decision = { target = THIS decision = FNG_Raise_Independent_Brigades_in_Kaifeng }
+			remove_targeted_decision = { target = THIS decision = FNG_Raise_Independent_Brigades_in_Ruyang }
+			remove_targeted_decision = { target = THIS decision = FNG_Raise_Independent_Brigades_in_Guanzhong }
+			remove_targeted_decision = { target = THIS decision = FNG_Raise_the_Baoding_Cadet_Corps }
+			# FNG_Preparing_For_The_Princes_Visit
+			remove_targeted_decision = { target = THIS decision = FNG_increase_security_in_shenyang }
+			remove_targeted_decision = { target = THIS decision = FNG_investigate_the_junior_officer_corps }
+			remove_targeted_decision = { target = THIS decision = FNG_reinforce_soldierly_discipline }
+			remove_targeted_decision = { target = THIS decision = FNG_present_chinese_modernity }
+			remove_targeted_decision = { target = THIS decision = FNG_Fortress_Manchuria }
+			# FNG_railways
+			remove_targeted_decision = { target = THIS decision = FNG_The_Jinhan_Railway }
+			remove_targeted_decision = { target = THIS decision = FNG_The_Jinpu_Railway }
+			remove_targeted_decision = { target = THIS decision = FNG_The_Yuehan_Railway }
+			remove_targeted_decision = { target = THIS decision = FNG_Railway_Construction_Jilin_Shenyang }
+			remove_targeted_decision = { target = THIS decision = FNG_Railway_Construction_Pingqi }
+			remove_targeted_decision = { target = THIS decision = FNG_Railway_Construction_Shenyang_Chengde }
+			# FNG_foreign_policy
+			remove_targeted_decision = { target = QIE decision = FNG_Denounce_Qing_Monarchism }
+			remove_targeted_decision = { target = GER decision = FNG_Denounce_German_Imperialism }
+			remove_targeted_decision = { target = THIS decision = FNG_National_Irredentism }
+			remove_targeted_decision = { target = THIS decision = FNG_Wu_Wang_Zai_Ju }
+			remove_targeted_decision = { target = THIS decision = FNG_Escalate_the_Propaganda_War }
+			remove_targeted_decision = { target = THIS decision = FNG_The_Yanshan_Plan }
+			remove_targeted_decision = { target = THIS decision = FNG_Shanhaiguan_Infiltration }
+			remove_targeted_decision = { target = SHD decision = FNG_Annex_Shandong_Anqing_Puppet }
+			# FNG_Commission_Japanese_Ships
+			remove_targeted_decision = { target = JAP decision = FNG_JAP_destroyers }
+			remove_targeted_decision = { target = JAP decision = FNG_JAP_subs }
+			remove_targeted_decision = { target = JAP decision = FNG_JAP_cruisers }
+			remove_targeted_decision = { target = JAP decision = FNG_JAP_convoys }
 		}
 	}
+	#PLACEHOLDER - Should release RKMT d4b6486
+	#PLACEHOLDER release UPC 57e0a1e
 	hidden_effect = { set_potential_national_government = yes }
 }
 
@@ -1034,7 +1236,6 @@ china_integrate_ally_effect = {
 china_integrate_TARGET_effect = {
 	set_temp_variable = { integrator = THIS }
 	event_target:target = {
-		clr_country_flag = FNG_promised_autonomy
 		hidden_effect = {
 			if = {
 				limit = { var:integrator = { tag = CHI } }
@@ -1104,6 +1305,81 @@ china_integrate_TARGET_effect = {
 	}
 }
 
+## Lategame Civil War Effects
+CHN_add_to_civil_war_preparation_effect = {
+	if = {
+		limit = { is_chinese_or_potential_chinese_tag = yes }
+		if = {
+			limit = { CHN_has_civil_war_prep_trigger = yes }
+			add_to_variable = {
+				var = CHN_civil_war_preparation_var
+				value = 1
+				tooltip = CHN_add_to_civil_war_preparation_tt
+			}
+		}
+		else = {
+			add_to_variable = {
+				var = CHN_civil_war_preparation_var
+				value = 1
+				tooltip = CHN_begin_civil_war_preparation_tt
+			}
+			ROOT.overlord = {
+				country_event = { id = china_events.62 days = 3 }
+			}
+		}
+		#The formula should be 1 via generic decision + 1 via overlord's event chain + 2 via satellite content. 5 and up should be due to unplanend stuff.
+	}
+}
+
+CHN_add_revolt_preparation_effect = {
+	set_variable = { global.CHN_revolt_target = former_overlord }
+	if = {
+		limit = { check_variable = { CHN_civil_war_preparation_var > 4 } }
+		effect_tooltip = {
+			add_timed_idea = { idea = CHN_revolt_against_bonus_idea_fake days = 720 }
+		}
+		hidden_effect = {
+			add_timed_idea = { idea = CHN_revolt_against_bonus_idea days = 720 }
+		}
+	}
+	else_if = {
+		limit = { check_variable = { CHN_civil_war_preparation_var > 3 } }
+		effect_tooltip = {
+			add_timed_idea = { idea = CHN_revolt_against_bonus_idea_fake days = 360 }
+		}
+		hidden_effect = {
+			add_timed_idea = { idea = CHN_revolt_against_bonus_idea days = 360 }
+		}
+	}
+	else_if = {
+		limit = { check_variable = { CHN_civil_war_preparation_var > 2 } }
+		effect_tooltip = {
+			add_timed_idea = { idea = CHN_revolt_against_bonus_idea_fake days = 270 }
+		}
+		hidden_effect = {
+			add_timed_idea = { idea = CHN_revolt_against_bonus_idea days = 270 }
+		}
+	}
+	else_if = {
+		limit = { check_variable = { CHN_civil_war_preparation_var > 1 } }
+		effect_tooltip = {
+			add_timed_idea = { idea = CHN_revolt_against_bonus_idea_fake days = 180 }
+		}
+		hidden_effect = {
+			add_timed_idea = { idea = CHN_revolt_against_bonus_idea days = 180 }
+		}
+	}
+	else_if = {
+		limit = { check_variable = { CHN_civil_war_preparation_var > 0 } }
+		effect_tooltip = {
+			add_timed_idea = { idea = CHN_revolt_against_bonus_idea_fake days = 90 }
+		}
+		hidden_effect = {
+			add_timed_idea = { idea = CHN_revolt_against_bonus_idea days = 90 }
+		}
+	}
+}
+
 china_kmt_set_cosmetic_effect = {
 	if = {
 		limit = {
@@ -1116,14 +1392,6 @@ china_kmt_set_cosmetic_effect = {
 		}
 		#In Alphabetical Order for ease of search
 		if = {
-			limit = { original_tag = GXC }
-			if = {
-				limit = { has_country_leader = { character = GXC_li_zongren } }
-				set_cosmetic_tag = GXC_KMT_guangxi
-			}
-			else = { set_cosmetic_tag = GXC_KMT }
-		}
-		else_if = {
 			limit = {
 				original_tag = SHX
 				has_cosmetic_tag = SHX_NCPC
@@ -1131,7 +1399,7 @@ china_kmt_set_cosmetic_effect = {
 			set_cosmetic_tag = SHX_NCPC_KMT
 		}
 		else = {
-			# HNN_KMT, KUM_KMT, SHX_KMT, SIK_KMT, SZC_KMT, XSM_KMT, YUN_KMT
+			# GXC_KMT, HNN_KMT, KUM_KMT, SHX_KMT, SIK_KMT, SZC_KMT, XSM_KMT, YUN_KMT
 			meta_effect = {
 				text = {
 					set_cosmetic_tag = [CURRENT_TAG]_KMT
@@ -1267,6 +1535,62 @@ china_puppet_ROOT_effect = {
 			SHX_log_puppet_outcome_effect = yes
 			china_submission_mandatory_loyalty_timer_effect = yes
 		}
+
+		#Sets up Satellite Content
+		if = {
+			limit = {
+				var:new_overlord = { tag = CHI }
+				ROOT = {
+					tag = GXC
+					china_is_aligned_with_right_kmt = yes
+				}
+				#Rig it so Chen Mingshu will win the Clash for Canton if you have the game rules up.
+				OR = {
+					has_game_rule = { rule = GXC_KMT_path option = GXC_KMT_path_tan_pingshan }
+					has_game_rule = { rule = GXC_KMT_path option = GXC_KMT_path_peng_pai }
+					has_game_rule = { rule = GXC_KMT_path option = GXC_KMT_path_chen_mingshu }
+				}	
+			}
+			ROOT = { country_event = GXC.earlygame.462 } #New Fourth Army Coup
+		}
+		else_if = {
+			limit = {
+				var:new_overlord = { tag = CHI }
+				ROOT = {
+					tag = GXC
+					china_is_aligned_with_right_kmt = yes
+				}
+			}
+			ROOT = { country_event = { id = GXC.midgame.560 days = 1 } } #A Change in Partners
+			var:new_overlord = { country_event = { id = GXC.midgame.560 days = 3 } } #A Change in Partners
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					tag = GXC
+					china_is_unaligned = yes
+				}
+			}
+			ROOT = { country_event = { id = GXC.midgame.860 days = 1 } } #The South Submits to $Overlord$
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					tag = YUN
+					china_is_aligned_with_kmt = yes
+				}
+			}
+			ROOT = { country_event = { id = YUN.midgame.500 days = 1 } } #Zhu Peide Purges Long Yun
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					tag = YUN
+					china_is_aligned_with_federalists = yes
+				}
+			}
+			ROOT = { country_event = { id = YUN.midgame.300 days = 1 } } #The Southern Confederation
+		}
 	}
 }
 
@@ -1328,6 +1652,45 @@ china_puppet_PREV_effect = {
 			SHX_log_puppet_outcome_effect = yes
 			china_submission_mandatory_loyalty_timer_effect = yes
 		}
+		#Set Up Satellite Content
+		if = {
+			limit = {
+				var:new_overlord = { tag = CHI }
+				PREV = {
+					tag = GXC
+					china_is_aligned_with_right_kmt = yes
+				}
+			}
+			PREV = { country_event = { id = GXC.midgame.560 days = 1 } } #A Change in Partners
+			var:new_overlord = { country_event = { id = GXC.midgame.560 days = 3 } } #A Change in Partners
+		}
+		else_if = {
+			limit = {
+				PREV = {
+					tag = GXC
+					china_is_unaligned = yes
+				}
+			}
+			PREV = { country_event = { id = GXC.midgame.860 days = 1 } } #The South Submits to $Overlord$
+		}
+		else_if = {
+			limit = {
+				PREV = {
+					tag = YUN
+					china_is_aligned_with_kmt = yes
+				}
+			}
+			PREV = { country_event = { id = YUN.midgame.500 days = 1 } } #Zhu Peide Purges Long Yun
+		}
+		else_if = {
+			limit = {
+				PREV = {
+					tag = YUN
+					china_is_aligned_with_federalists = yes
+				}
+			}
+			PREV = { country_event = { id = YUN.midgame.300 days = 1 } } #The Southern Confederation
+		}
 	}
 }
 
@@ -1380,6 +1743,45 @@ china_puppet_FROM_effect = {
 			china_kmt_set_cosmetic_effect = yes
 			SHX_log_puppet_outcome_effect = yes
 			china_submission_mandatory_loyalty_timer_effect = yes
+		}
+		#Set Up Satellite Content
+		if = {
+			limit = {
+				var:new_overlord = { tag = CHI }
+				FROM = {
+					tag = GXC
+					china_is_aligned_with_right_kmt = yes
+				}
+			}
+			FROM = { country_event = { id = GXC.midgame.560 days = 1 } } #A Change in Partners
+			var:new_overlord = { country_event = { id = GXC.midgame.560 days = 3 } } #A Change in Partners
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					tag = GXC
+					china_is_unaligned = yes
+				}
+			}
+			FROM = { country_event = { id = GXC.midgame.860 days = 1 } } #The South Submits to $Overlord$
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					tag = YUN
+					china_is_aligned_with_kmt = yes
+				}
+			}
+			FROM = { country_event = { id = YUN.midgame.500 days = 1 } } #Zhu Peide Purges Long Yun
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					tag = YUN
+					china_is_aligned_with_federalists = yes
+				}
+			}
+			FROM = { country_event = { id = YUN.midgame.300 days = 1 } } #The Southern Confederation
 		}
 	}
 }
@@ -1435,6 +1837,45 @@ china_puppet_TARGET_effect = {
 			SHX_log_puppet_outcome_effect = yes
 			china_submission_mandatory_loyalty_timer_effect = yes
 		}
+		#Set Up Satellite Content
+		if = {
+			limit = {
+				var:new_overlord = { tag = CHI }
+				var:target = {
+					tag = GXC
+					china_is_aligned_with_right_kmt = yes
+				}
+			}
+			var:target = { country_event = { id = GXC.midgame.560 days = 1 } } #A Change in Partners
+			var:new_overlord = { country_event = { id = GXC.midgame.560 days = 3 } } #A Change in Partners
+		}
+		else_if = {
+			limit = {
+				var:target = {
+					tag = GXC
+					china_is_unaligned = yes
+				}
+			}
+			var:target = { country_event = { id = GXC.midgame.860 days = 1 } } #The South Submits to $Overlord$
+		}
+		else_if = {
+			limit = {
+				var:target = {
+					tag = YUN
+					china_is_aligned_with_kmt = yes
+				}
+			}
+			var:target = { country_event = { id = YUN.midgame.500 days = 1 } } #Zhu Peide Purges Long Yun
+		}
+		else_if = {
+			limit = {
+				var:target = {
+					tag = YUN
+					china_is_aligned_with_federalists = yes
+				}
+			}
+			var:target = { country_event = { id = YUN.midgame.300 days = 1 } } #The Southern Confederation
+		}
 	}
 }
 
@@ -1449,6 +1890,8 @@ china_break_puppet_effect = {
 				autonomy_state = autonomy_free
 			}
 		}
+		set_country_flag = { flag = CHN_has_revolted_flag days = 90 value = 1 }
+		CHN_add_revolt_preparation_effect = yes
 		peace_out_non_neighbours_after_leaving_faction = yes
 		every_owned_state = {
 			limit = {
@@ -1463,17 +1906,12 @@ china_break_puppet_effect = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					# Exceptions
-					has_cosmetic_tag = GXC_KMT
-					has_cosmetic_tag = GXC_KMT_guangxi
-					# HNN_KMT, KUM_KMT, SHX_KMT, SIK_KMT, SZC_KMT, XSM_KMT, YUN_KMT
-					meta_trigger = {
-						text = {
-							has_cosmetic_tag = [CURRENT_TAG]_KMT
-						}
-						CURRENT_TAG = "[THIS.GetTag]"
+				# GXC_KMT, HNN_KMT, KUM_KMT, SHX_KMT, SIK_KMT, SZC_KMT, XSM_KMT, YUN_KMT
+				meta_trigger = {
+					text = {
+						has_cosmetic_tag = [CURRENT_TAG]_KMT
 					}
+					CURRENT_TAG = "[THIS.GetTag]"
 				}
 				NOT = {
 					china_alignment_right_kuomintang = yes
@@ -1617,13 +2055,13 @@ china_set_government_tag_specific_scripted_effect = {
 	}
 	else_if = {
 		limit = { china_alignment_right_kuomintang = yes }
-		set_cosmetic_tag = RKT_government_cosmetic #Nationalist Military Government
+		set_cosmetic_tag = RKT_government_cosmetic #Guangzhou Nationalist Government
 	}
 	else_if = {
 		limit = { china_alignment_federalists = yes }
 		if = {
 			limit = {
-				original_tag = GXC #Chen Jiongming
+				tag = GXC #Chen Jiongming
 			}
 			set_cosmetic_tag = UPC_government_cosmetic #Guangzhou Federalist Government
 		}
@@ -1745,7 +2183,7 @@ china_set_government_tag_specific_scripted_effect = {
 			}
 			set_cosmetic_tag = SZH_government_nanjing_cosmetic #Nanjing Provisional Government (Southern Zhili)
 		}
-		else = { #Ma Ji, Also doubles as a fallback just in case
+		else = { #Fallback
 			set_cosmetic_tag = SZH_government_nanning_cosmetic #Nanning Provisional Government (Southern Zhili)
 		}
 	}
@@ -1773,20 +2211,15 @@ china_set_government_tag_specific_scripted_effect = {
 		set_capital = { state = 613 remember_old_capital = no }
 		set_cosmetic_tag = ANQ_government_nanjing
 	}
-	else_if = { #Ma Ji and Chen Lianbo, can go non aligned if the NPA has already died or theyre at war with it and they try to make the NPA
-		limit = { original_tag = GXC }
-		if = {
-			limit = {
-				has_country_leader = { character = GXC_ma_ji }
-			}
-			set_cosmetic_tag = GXC_government_nanning
-		}
-		else_if = {
-			limit = {
-				has_country_leader = { character = GXC_chen_lianbo }
-			}
-			set_cosmetic_tag = GXC_government_guangzhou
-		}
+	else_if = { #Lu Yuguang
+		limit = { tag = GXC }
+		save_global_event_target_as = npa_leader
+		set_cosmetic_tag = national_protection_alliance
+	}
+	else_if = { #Long Yun, Hu Ruoyu (when rebel), and Lu Han
+		limit = { tag = YUN }
+		save_global_event_target_as = npa_leader
+		set_cosmetic_tag = national_protection_alliance
 	}
 	else_if = { #Ma Zhonying and Fan Yaonan
 		limit = { original_tag = KUM }
@@ -1927,10 +2360,6 @@ china_set_government_tag_specific_scripted_effect = {
 		else = {
 			set_cosmetic_tag = XSM_government_lanzhou
 		}
-	}
-	else_if = { #Long Yun
-		limit = { original_tag = YUN }
-		set_cosmetic_tag = YUN_government
 	}
 }
 
@@ -2551,15 +2980,6 @@ china_enable_concession_decisions = {
 	set_country_flag = china_concession_decisions_unlocked
 	effect_tooltip = {
 		if = {
-			limit = {
-				country_exists = SHC
-				SHC = {
-					has_country_flag = han_jian_victory
-				}
-			}
-			activate_targeted_decision = { decision = china_demand_annexation target = SHC }
-		}
-		if = {
 			limit = { country_exists = LEC }
 			activate_targeted_decision = { decision = china_negotiate_with_legation_cities target = LEC }
 		}
@@ -2638,12 +3058,6 @@ china_generic_unification_effect = {
 		}
 		set_cosmetic_tag = united_china_yaonan
 	}
-	else_if = {
-		limit = { #Ma Ji needs this exception to make the flag and colour work
-			has_country_leader = { character = GXC_ma_ji }
-		}
-		set_cosmetic_tag = united_china_guangxi
-	}
 	else = {
 		set_cosmetic_tag = united_china
 	}
@@ -2652,6 +3066,7 @@ china_generic_unification_effect = {
 	add_ideas = CHS_military1
 	custom_effect_tooltip = enables_new_focus_branches
 	activate_targeted_decision = { decision = china_move_capital target = ROOT }
+	country_event = { id = china_events.2145 days = 3 } #National Unification and New Troubles
 }
 
 china_army_reform_increase_step = {
@@ -2724,6 +3139,7 @@ china_army_reform_remove_officer_penalty = {
 	}
 }
 
+### CHN Military Disarray
 CHN_setup_military_disarray_normal_effect = {
 	if = {
 		limit = { has_country_flag = CHN_setup_military_disarray_early_flag }
@@ -2801,6 +3217,7 @@ CHN_improve_military_disarray_effect = {
 	else_if = {
 		limit = { has_idea = CHN_military_disarray_idea3 }
 		remove_ideas = CHN_military_disarray_idea3
+		clear_variable = CHN_military_disarray_fixes_needed_var
 	}
 }
 
@@ -2879,12 +3296,473 @@ CHN_improve_economic_devastation_effect = {
 	else = { add_one_random_civilian_factory = yes }
 }
 
+CHN_setup_national_illiteracy_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = CHN_national_illiteracy_idea_added_flag } }
+		set_country_flag = CHN_national_illiteracy_idea_added_flag
+		add_ideas = CHN_national_illiteracy1_idea
+	}
+}
+
 CHN_setup_lategame_debuffs_effect = {
 	CHN_setup_economic_devastation_normal_effect = yes
 	CHN_setup_military_disarray_normal_effect = yes
-	add_ideas = CHN_national_illiteracy1_idea
+	CHN_setup_national_illiteracy_effect = yes
+}
+# CHN Reconstruction Effects
+CHN_add_buildslots_effect = {
+	if = {
+		limit = { 592 = { is_controlled_by_ROOT_or_subject = yes } } #Canton
+		592 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	if = {
+		limit = { 613 = { is_controlled_by_ROOT_or_subject = yes } } #Nanjing
+		613 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	if = {
+		limit = { 1048 = { is_controlled_by_ROOT_or_subject = yes } } #Wuhan
+		1048 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	if = {
+		limit = { 608 = { is_controlled_by_ROOT_or_subject = yes } } #Beijing
+		608 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	if = {
+		limit = { 602 = { is_controlled_by_ROOT_or_subject = yes } } #Changsha
+		602 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	if = {
+		limit = { 650 = { is_controlled_by_ROOT_or_subject = yes } } #Chongqing
+		650 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+	if = {
+		limit = { 594 = { is_controlled_by_ROOT_or_subject = yes } } #Nanning
+		594 = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+CHN_add_infra_effect = {
+	if = {
+		limit = { 592 = { is_controlled_by_ROOT_or_subject = yes } } #Canton
+		592 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 613 = { is_controlled_by_ROOT_or_subject = yes } } #Nanjing
+		613 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 1048 = { is_controlled_by_ROOT_or_subject = yes } } #Wuhan
+		1048 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 608 = { is_controlled_by_ROOT_or_subject = yes } } #Beijing
+		608 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 602 = { is_controlled_by_ROOT_or_subject = yes } } #Changsha
+		602 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 650 = { is_controlled_by_ROOT_or_subject = yes } } #Chongqing
+		650 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 594 = { is_controlled_by_ROOT_or_subject = yes } } #Nanning
+		594 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+CHN_add_infra_northerner_effect = {
+	if = {
+		limit = { 716 = { is_controlled_by_ROOT_or_subject = yes } } #Shenyang
+		716 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 613 = { is_controlled_by_ROOT_or_subject = yes } } #Nanjing
+		613 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 1048 = { is_controlled_by_ROOT_or_subject = yes } } #Wuhan
+		1048 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 608 = { is_controlled_by_ROOT_or_subject = yes } } #Beijing
+		608 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 597 = { is_controlled_by_ROOT_or_subject = yes } } #Jinan
+		597 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 1072 = { is_controlled_by_ROOT_or_subject = yes } } #Taiyuan
+		1072 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 1062 = { is_controlled_by_ROOT_or_subject = yes } } #Baoding
+		1062 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+CHN_add_resource_effects = {
+	if = {
+		limit = { 592 = { is_controlled_by_ROOT_or_subject = yes } } #Canton
+		592 = {
+			add_resource = { type = steel amount = 4 }
+		}
+	}
+	if = {
+		limit = { 595 = { is_controlled_by_ROOT_or_subject = yes } } #Jian'an
+		595 = {
+			add_resource = { type = tungsten amount = 4 }
+		}
+	}
+	if = {
+		limit = { 613 = { is_controlled_by_ROOT_or_subject = yes } } #Nanjing
+		613 = {
+			add_resource = { type = steel amount = 4 }
+		}
+	}
+	if = {
+		limit = { 608 = { is_controlled_by_ROOT_or_subject = yes } } #Beijing
+		608 = {
+			add_resource = { type = steel amount = 4 }
+		}
+	}
+	if = {
+		limit = { 1048 = { is_controlled_by_ROOT_or_subject = yes } } #Wuhan
+		1048 = {
+			add_resource = { type = steel amount = 4 }
+		}
+	}
+}
+CHN_add_resource_northerner_effects = {
+	if = {
+		limit = { 716 = { is_controlled_by_ROOT_or_subject = yes } } #Shenyang
+		716 = {
+			add_resource = { type = steel amount = 4 }
+		}
+	}
+	if = {
+		limit = { 1072 = { is_controlled_by_ROOT_or_subject = yes } } #Taiyuan
+		1072 = {
+			add_resource = { type = tungsten amount = 4 }
+		}
+	}
+	if = {
+		limit = { 613 = { is_controlled_by_ROOT_or_subject = yes } } #Nanjing
+		613 = {
+			add_resource = { type = steel amount = 4 }
+		}
+	}
+	if = {
+		limit = { 608 = { is_controlled_by_ROOT_or_subject = yes } } #Beijing
+		608 = {
+			add_resource = { type = steel amount = 4 }
+		}
+	}
+	if = {
+		limit = { 1048 = { is_controlled_by_ROOT_or_subject = yes } } #Wuhan
+		1048 = {
+			add_resource = { type = steel amount = 4 }
+		}
+	}
+}
+CHN_build_military_industry_effect = {
+	if = {
+		limit = { has_dlc_aat = no }
+		custom_effect_tooltip = available_designer
+		show_ideas_tooltip = norinco
+		if = {
+			limit = { NOT = { has_completed_focus = CHI_create_supply_corps } }
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = faw_motors
+		}
+	}
+	else = {
+		if = {
+			limit = { mio:CHN_artillery_industry_organisation = { is_mio_available = no } }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = CHN_artillery_industry_organisation
+		}
+		mio:CHN_artillery_industry_organisation = {
+			set_mio_flag = CHN_mio_unlocked
+			add_mio_size = 3
+		}
+		if = {
+			limit = { mio:CHN_transportation_industry_organisation = { is_mio_available = no } }
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = CHN_transportation_industry_organisation
+		}
+		mio:CHN_transportation_industry_organisation = {
+			set_mio_flag = CHN_mio_unlocked
+			add_mio_size = 1
+		}
+	}
+	custom_effect_tooltip = tooltip_white_line
+	custom_effect_tooltip = CHI_arsenals_tt
+	every_owned_state = {
+		limit = {
+			OR = {
+				state = 592 #Guangzhou
+				state = 613 #Nanjing
+				state = 1048 #Wuhan
+				state = 1059 #Kaifeng
+			}
+			is_controlled_by_ROOT_or_subject = yes
+			free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+		}
+		display_individual_scopes = yes
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+CHN_add_civilian_industry_effect = {
+	if = {
+		limit = { 592 = { is_controlled_by_ROOT_or_subject = yes } } #Canton
+		592 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 613 = { is_controlled_by_ROOT_or_subject = yes } } #Nanjing
+		613 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 1048 = { is_controlled_by_ROOT_or_subject = yes } } #Wuhan
+		1048 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 608 = { is_controlled_by_ROOT_or_subject = yes } } #Beijing
+		608 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 602 = { is_controlled_by_ROOT_or_subject = yes } } #Changsha
+		602 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 650 = { is_controlled_by_ROOT_or_subject = yes } } #Chongqing
+		650 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 594 = { is_controlled_by_ROOT_or_subject = yes } } #Nanning
+		594 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
 }
 
+CHN_add_civilian_industry_northerner_effect = {
+	if = {
+		limit = { 1062 = { is_controlled_by_ROOT_or_subject = yes } } #Baoding
+		1062 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 613 = { is_controlled_by_ROOT_or_subject = yes } } #Nanjing
+		613 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 1048 = { is_controlled_by_ROOT_or_subject = yes } } #Wuhan
+		1048 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 608 = { is_controlled_by_ROOT_or_subject = yes } } #Beijing
+		608 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 716 = { is_controlled_by_ROOT_or_subject = yes } } #Shenyang
+		716 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 597 = { is_controlled_by_ROOT_or_subject = yes } } #Jinan
+		597 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	if = {
+		limit = { 1072 = { is_controlled_by_ROOT_or_subject = yes } } #Taiyuan
+		1072 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+#Wuhan Effects
 china_merges_wuhan = {
 	set_victory_points = { province = 4619 value = 40 } #Wuchang/Wuhan
 	set_victory_points = { province = 12467 value = 0 } #Hanyang
@@ -2988,6 +3866,322 @@ CHN_setup_major_dockyards_decision_effect = {
 		}
 	}
 }
+## Inheriting Beiyang Fleet Effect
+CHN_inherit_beiyang_fleet_effect = {
+	if = {
+		limit = { NOT = { has_tech = early_ship_hull_light } }
+		set_technology = { early_ship_hull_light = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = early_ship_hull_cruiser } }
+		set_technology = { early_ship_hull_cruiser = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = coastal_defense_ships } }
+		set_technology = { coastal_defense_ships = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = coastal_defense_ships } }
+		set_technology = { coastal_defense_ships = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = basic_naval_mines } }
+		set_technology = { basic_naval_mines = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = basic_battery } }
+		set_technology = { basic_battery = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = basic_torpedo } }
+		set_technology = { basic_torpedo = 1 }
+	}
+	QIE = {
+		custom_effect_tooltip = characters_will_be_recruited
+		character_list_tooltip = {
+			limit = {
+				OR = {
+					is_character = QIE_sa_zhenbing
+					is_character = QIE_du_xigui
+					is_character = QIE_wu_yulin
+					is_character = QIE_yang_shuzhuang
+				}
+			}
+		}
+		hidden_effect = {
+			QIE_sa_zhenbing = { CHN_recruit_character_effect = yes }
+			QIE_du_xigui = { CHN_recruit_character_effect = yes }
+			QIE_wu_yulin = { CHN_recruit_character_effect = yes }
+			QIE_yang_shuzhuang = { CHN_recruit_character_effect = yes }
+		}
+	}
+	if = {
+		limit = { china_is_aligned_with_kmt = yes }
+		CHI = {
+			custom_effect_tooltip = characters_will_be_recruited
+			character_list_tooltip = {
+				limit = {
+					OR = {
+						is_character = CHI_chen_shaokuan
+						is_character = CHI_chen_jiliang
+					}
+				}
+			}
+			hidden_effect = {
+				CHI_chen_jiliang = { CHN_recruit_character_effect = yes }
+				CHI_chen_shaokuan = { CHN_recruit_character_effect = yes }
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = GXC } }
+			GXC = {
+				custom_effect_tooltip = characters_will_be_recruited
+				character_list_tooltip = {
+					limit = { is_character = GXC_chen_ce }
+				}
+				hidden_effect = {
+					GXC_chen_ce = { CHN_recruit_character_effect = yes }
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { country_exists = YUN } }
+			YUN = {
+				custom_effect_tooltip = characters_will_be_recruited
+				character_list_tooltip = {
+					limit = { is_character = YUN_ouyang_ge }
+				}
+				hidden_effect = {
+					YUN_ouyang_ge = { CHN_recruit_character_effect = yes }
+				}
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { country_exists = FNG } }
+		FNG = {
+			custom_effect_tooltip = characters_will_be_recruited
+			character_list_tooltip = {
+				limit = { is_character = FNG_shen_honglie }
+			}
+			hidden_effect = {
+				FNG_shen_honglie = { CHN_recruit_character_effect = yes }
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { country_exists = GXC } }
+		GXC = {
+			custom_effect_tooltip = characters_will_be_recruited
+			character_list_tooltip = {
+				limit = {
+					is_character = GXC_zhou_tianlu
+					is_character = GXC_li_qingwen
+					is_character = GXC_tang_tingguang
+				}
+			}
+			hidden_effect = {
+				GXC_zhou_tianlu = { CHN_recruit_character_effect = yes }
+				GXC_li_qingwen = { CHN_recruit_character_effect = yes }
+				GXC_tang_tingguang = { CHN_recruit_character_effect = yes }
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { country_exists = LEP } }
+		LEP = {
+			custom_effect_tooltip = characters_will_be_recruited
+			character_list_tooltip = {
+				limit = {
+					is_character = LEP_wu_zhennan
+					is_character = LEP_li_shijia
+					is_character = LEP_wang_shouting
+				}
+			}
+			hidden_effect = {
+				LEP_wu_zhennan = { CHN_recruit_character_effect = yes }
+				LEP_li_shijia = { CHN_recruit_character_effect = yes }
+				LEP_wang_shouting = { CHN_recruit_character_effect = yes }
+			}
+		}
+	}
+	else_if = {
+		limit = { QIE = { has_character = LEP_wu_zhennan } }
+		QIE = {
+			custom_effect_tooltip = characters_will_be_recruited
+			character_list_tooltip = {
+				limit = { is_character = LEP_wu_zhennan }
+			}
+			hidden_effect = {
+				LEP_wu_zhennan = { CHN_recruit_character_effect = yes }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ANQ = { has_character = LEP_wu_zhennan }
+			NOT = { country_exists = ANQ }
+		}
+		ANQ = {
+			custom_effect_tooltip = characters_will_be_recruited
+			character_list_tooltip = {
+				limit = {
+					is_character = LEP_wu_zhennan
+					is_character = LEP_li_shijia
+					is_character = LEP_wang_shouting
+				}
+			}
+			hidden_effect = {
+				LEP_wu_zhennan = { CHN_recruit_character_effect = yes }
+				LEP_li_shijia = { CHN_recruit_character_effect = yes }
+				LEP_wang_shouting = { CHN_recruit_character_effect = yes }
+			}
+		}
+	}
+}
+
+################################
+### KMT Generic Tree Effects ###
+################################
+increase_RKMT_popular_support = {
+	if = {
+		limit = {
+			has_idea = KR_RKMT_popular_support_4
+		}
+		swap_ideas = {
+			remove_idea = KR_RKMT_popular_support_4
+			add_idea = KR_RKMT_popular_support_5
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KR_RKMT_popular_support_3
+		}
+		swap_ideas = {
+			remove_idea = KR_RKMT_popular_support_3
+			add_idea = KR_RKMT_popular_support_4
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KR_RKMT_popular_support_2
+		}
+		swap_ideas = {
+			remove_idea = KR_RKMT_popular_support_2
+			add_idea = KR_RKMT_popular_support_3
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KR_RKMT_popular_support_1
+		}
+		swap_ideas = {
+			remove_idea = KR_RKMT_popular_support_1
+			add_idea = KR_RKMT_popular_support_2
+		}
+	}
+}
+RKMT_economic_recovery = {
+	if = {
+		limit = { has_idea = GXC_economic_instability }
+		swap_ideas = {
+			remove_idea = GXC_economic_instability
+			add_idea = GXC_economic_instability2
+		}
+	}
+	else_if = {
+		limit = { has_idea = GXC_economic_instability2 }
+		swap_ideas = {
+			remove_idea = 	GXC_economic_instability2
+			add_idea = GXC_economic_instability3
+		}
+	}
+	else_if = {
+		limit = { has_idea = GXC_economic_instability3 }
+		swap_ideas = {
+			remove_idea = 	GXC_economic_instability3
+			add_idea = GXC_economic_instability4
+		}
+	}
+	else_if = {
+		limit = { has_idea = GXC_economic_instability4 }
+		swap_ideas = {
+			remove_idea = 	GXC_economic_instability4
+			add_idea = GXC_economic_instability5
+		}
+	}
+	else_if = {
+		limit = { has_idea = GXC_economic_instability5 }
+		remove_ideas = GXC_economic_instability5
+	}
+}
+
+RKMT_literacy_recovery = {
+	if = {
+		limit = { has_idea = GXC_low_literacy }
+		swap_ideas = {
+			remove_idea = GXC_low_literacy
+			add_idea = GXC_low_literacy2
+		}
+	}
+	else_if = {
+		limit = { has_idea = GXC_low_literacy2 }
+		swap_ideas = {
+			remove_idea = GXC_low_literacy2
+			add_idea = GXC_low_literacy3
+		}
+	}
+	else_if = {
+		limit = { has_idea = GXC_low_literacy3 }
+		swap_ideas = {
+			remove_idea = GXC_low_literacy3
+			add_idea = GXC_low_literacy4
+		}
+	}
+}
+RKMT_chinese_revolution = {
+	if = {
+		limit = { has_idea = GXC_rkmt_revolution }
+		swap_ideas = {
+			remove_idea = GXC_rkmt_revolution
+			add_idea = GXC_rkmt_revolution2
+		}
+	}
+	if = {
+		limit = { has_idea = GXC_rkmt_revolution2 }
+		swap_ideas = {
+			remove_idea = GXC_rkmt_revolution2
+			add_idea = GXC_rkmt_revolution3
+		}
+	}
+}
+RKMT_military_recovery = {
+	if = {
+		limit = { has_idea = GXC_kmt_demobilisation }
+		swap_ideas = {
+			remove_idea = GXC_kmt_demobilisation
+			add_idea = GXC_kmt_demobilisation2
+		}
+	}
+	else_if = {
+		limit = { has_idea = GXC_kmt_demobilisation2 }
+		swap_ideas = {
+			remove_idea = GXC_kmt_demobilisation2
+			add_idea = GXC_kmt_demobilisation3
+		}
+	}
+	else_if = {
+		limit = { has_idea = GXC_kmt_demobilisation3 }
+		swap_ideas = {
+			remove_idea = GXC_kmt_demobilisation3
+			add_idea = 	GXC_kmt_demobilisation4
+		}
+	}
+	else_if = {
+		limit = { has_idea = GXC_kmt_demobilisation4 }
+		remove_ideas = GXC_kmt_demobilisation4
+	}
+}
 
 china_set_character_alignment_northern_zhili = {
 	event_target:system = { china_alignment_northern_zhili = { set_variable = { PREV.PREV.china_alignment = THIS } } }
@@ -3059,48 +4253,6 @@ CHN_build_faction_alignment_array = {
 	}
 }
 
-china_create_united_front_faction = {
-	save_global_event_target_as = china_united_front_leader
-	create_faction_from_template = faction_template_chinese_united_front
-	scope:faction = { set_variable = { non_ideological_faction = 1 } }
-	set_country_flag = was_in_united_front
-	set_rule = {
-		can_not_declare_war = yes
-		desc = china_cannot_declare_war_while_in_united_front
-	}
-	every_other_country = {
-		limit = {
-			is_chinese_tag = yes
-			is_in_faction = no
-		}
-		set_country_flag = china_united_front_can_join_factions
-		set_rule = { can_join_factions = yes }
-	}
-	if = {
-		limit = {
-			has_dlc_lar = yes
-			NOT = { has_global_flag = CHN_zheng_pingru_recruited_flag }
-			OR = {
-				has_war_with = JAP
-				has_variable = declared_war_on_JAP
-			}
-		}
-		set_global_flag = CHN_zheng_pingru_recruited_flag
-		create_operative_leader = {
-			name = CHN_zheng_pingru
-			GFX = GFX_portrait_CHN_zheng_pingru_operative
-			traits = {
-				operative_seducer
-				operative_well_groomed
-				operative_political_connections
-			}
-			bypass_recruitment = no
-			available_to_spy_master = yes
-			female = yes
-			nationalities = { JAP LEC QIE FNG CHI LEP ANQ HNN GXC YUN SZC SHX SHD XSM SIK KUM }
-		}
-	}
-}
 ### China Alignment Scripted GUI Calculation Effects ###
 CHN_calculate_china_alignment_gui_effect = {
 	CHN_clear_china_alignment_gui = yes
@@ -3206,6 +4358,67 @@ CHN_calculate_china_alignment_gui_effect = {
 	}
 }
 
+CHN_recruit_character_effect = {
+	if = {
+		limit = {
+			NOT = {
+				THIS = { has_character_flag = is_dead }
+				ROOT = { has_character = PREV }
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = { THIS = { is_army_leader = yes } }
+				demote_to_general = yes
+				remove_trait = { trait = recently_promoted }
+			}
+		}
+		set_nationality = ROOT
+	}
+}
+
+china_create_united_front_faction = {
+	save_global_event_target_as = china_united_front_leader
+	create_faction_from_template = faction_template_chinese_united_front
+	scope:faction = { set_variable = { non_ideological_faction = 1 } }
+	set_country_flag = was_in_united_front
+	set_rule = {
+		can_not_declare_war = yes
+		desc = china_cannot_declare_war_while_in_united_front
+	}
+	every_other_country = {
+		limit = {
+			is_chinese_tag = yes
+			is_in_faction = no
+		}
+		set_country_flag = china_united_front_can_join_factions
+		set_rule = { can_join_factions = yes }
+	}
+	if = {
+		limit = {
+			has_dlc_lar = yes
+			NOT = { has_global_flag = CHN_zheng_pingru_recruited_flag }
+			OR = {
+				has_war_with = JAP
+				has_variable = declared_war_on_JAP
+			}
+		}
+		set_global_flag = CHN_zheng_pingru_recruited_flag
+		create_operative_leader = {
+			name = CHN_zheng_pingru
+			GFX = GFX_portrait_CHN_zheng_pingru_operative
+			traits = {
+				operative_seducer
+				operative_well_groomed
+				operative_political_connections
+			}
+			bypass_recruitment = no
+			available_to_spy_master = yes
+			female = yes
+			nationalities = { JAP LEC QIE FNG CHI LEP ANQ HNN GXC YUN SZC SHX SHD XSM SIK KUM }
+		}
+	}
+}
 CHN_clear_china_alignment_gui = {
 	### Clear all alignment arrays ###
 	for_each_scope_loop = {
