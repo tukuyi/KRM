@@ -1,0 +1,179 @@
+scripted_gui = {
+
+	### China Alignment Button ###
+	YCP_party_issue_button_gui = {
+		context_type = player_context
+		window_name = "YCP_party_issue_gui_button_window"
+		parent_window_token = politics_tab
+		dirty = YCP_party_issue_gui_update
+
+		visible = {
+			is_ai = no
+		}
+
+		effects = {
+			YCP_party_issue_gui_button_click = {
+				if = {
+					limit = { has_country_flag = YCP_party_issue_gui_visibility }
+					clr_country_flag = YCP_party_issue_gui_visibility
+					CHN_clear_YCP_party_issue_gui = yes
+				}
+				else = {
+					set_country_flag = YCP_party_issue_gui_visibility
+					CHN_calculate_YCP_party_issue_gui_effect = yes
+				}
+				CHN_update_YCP_party_issue_gui = yes
+			}
+		}
+	}
+
+	### China Alignment Window ###
+	YCP_party_issue_gui = {
+		context_type = player_context
+		window_name = "YCP_party_issue_gui_window"
+		dirty = YCP_party_issue_gui_update
+
+		ai_enabled = { always = no }
+
+		visible = {
+			has_country_flag = YCP_party_issue_gui_visibility
+		}
+
+		effects = {
+			YCP_party_issue_button_close_click = {
+				clr_country_flag = YCP_party_issue_gui_visibility
+				CHN_update_YCP_party_issue_gui = yes
+			}
+			YCP_party_issue_chairman_button_click = {
+				if = {
+					limit = {
+						has_country_flag = YCP_party_issue_select_gui_visibility
+					}
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					CHN_update_YCP_party_issue_gui = yes
+				}
+				else = {
+					set_country_flag = YCP_party_issue_select_gui_visibility
+					CHN_update_YCP_party_issue_gui = yes
+				}
+			}
+		}
+
+		dynamic_lists = {
+		}
+
+		properties = {
+		}
+	}
+	
+	YCP_party_issue_select_gui = {
+		context_type = player_context
+		window_name = "YCP_party_issue_select_gui_window"
+		dirty = YCP_party_issue_gui_update
+		parent_window_name = YCP_party_issue_gui_window
+
+		ai_enabled = { always = no }
+
+		visible = {
+			# has_country_flag = YCP_party_issue_gui_visibility
+			has_country_flag = YCP_party_issue_select_gui_visibility
+		}
+
+		effects = {
+			YCP_party_issue_select_button_close_click = {
+				clr_country_flag = YCP_party_issue_select_gui_visibility
+				CHN_update_YCP_party_issue_gui = yes
+			}
+		}
+
+		properties = {
+		}
+	}
+
+	### Trouble in Liangguang GUI ###
+	china_liangguang_gui = {
+		context_type = decision_category
+		window_name = "china_liangguang_container"
+
+		ai_enabled = {
+			always = no
+		}
+
+		properties = {
+			china_liangguang_state_nanning = {
+				frame = 594.china_liangguang_state_control
+			}
+			china_liangguang_state_guangzhou = {
+				frame = 592.china_liangguang_state_control
+			}
+			china_liangguang_state_baise = {
+				frame = 1054.china_liangguang_state_control
+			}
+			china_liangguang_state_guilin = {
+				frame = 599.china_liangguang_state_control
+			}
+			china_liangguang_state_shaoguan = {
+				frame = 800.china_liangguang_state_control
+			}
+			china_liangguang_state_haikou = {
+				frame = 591.china_liangguang_state_control
+			}
+		}
+	}
+
+	### UPC Elections GUI ###
+	UPC_election_gui = {
+		context_type = decision_category
+		window_name = "UPC_election_gui_container"
+
+		dynamic_lists = {
+			UPC_election_main_grid = {
+				array = global.UPC_election_party_array
+				index = UPC_election_party_index
+				entry_container = UPC_party_entry
+				change_scope = no
+			}
+		}
+
+		triggers = {
+			UPC_party_ban_status_visible = {
+				meta_trigger = {
+					text = { has_country_flag = UPC_election_ban_[INDEX]_flag }
+					INDEX = "[UPC_GetPartyTag]"
+				}
+			}
+			UPC_party_ban_bg_visible = {
+				meta_trigger = {
+					text = { has_country_flag = UPC_election_ban_[INDEX]_flag }
+					INDEX = "[UPC_GetPartyTag]"
+				}
+			}
+			UPC_party_coalition_bg_visible = {
+				meta_trigger = {
+					text = { has_country_flag = UPC_[INDEX]_in_governing_coalition_flag }
+					INDEX = "[UPC_GetPartyTag]"
+				}
+			}
+			UPC_party_campaigning_as_bg_visible = {
+				UPC = {
+					OR = {
+						AND = {
+							check_variable = { UPC_election_party_index = 3 }
+							has_country_flag = UPC_is_campaigning_as_CDL
+						}
+						AND = {
+							check_variable = { UPC_election_party_index = 4 }
+							NOT = { has_country_flag = UPC_is_campaigning_as_CDL }
+						}
+					}
+				}
+			}
+		}
+
+		properties = {
+			UPC_party_leader = {
+				image = "[UPC_GetPartyLeaderPortrait]"
+			}
+		}
+	}
+}

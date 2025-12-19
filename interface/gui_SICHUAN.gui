@@ -189,4 +189,259 @@ guiTypes = {
 		}
 			
 	}
+
+	
+
+	### China Aligment GUI ###
+	containerWindowType = {
+		name = "YCP_party_issue_gui_button_window"
+		position = { x = 425 y = 400 }
+		size = { width = 66 height = 72 }
+
+
+		buttonType = {
+			name = "YCP_party_issue_gui_button"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_ideology_market_liberal_scheme_statist_subtype"
+			clicksound = click_ok
+			oversound = ui_menu_over
+			pdx_tooltip = YCP_party_issue_gui_button_tooltip
+		}
+	}
+
+	containerWindowType = {
+		name = "YCP_party_issue_gui_window"
+		position = { x = -700 y = -450 }
+		size = { width = 1460 height = 880 }
+
+		hide_position = { x = -700 y = -1000 }
+
+		moveable = yes
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		click_to_front = yes
+
+		orientation = CENTER
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+
+		containerWindowType = {
+			name = "YCP_party_issue_title_container"
+			position = { x = 0 y = 0 }
+			size = { width = 1460 height = 40 }
+
+			background = {
+				name = "Background"
+				spriteType = "GFX_tiled_header_1"
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "YCP_party_issue_title"
+				position = { x = 415 y = 0 }
+				borderSize = { x = 0 y = 0 }
+				text = "YCP_party_issue_title_text"
+				font = "hoi_36header"
+				format = center
+				maxWidth = 500
+			}
+
+			buttonType = {
+				name = "YCP_party_issue_button_close"
+				position = { x = -36 y = 4 }
+				spriteType = "GFX_closebutton"
+				clicksound = click_close
+				pdx_tooltip = "CLOSE"
+				shortcut = "ESCAPE"
+				orientation = UPPER_RIGHT
+			}
+		}
+
+		containerWindowType = {
+			name = "YCP_party_issue_list_container"
+			position = { x = 0 y = 36 }
+			size = { width = 100% height = 843 }
+			Orientation = UPPER_LEFT
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_research_bg"
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "YCP_party_issue_chairman_button"
+				position = { x = 620 y = 20 }
+				size = { width = 944 height = 540 }
+				spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+				
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "YCP_party_issue_select_gui_window"
+		position = { x = 270 y = -440 }
+		size = { width = 460 height = 880 }
+
+		hide_position = { x = 270 y = -1000 }
+
+		moveable = no
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		click_to_front = yes
+
+		orientation = CENTER
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+
+		buttonType = {
+			name = "YCP_party_issue_select_button_close"
+			position = { x = -36 y = 4 }
+			spriteType = "GFX_closebutton"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+			shortcut = "ESCAPE"
+			orientation = UPPER_RIGHT
+		}
+	}
+
+	containerWindowType = {
+		name = "YCP_party_issue_leaders_entry"
+		#position = { x = 0 y = 0 }
+		size = { width = 478 height = @YCP_party_issue_window_height }
+		orientation = UPPER_LEFT
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_bg"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "YCP_party_issue_leaders_flag"
+			quadTextureSprite = "GFX_flag_small2"
+			#position = { x = 5 y = 4 } original position
+			position = { x = 18 y = 15 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "YCP_party_issue_leaders_flag_frame"
+			spriteType = "GFX_small_flag_frame_thin2_gold"
+			#spriteType = "GFX_diplo_countrylist_flag_frame"
+			position = { x = 13 y = 11 }
+		}
+
+		instantTextBoxType = {
+			name = "YCP_party_issue_faction_title"
+			position = { x = 65 y = 20 }
+			text = "[ChinaGetAlignmentTitleName]"
+			font = "hoi_18mbs"
+			format = left
+			maxWidth = 500
+		}
+
+		instantTextBoxType = {
+			name = "YCP_party_issue_faction_desc"
+			position = { x = 20 y = 45 }
+			text = "[ChinaGetAlignmentDesc]"
+			font = "hoi_16mbs"
+			format = left
+			maxWidth = 340
+		}
+
+		containerWindowType = {
+			name = "YCP_party_issue_members_container"
+			position = { x = 12 y = 75 }
+			size = { width = 344 height = 60 }
+			margin = { top = 4 bottom = 4 left = 4 right = 4 }
+			smooth_scrolling = yes
+
+			background = {
+				name = "Background"
+				spriteType ="GFX_tiled_window_transparent"
+				alwaystransparent = yes
+			}
+
+			horizontalScrollbar = "bottom_horizontal_slider"
+
+			gridboxtype = {
+				name = "YCP_party_issue_members"
+				position = { x = 0 y = 0 }
+				size = { width = 100%% height = 100%% }
+				#slotsize = { width = 52 height = 38 } original size
+				slotsize = { width = 48 height = 38 }
+				max_slots_vertical = 1
+				add_horizontal = yes
+				format = "UPPER_LEFT"
+			}
+		}
+
+		containerWindowType = {
+			name = "YCP_party_issue_faction_info_container"
+			position = { x = -125 y = 15 }
+			size = { width = 110 height = 110 }
+			orientation = upper_right
+
+			background = {
+				name = "Background"
+				#spriteType = "GFX_tiled_bg"
+				spriteType ="GFX_tiled_window_transparent"
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "YCP_party_issue_faction_info_title"
+				position = { x = 32 y = -2 }
+				text = "YCP_party_issue_faction_info_tenets"
+				font = "hoi_18mbs"
+				format = left
+				maxWidth = 500
+			}
+
+			iconType = {
+				name = "YCP_party_issue_faction_info"
+				position = { x = 0 y = 0 }
+				scale = 1
+				orientation = "center"
+				centerposition = yes
+				pdx_tooltip = china_faction_tenets_title
+				pdx_tooltip_delayed = china_faction_tenets_desc
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "YCP_party_issue_members_entry"
+		size = { width = 48 height = 60 }
+		orientation = UPPER_LEFT
+
+		iconType = {
+			name = "YCP_party_issue_flag"
+			quadTextureSprite = "GFX_flag_small2"
+			#position = { x = 5 y = 4 } original position
+			position = { x = 5 y = 4 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "YCP_party_issue_flag_frame"
+			spriteType = "GFX_diplo_countrylist_flag_frame"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = YCP_party_issue_faction_member_name
+		}
+	}
+
+
 }
