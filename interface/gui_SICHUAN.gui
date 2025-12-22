@@ -280,6 +280,8 @@ guiTypes = {
 				spriteType = "GFX_portrait_SZC_lai_yongqing_large"
 				
 			}
+
+			
 		}
 	}
 	
@@ -312,12 +314,41 @@ guiTypes = {
 			shortcut = "ESCAPE"
 			orientation = UPPER_RIGHT
 		}
+
+		containerWindowType = {
+			name = "YCP_party_issue_select_grid_container"
+			position = { x = 12 y = 40 }
+			size = { width = 445 height = 830 }
+			margin = { top = 0 bottom = 8 }
+			scroll_wheel_factor = 10
+			smooth_scrolling = yes
+			Orientation = UPPER_LEFT
+
+			verticalScrollbar = "right_vertical_slider"
+
+			background = {
+				name = "Background"
+				spriteType ="GFX_tiled_window_transparent"
+				alwaystransparent = yes
+			}
+
+			gridboxtype = {
+				name = "YCP_party_issue_select_grid"
+				position = { x = 0 y = 0 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 430 height = 270 }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+		}
+
 	}
+	
 
 	containerWindowType = {
-		name = "YCP_party_issue_leaders_entry"
+		name = "YCP_party_issue_select_entry"
 		#position = { x = 0 y = 0 }
-		size = { width = 478 height = @YCP_party_issue_window_height }
+		size = { width = 420 height = 265 }
 		orientation = UPPER_LEFT
 
 		background = {
@@ -325,121 +356,84 @@ guiTypes = {
 			quadTextureSprite = "GFX_tiled_bg"
 			alwaystransparent = yes
 		}
+		
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_research_bg"
+			alwaystransparent = yes
+		}
 
 		iconType = {
-			name = "YCP_party_issue_leaders_flag"
-			quadTextureSprite = "GFX_flag_small2"
+			name = "YCP_party_issue_select_portrait"
+			quadTextureSprite = "GFX_portrait_unknown"
 			#position = { x = 5 y = 4 } original position
-			position = { x = 18 y = 15 }
+			position = { x = 25 y = 28 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
 
 		iconType = {
-			name = "YCP_party_issue_leaders_flag_frame"
+			name = "YCP_party_issue_select_frame"
 			spriteType = "GFX_small_flag_frame_thin2_gold"
 			#spriteType = "GFX_diplo_countrylist_flag_frame"
 			position = { x = 13 y = 11 }
 		}
 
-		instantTextBoxType = {
-			name = "YCP_party_issue_faction_title"
-			position = { x = 65 y = 20 }
-			text = "[ChinaGetAlignmentTitleName]"
-			font = "hoi_18mbs"
-			format = left
-			maxWidth = 500
+		iconType = {
+			name = "YCP_party_issue_select_name"
+			position = { x = 162 y = 20 }
+			pdx_tooltip = YCP_party_issue_select_portrait_text
 		}
 
-		instantTextBoxType = {
-			name = "YCP_party_issue_faction_desc"
-			position = { x = 20 y = 45 }
-			text = "[ChinaGetAlignmentDesc]"
-			font = "hoi_16mbs"
-			format = left
-			maxWidth = 340
-		}
-
+		# instantTextBoxType = {
+		# 	name = "YCP_party_issue_select_name"
+		# 	position = { x = 195 y = 50 }
+		# 	# text = "111"
+		# 	text = "[?YCP_party_issue_select.GetTokenLocalizedKey]"
+		# 	font = "hoi_18mbs"
+		# 	format = left
+		# 	maxWidth = 100
+		# 	pdx_tooltip_delayed = YCP_party_issue_select_portrait_text
+		# }
+		
 		containerWindowType = {
-			name = "YCP_party_issue_members_container"
-			position = { x = 12 y = 75 }
-			size = { width = 344 height = 60 }
-			margin = { top = 4 bottom = 4 left = 4 right = 4 }
-			smooth_scrolling = yes
+			name = "YCP_party_issue_select_button_window"
+			position = { x = 205 y = 190 }
+			size = { width = 180 height = 45 }
 
 			background = {
 				name = "Background"
-				spriteType ="GFX_tiled_window_transparent"
+				quadTextureSprite = "GFX_tiled_window_small"
 				alwaystransparent = yes
 			}
 
-			horizontalScrollbar = "bottom_horizontal_slider"
-
-			gridboxtype = {
-				name = "YCP_party_issue_members"
+			buttonType = {
+				name = "YCP_party_issue_select_button"
 				position = { x = 0 y = 0 }
-				size = { width = 100%% height = 100%% }
-				#slotsize = { width = 52 height = 38 } original size
-				slotsize = { width = 48 height = 38 }
-				max_slots_vertical = 1
-				add_horizontal = yes
-				format = "UPPER_LEFT"
+				spriteType = "GFX_china_alignment_gui_button"
+				clicksound = click_ok
+				oversound = ui_menu_over
+				pdx_tooltip = china_alignment_gui_button_tooltip
 			}
-		}
 
-		containerWindowType = {
-			name = "YCP_party_issue_faction_info_container"
-			position = { x = -125 y = 15 }
-			size = { width = 110 height = 110 }
-			orientation = upper_right
-
-			background = {
-				name = "Background"
-				#spriteType = "GFX_tiled_bg"
-				spriteType ="GFX_tiled_window_transparent"
+			iconType = {
+				name = "YCP_party_issue_select_icon"
+				position = { x = 5 y = 5 }
+				spriteType = "GFX_china_alignment_icon"
+				scale = 0.8
 				alwaystransparent = yes
 			}
 
 			instantTextBoxType = {
-				name = "YCP_party_issue_faction_info_title"
-				position = { x = 32 y = -2 }
-				text = "YCP_party_issue_faction_info_tenets"
+				name = "YCP_party_issue_select_title"
+				position = { x = 45 y = 12 }
+				text = china_alignment_gui_button_text
 				font = "hoi_18mbs"
 				format = left
 				maxWidth = 500
+				alwaystransparent = yes
 			}
-
-			iconType = {
-				name = "YCP_party_issue_faction_info"
-				position = { x = 0 y = 0 }
-				scale = 1
-				orientation = "center"
-				centerposition = yes
-				pdx_tooltip = china_faction_tenets_title
-				pdx_tooltip_delayed = china_faction_tenets_desc
-			}
-		}
-	}
-
-	containerWindowType = {
-		name = "YCP_party_issue_members_entry"
-		size = { width = 48 height = 60 }
-		orientation = UPPER_LEFT
-
-		iconType = {
-			name = "YCP_party_issue_flag"
-			quadTextureSprite = "GFX_flag_small2"
-			#position = { x = 5 y = 4 } original position
-			position = { x = 5 y = 4 }
-			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
-		}
-
-		iconType = {
-			name = "YCP_party_issue_flag_frame"
-			spriteType = "GFX_diplo_countrylist_flag_frame"
-			position = { x = 0 y = 0 }
-			pdx_tooltip = YCP_party_issue_faction_member_name
 		}
 	}
 

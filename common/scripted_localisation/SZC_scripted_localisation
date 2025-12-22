@@ -73,3 +73,11 @@ defined_text = {
 		localization_key = SZC_bop_zeng_supremacy
 	}
 }
+
+defined_text = {
+	name = YCPGetPartyIssueSelectDesc
+	text = {
+		trigger = { check_variable = { YCP_party_issue_select = token:SZC_lai_yongqing } }
+		localization_key = SZC_lai_yongqing_desc
+	}
+}

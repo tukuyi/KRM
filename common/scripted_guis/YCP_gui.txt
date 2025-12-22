@@ -72,13 +72,20 @@ scripted_gui = {
 		dirty = YCP_party_issue_gui_update
 		parent_window_name = YCP_party_issue_gui_window
 
-		ai_enabled = { always = no }
-
 		visible = {
 			# has_country_flag = YCP_party_issue_gui_visibility
 			has_country_flag = YCP_party_issue_select_gui_visibility
 		}
 
+		dynamic_lists = {
+			YCP_party_issue_select_grid = {
+				array = YCP_party_issue_selects
+				entry_container = YCP_party_issue_select_entry
+				value = YCP_party_issue_select
+				index = select_i
+				change_scope = yes
+			}
+		}
 		effects = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
@@ -86,7 +93,15 @@ scripted_gui = {
 			}
 		}
 
+		
+
 		properties = {
+			YCP_party_issue_select_portrait = {
+				image = "GFX_portrait_[?YCP_party_issue_select.GetTokenKey]_large"
+			}
+			YCP_party_issue_select_name = {
+				image = "GFX_[?YCP_party_issue_select.GetTokenKey]_sign"
+			}
 		}
 	}
 
