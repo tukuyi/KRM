@@ -2985,6 +2985,10 @@ characters = {
 			traits = { KR_silent_workhorse }
 			desc = SZC_chen_qitian_advisor_desc
 			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_chen_qitian
+				}
 				token:SZC_chen_qitian = {
 					YCP_working_in_party = yes
 				}
@@ -3051,6 +3055,10 @@ characters = {
 			traits = { KR_silent_workhorse }
 			desc = SZC_li_huang_advisor_desc
 			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_li_huang
+				}
 				token:SZC_li_huang = {
 					YCP_working_in_party = no
 				}
@@ -3082,6 +3090,10 @@ characters = {
 			traits = { KR_silent_workhorse }
 			desc = SZC_zuo_shunsheng_advisor_desc
 			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_zuo_shunsheng
+				}
 				token:SZC_zuo_shunsheng = {
 					YCP_working_in_party = no
 				}
