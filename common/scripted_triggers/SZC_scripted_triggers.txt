@@ -1,0 +1,58 @@
+HNN_no_cosmetic_flag_check = {
+	NOT = {
+		has_cosmetic_tag = HNN_SCPC
+		has_cosmetic_tag = united_china
+	}
+}
+uses_governorate_autonomy_state = {
+	overlord = { is_chinese_tag = yes }
+	is_chinese_tag = yes
+}
+YCP_working_in_party = {
+	custom_override_tooltip = {
+		tooltip = YCP_working_in_party_tooltip
+		ROOT = {
+			OR = {
+				check_variable = {
+					YCP_party_issue_chairman = YCP_adv_chk
+				}
+				check_variable = {
+					YCP_party_issue_train = YCP_adv_chk
+				}
+				check_variable = {
+					YCP_party_issue_propaganda = YCP_adv_chk
+				}
+				check_variable = {
+					YCP_party_issue_interior = YCP_adv_chk
+				}
+				check_variable = {
+					YCP_party_issue_foreign = YCP_adv_chk
+				}
+				check_variable = {
+					YCP_party_issue_organization = YCP_adv_chk
+				}
+				check_variable = {
+					YCP_party_issue_youth = YCP_adv_chk
+				}
+				check_variable = {
+					YCP_party_issue_standing_1 = YCP_adv_chk
+				}
+				check_variable = {
+					YCP_party_issue_standing_2 = YCP_adv_chk
+				}
+				check_variable = {
+					YCP_party_issue_standing_3 = YCP_adv_chk
+				}
+				check_variable = {
+					YCP_party_issue_standing_4 = YCP_adv_chk
+				}
+				check_variable = {
+					YCP_party_issue_standing_5 = YCP_adv_chk
+				}
+				check_variable = {
+					YCP_party_issue_standing_6 = YCP_adv_chk
+				}
+			}
+		}
+	}
+}

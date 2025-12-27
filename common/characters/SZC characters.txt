@@ -3012,6 +3012,11 @@ characters = {
 			idea_token = SZC_chen_qitian_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_chen_qitian_advisor_desc
+			available = {
+				token:SZC_chen_qitian = {
+					YCP_working_in_party = yes
+				}
+			}
 		}
 		country_leader = {
 			desc = SZC_chen_qitian_desc
@@ -3038,6 +3043,15 @@ characters = {
 			idea_token = SZC_zeng_qi_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_zeng_qi_advisor_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_zeng_qi
+				}
+				SZC_zeng_qi = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 		country_leader = {
 			desc = SZC_zeng_qi_desc
@@ -3064,6 +3078,11 @@ characters = {
 			idea_token = SZC_li_huang_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_li_huang_advisor_desc
+			available = {
+				token:SZC_li_huang = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 		country_leader = {
 			desc = SZC_li_huang_desc
@@ -3090,6 +3109,11 @@ characters = {
 			idea_token = SZC_zuo_shunsheng_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_zuo_shunsheng_advisor_desc
+			available = {
+				token:SZC_zuo_shunsheng = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 
 		advisor = {
