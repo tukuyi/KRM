@@ -229,6 +229,18 @@ guiTypes = {
 			quadTextureSprite = "GFX_tiled_plain_bg"
 		}
 
+		
+
+		iconType = {
+			name = "YCP_party_issue_banner"
+			quadTextureSprite = "GFX_YCP_banner_gui"
+			position = { x = 0 y = 85 }
+			size = { width = 60 height = 880 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+
 		containerWindowType = {
 			name = "YCP_party_issue_title_container"
 			position = { x = 0 y = 0 }
@@ -242,7 +254,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "YCP_party_issue_title"
-				position = { x = 415 y = 0 }
+				position = { x = 450 y = 5 }
 				borderSize = { x = 0 y = 0 }
 				text = "YCP_party_issue_title_text"
 				font = "hoi_36header"
@@ -261,6 +273,8 @@ guiTypes = {
 			}
 		}
 
+		
+
 		containerWindowType = {
 			name = "YCP_party_issue_list_container"
 			position = { x = 0 y = 36 }
@@ -273,14 +287,48 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 
-			buttonType = {
-				name = "YCP_party_issue_chairman_button"
-				position = { x = 620 y = 20 }
-				size = { width = 944 height = 540 }
-				spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+			containerWindowType = {#chairman
 				
+				position = { x = 620 y = 38 }
+				buttonType = {
+					name = "YCP_party_issue_chairman_button"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					
+				}
+	
+				iconType = {
+					name = "YCP_party_issue_chairman_frame"
+					quadTextureSprite = "GFX_YCP_portrait_frame"
+					position = { x = -28 y = -30 }
+					Orientation = "UPPER_LEFT"
+					alwaystransparent = yes
+				}
+			
+				containerWindowType = {
+					name = "YCP_party_issue_select_button_window"
+					position = { x = -28 y = 240 }
+					size = { width = 215 height = 45 }
+		
+					background = {
+						name = "Background"
+						quadTextureSprite = "GFX_tiled_window_small"
+						alwaystransparent = yes
+					}
+		
+					instantTextBoxType = {
+						name = "YCP_party_issue_chairman_title"
+						position = { x = 78 y = 12 }
+						text = YCP_party_issue_chairman_title_text
+						font = "hoi_18mbs"
+						format = left
+						maxWidth = 500
+						alwaystransparent = yes
+					}
+				}
 			}
 
+			
 			
 		}
 	}
@@ -375,9 +423,8 @@ guiTypes = {
 
 		iconType = {
 			name = "YCP_party_issue_select_frame"
-			spriteType = "GFX_small_flag_frame_thin2_gold"
-			#spriteType = "GFX_diplo_countrylist_flag_frame"
-			position = { x = 13 y = 11 }
+			spriteType = "GFX_YCP_portrait_frame_2"
+			position = { x = 21 y = 22 }
 		}
 
 		iconType = {
@@ -414,7 +461,6 @@ guiTypes = {
 				spriteType = "GFX_china_alignment_gui_button"
 				clicksound = click_ok
 				oversound = ui_menu_over
-				pdx_tooltip = china_alignment_gui_button_tooltip
 			}
 
 			iconType = {
@@ -427,8 +473,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "YCP_party_issue_select_title"
-				position = { x = 45 y = 12 }
-				text = china_alignment_gui_button_text
+				position = { x = 55 y = 12 }
+				text = YCP_party_issue_select_title_text
 				font = "hoi_18mbs"
 				format = left
 				maxWidth = 500
