@@ -65,3 +65,11 @@ SZC_YCP_province_constitution_mod = {#省宪
 	state_resources_factor = 0.2
 	recruitable_population_factor = -0.2
 }
+
+#PARTY ISSUE#
+
+YCP_party_issue_dm = { #青年党党务
+	icon = GFX_idea_YCP_party_issue_idea
+	# enable = { always = yes }
+	custom_modifier_tooltip = YCP_party_issue_dm_tt
+}

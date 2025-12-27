@@ -241,3 +241,263 @@ defined_text = {
 		localization_key = YCP_party_issue_standing_6_desc_get
 	}
 }
+
+defined_text = {
+	name = YCPGetPartyIssueChairmanDM
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_chairman = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = YCP_party_issue_chairman_dm
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueInteriorDM
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_interior = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = YCP_party_issue_interior_dm
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueForeignDM
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_foreign = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = YCP_party_issue_foreign_dm
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssuePropagandaDM
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_propaganda = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = YCP_party_issue_propaganda_dm
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueTrainDM
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_train = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = YCP_party_issue_train_dm
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueOrganizationDM
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_organization = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = YCP_party_issue_organization_dm
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueYouthDM
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_youth = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = YCP_party_issue_youth_dm
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding1DM
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_1 = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = YCP_party_issue_standing_1_dm
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding2DM
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_2 = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = YCP_party_issue_standing_2_dm
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding3DM
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_3 = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = YCP_party_issue_standing_3_dm
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding4DM
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_4 = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = YCP_party_issue_standing_4_dm
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding5DM
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_5 = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = YCP_party_issue_standing_5_dm
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding6DM
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_6 = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = YCP_party_issue_standing_6_dm
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueChairmanDMIdea
+	text = {
+		localization_key = YCP_party_issue_chairman_dm_idea
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueInteriorDMIdea
+	text = {
+		localization_key = YCP_party_issue_interior_dm_idea
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueForeignDMIdea
+	text = {
+		localization_key = YCP_party_issue_foreign_dm_idea
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssuePropagandaDMIdea
+	text = {
+		localization_key = YCP_party_issue_propaganda_dm_idea
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueTrainDMIdea
+	text = {
+		localization_key = YCP_party_issue_train_dm_idea
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueOrganizationDMIdea
+	text = {
+		localization_key = YCP_party_issue_organization_dm_idea
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueYouthDMIdea
+	text = {
+		localization_key = YCP_party_issue_youth_dm_idea
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding1DMIdea
+	text = {
+		localization_key = YCP_party_issue_standing_1_dm_idea
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding2DMIdea
+	text = {
+		localization_key = YCP_party_issue_standing_2_dm_idea
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding3DMIdea
+	text = {
+		localization_key = YCP_party_issue_standing_3_dm_idea
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding4DMIdea
+	text = {
+		localization_key = YCP_party_issue_standing_4_dm_idea
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding5DMIdea
+	text = {
+		localization_key = YCP_party_issue_standing_5_dm_idea
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding6DMIdea
+	text = {
+		localization_key = YCP_party_issue_standing_6_dm_idea
+	}
+}

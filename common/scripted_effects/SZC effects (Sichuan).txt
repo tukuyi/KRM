@@ -2656,6 +2656,9 @@ SZC_YCP_party_issue_setup = {
 		value = token:SZC_hu_fuxian
 	}
 	SZC_update_YCP_party_issue_gui = yes
+	add_dynamic_modifier = {
+		modifier = YCP_party_issue_dm
+	}
 }
 
 YCP_party_issue_gui_clean = {
