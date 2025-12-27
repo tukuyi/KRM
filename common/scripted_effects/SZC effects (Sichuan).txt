@@ -2596,6 +2596,13 @@ SZC_update_YCP_party_issue_gui = {
 }
 
 SZC_YCP_party_issue_setup = {
+	set_country_flag = YCP_chairman_unavailable
+	set_country_flag = YCP_train_unavailable
+	set_country_flag = YCP_propaganda_unavailable
+	set_country_flag = YCP_interior_unavailable
+	set_country_flag = YCP_foreign_unavailable
+	set_country_flag = YCP_organization_unavailable
+	set_country_flag = YCP_youth_unavailable
 	set_variable = {
 		var = YCP_party_issue_chairman
 		value = token:SZC_zeng_qi

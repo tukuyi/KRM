@@ -54,6 +54,11 @@ scripted_gui = {
 					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
+				else_if = {
+					limit = {
+						has_country_flag = YCP_train_unavailable
+					}
+				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_train_selected
@@ -68,6 +73,11 @@ scripted_gui = {
 					clr_country_flag = YCP_party_issue_select_gui_visibility
 					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = YCP_propaganda_unavailable
+					}
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
@@ -84,6 +94,11 @@ scripted_gui = {
 					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
+				else_if = {
+					limit = {
+						has_country_flag = YCP_interior_unavailable
+					}
+				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_interior_selected
@@ -98,6 +113,11 @@ scripted_gui = {
 					clr_country_flag = YCP_party_issue_select_gui_visibility
 					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = YCP_foreign_unavailable
+					}
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
@@ -114,6 +134,11 @@ scripted_gui = {
 					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
+				else_if = {
+					limit = {
+						has_country_flag = YCP_organization_unavailable
+					}
+				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_organization_selected
@@ -128,6 +153,11 @@ scripted_gui = {
 					clr_country_flag = YCP_party_issue_select_gui_visibility
 					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = YCP_youth_unavailable
+					}
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility

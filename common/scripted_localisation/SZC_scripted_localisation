@@ -89,9 +89,29 @@ defined_text = {
 }
 
 defined_text = {
+	name = YCPGetPartyIssueChairmanCheck
+	text = {
+		trigger = {
+			has_country_flag = YCP_chairman_unavailable
+		}
+		localization_key = YCP_party_issue_unavailable_change
+	}
+}
+
+defined_text = {
 	name = YCPGetPartyIssueTrainDesc
 	text = {
 		localization_key = YCP_party_issue_train_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueTrainCheck
+	text = {
+		trigger = {
+			has_country_flag = YCP_train_unavailable
+		}
+		localization_key = YCP_party_issue_unavailable_change
 	}
 }
 
@@ -103,9 +123,29 @@ defined_text = {
 }
 
 defined_text = {
+	name = YCPGetPartyIssuePropagandaCheck
+	text = {
+		trigger = {
+			has_country_flag = YCP_propaganda_unavailable
+		}
+		localization_key = YCP_party_issue_unavailable_change
+	}
+}
+
+defined_text = {
 	name = YCPGetPartyIssueInteriorDesc
 	text = {
 		localization_key = YCP_party_issue_interior_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueInteriorCheck
+	text = {
+		trigger = {
+			has_country_flag = YCP_interior_unavailable
+		}
+		localization_key = YCP_party_issue_unavailable_change
 	}
 }
 
@@ -117,6 +157,16 @@ defined_text = {
 }
 
 defined_text = {
+	name = YCPGetPartyIssueForeignCheck
+	text = {
+		trigger = {
+			has_country_flag = YCP_foreign_unavailable
+		}
+		localization_key = YCP_party_issue_unavailable_change
+	}
+}
+
+defined_text = {
 	name = YCPGetPartyIssueOrganizationDesc
 	text = {
 		localization_key = YCP_party_issue_organization_desc_get
@@ -124,9 +174,29 @@ defined_text = {
 }
 
 defined_text = {
+	name = YCPGetPartyIssueOrganizationCheck
+	text = {
+		trigger = {
+			has_country_flag = YCP_organization_unavailable
+		}
+		localization_key = YCP_party_issue_unavailable_change
+	}
+}
+
+defined_text = {
 	name = YCPGetPartyIssueYouthDesc
 	text = {
 		localization_key = YCP_party_issue_youth_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueYouthCheck
+	text = {
+		trigger = {
+			has_country_flag = YCP_youth_unavailable
+		}
+		localization_key = YCP_party_issue_unavailable_change
 	}
 }
 
