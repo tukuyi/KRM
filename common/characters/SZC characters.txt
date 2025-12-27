@@ -3164,6 +3164,21 @@ characters = {
 				small = GFX_portrait_SZC_jiang_yungang_small
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_jiang_yungang_advisor
+			traits = {  }
+			desc = SZC_jiang_yungang_advisor_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_jiang_yungang
+				}
+				SZC_jiang_yungang = {
+					YCP_working_in_party = no
+				}
+			}
+		}
 		country_leader = {
 			desc = SZC_jiang_yungang_desc
 			ideology = national_populist_strum_drang_statist_subtype
@@ -3178,6 +3193,21 @@ characters = {
 			civilian = {
 				large = GFX_portrait_SZC_xia_taosheng_large
 				small = GFX_portrait_SZC_xia_taosheng_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_xia_taosheng_advisor
+			traits = {  }
+			desc = SZC_xia_taosheng_advisor_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_xia_taosheng
+				}
+				SZC_xia_taosheng = {
+					YCP_working_in_party = no
+				}
 			}
 		}
 		country_leader = {
@@ -3199,6 +3229,21 @@ characters = {
 			civilian = {
 				large = GFX_portrait_SZC_zhang_bolun_large
 				small = GFX_portrait_SZC_zhang_bolun_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_zhang_bolun_advisor
+			traits = {  }
+			desc = SZC_zhang_bolun_advisor_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_zhang_bolun
+				}
+				SZC_zhang_bolun = {
+					YCP_working_in_party = no
+				}
 			}
 		}
 		country_leader = {
@@ -3233,6 +3278,21 @@ characters = {
 				small = GFX_portrait_SZC_wang_shizeng_small
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_wang_shizeng_advisor
+			traits = {  }
+			desc = SZC_wang_shizeng_advisor_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_wang_shizeng
+				}
+				SZC_wang_shizeng = {
+					YCP_working_in_party = no
+				}
+			}
+		}
 		corps_commander = {
 			desc = SZC_wang_shizeng_desc
 			traits = { member_of_YCP media_personality politically_connected skilled_staffer }
@@ -3258,6 +3318,14 @@ characters = {
 			idea_token = SZC_huang_shizi_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_huang_shizi_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_huang_shizi
+				SZC_huang_shizi = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 
 		advisor = {
@@ -3288,6 +3356,15 @@ characters = {
 			idea_token = SZC_wei_shizhen_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_wei_shizhen_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_wei_shizhen
+				}
+				SZC_wei_shizhen = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 
 		advisor = {
@@ -3297,42 +3374,10 @@ characters = {
 			traits = { KR_spiritual_leader_sic }
 			cost = 0
 			can_be_fired = no
-			visible = {
-				has_country_flag = NKRsichuan_YCPpath
-			}
 			desc = SZC_wei_shizhen_desc
 		}
 	}
 
-	#吴天墀
-	SZC_wu_tianchi = {
-		name = SZC_wu_tianchi
-		portraits = {
-			civilian = {
-				small = GFX_portrait_SZC_wu_tianchi_small
-				large = GFX_portrait_SZC_wu_tianchi_large
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SZC_wu_tianchi_advisor
-			traits = { KR_silent_workhorse }
-			desc = SZC_wu_tianchi_desc
-		}
-
-		advisor = {
-			slot = second_in_command
-			idea_token = SZC_wu_tianchi_sic
-			ledger = army
-			traits = { KR_spiritual_leader_sic }
-			cost = 0
-			can_be_fired = no
-			visible = {
-				has_country_flag = NKRsichuan_YCPpath
-			}
-			desc = SZC_wu_tianchi_desc
-		}
-	}
 
 	#常燕生
 	SZC_chang_yansheng = {
@@ -3348,6 +3393,15 @@ characters = {
 			idea_token = SZC_chang_yansheng_advisor
 			traits = { KR_silent_workhorse }
 			desc = SZC_chang_yansheng_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_chang_yansheng
+				}
+				SZC_chang_yansheng = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 
 		advisor = {
@@ -3412,6 +3466,15 @@ characters = {
 			idea_token = SZC_liao_shangke_advisor
 			traits = {  }
 			desc = SZC_liao_shangke_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_liao_shangke
+				}
+				SZC_liao_shangke = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3429,6 +3492,16 @@ characters = {
 			idea_token = SZC_zhang_zizhu_advisor
 			traits = {  }
 			desc = SZC_zhang_zizhu_desc
+			
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_zhang_zizhu
+				}
+				SZC_zhang_zizhu = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3446,6 +3519,16 @@ characters = {
 			idea_token = SZC_wei_shizhen_advisor
 			traits = {  }
 			desc = SZC_wei_shizhen_desc
+			
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_wei_shizhen
+				}
+				SZC_wei_shizhen = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3463,6 +3546,16 @@ characters = {
 			idea_token = SZC_zheng_zhenwen_advisor
 			traits = {  }
 			desc = SZC_zheng_zhenwen_desc
+			
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_zheng_zhenwen
+				}
+				SZC_zheng_zhenwen = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3480,6 +3573,15 @@ characters = {
 			idea_token = SZC_xie_chengping_advisor
 			traits = {  }
 			desc = SZC_xie_chengping_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_xie_chengping
+				}
+				SZC_xie_chengping = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3497,6 +3599,15 @@ characters = {
 			idea_token = SZC_hu_fuxian_advisor
 			traits = {  }
 			desc = SZC_hu_fuxian_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_hu_fuxian
+				}
+				SZC_hu_fuxian = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3514,6 +3625,15 @@ characters = {
 			idea_token = SZC_liu_jingyuan_advisor
 			traits = {  }
 			desc = SZC_liu_jingyuan_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_liu_jingyuan
+				}
+				SZC_liu_jingyuan = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3531,6 +3651,15 @@ characters = {
 			idea_token = SZC_li_buwei_advisor
 			traits = {  }
 			desc = SZC_li_buwei_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_li_buwei
+				}
+				SZC_li_buwei = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3548,6 +3677,15 @@ characters = {
 			idea_token = SZC_wu_tianchi_advisor
 			traits = {  }
 			desc = SZC_wu_tianchi_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_wu_tianchi
+				}
+				SZC_wu_tianchi = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3565,6 +3703,15 @@ characters = {
 			idea_token = SZC_hu_guowei_advisor
 			traits = {  }
 			desc = SZC_hu_guowei_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_hu_guowei
+				}
+				SZC_hu_guowei = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3582,6 +3729,15 @@ characters = {
 			idea_token = SZC_liu_siying_advisor
 			traits = {  }
 			desc = SZC_liu_siying_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_liu_siying
+				}
+				SZC_liu_siying = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3599,6 +3755,15 @@ characters = {
 			idea_token = SZC_yu_xiaoquan_advisor
 			traits = {  }
 			desc = SZC_yu_xiaoquan_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_yu_xiaoquan
+				}
+				SZC_yu_xiaoquan = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3616,6 +3781,15 @@ characters = {
 			idea_token = SZC_liu_dongyan_advisor
 			traits = {  }
 			desc = SZC_liu_dongyan_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_liu_dongyan
+				}
+				SZC_liu_dongyan = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3633,6 +3807,15 @@ characters = {
 			idea_token = SZC_wang_lanseng_advisor
 			traits = {  }
 			desc = SZC_wang_lanseng_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_wang_lanseng
+				}
+				SZC_wang_lanseng = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3650,6 +3833,15 @@ characters = {
 			idea_token = SZC_liu_yongji_advisor
 			traits = {  }
 			desc = SZC_liu_yongji_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_liu_yongji
+				}
+				SZC_liu_yongji = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3667,6 +3859,15 @@ characters = {
 			idea_token = SZC_wang_guangqi_advisor
 			traits = {  }
 			desc = SZC_wang_guangqi_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_wang_guangqi
+				}
+				SZC_wang_guangqi = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3684,6 +3885,15 @@ characters = {
 			idea_token = SZC_chen_shanxin_advisor
 			traits = {  }
 			desc = SZC_chen_shanxin_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_chen_shanxin
+				}
+				SZC_chen_shanxin = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3701,6 +3911,15 @@ characters = {
 			idea_token = SZC_yu_fuxian_advisor
 			traits = {  }
 			desc = SZC_yu_fuxian_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_yu_fuxian
+				}
+				SZC_yu_fuxian = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3718,6 +3937,15 @@ characters = {
 			idea_token = SZC_lin_keji_advisor
 			traits = {  }
 			desc = SZC_lin_keji_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_lin_keji
+				}
+				SZC_lin_keji = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3735,6 +3963,15 @@ characters = {
 			idea_token = SZC_yu_jiaju_advisor
 			traits = {  }
 			desc = SZC_yu_jiaju_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_yu_jiaju
+				}
+				SZC_yu_jiaju = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3752,6 +3989,15 @@ characters = {
 			idea_token = SZC_he_luzhi_advisor
 			traits = {  }
 			desc = SZC_he_luzhi_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_he_luzhi
+				}
+				SZC_he_luzhi = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3786,6 +4032,15 @@ characters = {
 			idea_token = SZC_zhang_baoen_advisor
 			traits = {  }
 			desc = SZC_zhang_baoen_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_zhang_baoen
+				}
+				SZC_zhang_baoen = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3803,6 +4058,15 @@ characters = {
 			idea_token = SZC_xia_erkang_advisor
 			traits = {  }
 			desc = SZC_xia_erkang_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_xia_erkang
+				}
+				SZC_xia_erkang = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3820,6 +4084,15 @@ characters = {
 			idea_token = SZC_zhao_yusong_advisor
 			traits = {  }
 			desc = SZC_zhao_yusong_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_zhao_yusong
+				}
+				SZC_zhao_yusong = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3837,6 +4110,15 @@ characters = {
 			idea_token = SZC_duan_zhenhuan_advisor
 			traits = {  }
 			desc = SZC_duan_zhenhuan_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_duan_zhenhuan
+				}
+				SZC_duan_zhenhuan = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3854,6 +4136,15 @@ characters = {
 			idea_token = SZC_shen_yunlong_advisor
 			traits = {  }
 			desc = SZC_shen_yunlong_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_shen_yunlong
+				}
+				SZC_shen_yunlong = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3871,6 +4162,15 @@ characters = {
 			idea_token = SZC_zhang_mengjiu_advisor
 			traits = {  }
 			desc = SZC_zhang_mengjiu_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_zhang_mengjiu
+				}
+				SZC_zhang_mengjiu = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
@@ -3909,6 +4209,15 @@ characters = {
 			traits = { SZC_chinese_jean_darc }
 			cost = 150
 			desc = SZC_tan_tiwu_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_tan_tiwu
+				}
+				SZC_tan_tiwu = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 	}
 
