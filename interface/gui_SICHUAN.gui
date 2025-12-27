@@ -180,7 +180,7 @@ guiTypes = {
 				name = "lizeng_Meter"
 				spriteType = ""
 				position = { x = 0 y = 0 }
-				pdx_tooltip = [SZC_bop_tooltip]
+				pdx_tooltip = SZCBopTooltip
 				# pdx_tooltip_delayed = SZC_YCP_lizeng_Progressbar_tooltip_delayed
 				Orientation = "CENTER"
 			}
@@ -205,7 +205,7 @@ guiTypes = {
 			spriteType = "GFX_ideology_market_liberal_scheme_statist_subtype"
 			clicksound = click_ok
 			oversound = ui_menu_over
-			pdx_tooltip = YCP_party_issue_gui_button_tooltip
+			pdx_tooltip = "YCP_party_issue_gui_button_tooltip"
 		}
 	}
 
@@ -296,8 +296,8 @@ guiTypes = {
 					name = "YCP_party_issue_chairman_button"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
-					pdx_tooltip = YCP_party_issue_chairman_effect_text
-					pdx_tooltip_delayed = YCP_party_issue_chairman_desc_text
+					pdx_tooltip = "YCP_party_issue_chairman_effect_text"
+					pdx_tooltip_delayed = "YCP_party_issue_chairman_desc_text"
 					
 				}
 	
