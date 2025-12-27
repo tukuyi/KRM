@@ -1,6 +1,6 @@
 scripted_gui = {
 
-	### China Alignment Button ###
+	### YCP Button ###
 	YCP_party_issue_button_gui = {
 		context_type = player_context
 		window_name = "YCP_party_issue_gui_button_window"
@@ -27,7 +27,7 @@ scripted_gui = {
 		}
 	}
 
-	### China Alignment Window ###
+	### YCP party issue Window ###
 	YCP_party_issue_gui = {
 		context_type = player_context
 		window_name = "YCP_party_issue_gui_window"
@@ -43,17 +43,185 @@ scripted_gui = {
 			YCP_party_issue_button_close_click = {
 				clr_country_flag = YCP_party_issue_gui_visibility
 				CHN_update_YCP_party_issue_gui = yes
+				YCP_party_issue_gui_clean = yes
 			}
-			YCP_party_issue_chairman_button_click = {
+			YCP_party_issue_train_button_click = {
 				if = {
 					limit = {
 						has_country_flag = YCP_party_issue_select_gui_visibility
 					}
 					clr_country_flag = YCP_party_issue_select_gui_visibility
 					CHN_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
+					set_country_flag = YCP_train_selected
+					CHN_update_YCP_party_issue_gui = yes
+				}
+			}
+			YCP_party_issue_propaganda_button_click = {
+				if = {
+					limit = {
+						has_country_flag = YCP_party_issue_select_gui_visibility
+					}
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					CHN_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else = {
+					set_country_flag = YCP_party_issue_select_gui_visibility
+					set_country_flag = YCP_propaganda_selected
+					CHN_update_YCP_party_issue_gui = yes
+				}
+			}
+			YCP_party_issue_interior_button_click = {
+				if = {
+					limit = {
+						has_country_flag = YCP_party_issue_select_gui_visibility
+					}
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					CHN_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else = {
+					set_country_flag = YCP_party_issue_select_gui_visibility
+					set_country_flag = YCP_interior_selected
+					CHN_update_YCP_party_issue_gui = yes
+				}
+			}
+			YCP_party_issue_foreign_button_click = {
+				if = {
+					limit = {
+						has_country_flag = YCP_party_issue_select_gui_visibility
+					}
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					CHN_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else = {
+					set_country_flag = YCP_party_issue_select_gui_visibility
+					set_country_flag = YCP_foreign_selected
+					CHN_update_YCP_party_issue_gui = yes
+				}
+			}
+			YCP_party_issue_organization_button_click = {
+				if = {
+					limit = {
+						has_country_flag = YCP_party_issue_select_gui_visibility
+					}
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					CHN_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else = {
+					set_country_flag = YCP_party_issue_select_gui_visibility
+					set_country_flag = YCP_organization_selected
+					CHN_update_YCP_party_issue_gui = yes
+				}
+			}
+			YCP_party_issue_youth_button_click = {
+				if = {
+					limit = {
+						has_country_flag = YCP_party_issue_select_gui_visibility
+					}
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					CHN_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else = {
+					set_country_flag = YCP_party_issue_select_gui_visibility
+					set_country_flag = YCP_youth_selected
+					CHN_update_YCP_party_issue_gui = yes
+				}
+			}
+			YCP_party_issue_standing_1_button_click = {
+				if = {
+					limit = {
+						has_country_flag = YCP_party_issue_select_gui_visibility
+					}
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					CHN_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else = {
+					set_country_flag = YCP_party_issue_select_gui_visibility
+					set_country_flag = YCP_standing_1_selected
+					CHN_update_YCP_party_issue_gui = yes
+				}
+			}
+			YCP_party_issue_standing_2_button_click = {
+				if = {
+					limit = {
+						has_country_flag = YCP_party_issue_select_gui_visibility
+					}
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					CHN_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else = {
+					set_country_flag = YCP_party_issue_select_gui_visibility
+					set_country_flag = YCP_standing_2_selected
+					CHN_update_YCP_party_issue_gui = yes
+				}
+			}
+			YCP_party_issue_standing_3_button_click = {
+				if = {
+					limit = {
+						has_country_flag = YCP_party_issue_select_gui_visibility
+					}
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					CHN_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else = {
+					set_country_flag = YCP_party_issue_select_gui_visibility
+					set_country_flag = YCP_standing_3_selected
+					CHN_update_YCP_party_issue_gui = yes
+				}
+			}
+			YCP_party_issue_standing_4_button_click = {
+				if = {
+					limit = {
+						has_country_flag = YCP_party_issue_select_gui_visibility
+					}
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					CHN_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else = {
+					set_country_flag = YCP_party_issue_select_gui_visibility
+					set_country_flag = YCP_standing_4_selected
+					CHN_update_YCP_party_issue_gui = yes
+				}
+			}
+			YCP_party_issue_standing_5_button_click = {
+				if = {
+					limit = {
+						has_country_flag = YCP_party_issue_select_gui_visibility
+					}
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					CHN_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else = {
+					set_country_flag = YCP_party_issue_select_gui_visibility
+					set_country_flag = YCP_standing_5_selected
+					CHN_update_YCP_party_issue_gui = yes
+				}
+			}
+			YCP_party_issue_standing_6_button_click = {
+				if = {
+					limit = {
+						has_country_flag = YCP_party_issue_select_gui_visibility
+					}
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					CHN_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else = {
+					set_country_flag = YCP_party_issue_select_gui_visibility
+					set_country_flag = YCP_standing_6_selected
 					CHN_update_YCP_party_issue_gui = yes
 				}
 			}
@@ -66,7 +234,19 @@ scripted_gui = {
 		}
 	}
 	
-	YCP_party_issue_select_gui = {
+	# YCP_party_issue_select_gui = {
+	# 	context_type = player_context
+	# 	window_name = "YCP_party_issue_select_gui_window"
+	# 	dirty = YCP_party_issue_gui_update
+	# 	parent_window_name = YCP_party_issue_gui_window
+
+	# 	visible = {
+	# 		# has_country_flag = YCP_party_issue_gui_visibility
+	# 		has_country_flag = YCP_party_issue_select_gui_visibility
+	# 	}
+	# }
+
+	YCP_party_issue_select_train_gui = {
 		context_type = player_context
 		window_name = "YCP_party_issue_select_gui_window"
 		dirty = YCP_party_issue_gui_update
@@ -75,6 +255,254 @@ scripted_gui = {
 		visible = {
 			# has_country_flag = YCP_party_issue_gui_visibility
 			has_country_flag = YCP_party_issue_select_gui_visibility
+			has_country_flag = YCP_train_selected
+		}
+
+		dynamic_lists = {
+			YCP_party_issue_select_grid = {
+				array = YCP_party_issue_train_selects
+				entry_container = YCP_party_issue_select_entry
+				value = YCP_party_issue_select
+				index = select_i
+				change_scope = yes
+			}
+		}
+		effects = {
+			YCP_party_issue_select_button_close_click = {
+				clr_country_flag = YCP_party_issue_select_gui_visibility
+				CHN_update_YCP_party_issue_gui = yes
+			}
+		}
+
+		
+
+		properties = {
+			YCP_party_issue_select_portrait = {
+				image = "GFX_portrait_[?YCP_party_issue_select.GetTokenKey]_large"
+			}
+			YCP_party_issue_select_name = {
+				image = "GFX_[?YCP_party_issue_select.GetTokenKey]_sign"
+			}
+		}
+	}
+
+	YCP_party_issue_select_propaganda_gui = {
+		context_type = player_context
+		window_name = "YCP_party_issue_select_gui_window"
+		dirty = YCP_party_issue_gui_update
+		parent_window_name = YCP_party_issue_gui_window
+
+		visible = {
+			# has_country_flag = YCP_party_issue_gui_visibility
+			has_country_flag = YCP_party_issue_select_gui_visibility
+			has_country_flag = YCP_propaganda_selected
+		}
+
+		dynamic_lists = {
+			YCP_party_issue_select_grid = {
+				array = YCP_party_issue_propaganda_selects
+				entry_container = YCP_party_issue_select_entry
+				value = YCP_party_issue_select
+				index = select_i
+				change_scope = yes
+			}
+		}
+		effects = {
+			YCP_party_issue_select_button_close_click = {
+				clr_country_flag = YCP_party_issue_select_gui_visibility
+				CHN_update_YCP_party_issue_gui = yes
+			}
+		}
+
+		
+
+		properties = {
+			YCP_party_issue_select_portrait = {
+				image = "GFX_portrait_[?YCP_party_issue_select.GetTokenKey]_large"
+			}
+			YCP_party_issue_select_name = {
+				image = "GFX_[?YCP_party_issue_select.GetTokenKey]_sign"
+			}
+		}
+	}
+
+	YCP_party_issue_select_interior_gui = {
+		context_type = player_context
+		window_name = "YCP_party_issue_select_gui_window"
+		dirty = YCP_party_issue_gui_update
+		parent_window_name = YCP_party_issue_gui_window
+
+		visible = {
+			# has_country_flag = YCP_party_issue_gui_visibility
+			has_country_flag = YCP_party_issue_select_gui_visibility
+			has_country_flag = YCP_interior_selected
+		}
+
+		dynamic_lists = {
+			YCP_party_issue_select_grid = {
+				array = YCP_party_issue_interior_selects
+				entry_container = YCP_party_issue_select_entry
+				value = YCP_party_issue_select
+				index = select_i
+				change_scope = yes
+			}
+		}
+		effects = {
+			YCP_party_issue_select_button_close_click = {
+				clr_country_flag = YCP_party_issue_select_gui_visibility
+				CHN_update_YCP_party_issue_gui = yes
+			}
+		}
+
+		
+
+		properties = {
+			YCP_party_issue_select_portrait = {
+				image = "GFX_portrait_[?YCP_party_issue_select.GetTokenKey]_large"
+			}
+			YCP_party_issue_select_name = {
+				image = "GFX_[?YCP_party_issue_select.GetTokenKey]_sign"
+			}
+		}
+	}
+
+	YCP_party_issue_select_foreign_gui = {
+		context_type = player_context
+		window_name = "YCP_party_issue_select_gui_window"
+		dirty = YCP_party_issue_gui_update
+		parent_window_name = YCP_party_issue_gui_window
+
+		visible = {
+			# has_country_flag = YCP_party_issue_gui_visibility
+			has_country_flag = YCP_party_issue_select_gui_visibility
+			has_country_flag = YCP_foreign_selected
+		}
+
+		dynamic_lists = {
+			YCP_party_issue_select_grid = {
+				array = YCP_party_issue_foreign_selects
+				entry_container = YCP_party_issue_select_entry
+				value = YCP_party_issue_select
+				index = select_i
+				change_scope = yes
+			}
+		}
+		effects = {
+			YCP_party_issue_select_button_close_click = {
+				clr_country_flag = YCP_party_issue_select_gui_visibility
+				CHN_update_YCP_party_issue_gui = yes
+			}
+		}
+
+		
+
+		properties = {
+			YCP_party_issue_select_portrait = {
+				image = "GFX_portrait_[?YCP_party_issue_select.GetTokenKey]_large"
+			}
+			YCP_party_issue_select_name = {
+				image = "GFX_[?YCP_party_issue_select.GetTokenKey]_sign"
+			}
+		}
+	}
+
+	YCP_party_issue_select_organization_gui = {
+		context_type = player_context
+		window_name = "YCP_party_issue_select_gui_window"
+		dirty = YCP_party_issue_gui_update
+		parent_window_name = YCP_party_issue_gui_window
+
+		visible = {
+			# has_country_flag = YCP_party_issue_gui_visibility
+			has_country_flag = YCP_party_issue_select_gui_visibility
+			has_country_flag = YCP_organization_selected
+		}
+
+		dynamic_lists = {
+			YCP_party_issue_select_grid = {
+				array = YCP_party_issue_organization_selects
+				entry_container = YCP_party_issue_select_entry
+				value = YCP_party_issue_select
+				index = select_i
+				change_scope = yes
+			}
+		}
+		effects = {
+			YCP_party_issue_select_button_close_click = {
+				clr_country_flag = YCP_party_issue_select_gui_visibility
+				CHN_update_YCP_party_issue_gui = yes
+			}
+		}
+
+		
+
+		properties = {
+			YCP_party_issue_select_portrait = {
+				image = "GFX_portrait_[?YCP_party_issue_select.GetTokenKey]_large"
+			}
+			YCP_party_issue_select_name = {
+				image = "GFX_[?YCP_party_issue_select.GetTokenKey]_sign"
+			}
+		}
+	}
+
+	YCP_party_issue_select_youth_gui = {
+		context_type = player_context
+		window_name = "YCP_party_issue_select_gui_window"
+		dirty = YCP_party_issue_gui_update
+		parent_window_name = YCP_party_issue_gui_window
+
+		visible = {
+			# has_country_flag = YCP_party_issue_gui_visibility
+			has_country_flag = YCP_party_issue_select_gui_visibility
+			has_country_flag = YCP_youth_selected
+		}
+
+		dynamic_lists = {
+			YCP_party_issue_select_grid = {
+				array = YCP_party_issue_youth_selects
+				entry_container = YCP_party_issue_select_entry
+				value = YCP_party_issue_select
+				index = select_i
+				change_scope = yes
+			}
+		}
+		effects = {
+			YCP_party_issue_select_button_close_click = {
+				clr_country_flag = YCP_party_issue_select_gui_visibility
+				CHN_update_YCP_party_issue_gui = yes
+			}
+		}
+
+		
+
+		properties = {
+			YCP_party_issue_select_portrait = {
+				image = "GFX_portrait_[?YCP_party_issue_select.GetTokenKey]_large"
+			}
+			YCP_party_issue_select_name = {
+				image = "GFX_[?YCP_party_issue_select.GetTokenKey]_sign"
+			}
+		}
+	}
+
+	YCP_party_issue_select_standing_gui = {
+		context_type = player_context
+		window_name = "YCP_party_issue_select_gui_window"
+		dirty = YCP_party_issue_gui_update
+		parent_window_name = YCP_party_issue_gui_window
+
+		visible = {
+			# has_country_flag = YCP_party_issue_gui_visibility
+			has_country_flag = YCP_party_issue_select_gui_visibility
+			OR = {
+				has_country_flag = YCP_standing_1_selected
+				has_country_flag = YCP_standing_2_selected
+				has_country_flag = YCP_standing_3_selected
+				has_country_flag = YCP_standing_4_selected
+				has_country_flag = YCP_standing_5_selected
+				has_country_flag = YCP_standing_6_selected
+			}
 		}
 
 		dynamic_lists = {
@@ -105,90 +533,6 @@ scripted_gui = {
 		}
 	}
 
-	### Trouble in Liangguang GUI ###
-	china_liangguang_gui = {
-		context_type = decision_category
-		window_name = "china_liangguang_container"
+}
 
-		ai_enabled = {
-			always = no
-		}
-
-		properties = {
-			china_liangguang_state_nanning = {
-				frame = 594.china_liangguang_state_control
-			}
-			china_liangguang_state_guangzhou = {
-				frame = 592.china_liangguang_state_control
-			}
-			china_liangguang_state_baise = {
-				frame = 1054.china_liangguang_state_control
-			}
-			china_liangguang_state_guilin = {
-				frame = 599.china_liangguang_state_control
-			}
-			china_liangguang_state_shaoguan = {
-				frame = 800.china_liangguang_state_control
-			}
-			china_liangguang_state_haikou = {
-				frame = 591.china_liangguang_state_control
-			}
-		}
-	}
-
-	### UPC Elections GUI ###
-	UPC_election_gui = {
-		context_type = decision_category
-		window_name = "UPC_election_gui_container"
-
-		dynamic_lists = {
-			UPC_election_main_grid = {
-				array = global.UPC_election_party_array
-				index = UPC_election_party_index
-				entry_container = UPC_party_entry
-				change_scope = no
-			}
-		}
-
-		triggers = {
-			UPC_party_ban_status_visible = {
-				meta_trigger = {
-					text = { has_country_flag = UPC_election_ban_[INDEX]_flag }
-					INDEX = "[UPC_GetPartyTag]"
-				}
-			}
-			UPC_party_ban_bg_visible = {
-				meta_trigger = {
-					text = { has_country_flag = UPC_election_ban_[INDEX]_flag }
-					INDEX = "[UPC_GetPartyTag]"
-				}
-			}
-			UPC_party_coalition_bg_visible = {
-				meta_trigger = {
-					text = { has_country_flag = UPC_[INDEX]_in_governing_coalition_flag }
-					INDEX = "[UPC_GetPartyTag]"
-				}
-			}
-			UPC_party_campaigning_as_bg_visible = {
-				UPC = {
-					OR = {
-						AND = {
-							check_variable = { UPC_election_party_index = 3 }
-							has_country_flag = UPC_is_campaigning_as_CDL
-						}
-						AND = {
-							check_variable = { UPC_election_party_index = 4 }
-							NOT = { has_country_flag = UPC_is_campaigning_as_CDL }
-						}
-					}
-				}
-			}
-		}
-
-		properties = {
-			UPC_party_leader = {
-				image = "[UPC_GetPartyLeaderPortrait]"
-			}
-		}
-	}
 }

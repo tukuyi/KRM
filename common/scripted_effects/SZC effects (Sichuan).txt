@@ -2591,6 +2591,22 @@ SZC_debug_party_select_add_effect = {
 	add_to_array = { ROOT.YCP_party_issue_selects = token:SZC_lai_yongqing }
 }
 
+YCP_party_issue_gui_clean = {
+	clr_country_flag = YCP_party_issue_select_gui_visibility
+	clr_country_flag = YCP_train_selected
+	clr_country_flag = YCP_propaganda_selected
+	clr_country_flag = YCP_interior_selected
+	clr_country_flag = YCP_foreign_selected
+	clr_country_flag = YCP_organization_selected
+	clr_country_flag = YCP_youth_selected
+	clr_country_flag = YCP_standing_1_selected
+	clr_country_flag = YCP_standing_2_selected
+	clr_country_flag = YCP_standing_3_selected
+	clr_country_flag = YCP_standing_4_selected
+	clr_country_flag = YCP_standing_5_selected
+	clr_country_flag = YCP_standing_6_selected
+}
+
 add_temp_unit_leader_role = {
 	hidden_effect = {
 		if = {
