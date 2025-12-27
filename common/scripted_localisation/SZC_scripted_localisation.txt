@@ -414,12 +414,24 @@ defined_text = {
 defined_text = {
 	name = YCPGetPartyIssueChairmanDMIdea
 	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_chairman = token:SZC_zeng_qi }
+		}
+		localization_key = idea_desc|SZC_zeng_qi_DMC_idea
+	}
+	text = {
 		localization_key = YCP_party_issue_chairman_dm_idea
 	}
 }
 
 defined_text = {
 	name = YCPGetPartyIssueInteriorDMIdea
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_interior = token:SZC_he_luzhi }
+		}
+		localization_key = idea_desc|SZC_he_luzhi_DMI_idea
+	}
 	text = {
 		localization_key = YCP_party_issue_interior_dm_idea
 	}
@@ -428,12 +440,24 @@ defined_text = {
 defined_text = {
 	name = YCPGetPartyIssueForeignDMIdea
 	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_foreign = token:SZC_li_huang }
+		}
+		localization_key = idea_desc|SZC_li_huang_DMF_idea
+	}
+	text = {
 		localization_key = YCP_party_issue_foreign_dm_idea
 	}
 }
 
 defined_text = {
 	name = YCPGetPartyIssuePropagandaDMIdea
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_propaganda = token:SZC_zuo_shunsheng }
+		}
+		localization_key = idea_desc|SZC_zuo_shunsheng_DMP_idea
+	}
 	text = {
 		localization_key = YCP_party_issue_propaganda_dm_idea
 	}
@@ -442,12 +466,24 @@ defined_text = {
 defined_text = {
 	name = YCPGetPartyIssueTrainDMIdea
 	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_train = token:SZC_chen_qitian }
+		}
+		localization_key = idea_desc|SZC_chen_qitian_DMT_idea
+	}
+	text = {
 		localization_key = YCP_party_issue_train_dm_idea
 	}
 }
 
 defined_text = {
 	name = YCPGetPartyIssueOrganizationDMIdea
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_organization = token:SZC_li_buwei }
+		}
+		localization_key = idea_desc|SZC_li_buwei_DMO_idea
+	}
 	text = {
 		localization_key = YCP_party_issue_organization_dm_idea
 	}
@@ -456,12 +492,54 @@ defined_text = {
 defined_text = {
 	name = YCPGetPartyIssueYouthDMIdea
 	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_youth = token:SZC_chang_yansheng }
+		}
+		localization_key = idea_desc|SZC_chang_yansheng_DMY_idea
+	}
+	text = {
 		localization_key = YCP_party_issue_youth_dm_idea
 	}
 }
 
 defined_text = {
 	name = YCPGetPartyIssueStanding1DMIdea
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_1 = token:SZC_zhang_bolun }
+		}
+		localization_key = idea_desc|SZC_zhang_bolun_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_1 = token:SZC_wang_shizeng }
+		}
+		localization_key = idea_desc|SZC_wang_shizeng_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_1 = token:SZC_xia_taosheng }
+		}
+		localization_key = idea_desc|SZC_xia_taosheng_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_1 = token:SZC_zhang_zizhu }
+		}
+		localization_key = idea_desc|SZC_zhang_zizhu_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_1 = token:SZC_yu_jiaju }
+		}
+		localization_key = idea_desc|SZC_yu_jiaju_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_1 = token:SZC_hu_fuxian }
+		}
+		localization_key = idea_desc|SZC_hu_fuxian_DM_idea
+	}
 	text = {
 		localization_key = YCP_party_issue_standing_1_dm_idea
 	}
@@ -470,12 +548,84 @@ defined_text = {
 defined_text = {
 	name = YCPGetPartyIssueStanding2DMIdea
 	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_2 = token:SZC_zhang_bolun }
+		}
+		localization_key = idea_desc|SZC_zhang_bolun_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_2 = token:SZC_wang_shizeng }
+		}
+		localization_key = idea_desc|SZC_wang_shizeng_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_2 = token:SZC_xia_taosheng }
+		}
+		localization_key = idea_desc|SZC_xia_taosheng_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_2 = token:SZC_zhang_zizhu }
+		}
+		localization_key = idea_desc|SZC_zhang_zizhu_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_2 = token:SZC_yu_jiaju }
+		}
+		localization_key = idea_desc|SZC_yu_jiaju_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_2 = token:SZC_hu_fuxian }
+		}
+		localization_key = idea_desc|SZC_hu_fuxian_DM_idea
+	}
+	text = {
 		localization_key = YCP_party_issue_standing_2_dm_idea
 	}
 }
 
 defined_text = {
 	name = YCPGetPartyIssueStanding3DMIdea
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_3 = token:SZC_zhang_bolun }
+		}
+		localization_key = idea_desc|SZC_zhang_bolun_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_3 = token:SZC_wang_shizeng }
+		}
+		localization_key = idea_desc|SZC_wang_shizeng_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_3 = token:SZC_xia_taosheng }
+		}
+		localization_key = idea_desc|SZC_xia_taosheng_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_3 = token:SZC_zhang_zizhu }
+		}
+		localization_key = idea_desc|SZC_zhang_zizhu_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_3 = token:SZC_yu_jiaju }
+		}
+		localization_key = idea_desc|SZC_yu_jiaju_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_3 = token:SZC_hu_fuxian }
+		}
+		localization_key = idea_desc|SZC_hu_fuxian_DM_idea
+	}
 	text = {
 		localization_key = YCP_party_issue_standing_3_dm_idea
 	}
@@ -484,6 +634,42 @@ defined_text = {
 defined_text = {
 	name = YCPGetPartyIssueStanding4DMIdea
 	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_4 = token:SZC_zhang_bolun }
+		}
+		localization_key = idea_desc|SZC_zhang_bolun_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_4 = token:SZC_wang_shizeng }
+		}
+		localization_key = idea_desc|SZC_wang_shizeng_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_4 = token:SZC_xia_taosheng }
+		}
+		localization_key = idea_desc|SZC_xia_taosheng_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_4 = token:SZC_zhang_zizhu }
+		}
+		localization_key = idea_desc|SZC_zhang_zizhu_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_4 = token:SZC_yu_jiaju }
+		}
+		localization_key = idea_desc|SZC_yu_jiaju_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_4 = token:SZC_hu_fuxian }
+		}
+		localization_key = idea_desc|SZC_hu_fuxian_DM_idea
+	}
+	text = {
 		localization_key = YCP_party_issue_standing_4_dm_idea
 	}
 }
@@ -491,12 +677,84 @@ defined_text = {
 defined_text = {
 	name = YCPGetPartyIssueStanding5DMIdea
 	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_5 = token:SZC_zhang_bolun }
+		}
+		localization_key = idea_desc|SZC_zhang_bolun_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_5 = token:SZC_wang_shizeng }
+		}
+		localization_key = idea_desc|SZC_wang_shizeng_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_5 = token:SZC_xia_taosheng }
+		}
+		localization_key = idea_desc|SZC_xia_taosheng_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_5 = token:SZC_zhang_zizhu }
+		}
+		localization_key = idea_desc|SZC_zhang_zizhu_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_5 = token:SZC_yu_jiaju }
+		}
+		localization_key = idea_desc|SZC_yu_jiaju_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_5 = token:SZC_hu_fuxian }
+		}
+		localization_key = idea_desc|SZC_hu_fuxian_DM_idea
+	}
+	text = {
 		localization_key = YCP_party_issue_standing_5_dm_idea
 	}
 }
 
 defined_text = {
 	name = YCPGetPartyIssueStanding6DMIdea
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_6 = token:SZC_zhang_bolun }
+		}
+		localization_key = idea_desc|SZC_zhang_bolun_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_6 = token:SZC_wang_shizeng }
+		}
+		localization_key = idea_desc|SZC_wang_shizeng_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_6 = token:SZC_xia_taosheng }
+		}
+		localization_key = idea_desc|SZC_xia_taosheng_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_6 = token:SZC_zhang_zizhu }
+		}
+		localization_key = idea_desc|SZC_zhang_zizhu_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_6 = token:SZC_yu_jiaju }
+		}
+		localization_key = idea_desc|SZC_yu_jiaju_DM_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_standing_6 = token:SZC_hu_fuxian }
+		}
+		localization_key = idea_desc|SZC_hu_fuxian_DM_idea
+	}
 	text = {
 		localization_key = YCP_party_issue_standing_6_dm_idea
 	}

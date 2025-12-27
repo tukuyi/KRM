@@ -2656,6 +2656,21 @@ SZC_YCP_party_issue_setup = {
 		value = token:SZC_hu_fuxian
 	}
 	SZC_update_YCP_party_issue_gui = yes
+	add_ideas = {
+		SZC_zeng_qi_DMC_idea
+		SZC_he_luzhi_DMI_idea
+		SZC_li_huang_DMF_idea
+		SZC_zuo_shunsheng_DMP_idea
+		SZC_chen_qitian_DMT_idea
+		SZC_li_buwei_DMO_idea
+		SZC_chang_yansheng_DMY_idea
+		SZC_zhang_bolun_DM_idea
+		SZC_wang_shizeng_DM_idea
+		SZC_xia_taosheng_DM_idea
+		SZC_zhang_zizhu_DM_idea
+		SZC_yu_jiaju_DM_idea
+		SZC_hu_fuxian_DM_idea
+	}
 	add_dynamic_modifier = {
 		modifier = YCP_party_issue_dm
 	}
