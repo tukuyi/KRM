@@ -77,7 +77,97 @@ defined_text = {
 defined_text = {
 	name = YCPGetPartyIssueSelectDesc
 	text = {
-		trigger = { check_variable = { YCP_party_issue_select = token:SZC_lai_yongqing } }
-		localization_key = SZC_lai_yongqing_desc
+		localization_key = YCP_party_issue_select_portrait_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueChairmanDesc
+	text = {
+		localization_key = YCP_party_issue_chairman_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueTrainDesc
+	text = {
+		localization_key = YCP_party_issue_train_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssuePropagandaDesc
+	text = {
+		localization_key = YCP_party_issue_propaganda_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueInteriorDesc
+	text = {
+		localization_key = YCP_party_issue_interior_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueForeignDesc
+	text = {
+		localization_key = YCP_party_issue_foreign_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueOrganizationDesc
+	text = {
+		localization_key = YCP_party_issue_organization_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueYouthDesc
+	text = {
+		localization_key = YCP_party_issue_youth_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding1Desc
+	text = {
+		localization_key = YCP_party_issue_standing_1_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding2Desc
+	text = {
+		localization_key = YCP_party_issue_standing_2_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding3Desc
+	text = {
+		localization_key = YCP_party_issue_standing_3_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding4Desc
+	text = {
+		localization_key = YCP_party_issue_standing_4_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding5Desc
+	text = {
+		localization_key = YCP_party_issue_standing_5_desc_get
+	}
+}
+
+defined_text = {
+	name = YCPGetPartyIssueStanding6Desc
+	text = {
+		localization_key = YCP_party_issue_standing_6_desc_get
 	}
 }

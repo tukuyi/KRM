@@ -288,12 +288,16 @@ guiTypes = {
 			}
 
 			containerWindowType = {#chairman
+
+				name = "YCP_party_issue_chairman"
 				
 				position = { x = 620 y = 38 }
 				buttonType = {
 					name = "YCP_party_issue_chairman_button"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					pdx_tooltip = YCP_party_issue_chairman_effect_text
+					pdx_tooltip_delayed = YCP_party_issue_chairman_desc_text
 					
 				}
 	
@@ -329,6 +333,8 @@ guiTypes = {
 			}
 
 			containerWindowType = {#train
+
+				name = "YCP_party_issue_train"
 				
 				position = { x = 30 y = 234 }
 
@@ -336,6 +342,8 @@ guiTypes = {
 					name = "YCP_party_issue_train_button"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					pdx_tooltip = YCP_party_issue_train_effect_text
+					pdx_tooltip_delayed = YCP_party_issue_train_desc_text
 					
 				}
 	
@@ -371,6 +379,8 @@ guiTypes = {
 			}
 
 			containerWindowType = {#propaganda
+
+				name = "YCP_party_issue_propaganda"
 				
 				position = { x = 220 y = 234 }
 
@@ -378,6 +388,8 @@ guiTypes = {
 					name = "YCP_party_issue_propaganda_button"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					pdx_tooltip = YCP_party_issue_propaganda_effect_text
+					pdx_tooltip_delayed = YCP_party_issue_propaganda_desc_text
 					
 				}
 	
@@ -413,6 +425,8 @@ guiTypes = {
 			}
 
 			containerWindowType = {#interior
+
+				name = "YCP_party_issue_interior"
 				
 				position = { x = 410 y = 234 }
 
@@ -420,6 +434,8 @@ guiTypes = {
 					name = "YCP_party_issue_interior_button"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					pdx_tooltip = YCP_party_issue_interior_effect_text
+					pdx_tooltip_delayed = YCP_party_issue_interior_desc_text
 					
 				}
 	
@@ -455,6 +471,8 @@ guiTypes = {
 			}
 
 			containerWindowType = {#foreign
+
+				name = "YCP_party_issue_foreign"
 				
 				position = { x = 830 y = 234 }
 
@@ -462,6 +480,8 @@ guiTypes = {
 					name = "YCP_party_issue_foreign_button"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					pdx_tooltip = YCP_party_issue_foreign_effect_text
+					pdx_tooltip_delayed = YCP_party_issue_foreign_desc_text
 					
 				}
 	
@@ -497,6 +517,8 @@ guiTypes = {
 			}
 
 			containerWindowType = {#organization
+
+				name = "YCP_party_issue_organization"
 				
 				position = { x = 1010 y = 234 }
 
@@ -504,6 +526,8 @@ guiTypes = {
 					name = "YCP_party_issue_organization_button"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					pdx_tooltip = YCP_party_issue_organization_effect_text
+					pdx_tooltip_delayed = YCP_party_issue_organization_desc_text
 					
 				}
 	
@@ -539,6 +563,8 @@ guiTypes = {
 			}
 
 			containerWindowType = {#youth
+
+				name = "YCP_party_issue_youth"
 				
 				position = { x = 1200 y = 234 }
 
@@ -546,6 +572,8 @@ guiTypes = {
 					name = "YCP_party_issue_youth_button"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					pdx_tooltip = YCP_party_issue_youth_effect_text
+					pdx_tooltip_delayed = YCP_party_issue_youth_desc_text
 					
 				}
 	
@@ -596,6 +624,7 @@ guiTypes = {
 			}
 
 			containerWindowType = {#standing1
+				name = "YCP_party_issue_standing_1"
 				
 				position = { x = 30 y = 35 }
 
@@ -603,6 +632,8 @@ guiTypes = {
 					name = "YCP_party_issue_standing_1_button"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					pdx_tooltip = YCP_party_issue_standing_1_effect_text
+					pdx_tooltip_delayed = YCP_party_issue_standing_1_desc_text
 					
 				}
 	
@@ -638,6 +669,7 @@ guiTypes = {
 			}
 
 			containerWindowType = {#standing2
+				name = "YCP_party_issue_standing_2"
 				
 				position = { x = 260 y = 35 }
 
@@ -645,6 +677,8 @@ guiTypes = {
 					name = "YCP_party_issue_standing_2_button"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					pdx_tooltip = YCP_party_issue_standing_2_effect_text
+					pdx_tooltip_delayed = YCP_party_issue_standing_2_desc_text
 					
 				}
 	
@@ -680,6 +714,7 @@ guiTypes = {
 			}
 
 			containerWindowType = {#standing3
+				name = "YCP_party_issue_standing_3"
 				
 				position = { x = 490 y = 35 }
 
@@ -687,6 +722,8 @@ guiTypes = {
 					name = "YCP_party_issue_standing_3_button"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					pdx_tooltip = YCP_party_issue_standing_3_effect_text
+					pdx_tooltip_delayed = YCP_party_issue_standing_3_desc_text
 					
 				}
 	
@@ -722,6 +759,7 @@ guiTypes = {
 			}
 
 			containerWindowType = {#standing4
+				name = "YCP_party_issue_standing_4"
 				
 				position = { x = 750 y = 35 }
 
@@ -729,6 +767,8 @@ guiTypes = {
 					name = "YCP_party_issue_standing_4_button"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					pdx_tooltip = YCP_party_issue_standing_4_effect_text
+					pdx_tooltip_delayed = YCP_party_issue_standing_4_desc_text
 					
 				}
 	
@@ -764,6 +804,7 @@ guiTypes = {
 			}
 
 			containerWindowType = {#standing5
+				name = "YCP_party_issue_standing_5"
 				
 				position = { x = 980 y = 35 }
 
@@ -771,6 +812,8 @@ guiTypes = {
 					name = "YCP_party_issue_standing_5_button"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					pdx_tooltip = YCP_party_issue_standing_5_effect_text
+					pdx_tooltip_delayed = YCP_party_issue_standing_5_desc_text
 					
 				}
 	
@@ -806,6 +849,7 @@ guiTypes = {
 			}
 
 			containerWindowType = {#standing6
+				name = "YCP_party_issue_standing_6"
 				
 				position = { x = 1210 y = 35 }
 
@@ -813,6 +857,8 @@ guiTypes = {
 					name = "YCP_party_issue_standing_6_button"
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					pdx_tooltip = YCP_party_issue_standing_6_effect_text
+					pdx_tooltip_delayed = YCP_party_issue_standing_6_desc_text
 					
 				}
 	
@@ -941,12 +987,17 @@ guiTypes = {
 			name = "YCP_party_issue_select_frame"
 			spriteType = "GFX_YCP_portrait_frame_2"
 			position = { x = 21 y = 22 }
+			pdx_tooltip = YCP_party_issue_select_portrait_effect_text
+			pdx_tooltip_delayed = YCP_party_issue_select_portrait_desc_text
+			
 		}
 
 		iconType = {
 			name = "YCP_party_issue_select_name"
 			position = { x = 162 y = 20 }
-			pdx_tooltip = YCP_party_issue_select_portrait_text
+			scale = 1
+			pdx_tooltip = YCP_party_issue_select_portrait_effect_text
+			pdx_tooltip_delayed = YCP_party_issue_select_portrait_desc_text
 		}
 
 		# instantTextBoxType = {

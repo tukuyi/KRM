@@ -22,7 +22,7 @@ scripted_gui = {
 					set_country_flag = YCP_party_issue_gui_visibility
 					CHN_calculate_YCP_party_issue_gui_effect = yes
 				}
-				CHN_update_YCP_party_issue_gui = yes
+				SZC_update_YCP_party_issue_gui = yes
 			}
 		}
 	}
@@ -42,7 +42,7 @@ scripted_gui = {
 		effects = {
 			YCP_party_issue_button_close_click = {
 				clr_country_flag = YCP_party_issue_gui_visibility
-				CHN_update_YCP_party_issue_gui = yes
+				SZC_update_YCP_party_issue_gui = yes
 				YCP_party_issue_gui_clean = yes
 			}
 			YCP_party_issue_train_button_click = {
@@ -51,13 +51,13 @@ scripted_gui = {
 						has_country_flag = YCP_party_issue_select_gui_visibility
 					}
 					clr_country_flag = YCP_party_issue_select_gui_visibility
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_train_selected
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 				}
 			}
 			YCP_party_issue_propaganda_button_click = {
@@ -66,13 +66,13 @@ scripted_gui = {
 						has_country_flag = YCP_party_issue_select_gui_visibility
 					}
 					clr_country_flag = YCP_party_issue_select_gui_visibility
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_propaganda_selected
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 				}
 			}
 			YCP_party_issue_interior_button_click = {
@@ -81,13 +81,13 @@ scripted_gui = {
 						has_country_flag = YCP_party_issue_select_gui_visibility
 					}
 					clr_country_flag = YCP_party_issue_select_gui_visibility
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_interior_selected
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 				}
 			}
 			YCP_party_issue_foreign_button_click = {
@@ -96,13 +96,13 @@ scripted_gui = {
 						has_country_flag = YCP_party_issue_select_gui_visibility
 					}
 					clr_country_flag = YCP_party_issue_select_gui_visibility
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_foreign_selected
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 				}
 			}
 			YCP_party_issue_organization_button_click = {
@@ -111,13 +111,13 @@ scripted_gui = {
 						has_country_flag = YCP_party_issue_select_gui_visibility
 					}
 					clr_country_flag = YCP_party_issue_select_gui_visibility
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_organization_selected
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 				}
 			}
 			YCP_party_issue_youth_button_click = {
@@ -126,13 +126,13 @@ scripted_gui = {
 						has_country_flag = YCP_party_issue_select_gui_visibility
 					}
 					clr_country_flag = YCP_party_issue_select_gui_visibility
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_youth_selected
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 				}
 			}
 			YCP_party_issue_standing_1_button_click = {
@@ -141,13 +141,13 @@ scripted_gui = {
 						has_country_flag = YCP_party_issue_select_gui_visibility
 					}
 					clr_country_flag = YCP_party_issue_select_gui_visibility
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_standing_1_selected
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 				}
 			}
 			YCP_party_issue_standing_2_button_click = {
@@ -156,13 +156,13 @@ scripted_gui = {
 						has_country_flag = YCP_party_issue_select_gui_visibility
 					}
 					clr_country_flag = YCP_party_issue_select_gui_visibility
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_standing_2_selected
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 				}
 			}
 			YCP_party_issue_standing_3_button_click = {
@@ -171,13 +171,13 @@ scripted_gui = {
 						has_country_flag = YCP_party_issue_select_gui_visibility
 					}
 					clr_country_flag = YCP_party_issue_select_gui_visibility
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_standing_3_selected
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 				}
 			}
 			YCP_party_issue_standing_4_button_click = {
@@ -186,13 +186,13 @@ scripted_gui = {
 						has_country_flag = YCP_party_issue_select_gui_visibility
 					}
 					clr_country_flag = YCP_party_issue_select_gui_visibility
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_standing_4_selected
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 				}
 			}
 			YCP_party_issue_standing_5_button_click = {
@@ -201,13 +201,13 @@ scripted_gui = {
 						has_country_flag = YCP_party_issue_select_gui_visibility
 					}
 					clr_country_flag = YCP_party_issue_select_gui_visibility
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_standing_5_selected
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 				}
 			}
 			YCP_party_issue_standing_6_button_click = {
@@ -216,13 +216,13 @@ scripted_gui = {
 						has_country_flag = YCP_party_issue_select_gui_visibility
 					}
 					clr_country_flag = YCP_party_issue_select_gui_visibility
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 					YCP_party_issue_gui_clean = yes
 				}
 				else = {
 					set_country_flag = YCP_party_issue_select_gui_visibility
 					set_country_flag = YCP_standing_6_selected
-					CHN_update_YCP_party_issue_gui = yes
+					SZC_update_YCP_party_issue_gui = yes
 				}
 			}
 		}
@@ -231,6 +231,45 @@ scripted_gui = {
 		}
 
 		properties = {
+			YCP_party_issue_chairman_button = {
+				image = "GFX_portrait_[?YCP_party_issue_chairman.GetTokenKey]_large"
+			}
+			YCP_party_issue_train_button = {
+				image = "GFX_portrait_[?YCP_party_issue_train.GetTokenKey]_large"
+			}
+			YCP_party_issue_propaganda_button = {
+				image = "GFX_portrait_[?YCP_party_issue_propaganda.GetTokenKey]_large"
+			}
+			YCP_party_issue_interior_button = {
+				image = "GFX_portrait_[?YCP_party_issue_interior.GetTokenKey]_large"
+			}
+			YCP_party_issue_foreign_button = {
+				image = "GFX_portrait_[?YCP_party_issue_foreign.GetTokenKey]_large"
+			}
+			YCP_party_issue_organization_button = {
+				image = "GFX_portrait_[?YCP_party_issue_organization.GetTokenKey]_large"
+			}
+			YCP_party_issue_youth_button = {
+				image = "GFX_portrait_[?YCP_party_issue_youth.GetTokenKey]_large"
+			}
+			YCP_party_issue_standing_1_button = {
+				image = "GFX_portrait_[?YCP_party_issue_standing_1.GetTokenKey]_large"
+			}
+			YCP_party_issue_standing_2_button = {
+				image = "GFX_portrait_[?YCP_party_issue_standing_2.GetTokenKey]_large"
+			}
+			YCP_party_issue_standing_3_button = {
+				image = "GFX_portrait_[?YCP_party_issue_standing_3.GetTokenKey]_large"
+			}
+			YCP_party_issue_standing_4_button = {
+				image = "GFX_portrait_[?YCP_party_issue_standing_4.GetTokenKey]_large"
+			}
+			YCP_party_issue_standing_5_button = {
+				image = "GFX_portrait_[?YCP_party_issue_standing_5.GetTokenKey]_large"
+			}
+			YCP_party_issue_standing_6_button = {
+				image = "GFX_portrait_[?YCP_party_issue_standing_6.GetTokenKey]_large"
+			}
 		}
 	}
 	
@@ -270,7 +309,7 @@ scripted_gui = {
 		effects = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
-				CHN_update_YCP_party_issue_gui = yes
+				SZC_update_YCP_party_issue_gui = yes
 			}
 		}
 
@@ -310,7 +349,7 @@ scripted_gui = {
 		effects = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
-				CHN_update_YCP_party_issue_gui = yes
+				SZC_update_YCP_party_issue_gui = yes
 			}
 		}
 
@@ -350,7 +389,7 @@ scripted_gui = {
 		effects = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
-				CHN_update_YCP_party_issue_gui = yes
+				SZC_update_YCP_party_issue_gui = yes
 			}
 		}
 
@@ -390,7 +429,7 @@ scripted_gui = {
 		effects = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
-				CHN_update_YCP_party_issue_gui = yes
+				SZC_update_YCP_party_issue_gui = yes
 			}
 		}
 
@@ -430,7 +469,7 @@ scripted_gui = {
 		effects = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
-				CHN_update_YCP_party_issue_gui = yes
+				SZC_update_YCP_party_issue_gui = yes
 			}
 		}
 
@@ -470,7 +509,7 @@ scripted_gui = {
 		effects = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
-				CHN_update_YCP_party_issue_gui = yes
+				SZC_update_YCP_party_issue_gui = yes
 			}
 		}
 
@@ -517,7 +556,7 @@ scripted_gui = {
 		effects = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
-				CHN_update_YCP_party_issue_gui = yes
+				SZC_update_YCP_party_issue_gui = yes
 			}
 		}
 
