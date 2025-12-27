@@ -143,34 +143,6 @@ characters = {
 			}
 		}
 	}
-	#劉泗英
-	SZC_liu_siying = {
-		name = SZC_liu_siying
-		portraits = {
-			civilian = {
-				large = GFX_portrait_unknown #should never appear
-				small = GFX_portrait_SZC_liu_siying_civilian_small
-			}
-		}
-		country_leader = {
-			# Placeholder leader, doesn't need desc
-			ideology = national_populist_subtype
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SZC_liu_siying_advisor
-			available = {
-				if = {
-					limit = { has_completed_focus = SZC_the_last_bastion_of_federalism }
-					has_completed_focus = SZC_agreements_with_the_ycp
-				}
-				else = {
-					has_authoritarian_government = yes
-				}
-			}
-			traits = { KR_nationalist_industrialist }
-		}
-	}
 
 	#########################
 	### Nine Man Regiment ###
@@ -3724,10 +3696,14 @@ characters = {
 				large = GFX_portrait_SZC_liu_siying_large
 			}
 		}
+		country_leader = {
+			# Placeholder leader, doesn't need desc
+			ideology = national_populist_subtype
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_liu_siying_advisor
-			traits = {  }
+			traits = { KR_nationalist_industrialist }
 			desc = SZC_liu_siying_desc
 			available = {
 				set_temp_variable = {
