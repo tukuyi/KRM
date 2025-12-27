@@ -278,7 +278,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "YCP_party_issue_list_container"
 			position = { x = 0 y = 36 }
-			size = { width = 100% height = 843 }
+			size = { width = 100% height = 504 }
 			Orientation = UPPER_LEFT
 
 			background = {
@@ -318,18 +318,534 @@ guiTypes = {
 		
 					instantTextBoxType = {
 						name = "YCP_party_issue_chairman_title"
-						position = { x = 78 y = 12 }
+						position = { x = -142 y = 12 }
 						text = YCP_party_issue_chairman_title_text
 						font = "hoi_18mbs"
-						format = left
+						format = center
 						maxWidth = 500
 						alwaystransparent = yes
 					}
 				}
 			}
 
+			containerWindowType = {#train
+				
+				position = { x = 30 y = 234 }
+
+				buttonType = {
+					name = "YCP_party_issue_train_button"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					
+				}
+	
+				iconType = {
+					name = "YCP_party_issue_train_frame"
+					quadTextureSprite = "GFX_YCP_portrait_frame_2"
+					position = { x = -6 y = -6 }
+					Orientation = "UPPER_LEFT"
+					alwaystransparent = yes
+				}
 			
+				containerWindowType = {
+					name = "YCP_party_issue_select_button_window"
+					position = { x = -7 y = 212 }
+					size = { width = 170 height = 45 }
+		
+					background = {
+						name = "Background"
+						quadTextureSprite = "GFX_tiled_window_small"
+						alwaystransparent = yes
+					}
+		
+					instantTextBoxType = {
+						name = "YCP_party_issue_train_title"
+						position = { x = -163 y = 12 }
+						text = YCP_party_issue_train_title_text
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 500
+						alwaystransparent = yes
+					}
+				}
+			}
+
+			containerWindowType = {#propaganda
+				
+				position = { x = 220 y = 234 }
+
+				buttonType = {
+					name = "YCP_party_issue_propaganda_button"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					
+				}
+	
+				iconType = {
+					name = "YCP_party_issue_propaganda_frame"
+					quadTextureSprite = "GFX_YCP_portrait_frame_2"
+					position = { x = -6 y = -6 }
+					Orientation = "UPPER_LEFT"
+					alwaystransparent = yes
+				}
 			
+				containerWindowType = {
+					name = "YCP_party_issue_select_button_window"
+					position = { x = -7 y = 212 }
+					size = { width = 170 height = 45 }
+		
+					background = {
+						name = "Background"
+						quadTextureSprite = "GFX_tiled_window_small"
+						alwaystransparent = yes
+					}
+		
+					instantTextBoxType = {
+						name = "YCP_party_issue_propaganda_title"
+						position = { x = -163 y = 12 }
+						text = YCP_party_issue_propaganda_title_text
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 500
+						alwaystransparent = yes
+					}
+				}
+			}
+
+			containerWindowType = {#interior
+				
+				position = { x = 410 y = 234 }
+
+				buttonType = {
+					name = "YCP_party_issue_interior_button"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					
+				}
+	
+				iconType = {
+					name = "YCP_party_issue_interior_frame"
+					quadTextureSprite = "GFX_YCP_portrait_frame_2"
+					position = { x = -6 y = -6 }
+					Orientation = "UPPER_LEFT"
+					alwaystransparent = yes
+				}
+			
+				containerWindowType = {
+					name = "YCP_party_issue_select_button_window"
+					position = { x = -7 y = 212 }
+					size = { width = 170 height = 45 }
+		
+					background = {
+						name = "Background"
+						quadTextureSprite = "GFX_tiled_window_small"
+						alwaystransparent = yes
+					}
+		
+					instantTextBoxType = {
+						name = "YCP_party_issue_interior_title"
+						position = { x = -163 y = 12 }
+						text = YCP_party_issue_interior_title_text
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 500
+						alwaystransparent = yes
+					}
+				}
+			}
+
+			containerWindowType = {#foreign
+				
+				position = { x = 830 y = 234 }
+
+				buttonType = {
+					name = "YCP_party_issue_oreign_button"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					
+				}
+	
+				iconType = {
+					name = "YCP_party_issue_foreign_frame"
+					quadTextureSprite = "GFX_YCP_portrait_frame_2"
+					position = { x = -6 y = -6 }
+					Orientation = "UPPER_LEFT"
+					alwaystransparent = yes
+				}
+			
+				containerWindowType = {
+					name = "YCP_party_issue_select_button_window"
+					position = { x = -7 y = 212 }
+					size = { width = 170 height = 45 }
+		
+					background = {
+						name = "Background"
+						quadTextureSprite = "GFX_tiled_window_small"
+						alwaystransparent = yes
+					}
+		
+					instantTextBoxType = {
+						name = "YCP_party_issue_foreign_title"
+						position = { x = -163 y = 12 }
+						text = YCP_party_issue_foreign_title_text
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 500
+						alwaystransparent = yes
+					}
+				}
+			}
+
+			containerWindowType = {#organization
+				
+				position = { x = 1010 y = 234 }
+
+				buttonType = {
+					name = "YCP_party_issue_organization_button"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					
+				}
+	
+				iconType = {
+					name = "YCP_party_issue_organization_frame"
+					quadTextureSprite = "GFX_YCP_portrait_frame_2"
+					position = { x = -6 y = -6 }
+					Orientation = "UPPER_LEFT"
+					alwaystransparent = yes
+				}
+			
+				containerWindowType = {
+					name = "YCP_party_issue_select_button_window"
+					position = { x = -7 y = 212 }
+					size = { width = 170 height = 45 }
+		
+					background = {
+						name = "Background"
+						quadTextureSprite = "GFX_tiled_window_small"
+						alwaystransparent = yes
+					}
+		
+					instantTextBoxType = {
+						name = "YCP_party_issue_organization_title"
+						position = { x = -163 y = 12 }
+						text = YCP_party_issue_organization_title_text
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 500
+						alwaystransparent = yes
+					}
+				}
+			}
+
+			containerWindowType = {#youth
+				
+				position = { x = 1200 y = 234 }
+
+				buttonType = {
+					name = "YCP_party_issue_youth_button"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					
+				}
+	
+				iconType = {
+					name = "YCP_party_issue_youth_frame"
+					quadTextureSprite = "GFX_YCP_portrait_frame_2"
+					position = { x = -6 y = -6 }
+					Orientation = "UPPER_LEFT"
+					alwaystransparent = yes
+				}
+			
+				containerWindowType = {
+					name = "YCP_party_issue_select_button_window"
+					position = { x = -7 y = 212 }
+					size = { width = 170 height = 45 }
+		
+					background = {
+						name = "Background"
+						quadTextureSprite = "GFX_tiled_window_small"
+						alwaystransparent = yes
+					}
+		
+					instantTextBoxType = {
+						name = "YCP_party_issue_youth_title"
+						position = { x = -163 y = 12 }
+						text = YCP_party_issue_youth_title_text
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 500
+						alwaystransparent = yes
+					}
+				}
+			}
+			
+		}
+		
+
+		containerWindowType = {
+			name = "YCP_party_issue_list_normal_container"
+			position = { x = 0 y = 531 }
+			size = { width = 100% height = 349 }
+			Orientation = UPPER_LEFT
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_research_bg"
+				alwaystransparent = yes
+			}
+
+			containerWindowType = {#standing1
+				
+				position = { x = 30 y = 35 }
+
+				buttonType = {
+					name = "YCP_party_issue_standing_1_button"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					
+				}
+	
+				iconType = {
+					name = "YCP_party_issue_standing_frame"
+					quadTextureSprite = "GFX_YCP_portrait_frame_2"
+					position = { x = -6 y = -6 }
+					Orientation = "UPPER_LEFT"
+					alwaystransparent = yes
+				}
+			
+				containerWindowType = {
+					name = "YCP_party_issue_select_button_window"
+					position = { x = -7 y = 212 }
+					size = { width = 170 height = 45 }
+		
+					background = {
+						name = "Background"
+						quadTextureSprite = "GFX_tiled_window_small"
+						alwaystransparent = yes
+					}
+		
+					instantTextBoxType = {
+						name = "YCP_party_issue_standing_title"
+						position = { x = -163 y = 12 }
+						text = YCP_party_issue_standing_title_text
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 500
+						alwaystransparent = yes
+					}
+				}
+			}
+
+			containerWindowType = {#standing2
+				
+				position = { x = 260 y = 35 }
+
+				buttonType = {
+					name = "YCP_party_issue_standing_2_button"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					
+				}
+	
+				iconType = {
+					name = "YCP_party_issue_standing_frame"
+					quadTextureSprite = "GFX_YCP_portrait_frame_2"
+					position = { x = -6 y = -6 }
+					Orientation = "UPPER_LEFT"
+					alwaystransparent = yes
+				}
+			
+				containerWindowType = {
+					name = "YCP_party_issue_select_button_window"
+					position = { x = -7 y = 212 }
+					size = { width = 170 height = 45 }
+		
+					background = {
+						name = "Background"
+						quadTextureSprite = "GFX_tiled_window_small"
+						alwaystransparent = yes
+					}
+		
+					instantTextBoxType = {
+						name = "YCP_party_issue_standing_title"
+						position = { x = -163 y = 12 }
+						text = YCP_party_issue_standing_title_text
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 500
+						alwaystransparent = yes
+					}
+				}
+			}
+
+			containerWindowType = {#standing3
+				
+				position = { x = 490 y = 35 }
+
+				buttonType = {
+					name = "YCP_party_issue_standing_3_button"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					
+				}
+	
+				iconType = {
+					name = "YCP_party_issue_standing_frame"
+					quadTextureSprite = "GFX_YCP_portrait_frame_2"
+					position = { x = -6 y = -6 }
+					Orientation = "UPPER_LEFT"
+					alwaystransparent = yes
+				}
+			
+				containerWindowType = {
+					name = "YCP_party_issue_select_button_window"
+					position = { x = -7 y = 212 }
+					size = { width = 170 height = 45 }
+		
+					background = {
+						name = "Background"
+						quadTextureSprite = "GFX_tiled_window_small"
+						alwaystransparent = yes
+					}
+		
+					instantTextBoxType = {
+						name = "YCP_party_issue_standing_title"
+						position = { x = -163 y = 12 }
+						text = YCP_party_issue_standing_title_text
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 500
+						alwaystransparent = yes
+					}
+				}
+			}
+
+			containerWindowType = {#standing4
+				
+				position = { x = 750 y = 35 }
+
+				buttonType = {
+					name = "YCP_party_issue_standing_4_button"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					
+				}
+	
+				iconType = {
+					name = "YCP_party_issue_standing_frame"
+					quadTextureSprite = "GFX_YCP_portrait_frame_2"
+					position = { x = -6 y = -6 }
+					Orientation = "UPPER_LEFT"
+					alwaystransparent = yes
+				}
+			
+				containerWindowType = {
+					name = "YCP_party_issue_select_button_window"
+					position = { x = -7 y = 212 }
+					size = { width = 170 height = 45 }
+		
+					background = {
+						name = "Background"
+						quadTextureSprite = "GFX_tiled_window_small"
+						alwaystransparent = yes
+					}
+		
+					instantTextBoxType = {
+						name = "YCP_party_issue_standing_title"
+						position = { x = -163 y = 12 }
+						text = YCP_party_issue_standing_title_text
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 500
+						alwaystransparent = yes
+					}
+				}
+			}
+
+			containerWindowType = {#standing5
+				
+				position = { x = 980 y = 35 }
+
+				buttonType = {
+					name = "YCP_party_issue_standing_5_button"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					
+				}
+	
+				iconType = {
+					name = "YCP_party_issue_standing_frame"
+					quadTextureSprite = "GFX_YCP_portrait_frame_2"
+					position = { x = -6 y = -6 }
+					Orientation = "UPPER_LEFT"
+					alwaystransparent = yes
+				}
+			
+				containerWindowType = {
+					name = "YCP_party_issue_select_button_window"
+					position = { x = -7 y = 212 }
+					size = { width = 170 height = 45 }
+		
+					background = {
+						name = "Background"
+						quadTextureSprite = "GFX_tiled_window_small"
+						alwaystransparent = yes
+					}
+		
+					instantTextBoxType = {
+						name = "YCP_party_issue_standing_title"
+						position = { x = -163 y = 12 }
+						text = YCP_party_issue_standing_title_text
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 500
+						alwaystransparent = yes
+					}
+				}
+			}
+
+			containerWindowType = {#standing6
+				
+				position = { x = 1210 y = 35 }
+
+				buttonType = {
+					name = "YCP_party_issue_standing_6_button"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_portrait_SZC_lai_yongqing_large"
+					
+				}
+	
+				iconType = {
+					name = "YCP_party_issue_standing_frame"
+					quadTextureSprite = "GFX_YCP_portrait_frame_2"
+					position = { x = -6 y = -6 }
+					Orientation = "UPPER_LEFT"
+					alwaystransparent = yes
+				}
+			
+				containerWindowType = {
+					name = "YCP_party_issue_select_button_window"
+					position = { x = -7 y = 212 }
+					size = { width = 170 height = 45 }
+		
+					background = {
+						name = "Background"
+						quadTextureSprite = "GFX_tiled_window_small"
+						alwaystransparent = yes
+					}
+		
+					instantTextBoxType = {
+						name = "YCP_party_issue_standing_title"
+						position = { x = -163 y = 12 }
+						text = YCP_party_issue_standing_title_text
+						font = "hoi_18mbs"
+						format = center
+						maxWidth = 500
+						alwaystransparent = yes
+					}
+				}
+			}
 		}
 	}
 	
