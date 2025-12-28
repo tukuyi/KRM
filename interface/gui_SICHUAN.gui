@@ -192,7 +192,7 @@ guiTypes = {
 
 	
 
-	### China Aligment GUI ###
+	### YCP Button ###
 	containerWindowType = {
 		name = "YCP_party_issue_gui_button_window"
 		position = { x = 425 y = 400 }
@@ -202,7 +202,7 @@ guiTypes = {
 		buttonType = {
 			name = "YCP_party_issue_gui_button"
 			position = { x = 0 y = 0 }
-			spriteType = "GFX_ideology_market_liberal_scheme_statist_subtype"
+			spriteType = "GFX_idea_YCP_party_issue_idea"
 			clicksound = click_ok
 			oversound = ui_menu_over
 			pdx_tooltip = "YCP_party_issue_gui_button_tooltip"
