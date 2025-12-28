@@ -56,3 +56,14 @@ YCP_working_in_party = {
 		}
 	}
 }
+
+YCP_select_standings = {
+	OR = {
+		has_country_flag = YCP_standing_1_selected
+		has_country_flag = YCP_standing_2_selected
+		has_country_flag = YCP_standing_3_selected
+		has_country_flag = YCP_standing_4_selected
+		has_country_flag = YCP_standing_5_selected
+		has_country_flag = YCP_standing_6_selected
+	}
+}
