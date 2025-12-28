@@ -2641,10 +2641,26 @@ YCP_party_issue_appoint_T = {
 		}
 		YCP_party_issue_fire_T = yes
 	}
+	meta_effect = {
+		text = {
+			add_ideas = {
+				[YCP_TOKEN]_DMT_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_select.GetTokenKey]"
+	}
 	set_variable = { ROOT.YCP_party_issue_train = var:YCP_party_issue_select }
 	remove_from_array = { ROOT.YCP_party_issue_train_selects = var:YCP_party_issue_select }
 }
 YCP_party_issue_fire_T = {
+	meta_effect = {
+		text = {
+			remove_ideas = {
+				[YCP_TOKEN]_DMT_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_train.GetTokenKey]"
+	}
 	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_train }
 	set_variable = { ROOT.YCP_party_issue_train = 0 }
 }
@@ -2666,10 +2682,26 @@ YCP_party_issue_appoint_P = {
 		}
 		YCP_party_issue_fire_P = yes
 	}
+	meta_effect = {
+		text = {
+			add_ideas = {
+				[YCP_TOKEN]_DMP_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_select.GetTokenKey]"
+	}
 	set_variable = { ROOT.YCP_party_issue_propaganda = var:YCP_party_issue_select }
 	remove_from_array = { ROOT.YCP_party_issue_propaganda_selects = var:YCP_party_issue_select }
 }
 YCP_party_issue_fire_P = {
+	meta_effect = {
+		text = {
+			remove_ideas = {
+				[YCP_TOKEN]_DMP_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_propaganda.GetTokenKey]"
+	}
 	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_propaganda }
 	set_variable = { ROOT.YCP_party_issue_propaganda = 0 }
 }
@@ -2691,10 +2723,26 @@ YCP_party_issue_appoint_I = {
 		}
 		YCP_party_issue_fire_I = yes
 	}
+	meta_effect = {
+		text = {
+			add_ideas = {
+				[YCP_TOKEN]_DMI_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_select.GetTokenKey]"
+	}
 	set_variable = { ROOT.YCP_party_issue_interior = var:YCP_party_issue_select }
 	remove_from_array = { ROOT.YCP_party_issue_interior_selects = var:YCP_party_issue_select }
 }
 YCP_party_issue_fire_I = {
+	meta_effect = {
+		text = {
+			remove_ideas = {
+				[YCP_TOKEN]_DMI_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_interior.GetTokenKey]"
+	}
 	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_interior }
 	set_variable = { ROOT.YCP_party_issue_interior = 0 }
 }
@@ -2716,10 +2764,26 @@ YCP_party_issue_appoint_F = {
 		}
 		YCP_party_issue_fire_F = yes
 	}
+	meta_effect = {
+		text = {
+			add_ideas = {
+				[YCP_TOKEN]_DMF_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_select.GetTokenKey]"
+	}
 	set_variable = { ROOT.YCP_party_issue_foreign = var:YCP_party_issue_select }
 	remove_from_array = { ROOT.YCP_party_issue_foreign_selects = var:YCP_party_issue_select }
 }
 YCP_party_issue_fire_F = {
+	meta_effect = {
+		text = {
+			remove_ideas = {
+				[YCP_TOKEN]_DMF_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_foreign.GetTokenKey]"
+	}
 	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_foreign }
 	set_variable = { ROOT.YCP_party_issue_foreign = 0 }
 }
@@ -2741,10 +2805,26 @@ YCP_party_issue_appoint_O = {
 		}
 		YCP_party_issue_fire_O = yes
 	}
+	meta_effect = {
+		text = {
+			add_ideas = {
+				[YCP_TOKEN]_DMO_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_select.GetTokenKey]"
+	}
 	set_variable = { ROOT.YCP_party_issue_organization = var:YCP_party_issue_select }
 	remove_from_array = { ROOT.YCP_party_issue_organization_selects = var:YCP_party_issue_select }
 }
 YCP_party_issue_fire_O = {
+	meta_effect = {
+		text = {
+			remove_ideas = {
+				[YCP_TOKEN]_DMO_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_organization.GetTokenKey]"
+	}
 	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_organization }
 	set_variable = { ROOT.YCP_party_issue_organization = 0 }
 }
@@ -2766,10 +2846,26 @@ YCP_party_issue_appoint_Y = {
 		}
 		YCP_party_issue_fire_Y = yes
 	}
+	meta_effect = {
+		text = {
+			add_ideas = {
+				[YCP_TOKEN]_DMY_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_select.GetTokenKey]"
+	}
 	set_variable = { ROOT.YCP_party_issue_youth = var:YCP_party_issue_select }
 	remove_from_array = { ROOT.YCP_party_issue_youth_selects = var:YCP_party_issue_select }
 }
 YCP_party_issue_fire_Y = {
+	meta_effect = {
+		text = {
+			remove_ideas = {
+				[YCP_TOKEN]_DMY_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_youth.GetTokenKey]"
+	}
 	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_youth }
 	set_variable = { ROOT.YCP_party_issue_youth = 0 }
 }
@@ -2866,10 +2962,26 @@ YCP_party_issue_appoint_S1 = {
 		}
 		YCP_party_issue_fire_S1 = yes
 	}
+	meta_effect = {
+		text = {
+			add_ideas = {
+				[YCP_TOKEN]_DM_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_select.GetTokenKey]"
+	}
 	set_variable = { ROOT.YCP_party_issue_standing_1 = var:YCP_party_issue_select }
 	remove_from_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_select }
 }
 YCP_party_issue_fire_S1 = {
+	meta_effect = {
+		text = {
+			remove_ideas = {
+				[YCP_TOKEN]_DM_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_standing_1.GetTokenKey]"
+	}
 	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_standing_1 }
 	set_variable = { ROOT.YCP_party_issue_standing_1 = 0 }
 }
@@ -2884,10 +2996,26 @@ YCP_party_issue_appoint_S2 = {
 		}
 		YCP_party_issue_fire_S2 = yes
 	}
+	meta_effect = {
+		text = {
+			add_ideas = {
+				[YCP_TOKEN]_DM_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_select.GetTokenKey]"
+	}
 	set_variable = { ROOT.YCP_party_issue_standing_2 = var:YCP_party_issue_select }
 	remove_from_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_select }
 }
 YCP_party_issue_fire_S2 = {
+	meta_effect = {
+		text = {
+			remove_ideas = {
+				[YCP_TOKEN]_DM_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_standing_2.GetTokenKey]"
+	}
 	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_standing_2 }
 	set_variable = { ROOT.YCP_party_issue_standing_2 = 0 }
 }
@@ -2902,10 +3030,26 @@ YCP_party_issue_appoint_S3 = {
 		}
 		YCP_party_issue_fire_S3 = yes
 	}
+	meta_effect = {
+		text = {
+			add_ideas = {
+				[YCP_TOKEN]_DM_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_select.GetTokenKey]"
+	}
 	set_variable = { ROOT.YCP_party_issue_standing_3 = var:YCP_party_issue_select }
 	remove_from_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_select }
 }
 YCP_party_issue_fire_S3 = {
+	meta_effect = {
+		text = {
+			remove_ideas = {
+				[YCP_TOKEN]_DM_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_standing_3.GetTokenKey]"
+	}
 	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_standing_3 }
 	set_variable = { ROOT.YCP_party_issue_standing_3 = 0 }
 }
@@ -2920,10 +3064,26 @@ YCP_party_issue_appoint_S4 = {
 		}
 		YCP_party_issue_fire_S4 = yes
 	}
+	meta_effect = {
+		text = {
+			add_ideas = {
+				[YCP_TOKEN]_DM_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_select.GetTokenKey]"
+	}
 	set_variable = { ROOT.YCP_party_issue_standing_4 = var:YCP_party_issue_select }
 	remove_from_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_select }
 }
 YCP_party_issue_fire_S4 = {
+	meta_effect = {
+		text = {
+			remove_ideas = {
+				[YCP_TOKEN]_DM_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_standing_4.GetTokenKey]"
+	}
 	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_standing_4 }
 	set_variable = { ROOT.YCP_party_issue_standing_4 = 0 }
 }
@@ -2938,10 +3098,26 @@ YCP_party_issue_appoint_S5 = {
 		}
 		YCP_party_issue_fire_S5 = yes
 	}
+	meta_effect = {
+		text = {
+			add_ideas = {
+				[YCP_TOKEN]_DM_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_select.GetTokenKey]"
+	}
 	set_variable = { ROOT.YCP_party_issue_standing_5 = var:YCP_party_issue_select }
 	remove_from_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_select }
 }
 YCP_party_issue_fire_S5 = {
+	meta_effect = {
+		text = {
+			remove_ideas = {
+				[YCP_TOKEN]_DM_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_standing_5.GetTokenKey]"
+	}
 	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_standing_5 }
 	set_variable = { ROOT.YCP_party_issue_standing_5 = 0 }
 }
@@ -2956,10 +3132,26 @@ YCP_party_issue_appoint_S6 = {
 		}
 		YCP_party_issue_fire_S6 = yes
 	}
+	meta_effect = {
+		text = {
+			add_ideas = {
+				[YCP_TOKEN]_DM_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_select.GetTokenKey]"
+	}
 	set_variable = { ROOT.YCP_party_issue_standing_6 = var:YCP_party_issue_select }
 	remove_from_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_select }
 }
 YCP_party_issue_fire_S6 = {
+	meta_effect = {
+		text = {
+			remove_ideas = {
+				[YCP_TOKEN]_DM_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_standing_6.GetTokenKey]"
+	}
 	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_standing_6 }
 	set_variable = { ROOT.YCP_party_issue_standing_6 = 0 }
 }
@@ -2971,7 +3163,7 @@ SZC_YCP_party_issue_setup = {
 	set_country_flag = YCP_foreign_unavailable
 	set_country_flag = YCP_organization_unavailable
 	set_country_flag = YCP_youth_unavailable
-	YCP_setup_addPI = yes
+	# YCP_setup_addPI = yes
 	set_variable = {
 		var = YCP_party_issue_chairman
 		value = token:SZC_zeng_qi
