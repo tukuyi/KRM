@@ -13,7 +13,7 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.1
 				war_support_factor = 0.075
-				
+
 			}
 		}
 ####################    INTERIIOR       ####################
@@ -329,8 +329,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				land_night_attack = 0.08
+				air_accidents_factor = 0.24
+				scientist_breakthrough_bonus_factor = 0.08
 			}
 		}
 		SZC_xia_erkang_DM_idea = {
