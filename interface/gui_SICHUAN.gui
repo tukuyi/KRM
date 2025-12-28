@@ -928,7 +928,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "YCP_party_issue_select_grid_container"
 			position = { x = 12 y = 40 }
-			size = { width = 445 height = 830 }
+			size = { width = 445 height = 790 }
 			margin = { top = 0 bottom = 8 }
 			scroll_wheel_factor = 10
 			smooth_scrolling = yes
@@ -949,6 +949,45 @@ guiTypes = {
 				slotsize = { width = 430 height = 270 }
 				max_slots_horizontal = 1
 				format = "UPPER_LEFT"
+			}
+		}
+
+		containerWindowType = {
+			name = "YCP_party_issue_fire_button_window"
+			position = { x = 10 y = 825 }
+			size = { width = 440 height = 45 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_small"
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "YCP_party_issue_fire_button"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_china_alignment_gui_button"
+				clicksound = click_ok
+				oversound = ui_menu_over
+				pdx_tooltip = YCP_party_issue_fire_button_tooltip
+			}
+
+			iconType = {
+				name = "YCP_party_issue_fire_icon"
+				position = { x = 5 y = 5 }
+				spriteType = "GFX_china_alignment_icon"
+				scale = 0.8
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "YCP_party_issue_fire_title"
+				position = { x = 55 y = 12 }
+				text =  YCP_party_issue_fire_title_text
+				font = "hoi_18mbs"
+				format = left
+				maxWidth = 500
+				alwaystransparent = yes
 			}
 		}
 
@@ -1028,6 +1067,7 @@ guiTypes = {
 				spriteType = "GFX_china_alignment_gui_button"
 				clicksound = click_ok
 				oversound = ui_menu_over
+				pdx_tooltip = YCP_party_issue_select_button_tooltip
 			}
 
 			iconType = {
@@ -1041,7 +1081,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "YCP_party_issue_select_title"
 				position = { x = 55 y = 12 }
-				text = YCP_party_issue_select_title_text
+				text =  YCP_party_issue_select_title_text
 				font = "hoi_18mbs"
 				format = left
 				maxWidth = 500

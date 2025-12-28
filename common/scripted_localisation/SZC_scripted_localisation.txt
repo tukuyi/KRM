@@ -74,6 +74,20 @@ defined_text = {
 	}
 }
 
+
+defined_text = {
+	name = GetPartyIssueButtonAvailable
+	text = {
+		trigger = {
+			has_political_power > 99.99
+		}
+		localization_key = YCP_party_issue_select_button_PP_enough
+	}
+	text = {
+		localization_key = YCP_party_issue_select_button_PP_not_enough
+	}
+}
+
 defined_text = {
 	name = YCPGetPartyIssueSelectDesc
 	text = {

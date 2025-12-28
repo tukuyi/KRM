@@ -340,6 +340,34 @@ scripted_gui = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
 				SZC_update_YCP_party_issue_gui = yes
+				YCP_party_issue_gui_clean = yes
+			}
+			YCP_party_issue_fire_button_click = {
+				if = {
+					limit = {
+						check_variable = { 
+							var = ROOT.YCP_party_issue_train
+							value = 0
+							compare = not_equals
+						}
+					}
+				}
+				YCP_party_issue_fire_T = yes
+				clr_country_flag = YCP_party_issue_select_gui_visibility
+				SZC_update_YCP_party_issue_gui = yes
+				YCP_party_issue_gui_clean = yes
+			}
+			YCP_party_issue_select_button_click = {
+				if = {
+					limit = {
+						has_political_power > 99.99
+					}
+					YCP_party_issue_appoint_T = yes
+					add_political_power = -100
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					SZC_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
 			}
 		}
 
@@ -380,6 +408,34 @@ scripted_gui = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
 				SZC_update_YCP_party_issue_gui = yes
+				YCP_party_issue_gui_clean = yes
+			}
+			YCP_party_issue_fire_button_click = {
+				if = {
+					limit = {
+						check_variable = { 
+							var = ROOT.YCP_party_issue_propaganda
+							value = 0
+							compare = not_equals
+						}
+					}
+				}
+				YCP_party_issue_fire_P = yes
+				clr_country_flag = YCP_party_issue_select_gui_visibility
+				SZC_update_YCP_party_issue_gui = yes
+				YCP_party_issue_gui_clean = yes
+			}
+			YCP_party_issue_select_button_click = {
+				if = {
+					limit = {
+						has_political_power > 99.99
+					}
+					YCP_party_issue_appoint_P = yes
+					add_political_power = -100
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					SZC_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
 			}
 		}
 
@@ -420,6 +476,34 @@ scripted_gui = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
 				SZC_update_YCP_party_issue_gui = yes
+				YCP_party_issue_gui_clean = yes
+			}
+			YCP_party_issue_fire_button_click = {
+				if = {
+					limit = {
+						check_variable = { 
+							var = ROOT.YCP_party_issue_interior
+							value = 0
+							compare = not_equals
+						}
+					}
+				}
+				YCP_party_issue_fire_I = yes
+				clr_country_flag = YCP_party_issue_select_gui_visibility
+				SZC_update_YCP_party_issue_gui = yes
+				YCP_party_issue_gui_clean = yes
+			}
+			YCP_party_issue_select_button_click = {
+				if = {
+					limit = {
+						has_political_power > 99.99
+					}
+					YCP_party_issue_appoint_I = yes
+					add_political_power = -100
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					SZC_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
 			}
 		}
 
@@ -460,6 +544,34 @@ scripted_gui = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
 				SZC_update_YCP_party_issue_gui = yes
+				YCP_party_issue_gui_clean = yes
+			}
+			YCP_party_issue_fire_button_click = {
+				if = {
+					limit = {
+						check_variable = { 
+							var = ROOT.YCP_party_issue_foreign
+							value = 0
+							compare = not_equals
+						}
+					}
+				}
+				YCP_party_issue_fire_F = yes
+				clr_country_flag = YCP_party_issue_select_gui_visibility
+				SZC_update_YCP_party_issue_gui = yes
+				YCP_party_issue_gui_clean = yes
+			}
+			YCP_party_issue_select_button_click = {
+				if = {
+					limit = {
+						has_political_power > 99.99
+					}
+					YCP_party_issue_appoint_F = yes
+					add_political_power = -100
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					SZC_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
 			}
 		}
 
@@ -500,6 +612,34 @@ scripted_gui = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
 				SZC_update_YCP_party_issue_gui = yes
+				YCP_party_issue_gui_clean = yes
+			}
+			YCP_party_issue_fire_button_click = {
+				if = {
+					limit = {
+						check_variable = { 
+							var = ROOT.YCP_party_issue_organization
+							value = 0
+							compare = not_equals
+						}
+					}
+				}
+				YCP_party_issue_fire_O = yes
+				clr_country_flag = YCP_party_issue_select_gui_visibility
+				SZC_update_YCP_party_issue_gui = yes
+				YCP_party_issue_gui_clean = yes
+			}
+			YCP_party_issue_select_button_click = {
+				if = {
+					limit = {
+						has_political_power > 99.99
+					}
+					YCP_party_issue_appoint_O = yes
+					add_political_power = -100
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					SZC_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
 			}
 		}
 
@@ -540,6 +680,34 @@ scripted_gui = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
 				SZC_update_YCP_party_issue_gui = yes
+				YCP_party_issue_gui_clean = yes
+			}
+			YCP_party_issue_fire_button_click = {
+				if = {
+					limit = {
+						check_variable = { 
+							var = ROOT.YCP_party_issue_youth
+							value = 0
+							compare = not_equals
+						}
+					}
+				}
+				YCP_party_issue_fire_Y = yes
+				clr_country_flag = YCP_party_issue_select_gui_visibility
+				SZC_update_YCP_party_issue_gui = yes
+				YCP_party_issue_gui_clean = yes
+			}
+			YCP_party_issue_select_button_click = {
+				if = {
+					limit = {
+						has_political_power > 99.99
+					}
+					YCP_party_issue_appoint_Y = yes
+					add_political_power = -100
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					SZC_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
 			}
 		}
 
@@ -587,6 +755,140 @@ scripted_gui = {
 			YCP_party_issue_select_button_close_click = {
 				clr_country_flag = YCP_party_issue_select_gui_visibility
 				SZC_update_YCP_party_issue_gui = yes
+				YCP_party_issue_gui_clean = yes
+			}
+			YCP_party_issue_fire_button_click = {
+				if = {
+					limit = {
+						has_country_flag = YCP_standing_1_selected
+						check_variable = { 
+							var = ROOT.YCP_party_issue_standing_1
+							value = 0
+							compare = not_equals
+						}
+					}
+					YCP_party_issue_fire_S1 = yes
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					SZC_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = YCP_standing_2_selected
+						check_variable = { 
+							var = ROOT.YCP_party_issue_standing_2
+							value = 0
+							compare = not_equals
+						}
+					}
+					YCP_party_issue_fire_S2 = yes
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					SZC_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = YCP_standing_3_selected
+						check_variable = { 
+							var = ROOT.YCP_party_issue_standing_3
+							value = 0
+							compare = not_equals
+						}
+					}
+					YCP_party_issue_fire_S3 = yes
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					SZC_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = YCP_standing_4_selected
+						check_variable = { 
+							var = ROOT.YCP_party_issue_standing_4
+							value = 0
+							compare = not_equals
+						}
+					}
+					YCP_party_issue_fire_S4 = yes
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					SZC_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = YCP_standing_5_selected
+						check_variable = { 
+							var = ROOT.YCP_party_issue_standing_5
+							value = 0
+							compare = not_equals
+						}
+					}
+					YCP_party_issue_fire_S5 = yes
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					SZC_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+				else_if = {
+					limit = {
+						has_country_flag = YCP_standing_6_selected
+						check_variable = { 
+							var = ROOT.YCP_party_issue_standing_6
+							value = 0
+							compare = not_equals
+						}
+					}
+					YCP_party_issue_fire_S6 = yes
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					SZC_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
+			}
+			YCP_party_issue_select_button_click = {
+				if = {
+					limit = {
+						has_political_power > 99.99
+					}
+					if = {
+						limit = {
+							has_country_flag = YCP_standing_1_selected
+						}
+						YCP_party_issue_appoint_S1 = yes
+					}
+					else_if = {
+						limit = {
+							has_country_flag = YCP_standing_2_selected
+						}
+						YCP_party_issue_appoint_S2 = yes
+					}
+					else_if = {
+						limit = {
+							has_country_flag = YCP_standing_3_selected
+						}
+						YCP_party_issue_appoint_S3 = yes
+					}
+					else_if = {
+						limit = {
+							has_country_flag = YCP_standing_4_selected
+						}
+						YCP_party_issue_appoint_S4 = yes
+					}
+					else_if = {
+						limit = {
+							has_country_flag = YCP_standing_5_selected
+						}
+						YCP_party_issue_appoint_S5 = yes
+					}
+					else_if = {
+						limit = {
+							has_country_flag = YCP_standing_6_selected
+						}
+						YCP_party_issue_appoint_S6 = yes
+					}
+					add_political_power = -100
+					clr_country_flag = YCP_party_issue_select_gui_visibility
+					SZC_update_YCP_party_issue_gui = yes
+					YCP_party_issue_gui_clean = yes
+				}
 			}
 		}
 
@@ -601,6 +903,16 @@ scripted_gui = {
 			}
 		}
 	}
+
+
+	# YCP_party_issue_fire_button_click_window = {
+	# 	visible = {
+	# 		set_temp_variable = {
+	# 			YCP_adv_chk = [?YCP_party_issue_select.GetTokenKey]
+	# 		}
+	# 		YCP_working_in_party = yes
+	# 	}
+	# }
 
 }
 

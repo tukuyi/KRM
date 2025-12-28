@@ -237,6 +237,7 @@ SZC_debug_category = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_DEBUG_YCPpath_YCPphase1_decision target: [From.GetName]"
 			hidden_effect = {
+				SZC_YCP_party_issue_setup = YES
 				SZC_zeng_qi = {
 					SZC_recruit_character_effect = yes
 				}
