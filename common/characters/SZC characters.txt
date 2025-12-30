@@ -4370,6 +4370,26 @@ characters = {
 		}
 	}
 
+	#廖海涛
+	SZC_liao_haitao = {
+		name = SZC_liao_haitao
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_liao_haitao_large
+				small = GFX_portrait_SZC_liao_haitao_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_liao_haitao_desc
+			traits = { member_of_YCP infantry_officer  }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
 	#西路军抽象大舞台#
 
 	#张国焘
