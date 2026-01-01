@@ -13631,7 +13631,6 @@ focus_tree = {
 				custom_effect_tooltip = SZC_pan_changyou_will_be_helpful_tt
 				custom_effect_tooltip = tooltip_white_line
 			}
-			SZC_reconstruction_effect = yes
 			CHN_improve_economic_devastation_effect = yes
 		}
 	}
@@ -19273,7 +19272,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed pan_about_economy"
-			SZC_reconstruction_effect = yes
+			KMT_NRC_initial_reconstruction_effect = yes
 			CHN_improve_economic_devastation_effect = yes
 		}
 	}
@@ -25292,7 +25291,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_begin_national_reconstruction"
-			SZC_reconstruction_effect = yes
 			CHN_improve_economic_devastation_effect = yes
 		}
 	}
