@@ -3084,6 +3084,59 @@ YCP_party_issue_remove_non_standing = {
 	remove_from_array = { ROOT.YCP_party_issue_youth_selects = var:temp_select_token }
 }
 
+YCP_party_issue_retire_to_standing = {
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_train = var:temp_select_token }
+		}
+		YCP_party_issue_fire_T = yes
+		remove_from_array = { ROOT.YCP_party_issue_train_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_propaganda = var:temp_select_token }
+		}
+		YCP_party_issue_fire_P = yes
+		remove_from_array = { ROOT.YCP_party_issue_propaganda_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_interior = var:temp_select_token }
+		}
+		YCP_party_issue_fire_I = yes
+		remove_from_array = { ROOT.YCP_party_issue_interior_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_foreign = var:temp_select_token }
+		}
+		YCP_party_issue_fire_F = yes
+		remove_from_array = { ROOT.YCP_party_issue_foreign_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_organization = var:temp_select_token }
+		}
+		YCP_party_issue_fire_O = yes
+		remove_from_array = { ROOT.YCP_party_issue_organization_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_youth = var:temp_select_token }
+		}
+		YCP_party_issue_fire_Y = yes
+		remove_from_array = { ROOT.YCP_party_issue_youth_selects = var:temp_select_token }
+	}
+	remove_from_array = { ROOT.YCP_party_issue_train_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_propaganda_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_interior_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_foreign_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_foreign_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_organization_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_youth_selects = var:temp_select_token }
+	add_to_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+}
+
 YCP_party_issue_remove_status = {
 	if = {
 		limit = {
@@ -3491,6 +3544,142 @@ YCP_party_issue_resign_completely = {
 	YCP_party_issue_fire_T = yes
 }
 
+YCP_zeng_authdem_center_setup = {
+	set_temp_variable = { temp_select_token = token:SZC_zuo_shunsheng }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_chen_qitian }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_chang_yansheng }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_hu_guowei }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_zhang_zizhu }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_zheng_zhenwen }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_yu_jiaju }
+	ycp_party_issue_remove_standing = yes
+	set_variable = {
+		var = YCP_party_issue_train
+		value = token:SZC_yu_jiaju
+	}
+	set_variable = {
+		var = YCP_party_issue_propaganda
+		value = token:SZC_zhang_zizhu
+	}
+	set_variable = {
+		var = YCP_party_issue_interior
+		value = token:SZC_hu_guowei
+	}
+	set_variable = {
+		var = YCP_party_issue_youth
+		value = token:SZC_zheng_zhenwen
+	}
+	add_ideas = {
+		SZC_yu_jiaju_DMT_idea
+		SZC_zhang_zizhu_DMP_idea
+		SZC_hu_guowei_DMI_idea
+		SZC_zheng_zhenwen_DMY_idea
+	}
+}
+
+YCP_zeng_pataut_center_setup = {
+	set_temp_variable = { temp_select_token = token:SZC_li_huang }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_he_luzhi }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_zuo_shunsheng }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_chen_qitian }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_li_buwei }	
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_chang_yansheng }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_hu_guowei }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_duan_zhenhuan }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_huang_shizi	 }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_liu_pengjiu }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_liu_siying }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_cui_wanqiu }
+	ycp_party_issue_remove_standing = yes
+	set_variable = {
+		var = YCP_party_issue_train
+		value = token:SZC_hu_guowei
+	}
+	set_variable = {
+		var = YCP_party_issue_propaganda
+		value = token:SZC_liu_siying
+	}
+	set_variable = {
+		var = YCP_party_issue_interior
+		value = token:SZC_duan_zhenhuan
+	}
+	set_variable = {
+		var = YCP_party_issue_organization
+		value = token:SZC_huang_shizi
+	}
+	set_variable = {
+		var = YCP_party_issue_youth
+		value = token:SZC_cui_wanqiu
+	}
+	set_variable = {
+		var = YCP_party_issue_foreign
+		value = token:SZC_liu_pengjiu
+	}
+	add_ideas = {
+		SZC_hu_guowei_DMT_idea
+		SZC_liu_siying_DMP_idea
+		SZC_duan_zhenhuan_DMI_idea
+		SZC_huang_shizi_DMO_idea
+		SZC_cui_wanqiu_DMY_idea
+		SZC_liu_pengjiu_DMF_idea
+	}
+}
+
+
+YCP_li_zuo_center_setup = {
+	set_temp_variable = { temp_select_token = token:SZC_li_huang }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_li_buwei }	
+	YCP_party_issue_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_chang_yansheng }
+	YCP_party_issue_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_wei_shizhen }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_liu_dongyan }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_xie_chengping }
+	ycp_party_issue_remove_standing = yes
+	set_variable = {
+		var = YCP_party_issue_chairman
+		value = token:SZC_li_huang
+	}
+	set_variable = {
+		var = YCP_party_issue_organization
+		value = token:SZC_wei_shizhen
+	}
+	set_variable = {
+		var = YCP_party_issue_youth
+		value = token:SZC_liu_dongyan
+	}
+	set_variable = {
+		var = YCP_party_issue_foreign
+		value = token:SZC_xie_chengping
+	}
+	add_ideas = {
+		SZC_hu_guowei_DMC_idea
+		SZC_wei_shizhen_DMO_idea
+		SZC_liu_dongyan_DMY_idea
+		SZC_xie_chengping_DMF_idea
+	}
+}
+
 YCP_youth_center_setup = {
 	set_temp_variable = { temp_select_token = token:SZC_zeng_qi }
 	YCP_party_issue_remove_status = yes
@@ -3556,6 +3745,154 @@ YCP_youth_center_setup = {
 		SZC_liu_jingyuan_DMF_idea
 		SZC_wang_shizeng_DMO_idea
 		SZC_lin_keji_DMY_idea
+	}
+}
+
+YCP_elders_return_setup = {
+	set_temp_variable = { temp_select_token = token:SZC_zeng_qi }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_he_luzhi }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_li_huang }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_zuo_shunsheng }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_li_buwei }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_zeng_qi }
+	YCP_party_issue_add_S = yes
+}
+
+YCP_chen_center_setup = {
+	YCP_elders_return_setup = yes
+	set_temp_variable = { temp_select_token = token:SZC_yu_fuxian }
+	YCP_party_issue_remove_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_xia_taosheng }
+	YCP_party_issue_remove_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_liu_jingyuan }
+	YCP_party_issue_remove_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_tao_yuanzhen }
+	YCP_party_issue_remove_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_wang_shizeng }
+	YCP_party_issue_remove_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_lin_keji }	
+	YCP_party_issue_remove_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_chen_shanxin }
+	YCP_party_issue_remove_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_wang_lanseng }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_ding_tingbiao }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_hu_fuxian }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_chen_shanxin }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_yu_jiaju }
+	ycp_party_issue_remove_standing = yes
+	set_variable = {
+		var = YCP_party_issue_chairman
+		value = token:SZC_chen_qitian
+	}
+	set_variable = {
+		var = YCP_party_issue_train
+		value = token:SZC_yu_jiaju
+	}
+	set_variable = {
+		var = YCP_party_issue_propaganda
+		value = token:SZC_chang_yansheng
+	}
+	set_variable = {
+		var = YCP_party_issue_interior
+		value = token:SZC_wang_lanseng
+	}
+	set_variable = {
+		var = YCP_party_issue_foreign
+		value = token:SZC_ding_tingbiao
+	}
+	set_variable = {
+		var = YCP_party_issue_organization
+		value = token:SZC_hu_fuxian
+	}
+	set_variable = {
+		var = YCP_party_issue_youth
+		value = token:SZC_chen_shanxin
+	}
+	add_ideas = {
+		SZC_chen_qitian_DMC_idea
+		SZC_yu_jiaju_DMT_idea
+		SZC_chang_yansheng_DMP_idea
+		SZC_wang_lanseng_DMI_idea
+		SZC_ding_tingbiao_DMF_idea
+		SZC_hu_fuxian_DMO_idea
+		SZC_chen_shanxin_DMY_idea
+	}
+}
+
+YCP_jiang_coup_center_setup = {
+	set_temp_variable = { temp_select_token = token:SZC_li_huang }
+	YCP_party_issue_remove_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_he_luzhi }
+	YCP_party_issue_remove_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_xie_chengping }
+	YCP_party_issue_remove_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_zuo_shunsheng }
+	YCP_party_issue_remove_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_zheng_zhenwen }
+	YCP_party_issue_remove_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_wei_shizhen }	
+	YCP_party_issue_remove_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_chen_qitian }
+	YCP_party_issue_remove_retire_to_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_jiang_yungang }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_cui_wanqiu }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_tan_tiwu }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_tao_yuanzhen }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_liu_yongji }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_huang_shizi }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_liu_jingyuan }
+	ycp_party_issue_remove_standing = yes
+	set_variable = {
+		var = YCP_party_issue_chairman
+		value = token:SZC_jiang_yungang
+	}
+	set_variable = {
+		var = YCP_party_issue_train
+		value = token:SZC_cui_wanqiu
+	}
+	set_variable = {
+		var = YCP_party_issue_propaganda
+		value = token:SZC_tao_yuanzhen
+	}
+	set_variable = {
+		var = YCP_party_issue_interior
+		value = token:SZC_tan_tiwu
+	}
+	set_variable = {
+		var = YCP_party_issue_foreign
+		value = token:SZC_liu_yongji
+	}
+	set_variable = {
+		var = YCP_party_issue_organization
+		value = token:SZC_huang_shizi
+	}
+	set_variable = {
+		var = YCP_party_issue_youth
+		value = token:SZC_liu_jingyuan
+	}
+	add_ideas = {
+		SZC_jiang_yungang_DMC_idea
+		SZC_cui_wanqiu_DMT_idea
+		SZC_tao_yuanzhen_DMP_idea
+		SZC_tan_tiwu_DMI_idea
+		SZC_liu_yongji_DMF_idea
+		SZC_huang_shizi_DMO_idea
+		SZC_liu_jingyuan_DMY_idea
 	}
 }
 
