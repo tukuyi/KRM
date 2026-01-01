@@ -985,7 +985,7 @@ country_event = { #政治教导
 	}
 }
 
-country_event = { #杨专员
+country_event = { #吕专员
 	id = NKRsichuan.106
 	title = NKRsichuan.106.t
 	desc = NKRsichuan.106.d
@@ -996,10 +996,10 @@ country_event = { #杨专员
 	option = {#南京的触角无处不在。
 		log = "[GetLogInfo]: event NKRsichuan.106 option NKRsichuan.106.a"
 		name = NKRsichuan.106.a
-		SZC_yang_shukan = {
+		SZC_lv_yifeng = {
 			SZC_recruit_character_effect = yes
 		}
-		activate_advisor = SZC_yang_shukan_advisor
+		activate_advisor = SZC_lv_yifeng_advisor
 		add_popularity = {
 			ideology = radical_socialist
 			popularity = 0.03
@@ -1795,7 +1795,7 @@ country_event = { #国民党内战-开始
 	option = {#我们要打到南京去！
 		log = "[GetLogInfo]: event NKRsichuan.140 option NKRsichuan.141.a"
 		name = NKRsichuan.141.a
-		SZC_yang_shukan = {
+		SZC_lv_yifeng = {
 			retire = yes
 		}
 		set_country_flag = NKRSZC_KMTcivilwar

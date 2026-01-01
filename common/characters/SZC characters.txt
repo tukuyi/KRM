@@ -2504,17 +2504,18 @@ characters = {
 		}
 	}
 
-	#杨庶堪
-	SZC_yang_shukan = {
-		name = SZC_yang_shukan
+	#吕一峰
+	SZC_lv_yifeng = {
+		name = SZC_lv_yifeng
 		portraits = {
 			civilian = {
-				small = GFX_portrait_SZC_yang_shukan_civilian_small
+				large = GFX_portrait_SZC_lv_yifeng_civilian_large
+				small = GFX_portrait_SZC_lv_yifeng_civilian_small
 			}
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = SZC_yang_shukan_advisor
+			idea_token = SZC_lv_yifeng_advisor
 			traits = { SZC_come_from_nanking }
 			can_be_fired = no
 		}
@@ -2555,21 +2556,21 @@ characters = {
 
 	}
 	#杨庶堪
-	SZC_yang_shukan = {
-		name = SZC_yang_shukan
+	SZC_lv_yifeng = {
+		name = SZC_lv_yifeng
 		portraits = {
 			civilian = {
-				small = GFX_portrait_SZC_yang_shukan_small
+				small = GFX_portrait_SZC_lv_yifeng_small
 			}
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = SZC_yang_shukan_advisor
+			idea_token = SZC_lv_yifeng_advisor
 			ledger = civilian
 			traits = { KR_influential_intellectual }
 			cost = 100
 			can_be_fired = no
-			desc = SZC_yang_shukan_desc
+			desc = SZC_lv_yifeng_desc
 		}
 
 	}
