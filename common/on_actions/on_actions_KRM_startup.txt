@@ -1,0 +1,35 @@
+on_actions = {
+    on_startup = {
+		effect = {
+			QIE = {
+				set_party_name = {
+					ideology = national_populist
+					name = QIE_YCP_1_party
+					long_name = QIE_YCP_1_party_long
+				}
+				QIE_li_huang = {
+					retire = yes
+				}
+				QIE_zeng_qi = {
+					retire = yes
+				}
+				SZC = {
+					SZC_zhao_yusong = {
+						CHN_recruit_character_effect = yes
+					}
+				}
+			}
+			SHX = {
+				SHX_chang_yansheng = {
+					retire = yes
+				}
+			}
+			HNN = {
+				HNN_zuo_shunsheng = {
+					retire = yes
+				}
+			}
+		}
+	}
+}
+
