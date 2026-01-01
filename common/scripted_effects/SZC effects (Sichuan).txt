@@ -2677,13 +2677,21 @@ YCP_setup_addPI = {
 	set_temp_variable = { temp_select_token = token:SZC_liao_shangke }
 	YCP_party_issue_add_S = yes
 }
+YCP_party_issue_fire_C = {
+	meta_effect = {
+		text = {
+			remove_ideas = {
+				[YCP_TOKEN]_DMC_idea
+			}
+		}
+		YCP_TOKEN = "[?YCP_party_issue_chairman.GetTokenKey]"
+	}
+	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_chairman }
+	set_variable = { ROOT.YCP_party_issue_chairman = 0 }
+}
 
 YCP_party_issue_add_T = {
-	add_to_array = { ROOT.YCP_party_issue_train_selects = temp_select_token }
-}
-YCP_party_issue_remove_T = {
-	YCP_party_issue_remove_status = yes
-	remove_from_array = { ROOT.YCP_party_issue_train_selects = temp_select_token }
+	add_to_array = { ROOT.YCP_party_issue_train_selects = var:temp_select_token }
 }
 YCP_party_issue_appoint_T = {
 	if = {
@@ -2720,11 +2728,7 @@ YCP_party_issue_fire_T = {
 	set_variable = { ROOT.YCP_party_issue_train = 0 }
 }
 YCP_party_issue_add_P = {
-	add_to_array = { ROOT.YCP_party_issue_propaganda_selects = temp_select_token }
-}
-YCP_party_issue_remove_P = {
-	YCP_party_issue_remove_status = yes
-	remove_from_array = { ROOT.YCP_party_issue_propaganda_selects = temp_select_token }
+	add_to_array = { ROOT.YCP_party_issue_propaganda_selects = var:temp_select_token }
 }
 YCP_party_issue_appoint_P = {
 	if = {
@@ -2761,11 +2765,7 @@ YCP_party_issue_fire_P = {
 	set_variable = { ROOT.YCP_party_issue_propaganda = 0 }
 }
 YCP_party_issue_add_I = {
-	add_to_array = { ROOT.YCP_party_issue_interior_selects = temp_select_token }
-}
-YCP_party_issue_remove_I = {
-	YCP_party_issue_remove_status = yes
-	remove_from_array = { ROOT.YCP_party_issue_interior_selects = temp_select_token }
+	add_to_array = { ROOT.YCP_party_issue_interior_selects = var:temp_select_token }
 }
 YCP_party_issue_appoint_I = {
 	if = {
@@ -2802,11 +2802,7 @@ YCP_party_issue_fire_I = {
 	set_variable = { ROOT.YCP_party_issue_interior = 0 }
 }
 YCP_party_issue_add_F = {
-	add_to_array = { ROOT.YCP_party_issue_foreign_selects = temp_select_token }
-}
-YCP_party_issue_remove_F = {
-	YCP_party_issue_remove_status = yes
-	remove_from_array = { ROOT.YCP_party_issue_foreign_selects = temp_select_token }
+	add_to_array = { ROOT.YCP_party_issue_foreign_selects = var:temp_select_token }
 }
 YCP_party_issue_appoint_F = {
 	if = {
@@ -2843,11 +2839,7 @@ YCP_party_issue_fire_F = {
 	set_variable = { ROOT.YCP_party_issue_foreign = 0 }
 }
 YCP_party_issue_add_O = {
-	add_to_array = { ROOT.YCP_party_issue_organization_selects = temp_select_token }
-}
-YCP_party_issue_remove_O = {
-	YCP_party_issue_remove_status = yes
-	remove_from_array = { ROOT.YCP_party_issue_organization_selects = temp_select_token }
+	add_to_array = { ROOT.YCP_party_issue_organization_selects = var:temp_select_token }
 }
 YCP_party_issue_appoint_O = {
 	if = {
@@ -2884,11 +2876,7 @@ YCP_party_issue_fire_O = {
 	set_variable = { ROOT.YCP_party_issue_organization = 0 }
 }
 YCP_party_issue_add_Y = {
-	add_to_array = { ROOT.YCP_party_issue_youth_selects = temp_select_token }
-}
-YCP_party_issue_remove_Y = {
-	YCP_party_issue_remove_status = yes
-	remove_from_array = { ROOT.YCP_party_issue_youth_selects = temp_select_token }
+	add_to_array = { ROOT.YCP_party_issue_youth_selects = var:temp_select_token }
 }
 YCP_party_issue_appoint_Y = {
 	if = {
@@ -2925,13 +2913,9 @@ YCP_party_issue_fire_Y = {
 	set_variable = { ROOT.YCP_party_issue_youth = 0 }
 }
 YCP_party_issue_add_S = {
-	add_to_array = { ROOT.YCP_party_issue_selects = temp_select_token }
+	add_to_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
 }
-YCP_party_issue_remove_S = {
-	YCP_party_issue_remove_status = yes
-	remove_from_array = { ROOT.YCP_party_issue_selects = temp_select_token }
-}
-YCP_party_issue_remove_status = {
+YCP_party_issue_fire_status = {
 	if = {
 		limit = {
 			check_variable = { YCP_party_issue_train = var:temp_select_token }
@@ -3004,6 +2988,200 @@ YCP_party_issue_remove_status = {
 		}
 		YCP_party_issue_fire_S6 = yes
 	}
+}
+
+ycp_party_issue_remove_standing = {
+	
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_standing_1 = var:temp_select_token }
+		}
+		YCP_party_issue_fire_S1 = yes
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_standing_2 = var:temp_select_token }
+		}
+		YCP_party_issue_fire_S2 = yes
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_standing_3 = var:temp_select_token }
+		}
+		YCP_party_issue_fire_S3 = yes
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_standing_4 = var:temp_select_token }
+		}
+		YCP_party_issue_fire_S4 = yes
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_standing_5 = var:temp_select_token }
+		}
+		YCP_party_issue_fire_S5 = yes
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_standing_6 = var:temp_select_token }
+		}
+		YCP_party_issue_fire_S6 = yes
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+}
+
+YCP_party_issue_remove_non_standing = {
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_train = var:temp_select_token }
+		}
+		YCP_party_issue_fire_T = yes
+		remove_from_array = { ROOT.YCP_party_issue_train_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_propaganda = var:temp_select_token }
+		}
+		YCP_party_issue_fire_P = yes
+		remove_from_array = { ROOT.YCP_party_issue_propaganda_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_interior = var:temp_select_token }
+		}
+		YCP_party_issue_fire_I = yes
+		remove_from_array = { ROOT.YCP_party_issue_interior_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_foreign = var:temp_select_token }
+		}
+		YCP_party_issue_fire_F = yes
+		remove_from_array = { ROOT.YCP_party_issue_foreign_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_organization = var:temp_select_token }
+		}
+		YCP_party_issue_fire_O = yes
+		remove_from_array = { ROOT.YCP_party_issue_organization_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_youth = var:temp_select_token }
+		}
+		YCP_party_issue_fire_Y = yes
+		remove_from_array = { ROOT.YCP_party_issue_youth_selects = var:temp_select_token }
+	}
+	remove_from_array = { ROOT.YCP_party_issue_train_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_propaganda_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_interior_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_foreign_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_foreign_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_organization_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_youth_selects = var:temp_select_token }
+}
+
+YCP_party_issue_remove_status = {
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_train = var:temp_select_token }
+		}
+		YCP_party_issue_fire_T = yes
+		remove_from_array = { ROOT.YCP_party_issue_train_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_propaganda = var:temp_select_token }
+		}
+		YCP_party_issue_fire_P = yes
+		remove_from_array = { ROOT.YCP_party_issue_propaganda_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_interior = var:temp_select_token }
+		}
+		YCP_party_issue_fire_I = yes
+		remove_from_array = { ROOT.YCP_party_issue_interior_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_foreign = var:temp_select_token }
+		}
+		YCP_party_issue_fire_F = yes
+		remove_from_array = { ROOT.YCP_party_issue_foreign_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_organization = var:temp_select_token }
+		}
+		YCP_party_issue_fire_O = yes
+		remove_from_array = { ROOT.YCP_party_issue_organization_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_youth = var:temp_select_token }
+		}
+		YCP_party_issue_fire_Y = yes
+		remove_from_array = { ROOT.YCP_party_issue_youth_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_standing_1 = var:temp_select_token }
+		}
+		YCP_party_issue_fire_S1 = yes
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_standing_2 = var:temp_select_token }
+		}
+		YCP_party_issue_fire_S2 = yes
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_standing_3 = var:temp_select_token }
+		}
+		YCP_party_issue_fire_S3 = yes
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_standing_4 = var:temp_select_token }
+		}
+		YCP_party_issue_fire_S4 = yes
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_standing_5 = var:temp_select_token }
+		}
+		YCP_party_issue_fire_S5 = yes
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	if = {
+		limit = {
+			check_variable = { YCP_party_issue_standing_6 = var:temp_select_token }
+		}
+		YCP_party_issue_fire_S6 = yes
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	remove_from_array = { ROOT.YCP_party_issue_train_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_propaganda_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_interior_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_foreign_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_foreign_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_organization_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_youth_selects = var:temp_select_token }
+	remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
 }
 
 YCP_party_issue_appoint_S1 = {
@@ -3308,6 +3486,86 @@ YCP_party_issue_gui_clean = {
 	clr_country_flag = YCP_standing_5_selected
 	clr_country_flag = YCP_standing_6_selected
 }
+
+YCP_party_issue_resign_completely = {
+	YCP_party_issue_fire_C = yes
+	YCP_party_issue_fire_F = yes
+	YCP_party_issue_fire_P = yes
+	YCP_party_issue_fire_I = yes
+	YCP_party_issue_fire_O = yes
+	YCP_party_issue_fire_T = yes
+}
+
+YCP_youth_center_setup = {
+	set_temp_variable = { temp_select_token = token:SZC_zeng_qi }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_li_huang }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_he_luzhi }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_zuo_shunsheng }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_chen_qitian }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_li_buwei }	
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_chang_yansheng }
+	YCP_party_issue_remove_status = yes
+	set_temp_variable = { temp_select_token = token:SZC_yu_fuxian }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_chen_shanxin }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_tao_yuanzhen }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_xia_taosheng }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_liu_jingyuan }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_wang_shizeng }
+	ycp_party_issue_remove_standing = yes
+	set_temp_variable = { temp_select_token = token:SZC_lin_keji }
+	ycp_party_issue_remove_standing = yes
+	set_variable = {
+		var = YCP_party_issue_chairman
+		value = token:SZC_yu_fuxian
+	}
+	set_variable = {
+		var = YCP_party_issue_train
+		value = token:SZC_chen_shanxin
+	}
+	set_variable = {
+		var = YCP_party_issue_propaganda
+		value = token:SZC_tao_yuanzhen
+	}
+	set_variable = {
+		var = YCP_party_issue_interior
+		value = token:SZC_xia_taosheng
+	}
+	set_variable = {
+		var = YCP_party_issue_foreign
+		value = token:SZC_liu_jingyuan
+	}
+	set_variable = {
+		var = YCP_party_issue_organization
+		value = token:SZC_wang_shizeng
+	}
+	set_variable = {
+		var = YCP_party_issue_youth
+		value = token:SZC_lin_keji
+	}
+	add_ideas = {
+		SZC_yu_fuxian_DMC_idea
+		SZC_chen_shanxin_DMT_idea
+		SZC_tao_yuanzhen_DMP_idea
+		SZC_xia_taosheng_DMI_idea
+		SZC_liu_jingyuan_DMF_idea
+		SZC_wang_shizeng_DMO_idea
+		SZC_lin_keji_DMY_idea
+	}
+}
+
+
+
 
 add_temp_unit_leader_role = {
 	hidden_effect = {

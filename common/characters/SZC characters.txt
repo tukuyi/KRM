@@ -4164,6 +4164,162 @@ characters = {
 		}
 	}
 
+	#穆全运
+	SZC_mu_quanyun = {
+		name = SZC_mu_quanyun
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_mu_quanyun_small
+				large = GFX_portrait_SZC_mu_quanyun_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_mu_quanyun_advisor
+			traits = {  }
+			desc = SZC_mu_quanyun_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_mu_quanyun
+				}
+				SZC_mu_quanyun = {
+					YCP_working_in_party = no
+				}
+			}
+		}
+	}
+
+	#刘鹏九
+	SZC_ding_tingbiao = {
+		name = SZC_ding_tingbiao
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_ding_tingbiao_small
+				large = GFX_portrait_SZC_ding_tingbiao_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_ding_tingbiao_advisor
+			traits = {  }
+			desc = SZC_ding_tingbiao_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_ding_tingbiao
+				}
+				SZC_ding_tingbiao = {
+					YCP_working_in_party = no
+				}
+			}
+		}
+	}
+
+	#刘鹏九
+	SZC_liu_pengjiu = {
+		name = SZC_liu_pengjiu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_liu_pengjiu_small
+				large = GFX_portrait_SZC_liu_pengjiu_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_liu_pengjiu_advisor
+			traits = {  }
+			desc = SZC_liu_pengjiu_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_liu_pengjiu
+				}
+				SZC_liu_pengjiu = {
+					YCP_working_in_party = no
+				}
+			}
+		}
+	}
+
+	#陶元珍
+	SZC_tao_yuanzhen = {
+		name = SZC_tao_yuanzhen
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_tao_yuanzhen_small
+				large = GFX_portrait_SZC_tao_yuanzhen_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_tao_yuanzhen_advisor
+			traits = {  }
+			desc = SZC_tao_yuanzhen_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_tao_yuanzhen
+				}
+				SZC_tao_yuanzhen = {
+					YCP_working_in_party = no
+				}
+			}
+		}
+	}
+
+	#陶元甘
+	SZC_tao_yuangan = {
+		name = SZC_tao_yuangan
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_tao_yuangan_small
+				large = GFX_portrait_SZC_tao_yuangan_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_tao_yuangan_advisor
+			traits = {  }
+			desc = SZC_tao_yuangan_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_tao_yuangan
+				}
+				SZC_tao_yuangan = {
+					YCP_working_in_party = no
+				}
+			}
+		}
+	}
+
+	#崔万秋
+	SZC_cui_wanqiu = {
+		name = SZC_cui_wanqiu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_cui_wanqiu_small
+				large = GFX_portrait_SZC_cui_wanqiu_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_cui_wanqiu_advisor
+			traits = {  }
+			desc = _desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_cui_wanqiu
+				}
+				SZC_cui_wanqiu = {
+					YCP_working_in_party = no
+				}
+			}
+		}
+	}
+
 	#闻一多
 	SZC_wen_yiduo = {
 		name = SZC_wen_yiduo
@@ -4378,6 +4534,21 @@ characters = {
 			army = {
 				large = GFX_portrait_SZC_liao_haitao_large
 				small = GFX_portrait_SZC_liao_haitao_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_liao_haitao_advisor
+			traits = {  }
+			desc = SZC_liao_haitao_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_liao_haitao
+				}
+				SZC_liao_haitao = {
+					YCP_working_in_party = no
+				}
 			}
 		}
 		corps_commander = {
