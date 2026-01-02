@@ -3436,7 +3436,128 @@ YCP_party_issue_fire_S6 = {
 	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_standing_6 }
 	set_variable = { ROOT.YCP_party_issue_standing_6 = 0 }
 }
+YCP_party_issue_appoint_to_empty_S = {
+	if = {
+		limit = {
+			check_variable = { 
+				var = ROOT.YCP_party_issue_standing_1
+				value = 0
+				compare = equals
+			}
+		}
+		meta_effect = {
+			text = {
+				add_ideas = {
+					[YCP_TOKEN]_DM_idea
+				}
+			}
+			YCP_TOKEN = "[?temp_select_token.GetTokenKey]"
+		}
+		set_variable = { ROOT.YCP_party_issue_standing_1 = var:temp_select_token }
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	else_if = {
+		limit = {
+			check_variable = { 
+				var = ROOT.YCP_party_issue_standing_2
+				value = 0
+				compare = equals
+			}
+		}
+		meta_effect = {
+			text = {
+				add_ideas = {
+					[YCP_TOKEN]_DM_idea
+				}
+			}
+			YCP_TOKEN = "[?temp_select_token.GetTokenKey]"
+		}
+		set_variable = { ROOT.YCP_party_issue_standing_2 = var:temp_select_token }
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	else_if = {
+		limit = {
+			check_variable = { 
+				var = ROOT.YCP_party_issue_standing_3
+				value = 0
+				compare = equals
+			}
+		}
+		meta_effect = {
+			text = {
+				add_ideas = {
+					[YCP_TOKEN]_DM_idea
+				}
+			}
+			YCP_TOKEN = "[?temp_select_token.GetTokenKey]"
+		}
+		set_variable = { ROOT.YCP_party_issue_standing_3 = var:temp_select_token }
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	else_if = {
+		limit = {
+			check_variable = { 
+				var = ROOT.YCP_party_issue_standing_4
+				value = 0
+				compare = equals
+			}
+		}
+		meta_effect = {
+			text = {
+				add_ideas = {
+					[YCP_TOKEN]_DM_idea
+				}
+			}
+			YCP_TOKEN = "[?temp_select_token.GetTokenKey]"
+		}
+		set_variable = { ROOT.YCP_party_issue_standing_4 = var:temp_select_token }
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	else_if = {
+		limit = {
+			check_variable = { 
+				var = ROOT.YCP_party_issue_standing_5
+				value = 0
+				compare = equals
+			}
+		}
+		meta_effect = {
+			text = {
+				add_ideas = {
+					[YCP_TOKEN]_DM_idea
+				}
+			}
+			YCP_TOKEN = "[?temp_select_token.GetTokenKey]"
+		}
+		set_variable = { ROOT.YCP_party_issue_standing_5 = var:temp_select_token }
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	else_if = {
+		limit = {
+			check_variable = { 
+				var = ROOT.YCP_party_issue_standing_6
+				value = 0
+				compare = equals
+			}
+		}
+		meta_effect = {
+			text = {
+				add_ideas = {
+					[YCP_TOKEN]_DM_idea
+				}
+			}
+			YCP_TOKEN = "[?temp_select_token.GetTokenKey]"
+		}
+		set_variable = { ROOT.YCP_party_issue_standing_6 = var:temp_select_token }
+		remove_from_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	}
+	else = {
+		#bruh
+	}
+}
+
 SZC_YCP_party_issue_setup = {
+	set_country_flag = YCP_party_issue_button_available
 	set_country_flag = YCP_chairman_unavailable
 	set_country_flag = YCP_train_unavailable
 	set_country_flag = YCP_propaganda_unavailable
@@ -3473,6 +3594,52 @@ SZC_YCP_party_issue_setup = {
 		var = YCP_party_issue_youth
 		value = token:SZC_chang_yansheng
 	}
+	# set_variable = {
+	# 	var = YCP_party_issue_standing_1
+	# 	value = token:SZC_zhang_bolun
+	# }
+	# set_variable = {
+	# 	var = YCP_party_issue_standing_2
+	# 	value = token:SZC_wang_shizeng
+	# }
+	# set_variable = {
+	# 	var = YCP_party_issue_standing_3
+	# 	value = token:SZC_xia_taosheng
+	# }
+	# set_variable = {
+	# 	var = YCP_party_issue_standing_4
+	# 	value = token:SZC_zhang_zizhu
+	# }
+	# set_variable = {
+	# 	var = YCP_party_issue_standing_5
+	# 	value = token:SZC_yu_jiaju
+	# }
+	# set_variable = {
+	# 	var = YCP_party_issue_standing_6
+	# 	value = token:SZC_hu_fuxian
+	# }
+	SZC_update_YCP_party_issue_gui = yes
+	add_ideas = {
+		SZC_zeng_qi_DMC_idea
+		SZC_he_luzhi_DMI_idea
+		SZC_li_huang_DMF_idea
+		SZC_zuo_shunsheng_DMP_idea
+		SZC_chen_qitian_DMT_idea
+		SZC_li_buwei_DMO_idea
+		SZC_chang_yansheng_DMY_idea
+		# SZC_zhang_bolun_DM_idea
+		# SZC_wang_shizeng_DM_idea
+		# SZC_xia_taosheng_DM_idea
+		# SZC_zhang_zizhu_DM_idea
+		# SZC_yu_jiaju_DM_idea
+		# SZC_hu_fuxian_DM_idea
+	}
+	add_dynamic_modifier = {
+		modifier = YCP_party_issue_dm
+	}
+}
+
+YCP_party_issue_setup_2 = {
 	set_variable = {
 		var = YCP_party_issue_standing_1
 		value = token:SZC_zhang_bolun
@@ -3497,24 +3664,13 @@ SZC_YCP_party_issue_setup = {
 		var = YCP_party_issue_standing_6
 		value = token:SZC_hu_fuxian
 	}
-	SZC_update_YCP_party_issue_gui = yes
 	add_ideas = {
-		SZC_zeng_qi_DMC_idea
-		SZC_he_luzhi_DMI_idea
-		SZC_li_huang_DMF_idea
-		SZC_zuo_shunsheng_DMP_idea
-		SZC_chen_qitian_DMT_idea
-		SZC_li_buwei_DMO_idea
-		SZC_chang_yansheng_DMY_idea
 		SZC_zhang_bolun_DM_idea
 		SZC_wang_shizeng_DM_idea
 		SZC_xia_taosheng_DM_idea
 		SZC_zhang_zizhu_DM_idea
 		SZC_yu_jiaju_DM_idea
 		SZC_hu_fuxian_DM_idea
-	}
-	add_dynamic_modifier = {
-		modifier = YCP_party_issue_dm
 	}
 }
 

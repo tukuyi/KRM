@@ -76,14 +76,6 @@ leader_traits = {
 		consumer_goods_factor = -0.25
 		political_power_factor = -0.15
 	}
-	SZC_chinese_jean_darc = {
-		random = no
-		war_support_factor = 0.1
-		stability_factor = 0.15
-		compliance_growth = 0.05
-		compliance_gain = 0.02
-		
-	}
 	SZC_widow = {
 		random = no
 		war_support_factor = 0.2
@@ -95,7 +87,426 @@ leader_traits = {
 	}
 
 
+	SZC_spirit_of_moving_mountain = {#曾琦
+		random = no
+		sprite = 19
+		political_advisor_cost_factor = -0.20
+        high_command_cost_factor = -0.20
+		crypto_detection_factor = 0.10
+		surrender_limit = 0.15 
+		resistance_damage_to_garrisons = -0.20
+	}
+
+	SZC_lion_roars = {#李璜
+		random = no
+		sprite = 19
+		war_support_factor = 0.15
+		army_core_attack_factor = 0.05
+        army_core_defence_factor = 0.05
+		political_power_gain = 0.1
+	}
+
+	SZC_conscience_of_liberalism = {#左舜生
+		random = no
+		sprite = 19
+		trade_opinion_factor = 0.20
+		stability_factor = 0.10
+		political_power_gain = -0.05
+		research_speed_factor = 0.08
+	}
+
+	SZC_strategist_of_the_warring_states = {#陈启天
+		random = no
+		sprite = 19
+		consumer_goods_factor = -0.05
+		production_factory_efficiency_gain_factor = 0.05
+		division_recovery_rate = 0.05
+	}
+
+	SZC_cultivator_of_the_party = {#张伯伦
+		random = no
+		sprite = 19
+		command_power_gain = 0.10
+		political_power_gain = 0.05
+		industrial_capacity_gain_factor = 0.05
+        infrastructure_construction_speed_factor = 0.10
+	}
+
+	SZC_military_evangelist = {#王师曾
+		random = no
+		sprite = 19
+		division_recovery_rate = 0.1
+		army_org_factor = 0.05
+        resistance_target = -0.05
+	}
+
+	SZC_pompous_young_turk = {#夏涛声
+		random = no
+		sprite = 19
+		war_support_factor = 0.05
+		political_power_gain = 0.15
+		compliance_gain = -0.01
+		stability_factor = -0.05
+	}
+
+	SZC_beliver_in_will_to_power = {#姜蕴刚
+		random = no
+		sprite = 19
+		division_recovery_rate = 0.1
+		war_support_factor = 0.10
+		research_speed_factor = 0.05
+		surrender_limit = 0.15
+		army_org_factor = 0.05
+	}
+
+	SZC_chinese_jean_darc = {#谭惕吾
+		random = no
+		sprite = 19
+		war_support_factor = 0.1
+		stability_factor = 0.15
+		compliance_growth = 0.05
+		compliance_gain = 0.02
+		
+	}
+
+	SZC_refined_social_democrat = {#常燕生
+		random = no
+		sprite = 19
+		compliance_growth = 0.1
+		production_factory_efficiency_gain_factor = 0.05
+		non_core_manpower = 0.02
+		political_power_gain = -0.025
+	}
+
+	SZC_shadow_architect = {#黄石子
+		random = no
+		sprite = 19
+		stability_factor = -0.2
+		consumer_goods_factor = -0.075
+		resistance_damage_to_garrisons = -0.10
+		political_power_gain = 0.10
+	}
+
+	SZC_advocate_of_youth_resurgence = {#张子柱
+		random = no
+		sprite = 19
+		war_support_factor = 0.15
+		mobilization_laws_cost_factor = -0.66
+		production_factory_efficiency_gain_factor = 0.05
+		drift_defence_factor = 0.30
+	}
+
+	SZC_the_red_reader = {#廖上柯
+		random = no
+		sprite = 19
+		radical_socialist_acceptance = 30
+		syndicalist_acceptance = 30
+		social_democrat_acceptance = 30
+		stability_factor = -0.1
+		drift_defence_factor = -0.10
+		political_advisor_cost_factor = -0.33
+	}
+	
+	SZC_gottingen_physics_phd = {#魏时珍
+		random = no
+		sprite = 19
+		research_speed_factor = 0.15
+		electronics_research = 0.15
+        nuclear_research = 0.15
+		political_power_gain = -0.05
+	}
+
+	SZC_liaison_to_overseas_merchants = {#郑振文
+		random = no
+		sprite = 19
+		consumer_goods_factor = -0.05
+		trade_opinion_factor = 0.25
+		production_speed_industrial_complex_factor = 0.10
+		stability_factor = 0.05
+	}
+
+	SZC_columbian_constitutionalist = {#谢澄平
+		random = no
+		sprite = 19
+		political_power_gain = 0.05
+		political_advisor_cost_factor = -0.33
+		compliance_gain = 0.02
+		research_speed_factor = 0.05
+	}
+
+	SZC_mechanistic_organizer = {#胡阜贤
+		random = no
+		sprite = 19
+		political_power_gain = 0.05
+		cic_construction_boost = 0.10
+		industrial_capacity_gain_factor = 0.05
+		industrial_research = 0.10
+	}
+
+	SZC_vanguard_of_mass_politics = {#刘静远
+		random = no
+		sprite = 19
+		stability_factor = -0.10
+		consumer_goods_factor = 0.05
+		resistance_target = -0.05
+		production_factory_efficiency_gain_factor = 0.1
+	}
+
+	SZC_veteran_of_the_xinhai = {#李不韪
+		random = no
+		sprite = 19
+		army_experience_gain_factor = 0.05
+		dig_in_speed_factor = 0.10
+		political_power_gain = 0.05
+	}
+
+	SZC_fearless_remonstrator = {#吴天墀
+		random = no
+		sprite = 19
+		political_advisor_cost_factor = -0.20
+        high_command_cost_factor = -0.20
+        economy_law_cost_factor = -0.15
+		political_power_gain = -0.10
+		research_speed_factor = 0.08
+	}
+
+	SZC_merciful_war_cry = {#胡国伟
+		random = no
+		sprite = 19
+		war_support_factor = 0.15
+		mobilization_laws_cost_factor = -0.33
+		army_org_factor = 0.03
+	}
+
+	SZC_jurist_revolutionary = {#刘泗英
+		random = no
+		sprite = 19
+		political_power_gain = 0.05
+		army_leader_cost_factor = -0.25
+		army_attack_factor = 0.03
+		command_power_gain = 0.15
+	}
+
+	SZC_statist_feminist = {#喻孝权
+		random = no
+		sprite = 19
+		recruitable_population_factor = 0.10
+		war_support_factor = 0.10
+		compliance_gain = 0.01
+	}
+
+	SZC_frontier_staff = {#刘东岩
+		random = no
+		sprite = 19
+		command_power_gain = 0.10
+		supply_consumption_factor = -0.10
+	}
+
+	SZC_hidden_dragon_staff_officer = {#王岚僧
+		random = no
+		sprite = 19
+		planning_speed = 0.15
+		army_experience_gain_factor = 0.1
+		enemy_operative_detection_chance_factor = 0.05
+		army_morale_factor = 0.05
+		org_loss_when_moving = -0.1
+	}
+
+	SZC_elitist_constitutioalist = {#刘永济
+		random = no
+		sprite = 19
+		political_power_gain = 0.10
+		electronics_research = 0.15
+	}
+
+	SZC_composer_of_national_melody = {#王光祈
+		random = no
+		sprite = 19
+		war_support_factor = 0.15
+		division_recovery_rate = 0.10
+		research_speed_factor = 0.03
+	}
+
+	SZC_academic_activist = {#陈善新
+		random = no
+		sprite = 19
+		monthly_population = 0.05
+		training_time_factor = -0.1
+		division_recovery_rate = 0.05
+	}
+
+	SZC_chief_surgeon = {#于复先
+		random = no
+		sprite = 19
+		research_speed_factor = 0.05
+		army_experience_gain_factor = 0.05
+		experience_loss_factor = -0.2
+	}
+
+	SZC_resilient_organizer = {#林可玑
+		random = no
+		sprite = 19
+		political_power_gain = 0.05
+		enemy_operative_detection_chance_factor = 0.10
+		production_speed_dockyard_factor = 0.10
+		naval_research = 0.10
+	}
+
+	SZC_independent_liberal_statist = {#余家菊
+		random = no
+		sprite = 19
+		stability_factor = 0.10
+		party_popularity_stability_factor = -0.15
+		social_democrat_acceptance = 20
+		social_liberal_acceptance = 20
+		market_liberal_acceptance = 20
+		social_conservative_acceptance = 20
+		planning_speed = 0.05
+		division_recovery_rate = 0.15
+	}
+
+	SZC_erudite_historian = {#何鲁之
+		random = no
+		sprite = 19
+		research_speed_factor = 0.10
+		political_power_gain = -0.10
+		consumer_goods_factor = -0.05
+	}
+
+	SZC_mamba_spirit = {#张葆恩
+		random = no
+		sprite = 19
+		training_time_factor = -0.24
+		division_recovery_rate = 0.08
+		land_night_attack = 0.04
+		air_accidents_factor = 0.24
+		scientist_breakthrough_bonus_factor = 0.08
+	}
+
+	SZC_liberal_journalist = {#夏尔康
+		random = no
+		sprite = 19
+		political_power_gain = 0.03
+		research_speed_factor = 0.05
+		army_core_defence_factor = 0.10
+	}
+
+	SZC_wandering_lobbyist = {#赵毓松
+		random = no
+		sprite = 19
+		improve_relation_maintain_cost_factor = -0.50
+		justify_war_goal_time = -0.15
+		stability_factor = -0.25
+	}
+
+	SZC_advocate_of_industry = {#段震寰
+		random = no
+		sprite = 19
+		production_speed_industrial_complex_factor = 0.10
+        production_speed_infrastructure_factor = 0.10
+		production_factory_efficiency_gain_factor = 0.05
+	}
+
+	SZC_jurisprudential_propagandist = {#沈云龙
+		random = no
+		sprite = 19
+		recruitable_population_factor = 0.05
+		drift_defence_factor = 0.15
+		war_support_factor = 0.10
+		trade_opinion_factor = 0.10
+	}
+
+	SZC_pen_of_the_awakening_lion = {#张梦九
+		random = no
+		sprite = 19
+		war_support_factor = 0.15
+		political_advisor_cost_factor = -0.33
+		consumer_goods_factor = 0.02
+		decryption_power = 0.1
+	}
+
+	SZC_anti_red_pacification_commander = {#廖海涛
+		random = no
+		sprite = 19
+		totalist_acceptance = -50
+		syndicalist_acceptance = -50
+		radical_socialist_acceptance = -50
+		resistance_damage_to_garrisons = -0.20
+        resistance_target = -0.10
+		compliance_gain = -0.02
+		army_speed_factor = 0.025
+	}
+
+	SZC_greedy_bureaucrat = {#穆全运
+		random = no
+		sprite = 19
+		political_power_gain = 0.15
+		consumer_goods_factor = -0.15
+		research_speed_factor = -0.05
+		stability_factor = -0.25
+	}
+
+	SZC_international_analyst = {#丁廷标
+		random = no
+		sprite = 19
+		consumer_goods_factor = -0.1
+		production_factory_efficiency_loss_factor = -0.15
+		political_power_gain = 0.10
+	}
+
+	SZC_francophile_scholar = {#刘鹏九
+		random = no
+		sprite = 19
+		research_speed_factor = 0.05
+		land_doctrine_research_cost_factor = -0.10
+		stability_factor = 0.05
+	}
+
+	SZC_radical_anti_red_fighter = {#陶元珍
+		random = no
+		sprite = 19
+		resistance_damage_to_garrisons = -0.15
+        resistance_target = -0.10
+		stability_factor = -0.05
+		consumer_goods_factor = -0.05
+		supply_consumption_factor = -0.10
+	}
+
+	SZC_recruiter_of_youth_corps = {#陶元甘
+		random = no
+		sprite = 19
+		recruitable_population_factor = 0.08
+		mobilization_laws_cost_factor = -0.15
+		training_time_factor = -0.05
+	}
+
+	SZC_chief_japan_analyst = {#崔万秋
+		random = no
+		sprite = 19
+		decryption_power = 0.15
+		research_speed_factor = 0.03
+		targeted_modifier = {
+			tag = JAP
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+
+
+
+
 	#SICSICSICSIC
+
+	SZC_erudite_historian_sic = {
+		random = no
+		sprite = 19
+		research_speed_factor = 0.125
+		political_power_gain = -0.125
+		consumer_goods_factor = -0.075
+	}
+
+
+
 	
 	SZC_knowledgeable_theorist_sic = {
 		random = no

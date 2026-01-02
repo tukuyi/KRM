@@ -5,15 +5,25 @@
 ideas = {
 	hidden_ideas = {
 ####################         CHAIRMAN        ####################
+
+		# generic
+		# political_power_gain = 0.15
+		# stability_factor = 0.10
+		# surrender_limit = 0.10
 		SZC_zeng_qi_DMC_idea = {
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.1
-				war_support_factor = 0.075
-
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				surrender_limit = 0.10
+				political_advisor_cost_factor = -0.5
+				high_command_cost_factor = -0.5
+				crypto_detection_factor = 0.15
+				surrender_limit = 0.2
+				resistance_damage_to_garrisons = -0.25
 			}
 		}
 		SZC_li_huang_DMC_idea = {
@@ -22,9 +32,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.1
-				war_support_factor = 0.075
-
+				political_power_gain = 0.25
+				stability_factor = 0.10
+				surrender_limit = 0.10
+				war_support_factor = 0.2
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
 			}
 		}
 		SZC_chen_qitian_DMC_idea = {
@@ -33,9 +46,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.1
-				war_support_factor = 0.075
-
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				surrender_limit = 0.10
+				consumer_goods_factor = -0.125
+				production_factory_efficiency_gain_factor = 0.125
+				division_recovery_rate = 0.1
 			}
 		}
 		SZC_jiang_yungang_DMC_idea = {
@@ -44,9 +60,14 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.1
-				war_support_factor = 0.075
-
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				surrender_limit = 0.10
+				division_recovery_rate = 0.2
+				war_support_factor = 0.2
+				research_speed_factor = 0.1
+				surrender_limit = 0.3
+				army_org_factor = 0.1
 			}
 		}
 		SZC_yu_fuxian_DMC_idea = {
@@ -55,20 +76,33 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.1
-				war_support_factor = 0.075
-
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				surrender_limit = 0.10
+				research_speed_factor = 0.1
+				army_experience_gain_factor = 0.1
+				experience_loss_factor = -0.35
 			}
 		}
 ####################    INTERIIOR       ####################
+		#generic
+		# enemy_operative_detection_chance_factor = 0.1
+		# drift_defence_factor = 0.1
+		# stability_factor = 0.05
+		# resistance_damage_to_garrisons = -0.15
 		SZC_he_luzhi_DMI_idea = {
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				enemy_operative_detection_chance_factor = 0.1
+				drift_defence_factor = 0.1
+				stability_factor = 0.05
+				resistance_damage_to_garrisons = -0.15
+				research_speed_factor = 0.125
+				political_power_gain = -0.08
+				consumer_goods_factor = -0.075
 			}
 		}
 		SZC_xia_taosheng_DMI_idea = {
@@ -77,8 +111,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
+				enemy_operative_detection_chance_factor = 0.1
+				drift_defence_factor = 0.1
+				resistance_damage_to_garrisons = -0.15
 				war_support_factor = 0.075
+				political_power_gain = 0.2
+				compliance_gain = -0.01
 			}
 		}
 		SZC_hu_guowei_DMI_idea = {
@@ -87,8 +125,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				enemy_operative_detection_chance_factor = 0.1
+				drift_defence_factor = 0.1
+				stability_factor = 0.05
+				resistance_damage_to_garrisons = -0.15
+				war_support_factor = 0.175
+				mobilization_laws_cost_factor = -0.66
+				army_org_factor = 0.06
 			}
 		}
 		SZC_duan_zhenhuan_DMI_idea = {
@@ -97,8 +140,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				enemy_operative_detection_chance_factor = 0.1
+				drift_defence_factor = 0.1
+				stability_factor = 0.05
+				resistance_damage_to_garrisons = -0.15
+				production_speed_industrial_complex_factor = 0.125
+				production_speed_infrastructure_factor = 0.125
+				production_factory_efficiency_gain_factor = 0.075
 			}
 		}
 		SZC_wang_lanseng_DMI_idea = {
@@ -107,8 +155,15 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				enemy_operative_detection_chance_factor = 0.1
+				drift_defence_factor = 0.1
+				stability_factor = 0.05
+				resistance_damage_to_garrisons = -0.15
+				planning_speed = 0.175
+				army_experience_gain_factor = 0.125
+				enemy_operative_detection_chance_factor = 0.075
+				army_morale_factor = 0.075
+				org_loss_when_moving = -0.15
 			}
 		}
 		SZC_tan_tiwu_DMI_idea = {
@@ -117,19 +172,36 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				enemy_operative_detection_chance_factor = 0.1
+				drift_defence_factor = 0.1
+				stability_factor = 0.05
+				resistance_damage_to_garrisons = -0.15
+				war_support_factor = 0.1
+				stability_factor = 0.175
+				compliance_growth = 0.06
+				compliance_gain = 0.04
 			}
 		}
 ####################      FOREIGN       ####################
+		# generic
+		# improve_relation_maintain_cost_factor = -0.20
+		# diplomatic_acceptance = 25
+		# intel_network_gain_factor = 0.15
+		# trade_opinion_factor = 0.10
 		SZC_li_huang_DMF_idea = {
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				improve_relation_maintain_cost_factor = -0.20
+				diplomatic_acceptance = 25
+				intel_network_gain_factor = 0.15
+				trade_opinion_factor = 0.10
+				war_support_factor = 0.2
+				army_core_attack_factor = 0.075
+				army_core_defence_factor = 0.075
+				political_power_gain = 0.125
 			}
 		}
 		SZC_liu_pengjiu_DMF_idea = {
@@ -138,8 +210,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				improve_relation_maintain_cost_factor = -0.20
+				diplomatic_acceptance = 25
+				intel_network_gain_factor = 0.15
+				trade_opinion_factor = 0.10
+				research_speed_factor = 0.1
+				land_doctrine_research_cost_factor = -0.125
+				stability_factor = 0.075
 			}
 		}
 		SZC_xie_chengping_DMF_idea = {
@@ -148,8 +225,14 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				improve_relation_maintain_cost_factor = -0.20
+				diplomatic_acceptance = 25
+				intel_network_gain_factor = 0.15
+				trade_opinion_factor = 0.10
+				political_power_gain = 0.075
+				political_advisor_cost_factor = -0.66
+				compliance_gain = 0.04
+				research_speed_factor = 0.1
 			}
 		}
 		SZC_ding_tingbiao_DMF_idea = {
@@ -158,8 +241,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				improve_relation_maintain_cost_factor = -0.20
+				diplomatic_acceptance = 25
+				intel_network_gain_factor = 0.15
+				trade_opinion_factor = 0.10
+				consumer_goods_factor = -0.125
+				production_factory_efficiency_loss_factor = -0.2
+				political_power_gain = 0.125
 			}
 		}
 		SZC_liu_yongji_DMF_idea = {
@@ -168,8 +256,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				improve_relation_maintain_cost_factor = -0.20
+				diplomatic_acceptance = 25
+				intel_network_gain_factor = 0.15
+				trade_opinion_factor = 0.10
+				political_power_gain = 0.125
+				electronics_research = 0.2
 			}
 		}
 		SZC_liu_jingyuan_DMF_idea = {
@@ -178,19 +270,34 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				improve_relation_maintain_cost_factor = -0.20
+				diplomatic_acceptance = 25
+				intel_network_gain_factor = 0.15
+				trade_opinion_factor = 0.10
+				stability_factor = -0.10
+				consumer_goods_factor = 0.075
+				resistance_target = -0.1
+				production_factory_efficiency_gain_factor = 0.125
 			}
 		}
 ####################      PROPAGANDA       ####################
+		# generic
+		# war_support_factor = 0.15
+		# enemy_partisan_effect = -0.20
+		# compliance_growth = 0.1
 		SZC_zuo_shunsheng_DMP_idea = {
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
 			modifier = {
+				war_support_factor = 0.15
+				enemy_partisan_effect = -0.20
+				compliance_growth = 0.1
+				trade_opinion_factor = 0.35
+				stability_factor = 0.15
 				political_power_gain = -0.05
-				war_support_factor = 0.075
+				research_speed_factor = 0.125
 			}
 		}
 		SZC_zhang_zizhu_DMP_idea = {
@@ -199,8 +306,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				war_support_factor = 0.3
+				enemy_partisan_effect = -0.20
+				compliance_growth = 0.1
+				mobilization_laws_cost_factor = -0.8
+				production_factory_efficiency_gain_factor = 0.075
+				drift_defence_factor = 0.35
 			}
 		}
 		SZC_liu_siying_DMP_idea = {
@@ -209,8 +320,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				war_support_factor = 0.15
+				enemy_partisan_effect = -0.20
+				compliance_growth = 0.1
+				political_power_gain = 0.075
+				army_leader_cost_factor = -0.5
+				army_attack_factor = 0.05
+				command_power_gain = 0.2
 			}
 		}
 		SZC_chang_yansheng_DMP_idea = {
@@ -219,8 +335,11 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				war_support_factor = 0.15
+				enemy_partisan_effect = -0.20
+				compliance_growth = 0.25
+				production_factory_efficiency_gain_factor = 0.1
+				non_core_manpower = 0.04
 			}
 		}
 		SZC_tao_yuanzhen_DMP_idea = {
@@ -229,19 +348,32 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				war_support_factor = 0.15
+				enemy_partisan_effect = -0.20
+				compliance_growth = 0.1
+				resistance_damage_to_garrisons = -0.175
+				resistance_target = -0.125
+				consumer_goods_factor = -0.075
+				supply_consumption_factor = -0.125
 			}
 		}
 ####################      TRAIN       ####################
+		# generic
+		# army_leader_experience_gain = 0.15
+		# training_time_factor = -0.05
+		# army_experience_gain_factor = 0.10
 		SZC_chen_qitian_DMT_idea = {
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				army_leader_experience_gain = 0.15
+				training_time_factor = -0.05
+				army_experience_gain_factor = 0.10
+				consumer_goods_factor = -0.075
+				production_factory_efficiency_gain_factor = 0.1
+				division_recovery_rate = 0.075
 			}
 		}
 		SZC_hu_guowei_DMT_idea = {
@@ -250,8 +382,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				army_leader_experience_gain = 0.15
+				training_time_factor = -0.05
+				army_experience_gain_factor = 0.10
+				war_support_factor = 0.175
+				mobilization_laws_cost_factor = -0.66
+				army_org_factor = 0.06
 			}
 		}
 		SZC_yu_jiaju_DMT_idea = {
@@ -260,8 +396,17 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				army_leader_experience_gain = 0.15
+				training_time_factor = -0.05
+				army_experience_gain_factor = 0.10
+				stability_factor = 0.15
+				party_popularity_stability_factor = -0.15
+				social_democrat_acceptance = 25
+				social_liberal_acceptance = 25
+				market_liberal_acceptance = 25
+				social_conservative_acceptance = 25
+				planning_speed = 0.1
+				division_recovery_rate = 0.175
 			}
 		}
 		SZC_cui_wanqiu_DMT_idea = {
@@ -270,8 +415,16 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				army_leader_experience_gain = 0.15
+				training_time_factor = -0.05
+				army_experience_gain_factor = 0.10
+				decryption_power = 0.15
+				research_speed_factor = 0.08
+			}
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 		}
 		SZC_chen_shanxin_DMT_idea = {
@@ -280,19 +433,30 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				army_leader_experience_gain = 0.15
+				training_time_factor = -0.05
+				army_experience_gain_factor = 0.10
+				monthly_population = 0.075
+				training_time_factor = -0.125
+				division_recovery_rate = 0.075
 			}
 		}
 ####################      ORGANIZATION       ####################
+		#generic
+		# political_power_gain = 0.05
+		# political_advisor_cost_factor = -0.33
+		# high_command_cost_factor = -0.33
 		SZC_li_buwei_DMO_idea = {
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.125
+				political_advisor_cost_factor = -0.33
+				high_command_cost_factor = -0.66
+				army_experience_gain_factor = 0.1
+				dig_in_speed_factor = 0.15
 			}
 		}
 		SZC_huang_shizi_DMO_idea = {
@@ -301,8 +465,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.175
+				political_advisor_cost_factor = -0.33
+				high_command_cost_factor = -0.33
+				stability_factor = -0.225
+				consumer_goods_factor = -0.1
+				resistance_damage_to_garrisons = -0.15
 			}
 		}
 		SZC_hu_fuxian_DMO_idea = {
@@ -311,8 +479,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.125
+				political_advisor_cost_factor = -0.33
+				high_command_cost_factor = -0.33
+				cic_construction_boost = 0.125
+				industrial_capacity_gain_factor = 0.075
+				industrial_research = 0.125
 			}
 		}
 		SZC_wei_shizhen_DMO_idea = {
@@ -321,8 +493,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.05
+				political_advisor_cost_factor = -0.33
+				high_command_cost_factor = -0.33
+				research_speed_factor = 0.175
+				electronics_research = 0.175
+				nuclear_research = 0.175
+				political_power_gain = -0.075
 			}
 		}
 		SZC_wang_shizeng_DMO_idea = {
@@ -331,19 +508,32 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.05
+				political_advisor_cost_factor = -0.33
+				high_command_cost_factor = -0.33
+				division_recovery_rate = 0.126
+				army_org_factor = 0.075
+				resistance_target = -0.075
 			}
 		}
 ####################      YOUTH       ####################
+		#generic
+		# political_power_gain = 0.05
+		# recruitable_population_factor = 0.05
+    	# war_support_factor = 0.1
 		SZC_chang_yansheng_DMY_idea = {
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
 			modifier = {
+				political_power_gain = 0.05
+				recruitable_population_factor = 0.05
+    			war_support_factor = 0.1
+				compliance_growth = 0.125
+				production_factory_efficiency_gain_factor = 0.075
+				non_core_manpower = 0.04
 				political_power_gain = -0.05
-				war_support_factor = 0.075
 			}
 		}
 		SZC_zhen_zhengwen_DMY_idea = {
@@ -352,8 +542,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.05
+				recruitable_population_factor = 0.05
+    			war_support_factor = 0.1
+				consumer_goods_factor = -0.075
+				trade_opinion_factor = 0.3
+				production_speed_industrial_complex_factor = 0.125
+				stability_factor = 0.1
 			}
 		}
 		SZC_cui_wanqiu_DMY_idea = {
@@ -362,8 +557,16 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.05
+				recruitable_population_factor = 0.05
+    			war_support_factor = 0.1
+				decryption_power = 0.15
+				research_speed_factor = 0.08
+			}
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 		}
 		SZC_liu_dongyan_DMY_idea = {
@@ -372,8 +575,11 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.05
+				recruitable_population_factor = 0.05
+    			war_support_factor = 0.1
+				command_power_gain = 0.125
+				supply_consumption_factor = -0.125
 			}
 		}
 		SZC_chen_shanxin_DMY_idea = {
@@ -382,8 +588,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.05
+				recruitable_population_factor = 0.05
+    			war_support_factor = 0.1
+				monthly_population = 0.075
+				training_time_factor = -0.125
+				division_recovery_rate = 0.075
 			}
 		}
 		SZC_liu_jingyuan_DMY_idea = {
@@ -392,8 +602,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.05
+				recruitable_population_factor = 0.05
+    			war_support_factor = 0.1
+				stability_factor = -0.10
+				consumer_goods_factor = 0.075
+				resistance_target = -0.075
+				production_factory_efficiency_gain_factor = 0.125
 			}
 		}
 		SZC_lin_keji_DMY_idea = {
@@ -402,19 +617,108 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.125
+				recruitable_population_factor = 0.05
+    			war_support_factor = 0.1
+				enemy_operative_detection_chance_factor = 0.125
+				production_speed_dockyard_factor = 0.125
+				naval_research = 0.125
 			}
 		}
 ####################      STANDING       ####################
+		SZC_zeng_qi_DM_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_advisor_cost_factor = -0.20
+				high_command_cost_factor = -0.20
+				crypto_detection_factor = 0.10
+				surrender_limit = 0.15 
+				resistance_damage_to_garrisons = -0.20
+			}
+		}
+		SZC_he_luzhi_DM_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.10
+				political_power_gain = -0.10
+				consumer_goods_factor = -0.05
+			}
+		}
+		SZC_li_huang_DM_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.15
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				political_power_gain = 0.1
+			}
+		}
+		SZC_zuo_shunsheng_DM_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.20
+				stability_factor = 0.10
+				political_power_gain = -0.05
+				research_speed_factor = 0.08
+			}
+		}
+		SZC_li_buwei_DM_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_experience_gain_factor = 0.05
+				dig_in_speed_factor = 0.10
+				political_power_gain = 0.05
+			}
+		}
+		SZC_chang_yansheng_DM_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				compliance_growth = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				non_core_manpower = 0.02
+				political_power_gain = -0.025
+			}
+		}
+		SZC_chen_qitian_DM_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+				division_recovery_rate = 0.05
+				
+			}
+		}
 		SZC_zhang_bolun_DM_idea = {
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				command_power_gain = 0.10
+				political_power_gain = 0.05
+				industrial_capacity_gain_factor = 0.05
+				infrastructure_construction_speed_factor = 0.10
 			}
 		}
 		SZC_wang_shizeng_DM_idea = {
@@ -423,8 +727,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				division_recovery_rate = 0.1
+				army_org_factor = 0.05
+				resistance_target = -0.05
 			}
 		}
 		SZC_xia_taosheng_DM_idea = {
@@ -433,8 +738,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				war_support_factor = 0.05
+				political_power_gain = 0.15
+				compliance_gain = -0.01
+				stability_factor = -0.05
 			}
 		}
 		SZC_zhang_zizhu_DM_idea = {
@@ -443,8 +750,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				war_support_factor = 0.15
+				mobilization_laws_cost_factor = -0.66
+				production_factory_efficiency_gain_factor = 0.05
+				drift_defence_factor = 0.30
 			}
 		}
 		SZC_yu_jiaju_DM_idea = {
@@ -453,8 +762,14 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				stability_factor = 0.10
+				party_popularity_stability_factor = -0.15
+				social_democrat_acceptance = 20
+				social_liberal_acceptance = 20
+				market_liberal_acceptance = 20
+				social_conservative_acceptance = 20
+				planning_speed = 0.05
+				division_recovery_rate = 0.15
 			}
 		}
 		SZC_hu_fuxian_DM_idea = {
@@ -463,8 +778,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.05
+				cic_construction_boost = 0.10
+				industrial_capacity_gain_factor = 0.05
+				industrial_research = 0.10
 			}
 		}
 		SZC_tan_tiwu_DM_idea = {
@@ -473,8 +790,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				war_support_factor = 0.1
+				stability_factor = 0.15
+				compliance_growth = 0.05
+				compliance_gain = 0.02
 			}
 		}
 		SZC_huang_shizi_DM_idea = {
@@ -483,8 +802,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				stability_factor = -0.2
+				consumer_goods_factor = -0.075
+				resistance_damage_to_garrisons = -0.10
+				political_power_gain = 0.10
 			}
 		}
 		SZC_wei_shizhen_DM_idea = {
@@ -493,8 +814,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
+				research_speed_factor = 0.15
+				electronics_research = 0.15
+				nuclear_research = 0.15
 				political_power_gain = -0.05
-				war_support_factor = 0.075
 			}
 		}
 		SZC_xie_chengping_DM_idea = {
@@ -503,8 +826,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.05
+				political_advisor_cost_factor = -0.33
+				compliance_gain = 0.02
+				research_speed_factor = 0.05
 			}
 		}
 		SZC_zheng_zhenwen_DM_idea = {
@@ -513,8 +838,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				consumer_goods_factor = -0.05
+				trade_opinion_factor = 0.25
+				production_speed_industrial_complex_factor = 0.10
+				stability_factor = 0.05
 			}
 		}
 		SZC_liu_jingyuan_DM_idea = {
@@ -523,8 +850,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				stability_factor = -0.10
+				consumer_goods_factor = 0.05
+				resistance_target = -0.05
+				production_factory_efficiency_gain_factor = 0.1
 			}
 		}
 		SZC_wu_tianchi_DM_idea = {
@@ -533,8 +862,11 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_advisor_cost_factor = -0.20
+				high_command_cost_factor = -0.20
+				economy_law_cost_factor = -0.15
+				political_power_gain = -0.10
+				research_speed_factor = 0.08
 			}
 		}
 		SZC_hu_guowei_DM_idea = {
@@ -543,8 +875,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				war_support_factor = 0.15
+				mobilization_laws_cost_factor = -0.33
+				army_org_factor = 0.03
 			}
 		}
 		SZC_liu_siying_DM_idea = {
@@ -553,8 +886,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.05
+				army_leader_cost_factor = -0.25
+				army_attack_factor = 0.03
+				command_power_gain = 0.15
 			}
 		}
 		SZC_yu_xiaoquan_DM_idea = {
@@ -563,8 +898,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				recruitable_population_factor = 0.10
+				war_support_factor = 0.10
+				compliance_gain = 0.01
 			}
 		}
 		SZC_liu_dongyan_DM_idea = {
@@ -573,8 +909,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				command_power_gain = 0.10
+				supply_consumption_factor = -0.10
 			}
 		}
 		SZC_wang_lanseng_DM_idea = {
@@ -583,8 +919,11 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				planning_speed = 0.15
+				army_experience_gain_factor = 0.1
+				enemy_operative_detection_chance_factor = 0.05
+				army_morale_factor = 0.05
+				org_loss_when_moving = -0.1
 			}
 		}
 		SZC_liu_yongji_DM_idea = {
@@ -593,8 +932,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.10
+				electronics_research = 0.15
 			}
 		}
 		SZC_wang_guangqi_DM_idea = {
@@ -603,8 +942,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				war_support_factor = 0.15
+				division_recovery_rate = 0.10
+				research_speed_factor = 0.03
 			}
 		}
 		SZC_chen_shanxin_DM_idea = {
@@ -613,8 +953,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				monthly_population = 0.05
+				training_time_factor = -0.1
+				division_recovery_rate = 0.05
 			}
 		}
 		SZC_yu_fuxian_DM_idea = {
@@ -623,8 +964,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				research_speed_factor = 0.05
+				army_experience_gain_factor = 0.05
+				experience_loss_factor = -0.2
 			}
 		}
 		SZC_lin_keji_DM_idea = {
@@ -633,8 +975,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.05
+				enemy_operative_detection_chance_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+				naval_research = 0.10
 			}
 		}
 		SZC_jiang_yungang_DM_idea = {
@@ -643,8 +987,11 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				division_recovery_rate = 0.1
+				war_support_factor = 0.10
+				research_speed_factor = 0.05
+				surrender_limit = 0.15
+				army_org_factor = 0.05
 			}
 		}
 		SZC_zhang_baoen_DM_idea = {
@@ -653,6 +1000,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
+				training_time_factor = -0.24
+				division_recovery_rate = 0.08
 				land_night_attack = 0.08
 				air_accidents_factor = 0.24
 				scientist_breakthrough_bonus_factor = 0.08
@@ -664,8 +1013,11 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				division_recovery_rate = 0.1
+				war_support_factor = 0.10
+				research_speed_factor = 0.05
+				surrender_limit = 0.15
+				army_org_factor = 0.05
 			}
 		}
 		SZC_zhao_yusong_DM_idea = {
@@ -674,8 +1026,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				improve_relation_maintain_cost_factor = -0.50
+				justify_war_goal_time = -0.15
+				stability_factor = -0.25
 			}
 		}
 		SZC_duan_zhenhuan_DM_idea = {
@@ -684,8 +1037,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_infrastructure_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 		SZC_shen_yunlong_DM_idea = {
@@ -694,8 +1048,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				recruitable_population_factor = 0.05
+				drift_defence_factor = 0.15
+				war_support_factor = 0.10
+				trade_opinion_factor = 0.10
 			}
 		}
 		SZC_zhang_mengjiu_DM_idea = {
@@ -704,8 +1060,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				war_support_factor = 0.15
+				political_advisor_cost_factor = -0.33
+				consumer_goods_factor = 0.02
+				decryption_power = 0.1
 			}
 		}
 		SZC_tang_shizun_YCP_DM_idea = {
@@ -714,8 +1072,6 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
 			}
 		}
 		SZC_li_jiayu_ycp_DM_idea = {
@@ -724,8 +1080,6 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
 			}
 		}
 		SZC_liao_shangke_DM_idea = {
@@ -734,8 +1088,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				radical_socialist_acceptance = 30
+				syndicalist_acceptance = 30
+				social_democrat_acceptance = 30
+				stability_factor = -0.1
+				drift_defence_factor = -0.10
+				political_advisor_cost_factor = -0.33
 			}
 		}
 		SZC_liao_haitao_DM_idea = {
@@ -744,8 +1102,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				totalist_acceptance = -50
+				syndicalist_acceptance = -50
+				radical_socialist_acceptance = -50
+				resistance_damage_to_garrisons = -0.20
+				resistance_target = -0.10
+				compliance_gain = -0.02
+				army_speed_factor = 0.025
 			}
 		}
 		SZC_mu_quanyun_DM_idea = {
@@ -754,8 +1117,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.15
+				research_speed_factor = -0.05
+				stability_factor = -0.25
 			}
 		}
 		SZC_ding_tingbiao_DM_idea = {
@@ -764,8 +1129,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_loss_factor = -0.15
+				political_power_gain = 0.10
 			}
 		}
 		SZC_liu_pengjiu_DM_idea = {
@@ -774,8 +1140,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				research_speed_factor = 0.05
+				land_doctrine_research_cost_factor = -0.10
+				stability_factor = 0.05
 			}
 		}
 		SZC_tao_yuanzhen_DM_idea = {
@@ -784,8 +1151,11 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				resistance_damage_to_garrisons = -0.15
+				resistance_target = -0.10
+				stability_factor = -0.05
+				consumer_goods_factor = -0.05
+				supply_consumption_factor = -0.10
 			}
 		}
 		SZC_tao_yuangan_DM_idea = {
@@ -794,8 +1164,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				recruitable_population_factor = 0.08
+				mobilization_laws_cost_factor = -0.15
+				training_time_factor = -0.05
 			}
 		}
 		SZC_cui_wanqiu_DM_idea = {
@@ -804,8 +1175,13 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.05
-				war_support_factor = 0.075
+				decryption_power = 0.15
+				research_speed_factor = 0.03
+			}
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 		}
 	}

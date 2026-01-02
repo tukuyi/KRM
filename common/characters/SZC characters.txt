@@ -1873,20 +1873,6 @@ characters = {
 			cost = 100
 		}
 	}
-	#穆子斌
-	SZC_mu_zibin = {
-		name = SZC_mu_zibin
-		portraits = {
-			army = {
-				small = GFX_portrait_SZC_mu_zibin_army_small
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SZC_mu_zibin_advisor
-			traits = { KR_war_propagandist }
-		}
-	}
 	#劉咸滎
 	SZC_liu_xianying = {
 		name = SZC_liu_xianying
@@ -2951,6 +2937,27 @@ characters = {
 			desc = SZC_xia_daoping_desc
 		}
 	}
+	#刘丛云
+	SZC_liu_congyun = {
+		name = SZC_liu_congyun
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_liu_congyun_small
+				large = GFX_portrait_SZC_liu_congyun_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_liu_congyun_advisor
+			traits = { KR_silent_workhorse }
+			desc = SZC_liu_congyun_desc
+		}
+		country_leader = {
+			desc = SZC_liu_congyun_desc
+			ideology = national_populist_subtype
+			traits = { CHN_non_aligned }
+		}
+	}
 
 
 
@@ -2971,41 +2978,6 @@ characters = {
 			traits = { CHN_non_aligned }
 		}
 	}
-	#陈启天
-	SZC_chen_qitian = {
-		name = SZC_chen_qitian
-		portraits = {
-			civilian = {
-				small = GFX_portrait_SZC_chen_qitian_small
-				large = GFX_portrait_SZC_chen_qitian_large
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SZC_chen_qitian_advisor
-			traits = { KR_silent_workhorse }
-			desc = SZC_chen_qitian_desc
-			available = {
-				set_temp_variable = {
-					var = YCP_adv_chk
-					value = token:SZC_chen_qitian
-				}
-				SZC_chen_qitian = {
-					YCP_working_in_party = no
-				}
-			}
-		}
-		country_leader = {
-			desc = SZC_chen_qitian_desc
-			ideology = authoritarian_democrat_new_legalist_statist_subtype
-			traits = { CHN_statist_aligned }
-		}
-		country_leader = {
-			desc = SZC_chen_qitian_desc
-			ideology = social_democrat_new_legalist_state_socialist_subtype
-			traits = { CHN_statist_aligned }
-		}
-	}
 	#曾琦
 	SZC_zeng_qi = {
 		name = SZC_zeng_qi
@@ -3018,7 +2990,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_zeng_qi_advisor
-			traits = { KR_silent_workhorse }
+			traits = { SZC_spirit_of_moving_mountain }
 			desc = SZC_zeng_qi_desc
 			available = {
 				set_temp_variable = {
@@ -3053,7 +3025,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_li_huang_advisor
-			traits = { KR_silent_workhorse }
+			traits = { SZC_lion_roars }
 			desc = SZC_li_huang_desc
 			available = {
 				set_temp_variable = {
@@ -3088,7 +3060,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_zuo_shunsheng_advisor
-			traits = { KR_silent_workhorse }
+			traits = { SZC_conscience_of_liberalism }
 			desc = SZC_zuo_shunsheng_desc
 			available = {
 				set_temp_variable = {
@@ -3105,7 +3077,7 @@ characters = {
 			slot = second_in_command
 			idea_token = SZC_zuo_shunsheng_sic
 			ledger = army
-			traits = { KR_spiritual_leader_sic }
+			traits = { SZC_conscience_of_liberalism }
 			cost = 0
 			can_be_fired = no
 			visible = {
@@ -3119,25 +3091,39 @@ characters = {
 			traits = { CHN_statist_aligned }
 		}
 	}
-	#刘丛云
-	SZC_liu_congyun = {
-		name = SZC_liu_congyun
+	#陈启天
+	SZC_chen_qitian = {
+		name = SZC_chen_qitian
 		portraits = {
 			civilian = {
-				small = GFX_portrait_SZC_liu_congyun_small
-				large = GFX_portrait_SZC_liu_congyun_large
+				small = GFX_portrait_SZC_chen_qitian_small
+				large = GFX_portrait_SZC_chen_qitian_large
 			}
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = SZC_liu_congyun_advisor
-			traits = { KR_silent_workhorse }
-			desc = SZC_liu_congyun_desc
+			idea_token = SZC_chen_qitian_advisor
+			traits = { SZC_strategist_of_the_warring_states }
+			desc = SZC_chen_qitian_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_chen_qitian
+				}
+				SZC_chen_qitian = {
+					YCP_working_in_party = no
+				}
+			}
 		}
 		country_leader = {
-			desc = SZC_liu_congyun_desc
-			ideology = national_populist_subtype
-			traits = { CHN_non_aligned }
+			desc = SZC_chen_qitian_desc
+			ideology = authoritarian_democrat_new_legalist_statist_subtype
+			traits = { CHN_statist_aligned }
+		}
+		country_leader = {
+			desc = SZC_chen_qitian_desc
+			ideology = social_democrat_new_legalist_state_socialist_subtype
+			traits = { CHN_statist_aligned }
 		}
 	}
 	#姜蕴刚
@@ -3152,7 +3138,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_jiang_yungang_advisor
-			traits = {  }
+			traits = { SZC_beliver_in_will_to_power }
 			desc = SZC_jiang_yungang_desc
 			available = {
 				set_temp_variable = {
@@ -3183,7 +3169,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_xia_taosheng_advisor
-			traits = {  }
+			traits = { SZC_pompous_young_turk }
 			desc = SZC_xia_taosheng_desc
 			available = {
 				set_temp_variable = {
@@ -3219,7 +3205,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_zhang_bolun_advisor
-			traits = {  }
+			traits = { SZC_cultivator_of_the_party }
 			desc = SZC_zhang_bolun_desc
 			available = {
 				set_temp_variable = {
@@ -3266,7 +3252,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_wang_shizeng_advisor
-			traits = {  }
+			traits = { SZC_military_evangelist }
 			desc = SZC_wang_shizeng_desc
 			available = {
 				set_temp_variable = {
@@ -3301,7 +3287,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_huang_shizi_advisor
-			traits = { KR_silent_workhorse }
+			traits = { SZC_shadow_architect }
 			desc = SZC_huang_shizi_desc
 			available = {
 				set_temp_variable = {
@@ -3317,8 +3303,8 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = SZC_huang_shizi_sic
-			ledger = army
-			traits = { KR_spiritual_leader_sic }
+			ledger = civilian
+			traits = { SZC_shadow_architect }
 			cost = 0
 			can_be_fired = no
 			visible = {
@@ -3340,7 +3326,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_wei_shizhen_advisor
-			traits = { KR_silent_workhorse }
+			traits = { SZC_gottingen_physics_phd }
 			desc = SZC_wei_shizhen_desc
 			available = {
 				set_temp_variable = {
@@ -3353,15 +3339,6 @@ characters = {
 			}
 		}
 
-		advisor = {
-			slot = second_in_command
-			idea_token = SZC_wei_shizhen_sic
-			ledger = army
-			traits = { KR_spiritual_leader_sic }
-			cost = 0
-			can_be_fired = no
-			desc = SZC_wei_shizhen_desc
-		}
 	}
 
 
@@ -3377,7 +3354,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_chang_yansheng_advisor
-			traits = { KR_silent_workhorse }
+			traits = { SZC_refined_social_democrat }
 			desc = SZC_chang_yansheng_desc
 			available = {
 				set_temp_variable = {
@@ -3394,12 +3371,9 @@ characters = {
 			slot = second_in_command
 			idea_token = SZC_chang_yansheng_sic
 			ledger = army
-			traits = { KR_spiritual_leader_sic }
+			traits = { SZC_refined_social_democrat }
 			cost = 0
 			can_be_fired = no
-			visible = {
-				has_country_flag = NKRsichuan_YCPpath
-			}
 			desc = SZC_chang_yansheng_desc
 		}
 	}
@@ -3450,7 +3424,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_liao_shangke_advisor
-			traits = {  }
+			traits = { SZC_the_red_reader }
 			desc = SZC_liao_shangke_desc
 			available = {
 				set_temp_variable = {
@@ -3476,7 +3450,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_zhang_zizhu_advisor
-			traits = {  }
+			traits = { SZC_advocate_of_youth_resurgence }
 			desc = SZC_zhang_zizhu_desc
 			
 			available = {
@@ -3485,33 +3459,6 @@ characters = {
 					value = token:SZC_zhang_zizhu
 				}
 				SZC_zhang_zizhu = {
-					YCP_working_in_party = no
-				}
-			}
-		}
-	}
-
-	#魏时珍
-	SZC_wei_shizhen = {
-		name = SZC_wei_shizhen
-		portraits = {
-			civilian = {
-				small = GFX_portrait_SZC_wei_shizhen_small
-				large = GFX_portrait_SZC_wei_shizhen_large
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SZC_wei_shizhen_advisor
-			traits = {  }
-			desc = SZC_wei_shizhen_desc
-			
-			available = {
-				set_temp_variable = {
-					var = YCP_adv_chk
-					value = token:SZC_wei_shizhen
-				}
-				SZC_wei_shizhen = {
 					YCP_working_in_party = no
 				}
 			}
@@ -3530,7 +3477,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_zheng_zhenwen_advisor
-			traits = {  }
+			traits = { SZC_liaison_to_overseas_merchants }
 			desc = SZC_zheng_zhenwen_desc
 			
 			available = {
@@ -3557,7 +3504,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_xie_chengping_advisor
-			traits = {  }
+			traits = { SZC_columbian_constitutionalist }
 			desc = SZC_xie_chengping_desc
 			available = {
 				set_temp_variable = {
@@ -3583,7 +3530,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_hu_fuxian_advisor
-			traits = {  }
+			traits = { SZC_mechanistic_organizer }
 			desc = SZC_hu_fuxian_desc
 			available = {
 				set_temp_variable = {
@@ -3609,7 +3556,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_liu_jingyuan_advisor
-			traits = {  }
+			traits = { SZC_vanguard_of_mass_politics }
 			desc = SZC_liu_jingyuan_desc
 			available = {
 				set_temp_variable = {
@@ -3635,7 +3582,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_li_buwei_advisor
-			traits = {  }
+			traits = { SZC_veteran_of_the_xinhai }
 			desc = SZC_li_buwei_desc
 			available = {
 				set_temp_variable = {
@@ -3661,7 +3608,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_wu_tianchi_advisor
-			traits = {  }
+			traits = { SZC_fearless_remonstrator }
 			desc = SZC_wu_tianchi_desc
 			available = {
 				set_temp_variable = {
@@ -3687,7 +3634,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_hu_guowei_advisor
-			traits = {  }
+			traits = { SZC_merciful_war_cry }
 			desc = SZC_hu_guowei_desc
 			available = {
 				set_temp_variable = {
@@ -3717,7 +3664,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_liu_siying_advisor
-			traits = { KR_nationalist_industrialist }
+			traits = { SZC_jurist_revolutionary }
 			desc = SZC_liu_siying_desc
 			available = {
 				set_temp_variable = {
@@ -3743,7 +3690,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_yu_xiaoquan_advisor
-			traits = {  }
+			traits = { SZC_statist_feminist }
 			desc = SZC_yu_xiaoquan_desc
 			available = {
 				set_temp_variable = {
@@ -3769,7 +3716,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_liu_dongyan_advisor
-			traits = {  }
+			traits = { SZC_frontier_staff }
 			desc = SZC_liu_dongyan_desc
 			available = {
 				set_temp_variable = {
@@ -3795,7 +3742,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_wang_lanseng_advisor
-			traits = {  }
+			traits = { SZC_hidden_dragon_staff_officer }
 			desc = SZC_wang_lanseng_desc
 			available = {
 				set_temp_variable = {
@@ -3821,7 +3768,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_liu_yongji_advisor
-			traits = {  }
+			traits = { SZC_elitist_constitutioalist }
 			desc = SZC_liu_yongji_desc
 			available = {
 				set_temp_variable = {
@@ -3847,7 +3794,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_wang_guangqi_advisor
-			traits = {  }
+			traits = { SZC_composer_of_national_melody }
 			desc = SZC_wang_guangqi_desc
 			available = {
 				set_temp_variable = {
@@ -3873,7 +3820,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_chen_shanxin_advisor
-			traits = {  }
+			traits = { SZC_academic_activist }
 			desc = SZC_chen_shanxin_desc
 			available = {
 				set_temp_variable = {
@@ -3899,7 +3846,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_yu_fuxian_advisor
-			traits = {  }
+			traits = { SZC_chief_surgeon }
 			desc = SZC_yu_fuxian_desc
 			available = {
 				set_temp_variable = {
@@ -3925,7 +3872,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_lin_keji_advisor
-			traits = {  }
+			traits = { SZC_resilient_organizer }
 			desc = SZC_lin_keji_desc
 			available = {
 				set_temp_variable = {
@@ -3951,7 +3898,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_yu_jiaju_advisor
-			traits = {  }
+			traits = { SZC_independent_liberal_statist }
 			desc = SZC_yu_jiaju_desc
 			available = {
 				set_temp_variable = {
@@ -3977,7 +3924,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_he_luzhi_advisor
-			traits = {  }
+			traits = { SZC_erudite_historian }
 			desc = SZC_he_luzhi_desc
 			available = {
 				set_temp_variable = {
@@ -3988,6 +3935,15 @@ characters = {
 					YCP_working_in_party = no
 				}
 			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_he_luzhi_sic
+			ledger = civilian
+			traits = { SZC_erudite_historian_sic }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_he_luzhi_desc
 		}
 	}
 
@@ -4020,7 +3976,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_zhang_baoen_advisor
-			traits = {  }
+			traits = { SZC_mamba_spirit }
 			desc = SZC_zhang_baoen_desc
 			available = {
 				set_temp_variable = {
@@ -4046,7 +4002,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_xia_erkang_advisor
-			traits = {  }
+			traits = { SZC_liberal_journalist }
 			desc = SZC_xia_erkang_desc
 			available = {
 				set_temp_variable = {
@@ -4076,7 +4032,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_zhao_yusong_advisor
-			traits = {  }
+			traits = { SZC_wandering_lobbyist }
 			desc = SZC_zhao_yusong_desc
 			available = {
 				set_temp_variable = {
@@ -4102,7 +4058,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_duan_zhenhuan_advisor
-			traits = {  }
+			traits = { SZC_advocate_of_industry }
 			desc = SZC_duan_zhenhuan_desc
 			available = {
 				set_temp_variable = {
@@ -4128,7 +4084,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_shen_yunlong_advisor
-			traits = {  }
+			traits = { SZC_jurisprudential_propagandist }
 			desc = SZC_shen_yunlong_desc
 			available = {
 				set_temp_variable = {
@@ -4154,7 +4110,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_zhang_mengjiu_advisor
-			traits = {  }
+			traits = { SZC_pen_of_the_awakening_lion }
 			desc = SZC_zhang_mengjiu_desc
 			available = {
 				set_temp_variable = {
@@ -4180,7 +4136,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_mu_quanyun_advisor
-			traits = {  }
+			traits = { SZC_greedy_bureaucrat }
 			desc = SZC_mu_quanyun_desc
 			available = {
 				set_temp_variable = {
@@ -4194,7 +4150,7 @@ characters = {
 		}
 	}
 
-	#刘鹏九
+	#丁廷标
 	SZC_ding_tingbiao = {
 		name = SZC_ding_tingbiao
 		portraits = {
@@ -4206,7 +4162,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_ding_tingbiao_advisor
-			traits = {  }
+			traits = { SZC_international_analyst }
 			desc = SZC_ding_tingbiao_desc
 			available = {
 				set_temp_variable = {
@@ -4232,7 +4188,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_liu_pengjiu_advisor
-			traits = {  }
+			traits = { SZC_francophile_scholar }
 			desc = SZC_liu_pengjiu_desc
 			available = {
 				set_temp_variable = {
@@ -4258,7 +4214,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_tao_yuanzhen_advisor
-			traits = {  }
+			traits = { SZC_radical_anti_red_fighter }
 			desc = SZC_tao_yuanzhen_desc
 			available = {
 				set_temp_variable = {
@@ -4284,7 +4240,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_tao_yuangan_advisor
-			traits = {  }
+			traits = { SZC_recruiter_of_youth_corps }
 			desc = SZC_tao_yuangan_desc
 			available = {
 				set_temp_variable = {
@@ -4310,7 +4266,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_cui_wanqiu_advisor
-			traits = {  }
+			traits = { SZC_chief_japan_analyst }
 			desc = _desc
 			available = {
 				set_temp_variable = {

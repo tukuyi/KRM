@@ -6609,6 +6609,63 @@ country_event = { #龙兴之地
 		name = NKRsichuan.403.a
 		add_manpower = 1921
 		add_political_power = 100
+		SZC_zeng_qi = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_li_huang = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zuo_shunsheng = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_chen_qitian = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zhang_bolun = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_xia_taosheng = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_jiang_yungang = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_chang_yansheng = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_huang_shizi = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zhang_zizhu = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_wei_shizhen = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zheng_zhenwen = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_li_buwei = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_liu_siying = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_duan_zhenhuan = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_wang_shizeng = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zhang_zizhu = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_yu_jiaju = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_hu_fuxian = {
+			SZC_recruit_character_effect = yes
+		}
 	}
 }
 
@@ -6910,6 +6967,7 @@ country_event = { #暗流涌动
 		log = "[GetLogInfo]: event NKRsichuan.418 option NKRsichuan.418.a"
 		name = NKRsichuan.418.a
 		custom_effect_tooltip = NKRsichuan.418.tt
+		activate_advisor = SZC_he_luzhi_sic
 		set_power_balance = {
 			id = SZC_YCP_power_balance
 			left_side = SZC_bop_li_winning_side
@@ -6929,6 +6987,9 @@ country_event = { #暗流涌动
 					id = NKRsichuanflavor.22
 					days = 2
 				}
+			}
+			country_event = {
+				id = NKRsichuanPI.1
 			}
 		}
 	}
@@ -18328,7 +18389,7 @@ country_event = { #
 }
 
 
-country_event = { #
+country_event = { #党务整顿
 	id = NKRsichuanPI.1
 	title = NKRsichuanPI.1.t
 	desc = NKRsichuanPI.1.d
@@ -18336,11 +18397,24 @@ country_event = { #
 
 	is_triggered_only = yes
 	fire_only_once = yes
-	
 
-	option = {#
+	option = {#青年中国必须团结...
 		log = "[GetLogInfo]: event NKRsichuanPI.1 option NKRsichuanPI.1.a"
 		name = NKRsichuanPI.1.a
+		custom_effect_tooltip = NKRsichuanPI.1.tt
+		SZC_YCP_party_issue_setup = yes
+	}
+	
+
+	option = {#...如此才能求存！
+		log = "[GetLogInfo]: event NKRsichuanPI.1 option NKRsichuanPI.1.a"
+		name = NKRsichuanPI.1.a
+		custom_effect_tooltip = NKRsichuanPI.1.tt
+		custom_effect_tooltip = NKRsichuanPI.1.tt2
+		SZC_YCP_party_issue_setup = yes
+		SZC_YCP_party_issue_setup_2 = yes
+		add_political_power = -400
+
 	}
 }
 
