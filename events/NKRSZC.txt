@@ -2,13 +2,14 @@
 add_namespace = NKRsichuan
 add_namespace = NKRsichuanmisc
 add_namespace = NKRsichuanFP
+add_namespace = NKRsichuanPI
 add_namespace = NKRsichuanflavor
 add_namespace = NKRsichuanpuppet
 add_namespace = SZCDEBUG
 
 ###醒狮###
 
-country_event = { #安抚委员会宣告成立
+country_event = { #武德励进会宣告成立
 	id = NKRsichuan.1
 	title = NKRsichuan.1.t
 	desc = NKRsichuan.1.d
@@ -20,9 +21,9 @@ country_event = { #安抚委员会宣告成立
 		log = "[GetLogInfo]: event NKRsichuan.1 option NKRsichuan.1.a"
 		name = NKRsichuan.1.a
 		set_party_name = {
-			ideology = paternal_autocrat
-			name = SZC_NRA_party
-			long_name = SZC_NRA_party_long
+			ideology = authoritarian_democrat
+			name = SZC_WDLJH_party
+			long_name = SZC_WDLJH_party_long
 		}
 		hidden_effect = {
 			country_event = {
@@ -571,6 +572,13 @@ country_event = { #潘文华巩固政权
 		add_ideas = {
 			SZC_pan_legitimacy_1
 		}
+		hidden_effect = {
+			set_party_name = {
+				ideology = authoritarian_democrat
+				long_name = SZC_WDLJH_PWH_party_long
+				name = SZC_WDLJH_PWH_party
+			}
+		}
 	}
 }
 
@@ -906,13 +914,13 @@ country_event = { #四川易帜
 			}
 			set_party_name = {
 				ideology = paternal_autocrat
-				long_name = SZC_Pan_LKMT_party_long
-				name = SZC_Pan_LKMT_party
+				long_name = SZC_WDLJH_PWH_KMT_party_long
+				name = SZC_WDLJH_PWH_KMT_party
 			}
 			set_party_name = {
 				ideology = authoritarian_democrat
-				long_name = SZC_Pan_LKMT_party_long
-				name = SZC_Pan_LKMT_party
+				long_name = SZC_WDLJH_PWH_KMT_party_long
+				name = SZC_WDLJH_PWH_KMT_party
 			}
 			set_party_name = {
 				ideology = totalist
@@ -2231,11 +2239,6 @@ country_event = { #最宏伟的阅兵式
 				long_name = SZC_KMTRCpan_party_long
 			}
 			set_party_name = {
-				ideology = paternal_autocrat
-				name = SZC_NRA_party
-				long_name = SZC_NRA_party_long
-			}
-			set_party_name = {
 				ideology = national_populist
 				name = SZC_CRSpan_party
 				long_name = SZC_CRSpan_party_long
@@ -2570,11 +2573,6 @@ country_event = { #国民党新一届代表大会
 				ideology = authoritarian_democrat
 				name = SZC_KMTCC_party
 				long_name = SZC_KMTCC_party_long
-			}
-			set_party_name = {
-				ideology = paternal_autocrat
-				name = SZC_NRA_party
-				long_name = SZC_NRA_party_long
 			}
 			set_party_name = {
 				ideology = national_populist
@@ -18326,6 +18324,151 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanFP.89 option NKRsichuanFP.89.a"
 		name = NKRsichuanFP.89.a
+	}
+}
+
+
+country_event = { #
+	id = NKRsichuanPI.1
+	title = NKRsichuanPI.1.t
+	desc = NKRsichuanPI.1.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanPI.1 option NKRsichuanPI.1.a"
+		name = NKRsichuanPI.1.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanPI.2
+	title = NKRsichuanPI.2.t
+	desc = NKRsichuanPI.2.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanPI.2 option NKRsichuanPI.2.a"
+		name = NKRsichuanPI.2.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanPI.3
+	title = NKRsichuanPI.3.t
+	desc = NKRsichuanPI.3.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanPI.3 option NKRsichuanPI.3.a"
+		name = NKRsichuanPI.3.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanPI.4
+	title = NKRsichuanPI.4.t
+	desc = NKRsichuanPI.4.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanPI.4 option NKRsichuanPI.4.a"
+		name = NKRsichuanPI.374.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanPI.5
+	title = NKRsichuanPI.5.t
+	desc = NKRsichuanPI.5.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanPI.5 option NKRsichuanPI.5.a"
+		name = NKRsichuanPI.5.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanPI.6
+	title = NKRsichuanPI.6.t
+	desc = NKRsichuanPI.6.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanPI.6 option NKRsichuanPI.66.a"
+		name = NKRsichuanPI.6.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanPI.7
+	title = NKRsichuanPI.7.t
+	desc = NKRsichuanPI.7.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanPI.7 option NKRsichuanPI.7.a"
+		name = NKRsichuanPI.7.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanPI.8
+	title = NKRsichuanPI.8.t
+	desc = NKRsichuanPI.8.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanPI.8 option NKRsichuanPI.8.a"
+		name = NKRsichuanPI.8.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanPI.9
+	title = NKRsichuanPI.9.t
+	desc = NKRsichuanPI.9.d
+	picture = GFX_report_event_FNG_troops
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanPI.9 option NKRsichuanPI.9.a"
+		name = NKRsichuanPI.9.a
 	}
 }
 

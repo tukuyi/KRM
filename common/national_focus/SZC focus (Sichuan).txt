@@ -18564,8 +18564,13 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_spare_revolution"
 			hidden_effect = {
-				country_event = {
-					id =  NKRsichuan.109
+				if = {
+					limit = {
+						has_country_leader = SZC_pan_wenhua
+					}
+					country_event = {
+						id =  NKRsichuan.109
+					}
 				}
 			}
 			activate_targeted_decision = { decision = china_demand_submission target = SHX }
