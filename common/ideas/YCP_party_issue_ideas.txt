@@ -144,6 +144,34 @@ ideas = {
 				experience_loss_factor = -0.35
 			}
 		}
+		SZC_zuo_shunsheng_DMC_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				surrender_limit = 0.10
+				trade_opinion_factor = 0.35
+				stability_factor = 0.15
+				research_speed_factor = 0.125
+			}
+		}
+		SZC_zuo_shunsheng_suit_DMC_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				surrender_limit = 0.10
+				trade_opinion_factor = 0.35
+				stability_factor = 0.15
+				research_speed_factor = 0.125
+			}
+		}
 ####################    INTERIIOR       ####################
 		#generic
 		# enemy_operative_detection_chance_factor = 0.1
@@ -270,6 +298,40 @@ ideas = {
 				stability_factor = 0.2
 				compliance_growth = 0.08
 				compliance_gain = 0.06
+			}
+		}
+		SZC_zheng_zhenwen_DMI_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				enemy_operative_detection_chance_factor = 0.1
+				drift_defence_factor = 0.1
+				stability_factor = 0.10
+				resistance_damage_to_garrisons = -0.15
+				consumer_goods_factor = -0.075
+				trade_opinion_factor = 0.30
+				production_speed_industrial_complex_factor = 0.125
+			}
+		}
+		SZC_yu_jiaju_DMI_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				enemy_operative_detection_chance_factor = 0.1
+				drift_defence_factor = 0.1
+				resistance_damage_to_garrisons = -0.15
+				stability_factor = 0.15
+				party_popularity_stability_factor = -0.15
+				social_democrat_acceptance = 25
+				social_liberal_acceptance = 25
+				market_liberal_acceptance = 25
+				social_conservative_acceptance = 25
+				planning_speed = 0.1
+				division_recovery_rate = 0.175
 			}
 		}
 ####################      FOREIGN       ####################
@@ -447,6 +509,35 @@ ideas = {
 				supply_consumption_factor = -0.125
 			}
 		}
+		SZC_wu_tianchi_DMP_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.15
+				enemy_partisan_effect = -0.20
+				compliance_growth = 0.1
+				political_advisor_cost_factor = -0.33
+				high_command_cost_factor = -0.33
+				economy_law_cost_factor = -0.25
+				research_speed_factor = 0.125
+			}
+		}
+		SZC_shen_yunlong_DMP_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.15
+				enemy_partisan_effect = -0.20
+				compliance_growth = 0.1
+				recruitable_population_factor = 0.075
+				drift_defence_factor = 0.25
+				trade_opinion_factor = 0.20
+			}
+		}
 ####################      TRAIN       ####################
 		# generic
 		# army_leader_experience_gain = 0.15
@@ -529,6 +620,34 @@ ideas = {
 				monthly_population = 0.075
 				training_time_factor = -0.125
 				division_recovery_rate = 0.075
+			}
+		}
+		SZC_liu_yongji_DMT_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_leader_experience_gain = 0.15
+				training_time_factor = -0.05
+				experience_gain_army_factor = 0.10
+				political_power_gain = 0.125
+				electronics_research = 0.2
+			}
+		}
+		SZC_zhang_bolun_DMT_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_leader_experience_gain = 0.15
+				training_time_factor = -0.05
+				experience_gain_army_factor = 0.10
+				command_power_gain = 0.125
+				political_power_gain = 0.075
+				industrial_capacity_gain_factor = 0.075
+				infrastructure_construction_speed_factor = 0.125
 			}
 		}
 ####################      ORGANIZATION       ####################
@@ -709,10 +828,25 @@ ideas = {
 			modifier = {
 				political_power_gain = 0.125
 				recruitable_population_factor = 0.05
-    			war_support_factor = 0.1
+				war_support_factor = 0.1
 				enemy_operative_detection_chance_factor = 0.125
 				production_speed_dockyard_factor = 0.125
 				naval_research = 0.125
+			}
+		}
+		SZC_xia_erkang_DMY_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				recruitable_population_factor = 0.05
+				war_support_factor = 0.1
+				division_recovery_rate = 0.1
+				research_speed_factor = 0.05
+				surrender_limit = 0.15
+				army_org_factor = 0.05
 			}
 		}
 ####################      STANDING       ####################
