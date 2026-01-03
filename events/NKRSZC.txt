@@ -1766,10 +1766,12 @@ country_event = { #庆功宴
 		}
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_xie_chi_advisor
-		SZC_dai_jitao = {
-			SZC_recruit_character_effect = yes
+		YUN = {
+			YUN_dai_jitao = {
+				SZC_recruit_character_effect = yes
+			}
 		}
-		activate_advisor = SZC_dai_jitao_sic
+		activate_advisor = YUN_dai_jitao_sic
 	}
 }
 
@@ -7137,6 +7139,12 @@ country_event = { #国格
 	option = {#齐心协力铸造国格！
 		log = "[GetLogInfo]: event NKRsichuan.422 option NKRsichuan.422.a"
 		name = NKRsichuan.422.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.10
+				days = 5
+			}
+		}
 	}
 }
 
@@ -7510,6 +7518,12 @@ country_event = { #木槿花丛
 				days = 49
 			}
 		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.12
+				days = 5
+			}
+		}
 	}
 }
 
@@ -7670,6 +7684,12 @@ country_event = { #北伐宣言
 	option = {#前进！
 		log = "[GetLogInfo]: event NKRsichuan.438 option NKRsichuan.438.a"
 		name = NKRsichuan.438.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.13
+				days = 5
+			}
+		}
 	}
 }
 
@@ -7935,6 +7955,12 @@ country_event = { #党费自由
 		log = "[GetLogInfo]: event NKRsichuan.446 option NKRsichuan.4466.a"
 		name = NKRsichuan.446.a
 		add_political_power = 150
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.14
+				days = 5
+			}
+		}
 	}
 }
 
@@ -7951,6 +7977,12 @@ country_event = { #青年党的坚持
 	option = {#台下热泪盈眶。
 		log = "[GetLogInfo]: event NKRsichuan.447 option NKRsichuan.447.a"
 		name = NKRsichuan.447.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.11
+				days = 5
+			}
+		}
 	}
 }
 
@@ -8894,19 +8926,12 @@ country_event = { #党章修改通过！
 			ideology = paternal_autocrat
 			popularity = 0.1
 		}
+		activate_advisor = SZC_duan_zhenhuan_sic
 		custom_effect_tooltip = NKRsichuan.477.tt
 		hidden_effect = {
 			country_event = {
 				id = NKRsichuan.479
 				days = 3
-			}
-			SZC_zeng_qi = {
-				set_portraits = {
-					civilian = {
-						large = GFX_portrait_SZC_zeng_qi_suit_large
-						small = GFX_portrait_SZC_zeng_qi_suit_small
-					}
-				}
 			}
 		}
 	}
@@ -8944,6 +8969,7 @@ country_event = { #曾琦驳回党章修改
 				long_name = SZC_YCP_xingshe_party_long
 				name = SZC_YCP_xingshe_party
 			}
+			activate_advisor = SZC_hu_guowei_sic
 			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
 			add_to_coalition = yes
 			country_event = {
@@ -8971,6 +8997,24 @@ country_event = { #青年党十大顺利闭幕
 		set_cosmetic_tag = SZC_YCP_beijing_government
 		set_capital = { state = 608 remember_old_capital = no }
 		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					has_government = authoritarian_democrat
+				}
+				country_event = {
+					id = NKRsichuanPI.20
+				}
+			}
+			if = {
+				limit = {
+					has_government = paternal_autocrat
+				}
+				country_event = {
+					id = NKRsichuanPI.21
+				}
+			}
+		}
 	}
 }
 
@@ -8994,6 +9038,7 @@ country_event = { #反对派得胜
 			ideology = authoritarian_democrat
 			popularity = 0.05
 		}
+		activate_advisor = SZC_zuo_shunsheng_sic
 		hidden_effect = {
 			set_country_flag = SZC_YCP_li_path
 			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
@@ -9066,6 +9111,7 @@ country_event = { #国魂社的欢呼
 			ideology = national_populist
 			popularity = 0.08
 		}
+		set_country_flag = SZC_YCP_natpop_available
 	}
 }
 
@@ -9086,6 +9132,11 @@ country_event = { #青年党十大顺利闭幕
 		set_cosmetic_tag = SZC_YCP_beijing_government
 		set_capital = { state = 608 remember_old_capital = no }
 		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.22
+			}
+		}
 	}
 }
 
@@ -9157,6 +9208,7 @@ country_event = { #妥协方案得到认可
 		set_politics = {
 			ruling_party = social_conservative
 		}
+		activate_advisor = SZC_yu_fuxian_sic
 		add_popularity = {
 			ideology = social_conservative
 			popularity = 0.1
@@ -9190,6 +9242,11 @@ country_event = { #青年党十大闭幕
 		set_cosmetic_tag = SZC_YCP_beijing_government
 		set_capital = { state = 608 remember_old_capital = no }
 		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.23
+			}
+		}
 	}
 }
 
@@ -9397,6 +9454,32 @@ country_event = { #妇女权利？
 
 	option = {#妇女无权则平等无望！
 		log = "[GetLogInfo]: event NKRsichuan.497 option NKRsichuan.497.a"
+		trigger = {
+			OR = {
+				AND = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_yu_xiaoquan
+					}
+					SZC_yu_xiaoquan = {
+						YCP_working_in_party = yes
+					}
+				}
+				AND = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_tan_tiwu
+					}
+					SZC_tan_tiwu = {
+						YCP_working_in_party = yes
+					}
+				}
+				OR = {
+					SZC_yu_xiaoquan = { is_hired_as_advisor = yes}
+					SZC_tan_tiwu = { is_hired_as_advisor = yes}
+				}
+			}
+		}
 		name = NKRsichuan.497.a
 		add_stability = -0.1
 		SZC_YCP_constitution_progress_effect = yes
@@ -9456,6 +9539,7 @@ country_event = { #左翼政党的命运
 		name = NKRsichuan.499.a
 		trigger = {
 			has_country_flag = SZC_YCP_zhang_union
+
 		}
 		custom_effect_tooltip = NKRsichuan.499.a.tt
 		add_popularity = {
@@ -9819,7 +9903,7 @@ country_event = { #民主的国家主义
 
 	option = {#一小步，一大步。
 		log = "[GetLogInfo]: event NKRsichuan.514 option NKRsichuan.514.a"
-		name = NKRsichuan.51374.a
+		name = NKRsichuan.514.a
 	}
 }
 
@@ -10381,7 +10465,7 @@ country_event = { #阴影中的交易
 	fire_only_once = yes
 	
 
-	option = {#“夏委员长，我们会支持你的。”
+	option = {#“夏公，我们会支持你的。”
 		log = "[GetLogInfo]: event NKRsichuan.536 option NKRsichuan.536.a"
 		name = NKRsichuan.536.a
 		add_popularity = {
@@ -10394,7 +10478,7 @@ country_event = { #阴影中的交易
 		}
 		set_country_flag = SZC_YCP_zhang_supports_xia
 	}
-	option = {#“夏委员长，抱歉，但我们不会阻碍你。”
+	option = {#“夏公，抱歉，但我们不会阻碍你。”
 		log = "[GetLogInfo]: event NKRsichuan.536 option NKRsichuan.536.b"
 		name = NKRsichuan.536.b
 	}
@@ -10456,13 +10540,19 @@ country_event = { #顺利交接
 		SZC_chen_qitian = {
 			promote_character = authoritarian_democrat_new_legalist_statist_subtype
 		}
+		activate_advisor = SZC_chang_yansheng_sic
 		set_party_name = {
 			ideology = authoritarian_democrat
-			name = SZC_YCP_minxianpai_party
-			long_name = SZC_YCP_minxianpai_party_long
+			name = SZC_YCP_minshengpai_party
+			long_name = SZC_YCP_minshengpai_party_long
 		}
 		set_country_flag = SZC_YCP_new_legalist_path
 		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.28
+			}
+		}
 	}
 }
 
@@ -10490,13 +10580,19 @@ country_event = { #领导层更迭
 		SZC_chen_qitian = {
 			promote_character = authoritarian_democrat_new_legalist_statist_subtype
 		}
+		activate_advisor = SZC_chang_yansheng_sic
 		set_party_name = {
 			ideology = authoritarian_democrat
-			name = SZC_YCP_minxianpai_party
-			long_name = SZC_YCP_minxianpai_party_long
+			name = SZC_YCP_minshengpai_party
+			long_name = SZC_YCP_minshengpai_party_long
 		}
 		set_country_flag = SZC_YCP_new_legalist_path
 		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.28
+			}
+		}
 	}
 }
 
@@ -10528,13 +10624,19 @@ country_event = { #丢人现眼
 		SZC_chen_qitian = {
 			promote_character = authoritarian_democrat_new_legalist_statist_subtype
 		}
+		activate_advisor = SZC_chang_yansheng_sic
 		set_party_name = {
 			ideology = authoritarian_democrat
-			name = SZC_YCP_minxianpai_party
-			long_name = SZC_YCP_minxianpai_party_long
+			name = SZC_YCP_minshengpai_party
+			long_name = SZC_YCP_minshengpai_party_long
 		}
 		set_country_flag = SZC_YCP_new_legalist_path
 		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.28
+			}
+		}
 	}
 }
 
@@ -10657,6 +10759,8 @@ country_event = { #混乱即阶梯
 		}
 		add_political_power = -100
 		end_coalition = yes
+		SZC_YCP_dissolve_the_YCP = yes
+		activate_advisor = SZC_chen_zaidao_sic
 		set_politics = {
 			ruling_party = syndicalist
 		}
@@ -10707,6 +10811,12 @@ country_event = { #新战国时代已至！
 		log = "[GetLogInfo]: event NKRsichuan.548 option NKRsichuan.548.a"
 		name = NKRsichuan.548.a
 		add_war_support = 0.05
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.18
+				days = 5
+			}
+		}
 	}
 }
 
@@ -10857,6 +10967,10 @@ country_event = { #无治国家主义成真
 	option = {#待到中华统一，便能更进一步...
 		log = "[GetLogInfo]: event NKRsichuan.557 option NKRsichuan.557.a"
 		name = NKRsichuan.557.a
+		SZC_huang_lingshuang = {
+			SZC_recruit_character_effect = yes
+		}
+		activate_advisor = SZC_huang_lingshuang_sic
 	}
 }
 
@@ -10907,6 +11021,12 @@ country_event = { #从未见过的挚友
 	option = {#没什么，我们继续吧？
 		log = "[GetLogInfo]: event NKRsichuan.560 option NKRsichuan.560.a"
 		name = NKRsichuan.560.a
+		SZC_lei_zhen = {
+			SZC_recruit_character_effect = yes
+		}
+		QIE_hu_shih = {
+			SZC_recruit_character_effect = yes
+		}
 	}
 }
 
@@ -10926,9 +11046,11 @@ country_event = { #中国青年党的终结
 		SZC_xia_taosheng = {
 			promote_character = market_liberal_subtype
 		}
+		activate_advisor = SZC_lei_zhen_sic
 		set_politics = {
 			ruling_party = market_liberal
 		}
+		YCP_party_issue_dissolve = yes
 		set_party_name = {
 			ideology = market_liberal
 			name = SZC_PYCP_CDP_party
@@ -11096,6 +11218,11 @@ country_event = { #让贤
 			ideology = social_liberal
 			popularity = 0.10
 		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.26
+			}
+		}
 	}
 }
 
@@ -11116,6 +11243,12 @@ country_event = { #年轻的民主
 			ideology = authoritarian_democrat
 			popularity = 0.10
 		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.25
+			}
+		}
+
 	}
 }
 
@@ -11141,6 +11274,7 @@ country_event = { #造梦之终
 				id = NKRsichuan.571
 				days = 1
 			}
+			clr_country_flag = SZC_YCP_zhang_in_government
 		}
 	}
 }
@@ -11162,9 +11296,15 @@ country_event = { #终局
 		set_politics = {
 			ruling_party = national_populist
 		}
+		activate_advisor = SZC_tan_tiwu_sic
 		add_popularity = {
 			ideology = national_populist
 			popularity = 0.10
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.24
+			}
 		}
 	}
 }
@@ -11703,12 +11843,6 @@ country_event = { #青年民主的演化
 			add_popularity = { ideology = social_conservative popularity = YCP_authdem_popularity_temp_var }
 			SZC_li_huang = {
 				promote_character = social_conservative_statist_subtype
-				set_portraits = {
-					civilian = {
-						large = GFX_portrait_SZC_li_huang_suit_large
-						small = GFX_portrait_SZC_li_huang_suit_small
-					}
-				}
 			}
 			set_party_name = {
 				ideology = social_conservative
@@ -12009,14 +12143,6 @@ country_event = { #书生的自由
 	option = {#没有自由民主，谈何现代国家？
 		log = "[GetLogInfo]: event NKRsichuan.617 option NKRsichuan.617.a"
 		name = NKRsichuan.617.a
-		SZC_zuo_shunsheng = {
-			set_portraits = {
-				civilian = {
-					large = GFX_portrait_SZC_zuo_shunsheng_suit_large
-					small = GFX_portrait_SZC_zuo_shunsheng_suit_small
-				}
-			}
-		}
 		set_country_flag = NKRSZC_YCPpath_phase3
 		mark_focus_tree_layout_dirty = yes
 	}
@@ -12351,14 +12477,6 @@ country_event = { #法
 	option = {#法，国之大事也。
 		log = "[GetLogInfo]: event NKRsichuan.637 option NKRsichuan.637.a"
 		name = NKRsichuan.637.a
-		SZC_chen_qitian = {
-			set_portraits = {
-				civilian = {
-					large = GFX_portrait_SZC_chen_qitian_suit_large
-					small = GFX_portrait_SZC_chen_qitian_suit_small
-				}
-			}
-		}
 		set_country_flag = NKRSZC_YCPpath_phase3
 		mark_focus_tree_layout_dirty = yes
 	}
@@ -12666,14 +12784,6 @@ country_event = { #狂飙！永恒的狂飙！
 	option = {#突进！
 		log = "[GetLogInfo]: event NKRsichuan.656 option NKRsichuan.6566.a"
 		name = NKRsichuan.656.a
-		SZC_jiang_yungang= {
-			set_portraits = {
-				civilian = {
-					large = GFX_portrait_SZC_jiang_yungang_cool_large
-					small = GFX_portrait_SZC_jiang_yungang_cool_small
-				}
-			}
-		}
 		set_country_flag = NKRSZC_YCPpath_phase3
 		mark_focus_tree_layout_dirty = yes
 	}
@@ -13358,6 +13468,9 @@ country_event = { #一声炮响
 		log = "[GetLogInfo]: event NKRsichuan.694 option NKRsichuan.694.a"
 		name = NKRsichuan.694.a
 		remove_idea = SZC_YCP_break_dictatorship_idea
+		SZC_lei_zhen = {
+			retire = yes
+		}
 		hidden_effect = {
 			country_event = {
 				id = NKRsichuan.695
@@ -13380,6 +13493,7 @@ country_event = { #至高权力
 		log = "[GetLogInfo]: event NKRsichuan.695 option NKRsichuan.695.a"
 		name = NKRsichuan.695.a
 		custom_effect_tooltip = NKRsichuan.695.tt
+		activate_advisor = QIE_hu_shih_sic
 		set_country_leader_ideology = market_liberal_clientelist_subtype
 		if = {
 			limit = {
@@ -13426,6 +13540,9 @@ country_event = { #fake
 		name = NKRsichuan.696.a
 		add_stability = -1000
 		add_war_support = -1000
+		every_character = {
+			retire = yes
+		}
 	}
 }
 
@@ -13444,14 +13561,6 @@ country_event = { #不可能的胜利
 		name = NKRsichuan.697.a
 		custom_effect_tooltip = NKRsichuan.697_tt
 		set_country_leader_ideology = social_conservative_anarchist_statist_subtype
-		SZC_xia_taosheng = {
-			set_portraits = {
-				civilian = {
-					large = GFX_portrait_SZC_xia_taosheng_sweater_large
-					small = GFX_portrait_SZC_xia_taosheng_sweater_small
-				}
-			}
-		}
 		set_country_flag = NKRSZC_YCPpath_phase3
 		mark_focus_tree_layout_dirty = yes
 	}
@@ -14056,6 +14165,8 @@ country_event = { #政变
 				}
 			}
 		}
+		
+		activate_advisor = SZC_chen_xilian_sic
 		set_politics = {
 			ruling_party = paternal_autocrat
 		}
@@ -18701,6 +18812,518 @@ country_event = { #曾琦的崇拜者
 	}
 }
 
+country_event = { #二刘
+    id = NKRsichuanPI.10
+    title = NKRsichuanPI.10.t
+    desc = NKRsichuanPI.10.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.10 option NKRsichuanPI.10.a"
+        name = NKRsichuanPI.10.a
+		SZC_liu_dongyan	= {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_liu_dongyan }
+		YCP_party_issue_add_S = yes
+		SZC_liu_yongji	= {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_liu_yongji }
+		YCP_party_issue_add_S = yes
+    }
+}
+
+country_event = { #民声派新人
+    id = NKRsichuanPI.11
+    title = NKRsichuanPI.11.t
+    desc = NKRsichuanPI.11.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { #新法家仍在传承！
+        log = "[GetLogInfo]: event NKRsichuanPI.11 option NKRsichuanPI.11.a"
+        name = NKRsichuanPI.11.a
+		SZC_chen_shanxin = {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_chen_shanxin }
+		YCP_party_issue_add_S = yes
+		SZC_ding_tingbiao = {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_ding_tingbiao }
+		YCP_party_issue_add_S = yes
+    }
+}
+
+country_event = { #陶氏兄弟
+    id = NKRsichuanPI.12
+    title = NKRsichuanPI.12.t
+    desc = NKRsichuanPI.12.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { #青年党当如青年！
+        log = "[GetLogInfo]: event NKRsichuanPI.12 option NKRsichuanPI.12.a"
+        name = NKRsichuanPI.12.a
+		SZC_tao_yuanzhen = {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_tao_yuanzhen }
+		YCP_party_issue_add_S = yes
+		SZC_tao_yuangan = {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_tao_yuangan }
+		YCP_party_issue_add_S = yes
+    }
+}
+
+country_event = { #日本通
+    id = NKRsichuanPI.13
+    title = NKRsichuanPI.13.t
+    desc = NKRsichuanPI.13.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.13 option NKRsichuanPI.13.a"
+        name = NKRsichuanPI.13.a
+		SZC_cui_wanqiu = {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_cui_wanqiu }
+		YCP_party_issue_add_S = yes
+    }
+}
+
+country_event = { #福建青年
+    id = NKRsichuanPI.14
+    title = NKRsichuanPI.14.t
+    desc = NKRsichuanPI.14.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.14 option NKRsichuanPI.14.a"
+        name = NKRsichuanPI.14.a
+		SZC_lin_keji = {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_lin_keji }
+		YCP_party_issue_add_S = yes
+    }
+}
+
+country_event = { #华北支部的遗产？
+    id = NKRsichuanPI.15
+    title = NKRsichuanPI.15.t
+    desc = NKRsichuanPI.15.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			QIE = {
+				SZC_zhao_yusong = {
+					SZC_recruit_character_effect = yes
+				}
+			}
+		}
+	}
+    option = { #开除他！
+        log = "[GetLogInfo]: event NKRsichuanPI.15 option NKRsichuanPI.15.a"
+        name = NKRsichuanPI.15.a
+		add_stability = 0.05
+		QIE = {
+			SZC_zhao_yusong = {
+				retire = yes
+			}
+		}
+    }
+    option = { #他还是很有用的...
+        log = "[GetLogInfo]: event NKRsichuanPI.15 option NKRsichuanPI.15.b"
+        name = NKRsichuanPI.15.b
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.03
+		}
+		add_stability = -0.125
+		add_political_power = -100
+		QIE = {
+			SZC_zhao_yusong = {
+				SZC_recruit_character_effect = yes
+			}
+		}
+		set_temp_variable = { temp_select_token = token:SZC_zhao_yusong }
+		YCP_party_issue_add_S = yes
+    }
+}
+
+country_event = { #华北的叛徒
+    id = NKRsichuanPI.16
+    title = NKRsichuanPI.16.t
+    desc = NKRsichuanPI.16.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { #处死叛徒！
+        log = "[GetLogInfo]: event NKRsichuanPI.16 option NKRsichuanPI.16.a"
+        name = NKRsichuanPI.16.a
+		add_stability = 0.15
+		add_political_power = 100
+		QIE = {
+			SZC_zhao_yusong = {
+				kill = yes
+			}
+		}
+    }
+}
+
+country_event = { #开除叛徒
+    id = NKRsichuanPI.17
+    title = NKRsichuanPI.17.t
+    desc = NKRsichuanPI.17.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { #真让人恶心...
+        log = "[GetLogInfo]: event NKRsichuanPI.17 option NKRsichuanPI.17.a"
+        name = NKRsichuanPI.17.a
+		add_political_power = -100
+		add_stability = -0.05
+		QIE = {
+			set_party_name = {
+				ideology = national_populist
+				name = QIE_YCP_2_party
+				long_name = QIE_YCP_2_party_long
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				name = QIE_YCP_2_party
+				long_name = QIE_YCP_2_party_long
+			}
+		}
+		set_country_flag = YCP_zhaoyusong_fired
+    }
+}
+
+country_event = { #赤色读者
+    id = NKRsichuanPI.18
+    title = NKRsichuanPI.18.t
+    desc = NKRsichuanPI.18.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = { #青年党内的左派？
+        log = "[GetLogInfo]: event NKRsichuanPI.18 option NKRsichuanPI.18.a"
+        name = NKRsichuanPI.18.a
+		SZC_liao_shangke = {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_liao_shangke }
+		YCP_party_issue_add_S = yes
+    }
+}
+
+country_event = {
+    id = NKRsichuanPI.19
+    title = NKRsichuanPI.19.t
+    desc = NKRsichuanPI.19.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.19 option NKRsichuanPI.19.a"
+        name = NKRsichuanPI.19.a
+    }
+}
+
+country_event = { #新党务班子
+    id = NKRsichuanPI.20
+    title = NKRsichuanPI.20.t
+    desc = NKRsichuanPI.20.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.20 option NKRsichuanPI.20.a"
+        name = NKRsichuanPI.20.a
+		YCP_zeng_authdem_center_setup = yes
+    }
+}
+
+country_event = { #新党务班子
+    id = NKRsichuanPI.21
+    title = NKRsichuanPI.21.t
+    desc = NKRsichuanPI.21.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.21 option NKRsichuanPI.21.a"
+        name = NKRsichuanPI.21.a
+		YCP_zeng_pataut_center_setup = yes
+    }
+}
+
+country_event = { #新党务班子
+    id = NKRsichuanPI.22
+    title = NKRsichuanPI.22.t
+    desc = NKRsichuanPI.22.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.22 option NKRsichuanPI.22.a"
+        name = NKRsichuanPI.22.a
+		YCP_li_zuo_center_setup = yes
+    }
+}
+
+country_event = { #新党务班子
+    id = NKRsichuanPI.23
+    title = NKRsichuanPI.23.t
+    desc = NKRsichuanPI.23.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.23 option NKRsichuanPI.23.a"
+        name = NKRsichuanPI.23.a
+		YCP_youth_center_setup = yes
+    }
+}
+
+country_event = { #新党务班子
+    id = NKRsichuanPI.24
+    title = NKRsichuanPI.24.t
+    desc = NKRsichuanPI.24.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.24 option NKRsichuanPI.24.a"
+        name = NKRsichuanPI.24.a
+		YCP_jiang_coup_center_setup = yes
+    }
+}
+
+country_event = { #新党务班子
+    id = NKRsichuanPI.25
+    title = NKRsichuanPI.25.t
+    desc = NKRsichuanPI.25.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.25 option NKRsichuanPI.25.a"
+        name = NKRsichuanPI.25.a
+		YCP_li_huang_center_setup = yes
+    }
+}
+
+country_event = { #新党务班子
+    id = NKRsichuanPI.26
+    title = NKRsichuanPI.26.t
+    desc = NKRsichuanPI.26.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.26 option NKRsichuanPI.26.a"
+        name = NKRsichuanPI.26.a
+		YCP_zuo_shunsheng_center_setup = YES
+    }
+}
+
+country_event = { #新党务班子
+    id = NKRsichuanPI.27
+    title = NKRsichuanPI.27.t
+    desc = NKRsichuanPI.27.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.27 option NKRsichuanPI.27.a"
+        name = NKRsichuanPI.27.a
+    }
+}
+
+country_event = { #新党务班子
+    id = NKRsichuanPI.28
+    title = NKRsichuanPI.28.t
+    desc = NKRsichuanPI.28.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.28 option NKRsichuanPI.28.a"
+        name = NKRsichuanPI.28.a
+		YCP_chen_center_setup = yes
+    }
+}
+
+country_event = {
+    id = NKRsichuanPI.29
+    title = NKRsichuanPI.29.t
+    desc = NKRsichuanPI.29.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.29 option NKRsichuanPI.29.a"
+        name = NKRsichuanPI.29.a
+    }
+}
+
+country_event = {
+    id = NKRsichuanPI.30
+    title = NKRsichuanPI.30.t
+    desc = NKRsichuanPI.30.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.30 option NKRsichuanPI.30.a"
+        name = NKRsichuanPI.30.a
+    }
+}
+
+country_event = {
+    id = NKRsichuanPI.31
+    title = NKRsichuanPI.31.t
+    desc = NKRsichuanPI.31.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.31 option NKRsichuanPI.31.a"
+        name = NKRsichuanPI.31.a
+    }
+}
+
+country_event = {
+    id = NKRsichuanPI.32
+    title = NKRsichuanPI.32.t
+    desc = NKRsichuanPI.32.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.32 option NKRsichuanPI.32.a"
+        name = NKRsichuanPI.32.a
+    }
+}
+
+country_event = {
+    id = NKRsichuanPI.33
+    title = NKRsichuanPI.33.t
+    desc = NKRsichuanPI.33.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.33 option NKRsichuanPI.33.a"
+        name = NKRsichuanPI.33.a
+    }
+}
+
+country_event = {
+    id = NKRsichuanPI.34
+    title = NKRsichuanPI.34.t
+    desc = NKRsichuanPI.34.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.34 option NKRsichuanPI.34.a"
+        name = NKRsichuanPI.34.a
+    }
+}
+
+country_event = {
+    id = NKRsichuanPI.35
+    title = NKRsichuanPI.35.t
+    desc = NKRsichuanPI.35.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.35 option NKRsichuanPI.35.a"
+        name = NKRsichuanPI.35.a
+    }
+}
+
+country_event = {
+    id = NKRsichuanPI.36
+    title = NKRsichuanPI.36.t
+    desc = NKRsichuanPI.36.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.36 option NKRsichuanPI.36.a"
+        name = NKRsichuanPI.36.a
+    }
+}
+
+country_event = {
+    id = NKRsichuanPI.37
+    title = NKRsichuanPI.37.t
+    desc = NKRsichuanPI.37.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.37 option NKRsichuanPI.37.a"
+        name = NKRsichuanPI.37.a
+    }
+}
+
+country_event = {
+    id = NKRsichuanPI.38
+    title = NKRsichuanPI.38.t
+    desc = NKRsichuanPI.38.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.38 option NKRsichuanPI.38.a"
+        name = NKRsichuanPI.38.a
+    }
+}
+
+country_event = {
+    id = NKRsichuanPI.39
+    title = NKRsichuanPI.39.t
+    desc = NKRsichuanPI.39.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.39 option NKRsichuanPI.39.a"
+        name = NKRsichuanPI.39.a
+    }
+}
+
+country_event = {
+    id = NKRsichuanPI.40
+    title = NKRsichuanPI.40.t
+    desc = NKRsichuanPI.40.d
+    picture = GFX_report_event_FNG_troops
+    is_triggered_only = yes
+    fire_only_once = yes
+    option = {
+        log = "[GetLogInfo]: event NKRsichuanPI.40 option NKRsichuanPI.40.a"
+        name = NKRsichuanPI.40.a
+    }
+}
+
+
+
 
 country_event = { #军纪废弛
 	id = NKRsichuanflavor.1
@@ -19177,7 +19800,7 @@ unit_leader_event = { #张荫梧来投
 	}
 }
 
-country_event = { #
+country_event = { #全民政府的成功？
 	id = NKRsichuanflavor.26
 	title = NKRsichuanflavor.26.t
 	desc = NKRsichuanflavor.26.d
@@ -19190,10 +19813,99 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanflavor.26 option NKRsichuanflavor.26.a"
 		name = NKRsichuanflavor.26.a
+		ai_chance = {
+			base = 30
+			modifier = { #Measure Military Strength
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.75
+				}
+			}
+			modifier = { #Measure Military Strength
+				factor = 3
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.5
+				}
+			}
+			modifier = { #If CHI dwarfs Federalist industry
+				factor = 3
+				ic_ratio = {
+					tag = FROM
+					ratio < 0.5
+				}
+			}
+			modifier = { #If FNG/MAN has turtled up by joining Co-Pro - Patriotic Fevor. Only applies if CHI can actually beat them though
+				factor = 5
+				var:716.owner = {
+					is_ally_with = JAP
+					strength_ratio = {
+						tag = FROM
+						ratio < 1
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				SZC = { SZC_zuo_shunsheng = { is_second_in_command = yes } }
+			}
+		}
+		effect_tooltip = { FROM = { china_puppet_ROOT_effect = yes } }
+		hidden_effect = {
+			FROM = { country_event = { id = NKRsichuanflavor.27 days = 3 } } 
+			every_subject_country = {
+				SZC = {
+					china_puppet_PREV_effect = yes
+				}
+			}
+		}
+
+	}
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.26 option NKRsichuanflavor.26.b"
+		name = NKRsichuanflavor.26.b
+		ai_chance = {
+			base = 70
+			modifier = { #Measure Military Strength
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio > 1.3
+				}
+			}
+			modifier = { #Measure Military Strength
+				factor = 3
+				strength_ratio = {
+					tag = FROM
+					ratio > 2
+				}
+			}
+			modifier = { #Measure # of Fed Puppets
+				factor = 3
+				num_subjects > 2
+			}
+			modifier = { #Measure # of Fed Puppets
+				factor = 5
+				num_subjects > 4
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = CHI_ally_betrayal option = CHI_ALLY_BETRAYAL_NEVER }
+			}
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_outraged
+		}
+		add_war_support = -0.10
+		FROM = { hidden_effect = { country_event = { id = NKRsichuanflavor.28 days = 3 } } } #
+
 	}
 }
 
-country_event = { #
+country_event = { #全民大联合
 	id = NKRsichuanflavor.27
 	title = NKRsichuanflavor.27.t
 	desc = NKRsichuanflavor.27.d
@@ -19206,10 +19918,13 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanflavor.27 option NKRsichuanflavor.27.a"
 		name = NKRsichuanflavor.27.a
+		add_popularity = { ideology = social_liberal popularity = 0.05 }
+		china_puppet_FROM_effect = yes
+		custom_effect_tooltip = CHI_warlord_unrest_tt
 	}
 }
 
-country_event = { #
+country_event = { #背叛
 	id = NKRsichuanflavor.28
 	title = NKRsichuanflavor.28.t
 	desc = NKRsichuanflavor.28.d
@@ -19222,10 +19937,14 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanflavor.28 option NKRsichuanflavor.28.a"
 		name = NKRsichuanflavor.28.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_outraged
+		}
 	}
 }
 
-country_event = { #
+country_event = { #全民政府的成功？
 	id = NKRsichuanflavor.29
 	title = NKRsichuanflavor.29.t
 	desc = NKRsichuanflavor.29.d
@@ -19241,7 +19960,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #东南归顺
 	id = NKRsichuanflavor.30
 	title = NKRsichuanflavor.30.t
 	desc = NKRsichuanflavor.30.d
@@ -19254,10 +19973,99 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanflavor.30 option NKRsichuanflavor.30.a"
 		name = NKRsichuanflavor.30.a
+		ai_chance = {
+			base = 30
+			modifier = { #Measure Military Strength
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.75
+				}
+			}
+			modifier = { #Measure Military Strength
+				factor = 3
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.5
+				}
+			}
+			modifier = { #If CHI dwarfs Federalist industry
+				factor = 3
+				ic_ratio = {
+					tag = FROM
+					ratio < 0.5
+				}
+			}
+			modifier = { #If FNG/MAN has turtled up by joining Co-Pro - Patriotic Fevor. Only applies if CHI can actually beat them though
+				factor = 5
+				var:716.owner = {
+					is_ally_with = JAP
+					strength_ratio = {
+						tag = FROM
+						ratio < 1
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				SZC = { SZC_zuo_shunsheng = { is_second_in_command = yes } }
+			}
+		}
+		effect_tooltip = { FROM = { china_puppet_ROOT_effect = yes } }
+		hidden_effect = {
+			FROM = { country_event = { id = NKRsichuanflavor.31 days = 3 } } 
+			every_subject_country = {
+				SZC = {
+					china_puppet_PREV_effect = yes
+				}
+			}
+		}
+
+	}
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.30 option NKRsichuanflavor.30.b"
+		name = NKRsichuanflavor.30.b
+		ai_chance = {
+			base = 70
+			modifier = { #Measure Military Strength
+				factor = 2
+				strength_ratio = {
+					tag = FROM
+					ratio > 1.3
+				}
+			}
+			modifier = { #Measure Military Strength
+				factor = 3
+				strength_ratio = {
+					tag = FROM
+					ratio > 2
+				}
+			}
+			modifier = { #Measure # of Fed Puppets
+				factor = 3
+				num_subjects > 2
+			}
+			modifier = { #Measure # of Fed Puppets
+				factor = 5
+				num_subjects > 4
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = CHI_ally_betrayal option = CHI_ALLY_BETRAYAL_NEVER }
+			}
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_outraged
+		}
+		add_war_support = -0.10
+		FROM = { hidden_effect = { country_event = { id = NKRsichuanflavor.32 days = 3 } } } #
+
 	}
 }
 
-country_event = { #
+country_event = { #背叛
 	id = NKRsichuanflavor.31
 	title = NKRsichuanflavor.31.t
 	desc = NKRsichuanflavor.31.d
@@ -19270,6 +20078,10 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanflavor.31 option NKRsichuanflavor.31.a"
 		name = NKRsichuanflavor.31.a
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_outraged
+		}
 	}
 }
 

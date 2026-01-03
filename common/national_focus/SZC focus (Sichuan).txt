@@ -24569,7 +24569,8 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 50
+			# add = 50
+			add = 0
 			tag = SZC
 		}
 	}
@@ -25287,7 +25288,7 @@ focus_tree = {
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
 		allow_branch = {
-			# has_country_flag = NKRSZC_YCPpath_phase2
+			has_country_flag = NKRSZC_YCPpath_phase2
 		}
 
 		prerequisite = {
@@ -25541,7 +25542,7 @@ focus_tree = {
 		relative_position_id = SZC_YCP_wave_of_history_victory_of_ycp
 
 		allow_branch = {
-			# has_country_flag = NKRSZC_YCPpath_phase2
+			has_country_flag = NKRSZC_YCPpath_phase2
 		}
 
 		prerequisite = {
@@ -26453,7 +26454,7 @@ focus_tree = {
 			}
 			add_stability = 0.05
 			add_war_support = 0.05
-			#advisor trait
+			#xiechengping trait better
 		}
 	}
 	
@@ -26506,9 +26507,6 @@ focus_tree = {
 				ideology = authoritarian_democrat
 				popularity = 0.05
 			}
-			country_event = {
-				id = NKRsichuan.569
-			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -26516,11 +26514,36 @@ focus_tree = {
 							national_populist > 25
 							has_idea = SZC_YCP_progress_constitution
 							has_idea = SZC_YCP_zhang_in_government
+							AND = {
+								set_temp_variable = {
+									var = YCP_adv_chk
+									value = token:SZC_jiang_yungang
+								}
+								SZC_jiang_yungang = {
+									YCP_working_in_party = yes
+								}
+							
+							}
+							AND = {
+								set_temp_variable = {
+									var = YCP_adv_chk
+									value = token:SZC_tan_tiwu
+								}
+								SZC_tan_tiwu = {
+									YCP_working_in_party = yes
+								}
+							}
 						}
 					}
 					country_event = {
 						id = NKRsichuan.570
-						days = 20
+						days = 7
+					}
+				}
+				else = {
+					country_event = {
+						id = NKRsichuan.569
+						days = 7
 					}
 				}
 			}
@@ -26820,7 +26843,7 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.537
 			}
-			#advisor trait
+			#chenshanxin better
 		}
 	}
 	
@@ -26851,7 +26874,7 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.538
 			}
-			#advisor trait
+			#liujingyuan better
 		}
 	}
 	
@@ -27701,7 +27724,6 @@ focus_tree = {
 				ideology = national_populist
 				popularity = 0.05
 			}
-			#advisor trait
 		}
 	}
 
@@ -27720,7 +27742,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_ubermensch"
-			#leader trait
 			country_event = {
 				id = NKRsichuan.574
 			}
@@ -27842,6 +27863,23 @@ focus_tree = {
 			add_political_power = 150
 			add_stability = 0.1
 			add_war_support = 0.1
+			hidden_effect = {
+				SZC_zeng_qi = {
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_SZC_zeng_qi_suit_large
+							small = GFX_portrait_SZC_zeng_qi_suit_small
+						}
+					}
+				}
+				set_variable = {
+					YCP_party_issue_chairman = token:SZC_zeng_qi_suit
+				}
+				swap_ideas = {
+					remove_idea = YCP_zeng_qi_DMC_idea
+					add_idea = YCP_zeng_qi_suit_DMC_idea
+				}
+			}
 		}
 	}
 
@@ -27960,6 +27998,10 @@ focus_tree = {
 			focus = SZC_YCP_kill_traitors
 		}
 
+		available = {
+			has_completed_focus = SZC_YCP_more_than_orthodox
+		}
+
 
 
 		completion_reward = {
@@ -28001,7 +28043,7 @@ focus_tree = {
 			add_ideas = {
 				SZC_YCP_philosophers_idea
 			}
-			#advisors trait
+			activate_advisor = SZC_huang_shizi_sic
 		}
 	}
 
@@ -28551,6 +28593,23 @@ focus_tree = {
 			add_political_power = 150
 			add_stability = 0.1
 			add_war_support = 0.1
+			SZC_li_huang = {
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_SZC_li_huang_suit_large
+						small = GFX_portrait_SZC_li_huang_suit_small
+					}
+				}
+			}
+			hidden_effect = {
+				set_variable = {
+					YCP_party_issue_chairman = token:SZC_li_huang_suit
+				}
+				swap_ideas = {
+					remove_idea = YCP_li_huang_DMC_idea
+					add_idea = YCP_li_huang_suit_DMC_idea
+				}
+			}
 		}
 	}
 
@@ -28643,7 +28702,19 @@ focus_tree = {
 			}
 			add_political_power = 150
 			add_stability = 0.1
-			#advisors
+			GXC = {
+				GXC_zhang_junmai = {
+					SZC_recruit_character_effect = yes
+				}
+				GXC_chen_qiyou = {
+					SZC_recruit_character_effect = yes
+				}
+			}
+			CHI = {
+				CHI_sun_fo = {
+					SZC_recruit_character_effect = yes
+				}
+			}
 		}
 	}
 
@@ -29033,12 +29104,12 @@ focus_tree = {
 
 		allow_branch = {
 			has_global_flag = china_united
-			# AND = {
-			# 	has_country_flag = NKRSZC_YCPpath_phase3
-			# 	OR = {
-			# 		has_completed_focus = SZC_YCP_liberal_statist_struggle
-			# 	}
-			# }
+			AND = {
+				has_country_flag = NKRSZC_YCPpath_phase3
+				OR = {
+					has_completed_focus = SZC_YCP_liberal_statist_struggle
+				}
+			}
 		}
 
 
@@ -29048,6 +29119,23 @@ focus_tree = {
 			add_political_power = 150
 			add_stability = 0.1
 			add_war_support = 0.1
+			hidden_effect = {
+				SZC_zuo_shunsheng = {
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_SZC_zuo_shunsheng_suit_large
+							small = GFX_portrait_SZC_zuo_shunsheng_suit_small
+						}
+					}
+				}
+				set_temp_variable = {
+					YCP_party_issue_chairman = token:SZC_zuo_shunsheng_suit
+				}
+				swap_ideas = {
+					remove_idea = YCP_zuo_shunsheng_DMC_idea
+					add_idea = YCP_zuo_shunsheng_suit_DMC_idea
+				}
+			}
 		}
 	}
 
@@ -29235,7 +29323,7 @@ focus_tree = {
 				id = NKRsichuan.627
 			}
 			add_stability = 0.1
-			#advisor law
+			#shenyunlong better
 		}
 	}
 
@@ -29421,7 +29509,19 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_establish_healthy_multiparties_system"
-			#ADVISORS GANG AND DECISIONS
+			GXC = {
+				GXC_zhang_junmai = {
+					SZC_recruit_character_effect = yes
+				}
+				GXC_chen_qiyou = {
+					SZC_recruit_character_effect = yes
+				}
+			}
+			CHI = {
+				CHI_sun_fo = {
+					SZC_recruit_character_effect = yes
+				}
+			}
 			country_event = {
 				id = NKRsichuan.635
 			}
@@ -29519,6 +29619,23 @@ focus_tree = {
 			add_political_power = 150
 			add_stability = 0.1
 			add_war_support = 0.1
+			hidden_effect = {
+				SZC_chen_qitian = {
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_SZC_chen_qitian_suit_large
+							small = GFX_portrait_SZC_chen_qitian_suit_small
+						}
+					}
+				}
+				set_variable = {
+					YCP_party_issue_chairman = token:SZC_chen_qitian_suit
+				}
+				swap_ideas = {
+					remove_idea = YCP_chen_qitian_DMC_idea
+					add_idea = YCP_chen_qitian_suit_DMC_idea
+				}
+			}
 		}
 	}
 
@@ -29837,7 +29954,7 @@ focus_tree = {
 				id = NKRsichuan.649
 			}
 			add_stability = 0.1
-			#advisors
+			#wutianchi better
 		}
 	}
 
@@ -29907,7 +30024,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 			add_political_power = 100
-			#advisor trait_up
+			#liaoshangke better
 		}
 	}
 
@@ -30099,6 +30216,23 @@ focus_tree = {
 			add_political_power = 150
 			add_stability = 0.1
 			add_war_support = 0.1
+			hidden_effect = {
+				SZC_jiang_yungang= {
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_SZC_jiang_yungang_cool_large
+							small = GFX_portrait_SZC_jiang_yungang_cool_small
+						}
+					}
+				}
+				set_variable = {
+					YCP_party_issue_chairman = token:SZC_jiang_yungang_cool
+				}
+				swap_ideas = {
+					remove_idea = YCP_jiang_yungang_DMC_idea
+					add_idea = YCP_jiang_yungang_cool_DMC_idea
+				}
+			}
 		}
 	}
 
@@ -30306,7 +30440,12 @@ focus_tree = {
 			}
 			add_stability = -0.15
 			add_political_power = -50
-			#remove advisors
+			SZC_zhang_guotao = {
+				kill = yes
+			}
+			GXC_zhang_junmai = {
+				retire = yes
+			}
 
 		}
 	}
@@ -30415,7 +30554,17 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.668
 			}
-			#advisors
+			#tantiwu better
+			hidden_effect = {
+				SZC_tan_tiwu = {
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_SZC_tan_tiwu_armor_large
+							small = GFX_portrait_SZC_tan_tiwu_armor_small
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -30437,7 +30586,7 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.669
 			}
-			#decision against major bonus
+			unlock_decision_tooltip = SZC_YCP_the_great_struggle
 		}
 	}
 
@@ -30462,7 +30611,6 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.670
 			}
-			#bonusmore decision
 		}
 	}
 
@@ -30693,7 +30841,9 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.679
 			}
-			#advisors upgrade
+			SZC_xia_daoping = {
+				SZC_recruit_character_effect = yes
+			}
 			add_stability = 0.1
 			add_popularity = {
 				ideology = market_liberal
@@ -30809,7 +30959,6 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.683
 			}
-			#advisors upgrade
 			add_stability = 0.1
 			add_popularity = {
 				ideology = market_liberal
@@ -31011,7 +31160,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = SZC_YCP_post_YCP_days
 
-		visible = {
+		allow_branch = {
 			has_country_flag = SZC_CDP_haha_real_time
 		}
 
@@ -31070,6 +31219,23 @@ focus_tree = {
 			add_political_power = 150
 			add_stability = 0.1
 			add_war_support = 0.1
+			hidden_effect = {
+				SZC_xia_taosheng = {
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_SZC_xia_taosheng_sweater_large
+							small = GFX_portrait_SZC_xia_taosheng_sweater_small
+						}
+					}
+				}
+				set_variable = {
+					YCP_party_issue_chairman = token:SZC_xia_taosheng_sweater
+				}
+				swap_ideas = {
+					remove_idea = YCP_SZC_xia_taosheng_DMC_idea
+					add_idea = YCP_SZC_xia_taosheng_sweater_DMC_idea
+				}
+			}
 		}
 	}
 
@@ -31185,7 +31351,11 @@ focus_tree = {
 				ideology = radical_socialist
 				popularity = 0.05
 			}
-			#sic upgrade
+			CHI = {
+				CHI_four_elders = {
+					SZC_recruit_character_effect = yes
+				}
+			}
 		}
 	}
 
@@ -31325,7 +31495,7 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.706
 			}
-			#advisors
+			#yufuxian better
 		}
 	}
 
@@ -32317,7 +32487,7 @@ focus_tree = {
 		y = 12
 
 		allow_branch = {
-
+			has_global_flag = china_united
 		}
 
 
@@ -32873,6 +33043,10 @@ focus_tree = {
 			focus = SZC_YCP_FORPOL_mandate_heaven_of_china
 		}
 
+		allow_branch = {
+			has_completed_focus = SZC_YCP_orthodox_stands
+		}
+
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_zeng_faction"
 			
@@ -33043,10 +33217,14 @@ focus_tree = {
 		icon = GFX_goal_SZC_YCP_FORPOL_li_faction
 		cost = 2
 
-		x = 7
+		x = 3
 		y = 1
 
 		relative_position_id = SZC_YCP_FORPOL_mandate_heaven_of_china
+
+		allow_branch = {
+			has_completed_focus = SZC_YCP_young_china_and_young_democracy
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_mandate_heaven_of_china
@@ -33239,10 +33417,14 @@ focus_tree = {
 		icon = GFX_goal_SZC_YCP_FORPOL_zuo_faction
 		cost = 2
 
-		x = 11
+		x = 3
 		y = 1
 
 		relative_position_id = SZC_YCP_FORPOL_mandate_heaven_of_china
+
+		allow_branch = {
+			has_completed_focus = SZC_YCP_liberal_statist_struggle
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_mandate_heaven_of_china
@@ -33416,10 +33598,14 @@ focus_tree = {
 		icon = GFX_goal_SZC_YCP_FORPOL_chen_faction
 		cost = 2
 
-		x = 15
+		x = 3
 		y = 1
 
 		relative_position_id = SZC_YCP_FORPOL_mandate_heaven_of_china
+
+		allow_branch = {
+			has_completed_focus = SZC_YCP_lordly_way
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_mandate_heaven_of_china
@@ -33613,10 +33799,14 @@ focus_tree = {
 		icon = GFX_goal_SZC_YCP_FORPOL_jiang_faction
 		cost = 2
 
-		x = 19
+		x = 3
 		y = 1
 
 		relative_position_id = SZC_YCP_FORPOL_mandate_heaven_of_china
+
+		allow_branch = {
+			has_completed_focus = SZC_YCP_chinese_sturm_und_drang
+		}
 
 		available = {
 			AND = {
@@ -33843,13 +34033,18 @@ focus_tree = {
 		icon = GFX_goal_SZC_YCP_FORPOL_anarkiddy
 		cost = 2
 
-		x = 22
+		x = 3
 		y = 1
 
 		relative_position_id = SZC_YCP_FORPOL_mandate_heaven_of_china
 
+
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_mandate_heaven_of_china
+		}
+
+		allow_branch = {
+			has_completed_focus = anarcho_statist_victory
 		}
 
 		completion_reward = {
@@ -33968,10 +34163,14 @@ focus_tree = {
 		icon = GFX_goal_SZC_YCP_FORPOL_libbro
 		cost = 2
 
-		x = 24
+		x = 3
 		y = 1
 
 		relative_position_id = SZC_YCP_FORPOL_mandate_heaven_of_china
+
+		allow_branch = {
+			has_completed_focus = SZC_YCP_dissolve_the_YCP
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_mandate_heaven_of_china
@@ -34088,13 +34287,17 @@ focus_tree = {
 		icon = GFX_goal_SZC_YCP_FORPOL_taozi_faction
 		cost = 2
 
-		x = 26
+		x = 3
 		y = 1
 
 		relative_position_id = SZC_YCP_FORPOL_mandate_heaven_of_china
 
 		prerequisite = {
 			focus = SZC_YCP_FORPOL_mandate_heaven_of_china
+		}
+
+		allow_branch = {
+			has_completed_focus = SZC_YCP_yellow_syndicalist_achieve
 		}
 
 		completion_reward = {

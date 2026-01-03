@@ -2552,7 +2552,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_lv_yifeng_advisor
-			ledger = civilian
+			ledger = army
 			traits = { KR_influential_intellectual }
 			cost = 100
 			can_be_fired = no
@@ -3076,14 +3076,11 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = SZC_zuo_shunsheng_sic
-			ledger = army
+			ledger = civilian
 			traits = { SZC_conscience_of_liberalism }
 			cost = 0
 			can_be_fired = no
-			visible = {
-				has_country_flag = NKRsichuan_YCPpath
-			}
-			desc = SZC_zuo_shunsheng_sic_desc
+			desc = SZC_zuo_shunsheng_desc
 		}
 		country_leader = {
 			desc = SZC_zuo_shunsheng_desc
@@ -3307,9 +3304,6 @@ characters = {
 			traits = { SZC_shadow_architect }
 			cost = 0
 			can_be_fired = no
-			visible = {
-				has_country_flag = NKRsichuan_YCPpath
-			}
 			desc = SZC_huang_shizi_desc
 		}
 	}
@@ -3370,7 +3364,7 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = SZC_chang_yansheng_sic
-			ledger = army
+			ledger = civilian
 			traits = { SZC_refined_social_democrat }
 			cost = 0
 			can_be_fired = no
@@ -3646,6 +3640,16 @@ characters = {
 				}
 			}
 		}
+
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_hu_guowei_sic
+			ledger = civilian
+			traits = { SZC_merciful_war_cry }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_hu_guowei_desc
+		}
 	}
 
 	#刘泗英
@@ -3857,6 +3861,15 @@ characters = {
 					YCP_working_in_party = no
 				}
 			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_hu_guowei_sic
+			ledger = civilian
+			traits = { SZC_chief_surgeon }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_yu_fuxian_desc
 		}
 	}
 
@@ -4078,6 +4091,16 @@ characters = {
 					YCP_working_in_party = no
 				}
 			}
+		}
+
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_duan_zhenhuan_sic
+			ledger = civilian
+			traits = { SZC_advocate_of_industry }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_duan_zhenhuan_desc
 		}
 	}
 
@@ -4334,6 +4357,15 @@ characters = {
 				}
 			}
 		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_tan_tiwu_sic
+			ledger = civilian
+			traits = { SZC_chinese_jean_darcy }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_tan_tiwu_desc
+		}
 	}
 
 	#翁照垣
@@ -4531,6 +4563,48 @@ characters = {
 		}
 	}
 
+	#雷震
+	SZC_lei_zhen = {
+		name = SZC_lei_zhen
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_lei_zhen_large
+				small = GFX_portrait_SZC_lei_zhen_small
+			}
+		}
+
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_lei_zhen_sic
+			ledger = civilian
+			traits = { SZC_voice_of_free_china }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_lei_zhen_desc
+		}
+	}
+
+	#黄凌霜
+	SZC_huang_lingshuang = {
+		name = SZC_huang_lingshuang
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_huang_lingshuang_large
+				small = GFX_portrait_SZC_huang_lingshuang_small
+			}
+		}
+
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_huang_lingshuang_sic
+			ledger = civilian
+			traits = { SZC_pioneer_of_anarchist }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_huang_lingshuang_desc
+		}
+	}
+
 	#西路军抽象大舞台#
 
 	#张国焘
@@ -4588,6 +4662,16 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 1
 		}
+
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_chen_zaidao_sic
+			ledger = army
+			traits = {  }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_chen_zaidao_desc
+		}
 	}
 
 	#陈锡联
@@ -4607,6 +4691,16 @@ characters = {
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 3
+		}
+
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_chen_xilian_sic
+			ledger = army
+			traits = {  }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_chen_xilian_desc
 		}
 	}
 

@@ -38,11 +38,38 @@ on_actions = {
 				limit = {
 					tag = QIE
 					has_completed_focus = QIE_restoration
+					SZC = {
+						has_completed_focus = SZC_YCP_the_ninth_congress_of_YCP
+					}
 				}
-				set_party_name = {
-					ideology = authoritarian_democrat
-					name = QIE_YCP_2_party
-					long_name = QIE_YCP_2_party_long
+				SZC = {
+					country_event = {
+						id = NKRsichuanPI.17
+					}
+				}
+			}
+		}
+	}
+
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = { tag = SZC }
+				has_completed_focus = SZC_YCP_the_ninth_congress_of_YCP
+				if = {
+					limit = {
+						tag = YCP
+						FROM.FROM = { state = 608 } #Jingzhao
+						has_country_flag = YCP_zhaoyusong_fired
+					}
+					country_event = { id = NKRsichuanPI.16 days = 3 }
+				}
+				else_if = {
+					limit = {
+						tag = YCP
+						FROM.FROM = { state = 608 } #Jingzhao
+					}
+					country_event = { id = NKRsichuanPI.15 days = 3 }
 				}
 			}
 		}

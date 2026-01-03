@@ -26,7 +26,37 @@ ideas = {
 				resistance_damage_to_garrisons = -0.25
 			}
 		}
+		SZC_zeng_qi_suit_DMC_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				surrender_limit = 0.10
+				political_advisor_cost_factor = -0.5
+				high_command_cost_factor = -0.5
+				crypto_strength = 3
+				surrender_limit = 0.2
+				resistance_damage_to_garrisons = -0.25
+			}
+		}
 		SZC_li_huang_DMC_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				stability_factor = 0.10
+				surrender_limit = 0.10
+				war_support_factor = 0.2
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		SZC_li_huang_suit_DMC_idea = {
 			allowed = {
 				always = no
 			}
@@ -54,7 +84,37 @@ ideas = {
 				division_recovery_rate = 0.1
 			}
 		}
+		SZC_chen_qitian_suit_DMC_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				surrender_limit = 0.10
+				consumer_goods_factor = -0.125
+				production_factory_efficiency_gain_factor = 0.125
+				division_recovery_rate = 0.1
+			}
+		}
 		SZC_jiang_yungang_DMC_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				surrender_limit = 0.10
+				division_recovery_rate = 0.2
+				war_support_factor = 0.2
+				research_speed_factor = 0.1
+				surrender_limit = 0.3
+				army_org_factor = 0.1
+			}
+		}
+		SZC_jiang_yungang_cool_DMC_idea = {
 			allowed = {
 				always = no
 			}
@@ -106,6 +166,20 @@ ideas = {
 			}
 		}
 		SZC_xia_taosheng_DMI_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				enemy_operative_detection_chance_factor = 0.1
+				drift_defence_factor = 0.1
+				resistance_damage_to_garrisons = -0.15
+				war_support_factor = 0.075
+				political_power_gain = 0.2
+				compliance_gain = -0.01
+			}
+		}
+		SZC_xia_taosheng_sweater_DMI_idea = {
 			allowed = {
 				always = no
 			}
@@ -180,6 +254,22 @@ ideas = {
 				stability_factor = 0.175
 				compliance_growth = 0.06
 				compliance_gain = 0.04
+			}
+		}
+		SZC_tan_tiwu_armor_DMI_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				enemy_operative_detection_chance_factor = 0.1
+				drift_defence_factor = 0.1
+				stability_factor = 0.05
+				resistance_damage_to_garrisons = -0.15
+				war_support_factor = 0.1
+				stability_factor = 0.2
+				compliance_growth = 0.08
+				compliance_gain = 0.06
 			}
 		}
 ####################      FOREIGN       ####################
