@@ -1,0 +1,21 @@
+# List of names and logos for intelligence agencies
+# available trigger will determine if the logo is in the list of available logos or not
+# names is a list of names. Can be a localization entry, or the name directly. A random name will be picked from them.
+
+##-------------------------------
+##
+##	KRM
+##
+##-------------------------------
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_KR_YCP_MSS
+	names = { "国家安全局" }
+
+	default = { tag = SZC }
+	available = { 
+		original_tag = SZC
+		has_country_flag = NKRsichuan_YCPpath
+	}
+}

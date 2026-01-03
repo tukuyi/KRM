@@ -2719,7 +2719,7 @@ YCP_party_issue_fire_T = {
 		}
 		YCP_TOKEN = "[?YCP_party_issue_train.GetTokenKey]"
 	}
-	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_train }
+	add_to_array = { ROOT.YCP_party_issue_train_selects = var:YCP_party_issue_train }
 	set_variable = { ROOT.YCP_party_issue_train = 0 }
 }
 YCP_party_issue_add_P = {
@@ -2756,7 +2756,7 @@ YCP_party_issue_fire_P = {
 		}
 		YCP_TOKEN = "[?YCP_party_issue_propaganda.GetTokenKey]"
 	}
-	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_propaganda }
+	add_to_array = { ROOT.YCP_party_issue_propaganda_selects = var:YCP_party_issue_propaganda }
 	set_variable = { ROOT.YCP_party_issue_propaganda = 0 }
 }
 YCP_party_issue_add_I = {
