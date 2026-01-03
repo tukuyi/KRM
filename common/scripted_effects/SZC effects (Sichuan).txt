@@ -3639,6 +3639,22 @@ SZC_YCP_party_issue_setup = {
 	}
 }
 
+YCP_party_issue_setup_21 = {
+	
+	set_temp_variable = { temp_select_token = token:SZC_zhang_bolun }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_wang_shizeng }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_xia_taosheng }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_zhang_zizhu }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_yu_jiaju }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_hu_fuxian }
+	YCP_party_issue_add_S = yes
+}
+
 YCP_party_issue_setup_2 = {
 	set_variable = {
 		var = YCP_party_issue_standing_1
@@ -3672,6 +3688,27 @@ YCP_party_issue_setup_2 = {
 		SZC_yu_jiaju_DM_idea
 		SZC_hu_fuxian_DM_idea
 	}
+}
+
+YCP_party_issue_setup_3 = {
+	set_temp_variable = { temp_select_token = token:SZC_wei_shizhen}
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_zheng_zhenwen }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_hu_guowei}
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_liu_siying }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_yu_fuxian }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_zhang_baoen }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_duan_zhenhuan }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_zhang_mengjiu }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_liu_pengjiu }
+	YCP_party_issue_add_S = yes
 }
 
 

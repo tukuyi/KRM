@@ -21,7 +21,7 @@ ideas = {
 				surrender_limit = 0.10
 				political_advisor_cost_factor = -0.5
 				high_command_cost_factor = -0.5
-				crypto_detection_factor = 0.15
+				crypto_strength = 3
 				surrender_limit = 0.2
 				resistance_damage_to_garrisons = -0.25
 			}
@@ -80,7 +80,7 @@ ideas = {
 				stability_factor = 0.10
 				surrender_limit = 0.10
 				research_speed_factor = 0.1
-				army_experience_gain_factor = 0.1
+				experience_gain_army_factor = 0.1
 				experience_loss_factor = -0.35
 			}
 		}
@@ -160,7 +160,7 @@ ideas = {
 				stability_factor = 0.05
 				resistance_damage_to_garrisons = -0.15
 				planning_speed = 0.175
-				army_experience_gain_factor = 0.125
+				experience_gain_army_factor = 0.125
 				enemy_operative_detection_chance_factor = 0.075
 				army_morale_factor = 0.075
 				org_loss_when_moving = -0.15
@@ -361,7 +361,7 @@ ideas = {
 		# generic
 		# army_leader_experience_gain = 0.15
 		# training_time_factor = -0.05
-		# army_experience_gain_factor = 0.10
+		# experience_gain_army_factor = 0.10
 		SZC_chen_qitian_DMT_idea = {
 			allowed = {
 				always = no
@@ -370,7 +370,7 @@ ideas = {
 			modifier = {
 				army_leader_experience_gain = 0.15
 				training_time_factor = -0.05
-				army_experience_gain_factor = 0.10
+				experience_gain_army_factor = 0.10
 				consumer_goods_factor = -0.075
 				production_factory_efficiency_gain_factor = 0.1
 				division_recovery_rate = 0.075
@@ -384,7 +384,7 @@ ideas = {
 			modifier = {
 				army_leader_experience_gain = 0.15
 				training_time_factor = -0.05
-				army_experience_gain_factor = 0.10
+				experience_gain_army_factor = 0.10
 				war_support_factor = 0.175
 				mobilization_laws_cost_factor = -0.66
 				army_org_factor = 0.06
@@ -398,7 +398,7 @@ ideas = {
 			modifier = {
 				army_leader_experience_gain = 0.15
 				training_time_factor = -0.05
-				army_experience_gain_factor = 0.10
+				experience_gain_army_factor = 0.10
 				stability_factor = 0.15
 				party_popularity_stability_factor = -0.15
 				social_democrat_acceptance = 25
@@ -417,8 +417,8 @@ ideas = {
 			modifier = {
 				army_leader_experience_gain = 0.15
 				training_time_factor = -0.05
-				army_experience_gain_factor = 0.10
-				decryption_power = 0.15
+				experience_gain_army_factor = 0.10
+				decryption_power = 1.5
 				research_speed_factor = 0.08
 			}
 			targeted_modifier = {
@@ -435,7 +435,7 @@ ideas = {
 			modifier = {
 				army_leader_experience_gain = 0.15
 				training_time_factor = -0.05
-				army_experience_gain_factor = 0.10
+				experience_gain_army_factor = 0.10
 				monthly_population = 0.075
 				training_time_factor = -0.125
 				division_recovery_rate = 0.075
@@ -455,7 +455,7 @@ ideas = {
 				political_power_gain = 0.125
 				political_advisor_cost_factor = -0.33
 				high_command_cost_factor = -0.66
-				army_experience_gain_factor = 0.1
+				experience_gain_army_factor = 0.1
 				dig_in_speed_factor = 0.15
 			}
 		}
@@ -560,7 +560,7 @@ ideas = {
 				political_power_gain = 0.05
 				recruitable_population_factor = 0.05
     			war_support_factor = 0.1
-				decryption_power = 0.15
+				decryption_power = 1.5
 				research_speed_factor = 0.08
 			}
 			targeted_modifier = {
@@ -634,7 +634,7 @@ ideas = {
 			modifier = {
 				political_advisor_cost_factor = -0.20
 				high_command_cost_factor = -0.20
-				crypto_detection_factor = 0.10
+				crypto_strength = 2
 				surrender_limit = 0.15 
 				resistance_damage_to_garrisons = -0.20
 			}
@@ -680,7 +680,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_experience_gain_factor = 0.05
+				experience_gain_army_factor = 0.05
 				dig_in_speed_factor = 0.10
 				political_power_gain = 0.05
 			}
@@ -920,7 +920,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				planning_speed = 0.15
-				army_experience_gain_factor = 0.1
+				experience_gain_army_factor = 0.1
 				enemy_operative_detection_chance_factor = 0.05
 				army_morale_factor = 0.05
 				org_loss_when_moving = -0.1
@@ -965,7 +965,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.05
-				army_experience_gain_factor = 0.05
+				experience_gain_army_factor = 0.05
 				experience_loss_factor = -0.2
 			}
 		}
@@ -1063,7 +1063,7 @@ ideas = {
 				war_support_factor = 0.15
 				political_advisor_cost_factor = -0.33
 				consumer_goods_factor = 0.02
-				decryption_power = 0.1
+				decryption_power = 1
 			}
 		}
 		SZC_tang_shizun_YCP_DM_idea = {
@@ -1141,7 +1141,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.05
-				land_doctrine_research_cost_factor = -0.10
+				land_doctrine_cost_factor = -0.10
 				stability_factor = 0.05
 			}
 		}
@@ -1175,7 +1175,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				decryption_power = 0.15
+				decryption_power = 1.5
 				research_speed_factor = 0.03
 			}
 			targeted_modifier = {

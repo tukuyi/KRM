@@ -6633,7 +6633,10 @@ country_event = { #龙兴之地
 		SZC_chang_yansheng = {
 			SZC_recruit_character_effect = yes
 		}
-		SZC_huang_shizi = {
+		SZC_he_luzhi = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_li_buwei = {
 			SZC_recruit_character_effect = yes
 		}
 		SZC_zhang_zizhu = {
@@ -6664,6 +6667,36 @@ country_event = { #龙兴之地
 			SZC_recruit_character_effect = yes
 		}
 		SZC_hu_fuxian = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_wei_shizhen = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zheng_zhenwen = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_hu_guowei = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_liu_siying = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_yu_fuxian = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zhang_baoen = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_duan_zhenhuan = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zhang_mengjiu = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_liao_haitao = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_liu_pengjiu = {
 			SZC_recruit_character_effect = yes
 		}
 	}
@@ -7190,6 +7223,12 @@ country_event = { #昔日空谈，今日实干
 			value = -0.10
 			tooltip_side = SZC_bop_li_winning_side
 		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.2
+				days = 5
+			}
+		}
 	}
 	option = {#党的纯净性必须得到保证！
 		log = "[GetLogInfo]: event NKRsichuan.425 option NKRsichuan.425.b"
@@ -7208,6 +7247,12 @@ country_event = { #昔日空谈，今日实干
 			value = 0.10
 			tooltip_side = SZC_bop_zeng_winning_side
 		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.3
+				days = 5
+			}
+		}
 	}
 }
 
@@ -7224,6 +7269,12 @@ country_event = { #左舜生谈政治
 	option = {#救国建国，无一不需要高深的学术基础。
 		log = "[GetLogInfo]: event NKRsichuan.426 option NKRsichuan.4266.a"
 		name = NKRsichuan.426.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.4
+				days = 5
+			}
+		}
 	}
 }
 
@@ -7245,6 +7296,12 @@ country_event = { #文化界的联系
 			id = SZC_YCP_power_balance
 			value = -0.07
 			tooltip_side = SZC_bop_li_winning_side
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.5
+				days = 5
+			}
 		}
 	}
 	option = {#欢迎，但入党恐怕还需要一阵子考核...
@@ -7305,6 +7362,13 @@ country_event = { #吴天墀发言
 		log = "[GetLogInfo]: event NKRsichuan.430 option NKRsichuan.430.a"
 		name = NKRsichuan.430.a
 		add_stability = -0.01
+		
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.6
+				days = 30
+			}
+		}
 	}
 }
 
@@ -7381,6 +7445,15 @@ country_event = { #社会进步
 
 	is_triggered_only = yes
 	fire_only_once = yes
+
+	hidden_effect = {
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.10
+				days = 5
+			}
+		}
+	}
 	
 
 	option = {#为了我们的首要目标暂且让步也是可行的...
@@ -7453,6 +7526,13 @@ country_event = { #国家主义革命
 	option = {#热血真诚，奉献为国。
 		log = "[GetLogInfo]: event NKRsichuan.435 option NKRsichuan.435.a"
 		name = NKRsichuan.435.a
+		
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.9
+				days = 5
+			}
+		}
 	}
 }
 
@@ -7509,7 +7589,13 @@ country_event = { #军政部改组
 	
 	immediate = {
 		hidden_effect = {
-			SZC_wang_shizeng = {
+			country_event = {
+				id = NKRsichuanPI.7
+				days = 5
+			}
+		}
+		hidden_effect = {
+			SZC_wang_lanseng = {
 				SZC_recruit_character_effect = yes
 			}
 			SZC_weng_zhaoyuan = {
@@ -7600,6 +7686,12 @@ country_event = { #现代化大方向
 	option = {#电的力量啊。
 		log = "[GetLogInfo]: event NKRsichuan.439 option NKRsichuan.439.a"
 		name = NKRsichuan.439.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.8
+				days = 5
+			}
+		}
 	}
 }
 
@@ -7617,6 +7709,12 @@ country_event = { #工人救国联合会
 		log = "[GetLogInfo]: event NKRsichuan.440 option NKRsichuan.440.a"
 		name = NKRsichuan.440.a
 		add_political_power = 25
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.7
+				days = 5
+			}
+		}
 	}
 }
 
@@ -7960,6 +8058,12 @@ country_event = { #国家主义妇女运动
 		}
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_tan_tiwu_advisor
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanPI.8
+				days = 5
+			}
+		}
 	}
 }
 
@@ -18403,6 +18507,8 @@ country_event = { #党务整顿
 		name = NKRsichuanPI.1.a
 		custom_effect_tooltip = NKRsichuanPI.1.tt
 		SZC_YCP_party_issue_setup = yes
+		YCP_party_issue_setup_21 = yes
+		YCP_party_issue_setup_3 = yes
 	}
 	
 
@@ -18412,13 +18518,14 @@ country_event = { #党务整顿
 		custom_effect_tooltip = NKRsichuanPI.1.tt
 		custom_effect_tooltip = NKRsichuanPI.1.tt2
 		SZC_YCP_party_issue_setup = yes
-		SZC_YCP_party_issue_setup_2 = yes
+		YCP_party_issue_setup_2 = yes
+		YCP_party_issue_setup_3 = yes
 		add_political_power = -400
 
 	}
 }
 
-country_event = { #
+country_event = { #贪欲
 	id = NKRsichuanPI.2
 	title = NKRsichuanPI.2.t
 	desc = NKRsichuanPI.2.d
@@ -18428,13 +18535,18 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#这真的是我们需要的吗？
 		log = "[GetLogInfo]: event NKRsichuanPI.2 option NKRsichuanPI.2.a"
 		name = NKRsichuanPI.2.a
+		SZC_mu_quanyun = {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_mu_quanyun }
+		YCP_party_issue_add_S = yes
 	}
 }
 
-country_event = { #
+country_event = { #海外孤忠
 	id = NKRsichuanPI.3
 	title = NKRsichuanPI.3.t
 	desc = NKRsichuanPI.3.d
@@ -18444,13 +18556,16 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#真乃英雄！
 		log = "[GetLogInfo]: event NKRsichuanPI.3 option NKRsichuanPI.3.a"
 		name = NKRsichuanPI.3.a
+		ITA_peppino_garibaldi = {
+			SZC_recruit_character_effect = yes
+		}
 	}
 }
 
-country_event = { #
+country_event = { #中社扩张
 	id = NKRsichuanPI.4
 	title = NKRsichuanPI.4.t
 	desc = NKRsichuanPI.4.d
@@ -18463,10 +18578,25 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanPI.4 option NKRsichuanPI.4.a"
 		name = NKRsichuanPI.374.a
+		SZC_xie_chengping = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_xia_erkang = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_shen_yunlong = {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_xie_chengping }
+		YCP_party_issue_add_S = yes
+		set_temp_variable = { temp_select_token = token:SZC_xia_erkang }
+		YCP_party_issue_add_S = yes
+		set_temp_variable = { temp_select_token = token:SZC_shen_yunlong }
+		YCP_party_issue_add_S = yes
 	}
 }
 
-country_event = { #
+country_event = { #元老归来
 	id = NKRsichuanPI.5
 	title = NKRsichuanPI.5.t
 	desc = NKRsichuanPI.5.d
@@ -18476,13 +18606,18 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#好久未见...
 		log = "[GetLogInfo]: event NKRsichuanPI.5 option NKRsichuanPI.5.a"
 		name = NKRsichuanPI.5.a
+		SZC_wang_guangqi = {
+			SZC_recruit_character_effect = yes
+		}	
+		set_temp_variable = { temp_select_token = token:SZC_wang_guangqi }
+		YCP_party_issue_add_S = yes
 	}
 }
 
-country_event = { #
+country_event = { #政治新星
 	id = NKRsichuanPI.6
 	title = NKRsichuanPI.6.t
 	desc = NKRsichuanPI.6.d
@@ -18492,13 +18627,18 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#年轻有为！
 		log = "[GetLogInfo]: event NKRsichuanPI.6 option NKRsichuanPI.66.a"
 		name = NKRsichuanPI.6.a
+		SZC_wu_tianchi = {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_wu_tianchi }
+		YCP_party_issue_add_S = yes
 	}
 }
 
-country_event = { #
+country_event = { #青年党的工人活动家？
 	id = NKRsichuanPI.7
 	title = NKRsichuanPI.7.t
 	desc = NKRsichuanPI.7.d
@@ -18508,13 +18648,18 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#难能可贵的人才。
 		log = "[GetLogInfo]: event NKRsichuanPI.7 option NKRsichuanPI.7.a"
 		name = NKRsichuanPI.7.a
+		SZC_liu_jingyuan = {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_liu_jingyuan }
+		YCP_party_issue_add_S = yes
 	}
 }
 
-country_event = { #
+country_event = { #国家主义妇女部
 	id = NKRsichuanPI.8
 	title = NKRsichuanPI.8.t
 	desc = NKRsichuanPI.8.d
@@ -18524,13 +18669,18 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#并行的解放。
 		log = "[GetLogInfo]: event NKRsichuanPI.8 option NKRsichuanPI.8.a"
 		name = NKRsichuanPI.8.a
+		SZC_yu_xiaoquan = {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_yu_xiaoquan }
+		YCP_party_issue_add_S = yes
 	}
 }
 
-country_event = { #
+country_event = { #曾琦的崇拜者
 	id = NKRsichuanPI.9
 	title = NKRsichuanPI.9.t
 	desc = NKRsichuanPI.9.d
@@ -18540,9 +18690,14 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#阴影的建筑师。
 		log = "[GetLogInfo]: event NKRsichuanPI.9 option NKRsichuanPI.9.a"
 		name = NKRsichuanPI.9.a
+		SZC_huang_shizi	= {
+			SZC_recruit_character_effect = yes
+		}
+		set_temp_variable = { temp_select_token = token:SZC_huang_shizi }
+		YCP_party_issue_add_S = yes
 	}
 }
 

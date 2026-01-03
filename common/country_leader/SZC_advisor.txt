@@ -92,7 +92,7 @@ leader_traits = {
 		sprite = 19
 		political_advisor_cost_factor = -0.20
         high_command_cost_factor = -0.20
-		crypto_detection_factor = 0.10
+		crypto_strength = 2
 		surrender_limit = 0.15 
 		resistance_damage_to_garrisons = -0.20
 	}
@@ -255,7 +255,7 @@ leader_traits = {
 	SZC_veteran_of_the_xinhai = {#李不韪
 		random = no
 		sprite = 19
-		army_experience_gain_factor = 0.05
+		experience_gain_army_factor = 0.05
 		dig_in_speed_factor = 0.10
 		political_power_gain = 0.05
 	}
@@ -306,7 +306,7 @@ leader_traits = {
 		random = no
 		sprite = 19
 		planning_speed = 0.15
-		army_experience_gain_factor = 0.1
+		experience_gain_army_factor = 0.1
 		enemy_operative_detection_chance_factor = 0.05
 		army_morale_factor = 0.05
 		org_loss_when_moving = -0.1
@@ -339,7 +339,7 @@ leader_traits = {
 		random = no
 		sprite = 19
 		research_speed_factor = 0.05
-		army_experience_gain_factor = 0.05
+		experience_gain_army_factor = 0.05
 		experience_loss_factor = -0.2
 	}
 
@@ -422,7 +422,7 @@ leader_traits = {
 		war_support_factor = 0.15
 		political_advisor_cost_factor = -0.33
 		consumer_goods_factor = 0.02
-		decryption_power = 0.1
+		decryption_power = 1
 	}
 
 	SZC_anti_red_pacification_commander = {#廖海涛
@@ -458,7 +458,7 @@ leader_traits = {
 		random = no
 		sprite = 19
 		research_speed_factor = 0.05
-		land_doctrine_research_cost_factor = -0.10
+		land_doctrine_cost_factor = -0.10
 		stability_factor = 0.05
 	}
 
@@ -483,7 +483,7 @@ leader_traits = {
 	SZC_chief_japan_analyst = {#崔万秋
 		random = no
 		sprite = 19
-		decryption_power = 0.15
+		decryption_power = 1.5
 		research_speed_factor = 0.03
 		targeted_modifier = {
 			tag = JAP

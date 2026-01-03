@@ -31,5 +31,21 @@ on_actions = {
 			}
 		}
 	}
+
+	on_ruling_party_change = {
+		effect = {
+			if = {
+				limit = {
+					tag = QIE
+					has_completed_focus = QIE_restoration
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = QIE_YCP_2_party
+					long_name = QIE_YCP_2_party_long
+				}
+			}
+		}
+	}
 }
 

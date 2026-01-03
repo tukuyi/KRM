@@ -3440,7 +3440,7 @@ characters = {
 
 	#张子柱
 	SZC_zhang_zizhu = {
-		name = SZC_zhang_zizhuSZC_zhang_zizhu
+		name = SZC_zhang_zizhu
 		portraits = {
 			civilian = {
 				small = GFX_portrait_SZC_zhang_zizhu_small
@@ -4044,6 +4044,15 @@ characters = {
 				}
 			}
 		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_zhao_yusong_sic
+			ledger = civilian
+			traits = { SZC_wandering_lobbyist }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_zhao_yusong_desc
+		}
 	}
 
 	#段震寰
@@ -4499,7 +4508,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_liao_haitao_advisor
-			traits = {  }
+			traits = { SZC_anti_red_pacification_commander }
 			desc = SZC_liao_haitao_desc
 			available = {
 				set_temp_variable = {
