@@ -1435,6 +1435,71 @@ chinese_unification = {
 				1048 = { is_owned_by_ROOT_or_subject = yes } #Wuhan
 			}
 
+			if = {
+				limit = {
+					tag = SZC
+					has_country_flag = NKRsichuan_YCPpath
+				}
+				AND = {
+					has_country_flag = NKRSZC_YCPpath_phase2
+					OR = {
+						if = {
+							limit = {
+								has_country_flag = SZC_YCP_zeng_hardline_path
+							}
+							has_completed_focus = SZC_YCP_a_great_leader
+						}
+						else_if = {
+							limit = {
+								has_country_flag = SZC_YCP_zeng_moderate_path
+							}
+							has_completed_focus = SZC_YCP_our_purist_goal
+						}
+						else_if = {
+							limit = {
+								has_country_flag = SZC_YCP_li_path
+							}
+							has_completed_focus = SZC_YCP_young_china_and_young_democracy
+							has_completed_focus = SZC_YCP_liberal_statist_struggle
+							NOT = {
+								has_country_flag = SZC_YCP_jiang_path
+							}
+						}
+						else_if = {
+							limit = {
+								has_country_flag = SZC_YCP_new_legalist_path
+							}
+							has_completed_focus = SZC_YCP_lordly_way
+						}
+						else_if = {
+							limit = {
+								has_country_flag = SZC_YCP_xia_real_path
+							}
+							has_completed_focus = SZC_YCP_anarchist_mama_statist_son
+						}
+						else_if = {
+							limit = {
+								has_country_flag = SZC_YCP_xia_real_path
+							}
+							has_completed_focus = SZC_YCP_dissolve_the_YCP
+						}
+						else_if = {
+							limit = {
+								has_country_flag = SZC_YCP_jiang_path
+							}
+							has_completed_focus = SZC_YCP_age_of_historical_art
+						}
+						else_if = {
+							limit = {
+								has_country_flag = SZC_YCP_zhang_guotao_path
+							}
+							has_completed_focus = SZC_YCP_yellow_syndicalist_achieve
+						}
+						
+					}
+				}
+			}
+
 			#Tag Specific Requirements - to Prevent Overlap Between Phase IV and V
 			if = {
 				limit = {
@@ -1841,23 +1906,6 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { 
-					AND = {
-						original_tag = SZC
-					}
-				}
-				if = {
-					limit = {
-						has_country_flag = NKRSZC_CDLpath
-					}
-					log = "KR_Event_Logging;CHINA UNITED BY CDLPWH;[GetDateText]"
-					activate_targeted_decision = { decision = china_move_capital target = ROOT }
-					set_cosmetic_tag = united_china
-					custom_effect_tooltip = enables_new_focus_branches
-					hidden_effect = { news_event = china_events.314 }
-				}
-			}
-			else_if = {
 				limit = { tag = SZC }
 				if = {
 					limit = { SZC_federalists_in_exile = yes }
@@ -1908,70 +1956,11 @@ chinese_unification = {
 				}
 				else_if = {
 					limit = {
-						AND = {
-							has_country_flag = NKRSZC_YCPpath_phase2
-							OR = {
-								if = {
-									limit = {
-										has_country_flag = SZC_YCP_zeng_hardline_path
-									}
-									has_completed_focus = SZC_YCP_a_great_leader
-								}
-								else_if = {
-									limit = {
-										has_country_flag = SZC_YCP_zeng_moderate_path
-									}
-									has_completed_focus = SZC_YCP_our_purist_goal
-								}
-								else_if = {
-									limit = {
-										has_country_flag = SZC_YCP_li_path
-									}
-									has_completed_focus = SZC_YCP_young_china_and_young_democracy
-								}
-								else_if = {
-									limit = {
-										has_country_flag = SZC_YCP_li_path
-									}
-									has_completed_focus = SZC_YCP_liberal_statist_struggle
-								}
-								else_if = {
-									limit = {
-										has_country_flag = SZC_YCP_new_legalist_path
-									}
-									has_completed_focus = SZC_YCP_lordly_way
-								}
-								else_if = {
-									limit = {
-										has_country_flag = SZC_YCP_xia_real_path
-									}
-									has_completed_focus = SZC_YCP_anarchist_mama_statist_son
-								}
-								else_if = {
-									limit = {
-										has_country_flag = SZC_YCP_xia_real_path
-									}
-									has_completed_focus = SZC_YCP_dissolve_the_YCP
-								}
-								else_if = {
-									limit = {
-										has_country_flag = SZC_YCP_jiang_path
-									}
-									has_completed_focus = SZC_YCP_age_of_historical_art
-								}
-								else_if = {
-									limit = {
-										has_country_flag = SZC_YCP_zhang_guotao_path
-									}
-									has_completed_focus = SZC_YCP_yellow_syndicalist_achieve
-								}
-								
-							}
-						}
+						has_country_flag = NKRSZC_YCPpath_phase2
 					}
 					log = "KR_Event_Logging;CHINA UNITED BY SZCYCP;[GetDateText]"
 					activate_targeted_decision = { decision = china_move_capital target = ROOT }
-					set_cosmetic_tag = united_china
+					set_cosmetic_tag = SZC_YCP_united
 					custom_effect_tooltip = enables_new_focus_branches
 					hidden_effect = { news_event = china_events.314 }
 					hidden_effect = {
@@ -1995,6 +1984,9 @@ chinese_unification = {
 						else_if = {
 							limit = {
 								has_completed_focus = SZC_YCP_young_china_and_young_democracy
+								NOT = {
+									has_country_flag = SZC_YCP_jiang_path
+								}
 							}
 							country_event = {
 								id = NKRsichuan.600									days = 1
@@ -2266,6 +2258,16 @@ chinese_unification = {
 						NOT = { original_tag = SHX }
 						SZC_zhili_in_exile = no
 						SZC_federalists_in_exile = no
+						NOT = {
+							AND = {
+								tag = SZC
+								OR = {
+									has_country_flag = NKRsichuan_YCPpath
+									has_country_flag = NKRSZC_CDLpath
+									has_country_flag = NKRSZC_joinkmt
+								}
+							}
+						}
 					}
 					china_enable_outskirts_decisions = yes
 					china_enable_concession_decisions = yes

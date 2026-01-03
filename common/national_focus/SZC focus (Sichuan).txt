@@ -26511,9 +26511,8 @@ focus_tree = {
 				if = {
 					limit = {
 						AND = {
-							national_populist > 25
 							has_idea = SZC_YCP_progress_constitution
-							has_idea = SZC_YCP_zhang_in_government
+							has_country_flag = SZC_YCP_zhang_in_government
 							AND = {
 								set_temp_variable = {
 									var = YCP_adv_chk
@@ -26537,7 +26536,7 @@ focus_tree = {
 					}
 					country_event = {
 						id = NKRsichuan.570
-						days = 7
+						days = 1
 					}
 				}
 				else = {
@@ -28583,6 +28582,9 @@ focus_tree = {
 				OR = {
 					has_completed_focus = SZC_YCP_young_china_and_young_democracy
 				}
+				NOT = {
+					has_country_flag = SZC_YCP_jiang_path
+				}
 			}
 		}
 
@@ -30563,6 +30565,13 @@ focus_tree = {
 							small = GFX_portrait_SZC_tan_tiwu_armor_small
 						}
 					}
+				}
+				set_variable = {
+					YCP_party_issue_interior = token:SZC_tan_tiwu_armor
+				}
+				swap_ideas = {
+					remove_idea = YCP_tan_tiwu_DMC_idea
+					add_idea = YCP_tan_tiwu_armor_DMC_idea
 				}
 			}
 		}
@@ -33224,6 +33233,9 @@ focus_tree = {
 
 		allow_branch = {
 			has_completed_focus = SZC_YCP_young_china_and_young_democracy
+			NOT = {
+				has_country_flag = SZC_YCP_jiang_path
+			}
 		}
 
 		prerequisite = {

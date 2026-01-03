@@ -721,8 +721,8 @@ country_event = { #中国青年党浮出水面
 			SZC_tang_shizun = {
 				set_portraits = {
 					army = {
-						large = GFX_portrait_SZC_tang_shizun_ycp_large
-						small = GFX_portrait_SZC_tang_shizun_ycp_small
+						large = GFX_portrait_SZC_tang_shizun_YCP_large
+						small = GFX_portrait_SZC_tang_shizun_YCP_small
 					}
 				}
 			}
@@ -8095,6 +8095,8 @@ country_event = { #国家主义妇女运动
 				id = NKRsichuanPI.8
 				days = 5
 			}
+			set_temp_variable = { temp_select_token = token:SZC_tan_tiwu }
+			YCP_party_issue_add_S = yes
 		}
 	}
 }
@@ -11275,6 +11277,10 @@ country_event = { #造梦之终
 				days = 1
 			}
 			clr_country_flag = SZC_YCP_zhang_in_government
+			remove_ideas = {
+				SZC_YCP_peoples_sovereignty_idea
+				SZC_YCP_young_iron_army_idea
+			}
 		}
 	}
 }
@@ -11292,6 +11298,7 @@ country_event = { #终局
 	option = {#狂飙启程！
 		log = "[GetLogInfo]: event NKRsichuan.571 option NKRsichuan.571.a"
 		name = NKRsichuan.571.a
+		clr_country_flag = SZC_YCP_li_path
 		set_country_flag = SZC_YCP_jiang_path
 		set_politics = {
 			ruling_party = national_populist

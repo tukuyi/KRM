@@ -2324,16 +2324,14 @@ SZC_YCP_balance_of_power_category = {
 	}
 }
 
-foreign_politics = {
+chinese_unification = {
 	SZC_NAP_with_federalists_decision = { #Potential NAP with
 		allowed = { tag = SZC }
 
 		targets = { UPC }
 
 		visible = {
-			AND = {
-				has_country_flag = SZC_YCP_can_unite_someone
-			}
+			has_country_flag = SZC_YCP_can_unite_someone
 		}
 		target_root_trigger = {
 
@@ -2406,12 +2404,10 @@ foreign_politics = {
 	SZC_NAP_with_qi_decision = { #Potential NAP with qi
 		allowed = { tag = SZC }
 
-		targets = { SZL }
+		targets = { LEP }
 
 		visible = {
-			AND = {
-				has_country_flag = SZC_YCP_can_unite_someone
-			}
+			has_country_flag = SZC_YCP_can_unite_someone
 		}
 		target_root_trigger = {
 
@@ -2481,9 +2477,7 @@ foreign_politics = {
 		targets = { ANQ }
 
 		visible = {
-			AND = {
-				has_country_flag = SZC_YCP_can_unite_someone
-			}
+			has_country_flag = SZC_YCP_can_unite_someone
 		}
 		target_root_trigger = {
 
@@ -2551,12 +2545,13 @@ foreign_politics = {
 		}
 	}
 	SZC_subjugate_federalists_decision = { #Allow players to reform Constitutional Protection Alliance
-		allowed = { always = no }
+		allowed = { tag = SZC }
 
 		targets = { UPC }
 
 		visible = {
 			has_completed_focus = SZC_YCP_wave_of_history_victory_of_ycp
+			has_non_aggression_pact_with = UPC
 		}
 		target_trigger = {
 			FROM = {
@@ -2625,12 +2620,16 @@ foreign_politics = {
 		fixed_random_seed = no
 	}
 	SZC_subjugate_huadong_decision = { #A
-		allowed = { always = no }
+		allowed = { tag = SZC }
 
 		targets = { ANQ LEP }
 
 		visible = {
 			has_completed_focus = SZC_YCP_wave_of_history_victory_of_ycp
+			OR = {
+				has_non_aggression_pact_with = LEP
+				has_non_aggression_pact_with = ANQ
+			}
 		}
 		target_trigger = {
 			FROM = {

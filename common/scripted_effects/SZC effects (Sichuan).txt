@@ -2681,7 +2681,7 @@ YCP_party_issue_fire_C = {
 		}
 		YCP_TOKEN = "[?YCP_party_issue_chairman.GetTokenKey]"
 	}
-	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_chairman }
+	add_to_array = { ROOT.YCP_party_issue_chairman_selects = var:YCP_party_issue_chairman }
 	set_variable = { ROOT.YCP_party_issue_chairman = 0 }
 }
 
@@ -2793,7 +2793,7 @@ YCP_party_issue_fire_I = {
 		}
 		YCP_TOKEN = "[?YCP_party_issue_interior.GetTokenKey]"
 	}
-	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_interior }
+	add_to_array = { ROOT.YCP_party_issue_interior_selects = var:YCP_party_issue_interior }
 	set_variable = { ROOT.YCP_party_issue_interior = 0 }
 }
 YCP_party_issue_add_F = {
@@ -2830,7 +2830,7 @@ YCP_party_issue_fire_F = {
 		}
 		YCP_TOKEN = "[?YCP_party_issue_foreign.GetTokenKey]"
 	}
-	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_foreign }
+	add_to_array = { ROOT.YCP_party_issue_foreign_selects = var:YCP_party_issue_foreign }
 	set_variable = { ROOT.YCP_party_issue_foreign = 0 }
 }
 YCP_party_issue_add_O = {
@@ -2867,7 +2867,7 @@ YCP_party_issue_fire_O = {
 		}
 		YCP_TOKEN = "[?YCP_party_issue_organization.GetTokenKey]"
 	}
-	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_organization }
+	add_to_array = { ROOT.YCP_party_issue_organization_selects = var:YCP_party_issue_organization }
 	set_variable = { ROOT.YCP_party_issue_organization = 0 }
 }
 YCP_party_issue_add_Y = {
@@ -2904,7 +2904,7 @@ YCP_party_issue_fire_Y = {
 		}
 		YCP_TOKEN = "[?YCP_party_issue_youth.GetTokenKey]"
 	}
-	add_to_array = { ROOT.YCP_party_issue_selects = var:YCP_party_issue_youth }
+	add_to_array = { ROOT.YCP_party_issue_youth_selects = var:YCP_party_issue_youth }
 	set_variable = { ROOT.YCP_party_issue_youth = 0 }
 }
 YCP_party_issue_add_S = {
@@ -3135,6 +3135,7 @@ YCP_party_issue_retire_to_standing = {
 	remove_from_array = { ROOT.YCP_party_issue_organization_selects = var:temp_select_token }
 	remove_from_array = { ROOT.YCP_party_issue_youth_selects = var:temp_select_token }
 	add_to_array = { ROOT.YCP_party_issue_selects = var:temp_select_token }
+	set_temp_variable = { ROOT.temp_select_token = 0 }
 }
 
 YCP_party_issue_remove_status = {
@@ -3691,7 +3692,9 @@ YCP_party_issue_setup_2 = {
 }
 
 YCP_party_issue_setup_3 = {
-	set_temp_variable = { temp_select_token = token:SZC_wei_shizhen}
+	set_temp_variable = { temp_select_token = token:SZC_jiang_yungang }
+	YCP_party_issue_add_S = yes
+	set_temp_variable = { temp_select_token = token:SZC_wei_shizhen }
 	YCP_party_issue_add_S = yes
 	set_temp_variable = { temp_select_token = token:SZC_zheng_zhenwen }
 	YCP_party_issue_add_S = yes
@@ -4037,19 +4040,19 @@ YCP_elders_return_setup = {
 YCP_chen_center_setup = {
 	YCP_elders_return_setup = yes
 	set_temp_variable = { temp_select_token = token:SZC_yu_fuxian }
-	YCP_party_issue_remove_retire_to_standing = yes
+	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_xia_taosheng }
-	YCP_party_issue_remove_retire_to_standing = yes
+	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_liu_jingyuan }
-	YCP_party_issue_remove_retire_to_standing = yes
+	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_tao_yuanzhen }
-	YCP_party_issue_remove_retire_to_standing = yes
+	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_wang_shizeng }
-	YCP_party_issue_remove_retire_to_standing = yes
+	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_lin_keji }	
-	YCP_party_issue_remove_retire_to_standing = yes
+	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_chen_shanxin }
-	YCP_party_issue_remove_retire_to_standing = yes
+	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_wang_lanseng }
 	ycp_party_issue_remove_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_ding_tingbiao }
@@ -4101,19 +4104,19 @@ YCP_chen_center_setup = {
 
 YCP_jiang_coup_center_setup = {
 	set_temp_variable = { temp_select_token = token:SZC_li_huang }
-	YCP_party_issue_remove_retire_to_standing = yes
+	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_he_luzhi }
-	YCP_party_issue_remove_retire_to_standing = yes
+	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_xie_chengping }
-	YCP_party_issue_remove_retire_to_standing = yes
+	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_zuo_shunsheng }
-	YCP_party_issue_remove_retire_to_standing = yes
+	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_zheng_zhenwen }
-	YCP_party_issue_remove_retire_to_standing = yes
+	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_wei_shizhen }	
-	YCP_party_issue_remove_retire_to_standing = yes
+	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_chen_qitian }
-	YCP_party_issue_remove_retire_to_standing = yes
+	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_jiang_yungang }
 	ycp_party_issue_remove_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_cui_wanqiu }
