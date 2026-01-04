@@ -15,6 +15,8 @@ focus_tree = {
 	default = no
 	continuous_focus_position = { x = 2600 y = 950 }
 
+	shared_focus = SZC_Chengdu_Chongqing_Railway
+
 	### Generic Post Unification ###
 	shared_focus = CHS_provisional_government
 	shared_focus = CHS_reintegrate_academies
@@ -43,1254 +45,6 @@ focus_tree = {
 	# Officer Department Focus Tree
 	# Federalist Bastion Tree
 	# Zhili Remnant Tree
-
-### Economic Tree ###
-	focus = {
-		id = SZC_Chengdu_Chongqing_Railway
-		icon = GFX_goal_generic_railroad
-		cost = 5
-
-		x = 17
-		y = 0
-
-		available = {
-			if = {
-				limit = { has_idea = SZC_internal_divisions }
-				NOT = { has_idea = SZC_internal_divisions }
-			}
-			else_if = {
-				limit = { has_idea = SZC_civil_war_idea }
-				NOT = { has_idea = SZC_civil_war_idea }
-			}
-			else_if = {
-				limit = { SZC_war_aftermath_active = yes }
-				SZC_war_aftermath_active = no
-			}
-			605 = { is_owned_and_controlled_by = ROOT }
-			650 = { is_owned_and_controlled_by = ROOT }
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				OR = {
-					has_country_flag = SZC_baoding_department_in_power
-					has_country_flag = SZC_officer_department_in_power
-				}
-			}
-		}
-		offset = {
-			x = -30
-			y = 0
-			trigger = {
-				has_country_flag = SZC_federalists_in_power
-			}
-		}
-		offset = {
-			x = -3
-			y = 0
-			trigger = {
-				has_country_flag = SZC_accelerated_department_in_power
-			}
-		}
-		ai_will_do = { factor = 20 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Chengdu_Chongqing_Railway"
-			605 = {
-				add_extra_state_shared_building_slots = 1
-				if = {
-					limit = { free_building_slots = { building = infrastructure size > 0 } }
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			650 = {
-				add_extra_state_shared_building_slots = 1
-				if = {
-					limit = { free_building_slots = { building = infrastructure size > 0 } }
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			build_railway = {
-				level = 1
-				start_province = 4925
-				target_province = 6999
-			}
-			custom_effect_tooltip = tooltip_white_line
-			add_tech_bonus = {
-				name = SZC_Chengdu_Chongqing_Railway
-				bonus = 2
-				uses = 1
-				category = train_tech
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_New_Commercial_Zones
-		icon = GFX_goal_generic_positive_trade_relations_gold
-		cost = 4
-
-		relative_position_id = SZC_Chengdu_Chongqing_Railway
-		x = -3
-		y = 1
-
-		available = {
-			SZC_opium_tier_1_unlocked = yes
-		}
-		prerequisite = {
-			focus = SZC_Chengdu_Chongqing_Railway
-		}
-		ai_will_do = { factor = 5 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_New_Commercial_Zones"
-			add_ideas = SZC_commercial_expansion_1
-			custom_effect_tooltip = tooltip_white_line
-			add_one_random_civilian_factory = yes
-		}
-	}
-
-	focus = {
-		id = SZC_The_Yangtze_Lifeline
-		icon = GFX_goal_bluewater_navy
-		cost = 4
-
-		relative_position_id = SZC_New_Commercial_Zones
-		x = -1
-		y = 1
-
-		available = {
-			SZC_opium_tier_1_unlocked = yes
-		}
-		prerequisite = {
-			focus = SZC_New_Commercial_Zones
-		}
-		ai_will_do = { factor = 10 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_The_Yangtze_Lifeline"
-			if = {
-				limit = { has_idea = SZC_commercial_expansion_3 }
-				swap_ideas = {
-					remove_idea = SZC_commercial_expansion_3
-					add_idea = SZC_commercial_expansion_4
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = SZC_commercial_expansion_1
-					add_idea = SZC_commercial_expansion_2
-				}
-			}
-			if = {
-				limit = { has_dlc_aat = no }
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = minsheng_shipping
-			}
-			else = {
-				if = {
-					limit = { mio:CHN_naval_industry_organisation = { is_mio_available = no } }
-					custom_effect_tooltip = available_mio_tt
-					show_mio_tooltip = CHN_naval_industry_organisation
-				}
-				mio:CHN_naval_industry_organisation = {
-					set_mio_flag = CHN_mio_unlocked
-					add_mio_size = 1
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Restart_The_Agricultural_Sector
-		icon = GFX_goal_agricultural_aid
-		cost = 4
-
-		relative_position_id = SZC_New_Commercial_Zones
-		x = 0
-		y = 2
-
-		available = {
-			SZC_agri_branch_unlocked = yes
-		}
-		prerequisite = {
-			focus = SZC_New_Commercial_Zones
-		}
-		ai_will_do = { factor = 15 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Restart_The_Agricultural_Sector"
-			add_ideas = SZC_agricultural_heartland_1
-			custom_effect_tooltip = tooltip_white_line
-			add_tech_bonus = {
-				name = SZC_Restart_The_Agricultural_Sector
-				bonus = 1
-				uses = 1
-				category = cat_production
-			}
-		}
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = SZC_Rural_Construction_College
-		icon = GFX_goal_SZC_improvised_farming_machinery
-		cost = 5
-
-		relative_position_id = SZC_Restart_The_Agricultural_Sector
-		x = -1
-		y = 1
-
-		available = {
-			SZC_agri_branch_unlocked = yes
-			661 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Restart_The_Agricultural_Sector
-		}
-		ai_will_do = { factor = 15 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Rural_Construction_College"
-			if = {
-				limit = { has_idea = SZC_agricultural_heartland_2 }
-				swap_ideas = {
-					remove_idea = SZC_agricultural_heartland_2
-					add_idea = SZC_agricultural_heartland_3
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = SZC_agricultural_heartland_1
-					add_idea = SZC_agricultural_heartland_2
-				}
-			}
-			661 = { increase_state_category_by_two_levels = yes }
-		}
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = SZC_Rice_And_Wheat_Improvement_Station
-		icon = GFX_goal_generic_rice_field
-		cost = 5
-
-		relative_position_id = SZC_Restart_The_Agricultural_Sector
-		x = 1
-		y = 1
-
-		available = {
-			SZC_agri_branch_unlocked = yes
-			661 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Restart_The_Agricultural_Sector
-		}
-		ai_will_do = { factor = 15 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Rice_And_Wheat_Improvement_Station"
-			if = {
-				limit = { has_idea = SZC_agricultural_heartland_2 }
-				swap_ideas = {
-					remove_idea = SZC_agricultural_heartland_2
-					add_idea = SZC_agricultural_heartland_3
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = SZC_agricultural_heartland_1
-					add_idea = SZC_agricultural_heartland_2
-				}
-			}
-			661 = { increase_state_category_by_two_levels = yes }
-		}
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = SZC_Expand_Dujiangyan_Irrigation_System
-		icon = GFX_goal_SZC_dujiangyan_irrigation_system
-		cost = 5
-
-		relative_position_id = SZC_Restart_The_Agricultural_Sector
-		x = 0
-		y = 2
-
-		available = {
-			SZC_agri_branch_unlocked = yes
-			605 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Rice_And_Wheat_Improvement_Station
-		}
-		prerequisite = {
-			focus = SZC_Rural_Construction_College
-		}
-		ai_will_do = { factor = 15 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Expand_Dujiangyan_Irrigation_System"
-			swap_ideas = {
-				remove_idea = SZC_agricultural_heartland_3
-				add_idea = SZC_agricultural_heartland_4
-			}
-			605 = { increase_state_category_by_two_levels = yes }
-			custom_effect_tooltip = tooltip_white_line
-			add_tech_bonus = {
-				name = SZC_Expand_Dujiangyan_Irrigation_System
-				bonus = 1
-				uses = 1
-				category = cat_production
-			}
-		}
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
-	}
-
-	focus = {
-		id = SZC_Zigong_Saltworks
-		icon = GFX_goal_SZC_salt
-		cost = 4
-
-		relative_position_id = SZC_New_Commercial_Zones
-		x = 1
-		y = 1
-
-		available = {
-			SZC_opium_tier_1_unlocked = yes
-		}
-		prerequisite = {
-			focus = SZC_New_Commercial_Zones
-		}
-		ai_will_do = { factor = 8 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Zigong_Saltworks"
-			if = {
-				limit = { has_idea = SZC_commercial_expansion_2 }
-				swap_ideas = {
-					remove_idea = SZC_commercial_expansion_2
-					add_idea = SZC_commercial_expansion_4
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = SZC_commercial_expansion_1
-					add_idea = SZC_commercial_expansion_3
-				}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			add_one_random_civilian_factory = yes
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Study_Production_Innovations
-		icon = GFX_goal_generic_production2
-		cost = 6
-
-		relative_position_id = SZC_Chengdu_Chongqing_Railway
-		x = -1
-		y = 1
-
-		available = {
-			SZC_opium_tier_2_unlocked = yes
-			650 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Chengdu_Chongqing_Railway
-		}
-		ai_will_do = { factor = 15 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Study_Production_Innovations"
-			if = { #has machinery
-				limit = { has_idea = SZC_industrial_planning_committee_2 }
-				swap_ideas = {
-					remove_idea = SZC_industrial_planning_committee_2
-					add_idea = SZC_industrial_planning_committee_4
-				}
-			}
-			else_if = { #has construction
-				limit = { has_idea = SZC_industrial_planning_committee_3 }
-				swap_ideas = {
-					remove_idea = SZC_industrial_planning_committee_3
-					add_idea = SZC_industrial_planning_committee_5
-				}
-			}
-			else_if = { #has machinery and construction
-				limit = { has_idea = SZC_industrial_planning_committee_6 }
-				swap_ideas = {
-					remove_idea = SZC_industrial_planning_committee_6
-					add_idea = SZC_industrial_planning_committee_7
-				}
-			}
-			else = {
-				add_ideas = SZC_industrial_planning_committee_1
-				custom_effect_tooltip = tooltip_white_line
-			}
-			650 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Import_Foreign_Machinery
-		icon = GFX_goal_generic_industry_reallocation
-		cost = 5
-
-		relative_position_id = SZC_Chengdu_Chongqing_Railway
-		x = 1
-		y = 1
-
-		available = {
-			SZC_opium_tier_2_unlocked = yes
-			605 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Chengdu_Chongqing_Railway
-		}
-		ai_will_do = { factor = 20 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Import_Foreign_Machinery"
-			if = { #has production
-				limit = { has_idea = SZC_industrial_planning_committee_1 }
-				swap_ideas = {
-					remove_idea = SZC_industrial_planning_committee_1
-					add_idea = SZC_industrial_planning_committee_4
-				}
-			}
-			else_if = { #has construction
-				limit = { has_idea = SZC_industrial_planning_committee_3 }
-				swap_ideas = {
-					remove_idea = SZC_industrial_planning_committee_3
-					add_idea = SZC_industrial_planning_committee_6
-				}
-			}
-			else_if = { #has production and construction
-				limit = { has_idea = SZC_industrial_planning_committee_5 }
-				swap_ideas = {
-					remove_idea = SZC_industrial_planning_committee_5
-					add_idea = SZC_industrial_planning_committee_7
-				}
-			}
-			else = {
-				add_ideas = SZC_industrial_planning_committee_2
-				custom_effect_tooltip = tooltip_white_line
-			}
-			605 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Modern_Construction_Technology
-		icon = GFX_goal_construction
-		cost = 5
-
-		relative_position_id = SZC_Chengdu_Chongqing_Railway
-		x = 3
-		y = 1
-
-		available = {
-			SZC_opium_tier_2_unlocked = yes
-			661 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Chengdu_Chongqing_Railway
-		}
-		ai_will_do = { factor = 20 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Modern_Construction_Technology"
-			if = { #has production
-				limit = { has_idea = SZC_industrial_planning_committee_1 }
-				swap_ideas = {
-					remove_idea = SZC_industrial_planning_committee_1
-					add_idea = SZC_industrial_planning_committee_5
-				}
-			}
-			else_if = { #has machinery
-				limit = { has_idea = SZC_industrial_planning_committee_2 }
-				swap_ideas = {
-					remove_idea = SZC_industrial_planning_committee_2
-					add_idea = SZC_industrial_planning_committee_6
-				}
-			}
-			else_if = { #has production and machinery
-				limit = { has_idea = SZC_industrial_planning_committee_4 }
-				swap_ideas = {
-					remove_idea = SZC_industrial_planning_committee_4
-					add_idea = SZC_industrial_planning_committee_7
-				}
-			}
-			else = {
-				add_ideas = SZC_industrial_planning_committee_3
-				custom_effect_tooltip = tooltip_white_line
-			}
-			661 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Industrial_Planning_Committee
-		icon = GFX_goal_social_reforms
-		cost = 5
-
-		relative_position_id = SZC_Chengdu_Chongqing_Railway
-		x = 1
-		y = 2
-
-		available = {
-			SZC_opium_tier_2_unlocked = yes
-			605 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Study_Production_Innovations
-		}
-		prerequisite = {
-			focus = SZC_Import_Foreign_Machinery
-		}
-		prerequisite = {
-			focus = SZC_Modern_Construction_Technology
-		}
-		ai_will_do = { factor = 20 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Industrial_Planning_Committee"
-			swap_ideas = {
-				remove_idea = SZC_industrial_planning_committee_7
-				add_idea = SZC_industrial_planning_committee_8
-			}
-			add_one_random_civilian_factory = yes
-			605 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			add_tech_bonus = {
-				name = SZC_Industrial_Planning_Committee
-				bonus = 1
-				uses = 1
-				category = industry
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Tianfu_Mining_Bureau
-		icon = GFX_goal_construction_engineering
-		cost = 4
-
-		relative_position_id = SZC_Industrial_Planning_Committee
-		x = -1
-		y = 1
-
-		available = {
-			SZC_opium_tier_3_unlocked = yes
-		}
-		prerequisite = {
-			focus = SZC_Industrial_Planning_Committee
-		}
-		ai_will_do = { factor = 5 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Tianfu_Mining_Bureau"
-			add_tech_bonus = {
-				name = SZC_Tianfu_Mining_Bureau
-				bonus = 1
-				uses = 1
-				category = excavation_tech
-			}
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = tianfu_mines
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = SZC_Industrial_fabric
-		icon = GFX_focus_CHL_enlarge_the_textile_industries
-		cost = 5
-
-		relative_position_id = SZC_Industrial_Planning_Committee
-		x = 1
-		y = 1
-
-		available = {
-			SZC_opium_tier_3_unlocked = yes
-			661 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Industrial_Planning_Committee
-		}
-		ai_will_do = { factor = 12 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Industrial_fabric"
-			add_one_random_civilian_factory = yes
-			add_one_random_military_factory = yes
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-				limit = { has_dlc_aat = no }
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = sichuan_silk
-			}
-			else = {
-				if = {
-					limit = { mio:CHN_support_equipment_industry_organisation = { is_mio_available = no } }
-					custom_effect_tooltip = available_mio_tt
-					show_mio_tooltip = CHN_support_equipment_industry_organisation
-				}
-				mio:CHN_support_equipment_industry_organisation = {
-					set_mio_flag = CHN_mio_unlocked
-					add_mio_size = 1
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Rebuild_Chengdu_Machine_Bureau
-		icon = GFX_focus_generic_industry_3
-		cost = 5
-
-		relative_position_id = SZC_Industrial_Planning_Committee
-		x = 0
-		y = 2
-
-		available = {
-			SZC_opium_tier_3_unlocked = yes
-			605 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Industrial_Planning_Committee
-		}
-		ai_will_do = { factor = 12 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Rebuild_Chengdu_Machine_Bureau"
-			605 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			add_tech_bonus = {
-				name = SZC_Rebuild_Chengdu_Machine_Bureau
-				bonus = 1
-				uses = 1
-				category = industry
-			}
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = chengdu_machine_bureau
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Urban_Modernisation_and_Sanitation
-		icon = GFX_ITA_urban
-		cost = 5
-
-		relative_position_id = SZC_Industrial_Planning_Committee
-		x = 3
-		y = 1
-
-		available = {
-			SZC_opium_tier_3_unlocked = yes
-			605 = { is_owned_and_controlled_by = ROOT }
-			650 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Industrial_Planning_Committee
-		}
-		ai_will_do = { factor = 20 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Urban_Modernisation_and_Sanitation"
-			605 = {
-				increase_state_category_by_one_level = yes
-				prioritize_state = yes
-			}
-			add_one_random_infrastructure = yes
-			custom_effect_tooltip = tooltip_white_line
-			650 = {
-				increase_state_category_by_one_level = yes
-				prioritize_state_override_previous = yes
-			}
-			add_one_random_infrastructure = yes
-		}
-	}
-
-	focus = {
-		id = SZC_Western_China_Academy_Of_Sciences
-		icon = GFX_goal_PAN_Create_the_Universidad_de_Panama
-		cost = 5
-
-		relative_position_id = SZC_Industrial_Planning_Committee
-		x = 3
-		y = 2
-
-		available = {
-			SZC_opium_tier_4_unlocked = yes
-		}
-		prerequisite = {
-			focus = SZC_Urban_Modernisation_and_Sanitation
-		}
-		ai_will_do = { factor = 100 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Western_China_Academy_Of_Sciences"
-			china_add_research_slots = yes
-		}
-	}
-
-	focus = {
-		id = SZC_Jialing_Coal_Fields
-		icon = GFX_goal_generic_coal_mining
-		cost = 5
-
-		relative_position_id = SZC_Rebuild_Chengdu_Machine_Bureau
-		x = -2
-		y = 1
-
-		available = {
-			SZC_opium_tier_3_unlocked = yes
-			661 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Rebuild_Chengdu_Machine_Bureau
-		}
-		ai_will_do = { factor = 12 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Jialing_Coal_Fields"
-			661 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_resource = {
-					type = coal
-					amount = 6
-				}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			add_tech_bonus = {
-				name = SZC_Jialing_Coal_Fields
-				bonus = 1
-				uses = 1
-				category = synth_resources
-			}
-			hidden_effect = {
-				for_each_scope_loop = {
-					array = global.china_tags_array
-					remove_targeted_decision = { decision = SZC_Jialing_Coal_Fields target = FROM }
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Increase_Steel_Production
-		icon = GFX_focus_generic_steel
-		cost = 5
-
-		relative_position_id = SZC_Rebuild_Chengdu_Machine_Bureau
-		x = 0
-		y = 1
-
-		available = {
-			SZC_opium_tier_3_unlocked = yes
-			1015 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Rebuild_Chengdu_Machine_Bureau
-		}
-		ai_will_do = { factor = 10 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Increase_Steel_Production"
-			add_resource = {
-				type = steel
-				amount = 10
-				state = 1015
-			}
-			add_victory_points = { province = 10726 value = 3 } #POP 1 + STRAT 1 + POL 0 = SIG 2
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = chongqing_electric_steel_refinery
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Extract_Natural_Gas
-		icon = GFX_goal_oil_derrick
-		cost = 5
-
-		relative_position_id = SZC_Rebuild_Chengdu_Machine_Bureau
-		x = 2
-		y = 1
-
-		available = {
-			SZC_opium_tier_3_unlocked = yes
-		}
-		prerequisite = {
-			focus = SZC_Rebuild_Chengdu_Machine_Bureau
-		}
-		ai_will_do = { factor = 10 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Extract_Natural_Gas"
-			add_resource = {
-				type = oil
-				amount = 4
-				state = 605
-			}
-			add_resource = {
-				type = oil
-				amount = 4
-				state = 650
-			}
-			add_resource = {
-				type = oil
-				amount = 4
-				state = 661
-			}
-			custom_effect_tooltip = tooltip_white_line
-			add_tech_bonus = {
-				name = SZC_Extract_Natural_Gas
-				bonus = 1
-				uses = 1
-				category = excavation_tech
-			}
-			hidden_effect = {
-				for_each_scope_loop = {
-					array = global.china_tags_array
-					remove_targeted_decision = { decision = SZC_Extract_Natural_Gas_decision target = 605 }
-					remove_targeted_decision = { decision = SZC_Extract_Natural_Gas_decision target = 650 }
-					remove_targeted_decision = { decision = SZC_Extract_Natural_Gas_decision target = 661 }
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Modernised_Manufacturing
-		icon = GFX_goal_factory_complex
-		cost = 5
-
-		relative_position_id = SZC_Rebuild_Chengdu_Machine_Bureau
-		x = -2
-		y = 2
-
-		available = {
-			SZC_opium_tier_4_unlocked = yes
-			605 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Jialing_Coal_Fields
-		}
-		prerequisite = {
-			focus = SZC_Increase_Steel_Production
-		}
-		prerequisite = {
-			focus = SZC_Extract_Natural_Gas
-		}
-		ai_will_do = { factor = 12 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Modernised_Manufacturing"
-			605 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = shu_hua_industrial_company
-			custom_effect_tooltip = tooltip_white_line
-			add_tech_bonus = {
-				name = SZC_Modernised_Manufacturing
-				bonus = 1
-				uses = 1
-				category = industry
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Xikang_Hydropower
-		icon = GFX_goal_dam
-		cost = 5
-
-		relative_position_id = SZC_Modernised_Manufacturing
-		x = -1
-		y = 2
-
-		available = {
-			SZC_opium_tier_4_unlocked = yes
-			601 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Modernised_Manufacturing
-		}
-		ai_will_do = { factor = 10 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Xikang_Hydropower"
-			601 = {
-				if = {
-					limit = { dam > 0 }
-					increase_state_category_by_one_level = yes
-				}
-				else = {
-					add_extra_state_shared_building_slots = 1
-					custom_effect_tooltip = tooltip_white_line
-					custom_override_tooltip = {
-						add_building_construction = {
-							type = dam
-							level = 1
-							province = 4999
-							instant_build = yes
-						}
-						tooltip = {
-							localization_key = tooltip_add_building_on_victory_point
-							BUILDING = dam
-							NUMBER = 1
-							VP = 4999
-						}
-					}
-				}
-				prioritize_state = yes
-			}
-			if = {
-				limit = { 601 = { dam < 1 } } #separate due to tooltip indentation
-				custom_effect_tooltip = {
-					localization_key = building_state_modifier|dam
-					INDENT = "    "
-				}
-				custom_effect_tooltip = tooltip_white_line
-			}
-			add_one_random_civilian_factory = yes
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Electrification_Efforts
-		icon = GFX_goal_generic_lightbulb
-		cost = 6
-
-		relative_position_id = SZC_Xikang_Hydropower
-		x = 0
-		y = 1
-
-		available = {
-			SZC_opium_tier_4_unlocked = yes
-			650 = { is_owned_and_controlled_by = ROOT }
-			605 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Xikang_Hydropower
-		}
-		ai_will_do = { factor = 10 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Electrification_Efforts"
-			650 = {
-				add_extra_state_shared_building_slots = 2
-				prioritize_state = yes
-			}
-			add_one_random_infrastructure = yes
-			605 = {
-				add_extra_state_shared_building_slots = 2
-				prioritize_state_override_previous = yes
-			}
-			add_one_random_infrastructure = yes
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Build_the_Electro_Steel_Mill
-		icon = GFX_goal_generic_industry_reallocation
-		cost = 4
-
-		relative_position_id = SZC_Xikang_Hydropower
-		x = 2
-		y = 1
-
-		available = {
-			SZC_opium_tier_4_unlocked = yes
-			1015 = { is_owned_and_controlled_by = ROOT }
-		}
-		prerequisite = {
-			focus = SZC_Xikang_Hydropower
-			focus = SZC_Huaxi_Machinery_Factory
-		}
-		ai_will_do = { factor = 12 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Build_the_Electro_Steel_Mill"
-			650 = { prioritize_state = yes }
-			add_one_random_military_factory = yes
-			add_resource = {
-				type = steel
-				amount = 4
-				state = 1015
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Textile_Production
-		icon = GFX_focus_CHL_enlarge_the_textile_industries
-		cost = 6
-
-		relative_position_id = SZC_Modernised_Manufacturing
-		x = 0
-		y = 1
-
-		available = {
-			SZC_opium_tier_4_unlocked = yes
-		}
-		prerequisite = {
-			focus = SZC_Modernised_Manufacturing
-		}
-		ai_will_do = { factor = 20 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Textile_Production"
-			605 = { prioritize_state = yes }
-			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Huaxi_Machinery_Factory
-		icon = GFX_goal_generic_consumer_goods
-		cost = 6
-
-		relative_position_id = SZC_Modernised_Manufacturing
-		x = 1
-		y = 2
-
-		available = {
-			SZC_opium_tier_4_unlocked = yes
-		}
-		prerequisite = {
-			focus = SZC_Modernised_Manufacturing
-		}
-		ai_will_do = { factor = 20 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Huaxi_Machinery_Factory"
-			650 = { prioritize_state = yes }
-			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_The_Arsenal_Programme
-		icon = GFX_goal_SZC_create_sichuan_arsenal
-		cost = 5
-
-		relative_position_id = SZC_Rebuild_Chengdu_Machine_Bureau
-		x = 2
-		y = 2
-
-		available = {
-			SZC_opium_tier_4_unlocked = yes
-		}
-		prerequisite = {
-			focus = SZC_Jialing_Coal_Fields
-		}
-		prerequisite = {
-			focus = SZC_Increase_Steel_Production
-		}
-		prerequisite = {
-			focus = SZC_Extract_Natural_Gas
-		}
-		ai_will_do = { factor = 12 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_The_Arsenal_Programme"
-			650 = { prioritize_state = yes }
-			add_one_random_military_factory = yes
-			custom_effect_tooltip = tooltip_white_line
-			add_tech_bonus = {
-				name = SZC_The_Arsenal_Programme
-				bonus = 1
-				uses = 1
-				category = industry
-			}
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-				limit = { has_dlc_aat = no }
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = chongqing_arsenal
-			}
-			else = {
-				mio:CHN_small_arms_industry_organisation = { add_mio_size = 1 }
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Expand_Production_Artillery
-		icon = GFX_goal_generic_construct_mil_factory
-		cost = 5
-
-		relative_position_id = SZC_The_Arsenal_Programme
-		x = -1
-		y = 2
-
-		available = {
-			SZC_opium_tier_4_unlocked = yes
-		}
-		prerequisite = {
-			focus = SZC_The_Arsenal_Programme
-		}
-		ai_will_do = { factor = 12 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Expand_Production_Artillery"
-			650 = { prioritize_state = yes }
-			add_one_random_military_factory = yes
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-				limit = { has_dlc_aat = no }
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = hejiang_artillery_arsenal
-			}
-			else = {
-				if = {
-					limit = { mio:CHN_artillery_industry_organisation = { is_mio_available = no } }
-					custom_effect_tooltip = available_mio_tt
-					show_mio_tooltip = CHN_artillery_industry_organisation
-				}
-				mio:CHN_artillery_industry_organisation = {
-					set_mio_flag = CHN_mio_unlocked
-					add_mio_size = 1
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Expand_Production_Tanks
-		icon = GFX_goal_POL_light_tanks
-		cost = 5
-
-		relative_position_id = SZC_The_Arsenal_Programme
-		x = 0
-		y = 1
-
-		available = {
-			SZC_opium_tier_4_unlocked = yes
-		}
-		prerequisite = {
-			focus = SZC_The_Arsenal_Programme
-		}
-		ai_will_do = { factor = 12 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Expand_Production_Tanks"
-			650 = { prioritize_state = yes }
-			add_one_random_military_factory = yes
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-				limit = { has_dlc_aat = no }
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = chongqing_tank_plant
-			}
-			else = {
-				if = {
-					limit = { mio:CHN_armour_industry_organisation = { is_mio_available = no } }
-					custom_effect_tooltip = available_mio_tt
-					show_mio_tooltip = CHN_armour_industry_organisation
-				}
-				mio:CHN_armour_industry_organisation = {
-					set_mio_flag = CHN_mio_unlocked
-					add_mio_size = 2
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-		id = SZC_Expand_Production_Aircraft
-		icon = GFX_goal_POL_recon_aircraft
-		cost = 5
-
-		relative_position_id = SZC_The_Arsenal_Programme
-		x = 2
-		y = 1
-
-		available = {
-			SZC_opium_tier_4_unlocked = yes
-		}
-		prerequisite = {
-			focus = SZC_The_Arsenal_Programme
-		}
-		ai_will_do = { factor = 12 }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_Expand_Production_Aircraft"
-			650 = { prioritize_state = yes }
-			add_one_random_military_factory = yes
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-				limit = { has_dlc_aat = no }
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = nanchuan_aircraft_manufacturing_plant
-			}
-			else = {
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = CHN_aviation_industry_organisation
-				mio:CHN_aviation_industry_organisation = {
-					set_mio_flag = CHN_mio_unlocked
-					add_mio_size = 2
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
 
 ### Shared Military Tree ###
 	focus = {
@@ -24569,8 +23323,8 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			# add = 50
-			add = 0
+			add = 50
+			# add = 0
 			tag = SZC
 		}
 	}
@@ -24582,7 +23336,7 @@ focus_tree = {
 
 
 	default = no
-	continuous_focus_position = { x = 3350 y = 850 }
+	continuous_focus_position = { x = 4350 y = 2250 }
 
 	shared_focus = SZC_Chengdu_Chongqing_Railway
 	# shared_focus = SZC_Rebuild_The_Sichuanese_Army
@@ -34459,7 +33213,1303 @@ focus_tree = {
 			
 		}
 	}
-
 	
+	
+
+	focus = {
+		id = SZC_YCP_hard_to_cross_guanshan
+		icon = GFX_goal_SZC_YCP_hard_to_cross_guanshan
+		cost = 4
+
+		x = 32
+		y = 0
+
+		available = {
+			has_completed_focus = SZC_YCP_the_ninth_congress_of_YCP
+		}
+
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_hard_to_cross_guanshan"
+			
+			
+		}
+	}
+	
+	
+
+		focus = {
+			id = SZC_YCP_moblize_the_youth
+			icon = GFX_goal_SZC_YCP_moblize_the_youth
+			cost = 4
+
+			x = 0
+			y = 1
+
+			relative_position_id = SZC_YCP_hard_to_cross_guanshan
+
+			prerequisite = {
+				focus = SZC_YCP_hard_to_cross_guanshan
+			}	
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_moblize_the_youth"
+				add_manpower = 5000
+				add_war_support = 0.05
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_the_dancer
+			icon = GFX_goal_SZC_YCP_the_dancer
+			cost = 4
+
+			x = 1
+			y = 2
+
+			relative_position_id = SZC_YCP_hard_to_cross_guanshan
+
+			prerequisite = {
+				focus = SZC_YCP_moblize_the_youth
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_the_dancer"
+				add_political_power = 50
+				add_stability = 0.05
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_purge_bad_habits
+			icon = GFX_goal_SZC_YCP_purge_bad_habits
+			cost = 4
+
+			x = 0
+			y = 3
+
+			relative_position_id = SZC_YCP_hard_to_cross_guanshan
+
+			prerequisite = {
+				focus = SZC_YCP_moblize_the_youth
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_purge_bad_habits"
+				add_stability = 0.10
+				add_political_power = 50
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_reorganize_and_prepare_for_war
+			icon = GFX_goal_SZC_YCP_reorganize_and_prepare_for_war
+			cost = 4
+
+			x = -4
+			y = 4
+
+			relative_position_id = SZC_YCP_hard_to_cross_guanshan
+
+			prerequisite = {
+				focus = SZC_YCP_purge_bad_habits
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_reorganize_and_prepare_for_war"
+				add_war_support = 0.10
+				add_army_experience = 20
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_establish_national_defense_academy
+			icon = GFX_goal_SZC_YCP_establish_national_defense_academy
+			cost = 4
+
+			x = -4
+			y = 1
+
+			relative_position_id = SZC_YCP_hard_to_cross_guanshan
+
+			prerequisite = {
+				focus = SZC_YCP_hard_to_cross_guanshan		
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_establish_national_defense_academy"
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_hire_continental_advisors
+			icon = GFX_goal_SZC_YCP_hire_continental_advisors
+			cost = 4
+
+			x = -7
+			y = 3
+
+			relative_position_id = SZC_YCP_hard_to_cross_guanshan
+
+			prerequisite = {
+				focus = SZC_YCP_establish_national_defense_academy
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_hire_continental_advisors"
+				add_army_experience = 10
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_rotational_practical_training
+			icon = GFX_goal_SZC_YCP_rotational_practical_training
+			cost = 4
+
+			x = -6
+			y = 2
+
+			relative_position_id = SZC_YCP_hard_to_cross_guanshan
+
+			prerequisite = {
+				focus = SZC_YCP_establish_national_defense_academy
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_rotational_practical_training"
+				army_leader_start_level = 1
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_de_politicization
+			icon = GFX_goal_SZC_YCP_de_politicization
+			cost = 4
+
+			x = -4
+			y = 2
+
+			relative_position_id = SZC_YCP_hard_to_cross_guanshan
+
+			prerequisite = {
+				focus = SZC_YCP_establish_national_defense_academy
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_de_politicization"
+				add_stability = 0.05
+				add_political_power = 50
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_special_operations
+			icon = GFX_goal_SZC_YCP_special_operations
+			cost = 4
+
+			x = -2
+			y = 2
+
+			relative_position_id = SZC_YCP_hard_to_cross_guanshan
+
+			prerequisite = {
+				focus = SZC_YCP_establish_national_defense_academy
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_special_operations"
+				add_tech_bonus = {
+					name = special_forces_bonus
+					bonus = 1.0
+					uses = 1
+					category = infantry_weapons
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_revival_of_military_science
+			icon = GFX_goal_SZC_YCP_revival_of_military_science
+			cost = 4
+
+			x = -4
+			y = 3
+
+			relative_position_id = SZC_YCP_hard_to_cross_guanshan
+
+			prerequisite = {
+				focus = SZC_YCP_special_operations
+			}
+
+			prerequisite = {
+				focus = SZC_YCP_de_politicization
+			}
+
+			prerequisite = {
+				focus = SZC_YCP_rotational_practical_training
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_revival_of_military_science"
+				add_doctrine_cost_reduction = {
+					name = land_doctrine_bonus
+					cost_reduction = 0.5
+					uses = 2
+					category = land_doctrine
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_central_ordnance_bureau
+			icon = GFX_goal_SZC_YCP_central_ordnance_bureau
+			cost = 4
+
+			x = -4
+			y = 1
+
+			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
+
+			prerequisite = {
+				focus = SZC_YCP_reorganize_and_prepare_for_war
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_central_ordnance_bureau"
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_self_sufficiency_in_arms_and_ammo
+			icon = GFX_goal_SZC_YCP_self_sufficiency_in_arms_and_ammo
+			cost = 4
+
+			x = -5
+			y = 2
+
+			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
+
+			prerequisite = {
+				focus = SZC_YCP_central_ordnance_bureau
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_self_sufficiency_in_arms_and_ammo"
+				
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_logistics_innovation
+			icon = GFX_goal_SZC_YCP_logistics_innovation
+			cost = 4
+
+			x = -3
+			y = 2
+
+			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
+
+			prerequisite = {
+				focus = SZC_YCP_central_ordnance_bureau
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_logistics_innovation"
+				add_tech_bonus = {
+					name = logistics_bonus
+					bonus = 1.0
+					uses = 1
+					category = support_tech
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_telecommunications_command_network
+			icon = GFX_goal_SZC_YCP_telecommunications_command_network
+			cost = 4
+
+			x = -4
+			y = 3
+
+			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
+
+			prerequisite = {
+				focus = SZC_YCP_logistics_innovation
+			}
+
+			prerequisite = {
+				focus = SZC_YCP_self_sufficiency_in_arms_and_ammo
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_telecommunications_command_network"
+				add_tech_bonus = {
+					name = radio_bonus
+					bonus = 1.0
+					uses = 1
+					category = electronics
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_revise_drill_manuals
+			icon = GFX_goal_SZC_YCP_revise_drill_manuals
+			cost = 4
+
+			x = 0
+			y = 1
+
+			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
+
+			prerequisite = {
+				focus = SZC_YCP_reorganize_and_prepare_for_war
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_revise_drill_manuals"
+				add_army_experience = 15
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_infantry_artillery_coordination
+			icon = GFX_goal_SZC_YCP_infantry_artillery_coordination
+			cost = 4
+
+			x = -1
+			y = 2
+
+			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
+
+			prerequisite = {
+				focus = SZC_YCP_revise_drill_manuals
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_infantry_artillery_coordination"
+				add_tech_bonus = {
+					name = artillery_bonus
+					bonus = 1.0
+					uses = 1
+					category = artillery
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_mobile_warfare
+			icon = GFX_goal_SZC_YCP_mobile_warfare
+			cost = 4
+
+			x = 1
+			y = 2
+
+			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
+
+			prerequisite = {
+				focus = SZC_YCP_revise_drill_manuals
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_mobile_warfare"
+				add_tech_bonus = {
+					name = motorized_bonus
+					bonus = 1.0
+					uses = 1
+					category = motorized_equipment
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_combined_arms_experiment
+			icon = GFX_goal_SZC_YCP_combined_arms_experiment
+			cost = 4
+
+			x = 1
+			y = 3
+
+			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
+
+			prerequisite = {
+				focus = SZC_YCP_mobile_warfare
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_combined_arms_experiment"
+				add_doctrine_cost_reduction = {
+					name = land_doctrine_bonus
+					cost_reduction = 0.5
+					uses = 1
+					category = land_doctrine
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_long_range_fire_projection
+			icon = GFX_goal_SZC_YCP_long_range_fire_projection
+			cost = 4
+
+			x = 0
+			y = 4
+
+			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
+
+			prerequisite = {
+				focus = SZC_YCP_combined_arms_experiment
+			}
+			prerequisite = {
+				focus = SZC_YCP_infantry_artillery_coordination
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_long_range_fire_projection"
+				add_tech_bonus = {
+					name = rocket_artillery_bonus
+					bonus = 1.0
+					uses = 1
+					category = artillery
+				}
+			}
+		}
+
+		# Right Branch: Industry & Defense
+		focus = {
+			id = SZC_YCP_rectify_arsenals
+			icon = GFX_goal_SZC_YCP_rectify_arsenals
+			cost = 4
+
+			x = 3
+			y = 1
+
+			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
+
+			prerequisite = {
+				focus = SZC_YCP_reorganize_and_prepare_for_war
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_rectify_arsenals"
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_weighty_black_blood
+			icon = GFX_goal_SZC_YCP_weighty_black_blood
+			cost = 4
+
+			x = 3
+			y = 2
+
+			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
+
+			prerequisite = {
+				focus = SZC_YCP_rectify_arsenals
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_weighty_black_blood"
+				add_resource = {
+					type = oil
+					amount = 10
+					state = 524 # Example state ID, adjust as needed
+				}
+				add_tech_bonus = {
+					name = excavation_bonus
+					bonus = 1.0
+					uses = 1
+					category = excavation
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_impregnable_defense
+			icon = GFX_goal_SZC_YCP_impregnable_defense
+			cost = 4
+
+			x = 3
+			y = 3
+
+			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
+
+			prerequisite = {
+				focus = SZC_YCP_weighty_black_blood
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_impregnable_defense"
+				add_building_construction = {
+					type = land_fort
+					level = 2
+					instant_build = yes
+				}
+				add_tech_bonus = {
+					name = construction_bonus
+					bonus = 1.0
+					uses = 1
+					category = construction_tech
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_awe_inspiring_army
+			icon = GFX_goal_SZC_YCP_awe_inspiring_army
+			cost = 4
+
+			x = 0
+			y = 5
+
+			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
+
+			prerequisite = {
+				focus = SZC_YCP_long_range_fire_projection	
+			}
+
+			prerequisite = {
+				focus = SZC_YCP_impregnable_defense	
+			}
+
+			prerequisite = {
+				focus = SZC_YCP_telecommunications_command_network
+			}	
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_awe_inspiring_army"
+				
+			}
+		}
+
+		
+
+		focus = {
+			id = SZC_YCP_vast_clear_skies
+			icon = GFX_goal_SZC_YCP_vast_clear_skies
+			cost = 4
+
+			x = 0
+			y = 8
+
+			relative_position_id = SZC_YCP_hard_to_cross_guanshan
+
+			prerequisite = {
+				focus = SZC_YCP_purge_bad_habits
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_vast_clear_skies"
+			}
+		}
+		focus = {
+			id = SZC_YCP_valor_above_the_clouds
+			icon = GFX_goal_SZC_YCP_valor_above_the_clouds
+			cost = 4
+
+			x = -2
+			y = 1
+
+			relative_position_id = SZC_YCP_vast_clear_skies
+
+			prerequisite = {
+				focus = SZC_YCP_vast_clear_skies
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_valor_above_the_clouds"
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 1.0
+					uses = 1
+					category = light_fighter
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_conquest_of_heavenly_steps
+			icon = GFX_goal_SZC_YCP_conquest_of_heavenly_steps
+			cost = 4
+
+			x = -4
+			y = 2
+
+			relative_position_id = SZC_YCP_vast_clear_skies
+
+			prerequisite = {
+				focus = SZC_YCP_valor_above_the_clouds
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_conquest_of_heavenly_steps"
+				add_doctrine_cost_reduction = {
+					name = air_doctrine_bonus
+					cost_reduction = 0.5
+					uses = 1
+					category = air_doctrine
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_iron_wings_scattered_like_stars
+			icon = GFX_goal_SZC_YCP_iron_wings_scattered_like_stars
+			cost = 4
+
+			x = -4
+			y = 3
+
+			relative_position_id = SZC_YCP_vast_clear_skies
+
+			prerequisite = {
+				focus = SZC_YCP_conquest_of_heavenly_steps
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_iron_wings_scattered_like_stars"
+				add_air_experience = 25
+				add_tech_bonus = {
+					name = heavy_fighter_bonus
+					bonus = 1.0
+					uses = 1
+					category = heavy_fighter
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_silent_hunt
+			icon = GFX_goal_SZC_YCP_silent_hunt
+			cost = 4
+
+			x = -2
+			y = 2
+
+			relative_position_id = SZC_YCP_vast_clear_skies
+
+			prerequisite = {
+				focus = SZC_YCP_valor_above_the_clouds
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_silent_hunt"
+				add_tech_bonus = {
+					name = scout_plane_bonus
+					bonus = 1.0
+					uses = 1
+					category = scout_plane
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_sky_splitting_air_cavalry
+			icon = GFX_goal_SZC_YCP_sky_splitting_air_cavalry
+			cost = 4
+
+			x = 0
+			y = 1
+
+			relative_position_id = SZC_YCP_vast_clear_skies
+
+			prerequisite = {
+				focus = SZC_YCP_vast_clear_skies
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_sky_splitting_air_cavalry"
+				add_tech_bonus = {
+					name = cas_bonus
+					bonus = 1.0
+					uses = 1
+					category = cas_bomber
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_helldiver
+			icon = GFX_goal_SZC_YCP_helldiver
+			cost = 4
+
+			x = -1
+			y = 3
+
+			relative_position_id = SZC_YCP_vast_clear_skies
+
+			prerequisite = {
+				focus = SZC_YCP_sky_splitting_air_cavalry
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_helldiver"
+				add_tech_bonus = {
+					name = paratrooper_bonus
+					bonus = 1.0
+					uses = 1
+					category = paratroopers
+				}
+				set_technology = {
+					YCP_hellpod = 1
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_march_of_azure_thunder
+			icon = GFX_goal_SZC_YCP_march_of_azure_thunder
+			cost = 4
+
+			x = 1
+			y = 3
+
+			relative_position_id = SZC_YCP_vast_clear_skies
+
+			prerequisite = {
+				focus = SZC_YCP_sky_splitting_air_cavalry
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_march_of_azure_thunder"
+				add_tech_bonus = {
+					name = tactical_bomber_bonus
+					bonus = 1.0
+					uses = 1
+					category = tactical_bomber
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_wind_riding_dragon
+			icon = GFX_goal_SZC_YCP_wind_riding_dragon
+			cost = 4
+
+			x = 0
+			y = 4
+
+			relative_position_id = SZC_YCP_vast_clear_skies
+
+			prerequisite = {
+				focus = SZC_YCP_march_of_azure_thunder
+			}
+
+			prerequisite = {
+				focus = SZC_YCP_helldiver
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_wind_riding_dragon"
+				add_tech_bonus = {
+					name = jet_bonus
+					bonus = 1.0
+					uses = 1
+					category = jet_technology
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_boundless_space
+			icon = GFX_goal_SZC_YCP_boundless_space
+			cost = 4
+
+			x = 0
+			y = 5
+
+			relative_position_id = SZC_YCP_vast_clear_skies
+
+			prerequisite = {
+				focus = SZC_YCP_wind_riding_dragon
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_boundless_space"
+				add_tech_bonus = {
+					name = rocketry_bonus
+					bonus = 1.0
+					uses = 1
+					category = rocketry
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_immeasurable_and_formless
+			icon = GFX_goal_SZC_YCP_immeasurable_and_formless
+			cost = 4
+
+			x = 3
+			y = 1
+
+			relative_position_id = SZC_YCP_vast_clear_skies
+
+			prerequisite = {
+				focus = SZC_YCP_vast_clear_skies
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_immeasurable_and_formless"
+				add_tech_bonus = {
+					name = nuclear_bonus
+					bonus = 1.0
+					uses = 1
+					category = nuclear
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_roc_soars_ten_thousand_li
+			icon = GFX_goal_SZC_YCP_roc_soars_ten_thousand_li
+			cost = 4
+
+			x = 3
+			y = 2
+
+			relative_position_id = SZC_YCP_vast_clear_skies
+
+			prerequisite = {
+				focus = SZC_YCP_immeasurable_and_formless
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_roc_soars_ten_thousand_li"
+				add_tech_bonus = {
+					name = strategic_bomber_bonus
+					bonus = 1.0
+					uses = 1
+					category = strategic_bomber
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_world_burning_boiling_sword
+			icon = GFX_goal_SZC_YCP_world_burning_boiling_sword
+			cost = 4
+
+			x = 3
+			y = 3
+
+			relative_position_id = SZC_YCP_vast_clear_skies
+
+			prerequisite = {
+				focus = SZC_YCP_roc_soars_ten_thousand_li
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_world_burning_boiling_sword"
+				add_tech_bonus = {
+					name = nuclear_bonus
+					bonus = 1.0
+					uses = 1
+					category = nuclear
+				}
+			}
+		}
+
+		
+		
+
+		focus = {
+			id = SZC_YCP_perish_by_the_sea
+			icon = GFX_goal_SZC_YCP_perish_by_the_sea
+			cost = 4
+
+			x = 4
+			y = 4
+
+			relative_position_id = SZC_YCP_hard_to_cross_guanshan
+
+			prerequisite = {
+				focus = SZC_YCP_purge_bad_habits
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_perish_by_the_sea"
+				add_navy_experience = 10
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_follow_in_the_footsteps
+			icon = GFX_goal_SZC_YCP_follow_in_the_footsteps
+			cost = 4
+
+			x = 0
+			y = 1
+
+			relative_position_id = SZC_YCP_perish_by_the_sea
+
+			prerequisite = {
+				focus = SZC_YCP_perish_by_the_sea
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_follow_in_the_footsteps"
+				add_tech_bonus = {
+					name = naval_doctrine_bonus
+					bonus = 1.0
+					uses = 1
+					category = naval_doctrine
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_expand_shipyards
+			icon = GFX_goal_SZC_YCP_expand_shipyards
+			cost = 4
+
+			x = -2
+			y = 2
+
+			relative_position_id = SZC_YCP_perish_by_the_sea
+
+			prerequisite = {
+				focus = SZC_YCP_follow_in_the_footsteps
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_expand_shipyards"
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_renovate_naval_ports
+			icon = GFX_goal_SZC_YCP_renovate_naval_ports
+			cost = 4
+
+			x = -2
+			y = 3
+
+			relative_position_id = SZC_YCP_perish_by_the_sea
+
+			prerequisite = {
+				focus = SZC_YCP_expand_shipyards
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_renovate_naval_ports"
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_tide_forged_precision
+			icon = GFX_goal_SZC_YCP_tide_forged_precision
+			cost = 4
+
+			x = -2
+			y = 4
+
+			relative_position_id = SZC_YCP_perish_by_the_sea
+
+			prerequisite = {
+				focus = SZC_YCP_renovate_naval_ports
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_tide_forged_precision"
+				add_tech_bonus = {
+					name = naval_equipment_bonus
+					bonus = 1.0
+					uses = 2
+					category = naval_equipment
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_rapid_reaction_warfare
+			icon = GFX_goal_SZC_YCP_rapid_reaction_warfare
+			cost = 4
+
+			x = 0
+			y = 2
+
+			relative_position_id = SZC_YCP_perish_by_the_sea
+
+			prerequisite = {
+				focus = SZC_YCP_follow_in_the_footsteps
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_rapid_reaction_warfare"
+				add_tech_bonus = {
+					name = destroyer_bonus
+					bonus = 1.0
+					uses = 1
+					category = destroyer
+				}
+				add_tech_bonus = {
+					name = light_cruiser_bonus
+					bonus = 1.0
+					uses = 1
+					category = light_cruiser
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_fleet_in_being
+			icon = GFX_goal_SZC_YCP_fleet_in_being
+			cost = 4
+
+			x = 0
+			y = 3
+
+			relative_position_id = SZC_YCP_perish_by_the_sea
+
+			prerequisite = {
+				focus = SZC_YCP_rapid_reaction_warfare
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_fleet_in_being"
+				add_tech_bonus = {
+					name = capital_ship_bonus
+					bonus = 1.0
+					uses = 1
+					category = heavy_cruiser
+				}
+				add_tech_bonus = {
+					name = capital_ship_bonus
+					bonus = 1.0
+					uses = 1
+					category = battleship
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_liberty_ships
+			icon = GFX_goal_SZC_YCP_liberty_ships
+			cost = 4
+
+			x = 2
+			y = 2
+
+			relative_position_id = SZC_YCP_perish_by_the_sea
+
+			prerequisite = {
+				focus = SZC_YCP_follow_in_the_footsteps
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_liberty_ships"
+				add_tech_bonus = {
+					name = transport_bonus
+					bonus = 1.0
+					uses = 1
+					category = transport
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_sail_towards_the_clouds
+			icon = GFX_goal_SZC_YCP_sail_towards_the_clouds
+			cost = 4
+
+			x = 2
+			y = 3
+
+			relative_position_id = SZC_YCP_perish_by_the_sea
+
+			prerequisite = {
+				focus = SZC_YCP_liberty_ships
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_sail_towards_the_clouds"
+				add_tech_bonus = {
+					name = carrier_bonus
+					bonus = 1.0
+					uses = 1
+					category = carrier
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_amphibious_warfare
+			icon = GFX_goal_SZC_YCP_amphibious_warfare
+			cost = 4
+
+			x = 4
+			y = 2
+
+			relative_position_id = SZC_YCP_perish_by_the_sea
+
+			prerequisite = {
+				focus = SZC_YCP_follow_in_the_footsteps
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_amphibious_warfare"
+				add_tech_bonus = {
+					name = marines_bonus
+					bonus = 1.0
+					uses = 1
+					category = marines
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_shimmering_deep_ocean
+			icon = GFX_goal_SZC_YCP_shimmering_deep_ocean
+			cost = 4
+
+			x = 1
+			y = 4
+
+			relative_position_id = SZC_YCP_perish_by_the_sea
+
+			prerequisite = {
+				focus = SZC_YCP_fleet_in_being
+			}
+			prerequisite = {
+				focus = SZC_YCP_sail_towards_the_clouds
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_shimmering_deep_ocean"
+				add_navy_experience = 50
+				add_tech_bonus = {
+					name = naval_doctrine_bonus
+					bonus = 1.0
+					uses = 1
+					category = naval_doctrine
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_hunter_killer_voyage
+			icon = GFX_goal_SZC_YCP_hunter_killer_voyage
+			cost = 4
+
+			x = 6
+			y = 2
+
+			relative_position_id = SZC_YCP_perish_by_the_sea
+
+			prerequisite = {
+				focus = SZC_YCP_follow_in_the_footsteps
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_hunter_killer_voyage"
+				add_tech_bonus = {
+					name = submarine_bonus
+					bonus = 1.0
+					uses = 2
+					category = submarine
+				}
+			}
+		}
+
+		focus = {
+			id = SZC_YCP_descent_of_the_fire_cauldron
+			icon = GFX_goal_SZC_YCP_descent_of_the_fire_cauldron
+			cost = 4
+
+			x = 5
+			y = 3
+
+			relative_position_id = SZC_YCP_perish_by_the_sea
+
+			prerequisite = {
+				focus = SZC_YCP_hunter_killer_voyage
+			}
+
+
+			completion_reward = {
+				log = "[GetLogRoot]: Focus Completed SZC_YCP_descent_of_the_fire_cauldron"
+				add_tech_bonus = {
+					name = nuclear_bonus
+					bonus = 1.0
+					uses = 1
+					category = nuclear
+				}
+				add_tech_bonus = {
+					name = torpedo_bonus
+					bonus = 1.0
+					uses = 1
+					category = naval_torpedo
+				}
+			}
+		}
+
 
 }

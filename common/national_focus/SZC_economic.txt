@@ -1,0 +1,1250 @@
+
+### Economic Tree ###
+
+
+shared_focus = {
+	id = SZC_Chengdu_Chongqing_Railway
+	icon = GFX_goal_generic_railroad
+	cost = 5
+
+	x = 17
+	y = 0
+
+	available = {
+		if = {
+			limit = { has_idea = SZC_internal_divisions }
+			NOT = { has_idea = SZC_internal_divisions }
+		}
+		else_if = {
+			limit = { has_idea = SZC_civil_war_idea }
+			NOT = { has_idea = SZC_civil_war_idea }
+		}
+		else_if = {
+			limit = { SZC_war_aftermath_active = yes }
+			SZC_war_aftermath_active = no
+		}
+		605 = { is_owned_and_controlled_by = ROOT }
+		650 = { is_owned_and_controlled_by = ROOT }
+	}
+	offset = {
+		x = -1
+		y = 0
+		trigger = {
+			OR = {
+				has_country_flag = SZC_baoding_department_in_power
+				has_country_flag = SZC_officer_department_in_power
+			}
+		}
+	}
+	offset = {
+		x = -30
+		y = 0
+		trigger = {
+			has_country_flag = SZC_federalists_in_power
+		}
+	}
+	offset = {
+		x = -3
+		y = 0
+		trigger = {
+			has_country_flag = SZC_accelerated_department_in_power
+		}
+	}
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Chengdu_Chongqing_Railway"
+		605 = {
+			add_extra_state_shared_building_slots = 1
+			if = {
+				limit = { free_building_slots = { building = infrastructure size > 0 } }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		650 = {
+			add_extra_state_shared_building_slots = 1
+			if = {
+				limit = { free_building_slots = { building = infrastructure size > 0 } }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		build_railway = {
+			level = 1
+			start_province = 4925
+			target_province = 6999
+		}
+		custom_effect_tooltip = tooltip_white_line
+		add_tech_bonus = {
+			name = SZC_Chengdu_Chongqing_Railway
+			bonus = 2
+			uses = 1
+			category = train_tech
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_New_Commercial_Zones
+	icon = GFX_goal_generic_positive_trade_relations_gold
+	cost = 4
+
+	relative_position_id = SZC_Chengdu_Chongqing_Railway
+	x = -3
+	y = 1
+
+	available = {
+		SZC_opium_tier_1_unlocked = yes
+	}
+	prerequisite = {
+		focus = SZC_Chengdu_Chongqing_Railway
+	}
+	ai_will_do = { factor = 5 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_New_Commercial_Zones"
+		add_ideas = SZC_commercial_expansion_1
+		custom_effect_tooltip = tooltip_white_line
+		add_one_random_civilian_factory = yes
+	}
+}
+
+shared_focus = {
+	id = SZC_The_Yangtze_Lifeline
+	icon = GFX_goal_bluewater_navy
+	cost = 4
+
+	relative_position_id = SZC_New_Commercial_Zones
+	x = -1
+	y = 1
+
+	available = {
+		SZC_opium_tier_1_unlocked = yes
+	}
+	prerequisite = {
+		focus = SZC_New_Commercial_Zones
+	}
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_The_Yangtze_Lifeline"
+		if = {
+			limit = { has_idea = SZC_commercial_expansion_3 }
+			swap_ideas = {
+				remove_idea = SZC_commercial_expansion_3
+				add_idea = SZC_commercial_expansion_4
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = SZC_commercial_expansion_1
+				add_idea = SZC_commercial_expansion_2
+			}
+		}
+		if = {
+			limit = { has_dlc_aat = no }
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = minsheng_shipping
+		}
+		else = {
+			if = {
+				limit = { mio:CHN_naval_industry_organisation = { is_mio_available = no } }
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = CHN_naval_industry_organisation
+			}
+			mio:CHN_naval_industry_organisation = {
+				set_mio_flag = CHN_mio_unlocked
+				add_mio_size = 1
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Restart_The_Agricultural_Sector
+	icon = GFX_goal_agricultural_aid
+	cost = 4
+
+	relative_position_id = SZC_New_Commercial_Zones
+	x = 0
+	y = 2
+
+	available = {
+		SZC_agri_branch_unlocked = yes
+	}
+	prerequisite = {
+		focus = SZC_New_Commercial_Zones
+	}
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Restart_The_Agricultural_Sector"
+		add_ideas = SZC_agricultural_heartland_1
+		custom_effect_tooltip = tooltip_white_line
+		add_tech_bonus = {
+			name = SZC_Restart_The_Agricultural_Sector
+			bonus = 1
+			uses = 1
+			category = cat_production
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = SZC_Rural_Construction_College
+	icon = GFX_goal_SZC_improvised_farming_machinery
+	cost = 5
+
+	relative_position_id = SZC_Restart_The_Agricultural_Sector
+	x = -1
+	y = 1
+
+	available = {
+		SZC_agri_branch_unlocked = yes
+		661 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Restart_The_Agricultural_Sector
+	}
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Rural_Construction_College"
+		if = {
+			limit = { has_idea = SZC_agricultural_heartland_2 }
+			swap_ideas = {
+				remove_idea = SZC_agricultural_heartland_2
+				add_idea = SZC_agricultural_heartland_3
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = SZC_agricultural_heartland_1
+				add_idea = SZC_agricultural_heartland_2
+			}
+		}
+		661 = { increase_state_category_by_two_levels = yes }
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = SZC_Rice_And_Wheat_Improvement_Station
+	icon = GFX_goal_generic_rice_field
+	cost = 5
+
+	relative_position_id = SZC_Restart_The_Agricultural_Sector
+	x = 1
+	y = 1
+
+	available = {
+		SZC_agri_branch_unlocked = yes
+		661 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Restart_The_Agricultural_Sector
+	}
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Rice_And_Wheat_Improvement_Station"
+		if = {
+			limit = { has_idea = SZC_agricultural_heartland_2 }
+			swap_ideas = {
+				remove_idea = SZC_agricultural_heartland_2
+				add_idea = SZC_agricultural_heartland_3
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = SZC_agricultural_heartland_1
+				add_idea = SZC_agricultural_heartland_2
+			}
+		}
+		661 = { increase_state_category_by_two_levels = yes }
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = SZC_Expand_Dujiangyan_Irrigation_System
+	icon = GFX_goal_SZC_dujiangyan_irrigation_system
+	cost = 5
+
+	relative_position_id = SZC_Restart_The_Agricultural_Sector
+	x = 0
+	y = 2
+
+	available = {
+		SZC_agri_branch_unlocked = yes
+		605 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Rice_And_Wheat_Improvement_Station
+	}
+	prerequisite = {
+		focus = SZC_Rural_Construction_College
+	}
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Expand_Dujiangyan_Irrigation_System"
+		swap_ideas = {
+			remove_idea = SZC_agricultural_heartland_3
+			add_idea = SZC_agricultural_heartland_4
+		}
+		605 = { increase_state_category_by_two_levels = yes }
+		custom_effect_tooltip = tooltip_white_line
+		add_tech_bonus = {
+			name = SZC_Expand_Dujiangyan_Irrigation_System
+			bonus = 1
+			uses = 1
+			category = cat_production
+		}
+	}
+	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = SZC_Zigong_Saltworks
+	icon = GFX_goal_SZC_salt
+	cost = 4
+
+	relative_position_id = SZC_New_Commercial_Zones
+	x = 1
+	y = 1
+
+	available = {
+		SZC_opium_tier_1_unlocked = yes
+	}
+	prerequisite = {
+		focus = SZC_New_Commercial_Zones
+	}
+	ai_will_do = { factor = 8 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Zigong_Saltworks"
+		if = {
+			limit = { has_idea = SZC_commercial_expansion_2 }
+			swap_ideas = {
+				remove_idea = SZC_commercial_expansion_2
+				add_idea = SZC_commercial_expansion_4
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = SZC_commercial_expansion_1
+				add_idea = SZC_commercial_expansion_3
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		add_one_random_civilian_factory = yes
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Study_Production_Innovations
+	icon = GFX_goal_generic_production2
+	cost = 6
+
+	relative_position_id = SZC_Chengdu_Chongqing_Railway
+	x = -1
+	y = 1
+
+	available = {
+		SZC_opium_tier_2_unlocked = yes
+		650 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Chengdu_Chongqing_Railway
+	}
+	ai_will_do = { factor = 15 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Study_Production_Innovations"
+		if = { #has machinery
+			limit = { has_idea = SZC_industrial_planning_committee_2 }
+			swap_ideas = {
+				remove_idea = SZC_industrial_planning_committee_2
+				add_idea = SZC_industrial_planning_committee_4
+			}
+		}
+		else_if = { #has construction
+			limit = { has_idea = SZC_industrial_planning_committee_3 }
+			swap_ideas = {
+				remove_idea = SZC_industrial_planning_committee_3
+				add_idea = SZC_industrial_planning_committee_5
+			}
+		}
+		else_if = { #has machinery and construction
+			limit = { has_idea = SZC_industrial_planning_committee_6 }
+			swap_ideas = {
+				remove_idea = SZC_industrial_planning_committee_6
+				add_idea = SZC_industrial_planning_committee_7
+			}
+		}
+		else = {
+			add_ideas = SZC_industrial_planning_committee_1
+			custom_effect_tooltip = tooltip_white_line
+		}
+		650 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Import_Foreign_Machinery
+	icon = GFX_goal_generic_industry_reallocation
+	cost = 5
+
+	relative_position_id = SZC_Chengdu_Chongqing_Railway
+	x = 1
+	y = 1
+
+	available = {
+		SZC_opium_tier_2_unlocked = yes
+		605 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Chengdu_Chongqing_Railway
+	}
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Import_Foreign_Machinery"
+		if = { #has production
+			limit = { has_idea = SZC_industrial_planning_committee_1 }
+			swap_ideas = {
+				remove_idea = SZC_industrial_planning_committee_1
+				add_idea = SZC_industrial_planning_committee_4
+			}
+		}
+		else_if = { #has construction
+			limit = { has_idea = SZC_industrial_planning_committee_3 }
+			swap_ideas = {
+				remove_idea = SZC_industrial_planning_committee_3
+				add_idea = SZC_industrial_planning_committee_6
+			}
+		}
+		else_if = { #has production and construction
+			limit = { has_idea = SZC_industrial_planning_committee_5 }
+			swap_ideas = {
+				remove_idea = SZC_industrial_planning_committee_5
+				add_idea = SZC_industrial_planning_committee_7
+			}
+		}
+		else = {
+			add_ideas = SZC_industrial_planning_committee_2
+			custom_effect_tooltip = tooltip_white_line
+		}
+		605 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Modern_Construction_Technology
+	icon = GFX_goal_construction
+	cost = 5
+
+	relative_position_id = SZC_Chengdu_Chongqing_Railway
+	x = 3
+	y = 1
+
+	available = {
+		SZC_opium_tier_2_unlocked = yes
+		661 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Chengdu_Chongqing_Railway
+	}
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Modern_Construction_Technology"
+		if = { #has production
+			limit = { has_idea = SZC_industrial_planning_committee_1 }
+			swap_ideas = {
+				remove_idea = SZC_industrial_planning_committee_1
+				add_idea = SZC_industrial_planning_committee_5
+			}
+		}
+		else_if = { #has machinery
+			limit = { has_idea = SZC_industrial_planning_committee_2 }
+			swap_ideas = {
+				remove_idea = SZC_industrial_planning_committee_2
+				add_idea = SZC_industrial_planning_committee_6
+			}
+		}
+		else_if = { #has production and machinery
+			limit = { has_idea = SZC_industrial_planning_committee_4 }
+			swap_ideas = {
+				remove_idea = SZC_industrial_planning_committee_4
+				add_idea = SZC_industrial_planning_committee_7
+			}
+		}
+		else = {
+			add_ideas = SZC_industrial_planning_committee_3
+			custom_effect_tooltip = tooltip_white_line
+		}
+		661 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Industrial_Planning_Committee
+	icon = GFX_goal_social_reforms
+	cost = 5
+
+	relative_position_id = SZC_Chengdu_Chongqing_Railway
+	x = 1
+	y = 2
+
+	available = {
+		SZC_opium_tier_2_unlocked = yes
+		605 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Study_Production_Innovations
+	}
+	prerequisite = {
+		focus = SZC_Import_Foreign_Machinery
+	}
+	prerequisite = {
+		focus = SZC_Modern_Construction_Technology
+	}
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Industrial_Planning_Committee"
+		swap_ideas = {
+			remove_idea = SZC_industrial_planning_committee_7
+			add_idea = SZC_industrial_planning_committee_8
+		}
+		add_one_random_civilian_factory = yes
+		605 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		add_tech_bonus = {
+			name = SZC_Industrial_Planning_Committee
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Tianfu_Mining_Bureau
+	icon = GFX_goal_construction_engineering
+	cost = 4
+
+	relative_position_id = SZC_Industrial_Planning_Committee
+	x = -1
+	y = 1
+
+	available = {
+		SZC_opium_tier_3_unlocked = yes
+	}
+	prerequisite = {
+		focus = SZC_Industrial_Planning_Committee
+	}
+	ai_will_do = { factor = 5 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Tianfu_Mining_Bureau"
+		add_tech_bonus = {
+			name = SZC_Tianfu_Mining_Bureau
+			bonus = 1
+			uses = 1
+			category = excavation_tech
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = available_industrial_concern
+		show_ideas_tooltip = tianfu_mines
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = SZC_Industrial_fabric
+	icon = GFX_focus_CHL_enlarge_the_textile_industries
+	cost = 5
+
+	relative_position_id = SZC_Industrial_Planning_Committee
+	x = 1
+	y = 1
+
+	available = {
+		SZC_opium_tier_3_unlocked = yes
+		661 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Industrial_Planning_Committee
+	}
+	ai_will_do = { factor = 12 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Industrial_fabric"
+		add_one_random_civilian_factory = yes
+		add_one_random_military_factory = yes
+		custom_effect_tooltip = tooltip_white_line
+		if = {
+			limit = { has_dlc_aat = no }
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = sichuan_silk
+		}
+		else = {
+			if = {
+				limit = { mio:CHN_support_equipment_industry_organisation = { is_mio_available = no } }
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = CHN_support_equipment_industry_organisation
+			}
+			mio:CHN_support_equipment_industry_organisation = {
+				set_mio_flag = CHN_mio_unlocked
+				add_mio_size = 1
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Rebuild_Chengdu_Machine_Bureau
+	icon = GFX_focus_generic_industry_3
+	cost = 5
+
+	relative_position_id = SZC_Industrial_Planning_Committee
+	x = 0
+	y = 2
+
+	available = {
+		SZC_opium_tier_3_unlocked = yes
+		605 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Industrial_Planning_Committee
+	}
+	ai_will_do = { factor = 12 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Rebuild_Chengdu_Machine_Bureau"
+		605 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		add_tech_bonus = {
+			name = SZC_Rebuild_Chengdu_Machine_Bureau
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = available_industrial_concern
+		show_ideas_tooltip = chengdu_machine_bureau
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Urban_Modernisation_and_Sanitation
+	icon = GFX_ITA_urban
+	cost = 5
+
+	relative_position_id = SZC_Industrial_Planning_Committee
+	x = 3
+	y = 1
+
+	available = {
+		SZC_opium_tier_3_unlocked = yes
+		605 = { is_owned_and_controlled_by = ROOT }
+		650 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Industrial_Planning_Committee
+	}
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Urban_Modernisation_and_Sanitation"
+		605 = {
+			increase_state_category_by_one_level = yes
+			prioritize_state = yes
+		}
+		add_one_random_infrastructure = yes
+		custom_effect_tooltip = tooltip_white_line
+		650 = {
+			increase_state_category_by_one_level = yes
+			prioritize_state_override_previous = yes
+		}
+		add_one_random_infrastructure = yes
+	}
+}
+
+shared_focus = {
+	id = SZC_Western_China_Academy_Of_Sciences
+	icon = GFX_goal_PAN_Create_the_Universidad_de_Panama
+	cost = 5
+
+	relative_position_id = SZC_Industrial_Planning_Committee
+	x = 3
+	y = 2
+
+	available = {
+		SZC_opium_tier_4_unlocked = yes
+	}
+	prerequisite = {
+		focus = SZC_Urban_Modernisation_and_Sanitation
+	}
+	ai_will_do = { factor = 100 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Western_China_Academy_Of_Sciences"
+		china_add_research_slots = yes
+	}
+}
+
+shared_focus = {
+	id = SZC_Jialing_Coal_Fields
+	icon = GFX_goal_generic_coal_mining
+	cost = 5
+
+	relative_position_id = SZC_Rebuild_Chengdu_Machine_Bureau
+	x = -2
+	y = 1
+
+	available = {
+		SZC_opium_tier_3_unlocked = yes
+		661 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Rebuild_Chengdu_Machine_Bureau
+	}
+	ai_will_do = { factor = 12 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Jialing_Coal_Fields"
+		661 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_resource = {
+				type = coal
+				amount = 6
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		add_tech_bonus = {
+			name = SZC_Jialing_Coal_Fields
+			bonus = 1
+			uses = 1
+			category = synth_resources
+		}
+		hidden_effect = {
+			for_each_scope_loop = {
+				array = global.china_tags_array
+				remove_targeted_decision = { decision = SZC_Jialing_Coal_Fields target = FROM }
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Increase_Steel_Production
+	icon = GFX_focus_generic_steel
+	cost = 5
+
+	relative_position_id = SZC_Rebuild_Chengdu_Machine_Bureau
+	x = 0
+	y = 1
+
+	available = {
+		SZC_opium_tier_3_unlocked = yes
+		1015 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Rebuild_Chengdu_Machine_Bureau
+	}
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Increase_Steel_Production"
+		add_resource = {
+			type = steel
+			amount = 10
+			state = 1015
+		}
+		add_victory_points = { province = 10726 value = 3 } #POP 1 + STRAT 1 + POL 0 = SIG 2
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = available_industrial_concern
+		show_ideas_tooltip = chongqing_electric_steel_refinery
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Extract_Natural_Gas
+	icon = GFX_goal_oil_derrick
+	cost = 5
+
+	relative_position_id = SZC_Rebuild_Chengdu_Machine_Bureau
+	x = 2
+	y = 1
+
+	available = {
+		SZC_opium_tier_3_unlocked = yes
+	}
+	prerequisite = {
+		focus = SZC_Rebuild_Chengdu_Machine_Bureau
+	}
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Extract_Natural_Gas"
+		add_resource = {
+			type = oil
+			amount = 4
+			state = 605
+		}
+		add_resource = {
+			type = oil
+			amount = 4
+			state = 650
+		}
+		add_resource = {
+			type = oil
+			amount = 4
+			state = 661
+		}
+		custom_effect_tooltip = tooltip_white_line
+		add_tech_bonus = {
+			name = SZC_Extract_Natural_Gas
+			bonus = 1
+			uses = 1
+			category = excavation_tech
+		}
+		hidden_effect = {
+			for_each_scope_loop = {
+				array = global.china_tags_array
+				remove_targeted_decision = { decision = SZC_Extract_Natural_Gas_decision target = 605 }
+				remove_targeted_decision = { decision = SZC_Extract_Natural_Gas_decision target = 650 }
+				remove_targeted_decision = { decision = SZC_Extract_Natural_Gas_decision target = 661 }
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Modernised_Manufacturing
+	icon = GFX_goal_factory_complex
+	cost = 5
+
+	relative_position_id = SZC_Rebuild_Chengdu_Machine_Bureau
+	x = -2
+	y = 2
+
+	available = {
+		SZC_opium_tier_4_unlocked = yes
+		605 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Jialing_Coal_Fields
+	}
+	prerequisite = {
+		focus = SZC_Increase_Steel_Production
+	}
+	prerequisite = {
+		focus = SZC_Extract_Natural_Gas
+	}
+	ai_will_do = { factor = 12 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Modernised_Manufacturing"
+		605 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = available_industrial_concern
+		show_ideas_tooltip = shu_hua_industrial_company
+		custom_effect_tooltip = tooltip_white_line
+		add_tech_bonus = {
+			name = SZC_Modernised_Manufacturing
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Xikang_Hydropower
+	icon = GFX_goal_dam
+	cost = 5
+
+	relative_position_id = SZC_Modernised_Manufacturing
+	x = -1
+	y = 2
+
+	available = {
+		SZC_opium_tier_4_unlocked = yes
+		601 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Modernised_Manufacturing
+	}
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Xikang_Hydropower"
+		601 = {
+			if = {
+				limit = { dam > 0 }
+				increase_state_category_by_one_level = yes
+			}
+			else = {
+				add_extra_state_shared_building_slots = 1
+				custom_effect_tooltip = tooltip_white_line
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = dam
+						level = 1
+						province = 4999
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = dam
+						NUMBER = 1
+						VP = 4999
+					}
+				}
+			}
+			prioritize_state = yes
+		}
+		if = {
+			limit = { 601 = { dam < 1 } } #separate due to tooltip indentation
+			custom_effect_tooltip = {
+				localization_key = building_state_modifier|dam
+				INDENT = "    "
+			}
+			custom_effect_tooltip = tooltip_white_line
+		}
+		add_one_random_civilian_factory = yes
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Electrification_Efforts
+	icon = GFX_goal_generic_lightbulb
+	cost = 6
+
+	relative_position_id = SZC_Xikang_Hydropower
+	x = 0
+	y = 1
+
+	available = {
+		SZC_opium_tier_4_unlocked = yes
+		650 = { is_owned_and_controlled_by = ROOT }
+		605 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Xikang_Hydropower
+	}
+	ai_will_do = { factor = 10 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Electrification_Efforts"
+		650 = {
+			add_extra_state_shared_building_slots = 2
+			prioritize_state = yes
+		}
+		add_one_random_infrastructure = yes
+		605 = {
+			add_extra_state_shared_building_slots = 2
+			prioritize_state_override_previous = yes
+		}
+		add_one_random_infrastructure = yes
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Build_the_Electro_Steel_Mill
+	icon = GFX_goal_generic_industry_reallocation
+	cost = 4
+
+	relative_position_id = SZC_Xikang_Hydropower
+	x = 2
+	y = 1
+
+	available = {
+		SZC_opium_tier_4_unlocked = yes
+		1015 = { is_owned_and_controlled_by = ROOT }
+	}
+	prerequisite = {
+		focus = SZC_Xikang_Hydropower
+		focus = SZC_Huaxi_Machinery_Factory
+	}
+	ai_will_do = { factor = 12 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Build_the_Electro_Steel_Mill"
+		650 = { prioritize_state = yes }
+		add_one_random_military_factory = yes
+		add_resource = {
+			type = steel
+			amount = 4
+			state = 1015
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Textile_Production
+	icon = GFX_focus_CHL_enlarge_the_textile_industries
+	cost = 6
+
+	relative_position_id = SZC_Modernised_Manufacturing
+	x = 0
+	y = 1
+
+	available = {
+		SZC_opium_tier_4_unlocked = yes
+	}
+	prerequisite = {
+		focus = SZC_Modernised_Manufacturing
+	}
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Textile_Production"
+		605 = { prioritize_state = yes }
+		add_one_random_civilian_factory = yes
+		add_one_random_civilian_factory = yes
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Huaxi_Machinery_Factory
+	icon = GFX_goal_generic_consumer_goods
+	cost = 6
+
+	relative_position_id = SZC_Modernised_Manufacturing
+	x = 1
+	y = 2
+
+	available = {
+		SZC_opium_tier_4_unlocked = yes
+	}
+	prerequisite = {
+		focus = SZC_Modernised_Manufacturing
+	}
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Huaxi_Machinery_Factory"
+		650 = { prioritize_state = yes }
+		add_one_random_civilian_factory = yes
+		add_one_random_civilian_factory = yes
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_The_Arsenal_Programme
+	icon = GFX_goal_SZC_create_sichuan_arsenal
+	cost = 5
+
+	relative_position_id = SZC_Rebuild_Chengdu_Machine_Bureau
+	x = 2
+	y = 2
+
+	available = {
+		SZC_opium_tier_4_unlocked = yes
+	}
+	prerequisite = {
+		focus = SZC_Jialing_Coal_Fields
+	}
+	prerequisite = {
+		focus = SZC_Increase_Steel_Production
+	}
+	prerequisite = {
+		focus = SZC_Extract_Natural_Gas
+	}
+	ai_will_do = { factor = 12 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_The_Arsenal_Programme"
+		650 = { prioritize_state = yes }
+		add_one_random_military_factory = yes
+		custom_effect_tooltip = tooltip_white_line
+		add_tech_bonus = {
+			name = SZC_The_Arsenal_Programme
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+		custom_effect_tooltip = tooltip_white_line
+		if = {
+			limit = { has_dlc_aat = no }
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = chongqing_arsenal
+		}
+		else = {
+			mio:CHN_small_arms_industry_organisation = { add_mio_size = 1 }
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Expand_Production_Artillery
+	icon = GFX_goal_generic_construct_mil_factory
+	cost = 5
+
+	relative_position_id = SZC_The_Arsenal_Programme
+	x = -1
+	y = 2
+
+	available = {
+		SZC_opium_tier_4_unlocked = yes
+	}
+	prerequisite = {
+		focus = SZC_The_Arsenal_Programme
+	}
+	ai_will_do = { factor = 12 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Expand_Production_Artillery"
+		650 = { prioritize_state = yes }
+		add_one_random_military_factory = yes
+		custom_effect_tooltip = tooltip_white_line
+		if = {
+			limit = { has_dlc_aat = no }
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = hejiang_artillery_arsenal
+		}
+		else = {
+			if = {
+				limit = { mio:CHN_artillery_industry_organisation = { is_mio_available = no } }
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = CHN_artillery_industry_organisation
+			}
+			mio:CHN_artillery_industry_organisation = {
+				set_mio_flag = CHN_mio_unlocked
+				add_mio_size = 1
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Expand_Production_Tanks
+	icon = GFX_goal_POL_light_tanks
+	cost = 5
+
+	relative_position_id = SZC_The_Arsenal_Programme
+	x = 0
+	y = 1
+
+	available = {
+		SZC_opium_tier_4_unlocked = yes
+	}
+	prerequisite = {
+		focus = SZC_The_Arsenal_Programme
+	}
+	ai_will_do = { factor = 12 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Expand_Production_Tanks"
+		650 = { prioritize_state = yes }
+		add_one_random_military_factory = yes
+		custom_effect_tooltip = tooltip_white_line
+		if = {
+			limit = { has_dlc_aat = no }
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = chongqing_tank_plant
+		}
+		else = {
+			if = {
+				limit = { mio:CHN_armour_industry_organisation = { is_mio_available = no } }
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = CHN_armour_industry_organisation
+			}
+			mio:CHN_armour_industry_organisation = {
+				set_mio_flag = CHN_mio_unlocked
+				add_mio_size = 2
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = SZC_Expand_Production_Aircraft
+	icon = GFX_goal_POL_recon_aircraft
+	cost = 5
+
+	relative_position_id = SZC_The_Arsenal_Programme
+	x = 2
+	y = 1
+
+	available = {
+		SZC_opium_tier_4_unlocked = yes
+	}
+	prerequisite = {
+		focus = SZC_The_Arsenal_Programme
+	}
+	ai_will_do = { factor = 12 }
+	completion_reward = {
+		log = "[GetLogRoot]: Focus Completed SZC_Expand_Production_Aircraft"
+		650 = { prioritize_state = yes }
+		add_one_random_military_factory = yes
+		custom_effect_tooltip = tooltip_white_line
+		if = {
+			limit = { has_dlc_aat = no }
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = nanchuan_aircraft_manufacturing_plant
+		}
+		else = {
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = CHN_aviation_industry_organisation
+			mio:CHN_aviation_industry_organisation = {
+				set_mio_flag = CHN_mio_unlocked
+				add_mio_size = 2
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}

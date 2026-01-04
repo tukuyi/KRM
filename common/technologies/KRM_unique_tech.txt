@@ -1,0 +1,20 @@
+technologies = {
+
+	#for focus
+	YCP_hellpod = {
+
+		research_cost = 1
+		allow = {
+			always = no
+		}
+
+		extra_paratrooper_supply_grace = 120
+		paratroopers_special_forces_contribution_factor = 0.5
+		paratrooper_aa_defense = 0.8
+		paratrooper_weight_factor = 0.5
+		paratrooper_attack_factor = 0.4
+		paratrooper_speed_factor = 0.4
+		experience_gain_paratrooper_combat_factor = 0.25
+	}
+
+}
