@@ -1,3 +1,3 @@
 @echo off
-python focusgfxentry.py SZC_lib_sphere
+python focusgfxentry.py SZC_YCP_telecommunications_command_network
 pause
