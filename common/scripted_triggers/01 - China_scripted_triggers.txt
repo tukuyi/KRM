@@ -987,37 +987,39 @@ CHN_has_civil_war_prep_trigger = {
 
 KMT_FROM_has_compatible_government_trigger = {
 	#Remember this is scoped to FROM
+	has_socialist_government = no
 	is_monarchy = no
 	is_subject = no #To prevent RKMT from having too easy of a time, all of these tags need to be independent and fully decolonized.
 	#South East Asia
 	if = {
-		limit = { tag = BRM }
-		NOT = { ROOT = { is_ally_with = SIA } } #Burma won't ally with KMT if they are allied with Siam
+		limit = { original_tag = BRM }
 		OR = {
 			has_elected_government = yes
 			has_government = paternal_autocrat
 		}
+		NOT = {
+			any_country_with_original_tag = {
+				original_tag_to_check = SIA
+				is_ally_with = ROOT
+			}
+		}
 	}
 	else_if = {
-		limit = { tag = PHI }
-		always = yes
-	}
-	else_if = {
-		limit = { tag = INS }
+		limit = { original_tag = INS }
 		has_country_leader = { character = INS_sukarno }
 	}
 	else_if = {
 		limit = {
 			OR = {
-				tag = VIN
-				tag = INC
+				original_tag = VIN
+				original_tag = INC
 			}
 		}
 		INC_has_VNQDD_government_trigger = yes
 	}
 	#Middle East
 	else_if = {
-		limit = { tag = TUR }
+		limit = { original_tag = TUR }
 		OR = {
 			has_country_leader = { character = TUR_ismet_inonu }
 			has_country_leader = { character = TUR_mehmet_recep_peker }
@@ -1173,4 +1175,376 @@ CHN_is_rkmt_aligned_or_allied_trigger = {
 
 CHN_ai_factor_pressure_to_act_trigger = {
 	has_active_mission = CHN_pressure_to_act_mission
+}
+
+#Chinese Puppeting Triggers
+CHN_monarchist_puppet_QIE_is_valid_ally_trigger = {
+	#You can release QIE from any state
+	QIE = {
+		OR = {
+			AND = {
+				exists = no
+				NOT = { country_exists = MCU } #No double Monarchist governments
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+				is_monarchy = yes
+			}
+		}
+	}
+}
+
+CHN_puppet_has_potential_chinese_monarchist_allies_trigger = {
+	NOT = {
+		has_socialist_government = yes
+		tag = JAP
+	}
+	OR = {
+		CHN_monarchist_puppet_QIE_is_valid_ally_trigger = yes
+		#Where any hypothetical others would go.
+	}
+}
+
+CHN_pro_japan_puppet_FNG_is_valid_ally_trigger = {
+	#You can release puppet FNG from anywhere
+	FNG = {
+		OR = {
+			exists = no
+			NOT = {
+				has_war_with = ROOT
+				FNG_JAP_hostile = yes
+			}
+		}
+	}
+}
+
+CHN_pro_japan_puppet_GXC_is_valid_ally_trigger = {
+	#has_government = social_conservative #Can only release Merchant Corps
+	GXC = {
+		OR = {
+			AND = {
+				exists = no
+				ROOT = { owns_state = 592 } #Guangzhou
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+				has_country_leader = { character = GXC_chen_lianbo }
+				is_in_faction_with = JAP #Yeah it would be super dumb for players to literally hand over pieces of China to a faction that can't ever join Japan.
+			}
+		}
+	}
+}
+
+CHN_pro_japan_puppet_SHX_is_valid_ally_trigger = {
+	SHX = {
+		OR = {
+			#Non-Socialists
+			AND = {
+				exists = no
+				ROOT = { owns_state = 1072 } #Taiyuan
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+				has_country_leader = { character = SHX_yan_xishan }
+				is_in_faction_with = JAP  #Yeah it would be super dumb for players to literally hand over pieces of China to a faction that can't ever join Japan.
+			}
+		}
+	}
+}
+
+CHN_puppet_has_potential_chinese_pro_japanese_allies_trigger = {
+	OR = {
+		tag = JAP
+		AND = {
+			JAP = { is_faction_leader = yes }
+			is_ally_with = JAP
+		}
+	}
+	OR = {
+		CHN_pro_japan_puppet_FNG_is_valid_ally_trigger = yes
+		CHN_pro_japan_puppet_GXC_is_valid_ally_trigger = yes
+		CHN_pro_japan_puppet_SHX_is_valid_ally_trigger = yes
+	}
+}
+
+CHN_federalist_puppet_GXC_is_valid_ally_trigger = {
+	#OR = {
+	#	has_government = social_democrat
+	#	has_government = social_liberal
+	#	has_government = authoritarian_democrat
+	#	has_government = paternal_autocrat
+	#}
+	GXC = {
+		OR = {
+			AND = {
+				exists = no
+				ROOT = { owns_state = 592 } #Guangzhou
+				NOT = { country_exists = UPC } #No double Federalist governments
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+				china_is_aligned_with_federalists = yes #This should cover Li Jishen as well.
+			}
+		}
+	}
+}
+
+CHN_federalist_puppet_YUN_is_valid_ally_trigger = {
+	#OR = {
+	#	has_government = social_democrat
+	#	has_government = social_liberal
+	#	has_government = authoritarian_democrat
+	#	has_government = paternal_autocrat
+	#}
+	YUN = {
+		OR = {
+			AND = {
+				exists = no
+				ROOT = { owns_state = 325 } #Kunming
+				NOT = { country_exists = UPC } #No double Federalist governments
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+				china_is_aligned_with_federalists = yes #This should cover Li Jishen as well.
+			}
+		}
+	}
+}
+
+CHN_puppet_has_potential_chinese_federalist_allies_trigger = {
+	NOT = {
+		has_socialist_government = yes
+		tag = JAP
+	}
+	OR = {
+		CHN_federalist_puppet_GXC_is_valid_ally_trigger = yes
+		CHN_federalist_puppet_YUN_is_valid_ally_trigger = yes
+	}
+}
+
+CHN_republican_puppet_QIE_is_valid_ally_trigger = {
+	#You can release QIE from any state
+	QIE = {
+		OR = {
+			AND = {
+				exists = no
+				NOT = { country_exists = NZL } #No double Zhili governments
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+				is_monarchy = no
+			}
+		}
+	}
+}
+
+CHN_republican_puppet_LEP_is_valid_ally_trigger = {
+	LEP = {
+		OR = {
+			AND = {
+				exists = no
+				ROOT = { owns_state = 613 } #Nanjing
+				NOT = { country_exists = SZH } #No double Zhili governments
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+			}
+		}
+	}
+}
+
+CHN_republican_puppet_SHX_is_valid_ally_trigger = {
+	SHX = {
+		OR = {
+			AND = {
+				exists = no
+				ROOT = { owns_state = 1072 } #Taiyuan
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+			}
+		}
+	}
+}
+
+CHN_puppet_has_potential_chinese_republican_allies_trigger = {
+	NOT = {
+		has_socialist_government = yes
+		tag = JAP
+	}
+	OR = {
+		CHN_republican_puppet_QIE_is_valid_ally_trigger = yes
+		CHN_republican_puppet_LEP_is_valid_ally_trigger = yes
+		CHN_republican_puppet_SHX_is_valid_ally_trigger = yes
+	}
+}
+
+CHN_revolutionary_puppet_CHI_is_valid_ally_trigger = {
+	has_socialist_government = yes #Only socialist paths
+	CHI = {
+		OR = {
+			AND = {
+				exists = no
+				NOT = { country_exists = LKT } #No double LKMT governments
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+			}
+		}
+	}
+}
+
+CHN_revolutionary_puppet_GXC_is_valid_ally_trigger = {
+	GXC = {
+		OR = {
+			#Socialists
+			AND = {
+				exists = no
+				NOT = { country_exists = LKT } #No double LKMT governments
+				ROOT = {
+					owns_state = 592 #Guangzhou
+					has_socialist_government = yes
+				}
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+				china_alignment_left_kuomintang = yes
+				ROOT = { has_socialist_government = yes }
+			}
+
+			#Non-Socialists
+			AND = {
+				exists = no
+				NOT = { country_exists = RKT } #No double RKMT governments
+				ROOT = {
+					owns_state = 592 #Guangzhou
+					has_socialist_government = no
+				}
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+				china_alignment_right_kuomintang = yes
+				ROOT = { has_socialist_government = no }
+			}
+		}
+	}
+}
+
+CHN_revolutionary_puppet_SHX_is_valid_ally_trigger = {
+	SHX = {
+		OR = {
+			#Socialists
+			AND = {
+				exists = no
+				NOT = { country_exists = LKT } #No double LKMT governments
+				ROOT = {
+					owns_state = 1072 #Taiyuan
+					has_socialist_government = yes
+				}
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+				has_country_leader = { character = SHX_feng_yuxiang }
+				ROOT = { has_socialist_government = yes }
+			}
+
+			#Non-Socialists
+			AND = {
+				exists = no
+				NOT = { country_exists = RKT } #No double RKMT governments
+				ROOT = {
+					owns_state = 1072 #Taiyuan
+					has_socialist_government = no
+				}
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+				has_country_leader = { character = SHX_feng_yuxiang }
+				ROOT = { has_socialist_government = no }
+			}
+		}
+	}
+}
+
+CHN_revolutionary_puppet_YUN_is_valid_ally_trigger = {
+	YUN = {
+		OR = {
+			#Socialists
+			AND = {
+				exists = no
+				NOT = { country_exists = LKT } #No double LKMT governments
+				ROOT = {
+					owns_state = 325 #Kunming
+					has_socialist_government = yes
+				}
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+				china_alignment_left_kuomintang = yes
+				ROOT = { has_socialist_government = yes }
+			}
+
+			#Non-Socialists
+			AND = {
+				exists = no
+				NOT = { country_exists = RKT } #No double RKMT governments
+				ROOT = {
+					owns_state = 325 #Kunming
+					has_socialist_government = no
+				}
+			}
+			AND = {
+				NOT = { has_war_with = ROOT }
+				china_alignment_right_kuomintang = yes
+				ROOT = { has_socialist_government = no }
+			}
+		}
+	}
+}
+
+CHN_puppet_has_potential_chinese_revolutionary_allies_trigger = {
+	NOT = {
+		tag = JAP
+		is_monarchy = yes
+	}
+	OR = {
+		CHN_revolutionary_puppet_CHI_is_valid_ally_trigger = yes
+		CHN_revolutionary_puppet_GXC_is_valid_ally_trigger = yes
+		CHN_revolutionary_puppet_SHX_is_valid_ally_trigger = yes
+		CHN_revolutionary_puppet_YUN_is_valid_ally_trigger = yes
+	}
+}
+
+CHN_puppet_has_potential_chinese_allies_trigger = {
+	OR = {
+		CHN_puppet_has_potential_chinese_monarchist_allies_trigger = yes
+		CHN_puppet_has_potential_chinese_pro_japanese_allies_trigger = yes
+		CHN_puppet_has_potential_chinese_federalist_allies_trigger = yes
+		CHN_puppet_has_potential_chinese_revolutionary_allies_trigger = yes
+	}
+}
+
+CHN_south_china_war_over_trigger = {
+	custom_override_tooltip = {
+		tooltip = china_south_china_war_over_tt
+		has_global_flag = CHN_south_china_war_started
+		GXC = {
+			NOT = {
+				has_war_with = HNN
+				has_war_with = YUN
+			}
+		}
+		HNN = {
+			NOT = {
+				has_war_with = GXC
+				has_war_with = YUN
+			}
+		}
+		YUN = {
+			NOT = {
+				has_war_with = GXC
+				has_war_with = HNN
+			}
+		}
+	}
 }

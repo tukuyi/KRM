@@ -1,5 +1,4 @@
 foreign_politics = {
-
 	china_join_the_internationale_decision = {
 		icon = GFX_decision_trumpet
 		priority = 150
@@ -198,8 +197,8 @@ foreign_politics = {
 					is_in_faction = no
 				}
 				save_global_event_target_as = KR_internationale_leader
-				create_faction_from_template = { template = faction_template_generic name = faction_fourth_internationale }
-				hidden_effect = { news_event = worldnews.484 }
+				create_faction_from_template = { template = faction_template_internationale name = faction_fourth_internationale }
+				hidden_effect = { news_event = world_news_events.484 }
 			}
 			else_if = {
 				limit = {
@@ -576,6 +575,7 @@ foreign_politics = {
 			OR = {
 				tag = GXC
 				tag = YUN
+				tag = SZC
 			}
 		}
 
@@ -1070,7 +1070,7 @@ chinese_unification = {
 			else_if = {
 				#Next is owner of Beijing
 				limit = {
-					608.owner = {
+					var:608.owner = {
 						is_chinese_tag = yes
 						is_working_with_JAP = no
 					}
@@ -1080,7 +1080,7 @@ chinese_unification = {
 			else_if = {
 				#Next is owner of Nanjing
 				limit = {
-					613.owner = {
+					var:613.owner = {
 						is_chinese_tag = yes
 						is_working_with_JAP = no
 					}
@@ -1090,7 +1090,7 @@ chinese_unification = {
 			else_if = {
 				#Next is owner of Wuhan
 				limit = {
-					1048.owner = {
+					var:1048.owner = {
 						is_chinese_tag = yes
 						is_working_with_JAP = no
 					}
@@ -1100,7 +1100,7 @@ chinese_unification = {
 			else_if = {
 				#Next is owner of Guangzhou
 				limit = {
-					592.owner = {
+					var:592.owner = {
 						is_chinese_tag = yes
 						is_working_with_JAP = no
 					}
@@ -1110,7 +1110,7 @@ chinese_unification = {
 			else_if = {
 				#Last is owner of Chongqing
 				limit = {
-					650.owner = {
+					var:650.owner = {
 						is_chinese_tag = yes
 						is_working_with_JAP = no
 					}
@@ -1365,10 +1365,13 @@ chinese_unification = {
 			log = "[GetLogRoot]: Decision complete china_declare_government"
 			china_enable_alliances_decisions = yes #Fallback
 			set_potential_national_government = yes
+			china_enable_all_demand_submission_decisions = yes
 			if = {
 				limit = { NOT = { original_tag = SHX } } #has tag-side content
 				china_enable_alliances_decisions = yes
 			}
+
+			#Now for tag specific content
 			if = {
 				limit = {#unlock fed tree for xiong SZC
 					original_tag = SZC
@@ -1376,8 +1379,7 @@ chinese_unification = {
 				}
 				SZC_switch_to_federalist_tree = yes
 			}
-			china_enable_all_demand_submission_decisions = yes
-			if = {
+			else_if = {
 				limit = {
 					OR = {
 						original_tag = KUM
@@ -1385,6 +1387,46 @@ chinese_unification = {
 					}
 				}
 				activate_targeted_decision = { target = XSM decision = china_demand_submission }
+			}
+			else_if = {
+				limit = {
+					tag = GXC
+					#We check for satellite narratives later.
+					NOT = {
+						GXC_is_phase_4_trigger = yes
+						GXC_is_phase_5_trigger = yes
+					}
+				}
+				#These decisions help prevent lock-out in case you betray and kill your master and form a government of your own.
+				if = {
+					limit = {
+						has_country_flag = YUN_NPA_satellite_narrative_flag
+					}
+					country_event = GXC.lategame.911 #An Unexpected Twist (GXC-NPA Variant)
+				}
+			}
+			else_if = {
+				limit = {
+					tag = YUN
+					#We check for satellite narratives later.
+					NOT = {
+						YUN_is_phase_4_trigger = yes
+						YUN_is_phase_5_trigger = yes
+					}
+				}
+				#These decisions help prevent lock-out in case you betray and kill your master and form a government of your own.
+				if = {
+					limit = {
+						has_country_flag = YUN_KMT_satellite_narrative_flag
+					}
+					country_event = YUN.lategame.531 #An Unexpected Twist (YUN-KMT Variant)
+				}
+				else_if = {
+					limit = {
+						has_country_flag = YUN_UPC_satellite_narrative_flag
+					}
+					country_event = YUN.lategame.726 #An Unexpected Twist (YUN-UPC Variant)
+				}
 			}
 		}
 		fixed_random_seed = no
@@ -1411,19 +1453,13 @@ chinese_unification = {
 			}
 			if = {
 				limit = {
-					OR = {
-						is_subject = yes
-						AND = {
-							original_tag = FNG
-							FNG_JAP_hostile = no
-						}
-					}
+					is_subject = yes
 				}
 				592 = { owner = { is_ally_with = ROOT } } #Guangzhou
 				608 = { owner = { is_ally_with = ROOT } } #Beijing
 				613 = { owner = { is_ally_with = ROOT } } #Nanjing
 				650 = { owner = { is_ally_with = ROOT } } #Chongqing
-				716 = { owner = { is_ally_with = ROOT } } #Shenyang
+				# 716 = { owner = { is_ally_with = ROOT } } #Shenyang - this way puppet Chinas can still unite China even if their master formed Manchuria or annexed Manchuria
 				1048 = { owner = { is_ally_with = ROOT } } #Wuhan
 			}
 			else = {
@@ -1621,17 +1657,31 @@ chinese_unification = {
 			}
 			CHN_scientist_transfer_effect = yes
 			if = {
+				limit = {
+					is_subject = yes
+					NOT = { tag = FNG }
+				}
+				log = "KR_Event_Logging;CHINA UNITED BY A Non-Fengtian Puppet"
+			}
+			#Must be a separate "if" trigger otherwise you'll mess up the non-logging lines.
+			if = {
 				limit = { tag = QIE }
 				if = {
 					limit = { has_global_flag = QIE_manchu_restoration }
 					set_cosmetic_tag = united_china_manchu
-					log = "KR_Event_Logging;CHINA UNITED BY Manchu Qing"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Manchu Qing"
+					}
 					hidden_effect = { news_event = china_events.300 }
 				}
 				else_if = {
 					limit = { is_monarchy = yes }
 					set_cosmetic_tag = united_china_qing
-					log = "KR_Event_Logging;CHINA UNITED BY Zhili Qing"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Zhili Qing"
+					}
 					if = {
 						limit = { has_country_flag = QIE_anti_concessionist_policy }
 						country_event = qing_domestic_events.100 #Cao Resigns, mysteriously
@@ -1643,8 +1693,11 @@ chinese_unification = {
 					}
 				}
 				else = {
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Zhili Republic"
+					}
 					set_cosmetic_tag = ZHL_united_china
-					log = "KR_Event_Logging;CHINA UNITED BY Zhili Republic"
 					hidden_effect = { news_event = china_events.302 }
 				}
 				hidden_effect = { country_event = { id = china_events.2145 days = 3 } } #National Unification and New Troubles
@@ -1675,8 +1728,11 @@ chinese_unification = {
 			}
 			else_if = {
 				limit = { tag = SHX }
+				if = {
+					limit = { is_subject = no }
+					log = "KR_Event_Logging;CHINA UNITED BY Shanxi Clique"
+				}
 				set_cosmetic_tag = united_china
-				log = "KR_Event_Logging;CHINA UNITED BY Shanxi"
 				activate_targeted_decision = { decision = china_move_capital target = ROOT }
 				hidden_effect = {
 					if = {
@@ -1693,12 +1749,15 @@ chinese_unification = {
 			}
 			else_if = {
 				limit = { tag = CHI }
+				if = {
+					limit = { is_subject = no }
+					log = "KR_Event_Logging;CHINA UNITED BY Left-KMT"
+				}
 				country_event = CHI.lategame.200 #The White Sun Rises
 				effect_tooltip = {
 					add_ideas = CHI_calls_for_congress_idea
 				}
 				set_cosmetic_tag = KMT_united_china
-				log = "KR_Event_Logging;CHINA UNITED BY Left-KMT"
 				hidden_effect = { news_event = china_events.308 }
 				hidden_effect = {
 					if = {
@@ -1706,7 +1765,12 @@ chinese_unification = {
 						GXC = { country_event = { id = GXC.midgame.541 days = 1 } } #The Nanning Mutiny
 					}
 					if = {
-						limit = { YUN = { is_subject_of = CHI } }
+						limit = {
+							YUN = {
+								is_subject_of = CHI
+								china_is_aligned_with_kmt = yes
+							}
+						}
 						YUN = { country_event = { id = YUN.lategame.500 days = 1 } } #FALLBACK FOR: THE MALFORMED DECAPITATION
 					}
 				}
@@ -1714,10 +1778,13 @@ chinese_unification = {
 			else_if = {
 				limit = { tag = SHD }
 				if = {
+					limit = { is_subject = no }
+					log = "KR_Event_Logging;CHINA UNITED BY Shandong Clique"
+				}
+				if = {
 					limit = {
 						has_cosmetic_tag = QIE_government_manchu
 					}
-					log = "KR_Event_Logging;CHINA UNITED BY A minor clique"
 					set_cosmetic_tag = united_china_manchu
 					add_research_slot_until_five = yes
 					if = {
@@ -1735,7 +1802,6 @@ chinese_unification = {
 						has_country_leader = { character = SHD_qu_yingguang }
 						china_alignment_northern_zhili = yes
 					}
-					log = "KR_Event_Logging;CHINA UNITED BY A minor clique"
 					set_cosmetic_tag = ZHL_united_china
 					add_ideas = CHS_legitimacy1
 					add_ideas = CHS_bureaucracy1
@@ -1748,7 +1814,6 @@ chinese_unification = {
 						has_country_leader = { character = SHD_zhang_zongchang }
 						china_alignment_fengtian = yes
 					}
-					log = "KR_Event_Logging;CHINA UNITED BY A minor clique"
 					set_cosmetic_tag = AGJ_united_china
 					add_ideas = CHS_legitimacy1
 					add_ideas = CHS_bureaucracy1
@@ -1758,7 +1823,6 @@ chinese_unification = {
 				}
 				else = {
 					china_generic_unification_effect = yes
-					log = "KR_Event_Logging;CHINA UNITED BY A minor clique"
 					news_event = china_events.314
 				}
 				hidden_effect = { country_event = { id = china_events.2145 days = 3 } } #National Unification and New Troubles
@@ -1767,7 +1831,11 @@ chinese_unification = {
 				limit = { tag = GXC }
 				if = {
 					limit = { china_alignment_left_kuomintang = yes }
-					log = "KR_Event_Logging;CHINA UNITED BY Liangguang Left-KMT"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Left-KMT"
+					}
+					log = "KR_Event_Logging;GXC GAME PROGRESS - GXC KMT Unification"
 					set_cosmetic_tag = LKT_united_china
 					hidden_effect = { news_event = china_events.308 }
 					country_event = GXC.endgame.200 #The Red Piedmont
@@ -1786,7 +1854,11 @@ chinese_unification = {
 				}
 				else_if = {
 					limit = { china_alignment_right_kuomintang = yes }
-					log = "KR_Event_Logging;CHINA UNITED BY Liangguang Right-KMT"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Right-KMT"
+					}
+					log = "KR_Event_Logging;GXC GAME PROGRESS - GXC KMT Unification"
 					set_cosmetic_tag = RKT_united_china
 					hidden_effect = {
 						news_event = china_events.309
@@ -1800,7 +1872,10 @@ chinese_unification = {
 					}
 					if = {
 						limit = {
-							YUN = { is_subject_of = RKT }
+							YUN = {
+								is_subject_of = RKT
+								china_is_aligned_with_kmt = yes
+							}
 						}
 						YUN = { country_event = { id = YUN.lategame.500 days = 1 } } #FALLBACK FOR: THE MALFORMED DECAPITATION
 					}
@@ -1808,7 +1883,11 @@ chinese_unification = {
 				}
 				else_if = {
 					limit = { china_alignment_federalists = yes }
-					log = "KR_Event_Logging;CHINA UNITED BY Liangguang Federalists"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Federalists"
+					}
+					log = "KR_Event_Logging;GXC GAME PROGRESS - GXC UPC Unification"
 					if = {
 						limit = { NOT = { has_country_flag = GXC_UPC_authoritarian_direction_flag } }
 						country_event = GXC.endgame.300 #The Hour of Federal Democracy?
@@ -1825,7 +1904,11 @@ chinese_unification = {
 					country_event = { id = UPC.federalelections.030 days = 7 } #Changing Politics in China - Basically sets up the endgame parties if they haven't already
 				}
 				else = {
-					log = "KR_Event_Logging;CHINA UNITED BY Liangguang Regionalists"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Liangguang Clique"
+					}
+					log = "KR_Event_Logging;GXC GAME PROGRESS - GXC NPA Unification"
 					if = {
 						limit = { has_country_leader = { character = GXC_chen_lianbo ruling_only = yes } }
 						set_cosmetic_tag = AGJ_united_china
@@ -1844,8 +1927,12 @@ chinese_unification = {
 			else_if = {
 				limit = { tag = YUN }
 				if = {
+					limit = { is_subject = no }
+					log = "KR_Event_Logging;CHINA UNITED BY Left-KMT"
+				}
+				if = {
 					limit = { china_alignment_left_kuomintang = yes }
-					log = "KR_Event_Logging;CHINA UNITED BY Yunnan Left-KMT"
+					log = "KR_Event_Logging;YUN GAME PROGRESS - YUN KMT Unification"
 					set_cosmetic_tag = LKT_united_china
 					hidden_effect = { news_event = china_events.308 }
 					country_event = YUN.endgame.200 #The Chinese Thermidor
@@ -1856,7 +1943,11 @@ chinese_unification = {
 				}
 				else_if = {
 					limit = { china_alignment_right_kuomintang = yes }
-					log = "KR_Event_Logging;CHINA UNITED BY Yunnan Right-KMT"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Right-KMT"
+					}
+					log = "KR_Event_Logging;YUN GAME PROGRESS - YUN KMT Unification"
 					set_cosmetic_tag = RKT_united_china
 					hidden_effect = {
 						news_event = china_events.309
@@ -1894,12 +1985,20 @@ chinese_unification = {
 				}
 				else_if = {
 					limit = { china_alignment_federalists = yes }
-					log = "KR_Event_Logging;CHINA UNITED BY Yunnan Federalists"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Federalists"
+					}
+					log = "KR_Event_Logging;YUN GAME PROGRESS - YUN UPC Unification"
 					country_event = YUN.endgame.300 #Triumph of Yunnan Federalism
 					country_event = { id = UPC.federalelections.030 days = 7 } #Changing Politics in China - Basically sets up the endgame parties if they haven't already
 				}
 				else = {
-					log = "KR_Event_Logging;CHINA UNITED BY Yunnan Regionalists"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Yunnan Clique"
+					}
+					log = "KR_Event_Logging;YUN GAME PROGRESS - YUN NPA Unification"
 					set_cosmetic_tag = united_china
 					country_event = { id = YUN.endgame.600 days = 3 } #Finishing the Mission
 					activate_targeted_decision = { decision = china_move_capital target = ROOT }
@@ -1909,18 +2008,29 @@ chinese_unification = {
 				limit = { tag = SZC }
 				if = {
 					limit = { SZC_federalists_in_exile = yes }
-					log = "KR_Event_Logging;CHINA UNITED BY Sichuan Federalist Exiles"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Federalists"
+					}
 					country_event = sichuan_events.600 #Victory for National Reconstruction
 					country_event = { id = UPC.federalelections.030 days = 7 } #Changing Politics in China - Basically sets up the endgame parties if they haven't already
 				}
 				else_if = {
 					limit = { SZC_zhili_in_exile = yes }
-					log = "KR_Event_Logging;CHINA UNITED BY Sichuanese Zhili Exiles"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Other Zhili"
+					}
+					set_cosmetic_tag = ZHL_united_china
+					activate_targeted_decision = { decision = china_move_capital target = ROOT }
 					hidden_effect = { news_event = china_events.311 }
 				}
 				else_if = {
 					limit = { china_alignment_northern_zhili = yes }
-					log = "KR_Event_Logging;CHINA UNITED BY A minor clique"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Other Zhili"
+					}
 					set_cosmetic_tag = ZHL_united_china
 					add_ideas = CHS_legitimacy1
 					add_ideas = CHS_bureaucracy1
@@ -1930,13 +2040,19 @@ chinese_unification = {
 				}
 				else_if = {
 					limit = { has_country_leader = { character = SZC_liu_xiang } }
-					log = "KR_Event_Logging;CHINA UNITED BY A minor clique"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Sichuan Clique"
+					}
 					china_generic_unification_effect = yes
 					hidden_effect = { news_event = china_events.313 }
 				}
 				else_if = {
 					limit = { has_country_leader = { character = SZC_xiong_kewu } }
-					log = "KR_Event_Logging;CHINA UNITED BY Federalists"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Federalists"
+					}
 					#Reworked Federalist Tags will form their final UPC via Constitution Drafting Chain.
 					add_ideas = CHS_legitimacy1
 					add_ideas = CHS_bureaucracy1
@@ -2081,7 +2197,7 @@ chinese_unification = {
 					}
 				}
 				else = {
-					log = "KR_Event_Logging;CHINA UNITED BY A minor clique"
+					log = "KR_Event_Logging;CHINA UNITED BY Sichuan Clique"
 					china_generic_unification_effect = yes
 					hidden_effect = { news_event = china_events.314 }
 				}
@@ -2094,7 +2210,10 @@ chinese_unification = {
 				}
 				if = {
 					limit = { china_is_aligned_with_federalists = yes }
-					log = "KR_Event_Logging;CHINA UNITED BY Federalists"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Federalists"
+					}
 					set_cosmetic_tag = UPC_united_china
 					add_ideas = CHS_legitimacy1
 					add_ideas = CHS_bureaucracy1
@@ -2109,7 +2228,10 @@ chinese_unification = {
 				}
 				else_if = {
 					limit = { china_is_aligned_with_northern_zhili = yes }
-					log = "KR_Event_Logging;CHINA UNITED BY A minor clique"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Other Zhili"
+					}
 					set_cosmetic_tag = ZHL_united_china
 					add_ideas = CHS_legitimacy1
 					add_ideas = CHS_bureaucracy1
@@ -2126,25 +2248,37 @@ chinese_unification = {
 					if = {
 						limit = { china_is_aligned_with_right_kmt = yes }
 						set_cosmetic_tag = RKT_united_china
-						log = "KR_Event_Logging;CHINA UNITED BY Right-KMT"
+						if = {
+							limit = { is_subject = no }
+							log = "KR_Event_Logging;CHINA UNITED BY Right-KMT"
+						}
 						hidden_effect = { news_event = china_events.309 }
 					}
 					else = {
 						set_cosmetic_tag = LKT_united_china
 						if = {
 							limit = {
-								YUN = { is_subject_of = RKT }
+								YUN = {
+									is_subject_of = RKT
+									china_is_aligned_with_kmt = yes
+								}
 							}
 							YUN = { country_event = { id = YUN.lategame.500 days = 1 } } #FALLBACK FOR: THE MALFORMED DECAPITATION
 						}
-						log = "KR_Event_Logging;CHINA UNITED BY Left-KMT"
+						if = {
+							limit = { is_subject = no }
+							log = "KR_Event_Logging;CHINA UNITED BY Left-KMT"
+						}
 						hidden_effect = { news_event = china_events.308 }
 					}
 				}
 			}
 			else_if = {
 				limit = { original_tag = LEP }
-				log = "KR_Event_Logging;CHINA UNITED BY A minor clique"
+				if = {
+					limit = { is_subject = no }
+					log = "KR_Event_Logging;CHINA UNITED BY League of Eight Provinces"
+				}
 				china_generic_unification_effect = yes
 				hidden_effect = { news_event = china_events.315 }
 			}
@@ -2152,7 +2286,10 @@ chinese_unification = {
 				limit = { tag = ANQ }
 				if = {
 					limit = { china_alignment_federalists = yes } #Technically possible, I think?
-					log = "KR_Event_Logging;CHINA UNITED BY A minor clique"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Federalists"
+					}
 					#Reworked Federalist Tags will form their final UPC via Constitution Drafting Chain.
 					add_ideas = CHS_legitimacy1
 					add_ideas = CHS_bureaucracy1
@@ -2172,7 +2309,10 @@ chinese_unification = {
 				}
 				else_if = {
 					limit = { china_alignment_northern_zhili = yes }
-					log = "KR_Event_Logging;CHINA UNITED BY A minor clique"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Other Zhili"
+					}
 					set_cosmetic_tag = ZHL_united_china
 					add_ideas = CHS_legitimacy1
 					add_ideas = CHS_bureaucracy1
@@ -2185,7 +2325,10 @@ chinese_unification = {
 				}
 				else_if = {
 					limit = { china_alignment_fengtian = yes }
-					log = "KR_Event_Logging;CHINA UNITED BY A minor clique"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Anqing Clique"
+					}
 					set_cosmetic_tag = AGJ_united_china
 					add_ideas = CHS_legitimacy1
 					add_ideas = CHS_bureaucracy1
@@ -2197,14 +2340,20 @@ chinese_unification = {
 					}
 				}
 				else = {
-					log = "KR_Event_Logging;CHINA UNITED BY A minor clique"
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Anqing Clique"
+					}
 					china_generic_unification_effect = yes
 					set_cosmetic_tag = SZH_united_china
 					hidden_effect = { news_event = china_events.314 }
 				}
 			}
 			else = {
-				log = "KR_Event_Logging;CHINA UNITED BY A minor clique"
+				if = {
+					limit = { is_subject = no }
+					log = "KR_Event_Logging;CHINA UNITED BY A Western Warlord Clique"
+				}
 				china_generic_unification_effect = yes
 				hidden_effect = {
 					news_event = china_events.314
@@ -2294,7 +2443,7 @@ chinese_unification = {
 				}
 
 				#Power Projection event for RUS
-				RUS = { country_event = { id = russia_foreign_policy_events.262 days = 5 random_days = 5 } }
+				RUS = { country_event = { id = russia_foreign_policy_events.262 days = 1 } }
 			}
 		}
 		fixed_random_seed = no
@@ -2500,7 +2649,6 @@ chinese_unification = {
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete CHN_demand_control_of_beijing"
 			setup_decision_attack_ai = yes
-
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove CHN_demand_control_of_beijing"
@@ -2877,8 +3025,9 @@ chinese_unification = {
 		}
 		icon = generic_prepare_civil_war
 		visible = {
-			var:ROOT.overlord = { ROOT = { china_same_alignment_as_PREV = yes } }
 			is_subject = yes
+			var:ROOT.overlord = { is_chinese_tag = yes }
+			var:ROOT.overlord = { ROOT = { china_same_alignment_as_PREV = yes } }
 			NOT = {
 				OR = {
 					var:ROOT.overlord = { china_alignment_left_kuomintang = yes } #Already have one
@@ -3195,6 +3344,10 @@ chinese_unification = {
 							focus = UPC_take_on_fengtian
 							progress > 0
 						}
+					}
+					AND = {
+						has_country_leader = { character = SZC_liu_xiang }
+						NOT = { has_country_flag = SZC_opium_crisis_solved }
 					}
 				}
 			}
@@ -3702,6 +3855,26 @@ chinese_unification = {
 				if = {
 					limit = { tag = GXC }
 					GXC_is_phase_1_trigger = no
+					OR = {
+						AND = {
+							has_global_flag = CHN_south_china_war_started
+							has_country_flag = CHN_SCW_neutral_flag
+						}
+						CHN_south_china_war_over_trigger = yes
+					}
+				}
+				else_if = {
+					limit = { tag = HNN }
+					OR = {
+						AND = {
+							has_global_flag = CHN_south_china_war_started
+							has_country_flag = CHN_SCW_neutral_flag
+						}
+						CHN_south_china_war_over_trigger = yes
+						date > 1938.1.1
+						YUN = { is_subject = yes }
+						GXC = { is_subject = yes }
+					}
 				}
 				else_if = {
 					limit = {
@@ -3712,15 +3885,12 @@ chinese_unification = {
 					has_global_flag = LEP_league_war_over
 				}
 				else_if = {
-					limit = { tag = YUN }
-					YUN_is_phase_1_trigger = no
+					limit = { tag = SZC }
+					date > 1938.1.1
 				}
 				else_if = {
-					limit = { tag = HNN }
-					OR = {
-						has_global_flag = CHN_south_china_war_started
-						date > 1938.1.1
-					}
+					limit = { tag = YUN }
+					YUN_is_phase_1_trigger = no
 				}
 			}
 			NOT = { has_country_flag = CHN_has_revolted_flag }
@@ -4165,11 +4335,6 @@ chinese_unification = {
 				factor = 0
 				has_country_flag = CHN_delay_integrating_subjects_flag
 			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = FNG_path option = FNG_PATH_FED_PEACE } #FNG integrates Chen Jiongming lead GXC/SZC via focus, not decision
-				FROM = { has_country_leader = { character = GXC_chen_jiongming } }
-			}
 		}
 
 		cancel_effect = {
@@ -4468,8 +4633,14 @@ chinese_unification = {
 			if = {
 				limit = { tag = HNN }
 				OR = {
-					has_global_flag = CHN_south_china_war_started
+					AND = {
+						has_global_flag = CHN_south_china_war_started
+						has_country_flag = CHN_SCW_neutral_flag
+					}
+					CHN_south_china_war_over_trigger = yes
 					date > 1938.1.1
+					YUN = { is_subject = yes }
+					GXC = { is_subject = yes }
 				}
 			}
 		}
@@ -4618,18 +4789,31 @@ chinese_unification = {
 			}
 			if = {
 				limit = { tag = GXC }
-				has_war = no
 				GXC_popularity_join_zhili_trigger = yes
+				OR = {
+					AND = {
+						has_global_flag = CHN_south_china_war_started
+						has_country_flag = CHN_SCW_neutral_flag
+					}
+					CHN_south_china_war_over_trigger = yes
+				}
 			}
 			else_if = {
 				limit = { tag = HNN }
 				OR = {
-					has_global_flag = CHN_south_china_war_started
+					AND = {
+						has_global_flag = CHN_south_china_war_started
+						has_country_flag = CHN_SCW_neutral_flag
+					}
+					CHN_south_china_war_over_trigger = yes
 					date > 1938.1.1
+					YUN = { is_subject = yes }
+					GXC = { is_subject = yes }
 				}
 			}
 			else_if = {
 				limit = { tag = SZC }
+				date > 1938.1.1
 				NOT = { FROM = { has_idea = QIE_big_protests } }
 			}
 			NOT = { has_country_flag = CHN_has_revolted_flag }
@@ -4722,29 +4906,16 @@ chinese_unification = {
 			modifier = {
 				factor = 0
 				tag = SZC
-				if = {
-					limit = {
-						has_country_leader = { character = SZC_deng_xihou }
-					}
-					NOT = { has_country_flag = SZC_opium_crisis_solved }
-				}
 				NOT = { has_game_rule = { rule = SZC_forpol option = DEFAULT } }
 				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_QIE } }
 			}
 			modifier = {
-				add = 100
+				factor = 0
 				tag = SZC
+				#Baoding SZC will only join after solving opium crisis
+				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_QIE } }
 				has_country_leader = { character = SZC_deng_xihou }
-				OR = {
-					YUN = { has_completed_focus = YUN_western_expedition }
-					QIE = { focus_progress = { focus = QIE_restore_order_in_the_middle_kingdom progress > 0 } }
-					CHI = { focus_progress = { focus = CHI_deal_with_warlords progress > 0 } }
-					GXC = { has_completed_focus = GXC_pacify_the_interior }
-					AND = {
-						country_exists = UPC
-						UPC = { has_completed_focus = UPC_fight_for_the_interior }
-					}
-				}
+				NOT = { has_country_flag = SZC_opium_crisis_solved }
 			}
 
 			modifier = {
@@ -4786,14 +4957,26 @@ chinese_unification = {
 			}
 			if = {
 				limit = { tag = GXC }
-				has_war = no
 				GXC_popularity_join_zhili_trigger = yes
+				OR = {
+					AND = {
+						has_global_flag = CHN_south_china_war_started
+						has_country_flag = CHN_SCW_neutral_flag
+					}
+					CHN_south_china_war_over_trigger = yes
+				}
 			}
 			else_if = {
 				limit = { tag = HNN }
 				OR = {
-					has_global_flag = CHN_south_china_war_started
+					AND = {
+						has_global_flag = CHN_south_china_war_started
+						has_country_flag = CHN_SCW_neutral_flag
+					}
+					CHN_south_china_war_over_trigger = yes
 					date > 1938.1.1
+					YUN = { is_subject = yes }
+					GXC = { is_subject = yes }
 				}
 			}
 			NOT = { has_country_flag = CHN_has_revolted_flag }
@@ -4913,8 +5096,18 @@ chinese_unification = {
 			}
 			if = {
 				limit = { tag = GXC }
-				has_war = no
 				GXC_popularity_join_fengtian_trigger = yes
+				OR = {
+					AND = {
+						has_global_flag = CHN_south_china_war_started
+						has_country_flag = CHN_SCW_neutral_flag
+					}
+					CHN_south_china_war_over_trigger = yes
+				}
+			}
+			else_if = {
+				limit = { tag = SZC }
+				date > 1938.1.1
 			}
 			NOT = { has_country_flag = CHN_has_revolted_flag }
 		}
@@ -5043,9 +5236,19 @@ chinese_unification = {
 			if = {
 				limit = { tag = HNN }
 				OR = {
-					has_global_flag = CHN_south_china_war_started
+					AND = {
+						has_global_flag = CHN_south_china_war_started
+						has_country_flag = CHN_SCW_neutral_flag
+					}
+					CHN_south_china_war_over_trigger = yes
 					date > 1938.1.1
+					YUN = { is_subject = yes }
+					GXC = { is_subject = yes }
 				}
+			}
+			else_if = {
+				limit = { tag = SZC }
+				date > 1938.1.1
 			}
 		}
 		visible = {
@@ -5145,26 +5348,21 @@ chinese_unification = {
 				factor = 0
 				tag = SHX
 				NOT = { has_game_rule = { rule = SHX_forpol option = DEFAULT } }
-				NOT = { has_game_rule = { rule = SHX_forpol option = SHX_FORPOL_FEDS } }
+				NOT = { has_game_rule = { rule = SHX_forpol option = SHX_FORPOL_UPC } }
 			}
 			modifier = {
 				factor = 0
 				tag = SZC
-				NOT = { has_country_flag = SZC_opium_crisis_solved }
 				NOT = { has_game_rule = { rule = SZC_forpol option = DEFAULT } }
-				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_FEDS } }
+				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_UPC } }
 			}
 			modifier = {
-				add = 100
+				factor = 0
 				tag = SZC
+				#Baoding SZC will only join after solving opium crisis
+				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_UPC } }
 				has_completed_focus = SZC_The_Diarchy
-				OR = {
-					YUN = { has_completed_focus = YUN_western_expedition }
-					QIE = { focus_progress = { focus = QIE_restore_order_in_the_middle_kingdom progress > 0 } }
-					CHI = { focus_progress = { focus = CHI_deal_with_warlords progress > 0 } }
-					GXC = { has_completed_focus = GXC_pacify_the_interior }
-					UPC = { has_completed_focus = UPC_fight_for_the_interior }
-				}
+				NOT = { has_country_flag = SZC_opium_crisis_solved }
 			}
 		}
 		complete_effect = {
@@ -5203,9 +5401,19 @@ chinese_unification = {
 			if = {
 				limit = { tag = HNN }
 				OR = {
-					has_global_flag = CHN_south_china_war_started
+					AND = {
+						has_global_flag = CHN_south_china_war_started
+						has_country_flag = CHN_SCW_neutral_flag
+					}
+					CHN_south_china_war_over_trigger = yes
 					date > 1938.1.1
+					YUN = { is_subject = yes }
+					GXC = { is_subject = yes }
 				}
+			}
+			else_if = {
+				limit = { tag = SZC }
+				date > 1938.1.1
 			}
 		}
 		visible = {
@@ -5321,9 +5529,19 @@ chinese_unification = {
 			if = {
 				limit = { tag = HNN }
 				OR = {
-					has_global_flag = CHN_south_china_war_started
+					AND = {
+						has_global_flag = CHN_south_china_war_started
+						has_country_flag = CHN_SCW_neutral_flag
+					}
+					CHN_south_china_war_over_trigger = yes
 					date > 1938.1.1
+					YUN = { is_subject = yes }
+					GXC = { is_subject = yes }
 				}
+			}
+			else_if = {
+				limit = { tag = SZC }
+				date > 1938.1.1
 			}
 		}
 		visible = {
@@ -5408,31 +5626,23 @@ chinese_unification = {
 			modifier = {
 				factor = 0
 				tag = SZC
+				NOT = { has_game_rule = { rule = SZC_forpol option = DEFAULT } }
+				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_RKMT } }
+			}
+			modifier = {
+				factor = 0
+				#SZC will generally join UPC whenever possible
+				tag = SZC
+				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_RKMT } }
 				country_exists = UPC
-				NOT = { has_country_flag = SZC_opium_crisis_solved }
-				NOT = { has_game_rule = { rule = SZC_forpol option = DEFAULT } }
-				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_RKMT } }
 			}
 			modifier = {
-				add = 100
+				factor = 0
 				tag = SZC
-				country_exists = RKT
-				NOT = { country_exists = UPC }
-				NOT = { has_country_flag = SZC_opium_crisis_solved }
-				NOT = { has_game_rule = { rule = SZC_forpol option = DEFAULT } }
+				#Baoding SZC will only join after solving opium crisis
 				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_RKMT } }
-			}
-			modifier = {
-				add = 100
-				tag = SZC
 				has_country_leader = { character = SZC_liu_wenhui }
-				OR = {
-					YUN = { has_completed_focus = YUN_western_expedition }
-					QIE = { focus_progress = { focus = QIE_restore_order_in_the_middle_kingdom progress > 0 } }
-					CHI = { focus_progress = { focus = CHI_deal_with_warlords progress > 0 } }
-					GXC = { has_completed_focus = GXC_pacify_the_interior }
-					UPC = { has_completed_focus = UPC_fight_for_the_interior }
-				}
+				NOT = { has_country_flag = SZC_opium_crisis_solved }
 			}
 		}
 		complete_effect = {
@@ -6098,10 +6308,6 @@ chinese_unification = {
 					803 = { is_controlled_by_ROOT_owner_defeated_japan_or_mutual_enemy = yes }
 				}
 				if = {
-					limit = { FROM = { owns_state = 996 } } #Weihaiwei
-					996 = { is_controlled_by_ROOT_owner_defeated_japan_or_mutual_enemy = yes }
-				}
-				if = {
 					limit = { FROM = { owns_state = 1075 } } #Nantong
 					1075 = { is_controlled_by_ROOT_owner_defeated_japan_or_mutual_enemy = yes }
 				}
@@ -6156,10 +6362,6 @@ chinese_unification = {
 					803 = { is_controlled_by_ROOT_owner_or_mutual_enemy = yes }
 				}
 				if = {
-					limit = { FROM = { owns_state = 996 } } #Weihaiwei
-					996 = { is_controlled_by_ROOT_owner_or_mutual_enemy = yes }
-				}
-				if = {
 					limit = { FROM = { owns_state = 1075 } } #Nantong
 					1075 = { is_controlled_by_ROOT_owner_or_mutual_enemy = yes }
 				}
@@ -6183,7 +6385,6 @@ chinese_unification = {
 			801.OWNER #Shantou
 			802.OWNER #Xiamen
 			803.OWNER #Wenzhou
-			996.OWNER #Weihaiwei
 			1075.OWNER #Nantong
 		}
 		target_root_trigger = {
@@ -6206,7 +6407,6 @@ chinese_unification = {
 					801 #Shantou
 					802 #Xiamen
 					803 #Wenzhou
-					996 #Weihaiwei
 					1075 #Nantong
 				}
 			}
@@ -6330,10 +6530,6 @@ chinese_unification = {
 					803 = { is_controlled_by_ROOT_owner_or_defeated_japan = yes }
 				}
 				if = {
-					limit = { FROM = { owns_state = 996 } } #Weihaiwei
-					996 = { is_controlled_by_ROOT_owner_or_defeated_japan = yes }
-				}
-				if = {
 					limit = { FROM = { owns_state = 1075 } } #Nantong
 					1075 = { is_controlled_by_ROOT_owner_or_defeated_japan = yes }
 				}
@@ -6388,10 +6584,6 @@ chinese_unification = {
 					803 = { is_controlled_by_ROOT_or_owner = yes }
 				}
 				if = {
-					limit = { FROM = { owns_state = 996 } } #Weihaiwei
-					996 = { is_controlled_by_ROOT_or_owner = yes }
-				}
-				if = {
 					limit = { FROM = { owns_state = 1075 } } #Nantong
 					1075 = { is_controlled_by_ROOT_or_owner = yes }
 				}
@@ -6430,7 +6622,6 @@ chinese_unification = {
 					NOT = { owns_state = 801 } #Shantou
 					NOT = { owns_state = 802 } #Xiamen
 					NOT = { owns_state = 803 } #Wenzhou
-					NOT = { owns_state = 996 } #Weihaiwei
 					NOT = { owns_state = 1075 } #Nantong
 				}
 			}
@@ -6642,12 +6833,13 @@ china_league_collapse_decisions = {
 			hidden_effect = { activate_mission = china_collapsing_morale }
 
 			# Army Defections
-			country_event = league_war.1
+			country_event = league_war_events.1
 
 			# Collapsing Morale Idea
 			if = {
 				limit = { NOT = { has_idea = china_anti_stalemate_idea_2 } }
 				add_ideas = china_anti_stalemate_idea_2
+				hidden_effect = { update_volunteer_ai = yes }
 			}
 		}
 
@@ -6657,6 +6849,7 @@ china_league_collapse_decisions = {
 			if = {
 				limit = { has_idea = china_anti_stalemate_idea_2 }
 				remove_ideas = china_anti_stalemate_idea_2
+				hidden_effect = { update_volunteer_ai = yes }
 			}
 		}
 		fixed_random_seed = no
