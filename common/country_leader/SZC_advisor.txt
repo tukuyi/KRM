@@ -504,6 +504,15 @@ leader_traits = {
 		consumer_goods_factor = -0.1
 	}
 
+	YCP_national_defense_academy_trait = { #国防军校
+		random = no
+		land_doctrine_cost_factor = -0.15
+		experience_gain_army_factor = 0.10
+		army_leader_cost_factor = -0.25
+		training_time_factor = -0.10
+		army_speed_factor = 0.05
+	}
+
 
 
 

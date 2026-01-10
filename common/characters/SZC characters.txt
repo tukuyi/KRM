@@ -4761,6 +4761,32 @@ characters = {
 		}
 	}
 
+	#国防军校
+	YCP_national_defense_academy = {
+		name = YCP_national_defense_academy
+		portraits = {
+			army = {
+				small = GFX_idea_adaptable_modernizers_spirit
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = YCP_national_defense_academy_theorist
+			ledger = army
+			available = {
+				has_completed_focus = SZC_YCP_establish_national_defense_academy
+			}
+			visible = {
+				if = {
+					limit = { tag = SZC }
+					has_country_flag = NKRsichuan_YCPpath
+				}
+			}
+			traits = { YCP_national_defense_academy_trait }
+			cost = 100
+		}
+	}
+
 
 
 

@@ -11068,128 +11068,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_reconstitute_the_beiyang_navy"
 			navy_experience = 25
-			add_doctrine_cost_reduction = {
-				name = SZC_reconstitute_the_beiyang_navy
-				cost_reduction = 0.5
-				uses = 2
-				category = naval_doctrine
-			}
-			add_timed_idea = {
-				idea = SZC_reconstituting_the_beiyang_navy
-				days = 365
-			}
-			if = {
-				limit = { NOT = { has_tech = early_ship_hull_light } }
-				set_technology = { early_ship_hull_light = 1 }
-			}
-			if = {
-				limit = { NOT = { has_tech = early_ship_hull_cruiser } }
-				set_technology = { early_ship_hull_cruiser = 1 }
-			}
-			if = {
-				limit = { NOT = { has_tech = coastal_defense_ships } }
-				set_technology = { coastal_defense_ships = 1 }
-			}
-			if = {
-				limit = { NOT = { has_tech = coastal_defense_ships } }
-				set_technology = { coastal_defense_ships = 1 }
-			}
-			if = {
-				limit = { NOT = { has_tech = basic_naval_mines } }
-				set_technology = { basic_naval_mines = 1 }
-			}
-			if = {
-				limit = { NOT = { has_tech = basic_battery } }
-				set_technology = { basic_battery = 1 }
-			}
-			if = {
-				limit = { NOT = { has_tech = basic_torpedo } }
-				set_technology = { basic_torpedo = 1 }
-			}
-
-			custom_effect_tooltip = tooltip_white_line
-			QIE = {
-				custom_effect_tooltip = characters_will_be_recruited
-				character_list_tooltip = {
-					limit = {
-						OR = {
-							is_character = QIE_sa_zhenbing
-							is_character = QIE_du_xigui
-							is_character = QIE_wu_yulin
-							is_character = QIE_yang_shuzhuang
-						}
-					}
-				}
-				hidden_effect = {
-					QIE_sa_zhenbing = { set_nationality = ROOT }
-					QIE_du_xigui = { set_nationality = ROOT }
-					QIE_wu_yulin = { set_nationality = ROOT }
-					QIE_yang_shuzhuang = { set_nationality = ROOT }
-				}
-			}
-			if = {
-				limit = { NOT = { country_exists = FNG } }
-				FNG = {
-					custom_effect_tooltip = characters_will_be_recruited
-					character_list_tooltip = {
-						limit = { is_character = FNG_shen_honglie }
-					}
-					hidden_effect = {
-						FNG_shen_honglie = { set_nationality = ROOT }
-					}
-				}
-			}
-			if = {
-				limit = { NOT = { country_exists = LEP } }
-				LEP = {
-					custom_effect_tooltip = characters_will_be_recruited
-					character_list_tooltip = {
-						limit = {
-							is_character = LEP_wu_zhennan
-							is_character = LEP_li_shijia
-							is_character = LEP_wang_shouting
-						}
-					}
-					hidden_effect = {
-						LEP_wu_zhennan = { set_nationality = ROOT }
-						LEP_li_shijia = { set_nationality = ROOT }
-						LEP_wang_shouting = { set_nationality = ROOT }
-					}
-				}
-			}
-			else_if = {
-				limit = { QIE = { has_character = LEP_wu_zhennan } }
-				QIE = {
-					custom_effect_tooltip = characters_will_be_recruited
-					character_list_tooltip = {
-						limit = { is_character = LEP_wu_zhennan }
-					}
-					hidden_effect = {
-						LEP_wu_zhennan = { set_nationality = ROOT }
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					ANQ = { has_character = LEP_wu_zhennan }
-					NOT = { country_exists = ANQ }
-				}
-				ANQ = {
-					custom_effect_tooltip = characters_will_be_recruited
-					character_list_tooltip = {
-						limit = {
-							is_character = LEP_wu_zhennan
-							is_character = LEP_li_shijia
-							is_character = LEP_wang_shouting
-						}
-					}
-					hidden_effect = {
-						LEP_wu_zhennan = { set_nationality = ROOT }
-						LEP_li_shijia = { set_nationality = ROOT }
-						LEP_wang_shouting = { set_nationality = ROOT }
-					}
-				}
-			}
+			CHN_inherit_beiyang_fleet_effect = yes
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH }
 	}
@@ -33231,7 +33110,23 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_hard_to_cross_guanshan"
-			
+			army_experience = 60
+			add_command_power = 25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2500
+			}
+
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanflavor.32
+					days = 5
+				}
+				country_event = {
+					id = NKRsichuanflavor.33
+					days = 7
+				}
+			}
 			
 		}
 	}
@@ -33255,8 +33150,15 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_moblize_the_youth"
-				add_manpower = 5000
-				add_war_support = 0.05
+				add_manpower = 15000
+				add_war_support = 0.15
+				army_experience = 15
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.34
+						days = 5
+					}
+				}
 			}
 		}
 
@@ -33270,6 +33172,10 @@ focus_tree = {
 
 			relative_position_id = SZC_YCP_hard_to_cross_guanshan
 
+			available = {
+				has_country_flag = SZC_YCP_female_rights_guaranteed
+			}
+
 			prerequisite = {
 				focus = SZC_YCP_moblize_the_youth
 			}
@@ -33277,8 +33183,14 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_the_dancer"
-				add_political_power = 50
+				set_rule = {
+					can_generate_female_aces = yes
+				}
 				add_stability = 0.05
+				country_event = {
+					id = NKRsichuanflavor.35
+					days = 7
+				}
 			}
 		}
 
@@ -33299,8 +33211,13 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_purge_bad_habits"
-				add_stability = 0.10
-				add_political_power = 50
+				if = {
+					limit = { has_country_flag = china_has_poor_army }
+					china_army_reform_increase_step = yes
+				}
+				else = {
+					army_experience = 100
+				}
 			}
 		}
 
@@ -33322,7 +33239,20 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_reorganize_and_prepare_for_war"
 				add_war_support = 0.10
-				add_army_experience = 20
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 3000
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 1000
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.36
+						days = 5
+					}
+				}
 			}
 		}
 
@@ -33340,9 +33270,33 @@ focus_tree = {
 				focus = SZC_YCP_hard_to_cross_guanshan		
 			}
 
+			available = {
+				has_completed_focus = SZC_YCP_central_military_commission
+			}
+
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_establish_national_defense_academy"
+				add_doctrine_cost_reduction = {
+					name = land_doctrine_bonus
+					cost_reduction = 0.5
+					uses = 2
+					category = land_doctrine
+					category = air_doctrine
+					category = naval_doctrine
+				}
+				army_experience = 15
+				air_experience = 15
+				navy_experience = 15
+				custom_effect_tooltip = tooltip_white_line
+				custom_effect_tooltip = available_theorist
+				show_ideas_tooltip = YCP_national_defense_academy_theorist
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.37
+						days = 5
+					}
+				}
 			}
 		}
 
@@ -33363,7 +33317,43 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_hire_continental_advisors"
-				add_army_experience = 10
+				add_army_experience = 35
+				add_mastery_bonus = {
+					name = SZC_YCP_hire_continental_advisors
+					bonus = 0.15
+					days = 365
+					folder = land
+				}
+				custom_effect_tooltip = SZC_YCP_hire_continental_advisors_tt
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.38
+						days = 7
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								GER = { exists = no }
+								NOT = {
+									has_war_with = GEA
+								}
+							}
+							AND = {
+								NOT = {
+									has_war_with = GER
+								}
+							}
+						}
+					}
+					hidden_effect = {
+						country_event = {
+							id = NKRsichuanflavor.39
+							days = 70
+						}
+					}
+				}
 			}
 		}
 
@@ -33384,7 +33374,20 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_rotational_practical_training"
-				army_leader_start_level = 1
+				army_experience = 75
+				add_command_power = 35
+				add_doctrine_cost_reduction = {
+					name = SZC_YCP_rotational_practical_training
+					cost_reduction = 0.5
+					uses = 1
+					category = land_doctrine
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.40
+						days = 5
+					}
+				}
 			}
 		}
 
@@ -33405,8 +33408,18 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_de_politicization"
-				add_stability = 0.05
-				add_political_power = 50
+				add_war_support = -0.15
+				add_stability = 0.1
+				random_army_leader = {
+					limit = {
+						has_trait = organizer
+						NOT = { has_trait = skilled_staffer }
+					}
+					add_trait = { trait = skilled_staffer }
+				}
+				every_army_leader = {
+					add_planning = 1
+				}
 			}
 		}
 
@@ -33428,10 +33441,25 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_special_operations"
 				add_tech_bonus = {
-					name = special_forces_bonus
-					bonus = 1.0
-					uses = 1
-					category = infantry_weapons
+					name = SZC_YCP_special_operations
+					bonus = 0.75
+					uses = 2
+					category = mountaineers_tech
+					category = marine_tech
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+				}
+				random_army_leader = {
+					limit = { NOT = { has_trait = commando } }
+					add_trait = { trait = commando }
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.41
+						days = 5
+					}
 				}
 			}
 		}
@@ -33461,11 +33489,18 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_revival_of_military_science"
-				add_doctrine_cost_reduction = {
-					name = land_doctrine_bonus
-					cost_reduction = 0.5
-					uses = 2
-					category = land_doctrine
+				add_research_slot = 1
+				add_mastery_bonus = {
+					name = SZC_YCP_revival_of_military_science
+					bonus = 0.25
+					days = 365
+					folder = land
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.42
+						days = 7
+					}
 				}
 			}
 		}
@@ -33487,6 +33522,19 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_central_ordnance_bureau"
+				random_owned_controlled_state = {
+					prioritize = { 605 }
+					limit = {
+						is_core_of = ROOT
+						can_construct_building = land_facility
+					}
+					construct_building_in_random_province = { land_facility = 1 }
+				}
+				custom_effect_tooltip = SZC_YCP_central_ordnance_bureau_tt
+				add_timed_idea = {
+					idea = SZC_YCP_establish_central_ordnance_bureau_idea
+					days = 90
+				}
 			}
 		}
 
@@ -33500,6 +33548,12 @@ focus_tree = {
 
 			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
 
+			available = {
+				NOT = {
+					has_idea = SZC_YCP_establish_central_ordnance_bureau_idea
+				}
+			}
+
 			prerequisite = {
 				focus = SZC_YCP_central_ordnance_bureau
 			}
@@ -33507,7 +33561,10 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_self_sufficiency_in_arms_and_ammo"
-				
+				add_one_random_military_factory = yes
+				add_one_random_military_factory = yes
+				add_one_random_military_factory = yes
+				add_one_random_military_factory = yes
 			}
 		}
 
@@ -33521,6 +33578,12 @@ focus_tree = {
 
 			relative_position_id = SZC_YCP_reorganize_and_prepare_for_war
 
+			available = {
+				NOT = {
+					has_idea = SZC_YCP_establish_central_ordnance_bureau_idea
+				}
+			}
+
 			prerequisite = {
 				focus = SZC_YCP_central_ordnance_bureau
 			}
@@ -33529,11 +33592,23 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_logistics_innovation"
 				add_tech_bonus = {
-					name = logistics_bonus
-					bonus = 1.0
-					uses = 1
-					category = support_tech
+					name = SZC_YCP_logistics_innovation
+					bonus = 0.75
+					uses = 2
+					category = logistics_tech
+					category = motorized_equipment
 				}
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 10
+				}
+				custom_effect_tooltip = tooltip_white_line
+				every_army_leader = {
+					add_logistics = 1
+				}
+				
+				enable_tech_improved_logistics = yes
+	
 			}
 		}
 
@@ -33559,10 +33634,27 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_telecommunications_command_network"
 				add_tech_bonus = {
-					name = radio_bonus
+					name = SZC_YCP_telecommunications_command_network
 					bonus = 1.0
 					uses = 1
 					category = electronics
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1500
+				}
+				if = {
+					limit = { NOT = { has_tech = tech_signal_company } }
+					set_technology = { tech_signal_company = 1 }
+				}
+				else = {
+					add_tech_bonus = {
+						name = SZC_YCP_telecommunications_command_network
+						bonus = 1
+						uses = 2
+						category = support_tech
+						category = signal_company_tech
+					}
 				}
 			}
 		}
@@ -33584,7 +33676,15 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_revise_drill_manuals"
-				add_army_experience = 15
+				add_ideas = {
+					SZC_YCP_ROCAF_army_idea_1
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.43
+						days = 5
+					}
+				}
 			}
 		}
 
@@ -33611,6 +33711,40 @@ focus_tree = {
 					uses = 1
 					category = artillery
 				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 1000
+				}
+				every_army_leader = {
+					limit = {
+						OR = {
+							has_trait = artillery_officer
+							has_trait = artillery_specialist
+							has_trait = artillery_expert
+						}
+					}
+					random_select_amount = 2
+					add_unit_leader_trait = master_of_ordnance
+				}
+				every_army_leader = {
+					limit = {
+						attack_skill_level > 2
+						NOT = {
+							has_trait = artillery_officer
+							has_trait = artillery_expert
+							has_trait = artillery_specialist
+						}
+					}
+					random_select_amount = 4
+					add_attack = 1
+					add_trait = { trait = artillery_specialist }
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.44
+						days = 5
+					}
+				}
 			}
 		}
 
@@ -33632,11 +33766,22 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_mobile_warfare"
 				add_tech_bonus = {
-					name = motorized_bonus
-					bonus = 1.0
-					uses = 1
-					category = motorized_equipment
+					name = SZC_YCP_mobile_warfare
+					bonus = 1.5
+					uses = 4
+					category = armor
 				}
+				swap_ideas = {
+					remove_idea = SZC_YCP_ROCAF_army_idea_1
+					add_idea = SZC_YCP_ROCAF_army_idea_2
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.45
+						days = 5
+					}
+				}
+
 			}
 		}
 
@@ -33657,11 +33802,23 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_combined_arms_experiment"
-				add_doctrine_cost_reduction = {
-					name = land_doctrine_bonus
-					cost_reduction = 0.5
-					uses = 1
-					category = land_doctrine
+				add_tech_bonus = {
+					name = SZC_YCP_mobile_warfare
+					bonus = 1.5
+					uses = 2
+					category = mio_cat_tech_all_motorized_mechanized
+				}
+				army_experience = 20
+				
+				swap_ideas = {
+					remove_idea = SZC_YCP_ROCAF_army_idea_2
+					add_idea = SZC_YCP_ROCAF_army_idea_3
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.46
+						days = 5
+					}
 				}
 			}
 		}
@@ -33686,16 +33843,22 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_long_range_fire_projection"
+				add_ideas = GER_self_propelled_artillery
 				add_tech_bonus = {
-					name = rocket_artillery_bonus
+					name = SZC_YCP_long_range_fire_projection
 					bonus = 1.0
 					uses = 1
 					category = artillery
 				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.47
+						days = 5
+					}
+				}
 			}
 		}
 
-		# Right Branch: Industry & Defense
 		focus = {
 			id = SZC_YCP_rectify_arsenals
 			icon = GFX_goal_SZC_YCP_rectify_arsenals
@@ -33713,12 +33876,12 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_rectify_arsenals"
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
+				add_one_random_military_factory = yes
+				add_one_random_military_factory = yes
+				every_military_industrial_organization = {
+					add_mio_funds_gain_factor = 0.2
 				}
+
 			}
 		}
 
@@ -33739,16 +33902,22 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_weighty_black_blood"
-				add_resource = {
-					type = oil
-					amount = 10
-					state = 524 # Example state ID, adjust as needed
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+					}
 				}
-				add_tech_bonus = {
-					name = excavation_bonus
-					bonus = 1.0
-					uses = 1
-					category = excavation
+				modify_building_resources = {
+					building = synthetic_refinery
+					resource = rubber
+					amount = 3
 				}
 			}
 		}
@@ -33767,19 +33936,34 @@ focus_tree = {
 				focus = SZC_YCP_weighty_black_blood
 			}
 
+			available = {
+				has_completed_focus = SZC_YCP_long_range_fire_projection
+			}
+
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_impregnable_defense"
-				add_building_construction = {
-					type = land_fort
-					level = 2
-					instant_build = yes
+				
+				every_army_leader = {
+					limit = {
+						defense_skill_level > 2
+					}
+					random_select_amount = 4
+					add_defense = 1
 				}
 				add_tech_bonus = {
 					name = construction_bonus
 					bonus = 1.0
 					uses = 1
 					category = construction_tech
+				}
+				
+				enable_tech_expanded_engineer_corps = yes
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.48
+						days = 5
+					}
 				}
 			}
 		}
@@ -33809,7 +33993,16 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_awe_inspiring_army"
-				
+				swap_ideas = {
+					remove_idea = SZC_YCP_ROCAF_army_idea_3
+					add_idea = SZC_YCP_ROCAF_army_idea_4
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.49
+						days = 7
+					}
+				}
 			}
 		}
 
@@ -33832,6 +34025,34 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_vast_clear_skies"
+				add_doctrine_cost_reduction = {
+					name = SZC_YCP_vast_clear_skies
+					cost_reduction = 0.5
+					uses = 2
+					category = air_doctrine
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						is_in_home_area = yes
+						is_valid_state_for_development = yes
+						free_building_slots = { building = air_base size > 0 }
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_ideas = {
+					SZC_YCP_ROCAF_air_idea_1
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.50
+						days = 5
+					}
+				}
 			}
 		}
 		focus = {
@@ -33852,10 +34073,33 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_valor_above_the_clouds"
 				add_tech_bonus = {
-					name = fighter_bonus
-					bonus = 1.0
-					uses = 1
+					name = SZC_YCP_valor_above_the_clouds
+					bonus = 2.0
+					uses = 2
 					category = light_fighter
+				}
+				air_experience = 40
+				add_ace = {
+					name = "哲生"
+					surname = "柳"
+					callsign = "Patriot"
+					type = fighter_unique
+				}
+				add_ace = {
+					name = "光复"
+					surname = "王"
+					callsign = "Fortune"
+					type = fighter_genius
+				}
+				swap_ideas = {
+					remove_idea = SZC_YCP_ROCAF_air_idea_1
+					add_idea = SZC_YCP_ROCAF_air_idea_2
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.51
+						days = 7
+					}
 				}
 			}
 		}
@@ -33878,11 +34122,32 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_conquest_of_heavenly_steps"
 				add_doctrine_cost_reduction = {
-					name = air_doctrine_bonus
+					name = SZC_YCP_conquest_of_heavenly_steps
 					cost_reduction = 0.5
 					uses = 1
 					category = air_doctrine
 				}
+				add_tech_bonus = {
+					name = SZC_YCP_conquest_of_heavenly_steps
+					bonus = 2.0
+					uses = 2
+					category = air_equipment
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						is_in_home_area = yes
+						is_valid_state_for_development = yes
+						free_building_slots = { building = air_base size > 0 }
+					}
+					add_building_construction = {
+						type = air_base
+						level = 4
+						instant_build = yes
+					}
+				}
+				add_one_random_military_factory = yes
+				add_one_random_military_factory = yes
 			}
 		}
 
@@ -33903,12 +34168,15 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_iron_wings_scattered_like_stars"
-				add_air_experience = 25
-				add_tech_bonus = {
-					name = heavy_fighter_bonus
-					bonus = 1.0
-					uses = 1
-					category = heavy_fighter
+				add_air_experience = 45
+				add_stability = -0.15
+				complete_special_project = sp:sp_air_jet_engine
+				complete_special_project = sp:sp_air_axial_jet_engine
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.52
+						days = 7
+					}
 				}
 			}
 		}
@@ -33927,14 +34195,32 @@ focus_tree = {
 				focus = SZC_YCP_valor_above_the_clouds
 			}
 
+			available = {
+				has_completed_focus = SZC_YCP_central_ordnance_bureau
+			}
+
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_silent_hunt"
-				add_tech_bonus = {
-					name = scout_plane_bonus
-					bonus = 1.0
-					uses = 1
-					category = scout_plane
+				if = {
+					limit = {
+						NOT = { is_special_project_completed = sp:sp_air_radar }
+					}
+					complete_special_project = sp:sp_air_radar
+					add_tech_bonus = {
+						name = SZC_YCP_silent_hunt
+						bonus = 1
+						uses = 1
+						category = radar_tech
+					}
+				}
+				else = {
+					add_tech_bonus = {
+						name = SZC_YCP_silent_hunt
+						bonus = 2
+						uses = 3
+						category = radar_tech
+					}
 				}
 			}
 		}
@@ -33953,14 +34239,38 @@ focus_tree = {
 				focus = SZC_YCP_vast_clear_skies
 			}
 
+			available = {
+				has_completed_focus = SZC_YCP_central_ordnance_bureau
+			}
+
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_sky_splitting_air_cavalry"
+				if = {
+					limit = {
+						NOT = { is_special_project_completed = sp:sp_air_helicopter }
+					}
+					complete_special_project = sp:sp_air_helicopter
+					custom_effect_tooltip = tooltip_white_line
+				}
+				enable_tech_extensive_reconnaissance = yes
+				custom_effect_tooltip = tooltip_white_line
+				add_breakthrough_progress = {
+					specialization = specialization_air
+					value = 0.5
+				}
 				add_tech_bonus = {
-					name = cas_bonus
-					bonus = 1.0
+					name = SZC_YCP_sky_splitting_air_cavalry
+					bonus = 1
 					uses = 1
-					category = cas_bomber
+					category = air_equipment
+				}
+				custom_effect_tooltip = SZC_YCP_sky_splitting_air_cavalry_tt
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.53
+						days = 7
+					}
 				}
 			}
 		}
@@ -33982,14 +34292,42 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_helldiver"
+				if = {
+					limit = {
+						NOT = { has_tech = paratroopers }
+					}
+					set_technology = { paratroopers = 1 }
+				}
 				add_tech_bonus = {
-					name = paratrooper_bonus
+					name = SZC_YCP_helldiver
 					bonus = 1.0
 					uses = 1
-					category = paratroopers
+					category = para_tech
+
 				}
-				set_technology = {
-					YCP_hellpod = 1
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.5
+					name = SZC_YCP_helldiver
+					uses = 1
+					category = cat_paratroopers_doctrine
+				}
+				add_ideas = {
+					SZC_YCP_helldiver_idea
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.54
+						days = 7
+					}
+					if = {
+						limit = {
+							is_debug = yes
+						}
+						country_event = {
+							id = NKRsichuanflavor.55
+							days = 35
+						}
+					}
 				}
 			}
 		}
@@ -34011,12 +34349,11 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_march_of_azure_thunder"
-				add_tech_bonus = {
-					name = tactical_bomber_bonus
-					bonus = 1.0
-					uses = 1
-					category = tactical_bomber
+				swap_ideas = {
+					remove_idea = SZC_YCP_ROCAF_air_idea_2
+					add_idea = SZC_YCP_ROCAF_air_idea_3
 				}
+				custom_effect_tooltip = SZC_YCP_march_of_azure_thunder_tt
 			}
 		}
 
@@ -34030,6 +34367,10 @@ focus_tree = {
 
 			relative_position_id = SZC_YCP_vast_clear_skies
 
+			available = {
+				has_completed_focus = SZC_YCP_iron_wings_scattered_like_stars
+			}
+
 			prerequisite = {
 				focus = SZC_YCP_march_of_azure_thunder
 			}
@@ -34041,11 +34382,12 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_wind_riding_dragon"
-				add_tech_bonus = {
-					name = jet_bonus
-					bonus = 1.0
-					uses = 1
-					category = jet_technology
+				custom_effect_tooltip = SZC_YCP_wind_riding_dragon_tt
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.56
+						days = 3
+					}
 				}
 			}
 		}
@@ -34060,6 +34402,10 @@ focus_tree = {
 
 			relative_position_id = SZC_YCP_vast_clear_skies
 
+			available = {
+				always = no
+			}
+
 			prerequisite = {
 				focus = SZC_YCP_wind_riding_dragon
 			}
@@ -34067,12 +34413,7 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_boundless_space"
-				add_tech_bonus = {
-					name = rocketry_bonus
-					bonus = 1.0
-					uses = 1
-					category = rocketry
-				}
+				custom_effect_tooltip = SZC_YCP_boundless_space_tt
 			}
 		}
 
@@ -34093,11 +34434,15 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_immeasurable_and_formless"
-				add_tech_bonus = {
-					name = nuclear_bonus
-					bonus = 1.0
-					uses = 1
-					category = nuclear
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.75
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.57
+						days = 7
+					}
 				}
 			}
 		}
@@ -34116,14 +34461,22 @@ focus_tree = {
 				focus = SZC_YCP_immeasurable_and_formless
 			}
 
+			available = {
+				has_completed_focus = SZC_YCP_march_of_azure_thunder
+			}
+
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_roc_soars_ten_thousand_li"
 				add_tech_bonus = {
 					name = strategic_bomber_bonus
-					bonus = 1.0
-					uses = 1
-					category = strategic_bomber
+					bonus = 2.5
+					uses = 3
+					category = cat_strategic_bomber
+				}
+				swap_ideas = {
+					remove_idea = SZC_YCP_ROCAF_air_idea_3
+					add_idea = SZC_YCP_ROCAF_air_idea_4
 				}
 			}
 		}
@@ -34138,6 +34491,10 @@ focus_tree = {
 
 			relative_position_id = SZC_YCP_vast_clear_skies
 
+			available = {
+				is_special_project_completed = sp:sp_nuclear_bomb
+			}
+
 			prerequisite = {
 				focus = SZC_YCP_roc_soars_ten_thousand_li
 			}
@@ -34145,11 +34502,14 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_world_burning_boiling_sword"
-				add_tech_bonus = {
-					name = nuclear_bonus
-					bonus = 1.0
-					uses = 1
-					category = nuclear
+				add_ideas = {
+					SZC_YCP_pax_nuclearica_idea
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.58
+						days = 7
+					}
 				}
 			}
 		}
@@ -34167,6 +34527,13 @@ focus_tree = {
 
 			relative_position_id = SZC_YCP_hard_to_cross_guanshan
 
+			available = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				has_global_flag = china_united
+			}
+
 			prerequisite = {
 				focus = SZC_YCP_purge_bad_habits
 			}
@@ -34174,7 +34541,14 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_perish_by_the_sea"
-				add_navy_experience = 10
+				navy_experience = 25
+				CHN_inherit_beiyang_fleet_effect = yes
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.59
+						days = 5
+					}
+				}
 			}
 		}
 
@@ -34196,11 +34570,17 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_follow_in_the_footsteps"
 				add_tech_bonus = {
-					name = naval_doctrine_bonus
-					bonus = 1.0
-					uses = 1
-					category = naval_doctrine
+					name = SZC_YCP_follow_in_the_footsteps
+					bonus = 2.0
+					uses = 4
+					category = naval_equipment
 				}
+				add_timed_idea = {
+					idea = GXC_six_year_programme_idea
+					days = 730
+				}
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
 			}
 		}
 
@@ -34221,12 +34601,12 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_expand_shipyards"
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
 			}
 		}
 
@@ -34247,11 +34627,45 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_renovate_naval_ports"
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					instant_build = yes
+				743 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+					}
 				}
+				744 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+					}
+				}
+				745 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+					}
+				}
+				592 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+					}
+				}
+				746 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+					}
+				}
+
+				
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
 			}
 		}
 
@@ -34272,11 +34686,19 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_tide_forged_precision"
-				add_tech_bonus = {
-					name = naval_equipment_bonus
-					bonus = 1.0
-					uses = 2
-					category = naval_equipment
+				if = {
+					limit = {
+						any_owned_state = {
+							is_coastal = yes
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ROOT
+							can_construct_building = navy_facility
+						}
+						construct_building_in_random_province = { navy_facility = 1 }
+					}
 				}
 			}
 		}
@@ -34298,17 +34720,14 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_rapid_reaction_warfare"
-				add_tech_bonus = {
-					name = destroyer_bonus
-					bonus = 1.0
-					uses = 1
-					category = destroyer
+				add_ideas = {
+					SZC_YCP_ROCAF_navy_idea_1
 				}
-				add_tech_bonus = {
-					name = light_cruiser_bonus
-					bonus = 1.0
-					uses = 1
-					category = light_cruiser
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.60
+						days = 5
+					}
 				}
 			}
 		}
@@ -34331,16 +34750,33 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_fleet_in_being"
 				add_tech_bonus = {
-					name = capital_ship_bonus
-					bonus = 1.0
-					uses = 1
-					category = heavy_cruiser
+					name = SZC_YCP_follow_in_the_footsteps
+					bonus = 2.0
+					uses = 3
+					category = naval_equipment
 				}
-				add_tech_bonus = {
-					name = capital_ship_bonus
-					bonus = 1.0
-					uses = 1
-					category = battleship
+				add_doctrine_cost_reduction = {
+					name = SZC_YCP_fleet_in_being
+					cost_reduction = 0.5
+					uses = 2
+					category = naval_doctrine
+				}
+				
+				add_mastery_bonus = {
+					name = SZC_YCP_fleet_in_being
+					bonus = 0.15
+					days = 730
+					folder = naval
+				}
+				swap_ideas = {
+					remove_idea = SZC_YCP_ROCAF_navy_idea_1
+					add_idea = SZC_YCP_ROCAF_navy_idea_2
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.61
+						days = 7
+					}
 				}
 			}
 		}
@@ -34362,12 +34798,7 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_liberty_ships"
-				add_tech_bonus = {
-					name = transport_bonus
-					bonus = 1.0
-					uses = 1
-					category = transport
-				}
+				add_ideas = USA_liberty_ships_idea
 			}
 		}
 
@@ -34381,6 +34812,10 @@ focus_tree = {
 
 			relative_position_id = SZC_YCP_perish_by_the_sea
 
+			available = {
+				has_completed_focus = SZC_YCP_fleet_in_being
+			}
+
 			prerequisite = {
 				focus = SZC_YCP_liberty_ships
 			}
@@ -34389,10 +34824,33 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_sail_towards_the_clouds"
 				add_tech_bonus = {
-					name = carrier_bonus
-					bonus = 1.0
-					uses = 1
-					category = carrier
+					name = SZC_YCP_sail_towards_the_clouds
+					ahead_reduction = 1
+					uses = 2
+					category = cv_tech
+				}
+				add_tech_bonus = {
+					name = SZC_YCP_sail_towards_the_clouds
+					bonus = 0.50
+					uses = 2
+					category = ship_modules_tech
+				}
+				custom_effect_tooltip = tooltip_white_line
+				add_mastery_bonus = {
+					name = SZC_YCP_sail_towards_the_clouds
+					bonus = 0.1
+					days = 365
+					track = carriers
+				}
+				swap_ideas = {
+					remove_idea = SZC_YCP_ROCAF_navy_idea_2
+					add_idea = SZC_YCP_ROCAF_navy_idea_3
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.62
+						days = 7
+					}
 				}
 			}
 		}
@@ -34415,11 +34873,12 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_amphibious_warfare"
 				add_tech_bonus = {
-					name = marines_bonus
-					bonus = 1.0
+					name = SZC_YCP_amphibious_warfare
+					bonus = 1.5
 					uses = 1
-					category = marines
+					category = marine_tech
 				}
+				enable_tech_marine_bonus = yes
 			}
 		}
 
@@ -34433,6 +34892,10 @@ focus_tree = {
 
 			relative_position_id = SZC_YCP_perish_by_the_sea
 
+			available = {
+				has_completed_focus = SZC_YCP_hunter_killer_voyage
+			}
+
 			prerequisite = {
 				focus = SZC_YCP_fleet_in_being
 			}
@@ -34443,12 +34906,16 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_shimmering_deep_ocean"
-				add_navy_experience = 50
-				add_tech_bonus = {
-					name = naval_doctrine_bonus
-					bonus = 1.0
-					uses = 1
-					category = naval_doctrine
+				remove_ideas = SZC_YCP_chinese_wolfpack_idea
+				swap_ideas = {
+					remove_idea = SZC_YCP_ROCAF_navy_idea_3
+					add_idea = SZC_YCP_ROCAF_navy_idea_4
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.64
+						days = 7
+					}
 				}
 			}
 		}
@@ -34470,11 +34937,29 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_hunter_killer_voyage"
+				
+				add_navy_experience = 50
 				add_tech_bonus = {
-					name = submarine_bonus
-					bonus = 1.0
-					uses = 2
-					category = submarine
+					name = SZC_YCP_shimmering_deep_ocean
+					ahead_reduction = 1
+					uses = 1
+					category = ss_tech
+				}
+				if = {
+					limit = { NOT = { is_special_project_completed = sp:sp_naval_cruiser_submarine } }
+					complete_special_project = {
+						project = sp:sp_naval_cruiser_submarine
+						show_modifiers = no
+					}
+				}
+				add_ideas = {
+					SZC_YCP_chinese_wolfpack_idea
+				}
+				hidden_effect = {
+					country_event = {
+						id = NKRsichuanflavor.63
+						days = 7
+					}
 				}
 			}
 		}
@@ -34489,6 +34974,10 @@ focus_tree = {
 
 			relative_position_id = SZC_YCP_perish_by_the_sea
 
+			available = {
+				is_special_project_completed = sp:sp_nuclear_bomb
+			}
+
 			prerequisite = {
 				focus = SZC_YCP_hunter_killer_voyage
 			}
@@ -34502,12 +34991,7 @@ focus_tree = {
 					uses = 1
 					category = nuclear
 				}
-				add_tech_bonus = {
-					name = torpedo_bonus
-					bonus = 1.0
-					uses = 1
-					category = naval_torpedo
-				}
+				complete_special_project = sp:sp_naval_nuclear_torpedo
 			}
 		}
 

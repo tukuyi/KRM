@@ -9485,9 +9485,7 @@ country_event = { #妇女权利？
 		name = NKRsichuan.497.a
 		add_stability = -0.1
 		SZC_YCP_constitution_progress_effect = yes
-		set_rule = {
-			can_generate_female_aces = yes
-		}
+		set_country_flag = SZC_YCP_female_rights_guaranteed
 	}
 	option = {#我们将循序渐进，而非执着于空谈乱想。
 		log = "[GetLogInfo]: event NKRsichuan.497 option NKRsichuan.497.b"
@@ -20092,7 +20090,7 @@ country_event = { #背叛
 	}
 }
 
-country_event = { #
+country_event = { #过去的想法
 	id = NKRsichuanflavor.32
 	title = NKRsichuanflavor.32.t
 	desc = NKRsichuanflavor.32.d
@@ -20108,7 +20106,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #旧军人
 	id = NKRsichuanflavor.33
 	title = NKRsichuanflavor.33.t
 	desc = NKRsichuanflavor.33.d
@@ -20118,13 +20116,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#距离教会他们国家主义，还有一段距离...
 		log = "[GetLogInfo]: event NKRsichuanflavor.33 option NKRsichuanflavor.33.a"
 		name = NKRsichuanflavor.33.a
 	}
 }
 
-country_event = { #
+country_event = { #青年兵
 	id = NKRsichuanflavor.34
 	title = NKRsichuanflavor.34.t
 	desc = NKRsichuanflavor.34.d
@@ -20134,13 +20132,14 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#好汉不当兵？
 		log = "[GetLogInfo]: event NKRsichuanflavor.34 option NKRsichuanflavor.34.a"
 		name = NKRsichuanflavor.34.a
+		add_war_support = -0.03
 	}
 }
 
-country_event = { #
+country_event = { #天空舞者
 	id = NKRsichuanflavor.35
 	title = NKRsichuanflavor.35.t
 	desc = NKRsichuanflavor.35.d
@@ -20156,7 +20155,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #以战止战
 	id = NKRsichuanflavor.36
 	title = NKRsichuanflavor.36.t
 	desc = NKRsichuanflavor.36.d
@@ -20172,7 +20171,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #金陵军校的遗产金陵军校的遗产
 	id = NKRsichuanflavor.37
 	title = NKRsichuanflavor.37.t
 	desc = NKRsichuanflavor.37.d
@@ -20182,13 +20181,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#升官发财莫入此门！
 		log = "[GetLogInfo]: event NKRsichuanflavor.37 option NKRsichuanflavor.37.a"
 		name = NKRsichuanflavor.37.a
 	}
 }
 
-country_event = { #
+country_event = { #尴尬的会面
 	id = NKRsichuanflavor.38
 	title = NKRsichuanflavor.38.t
 	desc = NKRsichuanflavor.38.d
@@ -20198,13 +20197,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#不打不相识？
 		log = "[GetLogInfo]: event NKRsichuanflavor.38 option NKRsichuanflavor.38.a"
 		name = NKRsichuanflavor.38.a
 	}
 }
 
-country_event = { #
+country_event = { #德属东亚的新星？
 	id = NKRsichuanflavor.39
 	title = NKRsichuanflavor.39.t
 	desc = NKRsichuanflavor.39.d
@@ -20214,13 +20213,24 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#呃，欢迎？
 		log = "[GetLogInfo]: event NKRsichuanflavor.39 option NKRsichuanflavor.39.a"
 		name = NKRsichuanflavor.39.a
+		add_political_power = -50
+		GEA = {
+			GEA_erwin_rommel = {
+				SZC_recruit_character_effect = yes
+			}
+		}
+	}
+	option = {#德国人可信不过！
+		log = "[GetLogInfo]: event NKRsichuanflavor.39 option NKRsichuanflavor.39.b"
+		name = NKRsichuanflavor.39.b
+		add_political_power = 20
 	}
 }
 
-country_event = { #
+country_event = { #军阀主义的阴影
 	id = NKRsichuanflavor.40
 	title = NKRsichuanflavor.40.t
 	desc = NKRsichuanflavor.40.d
@@ -20230,13 +20240,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#隐忍...
 		log = "[GetLogInfo]: event NKRsichuanflavor.40 option NKRsichuanflavor.40.a"
 		name = NKRsichuanflavor.40.a
 	}
 }
 
-country_event = { #
+country_event = { #海兵队
 	id = NKRsichuanflavor.41
 	title = NKRsichuanflavor.41.t
 	desc = NKRsichuanflavor.41.d
@@ -20246,13 +20256,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#海兵队，出击！
 		log = "[GetLogInfo]: event NKRsichuanflavor.41 option NKRsichuanflavor.41.a"
 		name = NKRsichuanflavor.41.a
 	}
 }
 
-country_event = { #
+country_event = { #战争艺术
 	id = NKRsichuanflavor.42
 	title = NKRsichuanflavor.42.t
 	desc = NKRsichuanflavor.42.d
@@ -20268,7 +20278,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #步兵操典
 	id = NKRsichuanflavor.43
 	title = NKRsichuanflavor.43.t
 	desc = NKRsichuanflavor.43.d
@@ -20284,7 +20294,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #火力不足恐惧症？
 	id = NKRsichuanflavor.44
 	title = NKRsichuanflavor.44.t
 	desc = NKRsichuanflavor.44.d
@@ -20294,13 +20304,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#希望这不会对我们的补给造成困难。
 		log = "[GetLogInfo]: event NKRsichuanflavor.44 option NKRsichuanflavor.44.a"
 		name = NKRsichuanflavor.44.a
 	}
 }
 
-country_event = { #
+country_event = { #独立装甲理论独立装甲理论
 	id = NKRsichuanflavor.45
 	title = NKRsichuanflavor.45.t
 	desc = NKRsichuanflavor.45.d
@@ -20316,7 +20326,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #合成黎明
 	id = NKRsichuanflavor.46
 	title = NKRsichuanflavor.46.t
 	desc = NKRsichuanflavor.46.d
@@ -20326,13 +20336,13 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#真快啊...
 		log = "[GetLogInfo]: event NKRsichuanflavor.46 option NKRsichuanflavor.46.a"
 		name = NKRsichuanflavor.46.a
 	}
 }
 
-country_event = { #
+country_event = { #药到病除
 	id = NKRsichuanflavor.47
 	title = NKRsichuanflavor.47.t
 	desc = NKRsichuanflavor.47.d
@@ -20348,7 +20358,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #新工程兵团
 	id = NKRsichuanflavor.48
 	title = NKRsichuanflavor.48.t
 	desc = NKRsichuanflavor.48.d
@@ -20364,7 +20374,7 @@ country_event = { #
 	}
 }
 
-country_event = { #
+country_event = { #强军
 	id = NKRsichuanflavor.49
 	title = NKRsichuanflavor.49.t
 	desc = NKRsichuanflavor.49.d
@@ -20380,7 +20390,341 @@ country_event = { #
 	}
 }
 
+country_event = { #追赶差距
+	id = NKRsichuanflavor.50
+	title = NKRsichuanflavor.50.t
+	desc = NKRsichuanflavor.50.d
+	picture = GFX_report_event_SZC_516
 
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.50 option NKRsichuanflavor.50.a"
+		name = NKRsichuanflavor.50.a
+	}
+}
+
+country_event = { #王牌
+	id = NKRsichuanflavor.51
+	title = NKRsichuanflavor.51.t
+	desc = NKRsichuanflavor.51.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.51 option NKRsichuanflavor.51.a"
+		name = NKRsichuanflavor.51.a
+	}
+}
+
+country_event = { #喷气式战机
+	id = NKRsichuanflavor.52
+	title = NKRsichuanflavor.52.t
+	desc = NKRsichuanflavor.52.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#我们应该能靠技术优势取胜。
+		log = "[GetLogInfo]: event NKRsichuanflavor.52 option NKRsichuanflavor.52.a"
+		name = NKRsichuanflavor.52.a
+	}
+}
+
+country_event = { #空中骑兵构想
+	id = NKRsichuanflavor.53
+	title = NKRsichuanflavor.53.t
+	desc = NKRsichuanflavor.53.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.53 option NKRsichuanflavor.53.a"
+		name = NKRsichuanflavor.53.a
+	}
+}
+
+country_event = { #成为，绝地潜兵
+	id = NKRsichuanflavor.54
+	title = NKRsichuanflavor.54.t
+	desc = NKRsichuanflavor.54.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.54 option NKRsichuanflavor.54.a"
+		name = NKRsichuanflavor.54.a
+	}
+}
+
+country_event = { #绝地潜兵新构想
+	id = NKRsichuanflavor.55
+	title = NKRsichuanflavor.55.t
+	desc = NKRsichuanflavor.55.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#立刻开始研发！
+		log = "[GetLogInfo]: event NKRsichuanflavor.55 option NKRsichuanflavor.55.a"
+		name = NKRsichuanflavor.55.a
+	}
+}
+
+country_event = { #巨型空中母舰
+	id = NKRsichuanflavor.56
+	title = NKRsichuanflavor.56.t
+	desc = NKRsichuanflavor.56.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#批准COB的设想。
+		log = "[GetLogInfo]: event NKRsichuanflavor.56 option NKRsichuanflavor.56.a"
+		name = NKRsichuanflavor.56.a
+	}
+}
+
+country_event = { #气功？
+	id = NKRsichuanflavor.57
+	title = NKRsichuanflavor.57.t
+	desc = NKRsichuanflavor.57.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#呃，那就感兴趣吧？
+		log = "[GetLogInfo]: event NKRsichuanflavor.57 option NKRsichuanflavor.57.a"
+		name = NKRsichuanflavor.57.a
+	}
+}
+
+country_event = { #核子治下的和平
+	id = NKRsichuanflavor.58
+	title = NKRsichuanflavor.58.t
+	desc = NKRsichuanflavor.58.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.58 option NKRsichuanflavor.58.a"
+		name = NKRsichuanflavor.58.a
+	}
+}
+
+country_event = { #从头开始
+	id = NKRsichuanflavor.59
+	title = NKRsichuanflavor.59.t
+	desc = NKRsichuanflavor.59.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#青年海军。
+		log = "[GetLogInfo]: event NKRsichuanflavor.59 option NKRsichuanflavor.59.a"
+		name = NKRsichuanflavor.59.a
+	}
+}
+
+country_event = { #约翰·费舍尔的遗产
+	id = NKRsichuanflavor.60
+	title = NKRsichuanflavor.60.t
+	desc = NKRsichuanflavor.60.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.60 option NKRsichuanflavor.60.a"
+		name = NKRsichuanflavor.60.a
+	}
+}
+
+country_event = { #亚瑟·赫伯特的遗产
+	id = NKRsichuanflavor.61
+	title = NKRsichuanflavor.61.t
+	desc = NKRsichuanflavor.61.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.61 option NKRsichuanflavor.61.a"
+		name = NKRsichuanflavor.61.a
+	}
+}
+
+country_event = { #绝对主力
+	id = NKRsichuanflavor.62
+	title = NKRsichuanflavor.62.t
+	desc = NKRsichuanflavor.62.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.62 option NKRsichuanflavor.62.a"
+		name = NKRsichuanflavor.62.a
+	}
+}
+
+country_event = { #狼群
+	id = NKRsichuanflavor.63
+	title = NKRsichuanflavor.63.t
+	desc = NKRsichuanflavor.63.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.63 option NKRsichuanflavor.63.a"
+		name = NKRsichuanflavor.63.a
+	}
+}
+
+country_event = { #全球部署
+	id = NKRsichuanflavor.64
+	title = NKRsichuanflavor.64.t
+	desc = NKRsichuanflavor.64.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.64 option NKRsichuanflavor.64.a"
+		name = NKRsichuanflavor.64.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.65
+	title = NKRsichuanflavor.65.t
+	desc = NKRsichuanflavor.65.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.65 option NKRsichuanflavor.65.a"
+		name = NKRsichuanflavor.65.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.66
+	title = NKRsichuanflavor.66.t
+	desc = NKRsichuanflavor.66.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.66 option NKRsichuanflavor.66.a"
+		name = NKRsichuanflavor.66.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.67
+	title = NKRsichuanflavor.67.t
+	desc = NKRsichuanflavor.67.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.67 option NKRsichuanflavor.67.a"
+		name = NKRsichuanflavor.67.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.68
+	title = NKRsichuanflavor.68.t
+	desc = NKRsichuanflavor.68.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.68 option NKRsichuanflavor.68.a"
+		name = NKRsichuanflavor.68.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.69
+	title = NKRsichuanflavor.69.t
+	desc = NKRsichuanflavor.69.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.69 option NKRsichuanflavor.69.a"
+		name = NKRsichuanflavor.69.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanflavor.70
+	title = NKRsichuanflavor.70.t
+	desc = NKRsichuanflavor.70.d
+	picture = GFX_report_event_SZC_516
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.70 option NKRsichuanflavor.70.a"
+		name = NKRsichuanflavor.70.a
+	}
+}
 
 country_event = { #DEBUG-意识形态切换
 	id = SZCDEBUG.1
