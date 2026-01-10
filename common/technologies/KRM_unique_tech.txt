@@ -17,4 +17,17 @@ technologies = {
 		experience_gain_paratrooper_combat_factor = 0.25
 	}
 
+	YCP_infantry_weapons = {
+
+		enable_equipments = {
+			YCP_infantry_equipment
+		}
+
+		research_cost = 1
+		allow = {
+			always = no
+		}
+	}
+
+
 }
