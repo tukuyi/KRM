@@ -1495,10 +1495,14 @@ chinese_unification = {
 							limit = {
 								has_country_flag = SZC_YCP_li_path
 							}
-							has_completed_focus = SZC_YCP_young_china_and_young_democracy
-							has_completed_focus = SZC_YCP_liberal_statist_struggle
-							NOT = {
-								has_country_flag = SZC_YCP_jiang_path
+							OR = {
+								has_completed_focus = SZC_YCP_young_china_and_young_democracy
+								has_completed_focus = SZC_YCP_liberal_statist_struggle
+							}
+							hidden = {
+								NOT = {
+									has_country_flag = SZC_YCP_jiang_path
+								}
 							}
 						}
 						else_if = {

@@ -23202,8 +23202,8 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 50
-			# add = 0
+			# add = 50
+			add = 0
 			tag = SZC
 		}
 	}
@@ -31945,7 +31945,7 @@ focus_tree = {
 				SZC_YCP_CEA_leader_idea
 			}
 			var:economic_sphere = {
-				set_character_name = SZC_YRF_sphere
+				set_character_name = SZC_CEA_sphere
 				var:icon = { set_character_name = "GFX_goal_SZC_CEA_sphere" }
 				var:desc = { set_character_name = KR_CEA_desc }
 				set_variable = { red = 0.984 }
@@ -32139,7 +32139,7 @@ focus_tree = {
 				SZC_YCP_XHP_leader_idea
 			}
 			var:economic_sphere = {
-				set_character_name = SZC_YRF_sphere
+				set_character_name = SZC_XHP_sphere
 				var:icon = { set_character_name = "GFX_goal_SZC_XHP_sphere" }
 				var:desc = { set_character_name = KR_XHP_desc }
 				set_variable = { red = 0.984 }
