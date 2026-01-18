@@ -3382,3 +3382,144 @@ political_actions = {
 		fixed_random_seed = no
 	}
 }
+
+SZC_YCP_COB_category = {
+	SZC_YCP_advanced_rifle_research = {
+		icon = generic_ignite_civil_war
+		allowed = { tag = SZC }
+
+		visible = {
+			has_country_flag = SZC_YCP_COB_available
+		}
+		available = {
+			NOT = {
+				has_country_flag = SZC_YCP_COB_researching
+			}
+		}
+		cancel_trigger = {
+			is_subject = yes
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+
+		fire_only_once = yes
+
+		days_remove = 180
+
+		modifier = {
+			consumer_goods_factor = 0.15
+		}
+
+		select_effect = {
+			log = "[GetLogRoot]: Decision select SZC_YCP_advanced_rifle_research"
+			set_country_flag = SZC_YCP_COB_researching
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete SZC_YCP_advanced_rifle_research"
+			clr_country_flag = SZC_YCP_COB_researching
+			enable_tech_YCP_infantry_weapon = yes
+		}
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove SZC_YCP_advanced_rifle_research"
+			clr_country_flag = SZC_YCP_COB_researching
+		}
+		fixed_random_seed = no
+	}
+	SZC_YCP_hellpod_research = {
+		icon = generic_ignite_civil_war
+		allowed = { tag = SZC }
+
+		visible = {
+			has_country_flag = SZC_YCP_COB_available
+			has_completed_focus = SZC_YCP_helldiver
+			is_debug = yes
+		}
+		available = {
+			NOT = {
+				has_country_flag = SZC_YCP_COB_researching
+			}
+		}
+		cancel_trigger = {
+			is_subject = yes
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+
+		fire_only_once = yes
+
+		days_remove = 180
+
+		modifier = {
+			consumer_goods_factor = 0.15
+		}
+
+		select_effect = {
+			log = "[GetLogRoot]: Decision select SZC_YCP_hellpod_research"
+			set_country_flag = SZC_YCP_COB_researching
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete SZC_YCP_hellpod_research"
+			clr_country_flag = SZC_YCP_COB_researching
+			enable_tech_YCP_hellpod = yes
+		}
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove SZC_YCP_hellpod_research"
+			clr_country_flag = SZC_YCP_COB_researching
+		}
+		fixed_random_seed = no
+	}
+	SZC_YCP_advanced_helicopter_research = {
+		icon = generic_ignite_civil_war
+		allowed = { tag = SZC }
+
+		visible = {
+			has_country_flag = SZC_YCP_COB_available
+		}
+		available = {
+			NOT = {
+				has_country_flag = SZC_YCP_COB_researching
+			}
+			has_completed_focus = SZC_YCP_sky_splitting_air_cavalry
+		}
+		cancel_trigger = {
+			is_subject = yes
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+
+		fire_only_once = yes
+
+		days_remove = 180
+
+		modifier = {
+			consumer_goods_factor = 0.15
+		}
+
+		select_effect = {
+			log = "[GetLogRoot]: Decision select SZC_YCP_advanced_helicopter_research"
+			set_country_flag = SZC_YCP_COB_researching
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete SZC_YCP_advanced_helicopter_research"
+			clr_country_flag = SZC_YCP_COB_researching
+			add_ideas = {
+				SZC_YCP_advanced_helicopter
+			}
+		}
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove SZC_YCP_advanced_helicopter_research"
+			clr_country_flag = SZC_YCP_COB_researching
+		}
+		fixed_random_seed = no
+	}
+
+}

@@ -4193,6 +4193,28 @@ YCP_party_issue_dissolve = {
 }
 
 
+enable_tech_YCP_infantry_weapon = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|YCP_infantry_weapon
+			EFFECT = tech_effect|YCP_infantry_weapon
+		}
+		set_technology = { YCP_infantry_weapon = 1 popup = no }
+	}
+}
+
+enable_tech_YCP_hellpod = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|YCP_hellpod
+			EFFECT = tech_effect|YCP_hellpod
+		}
+		set_technology = { YCP_hellpod = 1 popup = no }
+	}
+}
+
 
 
 add_temp_unit_leader_role = {

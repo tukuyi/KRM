@@ -3328,6 +3328,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_Consolidate_The_Province"
 			SZC_political_recovery = yes
+			hidden_effect = {
+				country_event = NKRsichuan.1
+			}
 		}
 	}
 
@@ -3558,7 +3561,6 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-			china_add_research_slots = yes
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -23202,8 +23204,8 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			# add = 50
-			add = 0
+			add = 50
+			# add = 0
 			tag = SZC
 		}
 	}

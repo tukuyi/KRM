@@ -2902,23 +2902,6 @@ characters = {
 		}
 	}
 
-	#戴季陶
-	SZC_dai_jitao = {
-		name = SZC_dai_jitao
-		portraits = {
-			civilian = {
-				small = GFX_portrait_SZC_dai_jitao_small
-			}
-		}
-		
-		advisor = {
-			slot = second_in_command
-			idea_token = SZC_dai_jitao_sic
-			cost = 0
-			can_be_fired = no
-			traits = { SZC_knowledgeable_theorist_sic }
-		}
-	}
 
 	#夏道平
 	SZC_xia_daoping = {
@@ -4766,7 +4749,7 @@ characters = {
 		name = YCP_national_defense_academy
 		portraits = {
 			army = {
-				small = GFX_idea_adaptable_modernizers_spirit
+				small = GFX_idea_YCP_national_defense_academy
 			}
 		}
 		advisor = {

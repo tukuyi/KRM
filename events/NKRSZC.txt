@@ -18685,7 +18685,7 @@ country_event = { #中社扩张
 	id = NKRsichuanPI.4
 	title = NKRsichuanPI.4.t
 	desc = NKRsichuanPI.4.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xie_chengping
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18693,22 +18693,31 @@ country_event = { #中社扩张
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanPI.4 option NKRsichuanPI.4.a"
-		name = NKRsichuanPI.374.a
-		SZC_xie_chengping = {
-			SZC_recruit_character_effect = yes
+		name = NKRsichuanPI.4.a
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.03
 		}
-		SZC_xia_erkang = {
-			SZC_recruit_character_effect = yes
+		show_ideas_tooltip = SZC_xie_chengping_advisor
+		show_ideas_tooltip = SZC_xia_erkang_advisor
+		show_ideas_tooltip = SZC_shen_yunlong_advisor
+		hidden_effect = {
+			SZC_xie_chengping = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_xia_erkang = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_shen_yunlong = {
+				SZC_recruit_character_effect = yes
+			}
+			set_temp_variable = { temp_select_token = token:SZC_xie_chengping }
+			YCP_party_issue_add_S = yes
+			set_temp_variable = { temp_select_token = token:SZC_xia_erkang }
+			YCP_party_issue_add_S = yes
+			set_temp_variable = { temp_select_token = token:SZC_shen_yunlong }
+			YCP_party_issue_add_S = yes
 		}
-		SZC_shen_yunlong = {
-			SZC_recruit_character_effect = yes
-		}
-		set_temp_variable = { temp_select_token = token:SZC_xie_chengping }
-		YCP_party_issue_add_S = yes
-		set_temp_variable = { temp_select_token = token:SZC_xia_erkang }
-		YCP_party_issue_add_S = yes
-		set_temp_variable = { temp_select_token = token:SZC_shen_yunlong }
-		YCP_party_issue_add_S = yes
 	}
 }
 
@@ -20220,6 +20229,14 @@ country_event = { #德属东亚的新星？
 		GEA = {
 			GEA_erwin_rommel = {
 				SZC_recruit_character_effect = yes
+			}
+		}
+		GEA_erwin_rommel = {
+			set_portraits = {
+				army = {
+					large = GFX_portrait_SZC_erwin_rommel_large
+					small = GFX_portrait_SZC_erwin_rommel_small
+				}
 			}
 		}
 	}

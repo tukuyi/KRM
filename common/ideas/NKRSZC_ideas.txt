@@ -4069,6 +4069,22 @@ ideas = {
 				}
 			}
 		}
+
+		SZC_YCP_advanced_helicopter = {
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_advanced_helicopter" }
+			picture = CHI_liberation_of_east_asia
+			allowed = { always = no }
+			equipment_bonus = {
+				helicopter = {
+					build_cost_ic = 0.10
+					soft_attack = 0.25
+					hard_attack = 0.25
+					breakthrough = 0.6
+					recon = 2
+					instant = yes
+				}
+			}
+		}
 	}
 	
 	industrial_concern = {

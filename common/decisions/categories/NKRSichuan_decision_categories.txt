@@ -68,6 +68,13 @@ SZC_YCP_balance_of_power_category = {
 	priority = 0
 }
 
+SZC_YCP_COB_category = {
+	icon = GFX_decision_category_power_struggle
+	allowed = { original_tag = SZC }
+	visible = { has_country_flag = SZC_YCP_COB_available }
+	priority = 114514
+}
+
 SZC_pan_foreign_policy_category = {
 	
 	icon = GFX_decision_category_qing_hall
