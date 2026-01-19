@@ -17158,9 +17158,9 @@ focus_tree = {
 		y = 3
 		relative_position_id = SZC_pan_situation_under_control
 
-		allow_branch = {
-			has_country_flag = NKRSZC_joinkmt
-		}
+		# allow_branch = {
+		# 	has_country_flag = NKRSZC_joinkmt
+		# }
 
 		prerequisite = {
 			focus = SZC_pan_rally_our_men
@@ -25123,7 +25123,28 @@ focus_tree = {
 		}
 
 		available = {
-			authoritarian_democrat > party_popularity@social_liberal
+			# authoritarian_democrat > party_popularity@social_liberal
+			set_temp_variable = {
+				var = YCP_adv_chk
+				value = token:SZC_wang_lanseng
+			}
+			SZC_wang_lanseng = {
+				YCP_working_in_party = yes
+			}
+			set_temp_variable = {
+				var = YCP_adv_chk
+				value = token:SZC_liu_yongji
+			}
+			SZC_liu_yongji = {
+				YCP_working_in_party = yes
+			}
+			set_temp_variable = {
+				var = YCP_adv_chk
+				value = token:SZC_wu_tianchi
+			}
+			SZC_wu_tianchi = {
+				YCP_working_in_party = yes
+			}
 		}
 
 
@@ -25214,7 +25235,28 @@ focus_tree = {
 		}
 
 		available = {
-			social_liberal > party_popularity@authoritarian_democrat
+			# social_liberal > party_popularity@authoritarian_democrat
+			set_temp_variable = {
+				var = YCP_adv_chk
+				value = token:SZC_xia_erkang
+			}
+			SZC_xia_erkang = {
+				YCP_working_in_party = yes
+			}
+			set_temp_variable = {
+				var = YCP_adv_chk
+				value = token:SZC_shen_yunlong
+			}
+			SZC_shen_yunlong = {
+				YCP_working_in_party = yes
+			}
+			set_temp_variable = {
+				var = YCP_adv_chk
+				value = token:SZC_yu_jiaju
+			}
+			SZC_yu_jiaju = {
+				YCP_working_in_party = yes
+			}
 		}
 
 		prerequisite = {

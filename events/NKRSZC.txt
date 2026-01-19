@@ -1706,9 +1706,22 @@ country_event = { #南京的不满
 		log = "[GetLogInfo]: event NKRsichuan.137 option NKRsichuan.137.a"
 		name = NKRsichuan.137.a
 		hidden_effect = {
-			country_event = {
-				id = NKRsichuan.138
-				days = 2
+			if = {
+				limit = {
+					RKT = {
+						exists = no
+					}
+				}
+				country_event = {
+					id = NKRsichuan.138
+					days = 2
+				}
+			}
+			else = {
+				CHI = {
+					annex_country = ROOT
+					transfer_troops = yes
+				}
 			}
 		}
 	}
