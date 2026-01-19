@@ -19,7 +19,6 @@ dependencies={
 	"Kaiserreich Models - Base Game"
 	"Kaiserreich Models - Waking the Tiger DLC"
 }
-name="KR 命运的歧点"
+name="KR 命运新生"
 picture="Thumbnail.png"
 supported_version="1.15.*"
-remote_file_id="3416954702"
