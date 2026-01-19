@@ -4776,7 +4776,7 @@ characters = {
 			slot = second_in_command
 			idea_token = SZC_chen_zaidao_sic
 			ledger = army
-			traits = {  }
+			traits = { SZC_the_arrogant_warlord_sic }
 			cost = 0
 			can_be_fired = no
 			desc = SZC_chen_zaidao_desc
@@ -4850,6 +4850,41 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 2
+		}
+	}
+
+	#许世友
+	SZC_xu_shiyou = {
+		name = SZC_xu_shiyou
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_xu_shiyou_large
+				small = GFX_portrait_SZC_xu_shiyou_small
+			}
+		}
+		country_leader = {
+			desc = SZC_xu_shiyou_desc
+			ideology = paternal_autocrat_stratocracy_subtype
+			traits = { CHN_statist_aligned }
+		}
+		corps_commander = {
+			desc = SZC_xu_shiyou_commander_desc
+			traits = { infantry_officer reckless commando }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_xu_shiyou_sic
+			ledger = army
+			traits = { SZC_reckless_monk_sic }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_xu_shiyou_desc
 		}
 	}
 

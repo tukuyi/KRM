@@ -10837,17 +10837,30 @@ country_event = { #混乱即阶梯
 		}
 		set_country_flag = SZC_YCP_zhang_guotao_path
 		mark_focus_tree_layout_dirty = yes
-		SZC_chen_zaidao = {
-			SZC_recruit_character_effect = yes
+		every_army_leader = {
+			retire = yes
 		}
-		SZC_chen_xilian = {
-			SZC_recruit_character_effect = yes
-		}
-		SZC_wang_shusheng = {
-			SZC_recruit_character_effect = yes
-		}
-		SZC_han_xianchu = {
-			SZC_recruit_character_effect = yes
+		SZC_chen_zaidao = { custom_effect_tooltip = character_becomes_a_general }
+		SZC_chen_xilian = { custom_effect_tooltip = character_becomes_a_general }
+		SZC_wang_shusheng = { custom_effect_tooltip = character_becomes_a_general }
+		SZC_han_xianchu = { custom_effect_tooltip = character_becomes_a_general }
+		SZC_xu_shiyou = { custom_effect_tooltip = character_becomes_a_general }
+		hidden_effect = {
+			SZC_chen_zaidao = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_chen_xilian = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_wang_shusheng = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_han_xianchu = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_xu_shiyou = {
+				SZC_recruit_character_effect = yes
+			}
 		}
 	}
 }
@@ -18746,8 +18759,11 @@ country_event = { #海外孤忠
 	option = {#真乃英雄！
 		log = "[GetLogInfo]: event NKRsichuanPI.3 option NKRsichuanPI.3.a"
 		name = NKRsichuanPI.3.a
-		ITA_peppino_garibaldi = {
-			SZC_recruit_character_effect = yes
+		ITA_peppino_garibaldi = { custom_effect_tooltip = character_becomes_a_general }
+		hidden_effect = {
+			ITA_peppino_garibaldi = {
+				SZC_recruit_character_effect = yes
+			}
 		}
 	}
 }
@@ -19789,8 +19805,12 @@ unit_leader_event = { #李家钰归来
 	option = {#让你受委屈了...
 		log = "[GetLogInfo]: event NKRsichuanflavor.22 option NKRsichuanflavor.22.a"
 		name = NKRsichuanflavor.22.a
-		SZC_li_jiayu = {
-			SZC_recruit_character_effect = yes
+		SZC_li_jiayu  = { custom_effect_tooltip = character_becomes_a_general }
+
+		hidden_effect = {
+			SZC_li_jiayu = {
+				SZC_recruit_character_effect = yes
+			}
 		}
 	}
 }
@@ -20297,16 +20317,20 @@ country_event = { #德属东亚的新星？
 		log = "[GetLogInfo]: event NKRsichuanflavor.39 option NKRsichuanflavor.39.a"
 		name = NKRsichuanflavor.39.a
 		add_political_power = -50
-		GEA = {
-			GEA_erwin_rommel = {
-				SZC_recruit_character_effect = yes
+		GEA_erwin_rommel = { custom_effect_tooltip = character_becomes_a_general }
+
+		hidden_effect = {
+			GEA = {
+				GEA_erwin_rommel = {
+					SZC_recruit_character_effect = yes
+				}
 			}
-		}
-		GEA_erwin_rommel = {
-			set_portraits = {
-				army = {
-					large = GFX_portrait_SZC_erwin_rommel_large
-					small = GFX_portrait_SZC_erwin_rommel_small
+			GEA_erwin_rommel = {
+				set_portraits = {
+					army = {
+						large = GFX_portrait_SZC_erwin_rommel_large
+						small = GFX_portrait_SZC_erwin_rommel_small
+					}
 				}
 			}
 		}
