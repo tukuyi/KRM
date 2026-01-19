@@ -3521,5 +3521,49 @@ SZC_YCP_COB_category = {
 		}
 		fixed_random_seed = no
 	}
+	SZC_YCP_helicarrier_tech_research = {
+		icon = generic_ignite_civil_war
+		allowed = { tag = SZC }
 
+		visible = {
+			has_country_flag = SZC_YCP_COB_available
+		}
+		available = {
+			NOT = {
+				has_country_flag = SZC_YCP_COB_researching
+			}
+			has_completed_focus = SZC_YCP_wind_riding_dragon
+		}
+		cancel_trigger = {
+			is_subject = yes
+		}
+
+		ai_will_do = {
+			base = 50
+		}
+
+		fire_only_once = yes
+
+		days_remove = 240
+
+		modifier = {
+			consumer_goods_factor = 0.20
+		}
+
+		select_effect = {
+			log = "[GetLogRoot]: Decision select SZC_YCP_helicarrier_tech_research"
+			set_country_flag = SZC_YCP_COB_researching
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete SZC_YCP_helicarrier_tech_research"
+			clr_country_flag = SZC_YCP_COB_researching
+			enable_tech_YCP_helicarrier = yes
+		}
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove SZC_YCP_helicarrier_tech_research"
+			clr_country_flag = SZC_YCP_COB_researching
+		}
+		fixed_random_seed = no
+	}
 }

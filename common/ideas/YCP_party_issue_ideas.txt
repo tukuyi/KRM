@@ -144,6 +144,20 @@ ideas = {
 				experience_loss_factor = -0.35
 			}
 		}
+		SZC_yu_fuxian_1_DMC_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				surrender_limit = 0.10
+				research_speed_factor = 0.15
+				experience_gain_army_factor = 0.15
+				experience_loss_factor = -0.5
+			}
+		}
 		SZC_zuo_shunsheng_DMC_idea = {
 			allowed = {
 				always = no
@@ -387,6 +401,22 @@ ideas = {
 				research_speed_factor = 0.1
 			}
 		}
+		SZC_xie_chengping_1_DMF_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.20
+				diplomatic_acceptance = 25
+				intel_network_gain_factor = 0.15
+				trade_opinion_factor = 0.10
+				political_power_gain = 0.15
+				political_advisor_cost_factor = -0.75
+				compliance_gain = 0.08
+				research_speed_factor = 0.15
+			}
+		}
 		SZC_ding_tingbiao_DMF_idea = {
 			allowed = {
 				always = no
@@ -430,6 +460,22 @@ ideas = {
 				consumer_goods_factor = 0.075
 				resistance_target = -0.1
 				production_factory_efficiency_gain_factor = 0.125
+			}
+		}
+		SZC_liu_jingyuan_1_DMF_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.20
+				diplomatic_acceptance = 25
+				intel_network_gain_factor = 0.15
+				trade_opinion_factor = 0.10
+				stability_factor = -0.10
+				consumer_goods_factor = 0.10
+				resistance_target = -0.15
+				production_factory_efficiency_gain_factor = 0.15
 			}
 		}
 ####################      PROPAGANDA       ####################
@@ -524,6 +570,21 @@ ideas = {
 				research_speed_factor = 0.125
 			}
 		}
+		SZC_wu_tianchi_1_DMP_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.15
+				enemy_partisan_effect = -0.20
+				compliance_growth = 0.15
+				political_advisor_cost_factor = -0.5
+				high_command_cost_factor = -0.5
+				economy_law_cost_factor = -0.33
+				research_speed_factor = 0.15
+			}
+		}
 		SZC_shen_yunlong_DMP_idea = {
 			allowed = {
 				always = no
@@ -536,6 +597,20 @@ ideas = {
 				recruitable_population_factor = 0.075
 				drift_defence_factor = 0.25
 				trade_opinion_factor = 0.20
+			}
+		}
+		SZC_shen_yunlong_1_DMP_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.15
+				enemy_partisan_effect = -0.20
+				compliance_growth = 0.15
+				recruitable_population_factor = 0.10
+				drift_defence_factor = 0.35
+				trade_opinion_factor = 0.25
 			}
 		}
 ####################      TRAIN       ####################
@@ -620,6 +695,20 @@ ideas = {
 				monthly_population = 0.075
 				training_time_factor = -0.125
 				division_recovery_rate = 0.075
+			}
+		}
+		SZC_chen_shanxin_1_DMT_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_leader_experience_gain = 0.15
+				training_time_factor = -0.05
+				experience_gain_army_factor = 0.10
+				monthly_population = 0.10
+				training_time_factor = -0.15
+				division_recovery_rate = 0.10
 			}
 		}
 		SZC_liu_yongji_DMT_idea = {
@@ -1056,6 +1145,18 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
+		SZC_xie_chengping_1_DM_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				political_advisor_cost_factor = -0.33
+				compliance_gain = 0.02
+				research_speed_factor = 0.05
+			}
+		}
 		SZC_zheng_zhenwen_DM_idea = {
 			allowed = {
 				always = no
@@ -1172,6 +1273,17 @@ ideas = {
 			}
 		}
 		SZC_chen_shanxin_DM_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.05
+				training_time_factor = -0.1
+				division_recovery_rate = 0.05
+			}
+		}
+		SZC_chen_shanxin_1_DM_idea = {
 			allowed = {
 				always = no
 			}
@@ -1318,6 +1430,20 @@ ideas = {
 				stability_factor = -0.1
 				drift_defence_factor = -0.10
 				political_advisor_cost_factor = -0.33
+			}
+		}
+		SZC_liao_shangke_1_DM_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				radical_socialist_acceptance = 40
+				syndicalist_acceptance = 40
+				social_democrat_acceptance = 40
+				stability_factor = -0.05
+				drift_defence_factor = -0.15
+				political_advisor_cost_factor = -0.5
 			}
 		}
 		SZC_liao_haitao_DM_idea = {

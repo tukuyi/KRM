@@ -2983,6 +2983,15 @@ characters = {
 				SZC_zeng_qi = {
 					YCP_working_in_party = no
 				}
+				hidden = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_zeng_qi_suit
+					}
+					SZC_zeng_qi_suit = {
+						YCP_working_in_party = no
+					}
+				}
 			}
 		}
 		country_leader = {
@@ -3015,8 +3024,17 @@ characters = {
 					var = YCP_adv_chk
 					value = token:SZC_li_huang
 				}
-				token:SZC_li_huang = {
+				SZC_li_huang = {
 					YCP_working_in_party = no
+				}
+				hidden = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_li_huang_suit
+					}
+					SZC_li_huang_suit = {
+						YCP_working_in_party = no
+					}
 				}
 			}
 		}
@@ -3050,8 +3068,17 @@ characters = {
 					var = YCP_adv_chk
 					value = token:SZC_zuo_shunsheng
 				}
-				token:SZC_zuo_shunsheng = {
+				SZC_zuo_shunsheng = {
 					YCP_working_in_party = no
+				}
+				hidden = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_zuo_shunsheng_suit
+					}
+					SZC_zuo_shunsheng_suit = {
+						YCP_working_in_party = no
+					}
 				}
 			}
 		}
@@ -3093,6 +3120,15 @@ characters = {
 				SZC_chen_qitian = {
 					YCP_working_in_party = no
 				}
+				hidden = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_chen_qitian_suit
+					}
+					SZC_chen_qitian_suit = {
+						YCP_working_in_party = no
+					}
+				}
 			}
 		}
 		country_leader = {
@@ -3128,6 +3164,15 @@ characters = {
 				SZC_jiang_yungang = {
 					YCP_working_in_party = no
 				}
+				hidden = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_jiang_yungang_cool
+					}
+					SZC_jiang_yungang_cool = {
+						YCP_working_in_party = no
+					}
+				}
 			}
 		}
 		country_leader = {
@@ -3158,6 +3203,15 @@ characters = {
 				}
 				SZC_xia_taosheng = {
 					YCP_working_in_party = no
+				}
+				hidden = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_xia_taosheng_sweater
+					}
+					SZC_xia_taosheng_sweater = {
+						YCP_working_in_party = no
+					}
 				}
 			}
 		}
@@ -3411,6 +3465,15 @@ characters = {
 				SZC_liao_shangke = {
 					YCP_working_in_party = no
 				}
+				hidden = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_liao_shangke_1
+					}
+					SZC_liao_shangke_1 = {
+						YCP_working_in_party = no
+					}
+				}
 			}
 		}
 	}
@@ -3491,6 +3554,15 @@ characters = {
 				SZC_xie_chengping = {
 					YCP_working_in_party = no
 				}
+				hidden = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_xie_chengping_1
+					}
+					SZC_xie_chengping_1 = {
+						YCP_working_in_party = no
+					}
+				}
 			}
 		}
 	}
@@ -3543,6 +3615,15 @@ characters = {
 				SZC_liu_jingyuan = {
 					YCP_working_in_party = no
 				}
+				hidden = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_liu_jingyuan_1
+					}
+					SZC_liu_jingyuan_1 = {
+						YCP_working_in_party = no
+					}
+				}
 			}
 		}
 	}
@@ -3594,6 +3675,15 @@ characters = {
 				}
 				SZC_wu_tianchi = {
 					YCP_working_in_party = no
+				}
+				hidden = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_wu_tianchi_1
+					}
+					SZC_wu_tianchi_1 = {
+						YCP_working_in_party = no
+					}
 				}
 			}
 		}
@@ -3817,6 +3907,15 @@ characters = {
 				SZC_chen_shanxin = {
 					YCP_working_in_party = no
 				}
+				hidden = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_chen_shanxin_1
+					}
+					SZC_chen_shanxin_1 = {
+						YCP_working_in_party = no
+					}
+				}
 			}
 		}
 	}
@@ -3842,6 +3941,15 @@ characters = {
 				}
 				SZC_yu_fuxian = {
 					YCP_working_in_party = no
+				}
+				hidden = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_yu_fuxian_1
+					}
+					SZC_yu_fuxian_1 = {
+						YCP_working_in_party = no
+					}
 				}
 			}
 		}
@@ -4109,6 +4217,15 @@ characters = {
 				SZC_shen_yunlong = {
 					YCP_working_in_party = no
 				}
+				hidden = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_shen_yunlong_1
+					}
+					SZC_shen_yunlong_1 = {
+						YCP_working_in_party = no
+					}
+				}
 			}
 		}
 	}
@@ -4337,6 +4454,15 @@ characters = {
 				}
 				SZC_tan_tiwu = {
 					YCP_working_in_party = no
+				}
+				hidden = {
+					set_temp_variable = {
+						var = YCP_adv_chk
+						value = token:SZC_tan_tiwu_armor
+					}
+					SZC_tan_tiwu_armor = {
+						YCP_working_in_party = no
+					}
 				}
 			}
 		}

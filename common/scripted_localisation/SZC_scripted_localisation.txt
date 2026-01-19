@@ -510,6 +510,12 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			check_variable = { YCP_party_issue_chairman = token:SZC_yu_fuxian_1 }
+		}
+		localization_key = idea_desc|SZC_yu_fuxian_1_DMC_idea
+	}
+	text = {
+		trigger = {
 			check_variable = { YCP_party_issue_chairman = token:SZC_yu_fuxian }
 		}
 		localization_key = idea_desc|SZC_yu_fuxian_DMC_idea
@@ -634,6 +640,12 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			check_variable = { YCP_party_issue_foreign = token:SZC_xie_chengping_1 }
+		}
+		localization_key = idea_desc|SZC_xie_chengping_1_DMF_idea
+	}
+	text = {
+		trigger = {
 			check_variable = { YCP_party_issue_foreign = token:SZC_ding_tingbiao }
 		}
 		localization_key = idea_desc|SZC_ding_tingbiao_DMF_idea
@@ -649,6 +661,12 @@ defined_text = {
 			check_variable = { YCP_party_issue_foreign = token:SZC_liu_jingyuan }
 		}
 		localization_key = idea_desc|SZC_liu_jingyuan_DMF_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_foreign = token:SZC_liu_jingyuan_1 }
+		}
+		localization_key = idea_desc|SZC_liu_jingyuan_1_DMF_idea
 	}
 	text = {
 		localization_key = YCP_party_issue_foreign_dm_idea
@@ -709,9 +727,21 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			check_variable = { YCP_party_issue_propaganda = token:SZC_wu_tianchi_1 }
+		}
+		localization_key = idea_desc|SZC_wu_tianchi_1_DMP_idea
+	}
+	text = {
+		trigger = {
 			check_variable = { YCP_party_issue_propaganda = token:SZC_shen_yunlong }
 		}
 		localization_key = idea_desc|SZC_shen_yunlong_DMP_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_propaganda = token:SZC_shen_yunlong_1 }
+		}
+		localization_key = idea_desc|SZC_shen_yunlong_1_DMP_idea
 	}
 	text = {
 		localization_key = YCP_party_issue_propaganda_dm_idea
@@ -763,6 +793,12 @@ defined_text = {
 			check_variable = { YCP_party_issue_train = token:SZC_chen_shanxin }
 		}
 		localization_key = idea_desc|SZC_chen_shanxin_DMT_idea
+	}
+	text = {
+		trigger = {
+			check_variable = { YCP_party_issue_train = token:SZC_chen_shanxin_1 }
+		}
+		localization_key = idea_desc|SZC_chen_shanxin_1_DMT_idea
 	}
 	text = {
 		trigger = {
@@ -990,6 +1026,13 @@ defined_text = {
 	text = {
 		trigger = {
 			YCP_select_standings = yes
+			check_variable = { YCP_party_issue_select = token:SZC_xie_chengping_1 }
+		}
+		localization_key = idea_desc|SZC_xie_chengping_1_DM_idea
+	}
+	text = {
+		trigger = {
+			YCP_select_standings = yes
 			check_variable = { YCP_party_issue_select = token:SZC_zheng_zhenwen }
 		}
 		localization_key = idea_desc|SZC_zheng_zhenwen_DM_idea
@@ -1063,6 +1106,13 @@ defined_text = {
 			check_variable = { YCP_party_issue_select = token:SZC_chen_shanxin }
 		}
 		localization_key = idea_desc|SZC_chen_shanxin_DM_idea
+	}
+	text = {
+		trigger = {
+			YCP_select_standings = yes
+			check_variable = { YCP_party_issue_select = token:SZC_chen_shanxin_1 }
+		}
+		localization_key = idea_desc|SZC_chen_shanxin_1_DM_idea
 	}
 	text = {
 		trigger = {
@@ -1147,6 +1197,13 @@ defined_text = {
 			check_variable = { YCP_party_issue_select = token:SZC_liao_shangke }
 		}
 		localization_key = idea_desc|SZC_liao_shangke_DM_idea
+	}
+	text = {
+		trigger = {
+			YCP_select_standings = yes
+			check_variable = { YCP_party_issue_select = token:SZC_liao_shangke_1 }
+		}
+		localization_key = idea_desc|SZC_liao_shangke_1_DM_idea
 	}
 	text = {
 		trigger = {

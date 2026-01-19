@@ -4215,6 +4215,17 @@ enable_tech_YCP_hellpod = {
 	}
 }
 
+enable_tech_YCP_helicarrier_tech = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|YCP_helicarrier_tech
+			EFFECT = tech_effect|YCP_helicarrier_tech
+		}
+		set_technology = { YCP_helicarrier_tech = 1 popup = no }
+	}
+}
+
 
 
 add_temp_unit_leader_role = {

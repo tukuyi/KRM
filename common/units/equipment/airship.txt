@@ -1,0 +1,65 @@
+equipments = {
+	
+	#
+	
+
+	YCP_helicarrier_equipment = {
+		year = 2000
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_YCP_helicarrier_equipment
+		is_buildable = no
+		type = { strategic_bomber air_transport }
+		group_by = archetype
+		sprite = heavy_plane
+		air_map_icon_frame = 11
+
+		interface_category = interface_category_air
+
+		# Strategic bomber
+		interface_overview_category_index = 5
+
+		upgrades = {
+			plane_bomb_upgrade
+			plane_range_upgrade
+			plane_engine_upgrade
+			plane_reliability_upgrade
+		}
+
+		air_superiority = 50
+		reliability = 0.8
+
+		# Air vs Navy - high damage / low hit chance / hard to hurt
+		naval_strike_attack = 60
+		naval_strike_targetting = 18
+
+		#Space taken in convoy
+		lend_lease_cost = 120
+
+		build_cost_ic = 192
+		resources = {
+			#oil = 1
+			steel = 12
+		}
+
+		manpower = 180
+		fuel_consumption = 3.2
+	}
+	
+	YCP_helicarrier_equipment_0 = {
+		year = 2020
+
+		archetype = YCP_helicarrier_equipment
+		priority = 140
+
+		air_range = 35000
+		maximum_speed = 1330
+		air_agility = 90
+		air_attack = 500
+		air_defence = 250
+		air_bombing = 300
+
+		# build_cost_ic = 36
+		is_convertable = yes
+	}
+}

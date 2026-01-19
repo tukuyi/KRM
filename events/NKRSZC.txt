@@ -13,7 +13,7 @@ country_event = { #武德励进会宣告成立
 	id = NKRsichuan.1
 	title = NKRsichuan.1.t
 	desc = NKRsichuan.1.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_liu_xiang_suit
 
 	is_triggered_only = yes
 
@@ -46,7 +46,7 @@ country_event = { #潘文华系简介
 	id = NKRsichuan.2
 	title = NKRsichuan.2.t
 	desc = NKRsichuan.2.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_pan_wenhua_2
 
 	is_triggered_only = yes
 
@@ -62,7 +62,7 @@ country_event = { #中国青年党简介
 	id = NKRsichuan.3
 	title = NKRsichuan.3.t
 	desc = NKRsichuan.3.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 
@@ -85,10 +85,10 @@ country_event = { #中国青年党简介
 			SZC_chen_qitian = {
 				SZC_recruit_character_effect = yes
 			}
-			country_event = {
-				id = NKRsichuan.5
-				days = 2
-			}
+			# country_event = {
+			# 	id = NKRsichuan.5
+			# 	days = 2
+			# }
 		}
 	}
 }
@@ -97,7 +97,7 @@ country_event = { #刘从云和一贯道
 	id = NKRsichuan.4
 	title = NKRsichuan.4.t
 	desc = NKRsichuan.4.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -114,7 +114,7 @@ country_event = { #唐式遵和青年党
 	id = NKRsichuan.5
 	title = NKRsichuan.5.t
 	desc = NKRsichuan.5.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 
@@ -129,7 +129,7 @@ country_event = { #平常一日
 	id = NKRsichuan.10
 	title = NKRsichuan.10.t
 	desc = NKRsichuan.10.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_liu_xiang_suit
 
 	is_triggered_only = yes
 
@@ -149,7 +149,7 @@ country_event = { #非常一日
 	id = NKRsichuan.11
 	title = NKRsichuan.11.t
 	desc = NKRsichuan.11.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -169,7 +169,7 @@ country_event = { #心急如焚
 	id = NKRsichuan.12
 	title = NKRsichuan.12.t
 	desc = NKRsichuan.12.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -189,7 +189,7 @@ country_event = { #刘湘之死
 	id = NKRsichuan.13
 	title = NKRsichuan.13.t
 	desc = NKRsichuan.13.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_liu_xiang_suit
 
 	is_triggered_only = yes
 
@@ -222,7 +222,7 @@ country_event = { #准备调查
 	id = NKRsichuan.14
 	title = NKRsichuan.14.t
 	desc = NKRsichuan.14.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -248,7 +248,7 @@ country_event = { #范哈儿与武备系
 	id = NKRsichuan.15
 	title = NKRsichuan.15.t
 	desc = NKRsichuan.15.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -274,7 +274,7 @@ country_event = { #水银？
 	id = NKRsichuan.16
 	title = NKRsichuan.16.t
 	desc = NKRsichuan.16.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -300,7 +300,7 @@ country_event = { #肃清范哈儿
 	id = NKRsichuan.17
 	title = NKRsichuan.17.t
 	desc = NKRsichuan.17.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -318,7 +318,7 @@ country_event = { #神兵现身
 	id = NKRsichuan.18
 	title = NKRsichuan.18.t
 	desc = NKRsichuan.18.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -336,7 +336,7 @@ country_event = { #刘神仙
 	id = NKRsichuan.19
 	title = NKRsichuan.19.t
 	desc = NKRsichuan.19.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -360,7 +360,7 @@ country_event = { #抓捕刘从云
 	id = NKRsichuan.20
 	title = NKRsichuan.20.t
 	desc = NKRsichuan.20.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -378,7 +378,7 @@ country_event = { #询问周书
 	id = NKRsichuan.21
 	title = NKRsichuan.21.t
 	desc = NKRsichuan.21.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -396,7 +396,7 @@ country_event = { #查看化验结果
 	id = NKRsichuan.22
 	title = NKRsichuan.22.t
 	desc = NKRsichuan.22.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -414,7 +414,7 @@ country_event = { #作案动机
 	id = NKRsichuan.23
 	title = NKRsichuan.23.t
 	desc = NKRsichuan.23.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -440,7 +440,7 @@ country_event = { #刘湘的活动踪迹
 	id = NKRsichuan.24
 	title = NKRsichuan.24.t
 	desc = NKRsichuan.24.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -458,7 +458,7 @@ country_event = { #夜袭潘府
 	id = NKRsichuan.25
 	title = NKRsichuan.25.t
 	desc = NKRsichuan.25.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_pan_wenhua_2
 
 	is_triggered_only = yes
 
@@ -477,7 +477,7 @@ country_event = { #洞察
 	id = NKRsichuan.26
 	title = NKRsichuan.26.t
 	desc = NKRsichuan.26.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -495,7 +495,7 @@ country_event = { #抓捕刘从云（唐式遵版）
 	id = NKRsichuan.27
 	title = NKRsichuan.27.t
 	desc = NKRsichuan.27.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -513,7 +513,7 @@ country_event = { #惨剧定性
 	id = NKRsichuan.28
 	title = NKRsichuan.28.t
 	desc = NKRsichuan.28.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -548,7 +548,7 @@ country_event = { #潘文华巩固政权
 	id = NKRsichuan.29
 	title = NKRsichuan.29.t
 	desc = NKRsichuan.29.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_pan_wenhua_2
 
 	is_triggered_only = yes
 
@@ -586,7 +586,7 @@ country_event = { #让贤唐式遵
 	id = NKRsichuan.30
 	title = NKRsichuan.30.t
 	desc = NKRsichuan.30.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -615,7 +615,7 @@ country_event = { #中国青年党浮出水面
 	id = NKRsichuan.31
 	title = NKRsichuan.31.t
 	desc = NKRsichuan.31.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 
@@ -756,7 +756,7 @@ country_event = { #对付青年党
 	id = NKRsichuan.101
 	title = NKRsichuan.101.t
 	desc = NKRsichuan.101.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 
@@ -770,7 +770,7 @@ country_event = { #共和大联盟
 	id = NKRsichuan.102
 	title = NKRsichuan.102.t
 	desc = NKRsichuan.102.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -789,7 +789,7 @@ country_event = { #大邑一夜
 	id = NKRsichuan.103
 	title = NKRsichuan.103.t
 	desc = NKRsichuan.103.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -983,7 +983,7 @@ country_event = { #政治教导
 	id = NKRsichuan.105
 	title = NKRsichuan.105.t
 	desc = NKRsichuan.105.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -997,7 +997,7 @@ country_event = { #吕专员
 	id = NKRsichuan.106
 	title = NKRsichuan.106.t
 	desc = NKRsichuan.106.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_lv_yifeng
 
 	is_triggered_only = yes
 
@@ -1019,7 +1019,7 @@ country_event = { #人民军队为人民？
 	id = NKRsichuan.107
 	title = NKRsichuan.107.t
 	desc = NKRsichuan.107.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_lv_yifeng
 
 	is_triggered_only = yes
 
@@ -1053,7 +1053,7 @@ country_event = { #新蜀报
 	id = NKRsichuan.108
 	title = NKRsichuan.108.t
 	desc = NKRsichuan.108.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_qi_nanxun
 
 	is_triggered_only = yes
 
@@ -1079,7 +1079,7 @@ country_event = { #潘将军讲话
 	id = NKRsichuan.109
 	title = NKRsichuan.109.t
 	desc = NKRsichuan.109.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_pan_wenhua
 
 	is_triggered_only = yes
 
@@ -1094,7 +1094,7 @@ country_event = { #洋人在四川
 	id = NKRsichuan.110
 	title = NKRsichuan.110.t
 	desc = NKRsichuan.110.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1109,7 +1109,7 @@ country_event = { #讲谈会
 	id = NKRsichuan.111
 	title = NKRsichuan.111.t
 	desc = NKRsichuan.111.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1129,7 +1129,7 @@ country_event = { #工人纠察队的复兴
 	id = NKRsichuan.112
 	title = NKRsichuan.112.t
 	desc = NKRsichuan.112.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1143,7 +1143,7 @@ country_event = { #土改情况
 	id = NKRsichuan.113
 	title = NKRsichuan.113.t
 	desc = NKRsichuan.113.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1163,7 +1163,7 @@ country_event = { #那些所被遗忘的人...
 	id = NKRsichuan.114
 	title = NKRsichuan.114.t
 	desc = NKRsichuan.114.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1193,7 +1193,7 @@ country_event = { #流血一日
 	id = NKRsichuan.115
 	title = NKRsichuan.115.t
 	desc = NKRsichuan.115.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1225,7 +1225,7 @@ country_event = { #电报
 	id = NKRsichuan.116
 	title = NKRsichuan.116.t
 	desc = NKRsichuan.116.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1245,7 +1245,7 @@ country_event = { #炮声
 	id = NKRsichuan.117
 	title = NKRsichuan.117.t
 	desc = NKRsichuan.117.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1266,7 +1266,7 @@ country_event = { #一封威胁信
 	id = NKRsichuan.118
 	title = NKRsichuan.118.t
 	desc = NKRsichuan.118.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1296,7 +1296,7 @@ country_event = { #刺杀企图
 	id = NKRsichuan.119
 	title = NKRsichuan.119.t
 	desc = NKRsichuan.119.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_pan_wenhua_2
 
 	is_triggered_only = yes
 
@@ -1341,7 +1341,7 @@ country_event = { #会面
 	id = NKRsichuan.121
 	title = NKRsichuan.121.t
 	desc = NKRsichuan.121.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_pan_wenhua_2
 
 	is_triggered_only = yes
 
@@ -1425,7 +1425,7 @@ country_event = { #“主动”下野
 	id = NKRsichuan.124
 	title = NKRsichuan.124.t
 	desc = NKRsichuan.124.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1464,7 +1464,7 @@ country_event = { #xx秩序井然
 	id = NKRsichuan.126
 	title = NKRsichuan.126.t
 	desc = NKRsichuan.126.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1485,7 +1485,7 @@ country_event = { #戒严下的土改
 	id = NKRsichuan.127
 	title = NKRsichuan.127.t
 	desc = NKRsichuan.127.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1505,7 +1505,7 @@ country_event = { #潘将军告全川人民书
 	id = NKRsichuan.128
 	title = NKRsichuan.128.t
 	desc = NKRsichuan.128.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_pan_wenhua_2
 
 	is_triggered_only = yes
 
@@ -1525,7 +1525,7 @@ country_event = { #睁一只眼闭一只眼的哲学
 	id = NKRsichuan.129
 	title = NKRsichuan.129.t
 	desc = NKRsichuan.129.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1545,7 +1545,7 @@ country_event = { #南京的认可
 	id = NKRsichuan.130
 	title = NKRsichuan.130.t
 	desc = NKRsichuan.130.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_lv_yifeng
 
 	is_triggered_only = yes
 
@@ -1567,7 +1567,7 @@ country_event = { #土改情况（温和版）
 	id = NKRsichuan.131
 	title = NKRsichuan.131.t
 	desc = NKRsichuan.131.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1587,7 +1587,7 @@ country_event = { #新闻报道
 	id = NKRsichuan.132
 	title = NKRsichuan.132.t
 	desc = NKRsichuan.132.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1607,7 +1607,7 @@ country_event = { #不满的火花
 	id = NKRsichuan.133
 	title = NKRsichuan.133.t
 	desc = NKRsichuan.133.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1637,7 +1637,7 @@ country_event = { #胡萝卜与大棒
 	id = NKRsichuan.134
 	title = NKRsichuan.134.t
 	desc = NKRsichuan.134.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1657,7 +1657,7 @@ country_event = { #潘将军告全川人民书（温和版）
 	id = NKRsichuan.135
 	title = NKRsichuan.135.t
 	desc = NKRsichuan.135.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_pan_wenhua_2
 
 	is_triggered_only = yes
 
@@ -1677,7 +1677,7 @@ country_event = { #xx秩序井然
 	id = NKRsichuan.136
 	title = NKRsichuan.136.t
 	desc = NKRsichuan.136.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1698,7 +1698,7 @@ country_event = { #南京的不满
 	id = NKRsichuan.137
 	title = NKRsichuan.137.t
 	desc = NKRsichuan.137.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_lv_yifeng
 
 	is_triggered_only = yes
 
@@ -1718,7 +1718,7 @@ country_event = { #事在人为
 	id = NKRsichuan.138
 	title = NKRsichuan.138.t
 	desc = NKRsichuan.138.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1741,7 +1741,7 @@ country_event = { #庆功宴
 	id = NKRsichuan.139
 	title = NKRsichuan.139.t
 	desc = NKRsichuan.139.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1779,7 +1779,7 @@ country_event = { #我们失败了
 	id = NKRsichuan.140
 	title = NKRsichuan.140.t
 	desc = NKRsichuan.140.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1796,7 +1796,7 @@ country_event = { #国民党内战-开始
 	id = NKRsichuan.141
 	title = NKRsichuan.141.t
 	desc = NKRsichuan.141.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 
@@ -1820,7 +1820,7 @@ country_event = { #步入权力殿堂
 	id = NKRsichuan.142
 	title = NKRsichuan.142.t
 	desc = NKRsichuan.142.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -1856,7 +1856,7 @@ country_event = { #人民的力量
 	id = NKRsichuan.150
 	title = NKRsichuan.150.t
 	desc = NKRsichuan.150.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_qi_nanxun
 
 	is_triggered_only = yes
 	
@@ -1911,7 +1911,7 @@ country_event = { #党的路线问题
 	id = NKRsichuan.151
 	title = NKRsichuan.151.t
 	desc = NKRsichuan.151.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_qi_nanxun
 
 	is_triggered_only = yes
 	
@@ -1990,7 +1990,7 @@ country_event = { #统一社会党第一届代表大会
 	id = NKRsichuan.152
 	title = NKRsichuan.152.t
 	desc = NKRsichuan.152.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -2006,7 +2006,7 @@ country_event = { #111
 	id = NKRsichuan.153
 	title = NKRsichuan.153.t
 	desc = NKRsichuan.153.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -2021,7 +2021,7 @@ country_event = { #社会主义多党制
 	id = NKRsichuan.154
 	title = NKRsichuan.154.t
 	desc = NKRsichuan.154.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -2042,7 +2042,7 @@ country_event = { #我的一票
 	id = NKRsichuan.155
 	title = NKRsichuan.155.t
 	desc = NKRsichuan.155.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -2063,7 +2063,7 @@ country_event = { #金豆豆，银豆豆...
 	id = NKRsichuan.156
 	title = NKRsichuan.156.t
 	desc = NKRsichuan.156.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -2078,7 +2078,7 @@ country_event = { #我们时代的社会主义
 	id = NKRsichuan.157
 	title = NKRsichuan.157.t
 	desc = NKRsichuan.157.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -2093,7 +2093,7 @@ country_event = { #《帝国主义铁蹄下的中国》再版
 	id = NKRsichuan.158
 	title = NKRsichuan.158.t
 	desc = NKRsichuan.158.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_qi_nanxun
 
 	is_triggered_only = yes
 	
@@ -2108,7 +2108,7 @@ country_event = { #中国国民党革命委员会
 	id = NKRsichuan.159
 	title = NKRsichuan.159.t
 	desc = NKRsichuan.159.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -2154,7 +2154,7 @@ country_event = { #共同纲领
 	id = NKRsichuan.162
 	title = NKRsichuan.162.t
 	desc = NKRsichuan.162.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -2169,7 +2169,7 @@ country_event = { #努力至终，革命遂成
 	id = NKRsichuan.163
 	title = NKRsichuan.163.t
 	desc = NKRsichuan.163.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -2184,7 +2184,7 @@ country_event = { #最宏伟的阅兵式
 	id = NKRsichuan.164
 	title = NKRsichuan.164.t
 	desc = NKRsichuan.164.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_pan_wenhua_2
 
 	is_triggered_only = yes
 	
@@ -2298,7 +2298,7 @@ country_event = { #上海一夜
 	id = NKRsichuan.168
 	title = NKRsichuan.168.t
 	desc = NKRsichuan.168.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -2589,7 +2589,7 @@ country_event = { #善意的建议
 	id = NKRsichuan.177
 	title = NKRsichuan.177.t
 	desc = NKRsichuan.177.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -2709,7 +2709,7 @@ country_event = { #meme背叛世界的男人
 	id = NKRsichuan.184
 	title = NKRsichuan.184.t
 	desc = NKRsichuan.184.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -2742,7 +2742,7 @@ country_event = { #统一建国同志会
 	id = NKRsichuan.200
 	title = NKRsichuan.200.t
 	desc = NKRsichuan.200.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -2783,7 +2783,7 @@ country_event = { #铭记蔡元帅
 	id = NKRsichuan.201
 	title = NKRsichuan.201.t
 	desc = NKRsichuan.201.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
@@ -2800,7 +2800,7 @@ country_event = { #南京已入我手
 	id = NKRsichuan.202
 	title = NKRsichuan.202.t
 	desc = NKRsichuan.202.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2818,7 +2818,7 @@ country_event = { #北京！北京！
 	id = NKRsichuan.203
 	title = NKRsichuan.203.t
 	desc = NKRsichuan.203.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2836,7 +2836,7 @@ country_event = { #迁宁前最后一次大会
 	id = NKRsichuan.204
 	title = NKRsichuan.204.t
 	desc = NKRsichuan.204.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2860,7 +2860,7 @@ country_event = { #火车之上
 	id = NKRsichuan.205
 	title = NKRsichuan.205.t
 	desc = NKRsichuan.205.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2882,7 +2882,7 @@ country_event = { #军营之中
 	id = NKRsichuan.206
 	title = NKRsichuan.206.t
 	desc = NKRsichuan.206.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2904,7 +2904,7 @@ country_event = { #妥协
 	id = NKRsichuan.207
 	title = NKRsichuan.207.t
 	desc = NKRsichuan.207.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2928,7 +2928,7 @@ country_event = { #中国民主同盟
 	id = NKRsichuan.208
 	title = NKRsichuan.208.t
 	desc = NKRsichuan.208.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhanglan
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3012,7 +3012,7 @@ country_event = { #谈判
 	id = NKRsichuan.209
 	title = NKRsichuan.209.t
 	desc = NKRsichuan.209.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3028,7 +3028,7 @@ country_event = { #就职典礼
 	id = NKRsichuan.210
 	title = NKRsichuan.210.t
 	desc = NKRsichuan.210.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhanglan
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3060,7 +3060,7 @@ country_event = { #暗流之下
 	id = NKRsichuan.211
 	title = NKRsichuan.211.t
 	desc = NKRsichuan.211.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhanglan
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3083,7 +3083,7 @@ country_event = { #新课本
 	id = NKRsichuan.212
 	title = NKRsichuan.212.t
 	desc = NKRsichuan.212.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3099,7 +3099,7 @@ country_event = { #进城去
 	id = NKRsichuan.213
 	title = NKRsichuan.213.t
 	desc = NKRsichuan.213.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3115,7 +3115,7 @@ country_event = { #二五减租
 	id = NKRsichuan.214
 	title = NKRsichuan.214.t
 	desc = NKRsichuan.214.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3132,7 +3132,7 @@ country_event = { #农业机械化
 	id = NKRsichuan.215
 	title = NKRsichuan.215.t
 	desc = NKRsichuan.215.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3148,7 +3148,7 @@ country_event = { #中国制造
 	id = NKRsichuan.216
 	title = NKRsichuan.216.t
 	desc = NKRsichuan.216.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3164,7 +3164,7 @@ country_event = { #师父和徒弟
 	id = NKRsichuan.217
 	title = NKRsichuan.217.t
 	desc = NKRsichuan.217.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhanglan
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3181,11 +3181,11 @@ country_event = { #师父和徒弟
 	}
 }
 
-country_event = { #中国民主社会党
+country_event = { #中国国家社会党
 	id = NKRsichuan.218
 	title = NKRsichuan.218.t
 	desc = NKRsichuan.218.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3206,7 +3206,7 @@ country_event = { #中国致公党
 	id = NKRsichuan.219
 	title = NKRsichuan.219.t
 	desc = NKRsichuan.219.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3227,7 +3227,7 @@ country_event = { #中国青年党
 	id = NKRsichuan.220
 	title = NKRsichuan.220.t
 	desc = NKRsichuan.220.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3248,7 +3248,7 @@ country_event = { #中国国民党和中国工团党
 	id = NKRsichuan.221
 	title = NKRsichuan.221.t
 	desc = NKRsichuan.221.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3270,7 +3270,7 @@ country_event = { #政治协商会议召开
 	id = NKRsichuan.222
 	title = NKRsichuan.222.t
 	desc = NKRsichuan.222.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3292,7 +3292,7 @@ country_event = { #爱国阵线问题
 	id = NKRsichuan.223
 	title = NKRsichuan.223.t
 	desc = NKRsichuan.223.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3322,11 +3322,11 @@ country_event = { #爱国阵线问题
 	}
 }
 
-country_event = { #两个愿景，两个党国
+country_event = { #两个愿景
 	id = NKRsichuan.224
 	title = NKRsichuan.224.t
 	desc = NKRsichuan.224.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3343,7 +3343,7 @@ country_event = { #这...
 	id = NKRsichuan.225
 	title = NKRsichuan.225.t
 	desc = NKRsichuan.225.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3360,7 +3360,7 @@ country_event = { #反对极端主义
 	id = NKRsichuan.226
 	title = NKRsichuan.226.t
 	desc = NKRsichuan.226.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3377,7 +3377,7 @@ country_event = { #民主同盟屹立
 	id = NKRsichuan.227
 	title = NKRsichuan.227.t
 	desc = NKRsichuan.227.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3393,7 +3393,7 @@ country_event = { #整合民政
 	id = NKRsichuan.228
 	title = NKRsichuan.228.t
 	desc = NKRsichuan.228.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3429,7 +3429,7 @@ country_event = { #一笔交易
 	id = NKRsichuan.229
 	title = NKRsichuan.229.t
 	desc = NKRsichuan.229.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3462,7 +3462,7 @@ country_event = { #演讲
 	id = NKRsichuan.230
 	title = NKRsichuan.230.t
 	desc = NKRsichuan.230.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3496,7 +3496,7 @@ country_event = { #民主青年同盟
 	id = NKRsichuan.231
 	title = NKRsichuan.231.t
 	desc = NKRsichuan.231.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3517,7 +3517,7 @@ country_event = { #新《新青年》
 	id = NKRsichuan.232
 	title = NKRsichuan.232.t
 	desc = NKRsichuan.231.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3559,7 +3559,7 @@ country_event = { #政治宣传
 	id = NKRsichuan.233
 	title = NKRsichuan.233.t
 	desc = NKRsichuan.233.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3609,7 +3609,7 @@ country_event = { #山河一统
 	id = NKRsichuan.250
 	title = NKRsichuan.250.t
 	desc = NKRsichuan.250.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3629,7 +3629,7 @@ country_event = { #新制宪大会提上日程
 	id = NKRsichuan.251
 	title = NKRsichuan.251.t
 	desc = NKRsichuan.251.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3727,7 +3727,7 @@ country_event = { #研讨委员会推迟草案公布日
 	id = NKRsichuan.254
 	title = NKRsichuan.254.t
 	desc = NKRsichuan.254.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3759,7 +3759,7 @@ country_event = { #宪法草案公布
 	id = NKRsichuan.255
 	title = NKRsichuan.255.t
 	desc = NKRsichuan.255.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3801,7 +3801,7 @@ country_event = { #无言
 	id = NKRsichuan.256
 	title = NKRsichuan.256.t
 	desc = NKRsichuan.256.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3828,7 +3828,7 @@ country_event = { #混乱的制宪大会
 	id = NKRsichuan.257
 	title = NKRsichuan.257.t
 	desc = NKRsichuan.257.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3860,7 +3860,7 @@ country_event = { #宪法通过
 	id = NKRsichuan.258
 	title = NKRsichuan.258.t
 	desc = NKRsichuan.258.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3883,7 +3883,7 @@ country_event = { #宪法被否决
 	id = NKRsichuan.259
 	title = NKRsichuan.259.t
 	desc = NKRsichuan.259.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4028,7 +4028,7 @@ country_event = { #南京，朝阳升起
 	id = NKRsichuan.263
 	title = NKRsichuan.263.t
 	desc = NKRsichuan.263.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4053,7 +4053,7 @@ country_event = { #《新青年》新刊
 	id = NKRsichuan.264
 	title = NKRsichuan.264.t
 	desc = NKRsichuan.264.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4076,7 +4076,7 @@ country_event = { #宪法研讨-权力下放
 	id = NKRsichuan.265
 	title = NKRsichuan.265.t
 	desc = NKRsichuan.265.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4098,7 +4098,7 @@ country_event = { #宪法研讨-选举权
 	id = NKRsichuan.266
 	title = NKRsichuan.266.t
 	desc = NKRsichuan.266.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4120,7 +4120,7 @@ country_event = { #宪法研讨-权力划分
 	id = NKRsichuan.267
 	title = NKRsichuan.267.t
 	desc = NKRsichuan.267.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4142,7 +4142,7 @@ country_event = { #宪法公布
 	id = NKRsichuan.268
 	title = NKRsichuan.268.t
 	desc = NKRsichuan.268.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4168,7 +4168,7 @@ country_event = { #媒体界现状
 	id = NKRsichuan.269
 	title = NKRsichuan.269.t
 	desc = NKRsichuan.269.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4186,7 +4186,7 @@ country_event = { #制宪大会开始表决
 	id = NKRsichuan.270
 	title = NKRsichuan.270.t
 	desc = NKRsichuan.270.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4222,7 +4222,7 @@ country_event = { #宪法几乎全票通过
 	id = NKRsichuan.271
 	title = NKRsichuan.271.t
 	desc = NKRsichuan.271.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4264,7 +4264,7 @@ country_event = { #边缘政党起势
 	id = NKRsichuan.272
 	title = NKRsichuan.272.t
 	desc = NKRsichuan.272.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4307,7 +4307,7 @@ country_event = { #新生民国的第一次普选（YCPKMTAVAILABLE
 	id = NKRsichuan.273
 	title = NKRsichuan.273.t
 	desc = NKRsichuan.273.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4329,7 +4329,7 @@ country_event = { #三党演义
 	id = NKRsichuan.274
 	title = NKRsichuan.274.t
 	desc = NKRsichuan.274.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4351,7 +4351,7 @@ country_event = { #就职典礼
 	id = NKRsichuan.275
 	title = NKRsichuan.275.t
 	desc = NKRsichuan.275.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4389,7 +4389,7 @@ country_event = { #民主同盟使命的终结
 	id = NKRsichuan.276
 	title = NKRsichuan.276.t
 	desc = NKRsichuan.276.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4431,7 +4431,7 @@ country_event = { #新生民国的第一次普选 NOKMTYCP
 	id = NKRsichuan.277
 	title = NKRsichuan.277.t
 	desc = NKRsichuan.277.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4469,7 +4469,7 @@ country_event = { #新绝对真理下的自由
 	id = NKRsichuan.278
 	title = NKRsichuan.278.t
 	desc = NKRsichuan.278.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4491,7 +4491,7 @@ country_event = { #就职典礼
 	id = NKRsichuan.279
 	title = NKRsichuan.279.t
 	desc = NKRsichuan.279.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4535,7 +4535,7 @@ country_event = { #宪法超过三分之二，获得通过
 	id = NKRsichuan.280
 	title = NKRsichuan.280.t
 	desc = NKRsichuan.280.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4561,7 +4561,7 @@ country_event = { #民主同盟的扩大
 	id = NKRsichuan.281
 	title = NKRsichuan.281.t
 	desc = NKRsichuan.281.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4639,7 +4639,7 @@ country_event = { #民国的第一次普选
 	id = NKRsichuan.283
 	title = NKRsichuan.283.t
 	desc = NKRsichuan.283.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4661,7 +4661,7 @@ country_event = { #中华第一大政党
 	id = NKRsichuan.284
 	title = NKRsichuan.284.t
 	desc = NKRsichuan.284.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4684,7 +4684,7 @@ country_event = { #就职典礼
 	id = NKRsichuan.285
 	title = NKRsichuan.285.t
 	desc = NKRsichuan.285.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4718,7 +4718,7 @@ country_event = { #有什么区别呢？
 	id = NKRsichuan.286
 	title = NKRsichuan.286.t
 	desc = NKRsichuan.286.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4734,7 +4734,7 @@ country_event = { #闭嘴！
 	id = NKRsichuan.287
 	title = NKRsichuan.287.t
 	desc = NKRsichuan.287.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4750,7 +4750,7 @@ country_event = { #法院裁定
 	id = NKRsichuan.288
 	title = NKRsichuan.288.t
 	desc = NKRsichuan.288.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4884,7 +4884,7 @@ country_event = { #杨伯恺内阁
 	id = NKRsichuan.291
 	title = NKRsichuan.291.t
 	desc = NKRsichuan.291.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4900,7 +4900,7 @@ country_event = { #宪法修订
 	id = NKRsichuan.292
 	title = NKRsichuan.292.t
 	desc = NKRsichuan.292.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4916,7 +4916,7 @@ country_event = { #合作探讨
 	id = NKRsichuan.293
 	title = NKRsichuan.293.t
 	desc = NKRsichuan.293.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4965,7 +4965,7 @@ country_event = { #新国会
 	id = NKRsichuan.296
 	title = NKRsichuan.296.t
 	desc = NKRsichuan.296.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4981,7 +4981,7 @@ country_event = { #李宏锟内阁
 	id = NKRsichuan.297
 	title = NKRsichuan.297.t
 	desc = NKRsichuan.297.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4997,7 +4997,7 @@ country_event = { #超然内阁
 	id = NKRsichuan.298
 	title = NKRsichuan.298.t
 	desc = NKRsichuan.298.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5039,7 +5039,7 @@ country_event = { #权力之下
 	id = NKRsichuan.300
 	title = NKRsichuan.300.t
 	desc = NKRsichuan.300.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5055,7 +5055,7 @@ country_event = { #军国体制
 	id = NKRsichuan.301
 	title = NKRsichuan.301.t
 	desc = NKRsichuan.301.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5103,7 +5103,7 @@ country_event = { #经费呢？
 	id = NKRsichuan.304
 	title = NKRsichuan.304.t
 	desc = NKRsichuan.304.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5151,7 +5151,7 @@ country_event = { #我们怎么办？
 	id = NKRsichuan.307
 	title = NKRsichuan.307.t
 	desc = NKRsichuan.307.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5167,7 +5167,7 @@ country_event = { #痛苦的心
 	id = NKRsichuan.308
 	title = NKRsichuan.308.t
 	desc = NKRsichuan.308.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5183,7 +5183,7 @@ country_event = { #前方的任务
 	id = NKRsichuan.309
 	title = NKRsichuan.309.t
 	desc = NKRsichuan.309.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5199,7 +5199,7 @@ country_event = { #社会市场理论
 	id = NKRsichuan.310
 	title = NKRsichuan.310.t
 	desc = NKRsichuan.310.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5215,7 +5215,7 @@ country_event = { #儒学与现代经济
 	id = NKRsichuan.311
 	title = NKRsichuan.311.t
 	desc = NKRsichuan.311.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5231,7 +5231,7 @@ country_event = { #告学生书
 	id = NKRsichuan.312
 	title = NKRsichuan.312.t
 	desc = NKRsichuan.312.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5247,7 +5247,7 @@ country_event = { #一篇报道
 	id = NKRsichuan.313
 	title = NKRsichuan.313.t
 	desc = NKRsichuan.313.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5263,7 +5263,7 @@ country_event = { #总统面见委员长
 	id = NKRsichuan.314
 	title = NKRsichuan.314.t
 	desc = NKRsichuan.314.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5281,7 +5281,7 @@ country_event = { #新的尝试
 	id = NKRsichuan.315
 	title = NKRsichuan.315.t
 	desc = NKRsichuan.315.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5297,7 +5297,7 @@ country_event = { #争论
 	id = NKRsichuan.316
 	title = NKRsichuan.316.t
 	desc = NKRsichuan.316.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5313,7 +5313,7 @@ country_event = { #如故
 	id = NKRsichuan.317
 	title = NKRsichuan.317.t
 	desc = NKRsichuan.317.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5334,7 +5334,7 @@ country_event = { #中国头号大党
 	id = NKRsichuan.318
 	title = NKRsichuan.318.t
 	desc = NKRsichuan.318.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5351,7 +5351,7 @@ country_event = { #我意已决
 	id = NKRsichuan.319
 	title = NKRsichuan.319.t
 	desc = NKRsichuan.319.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5367,7 +5367,7 @@ country_event = { #解散民盟
 	id = NKRsichuan.320
 	title = NKRsichuan.320.t
 	desc = NKRsichuan.320.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5419,7 +5419,7 @@ country_event = { #新总统
 	id = NKRsichuan.321
 	title = NKRsichuan.321.t
 	desc = NKRsichuan.321.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5436,7 +5436,7 @@ country_event = { #繁荣社会
 	id = NKRsichuan.322
 	title = NKRsichuan.322.t
 	desc = NKRsichuan.322.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5452,7 +5452,7 @@ country_event = { #交给专家们
 	id = NKRsichuan.323
 	title = NKRsichuan.323.t
 	desc = NKRsichuan.323.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5468,7 +5468,7 @@ country_event = { #扶贫记 其一
 	id = NKRsichuan.324
 	title = NKRsichuan.324.t
 	desc = NKRsichuan.324.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5490,7 +5490,7 @@ country_event = { #扶贫记 其二
 	id = NKRsichuan.325
 	title = NKRsichuan.325.t
 	desc = NKRsichuan.325.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5512,7 +5512,7 @@ country_event = { #扶贫记 其三
 	id = NKRsichuan.326
 	title = NKRsichuan.326.t
 	desc = NKRsichuan.326.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5529,7 +5529,7 @@ country_event = { #中华技术革命
 	id = NKRsichuan.327
 	title = NKRsichuan.327.t
 	desc = NKRsichuan.327.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5545,7 +5545,7 @@ country_event = { #技术学校的一天
 	id = NKRsichuan.328
 	title = NKRsichuan.328.t
 	desc = NKRsichuan.328.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5561,7 +5561,7 @@ country_event = { #谁说技术官僚只会计划经济？
 	id = NKRsichuan.329
 	title = NKRsichuan.329.t
 	desc = NKRsichuan.329.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5578,7 +5578,7 @@ country_event = { #人道的技术官僚掌控的资本主义
 	id = NKRsichuan.330
 	title = NKRsichuan.330.t
 	desc = NKRsichuan.330.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5594,7 +5594,7 @@ country_event = { #罗隆基在大学
 	id = NKRsichuan.331
 	title = NKRsichuan.331.t
 	desc = NKRsichuan.331.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5610,7 +5610,7 @@ country_event = { #何为有机社会
 	id = NKRsichuan.332
 	title = NKRsichuan.332.t
 	desc = NKRsichuan.332.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5626,7 +5626,7 @@ country_event = { #批评
 	id = NKRsichuan.333
 	title = NKRsichuan.333.t
 	desc = NKRsichuan.333.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5642,7 +5642,7 @@ country_event = { #独立的工会
 	id = NKRsichuan.334
 	title = NKRsichuan.334.t
 	desc = NKRsichuan.334.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5658,7 +5658,7 @@ country_event = { #知识就是力量
 	id = NKRsichuan.335
 	title = NKRsichuan.335.t
 	desc = NKRsichuan.335.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5674,7 +5674,7 @@ country_event = { #东方文艺复兴
 	id = NKRsichuan.336
 	title = NKRsichuan.336.t
 	desc = NKRsichuan.336.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5690,7 +5690,7 @@ country_event = { #我们的党
 	id = NKRsichuan.337
 	title = NKRsichuan.337.t
 	desc = NKRsichuan.337.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5706,7 +5706,7 @@ country_event = { #地方选举
 	id = NKRsichuan.338
 	title = NKRsichuan.338.t
 	desc = NKRsichuan.338.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5722,7 +5722,7 @@ country_event = { #看不见的大手
 	id = NKRsichuan.339
 	title = NKRsichuan.339.t
 	desc = NKRsichuan.339.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5740,7 +5740,7 @@ country_event = { #法治社会
 	id = NKRsichuan.340
 	title = NKRsichuan.340.t
 	desc = NKRsichuan.340.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5756,7 +5756,7 @@ country_event = { #国防部
 	id = NKRsichuan.341
 	title = NKRsichuan.341.t
 	desc = NKRsichuan.341.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5772,7 +5772,7 @@ country_event = { #潘文华退休
 	id = NKRsichuan.342
 	title = NKRsichuan.342.t
 	desc = NKRsichuan.342.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5788,7 +5788,7 @@ country_event = { #蓝盔
 	id = NKRsichuan.343
 	title = NKRsichuan.343.t
 	desc = NKRsichuan.343.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5804,7 +5804,7 @@ country_event = { #跨党派合作
 	id = NKRsichuan.344
 	title = NKRsichuan.344.t
 	desc = NKRsichuan.344.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5820,7 +5820,7 @@ country_event = { #监督委员会
 	id = NKRsichuan.345
 	title = NKRsichuan.345.t
 	desc = NKRsichuan.345.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5836,7 +5836,7 @@ country_event = { #廉洁政府
 	id = NKRsichuan.346
 	title = NKRsichuan.346.t
 	desc = NKRsichuan.346.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5852,7 +5852,7 @@ country_event = { #齿轮磅礴转动的自由中国
 	id = NKRsichuan.347
 	title = NKRsichuan.347.t
 	desc = NKRsichuan.347.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5868,7 +5868,7 @@ country_event = { #齿轮磅礴转动的自由中国
 	id = NKRsichuan.348
 	title = NKRsichuan.348.t
 	desc = NKRsichuan.348.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5885,7 +5885,7 @@ country_event = { #民盟-青年党合作
 	id = NKRsichuan.349
 	title = NKRsichuan.349.t
 	desc = NKRsichuan.349.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5902,7 +5902,7 @@ country_event = { #麦子熟了千百回
 	id = NKRsichuan.350
 	title = NKRsichuan.350.t
 	desc = NKRsichuan.350.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5918,7 +5918,7 @@ country_event = { #档案柜
 	id = NKRsichuan.351
 	title = NKRsichuan.351.t
 	desc = NKRsichuan.351.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5934,7 +5934,7 @@ country_event = { #伟大改革者马克思
 	id = NKRsichuan.352
 	title = NKRsichuan.352.t
 	desc = NKRsichuan.352.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5950,7 +5950,7 @@ country_event = { #民盟-国民党合作
 	id = NKRsichuan.353
 	title = NKRsichuan.353.t
 	desc = NKRsichuan.353.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5966,7 +5966,7 @@ country_event = { #窃窃私语
 	id = NKRsichuan.354
 	title = NKRsichuan.354.t
 	desc = NKRsichuan.354.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5982,7 +5982,7 @@ country_event = { #娘要嫁人
 	id = NKRsichuan.355
 	title = NKRsichuan.355.t
 	desc = NKRsichuan.355.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -5998,7 +5998,7 @@ country_event = { #新科学世代
 	id = NKRsichuan.356
 	title = NKRsichuan.356.t
 	desc = NKRsichuan.356.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6014,7 +6014,7 @@ country_event = { #好消息！
 	id = NKRsichuan.357
 	title = NKRsichuan.357.t
 	desc = NKRsichuan.357.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6030,7 +6030,7 @@ country_event = { #黄老汉的一天
 	id = NKRsichuan.358
 	title = NKRsichuan.358.t
 	desc = NKRsichuan.358.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6046,7 +6046,7 @@ country_event = { #不管黑猫白猫
 	id = NKRsichuan.359
 	title = NKRsichuan.359.t
 	desc = NKRsichuan.359.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6063,7 +6063,7 @@ country_event = { #金豆豆，银豆豆...
 	id = NKRsichuan.360
 	title = NKRsichuan.360.t
 	desc = NKRsichuan.360.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6079,7 +6079,7 @@ country_event = { #德先生、赛先生与新中国
 	id = NKRsichuan.361
 	title = NKRsichuan.361.t
 	desc = NKRsichuan.361.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6095,7 +6095,7 @@ country_event = { #卡尔·马克思与新中国
 	id = NKRsichuan.362
 	title = NKRsichuan.362.t
 	desc = NKRsichuan.362.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6111,7 +6111,7 @@ country_event = { #退役仪式
 	id = NKRsichuan.363
 	title = NKRsichuan.363.t
 	desc = NKRsichuan.363.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6130,7 +6130,7 @@ country_event = { #维和军队为和平
 	id = NKRsichuan.364
 	title = NKRsichuan.364.t
 	desc = NKRsichuan.364.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6146,7 +6146,7 @@ country_event = { #泛亚乐观主义
 	id = NKRsichuan.365
 	title = NKRsichuan.365.t
 	desc = NKRsichuan.365.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6162,7 +6162,7 @@ country_event = { #
 	id = NKRsichuan.366
 	title = NKRsichuan.366.t
 	desc = NKRsichuan.366.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6178,7 +6178,7 @@ country_event = { #
 	id = NKRsichuan.367
 	title = NKRsichuan.367.t
 	desc = NKRsichuan.367.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6194,7 +6194,7 @@ country_event = { #
 	id = NKRsichuan.368
 	title = NKRsichuan.368.t
 	desc = NKRsichuan.368.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6210,7 +6210,7 @@ country_event = { #
 	id = NKRsichuan.369
 	title = NKRsichuan.369.t
 	desc = NKRsichuan.369.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6226,7 +6226,7 @@ country_event = { #
 	id = NKRsichuan.370
 	title = NKRsichuan.370.t
 	desc = NKRsichuan.370.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6242,7 +6242,7 @@ country_event = { #
 	id = NKRsichuan.371
 	title = NKRsichuan.371.t
 	desc = NKRsichuan.371.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6258,7 +6258,7 @@ country_event = { #
 	id = NKRsichuan.372
 	title = NKRsichuan.372.t
 	desc = NKRsichuan.372.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6274,7 +6274,7 @@ country_event = { #
 	id = NKRsichuan.373
 	title = NKRsichuan.373.t
 	desc = NKRsichuan.373.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6290,7 +6290,7 @@ country_event = { #
 	id = NKRsichuan.374
 	title = NKRsichuan.374.t
 	desc = NKRsichuan.374.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6306,7 +6306,7 @@ country_event = { #
 	id = NKRsichuan.375
 	title = NKRsichuan.375.t
 	desc = NKRsichuan.375.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6322,7 +6322,7 @@ country_event = { #
 	id = NKRsichuan.376
 	title = NKRsichuan.376.t
 	desc = NKRsichuan.376.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6338,7 +6338,7 @@ country_event = { #
 	id = NKRsichuan.377
 	title = NKRsichuan.377.t
 	desc = NKRsichuan.377.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6354,7 +6354,7 @@ country_event = { #
 	id = NKRsichuan.378
 	title = NKRsichuan.378.t
 	desc = NKRsichuan.378.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6370,7 +6370,7 @@ country_event = { #
 	id = NKRsichuan.379
 	title = NKRsichuan.379.t
 	desc = NKRsichuan.379.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6386,7 +6386,7 @@ country_event = { #
 	id = NKRsichuan.380
 	title = NKRsichuan.380.t
 	desc = NKRsichuan.380.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6402,7 +6402,7 @@ country_event = { #
 	id = NKRsichuan.381
 	title = NKRsichuan.381.t
 	desc = NKRsichuan.381.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6418,7 +6418,7 @@ country_event = { #
 	id = NKRsichuan.382
 	title = NKRsichuan.382.t
 	desc = NKRsichuan.382.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6434,7 +6434,7 @@ country_event = { #
 	id = NKRsichuan.383
 	title = NKRsichuan.383.t
 	desc = NKRsichuan.383.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6450,7 +6450,7 @@ country_event = { #
 	id = NKRsichuan.384
 	title = NKRsichuan.384.t
 	desc = NKRsichuan.384.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6466,7 +6466,7 @@ country_event = { #
 	id = NKRsichuan.385
 	title = NKRsichuan.385.t
 	desc = NKRsichuan.385.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6482,7 +6482,7 @@ country_event = { #
 	id = NKRsichuan.386
 	title = NKRsichuan.386.t
 	desc = NKRsichuan.386.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6498,7 +6498,7 @@ country_event = { #
 	id = NKRsichuan.387
 	title = NKRsichuan.387.t
 	desc = NKRsichuan.387.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6514,7 +6514,7 @@ country_event = { #
 	id = NKRsichuan.388
 	title = NKRsichuan.388.t
 	desc = NKRsichuan.388.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6530,7 +6530,7 @@ country_event = { #
 	id = NKRsichuan.389
 	title = NKRsichuan.389.t
 	desc = NKRsichuan.389.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6551,7 +6551,7 @@ country_event = { #病房
 	id = NKRsichuan.400
 	title = NKRsichuan.400.t
 	desc = NKRsichuan.400.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_pan_wenhua_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6567,7 +6567,7 @@ country_event = { #最后的一贯道？
 	id = NKRsichuan.401
 	title = NKRsichuan.401.t
 	desc = NKRsichuan.401.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6584,7 +6584,7 @@ country_event = { #打扫干净屋子
 	id = NKRsichuan.402
 	title = NKRsichuan.402.t
 	desc = NKRsichuan.402.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6600,7 +6600,7 @@ country_event = { #龙兴之地
 	id = NKRsichuan.403
 	title = NKRsichuan.403.t
 	desc = NKRsichuan.403.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6708,7 +6708,7 @@ country_event = { #少年中国学会的遗产
 	id = NKRsichuan.404
 	title = NKRsichuan.404.t
 	desc = NKRsichuan.404.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCS_group
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6728,7 +6728,7 @@ country_event = { #党内无派...
 	id = NKRsichuan.405
 	title = NKRsichuan.405.t
 	desc = NKRsichuan.405.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCS_group
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6752,7 +6752,7 @@ country_event = { #中国青年党 - 行社
 	id = NKRsichuan.406
 	title = NKRsichuan.406.t
 	desc = NKRsichuan.406.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6776,7 +6776,7 @@ country_event = { #中国青年党 - 神社
 	id = NKRsichuan.407
 	title = NKRsichuan.407.t
 	desc = NKRsichuan.407.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6800,7 +6800,7 @@ country_event = { #中国青年党 - 中社
 	id = NKRsichuan.408
 	title = NKRsichuan.408.t
 	desc = NKRsichuan.408.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6824,7 +6824,7 @@ country_event = { #中国青年党 - 朝曦社与国魂社
 	id = NKRsichuan.409
 	title = NKRsichuan.409.t
 	desc = NKRsichuan.409.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6841,7 +6841,7 @@ country_event = { #青年党第九次大会召开
 	id = NKRsichuan.410
 	title = NKRsichuan.410.t
 	desc = NKRsichuan.410.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6857,7 +6857,7 @@ country_event = { #重新强调国家主义
 	id = NKRsichuan.411
 	title = NKRsichuan.411.t
 	desc = NKRsichuan.411.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6874,7 +6874,7 @@ country_event = { #党的斗争路线
 	id = NKRsichuan.412
 	title = NKRsichuan.412.t
 	desc = NKRsichuan.412.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6899,7 +6899,7 @@ country_event = { #民主宪政承诺
 	id = NKRsichuan.413
 	title = NKRsichuan.413.t
 	desc = NKRsichuan.413.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6919,7 +6919,7 @@ country_event = { #确立对左派的方针
 	id = NKRsichuan.414
 	title = NKRsichuan.414.t
 	desc = NKRsichuan.414.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6935,7 +6935,7 @@ country_event = { #党的组织
 	id = NKRsichuan.415
 	title = NKRsichuan.415.t
 	desc = NKRsichuan.415.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6952,7 +6952,7 @@ country_event = { #神社的不满声
 	id = NKRsichuan.416
 	title = NKRsichuan.416.t
 	desc = NKRsichuan.416.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6972,7 +6972,7 @@ country_event = { #青年党九大闭幕
 	id = NKRsichuan.417
 	title = NKRsichuan.417.t
 	desc = NKRsichuan.417.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -6992,7 +6992,7 @@ country_event = { #暗流涌动
 	id = NKRsichuan.418
 	title = NKRsichuan.418.t
 	desc = NKRsichuan.418.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCS_group
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7034,7 +7034,7 @@ country_event = { #步入花园
 	id = NKRsichuan.419
 	title = NKRsichuan.419.t
 	desc = NKRsichuan.419.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7130,7 +7130,7 @@ country_event = { #国格
 	id = NKRsichuan.422
 	title = NKRsichuan.422.t
 	desc = NKRsichuan.422.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7152,7 +7152,7 @@ country_event = { #升官发财勿入此门！
 	id = NKRsichuan.423
 	title = NKRsichuan.423.t
 	desc = NKRsichuan.423.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7168,7 +7168,7 @@ country_event = { #革命宪政？
 	id = NKRsichuan.424
 	title = NKRsichuan.424.t
 	desc = NKRsichuan.424.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7206,7 +7206,7 @@ country_event = { #昔日空谈，今日实干
 	id = NKRsichuan.425
 	title = NKRsichuan.425.t
 	desc = NKRsichuan.425.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7268,7 +7268,7 @@ country_event = { #左舜生谈政治
 	id = NKRsichuan.426
 	title = NKRsichuan.426.t
 	desc = NKRsichuan.426.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7290,7 +7290,7 @@ country_event = { #文化界的联系
 	id = NKRsichuan.427
 	title = NKRsichuan.427.t
 	desc = NKRsichuan.427.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_wang_guangqi
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7328,7 +7328,7 @@ country_event = { #神圣联合（Union Sacrée）
 	id = NKRsichuan.428
 	title = NKRsichuan.428.t
 	desc = NKRsichuan.428.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7344,7 +7344,7 @@ country_event = { #公理对强权
 	id = NKRsichuan.429
 	title = NKRsichuan.429.t
 	desc = NKRsichuan.429.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7360,7 +7360,7 @@ country_event = { #吴天墀发言
 	id = NKRsichuan.430
 	title = NKRsichuan.430.t
 	desc = NKRsichuan.430.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_wu_tianchi
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7384,7 +7384,7 @@ country_event = { #陈启天安抚局势
 	id = NKRsichuan.431
 	title = NKRsichuan.431.t
 	desc = NKRsichuan.431.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7401,7 +7401,7 @@ country_event = { #和谁联合？
 	id = NKRsichuan.432
 	title = NKRsichuan.432.t
 	desc = NKRsichuan.432.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7449,7 +7449,7 @@ country_event = { #社会进步
 	id = NKRsichuan.433
 	title = NKRsichuan.433.t
 	desc = NKRsichuan.433.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7498,7 +7498,7 @@ country_event = { #木槿花丛
 	id = NKRsichuan.434
 	title = NKRsichuan.434.t
 	desc = NKRsichuan.434.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7531,7 +7531,7 @@ country_event = { #国家主义革命
 	id = NKRsichuan.435
 	title = NKRsichuan.435.t
 	desc = NKRsichuan.435.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_1848
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7554,7 +7554,7 @@ country_event = { #孙传芳的遗产
 	id = NKRsichuan.436
 	title = NKRsichuan.436.t
 	desc = NKRsichuan.436.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7596,7 +7596,7 @@ country_event = { #军政部改组
 	id = NKRsichuan.437
 	title = NKRsichuan.437.t
 	desc = NKRsichuan.437.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7675,7 +7675,7 @@ country_event = { #北伐宣言
 	id = NKRsichuan.438
 	title = NKRsichuan.438.t
 	desc = NKRsichuan.438.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7697,7 +7697,7 @@ country_event = { #现代化大方向
 	id = NKRsichuan.439
 	title = NKRsichuan.439.t
 	desc = NKRsichuan.439.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7719,7 +7719,7 @@ country_event = { #工人救国联合会
 	id = NKRsichuan.440
 	title = NKRsichuan.440.t
 	desc = NKRsichuan.440.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7742,7 +7742,7 @@ country_event = { #国工两党属工会不满
 	id = NKRsichuan.441
 	title = NKRsichuan.441.t
 	desc = NKRsichuan.441.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7764,7 +7764,7 @@ country_event = { #王思懿事件
 	id = NKRsichuan.442
 	title = NKRsichuan.442.t
 	desc = NKRsichuan.442.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7832,7 +7832,7 @@ country_event = { #报复
 	id = NKRsichuan.443
 	title = NKRsichuan.443.t
 	desc = NKRsichuan.443.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7883,7 +7883,7 @@ country_event = { #左舜生谈人道主义
 	id = NKRsichuan.444
 	title = NKRsichuan.444.t
 	desc = NKRsichuan.444.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7929,7 +7929,7 @@ country_event = { #科学和实验室
 	id = NKRsichuan.445
 	title = NKRsichuan.445.t
 	desc = NKRsichuan.445.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7945,7 +7945,7 @@ country_event = { #党费自由
 	id = NKRsichuan.446
 	title = NKRsichuan.446.t
 	desc = NKRsichuan.446.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7968,7 +7968,7 @@ country_event = { #青年党的坚持
 	id = NKRsichuan.447
 	title = NKRsichuan.447.t
 	desc = NKRsichuan.447.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -7990,7 +7990,7 @@ country_event = { #三色堇的真名
 	id = NKRsichuan.448
 	title = NKRsichuan.448.t
 	desc = NKRsichuan.448.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8007,7 +8007,7 @@ country_event = { #工业现代化
 	id = NKRsichuan.449
 	title = NKRsichuan.449.t
 	desc = NKRsichuan.449.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8105,7 +8105,7 @@ country_event = { #华南方略
 	id = NKRsichuan.452
 	title = NKRsichuan.452.t
 	desc = NKRsichuan.452.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8115,6 +8115,61 @@ country_event = { #华南方略
 		log = "[GetLogInfo]: event NKRsichuan.452 option NKRsichuan.452.a"
 		name = NKRsichuan.452.a
 		set_country_flag = SZC_YCP_can_unite_someone
+		hidden_effect = {
+			if = {
+				limit = {
+					UPC = {
+						exists = yes
+						NOT = {
+							has_war_with = ROOT
+						}
+					}
+				}
+				country_event = {
+					id = NKRsichuan.462
+				}
+			}
+			if = {
+				limit = {
+					ANQ = {
+						exists = yes
+						NOT = {
+							OR = {
+								has_war_with = ROOT
+								is_puppet_of = FNG
+								is_puppet_of = QIE
+								china_character_is_fengtian = yes
+								china_character_is_northern_zhili = yes
+							}
+						}
+					}
+				}
+				country_event = {
+					id = NKRsichuan.455
+				}
+			}
+			if = {
+				limit = {
+					LEP = {
+						exists = yes
+						NOT = {
+							OR = {
+								has_war_with = ROOT
+								is_puppet_of = QIE
+							}
+						}
+					}
+				}
+				country_event = {
+					id = NKRsichuan.454
+				}
+			}
+			else = {
+				country_event = {
+					id = NKRsichuan.453
+				}
+			}
+		}
 	}
 }
 
@@ -8122,7 +8177,7 @@ country_event = { #无能为力
 	id = NKRsichuan.453
 	title = NKRsichuan.453.t
 	desc = NKRsichuan.453.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8138,7 +8193,7 @@ country_event = { #权力空窗期
 	id = NKRsichuan.454
 	title = NKRsichuan.454.t
 	desc = NKRsichuan.454.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8146,7 +8201,8 @@ country_event = { #权力空窗期
 
 	option = {#值得一试。
 		log = "[GetLogInfo]: event NKRsichuan.454 option NKRsichuan.454.a"
-		name = NKRsichuan.45374.a
+		name = NKRsichuan.454.a
+		set_country_flag = SZC_YCP_can_unite_someone
 	}
 }
 
@@ -8154,7 +8210,7 @@ country_event = { #孤立无援的反租界派
 	id = NKRsichuan.455
 	title = NKRsichuan.455.t
 	desc = NKRsichuan.455.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8163,6 +8219,7 @@ country_event = { #孤立无援的反租界派
 	option = {#值得一试。
 		log = "[GetLogInfo]: event NKRsichuan.455 option NKRsichuan.455.a"
 		name = NKRsichuan.455.a
+		set_country_flag = SZC_YCP_can_unite_someone
 	}
 }
 
@@ -8170,7 +8227,7 @@ country_event = { #成都的消息
 	id = NKRsichuan.456
 	title = NKRsichuan.456.t
 	desc = NKRsichuan.456.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8257,7 +8314,7 @@ country_event = { #LEP接受我方条约！
 	id = NKRsichuan.457
 	title = NKRsichuan.457.t
 	desc = NKRsichuan.457.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8281,7 +8338,7 @@ country_event = { #LEP拒绝我方条约！
 	id = NKRsichuan.458
 	title = NKRsichuan.458.t
 	desc = NKRsichuan.458.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8301,7 +8358,7 @@ country_event = { #成都的消息
 	id = NKRsichuan.459
 	title = NKRsichuan.459.t
 	desc = NKRsichuan.459.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8389,7 +8446,7 @@ country_event = { #ANQ接受我方条约！
 	id = NKRsichuan.460
 	title = NKRsichuan.460.t
 	desc = NKRsichuan.460.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8413,7 +8470,7 @@ country_event = { #ANQ拒绝我方条约！
 	id = NKRsichuan.461
 	title = NKRsichuan.461.t
 	desc = NKRsichuan.461.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8433,7 +8490,7 @@ country_event = { #联省大联合？
 	id = NKRsichuan.462
 	title = NKRsichuan.462.t
 	desc = NKRsichuan.462.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8442,6 +8499,7 @@ country_event = { #联省大联合？
 	option = {#发出我们的邀请！
 		log = "[GetLogInfo]: event NKRsichuan.462 option NKRsichuan.462.a"
 		name = NKRsichuan.462.a
+		set_country_flag = SZC_YCP_can_unite_someone
 	}
 }
 
@@ -8449,7 +8507,7 @@ country_event = { #联省大联合？
 	id = NKRsichuan.463
 	title = NKRsichuan.463.t
 	desc = NKRsichuan.463.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8538,7 +8596,7 @@ country_event = { #FED接受我方条约！
 	id = NKRsichuan.464
 	title = NKRsichuan.464.t
 	desc = NKRsichuan.464.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8562,7 +8620,7 @@ country_event = { #FED拒绝我方条约！
 	id = NKRsichuan.465
 	title = NKRsichuan.465.t
 	desc = NKRsichuan.465.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8582,7 +8640,7 @@ country_event = { #北京已入我手
 	id = NKRsichuan.466
 	title = NKRsichuan.466.t
 	desc = NKRsichuan.466.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8602,7 +8660,7 @@ country_event = { #青年党第十次代表大会召开
 	id = NKRsichuan.467
 	title = NKRsichuan.467.t
 	desc = NKRsichuan.467.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCS_group
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8640,7 +8698,7 @@ country_event = { #从地方党到全国党
 	id = NKRsichuan.468
 	title = NKRsichuan.468.t
 	desc = NKRsichuan.468.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCS_group
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8663,7 +8721,7 @@ country_event = { #联省自治的目标
 	id = NKRsichuan.469
 	title = NKRsichuan.469.t
 	desc = NKRsichuan.469.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCS_group
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8686,7 +8744,7 @@ country_event = { #节制资本
 	id = NKRsichuan.470
 	title = NKRsichuan.470.t
 	desc = NKRsichuan.470.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCS_group
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8709,7 +8767,7 @@ country_event = { #重申神圣联合
 	id = NKRsichuan.471
 	title = NKRsichuan.471.t
 	desc = NKRsichuan.471.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCS_group
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8733,7 +8791,7 @@ country_event = { #新国旗
 	id = NKRsichuan.472
 	title = NKRsichuan.472.t
 	desc = NKRsichuan.472.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8756,7 +8814,7 @@ country_event = { #委员长崇拜？
 	id = NKRsichuan.473
 	title = NKRsichuan.473.t
 	desc = NKRsichuan.473.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8779,7 +8837,7 @@ country_event = { #劾曾案
 	id = NKRsichuan.474
 	title = NKRsichuan.474.t
 	desc = NKRsichuan.474.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8802,7 +8860,7 @@ country_event = { #计票之时
 	id = NKRsichuan.475
 	title = NKRsichuan.475.t
 	desc = NKRsichuan.475.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8862,7 +8920,7 @@ country_event = { #曾琦凯旋
 	id = NKRsichuan.476
 	title = NKRsichuan.476.t
 	desc = NKRsichuan.476.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8914,7 +8972,7 @@ country_event = { #党章修改通过！
 	id = NKRsichuan.477
 	title = NKRsichuan.477.t
 	desc = NKRsichuan.477.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8943,7 +9001,7 @@ country_event = { #曾琦驳回党章修改
 	id = NKRsichuan.478
 	title = NKRsichuan.478.t
 	desc = NKRsichuan.478.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -8986,7 +9044,7 @@ country_event = { #青年党十大顺利闭幕
 	id = NKRsichuan.479
 	title = NKRsichuan.479.t
 	desc = NKRsichuan.479.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9024,7 +9082,7 @@ country_event = { #反对派得胜
 	id = NKRsichuan.480
 	title = NKRsichuan.480.t
 	desc = NKRsichuan.480.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9072,7 +9130,7 @@ country_event = { #新领导班子
 	id = NKRsichuan.481
 	title = NKRsichuan.481.t
 	desc = NKRsichuan.481.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9099,7 +9157,7 @@ country_event = { #国魂社的欢呼
 	id = NKRsichuan.482
 	title = NKRsichuan.482.t
 	desc = NKRsichuan.482.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9121,7 +9179,7 @@ country_event = { #青年党十大顺利闭幕
 	id = NKRsichuan.483
 	title = NKRsichuan.483.t
 	desc = NKRsichuan.483.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCS_group
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9146,7 +9204,7 @@ country_event = { #尴尬的结果
 	id = NKRsichuan.484
 	title = NKRsichuan.484.t
 	desc = NKRsichuan.484.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9171,7 +9229,7 @@ country_event = { #少壮派浮出水面
 	id = NKRsichuan.485
 	title = NKRsichuan.485.t
 	desc = NKRsichuan.485.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9197,7 +9255,7 @@ country_event = { #妥协方案得到认可
 	id = NKRsichuan.486
 	title = NKRsichuan.486.t
 	desc = NKRsichuan.486.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9231,7 +9289,7 @@ country_event = { #青年党十大闭幕
 	id = NKRsichuan.487
 	title = NKRsichuan.487.t
 	desc = NKRsichuan.487.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9291,7 +9349,7 @@ country_event = { #社会化经济
 	id = NKRsichuan.489
 	title = NKRsichuan.489.t
 	desc = NKRsichuan.489.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9308,7 +9366,7 @@ country_event = { #工会的未来
 	id = NKRsichuan.490
 	title = NKRsichuan.490.t
 	desc = NKRsichuan.490.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9344,7 +9402,7 @@ country_event = { #张国焘同意合作
 	id = NKRsichuan.491
 	title = NKRsichuan.491.t
 	desc = NKRsichuan.491.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhang_guotao
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9366,7 +9424,7 @@ country_event = { #中央经济改革办成立
 	id = NKRsichuan.492
 	title = NKRsichuan.492.t
 	desc = NKRsichuan.492.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9398,7 +9456,7 @@ country_event = { #医疗下乡
 	id = NKRsichuan.494
 	title = NKRsichuan.494.t
 	desc = NKRsichuan.494.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9406,7 +9464,7 @@ country_event = { #医疗下乡
 
 	option = {#道阻且长啊。
 		log = "[GetLogInfo]: event NKRsichuan.494 option NKRsichuan.494.a"
-		name = NKRsichuan.49374.a
+		name = NKRsichuan.494.a
 	}
 }
 
@@ -9414,7 +9472,7 @@ country_event = { #中科院成立
 	id = NKRsichuan.495
 	title = NKRsichuan.495.t
 	desc = NKRsichuan.495.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9430,7 +9488,7 @@ country_event = { #党、政府、国家
 	id = NKRsichuan.496
 	title = NKRsichuan.496.t
 	desc = NKRsichuan.496.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9448,7 +9506,7 @@ country_event = { #妇女权利？
 	id = NKRsichuan.497
 	title = NKRsichuan.497.t
 	desc = NKRsichuan.497.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9499,7 +9557,7 @@ country_event = { #选举权问题
 	id = NKRsichuan.498
 	title = NKRsichuan.498.t
 	desc = NKRsichuan.498.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9528,7 +9586,7 @@ country_event = { #左翼政党的命运
 	id = NKRsichuan.499
 	title = NKRsichuan.499.t
 	desc = NKRsichuan.499.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9640,7 +9698,7 @@ country_event = { #联省制目标
 	id = NKRsichuan.501
 	title = NKRsichuan.501.t
 	desc = NKRsichuan.501.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9666,7 +9724,7 @@ country_event = { #宪法出台
 	id = NKRsichuan.502
 	title = NKRsichuan.502.t
 	desc = NKRsichuan.502.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9682,7 +9740,7 @@ country_event = { #宪法出台
 	id = NKRsichuan.503
 	title = NKRsichuan.503.t
 	desc = NKRsichuan.503.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9698,7 +9756,7 @@ country_event = { #宪法出台
 	id = NKRsichuan.504
 	title = NKRsichuan.504.t
 	desc = NKRsichuan.504.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9706,7 +9764,7 @@ country_event = { #宪法出台
 
 	option = {#复兴中国的一大步。
 		log = "[GetLogInfo]: event NKRsichuan.504 option NKRsichuan.504.a"
-		name = NKRsichuan.50374.a
+		name = NKRsichuan.504.a
 	}
 }
 
@@ -9714,7 +9772,7 @@ country_event = { #君子当行！
 	id = NKRsichuan.505
 	title = NKRsichuan.505.t
 	desc = NKRsichuan.505.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9730,7 +9788,7 @@ country_event = { #20世纪之士大夫
 	id = NKRsichuan.506
 	title = NKRsichuan.506.t
 	desc = NKRsichuan.506.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9746,7 +9804,7 @@ country_event = { #国家主义再合流
 	id = NKRsichuan.507
 	title = NKRsichuan.507.t
 	desc = NKRsichuan.507.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9762,7 +9820,7 @@ country_event = { #革命的正统国家主义
 	id = NKRsichuan.508
 	title = NKRsichuan.508.t
 	desc = NKRsichuan.508.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9778,7 +9836,7 @@ country_event = { #新思潮崛起
 	id = NKRsichuan.509
 	title = NKRsichuan.509.t
 	desc = NKRsichuan.509.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_1848
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9810,7 +9868,7 @@ country_event = { #战国策派支持唯一元首
 	id = NKRsichuan.510
 	title = NKRsichuan.510.t
 	desc = NKRsichuan.510.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_1848
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9847,7 +9905,7 @@ country_event = { #阻断赤潮
 	id = NKRsichuan.511
 	title = NKRsichuan.511.t
 	desc = NKRsichuan.511.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9863,7 +9921,7 @@ country_event = { #论国家主义革命
 	id = NKRsichuan.512
 	title = NKRsichuan.512.t
 	desc = NKRsichuan.512.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9879,7 +9937,7 @@ country_event = { #最伟大的元首
 	id = NKRsichuan.513
 	title = NKRsichuan.513.t
 	desc = NKRsichuan.513.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9895,7 +9953,7 @@ country_event = { #民主的国家主义
 	id = NKRsichuan.514
 	title = NKRsichuan.514.t
 	desc = NKRsichuan.514.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9911,7 +9969,7 @@ country_event = { #拯救国家主义革命
 	id = NKRsichuan.515
 	title = NKRsichuan.515.t
 	desc = NKRsichuan.515.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9927,7 +9985,7 @@ country_event = { #保甲制的革新
 	id = NKRsichuan.516
 	title = NKRsichuan.516.t
 	desc = NKRsichuan.516.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9943,7 +10001,7 @@ country_event = { #青年铁血军
 	id = NKRsichuan.517
 	title = NKRsichuan.517.t
 	desc = NKRsichuan.517.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -9979,7 +10037,7 @@ country_event = { #论国际主义和国家主义
 	id = NKRsichuan.518
 	title = NKRsichuan.518.t
 	desc = NKRsichuan.518.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10015,7 +10073,7 @@ country_event = { #李张会
 	id = NKRsichuan.519
 	title = NKRsichuan.519.t
 	desc = NKRsichuan.519.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10058,7 +10116,7 @@ country_event = { #决裂
 	id = NKRsichuan.520
 	title = NKRsichuan.520.t
 	desc = NKRsichuan.520.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10083,7 +10141,7 @@ country_event = { #青年党-国社党联合
 	id = NKRsichuan.521
 	title = NKRsichuan.521.t
 	desc = NKRsichuan.521.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10111,7 +10169,7 @@ country_event = { #国社党支持中社
 	id = NKRsichuan.522
 	title = NKRsichuan.522.t
 	desc = NKRsichuan.522.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10138,7 +10196,7 @@ country_event = { #宪政大联盟
 	id = NKRsichuan.523
 	title = NKRsichuan.523.t
 	desc = NKRsichuan.523.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10154,7 +10212,7 @@ country_event = { #未竟之事
 	id = NKRsichuan.524
 	title = NKRsichuan.524.t
 	desc = NKRsichuan.524.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10174,7 +10232,7 @@ country_event = { #人民至上
 	id = NKRsichuan.525
 	title = NKRsichuan.525.t
 	desc = NKRsichuan.525.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10202,7 +10260,7 @@ country_event = { #书生的革命
 	id = NKRsichuan.526
 	title = NKRsichuan.526.t
 	desc = NKRsichuan.526.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10234,7 +10292,7 @@ country_event = { #现代社会，现代视野
 	id = NKRsichuan.527
 	title = NKRsichuan.527.t
 	desc = NKRsichuan.527.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10262,7 +10320,7 @@ country_event = { #手足无措的少壮派
 	id = NKRsichuan.528
 	title = NKRsichuan.528.t
 	desc = NKRsichuan.528.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10278,7 +10336,7 @@ country_event = { #国家主义经济学
 	id = NKRsichuan.529
 	title = NKRsichuan.529.t
 	desc = NKRsichuan.529.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10299,7 +10357,7 @@ country_event = { #加速发展战略
 	id = NKRsichuan.530
 	title = NKRsichuan.530.t
 	desc = NKRsichuan.530.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10319,7 +10377,7 @@ country_event = { #平常一天
 	id = NKRsichuan.531
 	title = NKRsichuan.531.t
 	desc = NKRsichuan.531.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10339,7 +10397,7 @@ country_event = { #新领导班子
 	id = NKRsichuan.532
 	title = NKRsichuan.532.t
 	desc = NKRsichuan.532.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10359,7 +10417,7 @@ country_event = { #执政之党
 	id = NKRsichuan.533
 	title = NKRsichuan.533.t
 	desc = NKRsichuan.533.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10379,7 +10437,7 @@ country_event = { #会谈
 	id = NKRsichuan.534
 	title = NKRsichuan.534.t
 	desc = NKRsichuan.534.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10432,7 +10490,7 @@ country_event = { #国社党支持青年党政权
 	id = NKRsichuan.535
 	title = NKRsichuan.535.t
 	desc = NKRsichuan.535.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10488,7 +10546,7 @@ country_event = { #新法家
 	id = NKRsichuan.537
 	title = NKRsichuan.537.t
 	desc = NKRsichuan.537.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10504,7 +10562,7 @@ country_event = { #从1919到[Get.Year]
 	id = NKRsichuan.538
 	title = NKRsichuan.538.t
 	desc = NKRsichuan.538.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10520,7 +10578,7 @@ country_event = { #顺利交接
 	id = NKRsichuan.539
 	title = NKRsichuan.539.t
 	desc = NKRsichuan.539.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10560,7 +10618,7 @@ country_event = { #领导层更迭
 	id = NKRsichuan.540
 	title = NKRsichuan.540.t
 	desc = NKRsichuan.540.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10600,7 +10658,7 @@ country_event = { #丢人现眼
 	id = NKRsichuan.541
 	title = NKRsichuan.541.t
 	desc = NKRsichuan.541.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10644,7 +10702,7 @@ country_event = { #对谈
 	id = NKRsichuan.542
 	title = NKRsichuan.542.t
 	desc = NKRsichuan.542.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10660,7 +10718,7 @@ country_event = { #最长的一天
 	id = NKRsichuan.543
 	title = NKRsichuan.543.t
 	desc = NKRsichuan.543.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10683,7 +10741,7 @@ country_event = { #大会
 	id = NKRsichuan.544
 	title = NKRsichuan.544.t
 	desc = NKRsichuan.544.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10717,7 +10775,7 @@ country_event = { #朝曦已至
 	id = NKRsichuan.545
 	title = NKRsichuan.545.t
 	desc = NKRsichuan.545.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10744,7 +10802,7 @@ country_event = { #混乱即阶梯
 	id = NKRsichuan.546
 	title = NKRsichuan.546.t
 	desc = NKRsichuan.546.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhang_guotao
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10785,7 +10843,7 @@ country_event = { #新法家双巨头
 	id = NKRsichuan.547
 	title = NKRsichuan.547.t
 	desc = NKRsichuan.547.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chang_yansheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10801,7 +10859,7 @@ country_event = { #新战国时代已至！
 	id = NKRsichuan.548
 	title = NKRsichuan.548.t
 	desc = NKRsichuan.548.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10824,7 +10882,7 @@ country_event = { #超然政府
 	id = NKRsichuan.549
 	title = NKRsichuan.549.t
 	desc = NKRsichuan.549.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10844,7 +10902,7 @@ country_event = { #思想大革命
 	id = NKRsichuan.550
 	title = NKRsichuan.550.t
 	desc = NKRsichuan.550.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10861,7 +10919,7 @@ country_event = { #国际的国家社会主义
 	id = NKRsichuan.551
 	title = NKRsichuan.551.t
 	desc = NKRsichuan.551.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chang_yansheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10877,7 +10935,7 @@ country_event = { #霸道
 	id = NKRsichuan.552
 	title = NKRsichuan.552.t
 	desc = NKRsichuan.552.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10894,7 +10952,7 @@ country_event = { #造就我自己的命运
 	id = NKRsichuan.553
 	title = NKRsichuan.553.t
 	desc = NKRsichuan.553.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10910,7 +10968,7 @@ country_event = { #年轻的革命家
 	id = NKRsichuan.554
 	title = NKRsichuan.554.t
 	desc = NKRsichuan.554.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10918,7 +10976,7 @@ country_event = { #年轻的革命家
 
 	option = {#无政府主义革命，就一定要实现！
 		log = "[GetLogInfo]: event NKRsichuan.554 option NKRsichuan.554.a"
-		name = NKRsichuan.55374.a
+		name = NKRsichuan.554.a
 	}
 }
 
@@ -10926,7 +10984,7 @@ country_event = { #思想者的疯狂
 	id = NKRsichuan.555
 	title = NKRsichuan.555.t
 	desc = NKRsichuan.555.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10942,7 +11000,7 @@ country_event = { #夏曦社-世界社合作
 	id = NKRsichuan.556
 	title = NKRsichuan.556.t
 	desc = NKRsichuan.556.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_world_society
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10958,7 +11016,7 @@ country_event = { #无治国家主义成真
 	id = NKRsichuan.557
 	title = NKRsichuan.557.t
 	desc = NKRsichuan.557.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_world_society
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10978,7 +11036,7 @@ country_event = { #改变
 	id = NKRsichuan.558
 	title = NKRsichuan.558.t
 	desc = NKRsichuan.558.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10994,7 +11052,7 @@ country_event = { #《自由中国》
 	id = NKRsichuan.559
 	title = NKRsichuan.559.t
 	desc = NKRsichuan.559.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_lei_zhen
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11012,7 +11070,7 @@ country_event = { #从未见过的挚友
 	id = NKRsichuan.560
 	title = NKRsichuan.560.t
 	desc = NKRsichuan.560.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_lei_zhen
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11034,7 +11092,7 @@ country_event = { #中国青年党的终结
 	id = NKRsichuan.561
 	title = NKRsichuan.561.t
 	desc = NKRsichuan.561.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11100,7 +11158,7 @@ country_event = { #野心家的完胜
 	id = NKRsichuan.562
 	title = NKRsichuan.562.t
 	desc = NKRsichuan.562.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhang_guotao
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11116,7 +11174,7 @@ country_event = { #左翼合流
 	id = NKRsichuan.563
 	title = NKRsichuan.563.t
 	desc = NKRsichuan.563.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhang_guotao
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11136,7 +11194,7 @@ country_event = { #统一国家社会主义
 	id = NKRsichuan.564
 	title = NKRsichuan.564.t
 	desc = NKRsichuan.564.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhang_guotao
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11144,7 +11202,7 @@ country_event = { #统一国家社会主义
 
 	option = {#阵线愈发强大。
 		log = "[GetLogInfo]: event NKRsichuan.564 option NKRsichuan.564.a"
-		name = NKRsichuan.56374.a
+		name = NKRsichuan.564.a
 	}
 }
 
@@ -11152,7 +11210,7 @@ country_event = { #继续朝曦社合作
 	id = NKRsichuan.565
 	title = NKRsichuan.565.t
 	desc = NKRsichuan.565.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11168,7 +11226,7 @@ country_event = { #百万雄师
 	id = NKRsichuan.566
 	title = NKRsichuan.566.t
 	desc = NKRsichuan.566.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhang_guotao
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11184,7 +11242,7 @@ country_event = { #去他妈的！
 	id = NKRsichuan.567
 	title = NKRsichuan.567.t
 	desc = NKRsichuan.567.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhang_guotao
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11200,7 +11258,7 @@ country_event = { #让贤
 	id = NKRsichuan.568
 	title = NKRsichuan.568.t
 	desc = NKRsichuan.568.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11230,7 +11288,7 @@ country_event = { #年轻的民主
 	id = NKRsichuan.569
 	title = NKRsichuan.569.t
 	desc = NKRsichuan.569.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11258,7 +11316,7 @@ country_event = { #造梦之终
 	id = NKRsichuan.570
 	title = NKRsichuan.570.t
 	desc = NKRsichuan.570.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11287,7 +11345,7 @@ country_event = { #终局
 	id = NKRsichuan.571
 	title = NKRsichuan.571.t
 	desc = NKRsichuan.571.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11318,7 +11376,7 @@ country_event = { #狂飙运动
 	id = NKRsichuan.572
 	title = NKRsichuan.572.t
 	desc = NKRsichuan.572.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11339,7 +11397,7 @@ country_event = { #历史的唤起
 	id = NKRsichuan.573
 	title = NKRsichuan.573.t
 	desc = NKRsichuan.573.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11355,7 +11413,7 @@ country_event = { #超人哲学
 	id = NKRsichuan.574
 	title = NKRsichuan.574.t
 	desc = NKRsichuan.574.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11363,7 +11421,7 @@ country_event = { #超人哲学
 
 	option = {#我们现在正需要这样的超人。
 		log = "[GetLogInfo]: event NKRsichuan.574 option NKRsichuan.574.a"
-		name = NKRsichuan.57374.a
+		name = NKRsichuan.574.a
 	}
 }
 
@@ -11371,7 +11429,7 @@ country_event = { #政治、经济、文化
 	id = NKRsichuan.575
 	title = NKRsichuan.575.t
 	desc = NKRsichuan.575.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11387,7 +11445,7 @@ country_event = { #中华国魂
 	id = NKRsichuan.576
 	title = NKRsichuan.576.t
 	desc = NKRsichuan.576.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11403,7 +11461,7 @@ country_event = { #玄想之世
 	id = NKRsichuan.577
 	title = NKRsichuan.577.t
 	desc = NKRsichuan.577.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11419,7 +11477,7 @@ country_event = { #国家主义，救亡图存
 	id = NKRsichuan.578
 	title = NKRsichuan.578.t
 	desc = NKRsichuan.578.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11437,7 +11495,7 @@ country_event = { #中华的萨文科夫
 	id = NKRsichuan.579
 	title = NKRsichuan.579.t
 	desc = NKRsichuan.579.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11463,7 +11521,7 @@ country_event = { #内除国贼
 	id = NKRsichuan.580
 	title = NKRsichuan.580.t
 	desc = NKRsichuan.580.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11479,7 +11537,7 @@ country_event = { #屈原的遗产
 	id = NKRsichuan.581
 	title = NKRsichuan.581.t
 	desc = NKRsichuan.581.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11496,7 +11554,7 @@ country_event = { #扩大委员长权力
 	id = NKRsichuan.582
 	title = NKRsichuan.582.t
 	desc = NKRsichuan.582.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11512,7 +11570,7 @@ country_event = { #哲人团
 	id = NKRsichuan.583
 	title = NKRsichuan.583.t
 	desc = NKRsichuan.583.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11528,7 +11586,7 @@ country_event = { #永恒的革命家
 	id = NKRsichuan.584
 	title = NKRsichuan.584.t
 	desc = NKRsichuan.584.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11536,7 +11594,7 @@ country_event = { #永恒的革命家
 
 	option = {#自始至终。
 		log = "[GetLogInfo]: event NKRsichuan.584 option NKRsichuan.584.a"
-		name = NKRsichuan.58374.a
+		name = NKRsichuan.584.a
 	}
 }
 
@@ -11544,7 +11602,7 @@ country_event = { #多党参政议政
 	id = NKRsichuan.585
 	title = NKRsichuan.585.t
 	desc = NKRsichuan.585.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11560,7 +11618,7 @@ country_event = { #自由的回响
 	id = NKRsichuan.586
 	title = NKRsichuan.586.t
 	desc = NKRsichuan.586.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11607,7 +11665,7 @@ country_event = { #文艺之春
 	id = NKRsichuan.588
 	title = NKRsichuan.588.t
 	desc = NKRsichuan.588.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11623,7 +11681,7 @@ country_event = { #我们的法兰西岁月
 	id = NKRsichuan.589
 	title = NKRsichuan.589.t
 	desc = NKRsichuan.589.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCS_group
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11641,7 +11699,7 @@ country_event = { #国家主义教育 其一
 	id = NKRsichuan.590
 	title = NKRsichuan.590.t
 	desc = NKRsichuan.590.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11657,7 +11715,7 @@ country_event = { #国家主义教育 其二
 	id = NKRsichuan.591
 	title = NKRsichuan.591.t
 	desc = NKRsichuan.591.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11673,7 +11731,7 @@ country_event = { #铲除极端势力
 	id = NKRsichuan.592
 	title = NKRsichuan.592.t
 	desc = NKRsichuan.592.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11689,7 +11747,7 @@ country_event = { #全民革命的世纪
 	id = NKRsichuan.593
 	title = NKRsichuan.593.t
 	desc = NKRsichuan.593.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11705,7 +11763,7 @@ country_event = { #向往和平
 	id = NKRsichuan.594
 	title = NKRsichuan.594.t
 	desc = NKRsichuan.594.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11713,7 +11771,7 @@ country_event = { #向往和平
 
 	option = {#这是我们的民族性！
 		log = "[GetLogInfo]: event NKRsichuan.594 option NKRsichuan.594.a"
-		name = NKRsichuan.59374.a
+		name = NKRsichuan.594.a
 	}
 }
 
@@ -11721,7 +11779,7 @@ country_event = { #军国主义之终
 	id = NKRsichuan.595
 	title = NKRsichuan.595.t
 	desc = NKRsichuan.595.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11738,7 +11796,7 @@ country_event = { #国家主义青年团
 	id = NKRsichuan.596
 	title = NKRsichuan.596.t
 	desc = NKRsichuan.596.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11754,7 +11812,7 @@ country_event = { #新中国的国父
 	id = NKRsichuan.597
 	title = NKRsichuan.597.t
 	desc = NKRsichuan.597.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11770,7 +11828,7 @@ country_event = { #革命之花绽放
 	id = NKRsichuan.598
 	title = NKRsichuan.598.t
 	desc = NKRsichuan.598.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zeng_qi_2
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11786,7 +11844,7 @@ country_event = { #新生的意大利
 	id = NKRsichuan.599
 	title = NKRsichuan.599.t
 	desc = NKRsichuan.599.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_risorgimento
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11831,7 +11889,7 @@ country_event = { #青年民主的演化
 	id = NKRsichuan.600
 	title = NKRsichuan.600.t
 	desc = NKRsichuan.600.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11870,7 +11928,7 @@ country_event = { #国家存在论
 	id = NKRsichuan.601
 	title = NKRsichuan.601.t
 	desc = NKRsichuan.601.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11886,7 +11944,7 @@ country_event = { #联省之心
 	id = NKRsichuan.602
 	title = NKRsichuan.602.t
 	desc = NKRsichuan.602.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11902,7 +11960,7 @@ country_event = { #爱国者们
 	id = NKRsichuan.603
 	title = NKRsichuan.603.t
 	desc = NKRsichuan.603.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11918,7 +11976,7 @@ country_event = { #正式解禁左翼政党
 	id = NKRsichuan.604
 	title = NKRsichuan.604.t
 	desc = NKRsichuan.604.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11934,7 +11992,7 @@ country_event = { #李汪会谈
 	id = NKRsichuan.605
 	title = NKRsichuan.605.t
 	desc = NKRsichuan.605.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11959,7 +12017,7 @@ country_event = { #实现真正的自由
 	id = NKRsichuan.606
 	title = NKRsichuan.606.t
 	desc = NKRsichuan.606.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11975,7 +12033,7 @@ country_event = { #北京之春
 	id = NKRsichuan.607
 	title = NKRsichuan.607.t
 	desc = NKRsichuan.607.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -11991,7 +12049,7 @@ country_event = { #重构联合阵线
 	id = NKRsichuan.608
 	title = NKRsichuan.608.t
 	desc = NKRsichuan.608.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12011,7 +12069,7 @@ country_event = { #一省之宪
 	id = NKRsichuan.609
 	title = NKRsichuan.609.t
 	desc = NKRsichuan.609.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12027,7 +12085,7 @@ country_event = { #从战斗到建设
 	id = NKRsichuan.610
 	title = NKRsichuan.610.t
 	desc = NKRsichuan.610.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12043,7 +12101,7 @@ country_event = { #社会之土地
 	id = NKRsichuan.611
 	title = NKRsichuan.611.t
 	desc = NKRsichuan.611.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12059,7 +12117,7 @@ country_event = { #桥梁设计师
 	id = NKRsichuan.612
 	title = NKRsichuan.612.t
 	desc = NKRsichuan.612.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12075,7 +12133,7 @@ country_event = { #工人权利就是人类权利
 	id = NKRsichuan.613
 	title = NKRsichuan.613.t
 	desc = NKRsichuan.613.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12091,7 +12149,7 @@ country_event = { #国防第一
 	id = NKRsichuan.614
 	title = NKRsichuan.614.t
 	desc = NKRsichuan.614.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12099,7 +12157,7 @@ country_event = { #国防第一
 
 	option = {#保家卫国是我们的第一要务！
 		log = "[GetLogInfo]: event NKRsichuan.614 option NKRsichuan.614.a"
-		name = NKRsichuan.61374.a
+		name = NKRsichuan.614.a
 	}
 }
 
@@ -12107,7 +12165,7 @@ country_event = { #新宪政常道
 	id = NKRsichuan.615
 	title = NKRsichuan.615.t
 	desc = NKRsichuan.615.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_li_huang_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12123,7 +12181,7 @@ country_event = { #迈向全世界
 	id = NKRsichuan.616
 	title = NKRsichuan.616.t
 	desc = NKRsichuan.616.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12139,7 +12197,7 @@ country_event = { #书生的自由
 	id = NKRsichuan.617
 	title = NKRsichuan.617.t
 	desc = NKRsichuan.617.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12217,7 +12275,7 @@ country_event = { #科学、技术、现代
 	id = NKRsichuan.621
 	title = NKRsichuan.621.t
 	desc = NKRsichuan.621.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12233,7 +12291,7 @@ country_event = { #中国自己的现代化
 	id = NKRsichuan.622
 	title = NKRsichuan.622.t
 	desc = NKRsichuan.622.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12249,7 +12307,7 @@ country_event = { #赛先生的遗产
 	id = NKRsichuan.623
 	title = NKRsichuan.623.t
 	desc = NKRsichuan.623.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12265,7 +12323,7 @@ country_event = { #机械化农业大普及...
 	id = NKRsichuan.624
 	title = NKRsichuan.624.t
 	desc = NKRsichuan.624.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12273,7 +12331,7 @@ country_event = { #机械化农业大普及...
 
 	option = {#...农业社会化亦迫在眉睫！
 		log = "[GetLogInfo]: event NKRsichuan.624 option NKRsichuan.624.a"
-		name = NKRsichuan.62374.a
+		name = NKRsichuan.624.a
 	}
 }
 
@@ -12281,7 +12339,7 @@ country_event = { #民有、民治、民享
 	id = NKRsichuan.625
 	title = NKRsichuan.625.t
 	desc = NKRsichuan.625.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12297,7 +12355,7 @@ country_event = { #反驳狂言
 	id = NKRsichuan.626
 	title = NKRsichuan.626.t
 	desc = NKRsichuan.626.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12313,7 +12371,7 @@ country_event = { #法治至上
 	id = NKRsichuan.627
 	title = NKRsichuan.627.t
 	desc = NKRsichuan.627.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12329,7 +12387,7 @@ country_event = { #何为人道主义？
 	id = NKRsichuan.628
 	title = NKRsichuan.628.t
 	desc = NKRsichuan.628.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12345,7 +12403,7 @@ country_event = { #棍棒政治的终结
 	id = NKRsichuan.629
 	title = NKRsichuan.629.t
 	desc = NKRsichuan.629.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12361,7 +12419,7 @@ country_event = { #牢骚
 	id = NKRsichuan.630
 	title = NKRsichuan.630.t
 	desc = NKRsichuan.630.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12377,7 +12435,7 @@ country_event = { #红色帝国主义
 	id = NKRsichuan.631
 	title = NKRsichuan.631.t
 	desc = NKRsichuan.631.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12393,7 +12451,7 @@ country_event = { #革命的政治正确
 	id = NKRsichuan.632
 	title = NKRsichuan.632.t
 	desc = NKRsichuan.632.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12409,7 +12467,7 @@ country_event = { #畅所欲言？
 	id = NKRsichuan.633
 	title = NKRsichuan.633.t
 	desc = NKRsichuan.633.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12425,7 +12483,7 @@ country_event = { #民主道德观
 	id = NKRsichuan.634
 	title = NKRsichuan.634.t
 	desc = NKRsichuan.634.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12433,7 +12491,7 @@ country_event = { #民主道德观
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.634 option NKRsichuan.634.a"
-		name = NKRsichuan.63374.a
+		name = NKRsichuan.634.a
 	}
 }
 
@@ -12441,7 +12499,7 @@ country_event = { #解决中国问题的良方
 	id = NKRsichuan.635
 	title = NKRsichuan.635.t
 	desc = NKRsichuan.635.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12457,7 +12515,7 @@ country_event = { #旧有帝国观的终结
 	id = NKRsichuan.636
 	title = NKRsichuan.636.t
 	desc = NKRsichuan.636.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zuo_shunsheng_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12473,7 +12531,7 @@ country_event = { #法
 	id = NKRsichuan.637
 	title = NKRsichuan.637.t
 	desc = NKRsichuan.637.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12491,7 +12549,7 @@ country_event = { #一代首辅
 	id = NKRsichuan.638
 	title = NKRsichuan.638.t
 	desc = NKRsichuan.638.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12507,7 +12565,7 @@ country_event = { #律法之国
 	id = NKRsichuan.639
 	title = NKRsichuan.639.t
 	desc = NKRsichuan.639.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12523,7 +12581,7 @@ country_event = { #技官治理
 	id = NKRsichuan.640
 	title = NKRsichuan.640.t
 	desc = NKRsichuan.640.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12539,7 +12597,7 @@ country_event = { #大回旋
 	id = NKRsichuan.641
 	title = NKRsichuan.641.t
 	desc = NKRsichuan.641.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12555,7 +12613,7 @@ country_event = { #廉政公署
 	id = NKRsichuan.642
 	title = NKRsichuan.642.t
 	desc = NKRsichuan.642.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12571,7 +12629,7 @@ country_event = { #我操你妈！
 	id = NKRsichuan.643
 	title = NKRsichuan.643.t
 	desc = NKRsichuan.643.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12588,7 +12646,7 @@ country_event = { #为了人民
 	id = NKRsichuan.644
 	title = NKRsichuan.644.t
 	desc = NKRsichuan.644.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chang_yansheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12596,7 +12654,7 @@ country_event = { #为了人民
 
 	option = {#这便是我们的区别。
 		log = "[GetLogInfo]: event NKRsichuan.644 option NKRsichuan.644.a"
-		name = NKRsichuan.64374.a
+		name = NKRsichuan.644.a
 	}
 }
 
@@ -12604,7 +12662,7 @@ country_event = { #变法之人
 	id = NKRsichuan.645
 	title = NKRsichuan.645.t
 	desc = NKRsichuan.645.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12620,7 +12678,7 @@ country_event = { #秦的尚武观
 	id = NKRsichuan.646
 	title = NKRsichuan.646.t
 	desc = NKRsichuan.646.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12636,7 +12694,7 @@ country_event = { #节义、牺牲
 	id = NKRsichuan.647
 	title = NKRsichuan.647.t
 	desc = NKRsichuan.647.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12652,7 +12710,7 @@ country_event = { #孙子兵法
 	id = NKRsichuan.648
 	title = NKRsichuan.648.t
 	desc = NKRsichuan.648.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12668,7 +12726,7 @@ country_event = { #真政治
 	id = NKRsichuan.649
 	title = NKRsichuan.649.t
 	desc = NKRsichuan.649.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12684,7 +12742,7 @@ country_event = { #超越党派分歧
 	id = NKRsichuan.650
 	title = NKRsichuan.650.t
 	desc = NKRsichuan.650.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12700,7 +12758,7 @@ country_event = { #个人主义的弊端与国家主义的必胜
 	id = NKRsichuan.651
 	title = NKRsichuan.651.t
 	desc = NKRsichuan.651.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12716,7 +12774,7 @@ country_event = { #行会社会主义
 	id = NKRsichuan.652
 	title = NKRsichuan.652.t
 	desc = NKRsichuan.652.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chang_yansheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12732,7 +12790,7 @@ country_event = { #民主之强人
 	id = NKRsichuan.653
 	title = NKRsichuan.653.t
 	desc = NKRsichuan.653.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12748,7 +12806,7 @@ country_event = { #新战国时代的巨船
 	id = NKRsichuan.654
 	title = NKRsichuan.654.t
 	desc = NKRsichuan.654.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12756,7 +12814,7 @@ country_event = { #新战国时代的巨船
 
 	option = {#向前！
 		log = "[GetLogInfo]: event NKRsichuan.654 option NKRsichuan.654.a"
-		name = NKRsichuan.65374.a
+		name = NKRsichuan.654.a
 	}
 }
 
@@ -12764,7 +12822,7 @@ country_event = { #东方——国家社会主义之春
 	id = NKRsichuan.655
 	title = NKRsichuan.655.t
 	desc = NKRsichuan.655.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_chang_yansheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12780,7 +12838,7 @@ country_event = { #狂飙！永恒的狂飙！
 	id = NKRsichuan.656
 	title = NKRsichuan.656.t
 	desc = NKRsichuan.656.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12798,7 +12856,7 @@ country_event = { #笨蛋！问题在于经济
 	id = NKRsichuan.657
 	title = NKRsichuan.657.t
 	desc = NKRsichuan.657.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12814,7 +12872,7 @@ country_event = { #资源利用
 	id = NKRsichuan.658
 	title = NKRsichuan.658.t
 	desc = NKRsichuan.658.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12830,7 +12888,7 @@ country_event = { #土地技术跃进
 	id = NKRsichuan.659
 	title = NKRsichuan.659.t
 	desc = NKRsichuan.659.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12846,7 +12904,7 @@ country_event = { #设立建设兵团
 	id = NKRsichuan.660
 	title = NKRsichuan.660.t
 	desc = NKRsichuan.660.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12862,7 +12920,7 @@ country_event = { #技术革新
 	id = NKRsichuan.661
 	title = NKRsichuan.661.t
 	desc = NKRsichuan.661.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12878,7 +12936,7 @@ country_event = { #民主？专制？
 	id = NKRsichuan.662
 	title = NKRsichuan.662.t
 	desc = NKRsichuan.662.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12894,7 +12952,7 @@ country_event = { #中央集权的必然性
 	id = NKRsichuan.663
 	title = NKRsichuan.663.t
 	desc = NKRsichuan.663.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12910,7 +12968,7 @@ country_event = { #开门！
 	id = NKRsichuan.664
 	title = NKRsichuan.664.t
 	desc = NKRsichuan.664.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12918,7 +12976,7 @@ country_event = { #开门！
 
 	option = {#滚进监狱吧！
 		log = "[GetLogInfo]: event NKRsichuan.664 option NKRsichuan.664.a"
-		name = NKRsichuan.66374.a
+		name = NKRsichuan.664.a
 	}
 }
 
@@ -12926,7 +12984,7 @@ country_event = { #老子所言
 	id = NKRsichuan.665
 	title = NKRsichuan.665.t
 	desc = NKRsichuan.665.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12942,7 +13000,7 @@ country_event = { #历史的教训
 	id = NKRsichuan.666
 	title = NKRsichuan.666.t
 	desc = NKRsichuan.666.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12958,7 +13016,7 @@ country_event = { #屈辱史
 	id = NKRsichuan.667
 	title = NKRsichuan.667.t
 	desc = NKRsichuan.667.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12974,7 +13032,7 @@ country_event = { #桃花源记
 	id = NKRsichuan.668
 	title = NKRsichuan.668.t
 	desc = NKRsichuan.668.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12990,7 +13048,7 @@ country_event = { #未开智的蛮人
 	id = NKRsichuan.669
 	title = NKRsichuan.669.t
 	desc = NKRsichuan.669.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCP
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13006,7 +13064,7 @@ country_event = { #赴战
 	id = NKRsichuan.670
 	title = NKRsichuan.670.t
 	desc = NKRsichuan.670.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13022,7 +13080,7 @@ country_event = { #统合大业
 	id = NKRsichuan.671
 	title = NKRsichuan.671.t
 	desc = NKRsichuan.671.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13038,7 +13096,7 @@ country_event = { #中华民族
 	id = NKRsichuan.672
 	title = NKRsichuan.672.t
 	desc = NKRsichuan.672.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13054,7 +13112,7 @@ country_event = { #何为边疆？
 	id = NKRsichuan.673
 	title = NKRsichuan.673.t
 	desc = NKRsichuan.673.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13070,7 +13128,7 @@ country_event = { #合为一体
 	id = NKRsichuan.674
 	title = NKRsichuan.674.t
 	desc = NKRsichuan.674.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13078,7 +13136,7 @@ country_event = { #合为一体
 
 	option = {#有些消失，有些长存。
 		log = "[GetLogInfo]: event NKRsichuan.674 option NKRsichuan.674.a"
-		name = NKRsichuan.67374.a
+		name = NKRsichuan.674.a
 	}
 }
 
@@ -13086,7 +13144,7 @@ country_event = { #弱肉强食的新诠释
 	id = NKRsichuan.675
 	title = NKRsichuan.675.t
 	desc = NKRsichuan.675.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13102,7 +13160,7 @@ country_event = { #公理之哲学
 	id = NKRsichuan.676
 	title = NKRsichuan.676.t
 	desc = NKRsichuan.676.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_jiang_yungang
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13118,7 +13176,7 @@ country_event = { #保守革命的遗产
 	id = NKRsichuan.677
 	title = NKRsichuan.677.t
 	desc = NKRsichuan.677.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13158,7 +13216,7 @@ country_event = { #破蛹而出
 	id = NKRsichuan.678
 	title = NKRsichuan.678.t
 	desc = NKRsichuan.678.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13184,7 +13242,7 @@ country_event = { #民主先锋
 	id = NKRsichuan.679
 	title = NKRsichuan.679.t
 	desc = NKRsichuan.679.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13200,7 +13258,7 @@ country_event = { #重病须用猛药
 	id = NKRsichuan.680
 	title = NKRsichuan.680.t
 	desc = NKRsichuan.680.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_shanghai
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13216,7 +13274,7 @@ country_event = { #土地改革？
 	id = NKRsichuan.681
 	title = NKRsichuan.681.t
 	desc = NKRsichuan.681.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13236,7 +13294,7 @@ country_event = { #宏伟计划
 	id = NKRsichuan.682
 	title = NKRsichuan.682.t
 	desc = NKRsichuan.682.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_shanghai
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13252,7 +13310,7 @@ country_event = { #电视节目
 	id = NKRsichuan.683
 	title = NKRsichuan.683.t
 	desc = NKRsichuan.683.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13268,7 +13326,7 @@ country_event = { #畅所欲言
 	id = NKRsichuan.684
 	title = NKRsichuan.684.t
 	desc = NKRsichuan.684.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13276,7 +13334,7 @@ country_event = { #畅所欲言
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.684 option NKRsichuan.684.a"
-		name = NKRsichuan.68374.a
+		name = NKRsichuan.684.a
 	}
 }
 
@@ -13284,7 +13342,7 @@ country_event = { #怪异思想抬头
 	id = NKRsichuan.685
 	title = NKRsichuan.685.t
 	desc = NKRsichuan.685.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13304,7 +13362,7 @@ country_event = { #展现友好
 	id = NKRsichuan.686
 	title = NKRsichuan.686.t
 	desc = NKRsichuan.686.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13320,7 +13378,7 @@ country_event = { #自由派联合
 	id = NKRsichuan.687
 	title = NKRsichuan.687.t
 	desc = NKRsichuan.687.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_lei_zhen
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13356,7 +13414,7 @@ country_event = { #例行国会
 	id = NKRsichuan.689
 	title = NKRsichuan.689.t
 	desc = NKRsichuan.689.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_YCPROC
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13378,7 +13436,7 @@ country_event = { #罪状
 	id = NKRsichuan.690
 	title = NKRsichuan.690.t
 	desc = NKRsichuan.690.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13400,7 +13458,7 @@ country_event = { #弹劾投票
 	id = NKRsichuan.691
 	title = NKRsichuan.691.t
 	desc = NKRsichuan.691.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_lei_zhen
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13422,7 +13480,7 @@ country_event = { #总统令-解散国会
 	id = NKRsichuan.692
 	title = NKRsichuan.692.t
 	desc = NKRsichuan.692.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13444,7 +13502,7 @@ country_event = { #电话
 	id = NKRsichuan.693
 	title = NKRsichuan.693.t
 	desc = NKRsichuan.693.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13463,7 +13521,7 @@ country_event = { #一声炮响
 	id = NKRsichuan.694
 	title = NKRsichuan.694.t
 	desc = NKRsichuan.694.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13488,7 +13546,7 @@ country_event = { #至高权力
 	id = NKRsichuan.695
 	title = NKRsichuan.695.t
 	desc = NKRsichuan.695.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13534,7 +13592,7 @@ country_event = { #fake
 	id = NKRsichuan.696
 	title = NKRsichuan.696.t
 	desc = NKRsichuan.696.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13555,7 +13613,7 @@ country_event = { #不可能的胜利
 	id = NKRsichuan.697
 	title = NKRsichuan.697.t
 	desc = NKRsichuan.697.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13575,7 +13633,7 @@ country_event = { #社会结构
 	id = NKRsichuan.698
 	title = NKRsichuan.698.t
 	desc = NKRsichuan.698.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13591,7 +13649,7 @@ country_event = { #农业合作化
 	id = NKRsichuan.699
 	title = NKRsichuan.699.t
 	desc = NKRsichuan.699.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13608,7 +13666,7 @@ country_event = { #去中心化经济体制
 	id = NKRsichuan.700
 	title = NKRsichuan.700.t
 	desc = NKRsichuan.700.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13624,7 +13682,7 @@ country_event = { #优秀传统文化
 	id = NKRsichuan.701
 	title = NKRsichuan.701.t
 	desc = NKRsichuan.701.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13640,7 +13698,7 @@ country_event = { #何谓大同真爱？
 	id = NKRsichuan.702
 	title = NKRsichuan.702.t
 	desc = NKRsichuan.702.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13656,7 +13714,7 @@ country_event = { #突破传统学究
 	id = NKRsichuan.703
 	title = NKRsichuan.703.t
 	desc = NKRsichuan.703.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13688,7 +13746,7 @@ country_event = { #今日社会之弊病
 	id = NKRsichuan.705
 	title = NKRsichuan.705.t
 	desc = NKRsichuan.705.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13704,7 +13762,7 @@ country_event = { #中国革命"
 	id = NKRsichuan.706
 	title = NKRsichuan.706.t
 	desc = NKRsichuan.706.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13720,7 +13778,7 @@ country_event = { #威权主义之恶
 	id = NKRsichuan.707
 	title = NKRsichuan.707.t
 	desc = NKRsichuan.707.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13736,7 +13794,7 @@ country_event = { #大罢免
 	id = NKRsichuan.708
 	title = NKRsichuan.708.t
 	desc = NKRsichuan.708.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13767,7 +13825,7 @@ country_event = { #朝曦
 	id = NKRsichuan.709
 	title = NKRsichuan.709.t
 	desc = NKRsichuan.709.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_xia_taosheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13783,7 +13841,7 @@ country_event = { #日出
 	id = NKRsichuan.710
 	title = NKRsichuan.710.t
 	desc = NKRsichuan.710.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhang_guotao
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13815,7 +13873,7 @@ country_event = { #清洗
 	id = NKRsichuan.711
 	title = NKRsichuan.711.t
 	desc = NKRsichuan.711.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13831,7 +13889,7 @@ country_event = { #新政治学
 	id = NKRsichuan.712
 	title = NKRsichuan.712.t
 	desc = NKRsichuan.712.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13847,7 +13905,7 @@ country_event = { #实用原则
 	id = NKRsichuan.713
 	title = NKRsichuan.713.t
 	desc = NKRsichuan.713.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13863,7 +13921,7 @@ country_event = { #革命司令部
 	id = NKRsichuan.714
 	title = NKRsichuan.714.t
 	desc = NKRsichuan.714.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13871,7 +13929,7 @@ country_event = { #革命司令部
 
 	option = {#杀！！！
 		log = "[GetLogInfo]: event NKRsichuan.714 option NKRsichuan.714.a"
-		name = NKRsichuan.71374.a
+		name = NKRsichuan.714.a
 	}
 }
 
@@ -13879,7 +13937,7 @@ country_event = { #打倒旧世界
 	id = NKRsichuan.715
 	title = NKRsichuan.715.t
 	desc = NKRsichuan.715.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13895,7 +13953,7 @@ country_event = { #红包拿来
 	id = NKRsichuan.716
 	title = NKRsichuan.716.t
 	desc = NKRsichuan.716.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13911,7 +13969,7 @@ country_event = { #二张会
 	id = NKRsichuan.717
 	title = NKRsichuan.717.t
 	desc = NKRsichuan.717.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_zhang_guotao
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13927,7 +13985,7 @@ country_event = { #天文台
 	id = NKRsichuan.718
 	title = NKRsichuan.718.t
 	desc = NKRsichuan.718.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13943,7 +14001,7 @@ country_event = { #一根烟
 	id = NKRsichuan.719
 	title = NKRsichuan.719.t
 	desc = NKRsichuan.719.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13959,7 +14017,7 @@ country_event = { #新国会
 	id = NKRsichuan.720
 	title = NKRsichuan.720.t
 	desc = NKRsichuan.720.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13975,7 +14033,7 @@ country_event = { #投票
 	id = NKRsichuan.721
 	title = NKRsichuan.721.t
 	desc = NKRsichuan.721.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -13991,7 +14049,7 @@ country_event = { #新卫队
 	id = NKRsichuan.722
 	title = NKRsichuan.722.t
 	desc = NKRsichuan.722.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14007,7 +14065,7 @@ country_event = { #大山脉
 	id = NKRsichuan.723
 	title = NKRsichuan.723.t
 	desc = NKRsichuan.723.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14023,7 +14081,7 @@ country_event = { #中央经济改革办的新班子
 	id = NKRsichuan.724
 	title = NKRsichuan.724.t
 	desc = NKRsichuan.724.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14031,7 +14089,7 @@ country_event = { #中央经济改革办的新班子
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.724 option NKRsichuan.724.a"
-		name = NKRsichuan.72374.a
+		name = NKRsichuan.724.a
 	}
 }
 
@@ -14039,7 +14097,7 @@ country_event = { #土地“革命”
 	id = NKRsichuan.725
 	title = NKRsichuan.725.t
 	desc = NKRsichuan.725.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14055,7 +14113,7 @@ country_event = { #黄色法团主义
 	id = NKRsichuan.726
 	title = NKRsichuan.726.t
 	desc = NKRsichuan.726.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14071,7 +14129,7 @@ country_event = { #大紧缩
 	id = NKRsichuan.727
 	title = NKRsichuan.727.t
 	desc = NKRsichuan.727.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14087,7 +14145,7 @@ country_event = { #重组国立总工会
 	id = NKRsichuan.728
 	title = NKRsichuan.728.t
 	desc = NKRsichuan.728.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14103,7 +14161,7 @@ country_event = { #中国模式，东亚模式
 	id = NKRsichuan.729
 	title = NKRsichuan.729.t
 	desc = NKRsichuan.729.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14119,7 +14177,7 @@ country_event = { #不详的动静
 	id = NKRsichuan.730
 	title = NKRsichuan.730.t
 	desc = NKRsichuan.730.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14141,7 +14199,7 @@ country_event = { #政变
 	id = NKRsichuan.731
 	title = NKRsichuan.731.t
 	desc = NKRsichuan.731.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14231,7 +14289,7 @@ country_event = { #误会
 	id = NKRsichuan.732
 	title = NKRsichuan.732.t
 	desc = NKRsichuan.732.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14253,7 +14311,7 @@ country_event = { #至高元帅
 	id = NKRsichuan.733
 	title = NKRsichuan.733.t
 	desc = NKRsichuan.733.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14269,7 +14327,7 @@ country_event = { #雄狮怒吼
 	id = NKRsichuan.734
 	title = NKRsichuan.734.t
 	desc = NKRsichuan.734.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14277,7 +14335,7 @@ country_event = { #雄狮怒吼
 
 	option = {#百万之众！
 		log = "[GetLogInfo]: event NKRsichuan.734 option NKRsichuan.734.a"
-		name = NKRsichuan.73374.a
+		name = NKRsichuan.734.a
 	}
 }
 
@@ -14285,7 +14343,7 @@ country_event = { #新路线开拓
 	id = NKRsichuan.735
 	title = NKRsichuan.735.t
 	desc = NKRsichuan.735.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14301,7 +14359,7 @@ country_event = { #
 	id = NKRsichuan.736
 	title = NKRsichuan.736.t
 	desc = NKRsichuan.736.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14317,7 +14375,7 @@ country_event = { #
 	id = NKRsichuan.737
 	title = NKRsichuan.737.t
 	desc = NKRsichuan.737.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14333,7 +14391,7 @@ country_event = { #
 	id = NKRsichuan.738
 	title = NKRsichuan.738.t
 	desc = NKRsichuan.738.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14349,7 +14407,7 @@ country_event = { #
 	id = NKRsichuan.739
 	title = NKRsichuan.739.t
 	desc = NKRsichuan.739.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14365,7 +14423,7 @@ country_event = { #
 	id = NKRsichuan.740
 	title = NKRsichuan.740.t
 	desc = NKRsichuan.740.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14381,7 +14439,7 @@ country_event = { #
 	id = NKRsichuan.741
 	title = NKRsichuan.741.t
 	desc = NKRsichuan.741.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14397,7 +14455,7 @@ country_event = { #
 	id = NKRsichuan.742
 	title = NKRsichuan.742.t
 	desc = NKRsichuan.742.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14413,7 +14471,7 @@ country_event = { #
 	id = NKRsichuan.743
 	title = NKRsichuan.743.t
 	desc = NKRsichuan.743.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14429,7 +14487,7 @@ country_event = { #
 	id = NKRsichuan.744
 	title = NKRsichuan.744.t
 	desc = NKRsichuan.744.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14437,7 +14495,7 @@ country_event = { #
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.744 option NKRsichuan.744.a"
-		name = NKRsichuan.74374.a
+		name = NKRsichuan.744.a
 	}
 }
 
@@ -14445,7 +14503,7 @@ country_event = { #
 	id = NKRsichuan.745
 	title = NKRsichuan.745.t
 	desc = NKRsichuan.745.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14461,7 +14519,7 @@ country_event = { #
 	id = NKRsichuan.746
 	title = NKRsichuan.746.t
 	desc = NKRsichuan.746.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14477,7 +14535,7 @@ country_event = { #
 	id = NKRsichuan.747
 	title = NKRsichuan.747.t
 	desc = NKRsichuan.747.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14493,7 +14551,7 @@ country_event = { #
 	id = NKRsichuan.748
 	title = NKRsichuan.748.t
 	desc = NKRsichuan.748.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14509,7 +14567,7 @@ country_event = { #
 	id = NKRsichuan.749
 	title = NKRsichuan.749.t
 	desc = NKRsichuan.749.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14526,7 +14584,7 @@ country_event = { #
 	id = NKRsichuan.750
 	title = NKRsichuan.750.t
 	desc = NKRsichuan.750.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14542,7 +14600,7 @@ country_event = { #
 	id = NKRsichuan.751
 	title = NKRsichuan.751.t
 	desc = NKRsichuan.751.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14558,7 +14616,7 @@ country_event = { #
 	id = NKRsichuan.752
 	title = NKRsichuan.752.t
 	desc = NKRsichuan.752.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14574,7 +14632,7 @@ country_event = { #
 	id = NKRsichuan.753
 	title = NKRsichuan.753.t
 	desc = NKRsichuan.753.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14590,7 +14648,7 @@ country_event = { #
 	id = NKRsichuan.754
 	title = NKRsichuan.754.t
 	desc = NKRsichuan.754.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14598,7 +14656,7 @@ country_event = { #
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.754 option NKRsichuan.754.a"
-		name = NKRsichuan.75374.a
+		name = NKRsichuan.754.a
 	}
 }
 
@@ -14606,7 +14664,7 @@ country_event = { #
 	id = NKRsichuan.755
 	title = NKRsichuan.755.t
 	desc = NKRsichuan.755.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14622,7 +14680,7 @@ country_event = { #
 	id = NKRsichuan.756
 	title = NKRsichuan.756.t
 	desc = NKRsichuan.756.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14638,7 +14696,7 @@ country_event = { #
 	id = NKRsichuan.757
 	title = NKRsichuan.757.t
 	desc = NKRsichuan.757.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14654,7 +14712,7 @@ country_event = { #
 	id = NKRsichuan.758
 	title = NKRsichuan.758.t
 	desc = NKRsichuan.758.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -14670,7 +14728,7 @@ country_event = { #
 	id = NKRsichuan.759
 	title = NKRsichuan.759.t
 	desc = NKRsichuan.759.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -16352,7 +16410,7 @@ country_event = { #罗马重生
 	}
 }
 
-country_event = { #大突厥
+country_event = { #大月即别
 	id = NKRsichuanpuppet.43
 	title = NKRsichuanpuppet.43.t
 	desc = NKRsichuanpuppet.43.d
@@ -17808,7 +17866,7 @@ country_event = { #世界青年党联合起来
 	id = NKRsichuanFP.41
 	title = NKRsichuanFP.41.t
 	desc = NKRsichuanFP.41.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -17824,7 +17882,7 @@ country_event = { #青年党大会
 	id = NKRsichuanFP.42
 	title = NKRsichuanFP.42.t
 	desc = NKRsichuanFP.42.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -17840,7 +17898,7 @@ country_event = { #亚细亚青年革命
 	id = NKRsichuanFP.43
 	title = NKRsichuanFP.43.t
 	desc = NKRsichuanFP.43.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -17856,7 +17914,7 @@ country_event = { #新协约国
 	id = NKRsichuanFP.44
 	title = NKRsichuanFP.44.t
 	desc = NKRsichuanFP.44.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -17872,7 +17930,7 @@ country_event = { #外交官
 	id = NKRsichuanFP.45
 	title = NKRsichuanFP.45.t
 	desc = NKRsichuanFP.45.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -17888,7 +17946,7 @@ country_event = { #跨国自由市场
 	id = NKRsichuanFP.46
 	title = NKRsichuanFP.46.t
 	desc = NKRsichuanFP.46.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -17904,7 +17962,7 @@ country_event = { #武装输出民主
 	id = NKRsichuanFP.47
 	title = NKRsichuanFP.47.t
 	desc = NKRsichuanFP.47.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -17920,7 +17978,7 @@ country_event = { #新自由灯塔
 	id = NKRsichuanFP.48
 	title = NKRsichuanFP.48.t
 	desc = NKRsichuanFP.48.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -17936,7 +17994,7 @@ country_event = { #1848
 	id = NKRsichuanFP.49
 	title = NKRsichuanFP.49.t
 	desc = NKRsichuanFP.49.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -17969,7 +18027,7 @@ country_event = { #自由
 	id = NKRsichuanFP.51
 	title = NKRsichuanFP.51.t
 	desc = NKRsichuanFP.51.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -17985,7 +18043,7 @@ country_event = { #民族主义的国际
 	id = NKRsichuanFP.52
 	title = NKRsichuanFP.52.t
 	desc = NKRsichuanFP.52.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18001,7 +18059,7 @@ country_event = { #施行法政
 	id = NKRsichuanFP.53
 	title = NKRsichuanFP.53.t
 	desc = NKRsichuanFP.53.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18017,7 +18075,7 @@ country_event = { #世界平等
 	id = NKRsichuanFP.54
 	title = NKRsichuanFP.54.t
 	desc = NKRsichuanFP.54.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18033,7 +18091,7 @@ country_event = { #称霸争雄
 	id = NKRsichuanFP.55
 	title = NKRsichuanFP.55.t
 	desc = NKRsichuanFP.55.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18049,7 +18107,7 @@ country_event = { #三国轴心
 	id = NKRsichuanFP.56
 	title = NKRsichuanFP.56.t
 	desc = NKRsichuanFP.56.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18065,7 +18123,7 @@ country_event = { #旧有疆域
 	id = NKRsichuanFP.57
 	title = NKRsichuanFP.57.t
 	desc = NKRsichuanFP.57.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18081,7 +18139,7 @@ country_event = { #天下观
 	id = NKRsichuanFP.58
 	title = NKRsichuanFP.58.t
 	desc = NKRsichuanFP.58.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18097,7 +18155,7 @@ country_event = { #迈向大一统
 	id = NKRsichuanFP.59
 	title = NKRsichuanFP.59.t
 	desc = NKRsichuanFP.59.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18130,7 +18188,7 @@ country_event = { #输出大同
 	id = NKRsichuanFP.61
 	title = NKRsichuanFP.61.t
 	desc = NKRsichuanFP.61.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18146,7 +18204,7 @@ country_event = { #解放全世界？
 	id = NKRsichuanFP.62
 	title = NKRsichuanFP.62.t
 	desc = NKRsichuanFP.62.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18178,7 +18236,7 @@ country_event = { #钱不是万能的...
 	id = NKRsichuanFP.63
 	title = NKRsichuanFP.63.t
 	desc = NKRsichuanFP.63.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18194,7 +18252,7 @@ country_event = { #世界经济论坛
 	id = NKRsichuanFP.64
 	title = NKRsichuanFP.64.t
 	desc = NKRsichuanFP.64.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18210,7 +18268,7 @@ country_event = { #我的伟大遗产
 	id = NKRsichuanFP.65
 	title = NKRsichuanFP.65.t
 	desc = NKRsichuanFP.65.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18226,7 +18284,7 @@ country_event = { #东方的新国际
 	id = NKRsichuanFP.66
 	title = NKRsichuanFP.66.t
 	desc = NKRsichuanFP.66.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18242,7 +18300,7 @@ country_event = { #凉意
 	id = NKRsichuanFP.67
 	title = NKRsichuanFP.67.t
 	desc = NKRsichuanFP.67.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18258,7 +18316,7 @@ country_event = { #经互会扩张
 	id = NKRsichuanFP.68
 	title = NKRsichuanFP.68.t
 	desc = NKRsichuanFP.68.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18274,7 +18332,7 @@ country_event = { #
 	id = NKRsichuanFP.69
 	title = NKRsichuanFP.69.t
 	desc = NKRsichuanFP.69.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18307,7 +18365,7 @@ country_event = { #
 	id = NKRsichuanFP.71
 	title = NKRsichuanFP.71.t
 	desc = NKRsichuanFP.71.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18323,7 +18381,7 @@ country_event = { #
 	id = NKRsichuanFP.72
 	title = NKRsichuanFP.72.t
 	desc = NKRsichuanFP.72.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18339,7 +18397,7 @@ country_event = { #
 	id = NKRsichuanFP.73
 	title = NKRsichuanFP.73.t
 	desc = NKRsichuanFP.73.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18355,7 +18413,7 @@ country_event = { #
 	id = NKRsichuanFP.74
 	title = NKRsichuanFP.74.t
 	desc = NKRsichuanFP.74.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18371,7 +18429,7 @@ country_event = { #
 	id = NKRsichuanFP.75
 	title = NKRsichuanFP.75.t
 	desc = NKRsichuanFP.75.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18387,7 +18445,7 @@ country_event = { #
 	id = NKRsichuanFP.76
 	title = NKRsichuanFP.76.t
 	desc = NKRsichuanFP.76.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18403,7 +18461,7 @@ country_event = { #
 	id = NKRsichuanFP.77
 	title = NKRsichuanFP.77.t
 	desc = NKRsichuanFP.77.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18419,7 +18477,7 @@ country_event = { #
 	id = NKRsichuanFP.78
 	title = NKRsichuanFP.78.t
 	desc = NKRsichuanFP.78.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18435,7 +18493,7 @@ country_event = { #
 	id = NKRsichuanFP.79
 	title = NKRsichuanFP.79.t
 	desc = NKRsichuanFP.79.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18468,7 +18526,7 @@ country_event = { #
 	id = NKRsichuanFP.81
 	title = NKRsichuanFP.81.t
 	desc = NKRsichuanFP.81.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18484,7 +18542,7 @@ country_event = { #
 	id = NKRsichuanFP.82
 	title = NKRsichuanFP.82.t
 	desc = NKRsichuanFP.82.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18500,7 +18558,7 @@ country_event = { #
 	id = NKRsichuanFP.83
 	title = NKRsichuanFP.83.t
 	desc = NKRsichuanFP.83.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18516,7 +18574,7 @@ country_event = { #
 	id = NKRsichuanFP.84
 	title = NKRsichuanFP.84.t
 	desc = NKRsichuanFP.84.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18532,7 +18590,7 @@ country_event = { #
 	id = NKRsichuanFP.85
 	title = NKRsichuanFP.85.t
 	desc = NKRsichuanFP.85.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18548,7 +18606,7 @@ country_event = { #
 	id = NKRsichuanFP.86
 	title = NKRsichuanFP.86.t
 	desc = NKRsichuanFP.86.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18564,7 +18622,7 @@ country_event = { #
 	id = NKRsichuanFP.87
 	title = NKRsichuanFP.87.t
 	desc = NKRsichuanFP.87.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18580,7 +18638,7 @@ country_event = { #
 	id = NKRsichuanFP.88
 	title = NKRsichuanFP.88.t
 	desc = NKRsichuanFP.88.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18596,7 +18654,7 @@ country_event = { #
 	id = NKRsichuanFP.89
 	title = NKRsichuanFP.89.t
 	desc = NKRsichuanFP.89.d
-	picture = GFX_report_event_SZC_546
+	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18613,7 +18671,7 @@ country_event = { #党务整顿
 	id = NKRsichuanPI.1
 	title = NKRsichuanPI.1.t
 	desc = NKRsichuanPI.1.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18645,7 +18703,7 @@ country_event = { #贪欲
 	id = NKRsichuanPI.2
 	title = NKRsichuanPI.2.t
 	desc = NKRsichuanPI.2.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18666,7 +18724,7 @@ country_event = { #海外孤忠
 	id = NKRsichuanPI.3
 	title = NKRsichuanPI.3.t
 	desc = NKRsichuanPI.3.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18725,7 +18783,7 @@ country_event = { #元老归来
 	id = NKRsichuanPI.5
 	title = NKRsichuanPI.5.t
 	desc = NKRsichuanPI.5.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18746,7 +18804,7 @@ country_event = { #政治新星
 	id = NKRsichuanPI.6
 	title = NKRsichuanPI.6.t
 	desc = NKRsichuanPI.6.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18767,7 +18825,7 @@ country_event = { #青年党的工人活动家？
 	id = NKRsichuanPI.7
 	title = NKRsichuanPI.7.t
 	desc = NKRsichuanPI.7.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18788,7 +18846,7 @@ country_event = { #国家主义妇女部
 	id = NKRsichuanPI.8
 	title = NKRsichuanPI.8.t
 	desc = NKRsichuanPI.8.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18809,7 +18867,7 @@ country_event = { #曾琦的崇拜者
 	id = NKRsichuanPI.9
 	title = NKRsichuanPI.9.t
 	desc = NKRsichuanPI.9.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -18830,7 +18888,7 @@ country_event = { #二刘
     id = NKRsichuanPI.10
     title = NKRsichuanPI.10.t
     desc = NKRsichuanPI.10.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -18853,7 +18911,7 @@ country_event = { #民声派新人
     id = NKRsichuanPI.11
     title = NKRsichuanPI.11.t
     desc = NKRsichuanPI.11.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = { #新法家仍在传承！
@@ -18876,7 +18934,7 @@ country_event = { #陶氏兄弟
     id = NKRsichuanPI.12
     title = NKRsichuanPI.12.t
     desc = NKRsichuanPI.12.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = { #青年党当如青年！
@@ -18899,7 +18957,7 @@ country_event = { #日本通
     id = NKRsichuanPI.13
     title = NKRsichuanPI.13.t
     desc = NKRsichuanPI.13.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -18917,7 +18975,7 @@ country_event = { #福建青年
     id = NKRsichuanPI.14
     title = NKRsichuanPI.14.t
     desc = NKRsichuanPI.14.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -18935,7 +18993,7 @@ country_event = { #华北支部的遗产？
     id = NKRsichuanPI.15
     title = NKRsichuanPI.15.t
     desc = NKRsichuanPI.15.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
 	immediate = {
@@ -18980,7 +19038,7 @@ country_event = { #华北的叛徒
     id = NKRsichuanPI.16
     title = NKRsichuanPI.16.t
     desc = NKRsichuanPI.16.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = { #处死叛徒！
@@ -19000,7 +19058,7 @@ country_event = { #开除叛徒
     id = NKRsichuanPI.17
     title = NKRsichuanPI.17.t
     desc = NKRsichuanPI.17.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = { #真让人恶心...
@@ -19028,7 +19086,7 @@ country_event = { #赤色读者
     id = NKRsichuanPI.18
     title = NKRsichuanPI.18.t
     desc = NKRsichuanPI.18.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = { #青年党内的左派？
@@ -19046,7 +19104,7 @@ country_event = {
     id = NKRsichuanPI.19
     title = NKRsichuanPI.19.t
     desc = NKRsichuanPI.19.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19059,7 +19117,7 @@ country_event = { #新党务班子
     id = NKRsichuanPI.20
     title = NKRsichuanPI.20.t
     desc = NKRsichuanPI.20.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19073,7 +19131,7 @@ country_event = { #新党务班子
     id = NKRsichuanPI.21
     title = NKRsichuanPI.21.t
     desc = NKRsichuanPI.21.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19087,7 +19145,7 @@ country_event = { #新党务班子
     id = NKRsichuanPI.22
     title = NKRsichuanPI.22.t
     desc = NKRsichuanPI.22.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19101,7 +19159,7 @@ country_event = { #新党务班子
     id = NKRsichuanPI.23
     title = NKRsichuanPI.23.t
     desc = NKRsichuanPI.23.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19115,7 +19173,7 @@ country_event = { #新党务班子
     id = NKRsichuanPI.24
     title = NKRsichuanPI.24.t
     desc = NKRsichuanPI.24.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19129,7 +19187,7 @@ country_event = { #新党务班子
     id = NKRsichuanPI.25
     title = NKRsichuanPI.25.t
     desc = NKRsichuanPI.25.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19143,7 +19201,7 @@ country_event = { #新党务班子
     id = NKRsichuanPI.26
     title = NKRsichuanPI.26.t
     desc = NKRsichuanPI.26.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19157,7 +19215,7 @@ country_event = { #新党务班子
     id = NKRsichuanPI.27
     title = NKRsichuanPI.27.t
     desc = NKRsichuanPI.27.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19170,7 +19228,7 @@ country_event = { #新党务班子
     id = NKRsichuanPI.28
     title = NKRsichuanPI.28.t
     desc = NKRsichuanPI.28.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19184,7 +19242,7 @@ country_event = {
     id = NKRsichuanPI.29
     title = NKRsichuanPI.29.t
     desc = NKRsichuanPI.29.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19197,7 +19255,7 @@ country_event = {
     id = NKRsichuanPI.30
     title = NKRsichuanPI.30.t
     desc = NKRsichuanPI.30.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19210,7 +19268,7 @@ country_event = {
     id = NKRsichuanPI.31
     title = NKRsichuanPI.31.t
     desc = NKRsichuanPI.31.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19223,7 +19281,7 @@ country_event = {
     id = NKRsichuanPI.32
     title = NKRsichuanPI.32.t
     desc = NKRsichuanPI.32.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19236,7 +19294,7 @@ country_event = {
     id = NKRsichuanPI.33
     title = NKRsichuanPI.33.t
     desc = NKRsichuanPI.33.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19249,7 +19307,7 @@ country_event = {
     id = NKRsichuanPI.34
     title = NKRsichuanPI.34.t
     desc = NKRsichuanPI.34.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19262,7 +19320,7 @@ country_event = {
     id = NKRsichuanPI.35
     title = NKRsichuanPI.35.t
     desc = NKRsichuanPI.35.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19275,7 +19333,7 @@ country_event = {
     id = NKRsichuanPI.36
     title = NKRsichuanPI.36.t
     desc = NKRsichuanPI.36.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19288,7 +19346,7 @@ country_event = {
     id = NKRsichuanPI.37
     title = NKRsichuanPI.37.t
     desc = NKRsichuanPI.37.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19301,7 +19359,7 @@ country_event = {
     id = NKRsichuanPI.38
     title = NKRsichuanPI.38.t
     desc = NKRsichuanPI.38.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19314,7 +19372,7 @@ country_event = {
     id = NKRsichuanPI.39
     title = NKRsichuanPI.39.t
     desc = NKRsichuanPI.39.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -19327,7 +19385,7 @@ country_event = {
     id = NKRsichuanPI.40
     title = NKRsichuanPI.40.t
     desc = NKRsichuanPI.40.d
-    picture = GFX_report_event_FNG_troops
+    picture = GFX_report_event_SZC_dongdalu
     is_triggered_only = yes
     fire_only_once = yes
     option = {
@@ -20747,7 +20805,7 @@ country_event = { #DEBUG-意识形态切换
 	id = SZCDEBUG.1
 	title = SZCDEBUG.1.t
 	desc = SZCDEBUG.1.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -20796,7 +20854,7 @@ country_event = { #DEBUG-wtfjiang
 	id = SZCDEBUG.2
 	title = SZCDEBUG.2.t
 	desc = SZCDEBUG.2.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -20819,7 +20877,7 @@ country_event = { #DEBUG-wtfjiang
 	id = SZCDEBUG.3
 	title = SZCDEBUG.3.t
 	desc = SZCDEBUG.3.d
-	picture = GFX_report_event_FNG_troops
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	fire_only_once = yes

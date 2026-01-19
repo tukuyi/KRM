@@ -23204,8 +23204,8 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 50
-			# add = 0
+			# add = 50
+			add = 0
 			tag = SZC
 		}
 	}
@@ -23630,6 +23630,12 @@ focus_tree = {
 			}
 			country_event = {
 				id = NKRsichuan.437
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.452
+					days = 5
+				}
 			}
 		}
 	}
@@ -24240,6 +24246,7 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.497
 			}
+			custom_effect_tooltip = SZC_YCP_female_rights_tt
 		}
 	}
 
@@ -25089,7 +25096,16 @@ focus_tree = {
 			}
 			add_stability = 0.05
 			add_war_support = 0.05
-			#xiechengping trait better
+			custom_effect_tooltip = SZC_YCP_scholars_nature_tt
+			hidden_effect = {
+				set_variable = {
+					YCP_party_issue_foreign = token:SZC_xie_chengping_1
+				}
+				swap_ideas = {
+					remove_idea = YCP_xie_chengping_DMF_idea
+					add_idea = YCP_xie_chengping_1_DMF_idea
+				}
+			}
 		}
 	}
 	
@@ -25477,7 +25493,16 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.537
 			}
-			#chenshanxin better
+			custom_effect_tooltip = SZC_YCP_statist_source_tt
+			hidden_effect = {
+				set_variable = {
+					YCP_party_issue_train = token:SZC_chen_shanxin_1
+				}
+				swap_ideas = {
+					remove_idea = YCP_chen_shanxin_DMT_idea
+					add_idea = YCP_chen_shanxin_1_DMT_idea
+				}
+			}
 		}
 	}
 	
@@ -25509,6 +25534,17 @@ focus_tree = {
 				id = NKRsichuan.538
 			}
 			#liujingyuan better
+			
+			custom_effect_tooltip = SZC_YCP_remember_mr_de_tt
+			hidden_effect = {
+				set_variable = {
+					YCP_party_issue_foreign = token:SZC_liu_jingyuan_1
+				}
+				swap_ideas = {
+					remove_idea = YCP_liu_jingyuan_DMF_idea
+					add_idea = YCP_liu_jingyuan_1_DMF_idea
+				}
+			}
 		}
 	}
 	
@@ -27961,6 +27997,18 @@ focus_tree = {
 			}
 			add_stability = 0.1
 			#shenyunlong better
+			
+			
+			custom_effect_tooltip = SZC_YCP_a_society_ruled_by_law_tt
+			hidden_effect = {
+				set_variable = {
+					YCP_party_issue_foreign = token:SZC_shen_yunlong_1
+				}
+				swap_ideas = {
+					remove_idea = YCP_shen_yunlong_DMP_idea
+					add_idea = YCP_shen_yunlong_1_DMP_idea
+				}
+			}
 		}
 	}
 
@@ -28592,6 +28640,17 @@ focus_tree = {
 			}
 			add_stability = 0.1
 			#wutianchi better
+			
+			custom_effect_tooltip = SZC_YCP_democratic_constitution_the_realpolitik_tt
+			hidden_effect = {
+				set_variable = {
+					YCP_party_issue_foreign = token:SZC_wu_tianchi_1
+				}
+				swap_ideas = {
+					remove_idea = YCP_wu_tianchi_DMP_idea
+					add_idea = YCP_wu_tianchi_1_DMP_idea
+				}
+			}
 		}
 	}
 
@@ -28662,6 +28721,73 @@ focus_tree = {
 			}
 			add_political_power = 100
 			#liaoshangke better
+			
+			custom_effect_tooltip = SZC_YCP_fight_against_individualism_tt
+			hidden_effect = {
+				# set_variable = {
+				# 	YCP_party_issue_foreign = token:SZC_liao_shangke_1
+				# }
+				# swap_ideas = {
+				# 	remove_idea = YCP_wu_tianchi_DMP_idea
+				# 	add_idea = YCP_wu_tianchi_1_DMP_idea
+				# }
+				set_temp_variable = {
+					var = temp_select_token
+					value = token:SZC_liao_shangke
+				}
+				if = {
+					limit = {
+						check_variable = { YCP_party_issue_standing_1 = var:temp_select_token }
+					}
+					set_variable = {
+						YCP_party_issue_standing_1 = token:SZC_liao_shangke_1
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { YCP_party_issue_standing_2 = var:temp_select_token }
+					}
+					set_variable = {
+						YCP_party_issue_standing_2 = token:SZC_liao_shangke_1
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { YCP_party_issue_standing_3 = var:temp_select_token }
+					}
+					set_variable = {
+						YCP_party_issue_standing_3 = token:SZC_liao_shangke_1
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { YCP_party_issue_standing_4 = var:temp_select_token }
+					}
+					set_variable = {
+						YCP_party_issue_standing_4 = token:SZC_liao_shangke_1
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { YCP_party_issue_standing_5 = var:temp_select_token }
+					}
+					set_variable = {
+						YCP_party_issue_standing_5 = token:SZC_liao_shangke_1
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { YCP_party_issue_standing_6 = var:temp_select_token }
+					}
+					set_variable = {
+						YCP_party_issue_standing_6 = token:SZC_liao_shangke_1
+					}
+				}
+				else = {
+					remove_from_array = { ROOT.YCP_party_issue_selects = token:SZC_liao_shangke }
+					add_to_array = { ROOT.YCP_party_issue_selects = token:SZC_liao_shangke_1 }
+				}
+			}
 		}
 	}
 
@@ -29191,7 +29317,7 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.668
 			}
-			#tantiwu better
+			custom_effect_tooltip = SZC_YCP_ideal_gensokyo_tt
 			hidden_effect = {
 				SZC_tan_tiwu = {
 					set_portraits = {
@@ -29873,11 +29999,11 @@ focus_tree = {
 					}
 				}
 				set_variable = {
-					YCP_party_issue_chairman = token:SZC_xia_taosheng_sweater
+					YCP_party_issue_interior = token:SZC_xia_taosheng_sweater
 				}
 				swap_ideas = {
-					remove_idea = YCP_SZC_xia_taosheng_DMC_idea
-					add_idea = YCP_SZC_xia_taosheng_sweater_DMC_idea
+					remove_idea = YCP_SZC_xia_taosheng_DMI_idea
+					add_idea = YCP_SZC_xia_taosheng_sweater_DMI_idea
 				}
 			}
 		}
@@ -30140,6 +30266,17 @@ focus_tree = {
 				id = NKRsichuan.706
 			}
 			#yufuxian better
+			
+			custom_effect_tooltip = SZC_YCP_republican_revolution_along_with_anarchist_revolution_tt
+			hidden_effect = {
+				set_variable = {
+					YCP_party_issue_chairman = token:SZC_yu_fuxian_1
+				}
+				swap_ideas = {
+					remove_idea = YCP_yu_fuxian_DMC_idea
+					add_idea = YCP_yu_fuxian_1_DMC_idea
+				}
+			}
 		}
 	}
 
