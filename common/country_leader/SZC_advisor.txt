@@ -573,6 +573,20 @@ leader_traits = {
 		consumer_goods_factor = -0.1
 		army_attack_factor = 0.1
 	}
+	SZC_the_arrogant_warlord_sic = {
+		random = no
+		army_attack_factor = 0.075  
+        political_power_gain = -0.20  
+        stability_factor = -0.10      
+        command_power_gain = 0.10
+	}
+	SZC_reckless_monk_sic = {
+		random = no
+		planning_speed = -0.30
+        army_org_factor = 0.10
+        max_entrenchment = -5  
+        army_breakthrough_against_major_factor = 0.1
+	}
 
 }
 	
