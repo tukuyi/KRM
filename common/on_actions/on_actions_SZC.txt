@@ -278,6 +278,19 @@ on_actions = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					GER = {
+						exists = yes
+						GER_kurt_von_schleicher = {
+							is_second_in_command = yes
+						}
+					}
+				}
+				GER = {
+					set_country_leader_ideology = authoritarian_democrat_spectral_state_subtype
+				}
+			}
 		}
 	}
 }

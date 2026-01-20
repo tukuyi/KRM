@@ -13611,6 +13611,11 @@ country_event = { #至高权力
 				add_idea = SZC_YCP_presidental_constitution_idea
 			}
 		}
+		set_party_name = {
+			ideology = market_liberal
+			name = SZC_PYCP_CDP_1_party
+			long_name = SZC_PYCP_CDP_1_party_long
+		}
 	}
 }
 
@@ -15021,7 +15026,7 @@ country_event = { #516革命-工团
 			}
 			KOR = {
 				SZC_park_chunghee = {
-					promote_character = syndicalist_market_syndicalist_subtype
+					promote_character = syndicalist_peoples_democracy_subtype
 				}
 				set_politics = {
 					ruling_party = syndicalist
@@ -15418,23 +15423,35 @@ country_event = { #516革命-革命国家主义
 	}
 }
 
-country_event = { #
+country_event = { #判断
 	id = NKRsichuanpuppet.8
 	title = NKRsichuanpuppet.8.t
 	desc = NKRsichuanpuppet.8.d
 	picture = GFX_report_event_SZC_516
 
-	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_country_flag = NKRsichuan_YCPpath
+			has_country_flag = NKRSZC_CDLpath
+			has_country_flag = NKRSZC_joinkmt
+		}
+	}
 	fire_only_once = yes
+
+	hidden = yes
 	
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.8 option NKRsichuanpuppet.8.a"
 		name = NKRsichuanpuppet.8.a
+		country_event = {
+			id = NKRsichuanpuppet.9
+			days = 365
+		}
 	}
 }
 
-country_event = { #
+country_event = { #判断2
 	id = NKRsichuanpuppet.9
 	title = NKRsichuanpuppet.9.t
 	desc = NKRsichuanpuppet.9.d
@@ -15442,11 +15459,118 @@ country_event = { #
 
 	is_triggered_only = yes
 	fire_only_once = yes
+	hidden = yes
 	
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.9 option NKRsichuanpuppet.9.a"
 		name = NKRsichuanpuppet.9.a
+		news_event = NKRnews.40
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						has_country_leader = {
+							character = SZC_qi_nanxun
+						}
+						has_completed_focus = SZC_pan_socialist_solidarity
+					}
+					has_country_leader = {
+						character = SZC_liu_bocheng
+					}
+				}
+			}
+			country_event = {
+				id = NKRsichuanpuppet.1
+				days = 1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_country_leader = {
+						character = SZC_qi_nanxun
+					}
+					AND = {
+						has_country_leader = {
+							character = SZC_pan_wenhua
+						}
+						has_socialist_government = yes
+					}
+				}
+			}
+			country_event = {
+				id = NKRsichuanpuppet.2
+				days = 1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						has_country_leader = {
+							character = SZC_pan_wenhua
+						}
+						has_socialist_government = no
+					}
+					has_country_flag = NKRSZC_CDLpath
+				}
+			}
+			country_event = {
+				id = NKRsichuanpuppet.3
+				days = 1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						has_country_leader = {
+							character = SZC_xie_chi
+						}
+					}
+				}
+			}
+			country_event = {
+				id = NKRsichuanpuppet.5
+				days = 1
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						has_country_flag = NKRsichuan_YCPpath
+						NOT = {
+							has_country_flag = SZC_YCP_jiang_path
+							has_country_flag = SZC_YCP_zeng_hardline_path
+						}
+					}
+				}
+			}
+			country_event = {
+				id = NKRsichuanpuppet.4
+				days = 1
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = SZC_YCP_jiang_path
+			}
+			country_event = {
+				id = NKRsichuanpuppet.6
+				days = 1
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = SZC_YCP_zeng_hardline_path
+			}
+			country_event = {
+				id = NKRsichuanpuppet.7
+				days = 1
+			}
+		}
 	}
 }
 

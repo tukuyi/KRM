@@ -414,5 +414,916 @@
 			}
 		}
 	}
+	news_event = { #南京民主政府成立！
+		id = NKRnews.20
+		immediate = { log = "[GetLogInfo]: event NKRnews.20" }
+		title = NKRnews.20.t
+		desc = NKRnews.20.d
+		picture = GFX_news_event_bolshevik_united
 
+		trigger = {
+			wants_world_news = yes
+		}
 
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.20.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.20.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+			}
+		}
+	}
+	news_event = { #四川易帜
+		id = NKRnews.21
+		immediate = { log = "[GetLogInfo]: event NKRnews.21" }
+		title = NKRnews.21.t
+		desc = NKRnews.21.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.21.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.21.b
+			trigger = {
+				tag = LKT
+			}
+		}
+		option = {
+			name = NKRnews.21.c
+			trigger = {
+				NOT = {
+					OR = {
+						tag = SZC
+						tag = LKT
+					}
+				}
+			}
+		}
+	}
+	news_event = { #北京全民政府成立
+		id = NKRnews.22
+		immediate = { log = "[GetLogInfo]: event NKRnews.22" }
+		title = NKRnews.22.t
+		desc = NKRnews.22.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.22.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.22.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+			}
+		}
+	}
+	news_event = { #南京民主政府统一中国
+		id = NKRnews.23
+		immediate = { log = "[GetLogInfo]: event NKRnews.23" }
+		title = NKRnews.23.t
+		desc = NKRnews.23.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.23.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.23.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.23.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #民主同盟屹立
+		id = NKRnews.24
+		immediate = { log = "[GetLogInfo]: event NKRnews.24" }
+		title = NKRnews.24.t
+		desc = NKRnews.24.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.24.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.24.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.24.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #新月中国
+		id = NKRnews.25
+		immediate = { log = "[GetLogInfo]: event NKRnews.25" }
+		title = NKRnews.25.t
+		desc = NKRnews.25.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.25.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.25.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.25.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #“民主”同盟
+		id = NKRnews.26
+		immediate = { log = "[GetLogInfo]: event NKRnews.26" }
+		title = NKRnews.26.t
+		desc = NKRnews.26.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.26.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.26.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.26.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #南京戒严令
+		id = NKRnews.27
+		immediate = { log = "[GetLogInfo]: event NKRnews.27" }
+		title = NKRnews.27.t
+		desc = NKRnews.27.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.27.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.27.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.27.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #四川临委会统一中国
+		id = NKRnews.28
+		immediate = { log = "[GetLogInfo]: event NKRnews.28" }
+		title = NKRnews.28.t
+		desc = NKRnews.28.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.28.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.28.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.28.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #潘文华统一全中国
+		id = NKRnews.29
+		immediate = { log = "[GetLogInfo]: event NKRnews.29" }
+		title = NKRnews.29.t
+		desc = NKRnews.29.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.29.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		
+		option = {
+			name = NKRnews.29.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.29.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #国民党右派统一中国
+		id = NKRnews.30
+		immediate = { log = "[GetLogInfo]: event NKRnews.30" }
+		title = NKRnews.30.t
+		desc = NKRnews.30.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.30.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		
+		option = {
+			name = NKRnews.30.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.30.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #国家主义新中国
+		id = NKRnews.31
+		immediate = { log = "[GetLogInfo]: event NKRnews.31" }
+		title = NKRnews.31.t
+		desc = NKRnews.31.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.31.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.31.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.31.c
+			trigger = {
+				NOT = {
+					OR = {
+						tag = SZC
+						tag = ITA
+					}
+				}
+				has_socialist_government = no
+			}
+		}
+		option = {
+			name = NKRnews.31.e
+			trigger = {
+				tag = ITA
+			}
+		}
+	}
+	news_event = { #青年中国
+		id = NKRnews.32
+		immediate = { log = "[GetLogInfo]: event NKRnews.32" }
+		title = NKRnews.32.t
+		desc = NKRnews.32.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.32.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.32.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.32.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #宪政的中国
+		id = NKRnews.33
+		immediate = { log = "[GetLogInfo]: event NKRnews.33" }
+		title = NKRnews.33.t
+		desc = NKRnews.33.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.33.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.33.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.33.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #自由新中国
+		id = NKRnews.34
+		immediate = { log = "[GetLogInfo]: event NKRnews.34" }
+		title = NKRnews.34.t
+		desc = NKRnews.34.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.34.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.34.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.34.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #东方超人
+		id = NKRnews.35
+		immediate = { log = "[GetLogInfo]: event NKRnews.35" }
+		title = NKRnews.35.t
+		desc = NKRnews.35.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.35.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.35.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.35.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #无治主义崛起
+		id = NKRnews.36
+		immediate = { log = "[GetLogInfo]: event NKRnews.36" }
+		title = NKRnews.36.t
+		desc = NKRnews.36.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.36.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.36.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.36.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #中国新民主
+		id = NKRnews.37
+		immediate = { log = "[GetLogInfo]: event NKRnews.37" }
+		title = NKRnews.37.t
+		desc = NKRnews.37.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.37.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.37.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.37.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #中国首都最长的一天
+		id = NKRnews.38
+		immediate = { log = "[GetLogInfo]: event NKRnews.38" }
+		title = NKRnews.38.t
+		desc = NKRnews.38.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.38.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.38.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.38.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #中华大一统
+		id = NKRnews.39
+		immediate = { log = "[GetLogInfo]: event NKRnews.39" }
+		title = NKRnews.39.t
+		desc = NKRnews.39.d
+		picture = GFX_news_event_bolshevik_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.39.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.39.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = yes
+			}
+		}
+		option = {
+			name = NKRnews.39.c
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+				has_socialist_government = no
+			}
+		}
+	}
+	news_event = { #大韩民国军事革命
+		id = NKRnews.40
+		immediate = { log = "[GetLogInfo]: event NKRnews.40" }
+		title = NKRnews.40.t
+		desc = NKRnews.40.d
+		picture = GFX_news_event_516
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.40.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.40.b
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.40.c
+			trigger = {
+				NOT = {
+					OR = {
+						tag = KOR
+						tag = SZC
+					}
+				}
+			}
+		}
+	}
