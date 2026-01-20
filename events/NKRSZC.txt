@@ -4386,6 +4386,7 @@ country_event = { #就职典礼
 				}
 			}
 		}
+		hidden_effect = { news_event = NKRnews.24 }
 		hidden_effect = {
 			SZC_fan_piaozhai = {
 				add_temp_unit_leader_role = yes
@@ -4524,6 +4525,7 @@ country_event = { #就职典礼
 		}
 		set_temp_variable = { coalition_partner_var = token:social_democrat }
 		add_to_coalition = yes
+		hidden_effect = { news_event = NKRnews.25 }
 		hidden_effect = {
 			set_party_name = {
 				ideology = social_democrat
@@ -4715,6 +4717,7 @@ country_event = { #就职典礼
 		add_ideas = {
 			SZC_pan_CDL_supremacy
 		}
+		hidden_effect = { news_event = NKRnews.26 }
 		hidden_effect = {
 			GXC_zhang_junmai = {
 				add_temp_unit_leader_role = yes
@@ -4819,6 +4822,8 @@ country_event = { #就职典礼
 				}
 			}
 		}
+		
+		hidden_effect = { news_event = NKRnews.27 }
 		add_stability = 0.05
 		add_political_power = 50
 	}
@@ -13616,6 +13621,7 @@ country_event = { #至高权力
 			name = SZC_PYCP_CDP_1_party
 			long_name = SZC_PYCP_CDP_1_party_long
 		}
+		hidden_effect = { news_event = NKRnews.38 }
 	}
 }
 

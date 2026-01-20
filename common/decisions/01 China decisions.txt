@@ -2092,6 +2092,7 @@ chinese_unification = {
 								id = NKRsichuan.578
 								days = 1
 							}
+							hidden_effect = { news_event = NKRnews.32 }
 						}
 						else_if = {
 							limit = {
@@ -2100,6 +2101,7 @@ chinese_unification = {
 							country_event = {
 								id = NKRsichuan.578									days = 1
 							}
+							hidden_effect = { news_event = NKRnews.31 }
 						}
 						else_if = {
 							limit = {
@@ -2111,6 +2113,7 @@ chinese_unification = {
 							country_event = {
 								id = NKRsichuan.600									days = 1
 							}
+							hidden_effect = { news_event = NKRnews.33 }
 						}
 						else_if = {
 							limit = {
@@ -2120,6 +2123,7 @@ chinese_unification = {
 								id = NKRsichuan.617
 								days = 1
 							}
+							hidden_effect = { news_event = NKRnews.34 }
 						}
 						else_if = {
 							limit = {
@@ -2129,6 +2133,7 @@ chinese_unification = {
 								id = NKRsichuan.637
 								days = 1
 							}
+							hidden_effect = { news_event = NKRnews.39 }
 						}
 						else_if = {
 							limit = {
@@ -2138,6 +2143,7 @@ chinese_unification = {
 								id = NKRsichuan.697
 								days = 1
 							}
+							hidden_effect = { news_event = NKRnews.36 }
 						}
 						else_if = {
 							limit = {
@@ -2147,6 +2153,7 @@ chinese_unification = {
 								id = NKRsichuan.678
 								days = 1
 							}
+							hidden_effect = { news_event = NKRnews.37 }
 						}
 						else_if = {
 							limit = {
@@ -2156,6 +2163,7 @@ chinese_unification = {
 								id = NKRsichuan.656
 								days = 1
 							}
+							hidden_effect = { news_event = NKRnews.35 }
 						}
 						else_if = {
 							limit = {
@@ -2165,6 +2173,7 @@ chinese_unification = {
 								id = NKRsichuan.710
 								days = 1
 							}
+							hidden_effect = { news_event = NKRnews.41 }
 						}
 					}
 				}
@@ -2176,7 +2185,7 @@ chinese_unification = {
 					activate_targeted_decision = { decision = china_move_capital target = ROOT }
 					set_cosmetic_tag = united_china
 					custom_effect_tooltip = enables_new_focus_branches
-					hidden_effect = { news_event = china_events.314 }
+					hidden_effect = { news_event = NKRnews.23 }
 				}
 				else_if = {
 					limit = {
@@ -2192,12 +2201,20 @@ chinese_unification = {
 						}
 						set_cosmetic_tag = RKT_united_china
 						activate_targeted_decision = { decision = china_move_capital target = ROOT }
-						hidden_effect = { news_event = china_events.309 }
+						hidden_effect = { news_event = NKRnews.30 }
 					}
 					else = {
 						set_cosmetic_tag = SZC_LKT_united_china
 						activate_targeted_decision = { decision = china_move_capital target = ROOT }
-						hidden_effect = { news_event = china_events.308 }
+						if = {
+							limit = {
+								has_country_leader = { character = SZC_pan_wenhua }
+							}
+							hidden_effect = { news_event = NKRnews.29 }
+						}
+						else = {
+							hidden_effect = { news_event = NKRnews.28 }
+						}
 					}
 				}
 				else = {

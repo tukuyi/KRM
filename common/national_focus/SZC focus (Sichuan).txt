@@ -11649,6 +11649,8 @@ focus_tree = {
 			SZC_remove_industrial_ideas_effect = yes
 			set_country_flag = NKRSZC_remove_ind_tree
 			mark_focus_tree_layout_dirty = yes
+			hidden_effect = { news_event = NKRnews.20 }
+			
 		}
 	}
 
@@ -17180,6 +17182,7 @@ focus_tree = {
 					add_idea = SZC_pan_legitimacy_4
 				}
 			}
+			hidden_effect = { news_event = NKRnews.21 }
 		}
 	}
 
@@ -23914,6 +23917,7 @@ focus_tree = {
 				set_country_flag = NKRSZC_remove_ind_tree
 				mark_focus_tree_layout_dirty = yes
 			}
+			hidden_effect = { news_event = NKRnews.22 }
 		}
 	}
 
