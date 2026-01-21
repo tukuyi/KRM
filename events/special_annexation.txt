@@ -1,0 +1,841 @@
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9001
+	title = annexation_events.9001.t
+	desc = annexation_events.9001.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9001 option annexation_events.9001.a"
+		name = annexation_events.9001.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9001 option annexation_events.9001.a"
+		name = annexation_events.9001.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 朝鲜
+	id = annexation_events.9002
+	title = annexation_events.9002.t
+	desc = annexation_events.9002.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9002 option annexation_events.9002.a"
+		name = annexation_events.9002.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9002 option annexation_events.9002.b"
+		name = annexation_events.9002.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 法国
+	id = annexation_events.9003
+	title = annexation_events.9003.t
+	desc = annexation_events.9003.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9003 option annexation_events.9003.a"
+		name = annexation_events.9003.a
+		if = {
+			limit = {
+				SZC_normal_ycp_path = yes
+			}
+			country_event = { id = NKRsichuanpuppet.35 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SZC_YCP_jiang_path
+			}
+			country_event = { id = NKRsichuanpuppet.39 }
+		}
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9003 option annexation_events.9003.b"
+		name = annexation_events.9003.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 德国
+	id = annexation_events.9004
+	title = annexation_events.9004.t
+	desc = annexation_events.9004.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9004 option annexation_events.9004.a"
+		name = annexation_events.9004.a
+		if = {
+			limit = {
+				SZC_normal_ycp_path = yes
+			}
+			country_event = { id = NKRsichuanpuppet.30 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SZC_YCP_jiang_path
+			}
+			country_event = { id = NKRsichuan.677 }
+		}
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9004 option annexation_events.9004.b"
+		name = annexation_events.9004.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 意大利
+	id = annexation_events.9005
+	title = annexation_events.9005.t
+	desc = annexation_events.9005.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9005 option annexation_events.9005.a"
+		name = annexation_events.9005.a
+		if = {
+			limit = {
+				SZC_normal_ycp_path = yes
+			}
+			country_event = { id = NKRsichuan.599 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SZC_YCP_jiang_path
+			}
+			country_event = { id = NKRsichuanpuppet.42 }
+		}
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9005 option annexation_events.9005.b"
+		name = annexation_events.9005.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 西班牙
+	id = annexation_events.9006
+	title = annexation_events.9006.t
+	desc = annexation_events.9006.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9006 option annexation_events.9006.a"
+		name = annexation_events.9006.a
+		if = {
+			limit = {
+				SZC_normal_ycp_path = yes
+			}
+			country_event = { id = NKRsichuanpuppet.36 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SZC_YCP_jiang_path
+			}
+			country_event = { id = NKRsichuanpuppet.41 }
+		}
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9006 option annexation_events.9006.b"
+		name = annexation_events.9006.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 土耳其
+	id = annexation_events.9007
+	title = annexation_events.9007.t
+	desc = annexation_events.9007.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9007 option annexation_events.9007.a"
+		name = annexation_events.9007.a
+		if = {
+			limit = {
+				SZC_normal_ycp_path = yes
+			}
+			country_event = { id = NKRsichuanpuppet.38 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SZC_YCP_jiang_path
+			}
+			country_event = { id = NKRsichuanpuppet.43 }
+		}
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9007 option annexation_events.9007.b"
+		name = annexation_events.9007.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 俄罗斯
+	id = annexation_events.9008
+	title = annexation_events.9008.t
+	desc = annexation_events.9008.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9008 option annexation_events.9008.a"
+		name = annexation_events.9008.a
+		if = {
+			limit = {
+				SZC_normal_ycp_path = yes
+			}
+			country_event = { id = NKRsichuanpuppet.34 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SZC_YCP_jiang_path
+			}
+			country_event = { id = NKRsichuanpuppet.45 }
+		}
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9008 option annexation_events.9008.b"
+		name = annexation_events.9008.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 英国
+	id = annexation_events.9009
+	title = annexation_events.9009.t
+	desc = annexation_events.9009.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9009 option annexation_events.9009.a"
+		name = annexation_events.9009.a
+		if = {
+			limit = {
+				SZC_normal_ycp_path = yes
+			}
+			country_event = { id = NKRsichuanpuppet.31 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SZC_YCP_jiang_path
+			}
+			country_event = { id = NKRsichuanpuppet.40 }
+		}
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9009 option annexation_events.9009.b"
+		name = annexation_events.9009.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 捷克
+	id = annexation_events.9010
+	title = annexation_events.9010.t
+	desc = annexation_events.9010.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9010 option annexation_events.9010.a"
+		name = annexation_events.9010.a
+		if = {
+			limit = {
+				SZC_normal_ycp_path = yes
+			}
+			country_event = { id = NKRsichuanpuppet.37 }
+		}
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9010 option annexation_events.9010.b"
+		name = annexation_events.9010.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 波兰
+	id = annexation_events.9011
+	title = annexation_events.9011.t
+	desc = annexation_events.9011.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9011 option annexation_events.9011.a"
+		name = annexation_events.9011.a
+		if = {
+			limit = {
+				SZC_normal_ycp_path = yes
+			}
+			country_event = { id = NKRsichuanpuppet.33 }
+		}
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9011 option annexation_events.9011.b"
+		name = annexation_events.9011.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 美国
+	id = annexation_events.9012
+	title = annexation_events.9012.t
+	desc = annexation_events.9012.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9012 option annexation_events.9012.a"
+		name = annexation_events.9012.a
+		if = {
+			limit = {
+				SZC_normal_ycp_path = yes
+			}
+			country_event = { id = NKRsichuanpuppet.32 }
+		}
+		if = {
+			limit = {
+				has_country_flag = SZC_YCP_jiang_path
+			}
+			country_event = { id = NKRsichuanpuppet.44 }
+		}
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9012 option annexation_events.9012.b"
+		name = annexation_events.9012.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9013
+	title = annexation_events.9013.t
+	desc = annexation_events.9013.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9013 option annexation_events.9013.a"
+		name = annexation_events.9013.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9013 option annexation_events.9013.b"
+		name = annexation_events.9013.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9014
+	title = annexation_events.9014.t
+	desc = annexation_events.9014.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9014 option annexation_events.9014.a"
+		name = annexation_events.9014.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9014 option annexation_events.9014.b"
+		name = annexation_events.9014.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9015
+	title = annexation_events.9015.t
+	desc = annexation_events.9015.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9015 option annexation_events.9015.a"
+		name = annexation_events.9015.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9015 option annexation_events.9015.b"
+		name = annexation_events.9015.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9016
+	title = annexation_events.9016.t
+	desc = annexation_events.9016.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9016 option annexation_events.9016.a"
+		name = annexation_events.9016.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9016 option annexation_events.9016.b"
+		name = annexation_events.9016.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9017
+	title = annexation_events.9017.t
+	desc = annexation_events.9017.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9017 option annexation_events.9017.a"
+		name = annexation_events.9017.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9017 option annexation_events.9017.b"
+		name = annexation_events.9017.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9018
+	title = annexation_events.9018.t
+	desc = annexation_events.9018.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9018 option annexation_events.9018.a"
+		name = annexation_events.9018.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9018 option annexation_events.9018.b"
+		name = annexation_events.9018.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9019
+	title = annexation_events.9019.t
+	desc = annexation_events.9019.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9019 option annexation_events.9019.a"
+		name = annexation_events.9019.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9019 option annexation_events.9019.b"
+		name = annexation_events.9019.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9020
+	title = annexation_events.9020.t
+	desc = annexation_events.9020.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9020 option annexation_events.9020.a"
+		name = annexation_events.9020.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9020 option annexation_events.9020.b"
+		name = annexation_events.9020.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9021
+	title = annexation_events.9021.t
+	desc = annexation_events.9021.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9021 option annexation_events.9021.a"
+		name = annexation_events.9021.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9021 option annexation_events.9021.b"
+		name = annexation_events.9021.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9022
+	title = annexation_events.9022.t
+	desc = annexation_events.9022.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9022 option annexation_events.9022.a"
+		name = annexation_events.9022.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9022 option annexation_events.9022.b"
+		name = annexation_events.9022.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9023
+	title = annexation_events.9023.t
+	desc = annexation_events.9023.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9023 option annexation_events.9023.a"
+		name = annexation_events.9023.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9023 option annexation_events.9023.b"
+		name = annexation_events.9023.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9024
+	title = annexation_events.9024.t
+	desc = annexation_events.9024.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9024 option annexation_events.9024.a"
+		name = annexation_events.9024.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9024 option annexation_events.9024.b"
+		name = annexation_events.9024.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9025
+	title = annexation_events.9025.t
+	desc = annexation_events.9025.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9025 option annexation_events.9025.a"
+		name = annexation_events.9025.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9025 option annexation_events.9025.b"
+		name = annexation_events.9025.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9026
+	title = annexation_events.9026.t
+	desc = annexation_events.9026.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9026 option annexation_events.9026.a"
+		name = annexation_events.9026.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9026 option annexation_events.9026.b"
+		name = annexation_events.9026.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9027
+	title = annexation_events.9027.t
+	desc = annexation_events.9027.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9027 option annexation_events.9027.a"
+		name = annexation_events.9027.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9027 option annexation_events.9027.b"
+		name = annexation_events.9027.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9028
+	title = annexation_events.9028.t
+	desc = annexation_events.9028.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9028 option annexation_events.9028.a"
+		name = annexation_events.9028.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9028 option annexation_events.9028.b"
+		name = annexation_events.9028.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9029
+	title = annexation_events.9029.t
+	desc = annexation_events.9029.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9029 option annexation_events.9029.a"
+		name = annexation_events.9029.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9029 option annexation_events.9029.b"
+		name = annexation_events.9029.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9030
+	title = annexation_events.9030.t
+	desc = annexation_events.9030.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9030 option annexation_events.9030.a"
+		name = annexation_events.9030.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9030 option annexation_events.9030.b"
+		name = annexation_events.9030.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}
+
+country_event = { #特殊吞并 - 日本
+	id = annexation_events.9031
+	title = annexation_events.9031.t
+	desc = annexation_events.9031.d
+	picture = GFX_report_event_SZC_90016
+
+	is_triggered_only = yes
+	
+
+	option = {#实行
+		log = "[GetLogInfo]: event annexation_events.9031 option annexation_events.9031.a"
+		name = annexation_events.9031.a
+		country_event = { id = NKRsichuanpuppet. }
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9031 option annexation_events.9031.b"
+		name = annexation_events.9031.b
+		ai_chance = { base = 0 }
+	}
+	after = {
+		recheck_annexations = yes
+	}
+}

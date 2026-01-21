@@ -11881,12 +11881,21 @@ country_event = { #新生的意大利
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	trigger = {
-		original_tag = SZC
-		has_country_flag = NKRSZC_YCPpath_phase3
-		has_global_flag = china_united
-		ITA = {
-			is_puppet_of = SZC
+	immediate = {
+		hidden_effect = {
+			annexations_reset_italian_tags = yes
+			if = {
+				limit = {
+					is_italian_unifier_tag = yes
+					NOT = { has_country_flag = SIC_confed }
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_italian_event_targets = yes
+			every_owned_state = {
+				limit = { is_italian_irredentist_claim = yes }
+				retain_state = yes #just in case
+			}
 		}
 	}
 	
@@ -11895,6 +11904,8 @@ country_event = { #新生的意大利
 		log = "[GetLogInfo]: event NKRsichuan.599 option NKRsichuan.599.a"
 		name = NKRsichuan.599.a
 		custom_effect_tooltip = NKRsichuan.599.tt
+		set_temp_variable = { tag_to_release = ITA }
+		annexations_release_italy = yes
 		hidden_effect = {
 			ITA_peppino_garibaldi = {
 				set_nationality = ITA
@@ -13212,12 +13223,48 @@ country_event = { #保守革命的遗产
 
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+	immediate = {
+		hidden_effect = {
+			annexations_reset_german_tags = yes
+			if = {
+				limit = {
+					OR = {
+						is_german_unifier_tag = yes
+						AND = {
+							64 = { is_claim_or_core_of_ROOT = yes } #Brandenburg
+							owns_state = 147 #Prussian Saxony
+						}
+						AND = {
+							AUS_can_form_germany = yes
+							OR = {
+								has_subject = BAY
+								any_owned_state = {
+									is_south_germany = yes
+									state_strategic_value > 89
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_german_event_targets = yes
+			if = {
+				limit = {
+					annexations_germany_is_independent_ally_or_puppet_of_ROOT = no
+					PRE = { ROOT_can_grant_land = yes }
+				}
+				PRE = { save_event_target_as = prussia add_to_array = { ROOT.potential_grant_targets = THIS } }
+			}
+			58 = { retain_state = yes } #Schleswig-Holstein
+		}
+	}
 
 	option = {#骑士精神再现。
 		log = "[GetLogInfo]: event NKRsichuan.677 option NKRsichuan.677.a"
 		name = NKRsichuan.677.a
 		custom_effect_tooltip = NKRsichuan.677.tt
+		annexations_release_republican_germany = yes
 		hidden_effect = {
 			GRU_edgar_jung = {
 				set_nationality = GRU
@@ -15763,7 +15810,7 @@ unit_leader_event = { #举国一致内阁
 	desc = NKRsichuanpuppet.21.d
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -15785,7 +15832,7 @@ unit_leader_event = { #大日本政治会
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -15807,7 +15854,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -15823,7 +15870,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -15839,7 +15886,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -15855,7 +15902,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -15871,7 +15918,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -15887,7 +15934,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -15903,7 +15950,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -15919,12 +15966,49 @@ country_event = { #青年德意志的复兴
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	
+	immediate = {
+		hidden_effect = {
+			annexations_reset_german_tags = yes
+			if = {
+				limit = {
+					OR = {
+						is_german_unifier_tag = yes
+						AND = {
+							64 = { is_claim_or_core_of_ROOT = yes } #Brandenburg
+							owns_state = 147 #Prussian Saxony
+						}
+						AND = {
+							AUS_can_form_germany = yes
+							OR = {
+								has_subject = BAY
+								any_owned_state = {
+									is_south_germany = yes
+									state_strategic_value > 89
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_german_event_targets = yes
+			if = {
+				limit = {
+					annexations_germany_is_independent_ally_or_puppet_of_ROOT = no
+					PRE = { ROOT_can_grant_land = yes }
+				}
+				PRE = { save_event_target_as = prussia add_to_array = { ROOT.potential_grant_targets = THIS } }
+			}
+			58 = { retain_state = yes } #Schleswig-Holstein
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.30 option NKRsichuanpuppet.30.a"
 		name = NKRsichuanpuppet.30.a
+		annexations_release_republican_germany = yes
 		hidden_effect = {
 			GRU_dolf_sternberger = {
 				set_nationality = GRU
@@ -15978,12 +16062,35 @@ country_event = { #新不列颠
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			ENG = { drop_cosmetic_tag = yes }
+			event_target:original_britain_puppet = {
+				clear_cores_of_tag_if_possible = yes
+			}
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.31 option NKRsichuanpuppet.31.a"
 		name = NKRsichuanpuppet.31.a
+		custom_effect_tooltip = GBP_british_collab
+		hidden_effect = {
+			set_temp_variable = { tag_to_release = event_target:original_britain_puppet }
+			GBP_create_cores = yes
+			release_targeted_tag = yes
+			var:tag_to_release = {
+				GBP_set_up_government = yes
+				GBP_transfer_english_commanders = yes
+				SCO_transfer_commanders = yes
+				WLS_transfer_commanders = yes
+			}
+			if = {
+				limit = { NOT = { original_tag = GER } }
+				country_event = britain_puppet_events.7
+			}
+		}
 		hidden_effect = {
 			ENG_john_macmurray = {
 				set_nationality = GBP
@@ -16037,12 +16144,71 @@ country_event = { #民主党转变
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { country_exists = NEE } }
+				NEE = { clear_cores_of_tag_if_possible = yes }
+			}
+			every_state = {
+				if = {
+					limit = {
+						OR = {
+							is_mainland_america = yes
+							is_american_pacific_islands = yes
+							state = 463 #Alaska
+						}
+					}
+					add_core_of = USA
+				}
+				else = {
+					remove_core_of = USA
+				}
+				remove_core_of = WCA
+				remove_core_of = ACC
+				remove_core_of = APG
+				remove_claim_by = USA
+				remove_claim_by = WCA
+				remove_claim_by = ACC
+				remove_claim_by = APG
+			}
+			463 = { retain_state = yes } #Alaska
+			every_state = {
+				limit = { is_american_pacific_islands = yes }
+				add_core_of = HAW
+				retain_state = yes
+			}
+			WCA = {
+				if = {
+					limit = { has_character = WCA_jack_reed }
+					retire_character = WCA_jack_reed
+				}
+			}
+			USA = {
+				USA_swap_to_blue_cosmetic_tag = yes
+				if = {
+					limit = { NOT = { has_character = USA_douglas_macarthur } }
+					USA_douglas_macarthur = { set_nationality = USA }
+					promote_character = { character = USA_douglas_macarthur ideology = paternal_autocrat_subtype }
+				}
+			}
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.32 option NKRsichuanpuppet.32.a"
 		name = NKRsichuanpuppet.32.a
+		set_temp_variable = { tag_to_release = USA }
+		release_targeted_tag_nocosmetic = yes
+		hidden_effect = {
+			var:tag_to_release = {
+				if = {
+					limit = { has_completed_focus = USA_back_in_business }
+					uncomplete_national_focus = { focus = USA_back_in_business uncomplete_children = yes }
+				}
+			}
+		}
 		hidden_effect = {
 			USA_hebert_agar = {
 				set_nationality = USA
@@ -16096,12 +16262,100 @@ country_event = { #青年波兰复兴
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				limit = { is_poland = no }
+				remove_claim_by = POL
+				if = {
+					limit = { check_variable = { core_countries^num > 1 } }
+					remove_core_of = POL
+				}
+			}
+			POL = {
+				POL_clear_economy = yes
+				POL_remove_monarchy = yes
+				POL_remove_guderian = yes
+				drop_cosmetic_tag = yes
+				remove_ideas = {
+					POL_uprising
+					POL_uprising2
+					POL_uprising3
+					POL_ZRP
+					POL_OZN_ONR_infighting
+					POL_uprising_crash1
+					POL_uprising_crash2
+					POL_uprising_crash3
+					POL_uprising_crash4
+					POL_uprising_crash5
+					POL_uprising_crash6
+					POL_recovering_eco1
+					POL_recovering_eco2
+					POL_recovering_eco3
+					POL_crescendo_of_blood
+					POL_suppressing_rival_government
+					POL_revolutionary_factionalism
+				}
+				if = {
+					limit = { has_character = AUS_karl_albrecht_von_habsburg }
+					AUS_karl_albrecht_von_habsburg = {
+						set_character_name = AUS_karl_albrecht_von_habsburg
+						set_character_as_republican = yes
+						remove_all_country_leader_roles = yes
+						if = {
+							limit = { AUS = { AUS_is_led_by_habsburgs = yes } }
+							set_nationality = AUS
+						}
+						else = {
+							retire = yes
+						}
+					}
+				}
+				if = {
+					limit = { has_character = POL_konstanty_rokossowski }
+					POL_konstanty_rokossowski = {
+						add_unit_leader_trait = INT_polish_exile_trait
+						set_nationality = FRA
+					}
+				}
+				if = {
+					limit = { has_character = POL_wolfgang_von_kries }
+					POL_wolfgang_von_kries = { retire = yes }
+				}
+			}
+			88 = { retain_state = yes } #Krakow
+			89 = { retain_state = yes } #Stanislawow
+			91 = { retain_state = yes } #Lwow
+			97 = { retain_state = yes } #Bialystok
+			1088 = { retain_state = yes } #Chelm
+
+			67 = { add_claim_by = POL }
+			66 = { add_claim_by = POL }
+			86 = { add_claim_by = POL }
+			68 = { add_claim_by = POL }
+			63 = { add_claim_by = POL }
+			776 = { add_claim_by = POL }
+			777 = { add_claim_by = POL }
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.33 option NKRsichuanpuppet.33.a"
 		name = NKRsichuanpuppet.33.a
+		hidden_effect = {
+			
+			67 = { add_claim_by = POL }
+			66 = { add_claim_by = POL }
+			86 = { add_claim_by = POL }
+			68 = { add_claim_by = POL }
+			63 = { add_claim_by = POL }
+			776 = { add_claim_by = POL }
+			777 = { add_claim_by = POL }
+		}
+		set_temp_variable = { tag_to_release = POL }
+		release_targeted_tag = yes
+		var:tag_to_release = { POL_release_as_republic = yes }
 		hidden_effect = {
 			POL_tadeusz_pruszkowski = {
 				set_nationality = POL
@@ -16155,12 +16409,63 @@ country_event = { #新社会革命党
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			every_collection_element = {
+				input = {
+					input = constant:state_groups.russia_starting_states
+					name = collection_russia_starting_states
+				}
+				THIS = { add_core_of = RSA }
+			}
+			RSA = { drop_cosmetic_tag = yes }
+			RUS = { clear_cores_of_tag_if_possible = yes }
+			if = {
+				limit = { NOT = { country_exists = FER } }
+				FER = { clear_cores_of_tag_if_possible = yes }
+			}
+			213 = { retain_state = yes } #Murmansk
+			215 = { retain_state = yes } #White Karelia
+			216 = { retain_state = yes } #Petrozavodsk
+			218 = { retain_state = yes } #Rostov
+			234 = { retain_state = yes } #Ekaterinodar
+			242 = { retain_state = yes } #Smolensk
+			243 = { retain_state = yes } #Krichev
+			329 = { retain_state = yes } #Tuva
+			537 = { retain_state = yes } #North Sakhalin
+			577 = { retain_state = yes } #South Sakhalin
+			722 = { retain_state = yes } #Petsamo
+			755 = { retain_state = yes } #Vitebsk
+			880 = { retain_state = yes } #Latgale
+			1006 = { retain_state = yes } #Novorossiysk
+			MNR = { every_core_state = { retain_state = yes } }
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_alash = yes
+						is_siberia = yes
+						is_russian_far_east = yes
+					}
+				}
+				retain_state = yes
+			}
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.34 option NKRsichuanpuppet.34.a"
 		name = NKRsichuanpuppet.34.a
+		set_temp_variable = { tag_to_release = RSA }
+		release_targeted_tag = yes
+		hidden_effect = {
+			set_autonomy = {
+				target = var:tag_to_release
+				autonomy_state = autonomous_puppet
+				end_wars = no
+			}
+			RUS_puppet_setup = yes
+		}
 		hidden_effect = {
 			RSA_nikolai_kondratiev = {
 				set_nationality = RSA
@@ -16206,12 +16511,117 @@ country_event = { #起源之地
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { country_exists = FRA } }
+				FRA = { clear_cores_of_tag_if_possible = yes }
+			}
+			if = {
+				limit = { NOT = { country_exists = NFA } }
+				NFA = { clear_cores_of_tag_if_possible = yes }
+			}
+			if = {
+				limit = { NOT = { country_exists = FRP } }
+				FRP = {
+					clear_cores_of_tag_if_possible = yes
+					if = {
+						limit = { has_character = GER_fedor_von_bock }
+						GER_fedor_von_bock = {
+							remove_all_country_leader_roles = yes
+							set_nationality = GER
+						}
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { country_exists = LIL } }
+				LIL = {
+					clear_cores_of_tag_if_possible = yes
+					if = {
+						limit = { has_character = GER_roland_koster }
+						GER_roland_koster = {
+							remove_all_country_leader_roles = yes
+							set_nationality = GER
+						}
+					}
+				}
+			}
+			if = {
+				limit = { is_french_tag = yes }
+				save_event_target_as = can_annex
+			}
+			random_other_country = {
+				limit = {
+					is_french_tag = yes
+					is_ally_with = ROOT
+					OR = {
+						is_subject = no
+						is_subject_of = ROOT
+					}
+				}
+				save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS }
+			}
+			if = {
+				limit = { NOT = { has_event_target = france } }
+				if = {
+					limit = { FRA = { ROOT_can_grant_land = yes } }
+					FRA = { save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+				else_if = {
+					limit = { FRP = { ROOT_can_grant_land = yes } }
+					FRP = { save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+				if = {
+					limit = { NFA = { ROOT_can_grant_land = yes } }
+					NFA = { save_event_target_as = france_exile add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+			}
+			1 = { retain_state = yes } #Corsica
+			14 = { retain_state = yes } #Upper Brittany
+			17 = { retain_state = yes } #Pas-de-Calais
+			28 = { retain_state = yes } #Alsace-Lorraine
+			29 = { retain_state = yes } #Dunkirk
+			735 = { retain_state = yes } #Savoy
+			762 = { retain_state = yes } #Nice
+			779 = { retain_state = yes } #Labourd
+			817 = { retain_state = yes } #Roussillon
+			943 = { retain_state = yes } #Upper Savoy
+			980 = { retain_state = yes } #Lille
+			983 = { retain_state = yes } #Brittany
+		}
+	}
+
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.35 option NKRsichuanpuppet.35.a"
 		name = NKRsichuanpuppet.35.a
+		set_temp_variable = { tag_to_release = FRP }
+		every_state = {
+			limit = { is_france = yes }
+			add_core_of = var:tag_to_release
+			hidden_effect = { remove_claim_by = var:tag_to_release }
+		}
+		release_targeted_tag = yes
+		if = {
+			limit = {
+				NOT = { original_tag = GER }
+			}
+			hidden_effect = {
+				var:tag_to_release = {
+					country_event = france_puppet_events.1
+				}
+			}
+		}
+		if = {
+			limit = { country_exists = NFA }
+			reverse_add_opinion_modifier = {
+				target = NFA
+				modifier = NFA_occupied_france
+			}
+		}
 		hidden_effect = {
 			FRA_gaston_riou = {
 				set_nationality = FRP
@@ -16265,12 +16675,39 @@ country_event = { #半岛之上
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				if = {
+					limit = { is_spain = no }
+					remove_core_of = SPK
+				}
+				else = {
+					add_core_of = SPK
+				}
+				remove_core_of = SPR
+				remove_core_of = SWF
+				remove_claim_by = SPK
+				remove_claim_by = SPR
+				remove_claim_by = SWF
+			}
+			SPA_puppet_setup_immediate = yes
+			118 = { retain_state = yes } #Gibraltar
+			165 = { retain_state = yes } #Catalonia
+			167 = { retain_state = yes } #Valencia
+			171 = { retain_state = yes } #Galicia
+			172 = { retain_state = yes } #Navarre
+			177 = { retain_state = yes } #Balearic Islands
+			1070 = { retain_state = yes } #Basque Country
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.36 option NKRsichuanpuppet.36.a"
 		name = NKRsichuanpuppet.36.a
+		set_temp_variable = { tag_to_release = SPA }
+		release_spain = yes
 		hidden_effect = {
 			SPA_jose_ortega_y_gasset = {
 				set_nationality = SPA
@@ -16324,12 +16761,84 @@ country_event = { #中欧书生
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				if = {
+					limit = { region = 22 } #Bohemia
+					add_core_of = CZE
+				}
+				else = {
+					remove_core_of = CZE
+				}
+				remove_claim_by = CZE
+			}
+			924 = { retain_state = yes } #Tesin
+			event_target:system = {
+				every_character = {
+					limit = { CZE = { original_tag = var:PREV.nationality } }
+					set_nationality = CZE
+				}
+			}
+			CZE = {
+				AUS_remove_monarchy = yes
+				AUS_disable_danubian_integration = yes
+				annexations_reset_danubian_characters = yes
+				promote_character = {
+					character = CZE_jan_syrovy
+					ideology = paternal_autocrat_subtype
+				}
+				CZE_change_portraits = yes
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					original_tag = AUS
+					AUS_is_unified = yes
+					is_german_unifier_tag = yes
+				}
+			}
+			save_event_target_as = can_annex
+			if = {
+				limit = {
+					is_german_unifier_tag = yes
+					NOT = { original_tag = AUS }
+				}
+				save_event_target_as = AI_dont_annex
+			}
+		}
+		if = {
+			limit = {
+				var:4.owner = {
+					OR = {
+						original_tag = AUS
+						AUS_is_unified = yes
+					}
+					ROOT_can_grant_land = yes
+				}
+			}
+			var:4.owner = { save_event_target_as = austria add_to_array = { ROOT.potential_grant_targets = THIS } }
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.37 option NKRsichuanpuppet.37.a"
 		name = NKRsichuanpuppet.37.a
+		set_temp_variable = { tag_to_release = CZE }
+		every_state = {
+			limit = { is_slovakia = yes }
+			add_core_of = var:tag_to_release
+			hidden_effect = { remove_claim_by = var:tag_to_release }
+		}
+		71 = { retain_state = yes } #Danubian Plain
+		73 = { retain_state = yes } #Transcarpathia
+		1090 = { retain_state = yes } #Pressburg
+
+		release_targeted_tag = yes
+		var:tag_to_release = { set_cosmetic_tag = CZE_czechoslavakia }
+
 		hidden_effect = {
 			CZE_frantisek_langer = {
 				set_nationality = CZE
@@ -16375,12 +16884,111 @@ country_event = { #扫除异端
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			TUR = {
+				OTT_remove_sultan = yes
+				OTT_post_defeat_setup = yes
+				TUR_apply_republic_party_names = yes
+				OTT_remove_ottoman_ambitions_claims = yes
+				TUR_disable_all_decisions = yes
+				TUR_disable_traditionalist_resistance = yes
+				if = {
+					limit = { NOT = { has_focus_tree = turkish_republic_tree } }
+					load_focus_tree = turkish_republic_tree
+					remove_ideas = {
+						TUR_remnants_OHF_reforms
+						TUR_remnants_OHF_reforms_1
+						TUR_remnants_OHF_reforms_2
+						TUR_remnants_OHF_influence
+						TUR_remnants_OHF_influence_1
+						TUR_a_cabinet_alone
+						TUR_successful_coalition
+						TUR_OHF_military_clique
+						TUR_military_reorganization
+						TUR_ottoman_democracy
+						TUR_new_ottoman_military
+						TUR_political_sociology
+						TUR_women_rights_idea
+						TUR_farmer_assistance
+						TUR_people_politization
+						TUR_coranic_schools
+						TUR_progressist_islam
+						TUR_zakat_donation
+						TUR_fruit_export
+						TUR_borsa_istanbul
+						TUR_coffee_culture
+						TUR_hafiz_mustafa_monopoly
+						TUR_gendarmerie
+						TUR_powerful_sultan
+						TUR_a_throne_without_sultan
+						TUR_remnants_hif_reforms
+						TUR_kemalist_principles_idea
+						TUR_kemal_will_tarnished
+						TUR_kemal_will_honored
+						TUR_kemal_will_achieved
+						TUR_popular_sovereignty
+						TUR_classless_society_idea
+						TUR_social_nationalism_idea
+						TUR_kadroist_party
+						TUR_kadroist_party_totalist
+						TUR_new_nationalist_army
+						TUR_war_preparation
+						TUR_opposition_resistance
+						TUR_opposition_resistance_1
+						TUR_fevzi_cult_of_personality
+						TUR_religious_community_under_threat
+						TUR_economic_accord
+						TUR_kurdish_crisis
+						TUR_revanchism_for_adana
+						TUR_final_confrontation
+					}
+					TUR_ismet_inonu = {
+						set_nationality = PREV
+						promote_character = authoritarian_democrat_subtype
+					}
+					TUR_fevzi_cakmak = {
+						set_nationality = PREV
+						promote_character = paternal_autocrat_subtype
+					}
+					TUR_fahrettin_altay = { set_nationality = PREV }
+					TUR_cemil_cahit_toydemir = { set_nationality = PREV }
+					TUR_mustafa_kemal_ataturk = { set_nationality = PREV }
+					TUR_huseyin_husnu_erkilet = { set_nationality = PREV }
+					TUR_selahattin_adil = { set_nationality = PREV }
+				}
+				TUR_omer_fahrettin_turkkan = { remove_all_country_leader_roles = yes }
+				TUR_refet_bele = { remove_all_country_leader_roles = yes }
+				TUR_ahmet_muhtar_cilli = { remove_all_country_leader_roles = yes }
+			}
+			184 = { retain_state = yes } #Komotini
+			339 = { retain_state = yes } #Smyrna
+			341 = { retain_state = yes } #Adrianople
+			344 = { retain_state = yes } #Adana
+			340 = { retain_state = yes } #Bursa
+			350 = { retain_state = yes } #Diyarbekir
+			352 = { retain_state = yes } #Van
+			342 = { retain_state = yes } #Mugla
+			773 = { retain_state = yes } #Constantinople
+			1000 = { retain_state = yes } #Kars
+			1001 = { retain_state = yes } #Lazistan
+			1089 = { retain_state = yes } #Kardzhali
+		}
+	}
+
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.38 option NKRsichuanpuppet.38.a"
 		name = NKRsichuanpuppet.38.a
+		set_temp_variable = { tag_to_release = TUR }
+		release_targeted_tag = yes
+		hidden_effect = {
+			var:tag_to_release = {
+				add_ideas = OTT_economic_collapse #post defeat stup does not include this mandatory idea
+				TUR_set_correct_capital = yes
+			}
+		}
 		hidden_effect = {
 			TUR_resat_nuri_guntekin = {
 				set_nationality = TUR
@@ -16434,12 +17042,116 @@ country_event = { #起源之地-姜人
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { country_exists = FRA } }
+				FRA = { clear_cores_of_tag_if_possible = yes }
+			}
+			if = {
+				limit = { NOT = { country_exists = NFA } }
+				NFA = { clear_cores_of_tag_if_possible = yes }
+			}
+			if = {
+				limit = { NOT = { country_exists = FRP } }
+				FRP = {
+					clear_cores_of_tag_if_possible = yes
+					if = {
+						limit = { has_character = GER_fedor_von_bock }
+						GER_fedor_von_bock = {
+							remove_all_country_leader_roles = yes
+							set_nationality = GER
+						}
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { country_exists = LIL } }
+				LIL = {
+					clear_cores_of_tag_if_possible = yes
+					if = {
+						limit = { has_character = GER_roland_koster }
+						GER_roland_koster = {
+							remove_all_country_leader_roles = yes
+							set_nationality = GER
+						}
+					}
+				}
+			}
+			if = {
+				limit = { is_french_tag = yes }
+				save_event_target_as = can_annex
+			}
+			random_other_country = {
+				limit = {
+					is_french_tag = yes
+					is_ally_with = ROOT
+					OR = {
+						is_subject = no
+						is_subject_of = ROOT
+					}
+				}
+				save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS }
+			}
+			if = {
+				limit = { NOT = { has_event_target = france } }
+				if = {
+					limit = { FRA = { ROOT_can_grant_land = yes } }
+					FRA = { save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+				else_if = {
+					limit = { FRP = { ROOT_can_grant_land = yes } }
+					FRP = { save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+				if = {
+					limit = { NFA = { ROOT_can_grant_land = yes } }
+					NFA = { save_event_target_as = france_exile add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+			}
+			1 = { retain_state = yes } #Corsica
+			14 = { retain_state = yes } #Upper Brittany
+			17 = { retain_state = yes } #Pas-de-Calais
+			28 = { retain_state = yes } #Alsace-Lorraine
+			29 = { retain_state = yes } #Dunkirk
+			735 = { retain_state = yes } #Savoy
+			762 = { retain_state = yes } #Nice
+			779 = { retain_state = yes } #Labourd
+			817 = { retain_state = yes } #Roussillon
+			943 = { retain_state = yes } #Upper Savoy
+			980 = { retain_state = yes } #Lille
+			983 = { retain_state = yes } #Brittany
+		}
+	}
+
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.39 option NKRsichuanpuppet.39.a"
 		name = NKRsichuanpuppet.39.a
+		set_temp_variable = { tag_to_release = FRP }
+		every_state = {
+			limit = { is_france = yes }
+			add_core_of = var:tag_to_release
+			hidden_effect = { remove_claim_by = var:tag_to_release }
+		}
+		release_targeted_tag = yes
+		if = {
+			limit = {
+				NOT = { original_tag = GER }
+			}
+			hidden_effect = {
+				var:tag_to_release = {
+					country_event = france_puppet_events.1
+				}
+			}
+		}
+		if = {
+			limit = { country_exists = NFA }
+			reverse_add_opinion_modifier = {
+				target = NFA
+				modifier = NFA_occupied_france
+			}
+		}
 		hidden_effect = {
 			FRA_robert_brasillach = {
 				set_nationality = FRP
@@ -16469,12 +17181,35 @@ country_event = { #不列颠尼亚
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			ENG = { drop_cosmetic_tag = yes }
+			event_target:original_britain_puppet = {
+				clear_cores_of_tag_if_possible = yes
+			}
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.40 option NKRsichuanpuppet.40.a"
 		name = NKRsichuanpuppet.40.a
+		custom_effect_tooltip = GBP_british_collab
+		hidden_effect = {
+			set_temp_variable = { tag_to_release = event_target:original_britain_puppet }
+			GBP_create_cores = yes
+			release_targeted_tag = yes
+			var:tag_to_release = {
+				GBP_set_up_government = yes
+				GBP_transfer_english_commanders = yes
+				SCO_transfer_commanders = yes
+				WLS_transfer_commanders = yes
+			}
+			if = {
+				limit = { NOT = { original_tag = GER } }
+				country_event = britain_puppet_events.7
+			}
+		}
 		hidden_effect = {
 			ENG_henry_williamson = {
 				set_nationality = GBP
@@ -16504,12 +17239,40 @@ country_event = { #啊，西班牙！
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				if = {
+					limit = { is_spain = no }
+					remove_core_of = SPK
+				}
+				else = {
+					add_core_of = SPK
+				}
+				remove_core_of = SPR
+				remove_core_of = SWF
+				remove_claim_by = SPK
+				remove_claim_by = SPR
+				remove_claim_by = SWF
+			}
+			SPA_puppet_setup_immediate = yes
+			118 = { retain_state = yes } #Gibraltar
+			165 = { retain_state = yes } #Catalonia
+			167 = { retain_state = yes } #Valencia
+			171 = { retain_state = yes } #Galicia
+			172 = { retain_state = yes } #Navarre
+			177 = { retain_state = yes } #Balearic Islands
+			1070 = { retain_state = yes } #Basque Country
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.41 option NKRsichuanpuppet.41.a"
 		name = NKRsichuanpuppet.41.a
+		
+		set_temp_variable = { tag_to_release = SPA }
+		release_spain = yes
 		hidden_effect = {
 			SPA_jose_maria_peman = {
 				set_nationality = SPA
@@ -16539,12 +17302,30 @@ country_event = { #罗马重生
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			annexations_reset_italian_tags = yes
+			if = {
+				limit = {
+					is_italian_unifier_tag = yes
+					NOT = { has_country_flag = SIC_confed }
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_italian_event_targets = yes
+			every_owned_state = {
+				limit = { is_italian_irredentist_claim = yes }
+				retain_state = yes #just in case
+			}
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.42 option NKRsichuanpuppet.42.a"
 		name = NKRsichuanpuppet.42.a
+		set_temp_variable = { tag_to_release = ITA }
+		annexations_release_italy = yes
 		hidden_effect = {
 			ITA_julius_evola = {
 				set_nationality = ITA
@@ -16574,12 +17355,110 @@ country_event = { #大月即别
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			TUR = {
+				OTT_remove_sultan = yes
+				OTT_post_defeat_setup = yes
+				TUR_apply_republic_party_names = yes
+				OTT_remove_ottoman_ambitions_claims = yes
+				TUR_disable_all_decisions = yes
+				TUR_disable_traditionalist_resistance = yes
+				if = {
+					limit = { NOT = { has_focus_tree = turkish_republic_tree } }
+					load_focus_tree = turkish_republic_tree
+					remove_ideas = {
+						TUR_remnants_OHF_reforms
+						TUR_remnants_OHF_reforms_1
+						TUR_remnants_OHF_reforms_2
+						TUR_remnants_OHF_influence
+						TUR_remnants_OHF_influence_1
+						TUR_a_cabinet_alone
+						TUR_successful_coalition
+						TUR_OHF_military_clique
+						TUR_military_reorganization
+						TUR_ottoman_democracy
+						TUR_new_ottoman_military
+						TUR_political_sociology
+						TUR_women_rights_idea
+						TUR_farmer_assistance
+						TUR_people_politization
+						TUR_coranic_schools
+						TUR_progressist_islam
+						TUR_zakat_donation
+						TUR_fruit_export
+						TUR_borsa_istanbul
+						TUR_coffee_culture
+						TUR_hafiz_mustafa_monopoly
+						TUR_gendarmerie
+						TUR_powerful_sultan
+						TUR_a_throne_without_sultan
+						TUR_remnants_hif_reforms
+						TUR_kemalist_principles_idea
+						TUR_kemal_will_tarnished
+						TUR_kemal_will_honored
+						TUR_kemal_will_achieved
+						TUR_popular_sovereignty
+						TUR_classless_society_idea
+						TUR_social_nationalism_idea
+						TUR_kadroist_party
+						TUR_kadroist_party_totalist
+						TUR_new_nationalist_army
+						TUR_war_preparation
+						TUR_opposition_resistance
+						TUR_opposition_resistance_1
+						TUR_fevzi_cult_of_personality
+						TUR_religious_community_under_threat
+						TUR_economic_accord
+						TUR_kurdish_crisis
+						TUR_revanchism_for_adana
+						TUR_final_confrontation
+					}
+					TUR_ismet_inonu = {
+						set_nationality = PREV
+						promote_character = authoritarian_democrat_subtype
+					}
+					TUR_fevzi_cakmak = {
+						set_nationality = PREV
+						promote_character = paternal_autocrat_subtype
+					}
+					TUR_fahrettin_altay = { set_nationality = PREV }
+					TUR_cemil_cahit_toydemir = { set_nationality = PREV }
+					TUR_mustafa_kemal_ataturk = { set_nationality = PREV }
+					TUR_huseyin_husnu_erkilet = { set_nationality = PREV }
+					TUR_selahattin_adil = { set_nationality = PREV }
+				}
+				TUR_omer_fahrettin_turkkan = { remove_all_country_leader_roles = yes }
+				TUR_refet_bele = { remove_all_country_leader_roles = yes }
+				TUR_ahmet_muhtar_cilli = { remove_all_country_leader_roles = yes }
+			}
+			184 = { retain_state = yes } #Komotini
+			339 = { retain_state = yes } #Smyrna
+			341 = { retain_state = yes } #Adrianople
+			344 = { retain_state = yes } #Adana
+			340 = { retain_state = yes } #Bursa
+			350 = { retain_state = yes } #Diyarbekir
+			352 = { retain_state = yes } #Van
+			342 = { retain_state = yes } #Mugla
+			773 = { retain_state = yes } #Constantinople
+			1000 = { retain_state = yes } #Kars
+			1001 = { retain_state = yes } #Lazistan
+			1089 = { retain_state = yes } #Kardzhali
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.43 option NKRsichuanpuppet.43.a"
 		name = NKRsichuanpuppet.43.a
+		set_temp_variable = { tag_to_release = TUR }
+		release_targeted_tag = yes
+		hidden_effect = {
+			var:tag_to_release = {
+				add_ideas = OTT_economic_collapse #post defeat stup does not include this mandatory idea
+				TUR_set_correct_capital = yes
+			}
+		}
 		hidden_effect = {
 			TUR_alparslan_turkes = {
 				set_nationality = TUR
@@ -16609,12 +17488,72 @@ country_event = { #帝权
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { country_exists = NEE } }
+				NEE = { clear_cores_of_tag_if_possible = yes }
+			}
+			every_state = {
+				if = {
+					limit = {
+						OR = {
+							is_mainland_america = yes
+							is_american_pacific_islands = yes
+							state = 463 #Alaska
+						}
+					}
+					add_core_of = USA
+				}
+				else = {
+					remove_core_of = USA
+				}
+				remove_core_of = WCA
+				remove_core_of = ACC
+				remove_core_of = APG
+				remove_claim_by = USA
+				remove_claim_by = WCA
+				remove_claim_by = ACC
+				remove_claim_by = APG
+			}
+			463 = { retain_state = yes } #Alaska
+			every_state = {
+				limit = { is_american_pacific_islands = yes }
+				add_core_of = HAW
+				retain_state = yes
+			}
+			WCA = {
+				if = {
+					limit = { has_character = WCA_jack_reed }
+					retire_character = WCA_jack_reed
+				}
+			}
+			USA = {
+				USA_swap_to_blue_cosmetic_tag = yes
+				if = {
+					limit = { NOT = { has_character = USA_douglas_macarthur } }
+					USA_douglas_macarthur = { set_nationality = USA }
+					promote_character = { character = USA_douglas_macarthur ideology = paternal_autocrat_subtype }
+				}
+			}
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.44 option NKRsichuanpuppet.44.a"
 		name = NKRsichuanpuppet.44.a
+		
+		set_temp_variable = { tag_to_release = USA }
+		release_targeted_tag_nocosmetic = yes
+		hidden_effect = {
+			var:tag_to_release = {
+				if = {
+					limit = { has_completed_focus = USA_back_in_business }
+					uncomplete_national_focus = { focus = USA_back_in_business uncomplete_children = yes }
+				}
+			}
+		}
 		hidden_effect = {
 			USA_francis_parker_yockey = {
 				set_nationality = USA
@@ -16644,12 +17583,65 @@ country_event = { #保卫同盟的合作者
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
 	
+	
+	immediate = {
+		hidden_effect = {
+			every_collection_element = {
+				input = {
+					input = constant:state_groups.russia_starting_states
+					name = collection_russia_starting_states
+				}
+				THIS = { add_core_of = RSA }
+			}
+			RSA = { drop_cosmetic_tag = yes }
+			RUS = { clear_cores_of_tag_if_possible = yes }
+			if = {
+				limit = { NOT = { country_exists = FER } }
+				FER = { clear_cores_of_tag_if_possible = yes }
+			}
+			213 = { retain_state = yes } #Murmansk
+			215 = { retain_state = yes } #White Karelia
+			216 = { retain_state = yes } #Petrozavodsk
+			218 = { retain_state = yes } #Rostov
+			234 = { retain_state = yes } #Ekaterinodar
+			242 = { retain_state = yes } #Smolensk
+			243 = { retain_state = yes } #Krichev
+			329 = { retain_state = yes } #Tuva
+			537 = { retain_state = yes } #North Sakhalin
+			577 = { retain_state = yes } #South Sakhalin
+			722 = { retain_state = yes } #Petsamo
+			755 = { retain_state = yes } #Vitebsk
+			880 = { retain_state = yes } #Latgale
+			1006 = { retain_state = yes } #Novorossiysk
+			MNR = { every_core_state = { retain_state = yes } }
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_alash = yes
+						is_siberia = yes
+						is_russian_far_east = yes
+					}
+				}
+				retain_state = yes
+			}
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.45 option NKRsichuanpuppet.45.a"
 		name = NKRsichuanpuppet.45.a
+		
+		set_temp_variable = { tag_to_release = RSA }
+		release_targeted_tag = yes
+		hidden_effect = {
+			set_autonomy = {
+				target = var:tag_to_release
+				autonomy_state = autonomous_puppet
+				end_wars = no
+			}
+			RUS_puppet_setup = yes
+		}
 		hidden_effect = {
 			RUS = {
 				RUS_alisa_berkova = {
@@ -16692,7 +17684,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16708,7 +17700,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16724,7 +17716,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16740,7 +17732,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16756,7 +17748,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16772,7 +17764,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16788,7 +17780,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16804,7 +17796,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16820,7 +17812,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16836,7 +17828,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16852,7 +17844,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16868,7 +17860,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16884,7 +17876,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16900,7 +17892,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16916,7 +17908,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16932,7 +17924,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16948,7 +17940,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16964,7 +17956,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16980,7 +17972,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -16996,7 +17988,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -17012,7 +18004,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -17028,7 +18020,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -17044,7 +18036,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#
@@ -17060,7 +18052,7 @@ country_event = { #
 	picture = GFX_report_event_SZC_516
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 	
 
 	option = {#

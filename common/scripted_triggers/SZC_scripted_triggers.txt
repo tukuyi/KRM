@@ -8,6 +8,16 @@ uses_governorate_autonomy_state = {
 	overlord = { is_chinese_tag = yes }
 	is_chinese_tag = yes
 }
+
+SZC_normal_ycp_path = {
+	AND = {
+		has_country_flag = NKRsichuan_YCPpath
+		NOT = { has_country_flag = SZC_YCP_zhang_guotao_path }
+		NOT = { has_country_flag = SZC_YCP_jiang_path }
+		NOT = { has_country_flag = SZC_YCP_xia_real_path }
+	}
+}
+
 YCP_working_in_party = {
 	custom_override_tooltip = {
 		tooltip = YCP_working_in_party_tooltip
