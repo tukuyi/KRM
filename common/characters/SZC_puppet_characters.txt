@@ -392,6 +392,27 @@ characters = {
 		}
 	}
 	
+	#邝友良
+	HAW_yau_leongfong = {
+		name = HAW_yau_leongfong
+		portraits = {
+			civilian = {
+				small = GFX_portrait_HAW_yau_leongfong_small
+				large = GFX_portrait_HAW_yau_leongfong_large
+			}
+		}
+		country_leader = {
+			desc = HAW_yau_leongfong_desc
+			ideology = social_liberal_constitutional_statist_subtype
+			traits = { }
+		}
+		country_leader = {
+			desc = HAW_yau_leongfong_desc
+			ideology = market_liberal_subtype
+			traits = { }
+		}
+	}
+	
 	#弗朗西斯·帕克·约基
 	USA_francis_parker_yockey = {
 		name = USA_francis_parker_yockey
@@ -481,6 +502,23 @@ characters = {
 			cost = 0
 			can_be_fired = no
 		}
+	}
+
+	#阮祥三
+	VIN_nguyen_tuongtam = {
+		name = VIN_nguyen_tuongtam
+		portraits = {
+			civilian = {
+				small = GFX_portrait_VIN_nguyen_tuongtam_small
+				large = GFX_portrait_VIN_nguyen_tuongtam_large
+			}
+		}
+		country_leader = {
+			desc = VIN_nguyen_tuongtam_desc
+			ideology = authoritarian_democrat_statist_subtype
+			traits = { }
+		}
+
 	}
 
 

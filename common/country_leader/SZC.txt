@@ -1,6 +1,7 @@
 leader_traits = {
 
 	SZC_PAN_great_anti_imperialist = {
+		custom_modifier_tooltip = SZC_PAN_great_anti_imperialist_desc
 		random = no
 		political_power_gain = 0.05
 		stability_factor = 0.05
@@ -8,6 +9,7 @@ leader_traits = {
 	}
 
 	SZC_PAN_second_cai_e = {
+		custom_modifier_tooltip = SZC_PAN_second_cai_e_desc
 		random = no
 		political_power_gain = 0.25
 		stability_factor = 0.15
@@ -15,6 +17,7 @@ leader_traits = {
 	}
 
 	SZC_PAN_listen_to_nations_father = {
+		custom_modifier_tooltip = SZC_PAN_listen_to_nations_father_desc
 		random = no
 		political_power_gain = 0.1
 		stability_factor = 0.1
@@ -23,73 +26,85 @@ leader_traits = {
 	}
 
 	SZC_YCP_crank = {
+		custom_modifier_tooltip = SZC_YCP_crank_desc
 		random = no
 		consumer_goods_factor = -114.514
 		research_speed_factor = -191.981
 	}
 
 	SZC_YCP_machiavelli_today = {
+		custom_modifier_tooltip = SZC_YCP_machiavelli_today_desc
 		random = no
 		political_power_gain = 0.10
 		stability_factor = -0.05
 		agency_upgrade_time = -0.25
 	}
 	SZC_YCP_machiavelli_today_2 = {
+		custom_modifier_tooltip = SZC_YCP_machiavelli_today_2_desc
 		random = no
 		political_power_gain = 0.15
 		stability_factor = -0.10
 		agency_upgrade_time = -0.50
 	}
 	SZC_YCP_literati_in_20C = {
+		custom_modifier_tooltip = SZC_YCP_literati_in_20C_desc
 		random = no
 		political_advisor_cost_factor = -0.33
-        research_speed_factor = 0.10
+		research_speed_factor = 0.10
 	}
 	SZC_YCP_the_great_leader = {
+		custom_modifier_tooltip = SZC_YCP_the_great_leader_desc
 		random = no
-        political_power_gain = 0.05
-        surrender_limit = 0.2
-        war_support_factor = 0.1 
+		political_power_gain = 0.05
+		surrender_limit = 0.2
+		war_support_factor = 0.1 
 		breakthrough_factor = 0.1
 	}
 	SZC_YCP_the_great_vozhd = {
+		custom_modifier_tooltip = SZC_YCP_the_great_vozhd_desc
 		random = no
-        political_power_gain = 0.10
-        surrender_limit = 0.3
-        war_support_factor = 0.15 
+		political_power_gain = 0.10
+		surrender_limit = 0.3
+		war_support_factor = 0.15 
 		breakthrough_factor = 0.15
 	}
 	SZC_YCP_collaborative_yellow_syndicalist = {
+		custom_modifier_tooltip = SZC_YCP_collaborative_yellow_syndicalist_desc
 		random = no
 		stability_factor = 0.10
-        factory_output = -0.05   
-        consumer_goods_factor = -0.15
-        political_power_gain = -0.05   
-        trade_opinion_factor = 0.10      
+		factory_output = -0.05   
+		consumer_goods_factor = -0.15
+		political_power_gain = -0.05   
+		trade_opinion_factor = 0.10      
 	}
 	SZC_YCP_democratic_protector = {
+		custom_modifier_tooltip = SZC_YCP_democratic_protector_desc
 		random = no
 		stability_factor = 0.10
-        war_support_factor = 0.10
-        army_org_factor = 0.05 
+		war_support_factor = 0.10
+		army_org_factor = 0.05 
 	}
 	SZC_YCP_connect_people = {
+		custom_modifier_tooltip = SZC_YCP_connect_people_desc
 		random = no
 		production_speed_infrastructure_factor = 0.2
 		production_speed_rail_way_factor = 0.2
 	}
 	SZC_YCP_liberal_fighter = {
+		custom_modifier_tooltip = SZC_YCP_liberal_fighter_desc
 		random = no
-        army_attack_factor = 0.10
+		army_attack_factor = 0.10
 		political_power_factor = 0.1
 		party_popularity_stability_factor = -0.25
 	}
 	SZC_YCP_scholar_spirit = {
+		custom_modifier_tooltip = SZC_YCP_scholar_spirit_desc
 		random = no
-        research_speed_factor = 0.1
+		research_speed_factor = 0.1
 		war_support_factor = 0.1
 	}
 	SZC_YCP_hanfeizi_today = {
+		custom_modifier_tooltip = SZC_YCP_hanfeizi_today_desc
 		random = no
 		political_power_gain = 0.1
 		stability_factor = 0.05
@@ -98,6 +113,7 @@ leader_traits = {
 		army_attack_factor = 0.05
 	}
 	SZC_YCP_new_legalist_helmsman = {
+		custom_modifier_tooltip = SZC_YCP_new_legalist_helmsman_desc
 		random = no
 		political_power_gain = 0.25
 		stability_factor = 0.1
@@ -105,6 +121,7 @@ leader_traits = {
 		max_command_power_mult = 0.5
 	}
 	SZC_YCP_eastern_spengler = {
+		custom_modifier_tooltip = SZC_YCP_eastern_spengler_desc
 		random = no
 		political_power_gain = 0.2
 		stability_factor = -0.2
@@ -113,12 +130,14 @@ leader_traits = {
 		breakthrough_factor = 0.05
 	}
 	SZC_YCP_all_under_the_heaven_trait = {
+		custom_modifier_tooltip = SZC_YCP_all_under_the_heaven_trait_desc
 		random = no
 		compliance_growth = 0.05
 		resistance_growth = -0.15
 		political_power_factor = 0.15
 	}
 	SZC_YCP_supreme_marshall = {
+		custom_modifier_tooltip = SZC_YCP_supreme_marshall_desc
 		random = no
 		political_power_gain = 0.15
 		army_attack_factor = 0.1
@@ -127,9 +146,18 @@ leader_traits = {
 		max_command_power_mult = 0.75
 	}
 	SZC_YCP_the_lion = {
+		custom_modifier_tooltip = SZC_YCP_the_lion_desc
 		random = no
 		political_power_gain = 0.1
 		naval_invasion_penalty = -0.3
+	}
+
+
+	JAP_reluctant_president = {
+		custom_modifier_tooltip = JAP_reluctant_president_desc
+		random = no
+		political_power_factor = -0.1
+		stability_factor = -0.1
 	}
 }
 	

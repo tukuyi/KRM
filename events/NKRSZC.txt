@@ -16193,6 +16193,17 @@ country_event = { #民主党转变
 					promote_character = { character = USA_douglas_macarthur ideology = paternal_autocrat_subtype }
 				}
 			}
+			if = {
+				limit = {
+					HAW = {
+						is_puppet_of = ROOT
+						has_country_leader = {
+							character = HAW_yau_leongfong
+						}
+					}
+				}
+				country_event = { id = NKRsichuanpuppet.48 days = 56 }
+			}
 		}
 	}
 
@@ -17677,7 +17688,7 @@ country_event = { #保卫同盟的合作者
 	}
 }
 
-country_event = { #
+country_event = { #共和演说的遗产
 	id = NKRsichuanpuppet.46
 	title = NKRsichuanpuppet.46.t
 	desc = NKRsichuanpuppet.46.d
@@ -17685,15 +17696,167 @@ country_event = { #
 
 	is_triggered_only = yes
 	
-	
+	immediate = {
+		hidden_effect = {
+			JAP_fading_sun = yes
+			if = {
+				limit = {
+					OR = {
+						tag = RKT
+						tag = LKT
+					}
+					owns_state = 526
+				}
+				add_state_claim = 526 #If KMT China totally conquers Japan, will occupy Okinawa like the US, will get an event later to decide to either give it back or "give it independence"
+				var:526.owner = { country_event = { id = CHI.lategame.071 days = 500 random_days = 250 } } #The Ryukyu Revival - Flavorwise needs some time to pass first for the event to make sense
+			}
+			537 = { retain_state = yes } #South Sakhalin
+			555 = { retain_state = yes } #Kuril Islands
+			577 = { retain_state = yes } #North Sakhalin
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.46 option NKRsichuanpuppet.46.a"
 		name = NKRsichuanpuppet.46.a
+		set_temp_variable = { tag_to_release = JAP }
+		release_targeted_tag = yes
+		JAP_puppet_setup = yes
+		JAP = {
+			# All general puppet effects
+			hidden_effect = {
+				set_cosmetic_tag = JAP_state
+				load_focus_tree = japan_subject_focus
+				JAP_close_all = yes
+				JAP_clear_ideas = yes
+				if = {
+					limit = { has_character = JAP_hirohito }
+					JAP_hirohito = {
+						promote_character = social_democrat_subtype
+						promote_character = social_liberal_subtype
+						promote_character = market_liberal_subtype
+						promote_character = social_conservative_subtype
+						promote_character = authoritarian_democrat_subtype
+						promote_character = paternal_autocrat_subtype
+						promote_character = national_populist_subtype
+	
+						set_portraits = { civilian = { large = GFX_portrait_JAP_hirohito_civilian_large_suit } }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = authoritarian_democrat_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = paternal_autocrat_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = national_populist_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = social_conservative_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = market_liberal_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = social_liberal_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = social_democrat_subtype }
+					}
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = authoritarian_democrat }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = paternal_autocrat }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = national_populist }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = social_conservative }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = market_liberal }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = social_liberal }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = social_democrat }
+				}
+				if = {
+					limit = { NOT = { has_country_flag = JAP_defeated_nation } }
+					# Reset all relevant Parties in case natpops were previously in power
+					set_party_name = {
+						ideology = social_democrat
+						name = JAP_social_democrat_party
+						long_name = JAP_social_democrat_party_long
+					}
+					set_party_name = {
+						name = JAP_market_liberal_party_kd
+						ideology = market_liberal
+						long_name = JAP_market_liberal_party_long_kd
+					}
+					set_party_name = {
+						ideology = social_conservative
+						name = JAP_social_conservative_party_kd
+						long_name = JAP_social_conservative_party_long_kd
+					}
+				}
+				# Setup the other parties
+				set_party_name = {
+					ideology = authoritarian_democrat
+					long_name = JAP_zantei_gunseifu_long
+					name = JAP_zantei_gunseifu
+				}
+				set_party_name = {
+					ideology = paternal_autocrat
+					long_name = JAP_zantei_gunseifu_long
+					name = JAP_zantei_gunseifu
+				}
+				set_party_name = {
+					ideology = national_populist
+					long_name = JAP_zantei_gunseifu_long
+					name = JAP_zantei_gunseifu
+				}
+			}
+			add_ideas = {
+				JAP_shattered_people_idea
+				JAP_devastated_national_economy_idea
+				JAP_disarmed_nation_idea
+			}
+			set_country_flag = JAP_defeated_nation
+			clr_country_flag = JAP_RKMT_puppet_flag
+			clr_country_flag = JAP_nonKMT_chinese_puppet_flag
+			clr_country_flag = JAP_authoritarian_puppet_flag
+			clr_country_flag = JAP_liberal_puppet_flag
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							has_socialist_government = yes
+							china_alignment_left_kuomintang = yes
+						}
+					}
+				}
+				JAP_socialist_government = yes
+			}
+			else = {
+				# Includes authoritarian governments confusingly
+				JAP_democratic_government = yes
+			}
+			mark_focus_tree_layout_dirty = yes
+			JAP = {
+				JAP_ozaki_yukio = {
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_JAP_ozaki_yukio_large
+						}
+					}
+					add_country_leader_role = {
+						country_leader = {
+							ideology = authoritarian_democrat_subtype
+							traits = { JAP_reluctant_president }
+							desc = JAP_ozaki_yukio_puppet_desc
+						}
+					}
+					promote_character = authoritarian_democrat_subtype
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = JAP_kijuro_cabinet_party
+					long_name = JAP_kijuro_cabinet_party_long
+				}
+				JAP_kijuro_shidehara = {
+					add_advisor_role = {
+						advisor = {
+							slot = second_in_command
+							idea_token = JAP_kijuro_shidehara_sic
+							traits = { KR_compassionate_gentleman_sic }
+						}
+					}
+				}
+				activate_advisor = JAP_kijuro_shidehara_sic
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #檀香山
 	id = NKRsichuanpuppet.47
 	title = NKRsichuanpuppet.47.t
 	desc = NKRsichuanpuppet.47.d
@@ -17701,15 +17864,89 @@ country_event = { #
 
 	is_triggered_only = yes
 	
-	
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				remove_claim_by = HAW
+				if = {
+					limit = { is_american_pacific_islands = yes }
+					add_core_of = HAW
+				}
+				else = {
+					remove_core_of = HAW
+				}
+			}
+			HAW = {
+				clr_country_flag = HAW_can_join_factions
+				HAW_remove_monarchy = yes
+			}
+			annexations_create_german_east_asia_event_target = yes
+			annexations_create_japan_event_target = yes
+			638 = { retain_state = yes } #Guam
+			726 = { retain_state = yes } #Samoa
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.47 option NKRsichuanpuppet.47.a"
 		name = NKRsichuanpuppet.47.a
+		set_temp_variable = { tag_to_release = HAW }
+		release_targeted_tag = yes
+		var:tag_to_release = {
+			if = {
+				limit = { has_completed_focus = HAW_monarchy_restoration }
+				uncomplete_national_focus = {
+					focus = HAW_monarchy_restoration
+					uncomplete_children = yes
+				}
+			}
+			if = {
+				limit = {
+					has_socialist_government = yes
+					has_completed_focus = HAW_declare_a_republic
+				}
+				uncomplete_national_focus = {
+					focus = HAW_declare_a_republic
+					uncomplete_children = yes
+				}
+			}
+			else_if = {
+				limit = {
+					has_socialist_government = no
+					has_completed_focus = HAW_revolution_succeeds
+				}
+				uncomplete_national_focus = {
+					focus = HAW_revolution_succeeds
+					uncomplete_children = yes
+				}
+			}
+			
+		}
+		hidden_effect = {
+			HAW_yau_leongfong = {
+				set_nationality = HAW
+			}
+			HAW = {
+				HAW_yau_leongfong = {
+					promote_character = market_liberal_subtype
+				}
+				set_politics = {
+					ruling_party = market_liberal
+				}
+			}
+			if = {
+				limit = {
+					USA = {
+						is_puppet_of = ROOT
+					}
+				}
+				country_event = { id = NKRsichuanpuppet.48 days = 56 }
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #邝友良的提案
 	id = NKRsichuanpuppet.48
 	title = NKRsichuanpuppet.48.t
 	desc = NKRsichuanpuppet.48.d
@@ -17719,13 +17956,40 @@ country_event = { #
 	
 	
 
-	option = {#
+	option = {#不错
 		log = "[GetLogInfo]: event NKRsichuanpuppet.48 option NKRsichuanpuppet.48.a"
 		name = NKRsichuanpuppet.48.a
+		hidden_effect = {
+			HAW = {
+				HAW_yau_leongfong = {
+					set_nationality = USA
+				}
+			}
+		}
+		USA = {
+			annex_country = {
+				target = HAW
+			}
+			HAW_yau_leongfong = {
+				promote_character = social_liberal_constitutional_statist_subtype
+			}
+			set_party_name = {
+				ideology = social_liberal
+				name = USA_YCP_kuang_party
+				long_name = USA_YCP_kuang_party_long
+			}
+			set_politics = {
+				ruling_party = social_liberal
+			}
+		}
+	}
+	option = {#别想了
+		log = "[GetLogInfo]: event NKRsichuanpuppet.48 option NKRsichuanpuppet.48.b"
+		name = NKRsichuanpuppet.48.b
 	}
 }
 
-country_event = { #
+country_event = { #大越民族党
 	id = NKRsichuanpuppet.49
 	title = NKRsichuanpuppet.49.t
 	desc = NKRsichuanpuppet.49.d
@@ -17733,11 +17997,79 @@ country_event = { #
 
 	is_triggered_only = yes
 	
-	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { country_exists = INC } }
+				clr_global_flag = GEA_Indochina_Uprising_Fired
+				INC = {
+					drop_cosmetic_tag = yes
+					clear_cores_of_tag_if_possible = yes
+				}
+			}
+			every_state = {
+				if = {
+					limit = { is_vietnam = no }
+					remove_core_of = VIN
+				}
+				else = {
+					add_core_of = VIN
+				}
+				remove_claim_by = VIN
+			}
+			VIN = { drop_cosmetic_tag = yes }
+			if = {
+				limit = {
+					OR = {
+						original_tag = GEA
+						annexations_france_can_annex_overseas = yes
+					}
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_france_event_target = yes
+			annexations_create_german_east_asia_event_target = yes
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.49 option NKRsichuanpuppet.49.a"
 		name = NKRsichuanpuppet.49.a
+		set_temp_variable = { tag_to_release = VIN }
+		release_targeted_tag = yes
+		custom_effect_tooltip = tooltip_white_line
+		INC = {
+			if = {
+				limit = {
+					exists = yes
+					has_socialist_government = yes
+					NOT = { has_completed_focus = INC_Unification }
+				}
+				if = {
+					limit = { is_subject = yes }
+					overlord = { country_event = { id = indochina_events.1955 hours = 8 } }
+				}
+				else = {
+					country_event = { id = indochina_events.1955 hours = 8 }
+				}
+			}
+		}
+		var:tag_to_release = { VIN_puppet_setup = yes }
+		hidden_effect = {
+			VIN_nguyen_tuongtam = {
+				set_nationality = VIN
+			}
+			VIN = {
+				VIN_nguyen_tuongtam = {
+					promote_character = authoritarian_democrat_statist_subtype
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = VIN_Dai_Viet_party
+					long_name = VIN_Dai_Viet_party_long
+				}
+			}
+		}
 	}
 }
 

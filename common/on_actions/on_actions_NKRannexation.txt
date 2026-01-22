@@ -9,7 +9,10 @@ on_actions = {
 					limit = {
 						FROM.FROM = { state = 282 } #Kanto
 						ROOT = {
-							always = no #brrrr没做
+							OR = {
+								SZC_normal_ycp_path = yes
+								has_country_flag = NKRSZC_CDLpath
+							}
 						}
 					}
 					282 = { #Kanto
@@ -189,6 +192,32 @@ on_actions = {
 						set_variable = { annexation_event = 9012 }
 					}
 				}
+				if = { #夏威夷
+					limit = {
+						FROM.FROM = { state = 629 } #Hawaii
+						ROOT = {
+							OR = {
+								SZC_normal_ycp_path = yes
+							}
+						}
+					}
+					629 = { #Hawaii
+						set_variable = { annexation_event = 9013 }
+					}
+				}
+				if = { #越南
+					limit = {
+						FROM.FROM = { state = 827 } #Annam
+						ROOT = {
+							OR = {
+								SZC_normal_ycp_path = yes
+							}
+						}
+					}
+					827 = { #Annam
+						set_variable = { annexation_event = 9014 }
+					}
+				}
 			}
 			if = {
 				limit = {
@@ -306,6 +335,22 @@ on_actions = {
 					}
 					361 = { #Maryland
 						set_variable = { annexation_event = 2000 }
+					}
+				}
+				if = { #夏威夷
+					limit = {
+						FROM.FROM = { state = 629 } #Hawaii
+					}
+					629 = { #Hawaii
+						set_variable = { annexation_event = 3061 }
+					}
+				}
+				if = { #越南
+					limit = {
+						FROM.FROM = { state = 827 } #Annam
+					}
+					827 = { #Annam
+						set_variable = { annexation_event = 3023 }
 					}
 				}
 			}
