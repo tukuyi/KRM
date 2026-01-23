@@ -4197,10 +4197,10 @@ enable_tech_YCP_infantry_weapon = {
 	custom_override_tooltip = {
 		tooltip = {
 			localization_key = tooltip_enable_hidden_tech
-			TECH = country_culture|YCP_infantry_weapon
-			EFFECT = tech_effect|YCP_infantry_weapon
+			TECH = country_culture|YCP_infantry_weapons
+			EFFECT = tech_effect|YCP_infantry_weapons
 		}
-		set_technology = { YCP_infantry_weapon = 1 popup = no }
+		set_technology = { YCP_infantry_weapons = 1 popup = no }
 	}
 }
 

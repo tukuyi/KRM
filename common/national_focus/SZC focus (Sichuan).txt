@@ -23369,6 +23369,10 @@ focus_tree = {
 				id = NKRsichuan.417
 			}
 			set_potential_national_government = yes
+			set_capital = {
+				state = 605
+				remember_old_capital = no
+			}
 		}
 	}
 
@@ -23644,7 +23648,7 @@ focus_tree = {
 	focus = {
 		id = SZC_YCP_take_southernwest
 		icon = GFX_goal_SZC_YCP_take_southernwest
-		cost = 3
+		cost = 1
 
 		x = -1
 		y = 3
@@ -23664,7 +23668,7 @@ focus_tree = {
 	focus = {
 		id = SZC_YCP_march_east
 		icon = GFX_goal_SZC_YCP_march_east
-		cost = 3
+		cost = 1
 
 		x = 1
 		y = 3
@@ -23695,7 +23699,7 @@ focus_tree = {
 	focus = {
 		id = SZC_YCP_north_expedition
 		icon = GFX_goal_SZC_YCP_north_expedition
-		cost = 3
+		cost = 2
 
 		x = 0
 		y = 4
@@ -28542,8 +28546,8 @@ focus_tree = {
 			}
 			set_party_name = {
 				ideology = social_democrat
-				name = SZC_YCP_minxianpai_party
-				long_name = SZC_YCP_minxianpai_party_long
+				name = SZC_YCP_minshengpai_party
+				long_name = SZC_YCP_minshengpai_party_long
 			}
 			add_popularity = {
 				ideology = social_democrat
@@ -28686,12 +28690,68 @@ focus_tree = {
 			
 			custom_effect_tooltip = SZC_YCP_democratic_constitution_the_realpolitik_tt
 			hidden_effect = {
-				set_variable = {
-					YCP_party_issue_foreign = token:SZC_wu_tianchi_1
+				# set_variable = {
+				# 	YCP_party_issue_foreign = token:SZC_liao_shangke_1
+				# }
+				# swap_ideas = {
+				# 	remove_idea = YCP_wu_tianchi_DMP_idea
+				# 	add_idea = YCP_wu_tianchi_1_DMP_idea
+				# }
+				set_temp_variable = {
+					var = temp_select_token
+					value = token:SZC_wu_tianchi
 				}
-				swap_ideas = {
-					remove_idea = YCP_wu_tianchi_DMP_idea
-					add_idea = YCP_wu_tianchi_1_DMP_idea
+				if = {
+					limit = {
+						check_variable = { YCP_party_issue_standing_1 = var:temp_select_token }
+					}
+					set_variable = {
+						YCP_party_issue_standing_1 = token:SZC_wu_tianchi_1
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { YCP_party_issue_standing_2 = var:temp_select_token }
+					}
+					set_variable = {
+						YCP_party_issue_standing_2 = token:SZC_wu_tianchi_1
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { YCP_party_issue_standing_3 = var:temp_select_token }
+					}
+					set_variable = {
+						YCP_party_issue_standing_3 = token:SZC_wu_tianchi_1
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { YCP_party_issue_standing_4 = var:temp_select_token }
+					}
+					set_variable = {
+						YCP_party_issue_standing_4 = token:SZC_wu_tianchi_1
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { YCP_party_issue_standing_5 = var:temp_select_token }
+					}
+					set_variable = {
+						YCP_party_issue_standing_5 = token:SZC_wu_tianchi_1
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { YCP_party_issue_standing_6 = var:temp_select_token }
+					}
+					set_variable = {
+						YCP_party_issue_standing_6 = token:SZC_wu_tianchi_1
+					}
+				}
+				else = {
+					remove_from_array = { ROOT.YCP_party_issue_selects = token:SZC_wu_tianchi }
+					add_to_array = { ROOT.YCP_party_issue_selects = token:SZC_wu_tianchi_1 }
 				}
 			}
 		}

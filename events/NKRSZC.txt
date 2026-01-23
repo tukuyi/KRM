@@ -8202,7 +8202,45 @@ country_event = { #华南方略
 					id = NKRsichuan.454
 				}
 			}
-			else = {
+			if = {
+				limit = {
+					NOT = {
+						AND = {
+							UPC = {
+								exists = yes
+								NOT = {
+									has_war_with = ROOT
+								}
+							}
+						}
+						AND = {
+							ANQ = {
+								exists = yes
+								NOT = {
+									OR = {
+										has_war_with = ROOT
+										is_puppet_of = FNG
+										is_puppet_of = QIE
+										china_character_is_fengtian = yes
+										china_character_is_northern_zhili = yes
+									}
+								}
+							}
+						}
+						AND = {
+							LEP = {
+								exists = yes
+								NOT = {
+									OR = {
+										has_war_with = ROOT
+										is_puppet_of = QIE
+									}
+								}
+							}
+						}
+
+					}
+				}
 				country_event = {
 					id = NKRsichuan.453
 				}
@@ -8912,7 +8950,7 @@ country_event = { #计票之时
 				limit = {
 					is_power_balance_in_range = {
 						id = SZC_YCP_power_balance
-						range < SZC_bop_li_bit_stronger
+						range < SZC_bop_li_stronger
 					}
 				}
 				country_event = {
@@ -8924,7 +8962,7 @@ country_event = { #计票之时
 				limit = {
 					is_power_balance_in_range = {
 						id = SZC_YCP_power_balance
-						range > SZC_bop_zeng_bit_stronger
+						range > SZC_bop_zeng_stronger
 					}
 				}
 				country_event = {
@@ -8932,19 +8970,7 @@ country_event = { #计票之时
 					days = 3
 				}
 			}
-			else_if = {
-				limit = {
-					AND = {
-						is_power_balance_in_range = {
-							id = SZC_YCP_power_balance
-							range > SZC_bop_li_stronger
-						}
-						is_power_balance_in_range = {
-							id = SZC_YCP_power_balance
-							range < SZC_bop_zeng_stronger
-						}
-					}
-				}
+			else = {
 				country_event = {
 					id = NKRsichuan.484
 					days = 3
@@ -15506,6 +15532,9 @@ country_event = { #判断
 	picture = GFX_report_event_SZC_516
 
 	trigger = {
+		KOR = {
+			is_subject_of = SZC
+		}
 		OR = {
 			has_country_flag = NKRsichuan_YCPpath
 			has_country_flag = NKRSZC_CDLpath
@@ -21546,6 +21575,10 @@ country_event = { #全民政府的成功？
 		name = NKRsichuanflavor.26.a
 		ai_chance = {
 			base = 30
+			modifier = {
+				factor = 10000
+				SZC = { has_country_flag = HAHAHAdangwodexingnuba }
+			}
 			modifier = { #Measure Military Strength
 				factor = 2
 				strength_ratio = {

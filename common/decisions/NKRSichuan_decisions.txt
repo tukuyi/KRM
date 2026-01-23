@@ -2341,6 +2341,7 @@ chinese_unification = {
 				OR = {
 					is_neighbor_of = ROOT
 					any_neighbor_country = { is_subject_of = ROOT }
+					any_subject_country = { is_neighbor_of = ROOT }
 				}
 				CHI_government_nap_available_trigger = yes
 				has_country_leader = {
@@ -2556,7 +2557,13 @@ chinese_unification = {
 		target_trigger = {
 			FROM = {
 				has_non_aggression_pact_with = ROOT
-				CHI_government_alliance_visible_trigger = yes
+				NOT = { has_war_with = ROOT }
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = { is_subject_of = ROOT }
+					any_subject_country = { is_neighbor_of = ROOT }
+				}
+				CHI_government_nap_available_trigger = yes
 			}
 		}
 		available = {
@@ -2572,6 +2579,9 @@ chinese_unification = {
 		cancel_if_not_visible = yes
 		ai_will_do = {
 			base = 30
+			modifier = {
+				factor = 100
+			}
 			modifier = {
 				factor = 2
 				strength_ratio = {
