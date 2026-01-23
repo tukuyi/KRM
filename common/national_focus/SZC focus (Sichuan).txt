@@ -3311,7 +3311,7 @@ focus_tree = {
 	focus = {
 		id = SZC_Consolidate_The_Province
 		icon = GFX_goal_ANQ_end_century_humiliation
-		cost = 5
+		cost = 2
 
 		relative_position_id = SZC_Chongqing_Victory
 		x = 0
@@ -3407,7 +3407,7 @@ focus_tree = {
 	focus = {
 		id = SZC_Family_Matters
 		icon = GFX_goal_SZC_family_matters
-		cost = 6
+		cost = 3
 
 		relative_position_id = SZC_Consolidate_The_Province
 		x = 0
@@ -3441,7 +3441,7 @@ focus_tree = {
 	focus = {
 		id = SZC_Sichuan_Fowards
 		icon = GFX_goal_SZC_Sichuan_Fowards
-		cost = 5
+		cost = 3
 
 		relative_position_id = SZC_Family_Matters
 		x = -1
@@ -3542,7 +3542,7 @@ focus_tree = {
 	focus = {
 		id = SZC_Aggressive_Modernisation
 		icon = GFX_goal_social_reforms
-		cost = 3
+		cost = 2
 
 		relative_position_id = SZC_Chongqing_Victory
 		x = -5
@@ -3568,7 +3568,7 @@ focus_tree = {
 	focus = {
 		id = SZC_Fund_The_Construction_Industry
 		icon = GFX_goal_construction
-		cost = 3
+		cost = 2
 
 		relative_position_id = SZC_Aggressive_Modernisation
 		x = -1
@@ -3660,7 +3660,7 @@ focus_tree = {
 	focus = {
 		id = SZC_Currency_Reform
 		icon = GFX_goal_ANQ_Dalu_Yinhang
-		cost = 3
+		cost = 2
 
 		relative_position_id = SZC_Aggressive_Modernisation
 		x = 1
@@ -3693,7 +3693,7 @@ focus_tree = {
 	focus = {
 		id = SZC_Sichuan_Central_Bank
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 3
+		cost = 2
 
 		relative_position_id = SZC_Aggressive_Modernisation
 		x = 0
@@ -3789,7 +3789,7 @@ focus_tree = {
 	focus = {
 		id = SZC_Urban_Expansion
 		icon = GFX_goal_generic_build_housing
-		cost = 3
+		cost = 2
 
 		relative_position_id = SZC_Aggressive_Modernisation
 		x = 0
@@ -11646,7 +11646,6 @@ focus_tree = {
 				}
 			}
 			SZC_end_opium_crisis = yes
-			SZC_remove_industrial_ideas_effect = yes
 			set_country_flag = NKRSZC_remove_ind_tree
 			mark_focus_tree_layout_dirty = yes
 			hidden_effect = { news_event = NKRnews.20 }
@@ -17852,7 +17851,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_revolution_secured"
 			custom_effect_tooltip = SZC_pan_revolution_secured_tooltip
-			SZC_remove_industrial_ideas_effect = yes
 			SZC_end_opium_crisis = yes
 			set_country_flag = NKRSZC_remove_ind_tree
 			mark_focus_tree_layout_dirty = yes
@@ -23913,7 +23911,6 @@ focus_tree = {
 					days = 15
 				}
 				SZC_end_opium_crisis = yes
-				SZC_remove_industrial_ideas_effect = yes
 				set_country_flag = NKRSZC_remove_ind_tree
 				mark_focus_tree_layout_dirty = yes
 			}

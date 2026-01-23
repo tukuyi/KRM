@@ -72,15 +72,6 @@ on_actions = {
 
 	on_daily_SZC = { #special puppets
 		effect = {
-				if = { #张国焘特殊傀儡
-					limit = {
-						has_country_flag = SZC_YCP_zhang_guotao_path
-					}
-					every_subject_country = {
-						set_country_leader_ideology = syndicalist_yellow_syndicalist_subtype
-					}
-				}
-			}
 			if = {
 				limit = {
 					GER = {
