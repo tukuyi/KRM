@@ -208,7 +208,7 @@ country_event = { #刘湘之死
 				retire = yes
 			}
 			SZC_power_vacuum = {
-				promote_character = paternal_autocrat_subtype
+				promote_character = authoritarian_democrat_subtype
 			}
 			set_country_flag = SZC_liu_xiang_dead
 			add_ideas = { SZC_after_liu }
@@ -11400,6 +11400,9 @@ country_event = { #终局
 			country_event = {
 				id = NKRsichuanPI.24
 			}
+			remove_ideas = {
+				SZC_YCP_people_sovereignty_idea
+			}
 		}
 	}
 }
@@ -17916,7 +17919,7 @@ country_event = { #共和演说的遗产
 						add_country_leader_role = {
 							country_leader = {
 								ideology = authoritarian_democrat_subtype
-								traits = { JAP_reluctant_president }
+								traits = { }
 								desc = JAP_ozaki_yukio_puppet_desc
 							}
 						}

@@ -1951,7 +1951,7 @@ ideas = {
 
 		SZC_YCP_legitimacy_1 = {#党的合法性-饱受质疑
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_1" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_low
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.15
@@ -1965,7 +1965,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_2 = {#党的合法性-心生疑虑
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_2" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_low
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.1
@@ -1979,7 +1979,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_3 = {#党的合法性-姑且可信
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_3" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_medium
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.1
@@ -1993,7 +1993,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_4 = {#党的合法性-全国政府
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_4" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_medium
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.05
@@ -2005,7 +2005,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_5 = {#党的合法性-正统政府
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_5" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_high
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
@@ -2016,7 +2016,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_6 = {#党的合法性-永恒革命
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_6" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_zengpataut
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.20
@@ -2029,7 +2029,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_7 = {#党的合法性-革命民主
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_7" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_zengauthdem
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -2044,7 +2044,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_8 = {#党的合法性-宪政常道
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_8" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_constitutionway
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.25
@@ -2058,7 +2058,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_9 = {#党的合法性-民主卫士
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_9" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_democracyguard
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.3
@@ -2073,7 +2073,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_10 = {#党的合法性-历史终结
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_10" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_zuo
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.2
@@ -2090,7 +2090,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_11 = {#党的合法性-当代韩非
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_11" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_chen
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.35
@@ -2106,7 +2106,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_12 = {#党的合法性-国社之春
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_12" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_chang
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -2122,7 +2122,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_13 = {#党的合法性-社会哲学
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_13" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_jiang
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.01
@@ -2138,7 +2138,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_14 = {#党的合法性-自由中国，但是假的哈哈
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_14" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_fakexia
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.2
@@ -2152,7 +2152,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_15 = {#党的合法性-无形之手
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_15" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_libxia
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -2167,7 +2167,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_16 = {#党的合法性-黄老之学
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_16" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_anxia
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -2182,7 +2182,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_17 = {#党的合法性-奥古斯都
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_17" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_zhangchen
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.2
@@ -2198,7 +2198,7 @@ ideas = {
 		}
 		SZC_YCP_legitimacy_18 = {#党的合法性-黄色协和
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legitimacy_18" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legitimacy_yellowsyn
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.35
@@ -2213,7 +2213,7 @@ ideas = {
 		}
 		SZC_YCP_construct_nationalspirit = {#铸造国格
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_construct_nationalspirit" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_construct_nationalspirit
 			allowed = { always = no }
 			modifier = {
 				weekly_manpower = 100
@@ -2223,7 +2223,7 @@ ideas = {
 		}
 		SZC_YCP_national_progress = {#国家进步
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_national_progress" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_national_progress
 			allowed = { always = no }
 			modifier = {
 				weekly_manpower = 100
@@ -2233,7 +2233,7 @@ ideas = {
 		}
 		SZC_YCP_union_sacree_parties_idea = {#神圣联合-政党联合
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_union_sacree_parties_idea" }
-			picture = generic_research_increase
+			picture = GFX_idea_SZC_YCP_union_sacree
 			modifier = {
 				party_popularity_stability_factor = 0.2
 				compliance_gain = 0.03
@@ -2241,7 +2241,7 @@ ideas = {
 		}
 		SZC_YCP_union_sacree_classes_idea = {#神圣联合-阶层联合
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_union_sacree_classes_idea" }
-			picture = generic_research_increase
+			picture = GFX_idea_SZC_YCP_union_sacree
 			modifier = {
 				party_popularity_stability_factor = 0.15
 				political_power_factor = 0.05
@@ -2251,7 +2251,7 @@ ideas = {
 		}
 		SZC_YCP_CMC_idea = {#青年党中央军事委员会
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_CMC_idea" }
-			picture = generic_research_increase
+			picture = GFX_idea_SZC_YCP_CMC_idea
 			modifier = {
 				training_time_army_factor = -0.15
 				army_org_factor = 0.05
@@ -2263,7 +2263,7 @@ ideas = {
 		}
 		SZC_YCP_revolution_against_old_idea = {#反古革命
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_revolution_against_old_idea" }
-			picture = generic_research_increase
+			picture = GFX_idea_SZC_YCP_revolution_against_old_idea
 			targeted_modifier = {
 				tag = QIE
 				attack_bonus_against = 0.1
@@ -2272,7 +2272,7 @@ ideas = {
 		}
 		SZC_YCP_liberate_mind_idea = {#解放思想
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_liberate_mind_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_liberate_mind_idea
 			allowed = { always = no }
 			modifier = {
 				research_speed_factor = 0.10
@@ -2280,7 +2280,7 @@ ideas = {
 		}
 		SZC_YCP_socialize_economy_idea = {#社会化经济
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_socialize_economy_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_socialize_economy_idea
 			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.05
@@ -2290,7 +2290,7 @@ ideas = {
 		}
 		SZC_YCP_state_union_idea = {#国有工会
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_state_union_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_state_union_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
@@ -2301,7 +2301,7 @@ ideas = {
 		}
 		SZC_YCP_state_socialpolitik_idea = {#社会国家
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_state_socialpolitik_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_state_socialpolitik_idea
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.10
@@ -2314,7 +2314,7 @@ ideas = {
 		SZC_YCP_health_project_idea = {#医疗计划
 			on_add = {log = "[GetLogRoot]: add idea SZC_YCP_health_project"}
 			allowed = { always = no }
-			picture = HNN_hopes_dashed
+			picture = GFX_idea_SZC_healthcare
 			modifier = {#
 				consumer_goods_factor = 0.2
 			}
@@ -2327,15 +2327,15 @@ ideas = {
 		SZC_YCP_destroy_diseases = {#消灭疾病
 			on_add = {log = "[GetLogRoot]: add idea SZC_YCP_destroy_diseases"}
 			allowed = { always = no }
-			picture = HNN_hopes_dashed
+			picture = GFX_idea_SZC_healthcare
 			modifier = {
-				monthly_population = 0.05
+				monthly_population = 0.15
 				add_stability = 0.1
 			}
 		}
 		SZC_YCP_modern_agriculture = {#现代农业
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_modern_agriculture" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_modern_agriculture
 			allowed = { always = no }
 			modifier = {
 				monthly_population = 0.1
@@ -2345,7 +2345,7 @@ ideas = {
 		}
 		SZC_YCP_towards_federalist_provinces = {#迈向联省自治
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_towards_federalist_provinces" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_federalist
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
@@ -2356,7 +2356,7 @@ ideas = {
 		}
 		SZC_YCP_centralized_federation = {#集权式联省
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_centralized_federation" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_federalist
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.1
@@ -2367,7 +2367,7 @@ ideas = {
 		}
 		SZC_YCP_progress_constitution = {#进步宪法
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_progress_constitution" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_constitution
 			allowed = { always = no }
 			modifier = {
 				political_power_factor = 0.05
@@ -2377,7 +2377,7 @@ ideas = {
 		}
 		SZC_YCP_moderate_constitution = {#中庸宪法
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_moderate_constitution" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_constitution
 			allowed = { always = no }
 			modifier = {
 				political_power_factor = 0.10
@@ -2387,7 +2387,7 @@ ideas = {
 		}
 		SZC_YCP_conservative_constitution = {#保守宪法
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_conservative_constitution" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_constitution
 			allowed = { always = no }
 			modifier = {
 				political_power_factor = 0.15
@@ -2396,7 +2396,7 @@ ideas = {
 		}
 		SZC_YCP_anti_red_meance = {#抵御赤恐
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_anti_red_meance" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_anti_red_meance
 			allowed = { always = no }
 			modifier = {
 				totalist_acceptance = -100
@@ -2407,7 +2407,7 @@ ideas = {
 		}
 		SZC_YCP_statist_revolutionary_charter_idea = {#国家主义革命宪章
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_statist_revolutionary_charter_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_statist_revolutionary_charter_idea
 			allowed = { always = no }
 			modifier = {
 				mobilization_laws_cost_factor = -0.33
@@ -2421,7 +2421,7 @@ ideas = {
 		}
 		SZC_YCP_lianzhanfa_idea = {#联战法
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_lianzhanfa_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_lianzhanfa_idea
 			allowed = { always = no }
 			modifier = {
 				army_core_defence_factor = 0.10
@@ -2479,7 +2479,7 @@ ideas = {
 		}
 		SZC_YCP_young_iron_army_idea = {#青年铁血军
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_young_iron_army_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_young_iron_army_idea
 			allowed = { always = no }
 			modifier = {
 				army_attack_factor = 0.03
@@ -2489,7 +2489,7 @@ ideas = {
 		}
 		SZC_YCP_anti_internationale_idea = {#反对国际主义
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_anti_internationale_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_anti_internationale_idea
 			allowed = { always = no }
 			modifier = {
 				totalist_acceptance = -20
@@ -2500,7 +2500,7 @@ ideas = {
 		}
 		SZC_YCP_peoples_sovereignty_idea = {#人民主权
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_peoples_sovereignty_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_peoples_sovereignty_idea
 			allowed = { always = no }
 			modifier = {
 				compliance_gain = 0.02
@@ -2513,7 +2513,7 @@ ideas = {
 		}
 		SZC_YCP_accelerate_plan_idea = {#加速战略
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_peoples_sovereignty_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_accelerate_plan_idea
 			allowed = { always = no }
 			modifier = {
 				cic_construction_boost = 0.35
@@ -2522,7 +2522,7 @@ ideas = {
 		}
 		SZC_YCP_legalist_fuguoqiangbing_idea = {#富国强兵
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legalist_fuguoqiangbing_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legalist_fuguoqiangbing_idea
 			allowed = { always = no }
 			modifier = {
 				industrial_capacity_factory = 0.1
@@ -2537,7 +2537,7 @@ ideas = {
 		}
 		SZC_YCP_legalist_constitution_idea = {#新法家宪法
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_legalist_constitution_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_legalist_constitution_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_factor = 0.15
@@ -2547,7 +2547,7 @@ ideas = {
 		}
 		SZC_YCP_positivist_revolution_idea = {#实证主义革命
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_positivist_revolution_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_positivist_revolution_idea
 			allowed = { always = no }
 			modifier = {
 				research_speed_factor = 0.20
@@ -2556,7 +2556,7 @@ ideas = {
 		}
 		SZC_YCP_lordly_way_idea = {#霸道
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_lordly_way_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_lordly_way_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -2571,7 +2571,7 @@ ideas = {
 		}
 		SZC_YCP_beyond_impossible_idea = {#超越不可能
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_beyond_impossible_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_beyond_impossible_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.1
@@ -2589,7 +2589,7 @@ ideas = {
 		}
 		SZC_YCP_become_impossible_idea = {#成为不可能
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_become_impossible_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_become_impossible_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.2
@@ -2607,7 +2607,7 @@ ideas = {
 		}
 		SZC_YCP_liberal_media_idea = {#自由派媒体
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_liberal_media_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_liberal_media_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.1
@@ -2619,7 +2619,7 @@ ideas = {
 		}
 		SZC_YCP_break_dictatorship_idea = {#打破独裁
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_break_dictatorship_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_break_dictatorship_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.05
@@ -2633,7 +2633,7 @@ ideas = {
 		}
 		SZC_YCP_state_socialist_front_idea = {#国家社会主义阵线
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_state_socialist_front_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_state_socialist_front_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_gain= 0.1
@@ -2644,7 +2644,7 @@ ideas = {
 		}
 		SZC_YCP_an_army_with_state_idea = {#拥有国家的军队
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_an_army_with_state_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_an_army_with_state_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_gain= -0.1
@@ -2658,7 +2658,7 @@ ideas = {
 		}
 		SZC_YCP_yellow_syndicalist_state_idea = {#黄色工团主义之国
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_yellow_syndicalist_state_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_yellow_syndicalist_state_idea
 			allowed = { always = no }
 			modifier = {
 				supply_node_range = 0.10
@@ -2670,7 +2670,7 @@ ideas = {
 		}
 		SZC_YCP_ubermensch_idea = {#超人
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_ubermensch_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_ubermensch_idea
 			allowed = { always = no }
 			modifier = {
 				army_attack_factor = 0.2
@@ -2683,7 +2683,7 @@ ideas = {
 		}
 		SZC_YCP_national_units_1_idea = {#国家单元1
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_national_units_1_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_national_units
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = -0.05
@@ -2694,7 +2694,7 @@ ideas = {
 		}
 		SZC_YCP_national_units_2_idea = {#国家单元2
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_national_units_2_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_national_units
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = -0.10
@@ -2705,7 +2705,7 @@ ideas = {
 		}
 		SZC_YCP_new_age_patriotism_idea = {#新时代爱国主义
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_new_age_patriotism_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_new_age_patriotism_idea
 			allowed = { always = no }
 			modifier = {
 				weekly_manpower = 200
@@ -2715,7 +2715,7 @@ ideas = {
 		}
 		SZC_YCP_philosophers_idea = {#哲人团
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_philosophers_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_philosophers_idea
 			allowed = { always = no }
 			modifier = {
 				political_advisor_cost_factor = -66
@@ -2725,7 +2725,7 @@ ideas = {
 		}
 		SZC_YCP_statist_construction_age_idea = {#国家主义建设阶段
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_statist_construction_age_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_statist_construction_age_idea
 			allowed = { always = no }
 			modifier = {
 				mobilization_laws_cost_factor = -0.66
@@ -2737,7 +2737,7 @@ ideas = {
 		}
 		SZC_YCP_liberate_mind_2_idea = {#解放思想2
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_liberate_mind_2_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_liberate_mind_idea
 			allowed = { always = no }
 			modifier = {
 				research_speed_factor = 0.20
@@ -2745,7 +2745,7 @@ ideas = {
 		}
 		SZC_YCP_carbonari_idea = {#东方烧炭党
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_carbonari_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_carbonari_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.1
@@ -2755,7 +2755,7 @@ ideas = {
 		}
 		SZC_YCP_anti_red_meance_2 = {#抵御赤恐
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_anti_red_meance_2" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_anti_red_meance
 			allowed = { always = no }
 			modifier = {
 				totalist_acceptance = -50
@@ -2766,7 +2766,7 @@ ideas = {
 		}
 		SZC_YCP_we_the_radicals_idea = {#我们，激进党人
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_we_the_radicals_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_we_the_radicals_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
@@ -2776,7 +2776,7 @@ ideas = {
 		}
 		SZC_YCP_peace_nationality_idea = {#和平民族性
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_peace_nationality_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_peace_nationality_idea
 			allowed = { always = no }
 			modifier = {
 				army_attack_against_major_factor = 0.07
@@ -2788,7 +2788,7 @@ ideas = {
 		}
 		SZC_YCP_chinese_corporatism_idea = {#中式法团主义
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_chinese_corporatism_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_chinese_corporatism_idea
 			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.05
@@ -2810,7 +2810,7 @@ ideas = {
 		}
 		SZC_YCP_state_exist_theory_idea = {#国家存在论
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_state_exist_theory_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_state_exist_theory_idea
 			allowed = { always = no }
 			modifier = {
 				non_core_manpower = 0.15
@@ -2821,7 +2821,7 @@ ideas = {
 		}
 		SZC_YCP_towards_federalist_provinces_2 = {#迈向联省自治2
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_towards_federalist_provinces_2" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_federalist
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.10
@@ -2833,7 +2833,7 @@ ideas = {
 		}
 		SZC_YCP_centralized_federation_2 = {#集权式联省2
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_centralized_federation_2" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_federalist
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.1
@@ -2844,7 +2844,7 @@ ideas = {
 		}
 		SZC_YCP_anti_internationale_2_idea = {#反对国际主义2
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_anti_internationale_2_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_anti_internationale_idea
 			allowed = { always = no }
 			modifier = {
 				totalist_acceptance = -10
@@ -2855,7 +2855,7 @@ ideas = {
 		}
 		SZC_YCP_statist_parties_coalition_idea = {#国家主义政党联合
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_statist_parties_coalition_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_statist_parties_coalition_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.1
@@ -2866,7 +2866,7 @@ ideas = {
 		}
 		SZC_YCP_concord_state_idea = {#协和之国
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_concord_state_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_concord_state_idea
 			allowed = { always = no }
 			modifier = {
 				army_core_defence_factor = 0.20
@@ -2878,7 +2878,7 @@ ideas = {
 		}
 		SZC_YCP_state_socialpolitik_2_idea = {#社会国家2
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_state_socialpolitik_2_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_state_socialpolitik_idea
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.15
@@ -2890,7 +2890,7 @@ ideas = {
 		}
 		SZC_YCP_young_iron_army_2_idea = {#青年铁血军2
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_young_iron_army_2_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_young_iron_army_idea
 			allowed = { always = no }
 			modifier = {
 				army_attack_factor = 0.05
@@ -2900,7 +2900,7 @@ ideas = {
 		}
 		SZC_YCP_modernization_with_chinese_characteristic_idea = {#中国式现代化
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_modernization_with_chinese_characteristic_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_modernization_with_chinese_characteristic_idea
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_expected_value = -0.1
@@ -2911,7 +2911,7 @@ ideas = {
 		}
 		SZC_YCP_patrioc_liberalism_idea = {#爱国的自由主义
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_patrioc_liberalism_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_patrioc_liberalism_idea
 			allowed = { always = no }
 			modifier = {
 				non_core_manpower = 0.08
@@ -2920,7 +2920,7 @@ ideas = {
 		}
 		SZC_YCP_protect_human_rights_idea = {#保障人权
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_protect_human_rights_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = FX_idea_SZC_YCP_protect_human_rights_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_cost = 0.05
@@ -2929,7 +2929,7 @@ ideas = {
 		}
 		SZC_YCP_protect_human_rights_2_idea = {#保障人权2
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_protect_human_rights_2_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = FX_idea_SZC_YCP_protect_human_rights_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_cost = 0.05
@@ -2939,7 +2939,7 @@ ideas = {
 		}
 		SZC_YCP_anti_syndicalist_imperialism_idea = {#反对工团帝国主义
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_anti_syndicalist_imperialism_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_anti_syndicalist_imperialism_idea
 			allowed = { always = no }
 			modifier = {
 				totalist_acceptance = -50
@@ -2950,7 +2950,7 @@ ideas = {
 		}
 		SZC_YCP_state_socialpolitik_without_revolution_idea = {#没有革命的社会国家
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_state_socialpolitik_without_revolution_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_state_socialpolitik_idea
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.15
@@ -2962,7 +2962,7 @@ ideas = {
 		}
 		SZC_YCP_peoples_sovereignty_2_idea = {#人民主权2
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_peoples_sovereignty_2_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_peoples_sovereignty_idea
 			allowed = { always = no }
 			modifier = {
 				compliance_gain = 0.05
@@ -2975,7 +2975,7 @@ ideas = {
 		}
 		SZC_YCP_new_national_spirit_idea = {#新国性
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_new_national_spirit_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_new_national_spirit_idea
 			allowed = { always = no }
 			modifier = {
 				non_core_manpower = 0.08
@@ -2985,7 +2985,7 @@ ideas = {
 		}
 		SZC_YCP_destroy_corruption_idea = {#消灭腐败
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_destroy_corruption_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_destroy_corruption_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -2995,7 +2995,7 @@ ideas = {
 		}
 		SZC_YCP_shangwuzhifeng_idea = {#尚武之风
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_shangwuzhifeng_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_shangwuzhifeng_idea
 			allowed = { always = no }
 			modifier = {
 				industrial_capacity_factory = 0.2
@@ -3010,7 +3010,7 @@ ideas = {
 		}
 		SZC_YCP_lordly_way_2_idea = {#霸道2
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_lordly_way_2_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_lordly_way_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.25
@@ -3027,7 +3027,7 @@ ideas = {
 		}
 		SZC_YCP_positivist_revolution_2_idea = {#实证主义革命
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_positivist_revolution_2_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_positivist_revolution_idea
 			allowed = { always = no }
 			modifier = {
 				research_speed_factor = 0.25
@@ -3037,7 +3037,7 @@ ideas = {
 		
 		SZC_YCP_guild_socialism_idea = {#行会社会主义
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_guild_socialism_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_guild_socialism_idea
 			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.1
@@ -3049,7 +3049,7 @@ ideas = {
 		}
 		SZC_YCP_border_resources_idea = {#边区资源
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_border_resources_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_border_resources_idea
 			allowed = { always = no }
 			modifier = {
 				local_resources_factor = 0.15
@@ -3057,7 +3057,7 @@ ideas = {
 		}
 		SZC_YCP_nextgen_socialize_economy_idea = {#次世代社会化经济
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_nextgen_socialize_economy_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_nextgen_socialize_economy_idea
 			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.05
@@ -3068,7 +3068,7 @@ ideas = {
 		}
 		SZC_YCP_return_centralize_tradition = {#重返集权传统
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_return_centralize_tradition" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_return_centralize_tradition
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -3079,7 +3079,7 @@ ideas = {
 		}
 		SZC_YCP_socialpolitik_for_humanity_idea = {#为人性的社会政策
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_socialpolitik_for_humanity_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_socialpolitik_for_humanity_idea
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.15
@@ -3091,7 +3091,7 @@ ideas = {
 		}
 		SZC_YCP_joy_from_suffering_idea = {#苦中作乐
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_joy_from_suffering_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_joy_from_suffering_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_factor = 0.1
@@ -3101,7 +3101,7 @@ ideas = {
 		}
 		SZC_YCP_national_units_3_idea = {#国家单元3
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_national_units_3_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_national_units
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = -0.15
@@ -3112,7 +3112,7 @@ ideas = {
 		}
 		SZC_YCP_national_units_4_idea = {#国家单元4
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_national_units_4_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_national_units
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = -0.175
@@ -3123,7 +3123,7 @@ ideas = {
 		}
 		SZC_YCP_sell_sell_sell_idea = {#卖卖卖！
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_sell_sell_sell_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_sell_sell_sell_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.1
@@ -3133,7 +3133,7 @@ ideas = {
 		}
 		SZC_YCP_shock_therapy_idea = {#休克疗法
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_shock_therapy_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_shock_therapy_idea
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = -0.30
@@ -3143,7 +3143,7 @@ ideas = {
 		}
 		SZC_YCP_liberal_days_idea = {#自由之日
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_liberal_days_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_liberal_days_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -3152,7 +3152,7 @@ ideas = {
 		}
 		SZC_YCP_no_intervation_principle_idea = {#不干涉原则
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_no_intervation_principle_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_no_intervation_principle_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -3164,7 +3164,7 @@ ideas = {
 		}
 		SZC_YCP_presidental_constitution_idea = {#总统宪法
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_presidental_constitution_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_presidental_constitution_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_factor = 0.35
@@ -3175,7 +3175,7 @@ ideas = {
 		}
 		SZC_YCP_decentralize_economy_idea = {#去中心经济
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_decentralize_economy_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_decentralize_economy_idea
 			allowed = { always = no }
 			modifier = {
 				army_core_defense_factor = 0.10
@@ -3185,7 +3185,7 @@ ideas = {
 		}
 		SZC_YCP_datong_true_love_idea = {#大同真爱
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_datong_true_love_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_datong_true_love_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.25
@@ -3203,7 +3203,7 @@ ideas = {
 		}
 		SZC_YCP_anarchist_idea_idea = {#无治主义理想
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_anarchist_idea_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_anarchist_idea_idea
 			allowed = { always = no }
 			modifier = {
 				non_core_manpower = 0.125
@@ -3212,7 +3212,7 @@ ideas = {
 		}
 		SZC_YCP_anti_authoritarian_syndicalist_idea = {#反对威权工团主义
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_anti_authoritarian_syndicalist_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_anti_authoritarian_syndicalist_idea
 			allowed = { always = no }
 			modifier = {
 				totalist_acceptance = -500
@@ -3222,7 +3222,7 @@ ideas = {
 		}
 		SZC_YCP_pragmatism_first_idea = {#实用主义至上
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_pragmatism_first_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_pragmatism_first_idea
 			allowed = { always = no }
 			modifier = {
 				non_core_manpower = 0.05
@@ -3231,7 +3231,7 @@ ideas = {
 		}
 		SZC_YCP_yellow_syndicalist_state_2_idea = {#黄色工团主义之国2
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_yellow_syndicalist_state_2_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_yellow_syndicalist_state_idea
 			allowed = { always = no }
 			modifier = {
 				supply_node_range = 0.15
@@ -3243,7 +3243,7 @@ ideas = {
 		}
 		SZC_YCP_an_army_with_state_2_idea = {#拥有国家的军队2
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_an_army_with_state_2_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_an_army_with_state_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_gain= -0.125
@@ -3257,7 +3257,7 @@ ideas = {
 		}
 		SZC_YCP_an_army_with_state_3_idea = {#拥有国家的军队3
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_an_army_with_state_3_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_an_army_with_state_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_gain= -0.15
@@ -3271,7 +3271,7 @@ ideas = {
 		}
 		SZC_YCP_state_socialist_front_2_idea = {#国家社会主义阵线_2
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_state_socialist_front_2_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_state_socialist_front_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_gain= 0.125
@@ -3282,7 +3282,7 @@ ideas = {
 		}
 		SZC_YCP_state_socialist_front_3_idea = {#国家社会主义阵线_3
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_state_socialist_front_3_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_state_socialist_front_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_gain= 0.15
@@ -3293,7 +3293,7 @@ ideas = {
 		}
 		SZC_YCP_yellow_corporatism_idea = {#黄色法团主义
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_yellow_corporatism_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_yellow_corporatism_idea
 			allowed = { always = no }
 			modifier = {
 				local_resources_factor = 0.175
@@ -3303,7 +3303,7 @@ ideas = {
 		}
 		SZC_YCP_east_asia_model_idea = {#东亚模式
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_east_asia_model_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_east_asia_model_idea
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = -0.1
@@ -3313,7 +3313,7 @@ ideas = {
 		}
 		SZC_YCP_east_asia_model_2_idea = {#东亚模式2
 			on_add = { log = "[GetLogRoot]: add idea SZC_YCP_east_asia_2_model_idea" }
-			picture = GFX_idea_SZC_legitimacy_low
+			picture = GFX_idea_SZC_YCP_east_asia_model_idea
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = -0.15
@@ -3325,7 +3325,7 @@ ideas = {
 		
 		SZC_YCP_young_age_idea = {#青年时代
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_young_age_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_young_age_idea
 			allowed = { always = no }
 			modifier = {
 				justify_war_goal_time = -0.3
@@ -3339,7 +3339,7 @@ ideas = {
 		
 		SZC_YCP_output_revolution_idea = {#输出革命
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_output_revolution_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_output_revolution_idea
 			allowed = { always = no }
 			modifier = {
 				send_volunteer_size = 12
@@ -3350,7 +3350,7 @@ ideas = {
 
 		SZC_YCP_YRF_leader_idea = {#青年革命阵线领袖
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_YRF_leader_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_YRF_leader_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -3365,7 +3365,7 @@ ideas = {
 
 		SZC_YCP_YRF_leader_2_idea = {#青年革命阵线领袖2
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_YRF_leader_2_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_YRF_leader_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -3380,7 +3380,7 @@ ideas = {
 
 		SZC_YCP_YRF_member_idea = {#青年革命成员
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_YRF_member_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_YRF_member_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -3399,7 +3399,7 @@ ideas = {
 
 		SZC_YCP_CEA_leader_idea = {#大陆经济合作组织领袖
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_CEA_leader_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_CEA_leader_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -3413,7 +3413,7 @@ ideas = {
 
 		SZC_YCP_CEA_member_idea = {#大陆经济合作组织成员
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_CEA_member_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_CEA_member_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -3433,7 +3433,7 @@ ideas = {
 
 		SZC_YCP_CEA_member_2_idea = {#大陆经济合作组织成员2
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_CEA_member_2_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_CEA_member_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -3453,7 +3453,7 @@ ideas = {
 
 		SZC_YCP_XHP_leader_idea = {#辛亥经联体领袖
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_XHP_leader_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_XHP_leader_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -3468,7 +3468,7 @@ ideas = {
 
 		SZC_YCP_XHP_leader_2_idea = {#辛亥经联体领袖
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_XHP_leader_2_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_XHP_leader_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -3483,7 +3483,7 @@ ideas = {
 
 		SZC_YCP_XHP_member_idea = {#辛亥经联体成员
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_XHP_member_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_XHP_member_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -3504,7 +3504,7 @@ ideas = {
 
 		SZC_YCP_NI_leader_idea = {#国际经济联盟领袖
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_NI_leader_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_NI_leader_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
@@ -3522,7 +3522,7 @@ ideas = {
 
 		SZC_YCP_NI_leader_2_idea = {#国际经济联盟领袖
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_NI_leader_2_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_NI_leader_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -3540,7 +3540,7 @@ ideas = {
 
 		SZC_YCP_NI_member_idea = {#国际经济联盟成员
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_NI_member_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_NI_member_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
@@ -3564,7 +3564,7 @@ ideas = {
 
 		SZC_YCP_NI_2_member_idea = {#国际经济联盟成员
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_NI_member_2_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_NI_member_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
@@ -3589,7 +3589,7 @@ ideas = {
 
 		SZC_YCP_AOM_leader_idea = {#中华圈领袖
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_AOM_leader_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_AOM_leader_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -3604,7 +3604,7 @@ ideas = {
 
 		SZC_YCP_AOM_leader_2_idea = {#中华圈领袖
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_AOM_leader_2_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_AOM_leader_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -3619,7 +3619,7 @@ ideas = {
 
 		SZC_YCP_AOM_member_idea = {#中华圈成员
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_AOM_member_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_AOM_member_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -3640,7 +3640,7 @@ ideas = {
 
 		SZC_YCP_wuzhi_against_world_idea = {#无治主义反抗全世界
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_wuzhi_against_world_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_wuzhi_against_world_idea
 			allowed = { always = no }
 			modifier = {
 				justify_war_goal_time = -0.999
@@ -3652,7 +3652,7 @@ ideas = {
 
 		SZC_YCP_wuzhi_against_world_2_idea = {#无治主义反抗全世界
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_wuzhi_against_world_2_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_wuzhi_against_world_idea
 			allowed = { always = no }
 			modifier = {
 				justify_war_goal_time = -0.999
@@ -3665,7 +3665,7 @@ ideas = {
 
 		SZC_YCP_lib_leader_idea = {#世界经济论坛领袖
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_lib_leader_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_lib_leader_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.25
@@ -3678,7 +3678,7 @@ ideas = {
 
 		SZC_YCP_lib_member_idea = {#世界经济论坛成员
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_lib_member_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_lib_member_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.15
@@ -3697,7 +3697,7 @@ ideas = {
 
 		SZC_YCP_YI_leader_idea = {#经互会领袖
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_YI_leader_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_YI_leader_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -3712,7 +3712,7 @@ ideas = {
 
 		SZC_YCP_YI_member_idea = {#经互会成员
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_YI_member_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_YI_member_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -3735,7 +3735,7 @@ ideas = {
 
 		SZC_YCP_YI_2_member_idea = {#经互会成员
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_YI_member_2_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_YI_member_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -3758,7 +3758,7 @@ ideas = {
 
 		SZC_YCP_ROCAF_army_idea_1 = {
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_ROCAF_army_idea_1" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_ROCAF_army_idea
 			allowed = { always = no }
 			modifier = {
 				army_attack_factor = 0.03
@@ -3773,7 +3773,7 @@ ideas = {
 
 		SZC_YCP_ROCAF_army_idea_2 = {
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_ROCAF_army_idea_2" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_ROCAF_army_idea
 			allowed = { always = no }
 			modifier = {
 				army_attack_factor = 0.05
@@ -3793,7 +3793,7 @@ ideas = {
 
 		SZC_YCP_ROCAF_army_idea_3 = {
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_ROCAF_army_idea_3" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_ROCAF_army_idea
 			allowed = { always = no }
 			modifier = {
 				army_attack_factor = 0.08
@@ -3814,7 +3814,7 @@ ideas = {
 
 		SZC_YCP_ROCAF_army_idea_4 = {
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_ROCAF_army_idea_4" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_ROCAF_army_idea
 			allowed = { always = no }
 			modifier = {
 				army_attack_factor = 0.10
@@ -3838,7 +3838,7 @@ ideas = {
 
 		SZC_YCP_ROCAF_air_idea_1 = {
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_ROCAF_air_idea_1" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_ROCAF_air_idea
 			allowed = { always = no }
 			modifier = {
 				air_mission_efficiency = 0.05
@@ -3851,7 +3851,7 @@ ideas = {
 
 		SZC_YCP_ROCAF_air_idea_2 = {
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_ROCAF_air_idea_2" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_ROCAF_air_idea
 			allowed = { always = no }
 			modifier = {
 				air_mission_efficiency = 0.05
@@ -3866,7 +3866,7 @@ ideas = {
 
 		SZC_YCP_ROCAF_air_idea_3 = {
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_ROCAF_air_idea_3" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_ROCAF_air_idea
 			allowed = { always = no }
 			modifier = {
 				air_mission_efficiency = 0.05
@@ -3883,7 +3883,7 @@ ideas = {
 
 		SZC_YCP_ROCAF_air_idea_4 = {
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_ROCAF_air_idea_4" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_ROCAF_air_idea
 			allowed = { always = no }
 			modifier = {
 				air_mission_efficiency = 0.05
@@ -3913,7 +3913,7 @@ ideas = {
 
 		SZC_YCP_helldiver_idea = {
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_helldiver_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_helldiver_idea
 			allowed = { always = no }
 			modifier = {
 				extra_paratrooper_supply_grace = 48
@@ -3926,7 +3926,7 @@ ideas = {
 			on_remove = {
 				set_country_flag = SZC_YCP_COB_available
 			}
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_establish_central_ordnance_bureau_idea
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.25
@@ -3937,7 +3937,7 @@ ideas = {
 
 		SZC_YCP_ROCAF_navy_idea_1 = {
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_ROCAF_navy_idea_1" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_ROCAF_navy_idea
 			allowed = { always = no }
 			modifier = {
 				naval_speed_factor = 0.1
@@ -3961,7 +3961,7 @@ ideas = {
 		
 		SZC_YCP_ROCAF_navy_idea_2 = {
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_ROCAF_navy_idea_2" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_ROCAF_navy_idea
 			allowed = { always = no }
 			modifier = {
 				naval_speed_factor = 0.1
@@ -3989,7 +3989,7 @@ ideas = {
 		
 		SZC_YCP_ROCAF_navy_idea_3 = {
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_ROCAF_navy_idea_3" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_ROCAF_navy_idea
 			allowed = { always = no }
 			modifier = {
 				naval_speed_factor = 0.1
@@ -4021,7 +4021,7 @@ ideas = {
 		
 		SZC_YCP_chinese_wolfpack_idea = {
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_chinese_wolfpack_idea" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_chinese_wolfpack_idea
 			allowed = { always = no }
 			modifier = {
 				naval_torpedo_cooldown_factor = -0.2
@@ -4033,7 +4033,7 @@ ideas = {
 		
 		SZC_YCP_ROCAF_navy_idea_4 = {
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_ROCAF_navy_idea_4" }
-			picture = CHI_liberation_of_east_asia
+			picture = GFX_idea_SZC_YCP_ROCAF_navy_idea
 			allowed = { always = no }
 			modifier = {
 				naval_speed_factor = 0.125
@@ -4091,7 +4091,7 @@ ideas = {
 
 		SZC_the_CAS = {#中国科学院
 			on_add = { log = "[GetLogRoot]: add idea SZC_the_CAS"}
-			picture = SZC_the_CAS
+			picture = GFX_idea_SZC_the_CAS
 			allowed = { 
 				original_tag = SZC
 			}
