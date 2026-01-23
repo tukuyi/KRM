@@ -991,6 +991,23 @@ country_event = { #政治教导
 	option = {#我们是国民革命军，我们是工农子弟兵！
 		log = "[GetLogInfo]: event NKRsichuan.105 option NKRsichuan.105.a"
 		name = NKRsichuan.105.a
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.03
+		}
+	}
+
+	option = {#说几句得了，谁知道汪精卫他听得见听不见...
+		log = "[GetLogInfo]: event NKRsichuan.105 option NKRsichuan.105.a"
+		name = NKRsichuan.105.a
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.05
+		}
 	}
 }
 
@@ -1061,8 +1078,10 @@ country_event = { #新蜀报
 	option = {#有趣...
 		log = "[GetLogInfo]: event NKRsichuan.108 option NKRsichuan.108.a"
 		name = NKRsichuan.108.a
-		SZC_qi_nanxun = {
-			SZC_recruit_character_effect = yes
+		hidden_effect = {
+			SZC_qi_nanxun = {
+				SZC_recruit_character_effect = yes
+			}
 		}
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_qi_nanxun_advisor
@@ -20288,6 +20307,8 @@ country_event = { #贪欲
 				SZC_recruit_character_effect = yes
 			}
 		}
+		
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_mu_quanyun_advisor
 		set_temp_variable = { temp_select_token = token:SZC_mu_quanyun }
 		YCP_party_issue_add_S = yes
@@ -20333,8 +20354,11 @@ country_event = { #中社扩张
 			ideology = social_liberal
 			popularity = 0.03
 		}
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_xie_chengping_advisor
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_xia_erkang_advisor
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_shen_yunlong_advisor
 		hidden_effect = {
 			SZC_xie_chengping = {
@@ -20374,6 +20398,7 @@ country_event = { #元老归来
 				SZC_recruit_character_effect = yes
 			}
 		}	
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_wang_guangqi_advisor
 		set_temp_variable = { temp_select_token = token:SZC_wang_guangqi }
 		YCP_party_issue_add_S = yes
@@ -20398,6 +20423,7 @@ country_event = { #政治新星
 				SZC_recruit_character_effect = yes
 			}
 		}
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_wu_tianchi_advisor
 		set_temp_variable = { temp_select_token = token:SZC_wu_tianchi }
 		YCP_party_issue_add_S = yes
@@ -20422,6 +20448,7 @@ country_event = { #青年党的工人活动家？
 				SZC_recruit_character_effect = yes
 			}
 		}
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_liu_jingyuan_advisor
 		set_temp_variable = { temp_select_token = token:SZC_liu_jingyuan }
 		YCP_party_issue_add_S = yes
@@ -20446,6 +20473,7 @@ country_event = { #国家主义妇女部
 				SZC_recruit_character_effect = yes
 			}
 		}
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_yu_xiaoquan_advisor
 		set_temp_variable = { temp_select_token = token:SZC_yu_xiaoquan }
 		YCP_party_issue_add_S = yes
@@ -20470,6 +20498,7 @@ country_event = { #曾琦的崇拜者
 				SZC_recruit_character_effect = yes
 			}
 		}
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_huang_shizi_advisor
 		set_temp_variable = { temp_select_token = token:SZC_huang_shizi }
 		YCP_party_issue_add_S = yes
@@ -20494,7 +20523,9 @@ country_event = { #二刘
 				SZC_recruit_character_effect = yes
 			}
 		}
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_liu_dongyan_advisor
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_liu_yongji_advisor
 		set_temp_variable = { temp_select_token = token:SZC_liu_dongyan }
 		YCP_party_issue_add_S = yes
@@ -20521,7 +20552,9 @@ country_event = { #民声派新人
 				SZC_recruit_character_effect = yes
 			}
 		}
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_chen_shanxin_advisor
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_ding_tingbiao_advisor
 		set_temp_variable = { temp_select_token = token:SZC_chen_shanxin }
 		YCP_party_issue_add_S = yes
@@ -20548,7 +20581,9 @@ country_event = { #陶氏兄弟
 				SZC_recruit_character_effect = yes
 			}
 		}
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_tao_yuanzhen_advisor
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_tao_yuangan_advisor
 		set_temp_variable = { temp_select_token = token:SZC_tao_yuanzhen }
 		YCP_party_issue_add_S = yes
@@ -20572,6 +20607,7 @@ country_event = { #日本通
 				SZC_recruit_character_effect = yes
 			}
 		}
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_cui_wanqiu_advisor
 		set_temp_variable = { temp_select_token = token:SZC_cui_wanqiu }
 		YCP_party_issue_add_S = yes
@@ -20593,6 +20629,7 @@ country_event = { #福建青年
 				SZC_recruit_character_effect = yes
 			}
 		}
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_lin_keji_advisor
 		set_temp_variable = { temp_select_token = token:SZC_lin_keji }
 		YCP_party_issue_add_S = yes
@@ -20641,6 +20678,7 @@ country_event = { #华北支部的遗产？
 				}
 			}
 		}
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_zhao_yusong_advisor
 		set_temp_variable = { temp_select_token = token:SZC_zhao_yusong }
 		YCP_party_issue_add_S = yes
@@ -20706,9 +20744,13 @@ country_event = { #赤色读者
     option = { #青年党内的左派？
         log = "[GetLogInfo]: event NKRsichuanPI.18 option NKRsichuanPI.18.a"
         name = NKRsichuanPI.18.a
-		SZC_liao_shangke = {
-			SZC_recruit_character_effect = yes
+		hidden_effect = {
+			SZC_liao_shangke = {
+				SZC_recruit_character_effect = yes
+			}
 		}
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = SZC_liao_shangke_advisor
 		set_temp_variable = { temp_select_token = token:SZC_liao_shangke }
 		YCP_party_issue_add_S = yes
     }
