@@ -4562,6 +4562,7 @@ country_event = { #就职典礼
 					days = 5
 				}
 			}
+			activate_advisor = SZC_pan_guangdan_sic
 		}
 	}
 }
@@ -4653,6 +4654,8 @@ country_event = { #元老的辞职
 			set_politics = {
 				ruling_party = authoritarian_democrat
 			}
+			
+			activate_advisor = GXC_zhang_junmai_sic
 			end_coalition = yes
 			set_temp_variable = { coalition_partner_var = token:social_democrat }
 			add_to_coalition = yes
