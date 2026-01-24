@@ -17618,6 +17618,7 @@ focus_tree = {
 				target = overlord
 				type = topple_government
 			}
+			CHN_add_to_civil_war_preparation_effect = yes
 			custom_effect_tooltip = tooltip_white_line
 			add_timed_idea = {
 				idea = SZC_pan_march_towards_nanjing_idea
@@ -17795,15 +17796,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_convince_patriots"
-			CHI = {
-				transfer_units_fraction= {
-					target = SZC
-					size = 0.2
-					tockpile_ratio = 0.3
-					army_ratio = 0.2
-					navy_ratio = 0
-					air_ratio = 0
-				}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			add_timed_idea = {
+				idea = 	GXC_the_peoples_war_idea
+				days = 100
 			}
 		}
 	}
@@ -24549,7 +24548,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_sword_and_shield_for_revolution"
-			create_intelligence_agency = yes
+			create_intelligence_agency = {
+				name = "国家安全局"
+				icon = GFX_intelligence_agency_logo_KR_YCP_MSS
+			}
 			upgrade_intelligence_agency = upgrade_form_department
 			upgrade_intelligence_agency = upgrade_psycho_warfare
 		}
@@ -30436,7 +30438,21 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_shut_up_the_old"
-			#remove some advisors
+			set_temp_variable = { temp_select_token = token:SZC_chen_qitian 
+			ycp_party_issue_remove_standing = yes
+			set_temp_variable = { temp_select_token = token:SZC_chang_yansheng }
+			ycp_party_issue_remove_standing = yes
+			set_temp_variable = { temp_select_token = token:SZC_yu_jiaju } }
+			ycp_party_issue_remove_standing = yes
+			SZC_chen_qitian = {
+				retire = yes
+			}
+			SZC_chang_yansheng = {
+				retire = yes
+			}
+			SZC_yu_jiaju = {
+				retire = yes
+			}
 			country_event = {
 				id = NKRsichuan.708
 			}

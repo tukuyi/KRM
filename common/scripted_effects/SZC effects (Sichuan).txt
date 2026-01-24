@@ -4043,23 +4043,17 @@ YCP_chen_center_setup = {
 	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_xia_taosheng }
 	YCP_party_issue_retire_to_standing = yes
-	set_temp_variable = { temp_select_token = token:SZC_liu_jingyuan }
-	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_tao_yuanzhen }
 	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_wang_shizeng }
 	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_lin_keji }	
 	YCP_party_issue_retire_to_standing = yes
-	set_temp_variable = { temp_select_token = token:SZC_chen_shanxin }
-	YCP_party_issue_retire_to_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_wang_lanseng }
 	ycp_party_issue_remove_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_ding_tingbiao }
 	ycp_party_issue_remove_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_hu_fuxian }
-	ycp_party_issue_remove_standing = yes
-	set_temp_variable = { temp_select_token = token:SZC_chen_shanxin }
 	ycp_party_issue_remove_standing = yes
 	set_temp_variable = { temp_select_token = token:SZC_yu_jiaju }
 	ycp_party_issue_remove_standing = yes
@@ -4087,10 +4081,6 @@ YCP_chen_center_setup = {
 		var = YCP_party_issue_organization
 		value = token:SZC_hu_fuxian
 	}
-	set_variable = {
-		var = YCP_party_issue_youth
-		value = token:SZC_chen_shanxin
-	}
 	add_ideas = {
 		SZC_chen_qitian_DMC_idea
 		SZC_yu_jiaju_DMT_idea
@@ -4098,7 +4088,42 @@ YCP_chen_center_setup = {
 		SZC_wang_lanseng_DMI_idea
 		SZC_ding_tingbiao_DMF_idea
 		SZC_hu_fuxian_DMO_idea
-		SZC_chen_shanxin_DMY_idea
+	}
+	if = {
+		limit = {
+			has_completed_focus = SZC_YCP_statist_source
+		}
+		set_temp_variable = { temp_select_token = token:SZC_chen_shanxin_1 }
+		YCP_party_issue_retire_to_standing = yes
+		set_temp_variable = { temp_select_token = token:SZC_chen_shanxin_1 }
+		ycp_party_issue_remove_standing = yes
+		add_ideas = {
+			SZC_chen_shanxin_1_DMY_idea
+		}
+	}
+	else = {
+		set_temp_variable = { temp_select_token = token:SZC_chen_shanxin }
+		YCP_party_issue_retire_to_standing = yes
+		set_temp_variable = { temp_select_token = token:SZC_chen_shanxin }
+		ycp_party_issue_remove_standing = yes
+		set_variable = {
+			var = YCP_party_issue_youth
+			value = token:SZC_chen_shanxin
+		}
+		add_ideas = {
+			SZC_chen_shanxin_DMY_idea
+		}
+	}
+	if = {
+		limit = {
+			has_completed_focus = SZC_YCP_remember_mr_de
+		}
+		set_temp_variable = { temp_select_token = token:SZC_liu_jingyuan_1 }
+		YCP_party_issue_retire_to_standing = yes
+	}
+	else = {
+		set_temp_variable = { temp_select_token = token:SZC_liu_jingyuan }
+		YCP_party_issue_retire_to_standing = yes
 	}
 }
 

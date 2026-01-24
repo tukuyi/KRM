@@ -894,19 +894,33 @@ ideas = {
 				division_recovery_rate = 0.075
 			}
 		}
+		SZC_chen_shanxin_1_DMY_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.20
+				recruitable_population_factor = 0.20
+				war_support_factor = 0.25
+				monthly_population = 0.20
+				training_time_factor = -0.25
+				division_recovery_rate = 0.20
+			}
+		}
 		SZC_liu_jingyuan_DMY_idea = {
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = 0.05
-				recruitable_population_factor = 0.05
-    			war_support_factor = 0.1
-				stability_factor = -0.10
-				consumer_goods_factor = 0.075
-				resistance_target = -0.075
-				production_factory_efficiency_gain_factor = 0.125
+				political_power_gain = 0.10
+				recruitable_population_factor = 0.10
+				war_support_factor = 0.15
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+				resistance_target = -0.10
+				production_factory_efficiency_gain_factor = 0.15
 			}
 		}
 		SZC_lin_keji_DMY_idea = {
