@@ -288,8 +288,32 @@ bookmarks = {
 		}
 
 	### SPOTLIGHT TAGS ###
+
+		SZC = {
+			new_content = yes
+			history = NKRSZC_KR_gathering_storm_desc
+			ideology = authoritarian_democrat
+			ideas = {
+				SZC_internal_divisions
+				SZC_federal_governmental_legitimacy_democracys_five_spirits
+				SZC_legitimacy_of_the_republic_5_military
+			}
+			focuses = {
+				SZC_pan_shining_star_of_socialist_democracy_in_asia
+				SZC_YCP_shatter_old_empire
+				SZC_YCP_social_philosophy
+			}
+		}
+
+
+		AAA = { #placeholder
+			ideology = national_populist
+			history = Debug_KR_gathering_storm_desc
+		}
+
 		GXC = {
 			new_content = yes
+			minor = yes
 			history = GXC_KR_gathering_storm_desc
 			ideology = authoritarian_democrat
 			ideas = {
@@ -306,6 +330,7 @@ bookmarks = {
 
 		YUN = {
 			new_content = yes
+			minor = yes
 			history = YUN_KR_gathering_storm_desc
 			ideology = authoritarian_democrat
 			ideas = {
@@ -317,40 +342,6 @@ bookmarks = {
 				YUN_all_forward_with_the_little_generalissimo
 				YUN_arbiter_between_the_provinces
 				YUN_all_under_the_king
-			}
-		}
-
-		SZC = {
-			new_content = yes
-			minor = yes
-			history = SZC_KR_gathering_storm_desc
-			ideology = authoritarian_democrat
-			ideas = {
-				SZC_internal_divisions
-				SZC_federal_governmental_legitimacy_democracys_five_spirits
-				SZC_legitimacy_of_the_republic_5_military
-			}
-			focuses = {
-				SZC_the_last_bastion_of_federalism
-				SZC_leading_by_word_and_deed
-				SZC_democracy_as_the_key
-			}
-		}
-
-		NEP = {
-			new_content = yes
-			minor = yes
-			history = NEP_KR_gathering_storm_desc
-			ideology = paternal_autocrat
-			ideas = {
-				NEP_royal_army_0
-				NEP_an_economy_of_corruption_and_stagnation
-				NEP_realm_of_the_ranas_0
-			}
-			focuses = {
-				NEP_absolute_power_of_the_prime_minister
-				NEP_under_the_courageous_sovereign
-				NEP_the_unshackling_of_nepal
 			}
 		}
 
