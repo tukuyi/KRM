@@ -1,0 +1,70 @@
+unique_id = Destiny_Reborn_achievements
+
+### Any achievement ID starting with 0 denotes a global achievement. They are tagged as such so that they appear first in the order. All other achievements are named after their respective tags.
+
+CHINA_YCP_statism_the_key_to_salvation_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = formed_roc_tooltip
+				china_alignment_statist = yes
+				china_is_the_unifier_of_china_trigger = yes
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_new_japan_under_sky_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_new_japan_under_sky_achievement_tt
+				JAP = {
+					is_monarchy = no
+					has_country_leader = {
+						character = JAP_ozaki_yukio
+					}
+					is_subject_of = ROOT
+				}
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_unthinkable_president_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_unthinkable_president_achievement_tt
+				USA = {
+					has_country_leader = {
+						character = HAW_yau_leongfong
+					}
+				}
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+

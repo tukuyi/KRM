@@ -60,7 +60,11 @@ on_actions = {
 			if = {
 				limit = {
 					SZC = {
-						has_country_flag = NKRSZCpathbruh
+						OR = {
+							has_country_flag = NKRsichuan_YCPpath
+							has_country_flag = NKRSZC_CDLpath
+							has_country_flag = NKRSZC_joinkmt
+						}
 					}
 					FROM = { tag = SZC }
 					ROOT = { has_trait = war_hero }

@@ -1561,6 +1561,12 @@ defined_text = {
 	text = {
 		trigger = { check_variable = { china_alignment_leader = CSP } }
 		localization_key = china_faction_tenets_CHNsyndicalist_desc
+	}
+	text = {
+		trigger = { check_variable = { china_alignment_leader = YCP } }
+		localization_key = china_faction_tenets_statist_desc
+	}
+	text = {
 		localization_key = china_faction_tenets_independent_desc
 	}
 }

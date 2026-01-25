@@ -14917,6 +14917,38 @@ unit_leader_event = {
 		text = NKRsichuanmisc.1.t.SZC_liu_bocheng
 		trigger = { THIS = { is_character = SZC_liu_bocheng } }
 	}
+	title = {
+		text = NKRsichuanmisc.1.t.SZC_guo_xunqi
+		trigger = { THIS = { is_character = SZC_guo_xunqi } }
+	}
+	title = {
+		text = NKRsichuanmisc.1.t.SZC_li_hongkun
+		trigger = { THIS = { is_character = SZC_li_hongkun } }
+	}
+	title = {
+		text = NKRsichuanmisc.1.t.SZC_weng_zhaoyu
+		trigger = { THIS = { is_character = SZC_weng_zhaoyu } }
+	}
+	title = {
+		text = NKRsichuanmisc.1.t.SZC_miao_kexiu
+		trigger = { THIS = { is_character = SZC_miao_kexiu } }
+	}
+	title = {
+		text = NKRsichuanmisc.1.t.SZC_xie_ruchuan
+		trigger = { THIS = { is_character = SZC_xie_ruchuan } }
+	}
+	title = {
+		text = NKRsichuanmisc.1.t.SZC_liang_sizhong
+		trigger = { THIS = { is_character = SZC_liang_sizhong } }
+	}
+	title = {
+		text = NKRsichuanmisc.1.t.SZC_chen_zaidao
+		trigger = { THIS = { is_character = SZC_chen_zaidao } }
+	}
+	title = {
+		text = NKRsichuanmisc.1.t.SZC_xu_shiyou
+		trigger = { THIS = { is_character = SZC_xu_shiyou } }
+	}
 	desc = {
 		text = NKRsichuanmisc.1.d.SZC_pan_wenhua
 		trigger = { THIS = { is_character = SZC_pan_wenhua } }
@@ -14933,7 +14965,38 @@ unit_leader_event = {
 		text = NKRsichuanmisc.1.d.SZC_liu_bocheng
 		trigger = { THIS = { is_character = SZC_liu_bocheng } }
 	}
-
+	desc = {
+		text = NKRsichuanmisc.1.d.SZC_guo_xunqi
+		trigger = { THIS = { is_character = SZC_guo_xunqi } }
+	}
+	desc = {
+		text = NKRsichuanmisc.1.d.SZC_li_hongkun
+		trigger = { THIS = { is_character = SZC_li_hongkun } }
+	}
+	desc = {
+		text = NKRsichuanmisc.1.d.SZC_weng_zhaoyu
+		trigger = { THIS = { is_character = SZC_weng_zhaoyu } }
+	}
+	desc = {
+		text = NKRsichuanmisc.1.d.SZC_miao_kexiu
+		trigger = { THIS = { is_character = SZC_miao_kexiu } }
+	}
+	desc = {
+		text = NKRsichuanmisc.1.d.SZC_xie_ruchuan
+		trigger = { THIS = { is_character = SZC_xie_ruchuan } }
+	}
+	desc = {
+		text = NKRsichuanmisc.1.d.SZC_liang_sizhong
+		trigger = { THIS = { is_character = SZC_liang_sizhong } }
+	}
+	desc = {
+		text = NKRsichuanmisc.1.d.SZC_chen_zaidao
+		trigger = { THIS = { is_character = SZC_chen_zaidao } }
+	}
+	desc = {
+		text = NKRsichuanmisc.1.d.SZC_xu_shiyou
+		trigger = { THIS = { is_character = SZC_xu_shiyou } }
+	}
 
 	is_triggered_only = yes #fired by on_event related to general promotions.
 
@@ -14944,6 +15007,14 @@ unit_leader_event = {
 				is_character = SZC_tang_shizun
 				is_character = SZC_fan_shaozeng
 				is_character = SZC_liu_bocheng
+				is_character = SZC_guo_xunqi
+				is_character = SZC_li_hongkun
+				is_character = SZC_weng_zhaoyu
+				is_character = SZC_miao_kexiu
+				is_character = SZC_xie_ruchuan
+				is_character = SZC_liang_sizhong
+				is_character = SZC_chen_zaidao
+				is_character = SZC_xu_shiyou
 			}
 		}
 	}
@@ -14970,6 +15041,54 @@ unit_leader_event = {
 		log = "[GetLogInfo]: event NKRsichuanmisc.1 option NKRsichuanmisc.1.d"
 		name = NKRsichuanmisc.1.d #简直是一条龙下凡！
 		trigger = { THIS = { is_character = SZC_liu_bocheng } }
+		custom_effect_tooltip = CHI_champion_effect_tt
+	}
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.1 option NKRsichuanmisc.1.e"
+		name = NKRsichuanmisc.1.e
+		trigger = { THIS = { is_character = SZC_guo_xunqi } }
+		custom_effect_tooltip = CHI_champion_effect_tt
+	}
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.1 option NKRsichuanmisc.1.f"
+		name = NKRsichuanmisc.1.f
+		trigger = { THIS = { is_character = SZC_li_hongkun } }
+		custom_effect_tooltip = CHI_champion_effect_tt
+	}
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.1 option NKRsichuanmisc.1.g"
+		name = NKRsichuanmisc.1.g #将军奋起起南纪，志挽日月会山邱。
+		trigger = { THIS = { is_character = SZC_weng_zhaoyu } }
+		custom_effect_tooltip = CHI_champion_effect_tt
+	}
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.1 option NKRsichuanmisc.1.h"
+		name = NKRsichuanmisc.1.h
+		trigger = { THIS = { is_character = SZC_miao_kexiu } }
+		custom_effect_tooltip = CHI_champion_effect_tt
+	}
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.1 option NKRsichuanmisc.1.i"
+		name = NKRsichuanmisc.1.i
+		trigger = { THIS = { is_character = SZC_xie_ruchuan } }
+		custom_effect_tooltip = CHI_champion_effect_tt
+	}
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.1 option NKRsichuanmisc.1.j"
+		name = NKRsichuanmisc.1.j
+		trigger = { THIS = { is_character = SZC_liang_sizhong } }
+		custom_effect_tooltip = CHI_champion_effect_tt
+	}
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.1 option NKRsichuanmisc.1.k"
+		name = NKRsichuanmisc.1.k
+		trigger = { THIS = { is_character = SZC_chen_zaidao } }
+		custom_effect_tooltip = CHI_champion_effect_tt
+	}
+	option = {
+		log = "[GetLogInfo]: event NKRsichuanmisc.1 option NKRsichuanmisc.1.l"
+		name = NKRsichuanmisc.1.l
+		trigger = { THIS = { is_character = SZC_xu_shiyou } }
 		custom_effect_tooltip = CHI_champion_effect_tt
 	}
 }
