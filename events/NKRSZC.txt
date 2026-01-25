@@ -6703,9 +6703,6 @@ country_event = { #龙兴之地
 		SZC_wang_shizeng = {
 			SZC_recruit_character_effect = yes
 		}
-		SZC_zhang_zizhu = {
-			SZC_recruit_character_effect = yes
-		}
 		SZC_yu_jiaju = {
 			SZC_recruit_character_effect = yes
 		}
@@ -9923,7 +9920,7 @@ country_event = { #新思潮崛起
 		hidden_effect = {
 			country_event = {
 				id = NKRsichuan.510
-				days = 50
+				days = 250
 			}
 		}
 	}
@@ -9963,7 +9960,7 @@ country_event = { #战国策派支持唯一元首
 			ideology = national_populist
 			popularity = 0.08
 		}
-		set_country_flag = SZC_YCP_support_ZGCP
+		# set_country_flag = SZC_YCP_support_ZGCP
 	}
 }
 
@@ -10877,6 +10874,9 @@ country_event = { #混乱即阶梯
 	option = {#国家工团党的胜利？天哪...
 		log = "[GetLogInfo]: event NKRsichuan.546 option NKRsichuan.5466.a"
 		name = NKRsichuan.546.a
+		SZC_xia_taosheng = {
+			kill = yes
+		}
 		add_popularity = {
 			ideology = syndicalist
 			popularity = 0.20
@@ -11131,7 +11131,7 @@ country_event = { #《自由中国》
 	id = NKRsichuan.559
 	title = NKRsichuan.559.t
 	desc = NKRsichuan.559.d
-	picture = GFX_report_event_SZC_lei_zhen
+	picture = GFX_report_event_SZC_free_china
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12030,6 +12030,15 @@ country_event = { #国家存在论
 	option = {#国家便是一切！
 		log = "[GetLogInfo]: event NKRsichuan.601 option NKRsichuan.601.a"
 		name = NKRsichuan.601.a
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.01
+		}
+		custom_effect_tooltip = NKRsichuan.601.tt
 	}
 }
 
@@ -12585,6 +12594,12 @@ country_event = { #民主道德观
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.634 option NKRsichuan.634.a"
 		name = NKRsichuan.634.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanflavor.65
+				days = 5
+			}
+		}
 	}
 }
 
@@ -14439,6 +14454,11 @@ country_event = { #误会
 		add_stability = -1000
 		add_war_support = -1000
 		add_political_power = -10000
+		hidden_effect = {
+			SZC_xu_shiyou = {
+				promote_character = paternal_autocrat_stratocracy_subtype
+			}
+		}
 	}
 }
 
@@ -22406,7 +22426,7 @@ country_event = { #
 	id = NKRsichuanflavor.65
 	title = NKRsichuanflavor.65.t
 	desc = NKRsichuanflavor.65.d
-	picture = GFX_report_event_SZC_516
+	picture = GFX_report_event_SZC_zuo_shunsheng_2
 
 	is_triggered_only = yes
 	fire_only_once = yes

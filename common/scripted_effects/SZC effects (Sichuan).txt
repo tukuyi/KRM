@@ -4097,6 +4097,10 @@ YCP_chen_center_setup = {
 		YCP_party_issue_retire_to_standing = yes
 		set_temp_variable = { temp_select_token = token:SZC_chen_shanxin_1 }
 		ycp_party_issue_remove_standing = yes
+		set_variable = {
+			var = YCP_party_issue_youth
+			value = token:SZC_chen_shanxin_1
+		}
 		add_ideas = {
 			SZC_chen_shanxin_1_DMY_idea
 		}
