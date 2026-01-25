@@ -2705,7 +2705,7 @@ chinese_unification = {
 
 }
 
-SZC_pan_foreign_policy_category = {
+foreign_politics = {
 	SZC_KMT_invite_countries_to_faction = {
 		icon = generic_agreement
 
@@ -2736,6 +2736,11 @@ SZC_pan_foreign_policy_category = {
 		target_non_existing = yes
 		visible = {
 			is_faction_leader = yes
+			OR = {
+				has_completed_focus = SZC_pan_FORPOL_spread_our_revolution
+				has_completed_focus = SZC_pan_CDL_FORPOL_return_to_world_stage
+			}
+			
 			FROM = {
 				exists = yes
 				is_subject = no
@@ -2797,6 +2802,10 @@ SZC_pan_foreign_policy_category = {
 		allowed = { is_economic_sphere_leader = yes }
 
 		visible = {
+			OR = {
+				has_completed_focus = SZC_pan_FORPOL_spread_our_revolution
+				has_completed_focus = SZC_pan_CDL_FORPOL_return_to_world_stage
+			}
 			OR = {
 				AND = {
 					NOT = {
@@ -2864,6 +2873,10 @@ SZC_pan_foreign_policy_category = {
 		visible = {
 			has_completed_focus = SZC_pan_FORPOL_socialist_reorganize
 			OR = {
+				OR = {
+					has_completed_focus = SZC_pan_FORPOL_spread_our_revolution
+					has_completed_focus = SZC_pan_CDL_FORPOL_return_to_world_stage
+				}
 				FROM = {
 					is_ally_with = SZC
 					NOT = { has_country_flag = SZC_FORPOL_reorganized }
@@ -3080,6 +3093,7 @@ SZC_pan_foreign_policy_category = {
 
 		target_non_existing = yes
 		visible = {
+			has_completed_focus = SZC_YCP_FORPOL_mandate_heaven_of_china
 			is_faction_leader = yes
 			FROM = {
 				exists = yes
@@ -3125,6 +3139,7 @@ SZC_pan_foreign_policy_category = {
 		allowed = { is_economic_sphere_leader = yes }
 
 		visible = {
+			has_completed_focus = SZC_YCP_FORPOL_mandate_heaven_of_china
 			OR = {
 				FROM = {
 					is_ally_with = SZC

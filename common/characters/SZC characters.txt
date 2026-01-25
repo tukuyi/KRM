@@ -1929,7 +1929,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			desc = SZC_pan_wenhua_high_command_desc
+			desc = SZC_pan_wenhua_desc
 			traits = { hill_fighter organizer harsh_leader war_hero CHN_SZC_officer }
 			skill = 3
 			attack_skill = 3
@@ -1938,10 +1938,10 @@ characters = {
 			logistics_skill = 2
 		}
 		advisor = {
-			slot = high_command
-			idea_token = SZC_pan_wenhua_high_command
+			slot = army_chief
+			idea_token = SZC_pan_wenhua_army_chief
 			ledger = army
-			traits = { KR_MHC_army_regrouping_2 }
+			traits = { KR_army_chief_morale_2 }
 			cost = 100
 		}
 		advisor = {
@@ -2046,6 +2046,13 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = SZC_guo_xunqi_high_command
+			desc = SZC_guo_xunqi_commander_desc
+			traits = { KR_MHC_army_logistics_2 }
+			cost = 100
 		}
 	}
 	#王陵基
@@ -2609,6 +2616,14 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 2
 		}
+		advisor = {
+			slot = 	high_command
+			idea_token = SZC_chen_dasan_army_chief
+			desc = SZC_chen_dasan_desc
+			ledger = army
+			traits = { KR_army_chief_morale_1 }
+			cost = 150
+		}
 	}
 	#冉钧
 	SZC_ran_jun = {
@@ -2627,6 +2642,14 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
+		}
+		advisor = {
+			slot = 	high_command
+			idea_token = SZC_ran_jun_army_chief
+			desc = SZC_ran_jun_desc
+			ledger = army
+			traits = { KR_army_chief_organisational_1 }
+			cost = 150
 		}
 	}
 	#谢持
@@ -3306,6 +3329,14 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 2
+		}
+		advisor = {
+			slot = 	army_chief
+			idea_token = SZC_wang_shizeng_army_chief
+			desc = SZC_wang_shizeng_desc
+			ledger = army
+			traits = { KR_army_chief_organisational_2 }
+			cost = 150
 		}
 	}
 
@@ -4495,6 +4526,14 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 2
 		}
+		advisor = {
+			slot = 	high_command
+			idea_token = SZC_weng_zhaoyuan_MHC
+			desc = SZC_weng_zhaoyuan_desc
+			ledger = army
+			traits = { KR_MHC_army_regrouping_2 }
+			cost = 150
+		}
 	}
 
 	#苗可秀
@@ -4514,6 +4553,14 @@ characters = {
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 1
+		}
+		advisor = {
+			slot = 	high_command
+			idea_token = SZC_miao_kexiu_MHC
+			desc = SZC_miao_kexiu_desc
+			ledger = army
+			traits = { KR_army_chief_drill_1 }
+			cost = 150
 		}
 	}
 
@@ -4535,6 +4582,14 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 		}
+		advisor = {
+			slot = 	high_command
+			idea_token = SZC_liang_sizhong_MHC
+			desc = SZC_liang_sizhong_desc
+			ledger = army
+			traits = { KR_MHC_artillery_2 }
+			cost = 150
+		}
 	}
 
 	#朱文伯
@@ -4554,6 +4609,14 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
+		}
+		advisor = {
+			slot = 	high_command
+			idea_token = SZC_zhu_wenbo_MHC
+			desc = SZC_zhu_wenbo_desc
+			ledger = army
+			traits = { KR_MHC_army_regrouping_1 }
+			cost = 150
 		}
 	}
 
@@ -4575,6 +4638,14 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 		}
+		advisor = {
+			slot = 	high_command
+			idea_token = SZC_wu_lvxun_MHC
+			desc = SZC_wu_lvxun_desc
+			ledger = army
+			traits = { KR_MHC_entrenchment_2 }
+			cost = 150
+		}
 	}
 
 	#钮先铭
@@ -4594,6 +4665,14 @@ characters = {
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 3
+		}
+		advisor = {
+			slot = 	high_command
+			idea_token = SZC_niu_xianming_MHC
+			desc = SZC_niu_xianming_desc
+			ledger = army
+			traits = { KR_MHC_concealment_2 }
+			cost = 150
 		}
 	}
 
@@ -4634,6 +4713,14 @@ characters = {
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 3
+		}
+		advisor = {
+			slot = 	high_command
+			idea_token = SZC_xie_ruchuan_MHC
+			desc = SZC_xie_ruchuan_desc
+			ledger = army
+			traits = { KR_MHC_infantry_3 }
+			cost = 150
 		}
 	}
 
@@ -4781,6 +4868,14 @@ characters = {
 			can_be_fired = no
 			desc = SZC_chen_zaidao_desc
 		}
+		advisor = {
+			slot = 	navy_chief
+			idea_token = SZC_chen_zaidao_MHC
+			desc = SZC_chen_zaidao_desc
+			ledger = army
+			traits = { KR_navy_chief_decisive_battle_3 }
+			cost = 150
+		}
 	}
 
 	#陈锡联
@@ -4810,6 +4905,14 @@ characters = {
 			cost = 0
 			can_be_fired = no
 			desc = SZC_chen_xilian_desc
+		}
+		advisor = {
+			slot = 	army_chief
+			idea_token = SZC_chen_xilian_army_chief
+			desc = SZC_chen_xilian_desc
+			ledger = army
+			traits = { KR_army_chief_defensive_2 }
+			cost = 150
 		}
 	}
 
@@ -4890,6 +4993,14 @@ characters = {
 			desc = SZC_xu_shiyou_desc
 			ideology = paternal_autocrat_stratocracy_subtype
 			traits = { CHN_statist_aligned }
+		}
+		advisor = {
+			slot = 	high_command
+			idea_token = SZC_xu_shiyou_MHC
+			desc = SZC_xu_shiyou_desc
+			ledger = army
+			traits = { KR_MHC_commando_3 }
+			cost = 150
 		}
 	}
 

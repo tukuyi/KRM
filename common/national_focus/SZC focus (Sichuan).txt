@@ -11412,6 +11412,8 @@ focus_tree = {
 					ideology = paternal_autocrat_subtype
 				}
 			}
+			add_offsite_building = { type = arms_factory level = 2 }
+			add_offsite_building = { type = civilian_factory level = 2 }
 		}
 	}
 
@@ -11482,6 +11484,7 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.201
 			}
+			add_offsite_building = { type = arms_factory level = 1 }
 			add_ideas = {
 				SZC_pan_new_national_protect_army
 			}
