@@ -2399,7 +2399,6 @@ chinese_unification = {
 				id = NKRsichuan.462
 			}
 			FROM = { country_event = { id = NKRsichuan.463 days = 3 } } #联省大联合？
-			custom_effect_tooltip = CHI_negotiation_tt
 		}
 	}
 	SZC_NAP_with_qi_decision = { #Potential NAP with qi
@@ -2469,7 +2468,6 @@ chinese_unification = {
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_NAP_with_qi_decision"
 			FROM = { country_event = { id = NKRsichuan.456 days = 3 } } #成都的消息
-			custom_effect_tooltip = CHI_negotiation_tt
 		}
 	}
 	SZC_NAP_with_anq_decision = { #Potential NAP with anq
@@ -2542,7 +2540,6 @@ chinese_unification = {
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_NAP_with_anq_decision"
 			FROM = { country_event = { id = NKRsichuan.459 days = 3 } } #成都的消息
-			custom_effect_tooltip = CHI_negotiation_tt
 		}
 	}
 	SZC_subjugate_federalists_decision = { #Allow players to reform Constitutional Protection Alliance
@@ -2625,7 +2622,6 @@ chinese_unification = {
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_subjugate_federalists_decision"
 			FROM = { country_event = { id = NKRsichuanflavor.26 days = 3 } } #
-			custom_effect_tooltip = CHI_negotiation_tt
 		}
 		fixed_random_seed = no
 	}
@@ -2703,7 +2699,6 @@ chinese_unification = {
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_subjugate_federalists_decision"
 			FROM = { country_event = { id = NKRsichuanflavor.29 days = 3 } } #
-			custom_effect_tooltip = CHI_negotiation_tt
 		}
 		fixed_random_seed = no
 	}
