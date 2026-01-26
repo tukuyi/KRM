@@ -67,4 +67,147 @@ NKR_unthinkable_president_achievement = {
 		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
 	}
 }
+NKR_new_age_of_sturm_drang_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			FRP = {
+				is_subject_of = ROOT
+				has_country_leader = { character = FRA_robert_brasillach }
+			}
+			GBP = {
+				is_subject_of = ROOT
+				has_country_leader = { character = ENG_john_macmurray }
+			}
+			GRU = {
+				is_subject_of = ROOT
+				has_country_leader = { character = GRU_edgar_jung }
+			}
+			ITA = {
+				is_subject_of = ROOT
+				has_country_leader = { character = ITA_julius_evola }
+			}
+			RSA = {
+				is_subject_of = ROOT
+				has_country_leader = { character = RUS_alisa_berkova }
+			}
+			TUR = {
+				is_subject_of = ROOT
+				has_country_leader = { character = TUR_alparslan_turkes }
+			}
+			USA = {
+				is_subject_of = ROOT
+				has_country_leader = { character = USA_francis_parker_yockey }
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_for_super_china_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_for_super_china_achievement_tt
+				has_tech = YCP_hellpod
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_dream_of_federation_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_dream_of_federation_achievement_tt
+				OR = {
+					has_cosmetic_tag = SZC_PAF
+					has_cosmetic_tag = SZC_YCP_PAF
+				}
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_white_sun_over_mittelafrika_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_unthinkable_president_achievement_tt
+				has_country_flag = NKRSZC_joinkmt
+				is_economic_sphere_leader = yes
+				has_completed_focus = SZC_pan_FORPOL_age_of_eagle_and_sun
+				MAF = {
+					is_in_economic_sphere_led_by_ROOT = yes
+				}
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_the_man_who_sold_the_world_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_unthinkable_president_achievement_tt
+				has_country_flag = The_Man_Who_Sold_the_World
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_dr_latencys_freak_report_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_unthinkable_president_achievement_tt
+				AND = {
+					has_country_flag = Esoteric_events_complete_1
+					has_country_flag = Esoteric_events_complete_2
+				}
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
 

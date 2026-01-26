@@ -2750,9 +2750,10 @@ country_event = { #meme背叛世界的男人
 	option = {#谢谢你，Boss！
 		log = "[GetLogInfo]: event NKRsichuan.184 option NKRsichuan.184.a"
 		name = NKRsichuan.184.a
+		set_country_flag = The_Man_Who_Sold_the_World
 		SZC_liu_xiang = {
 			SZC_recruit_character_effect = yes
-			promote_character = paternal_autocrat
+			promote_character = authoritarian_democrat_subtype
 			set_portraits = {
 				army = {
 					large = GFX_portrait_SZC_liu_xiang_VS_large
@@ -12370,6 +12371,7 @@ country_event = { #科学世纪-3
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuan.620 option NKRsichuan.620.a"
 		name = NKRsichuan.620.a
+		set_country_flag = Esoteric_events_complete_1
 	}
 }
 
@@ -19779,6 +19781,7 @@ country_event = { #科学世纪-附
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanFP.50 option NKRsichuanFP.50.a"
 		name = NKRsichuanFP.50.a
+		set_country_flag = Esoteric_events_complete_2
 	}
 }
 
