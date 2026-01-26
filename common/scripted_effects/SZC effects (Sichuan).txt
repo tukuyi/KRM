@@ -2355,7 +2355,9 @@ SZC_ECON_SPHERE_INVITE_SETUP = {
 				}
 				if = {
 					limit = {
-						has_country_flag = NKRsichuan_YCPpath
+						SZC = {
+							has_country_flag = NKRsichuan_YCPpath
+						}
 					}
 					ROOT = {
 						activate_targeted_decision = { target = PREV decision = SZC_YCP_invite_into_economic_sphere }
@@ -2373,7 +2375,9 @@ SZC_ECON_SPHERE_INVITE_SETUP = {
 			
 			if = {
 				limit = {
-					has_country_flag = NKRsichuan_YCPpath
+					SZC = {
+						has_country_flag = NKRsichuan_YCPpath
+					}
 				}
 				ROOT = {
 					activate_targeted_decision = { target = PREV decision = SZC_YCP_invite_into_economic_sphere }
@@ -2390,7 +2394,9 @@ SZC_ECON_SPHERE_INVITE_SETUP = {
 			
 			if = {
 				limit = {
-					has_country_flag = NKRsichuan_YCPpath
+					SZC = {
+						has_country_flag = NKRsichuan_YCPpath
+					}
 				}
 				ROOT = {
 					activate_targeted_decision = { target = PREV decision = SZC_YCP_invite_into_economic_sphere }
@@ -2405,10 +2411,12 @@ SZC_ECON_SPHERE_INVITE_SETUP = {
 		#Kemalist Turkey apparently should be able to join
 		if = {
 			limit = {
-				has_country_flag = NKRSZC_joinkmt
+				SZC = {
+					has_country_flag = NKRSZC_joinkmt
+				}
 			}
 			
-		activate_targeted_decision = { target = TUR decision = SZC_KMT_invite_into_economic_sphere }
+			activate_targeted_decision = { target = TUR decision = SZC_KMT_invite_into_economic_sphere }
 		}
 	}
 }

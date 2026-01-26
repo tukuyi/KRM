@@ -3253,7 +3253,7 @@ foreign_politics = {
 		visible = {
 			AND = {
 				has_completed_focus = SZC_YCP_FORPOL_expand_yellow_revolution
-				has_country_leader = SZC_zhang_guotao
+				has_country_leader = { character = SZC_zhang_guotao }
 				has_government = syndicalist
 			}
 		}
@@ -3548,12 +3548,11 @@ SZC_YCP_COB_category = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_YCP_advanced_rifle_research"
-			clr_country_flag = SZC_YCP_COB_researching
-			enable_tech_YCP_infantry_weapon = yes
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_YCP_advanced_rifle_research"
 			clr_country_flag = SZC_YCP_COB_researching
+			enable_tech_YCP_infantry_weapon = yes
 		}
 		fixed_random_seed = no
 	}
@@ -3594,12 +3593,11 @@ SZC_YCP_COB_category = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_YCP_hellpod_research"
-			clr_country_flag = SZC_YCP_COB_researching
-			enable_tech_YCP_hellpod = yes
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_YCP_hellpod_research"
 			clr_country_flag = SZC_YCP_COB_researching
+			enable_tech_YCP_hellpod = yes
 		}
 		fixed_random_seed = no
 	}
@@ -3639,14 +3637,13 @@ SZC_YCP_COB_category = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_YCP_advanced_helicopter_research"
-			clr_country_flag = SZC_YCP_COB_researching
-			add_ideas = {
-				SZC_YCP_advanced_helicopter
-			}
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_YCP_advanced_helicopter_research"
 			clr_country_flag = SZC_YCP_COB_researching
+			add_ideas = {
+				SZC_YCP_advanced_helicopter
+			}
 		}
 		fixed_random_seed = no
 	}
@@ -3686,12 +3683,11 @@ SZC_YCP_COB_category = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_YCP_helicarrier_tech_research"
-			clr_country_flag = SZC_YCP_COB_researching
-			enable_tech_YCP_helicarrier = yes
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_YCP_helicarrier_tech_research"
 			clr_country_flag = SZC_YCP_COB_researching
+			enable_tech_YCP_helicarrier = yes
 		}
 		fixed_random_seed = no
 	}

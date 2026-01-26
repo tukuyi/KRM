@@ -48,6 +48,19 @@ characters = {
 			ideology = national_populist_subtype
 		}
 	}
+	#各色领袖2
+	SZC_assorted_leaders_unique = {
+		name = SZC_assorted_leaders
+		portraits = {
+			civilian = {
+				large = GFX_portrait_CHI_lixingshe_civilian_large
+			}
+		}
+		country_leader = {
+			# Placeholder leader, doesn't need desc
+			ideology = syndicalist_yellow_syndicalist_subtype
+		}
+	}
 	#赤心社
 	SZC_yang_angong = {
 		name = SZC_yang_angong
@@ -4851,7 +4864,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_chen_zaidao_commander_desc
-			traits = { light_infantry_officer reckless naval_lineage organizer naval_liason }
+			traits = { war_hero light_infantry_officer reckless naval_lineage organizer naval_liason }
 			skill = 2
 			attack_skill = 3
 			defense_skill = 1
@@ -4866,12 +4879,12 @@ characters = {
 			traits = { SZC_the_arrogant_warlord_sic }
 			cost = 0
 			can_be_fired = no
-			desc = SZC_chen_zaidao_desc
+			desc = SZC_chen_zaidao_commander_desc
 		}
 		advisor = {
 			slot = 	navy_chief
 			idea_token = SZC_chen_zaidao_MHC
-			desc = SZC_chen_zaidao_desc
+			desc = SZC_chen_zaidao_commander_desc
 			ledger = army
 			traits = { KR_navy_chief_decisive_battle_3 }
 			cost = 150
@@ -4966,13 +4979,13 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = SZC_xu_shiyou_desc
+			desc = SZC_xu_shiyou_commander_desc
 			ideology = paternal_autocrat_stratocracy_subtype
 			traits = { CHN_statist_aligned }
 		}
 		corps_commander = {
 			desc = SZC_xu_shiyou_commander_desc
-			traits = { infantry_officer reckless commando }
+			traits = { war_hero infantry_officer reckless commando }
 			skill = 2
 			attack_skill = 4
 			defense_skill = 1
@@ -4987,17 +5000,12 @@ characters = {
 			traits = { SZC_reckless_monk_sic }
 			cost = 0
 			can_be_fired = no
-			desc = SZC_xu_shiyou_desc
-		}
-		country_leader = {
-			desc = SZC_xu_shiyou_desc
-			ideology = paternal_autocrat_stratocracy_subtype
-			traits = { CHN_statist_aligned }
+			desc = SZC_xu_shiyou_commander_desc
 		}
 		advisor = {
 			slot = 	high_command
 			idea_token = SZC_xu_shiyou_MHC
-			desc = SZC_xu_shiyou_desc
+			desc = SZC_xu_shiyou_commander_desc
 			ledger = army
 			traits = { KR_MHC_commando_3 }
 			cost = 150

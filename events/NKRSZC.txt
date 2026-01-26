@@ -10884,8 +10884,7 @@ country_event = { #混乱即阶梯
 		}
 		add_political_power = -100
 		end_coalition = yes
-		SZC_YCP_dissolve_the_YCP = yes
-		activate_advisor = SZC_chen_zaidao_sic
+		YCP_party_issue_dissolve = yes
 		set_politics = {
 			ruling_party = syndicalist
 		}
@@ -10919,6 +10918,7 @@ country_event = { #混乱即阶梯
 				SZC_recruit_character_effect = yes
 			}
 		}
+		activate_advisor = SZC_chen_zaidao_sic
 	}
 }
 
@@ -14435,6 +14435,10 @@ country_event = { #政变
 			country_event = {
 				id = NKRsichuan.732
 				days = 3650
+			}
+			SZC_assorted_leaders_unique = {
+				SZC_recruit_character_effect = yes
+				promote_character = syndicalist_yellow_syndicalist_subtype
 			}
 		}
 	}
@@ -22163,7 +22167,6 @@ country_event = { #德属东亚的新星？
 		log = "[GetLogInfo]: event NKRsichuanflavor.39 option NKRsichuanflavor.39.a"
 		name = NKRsichuanflavor.39.a
 		add_political_power = -50
-		GEA_erwin_rommel = { custom_effect_tooltip = character_becomes_a_general }
 
 		hidden_effect = {
 			GEA = {
@@ -22179,6 +22182,7 @@ country_event = { #德属东亚的新星？
 					}
 				}
 			}
+			GEA_erwin_rommel = { custom_effect_tooltip = character_becomes_a_general }
 		}
 	}
 	option = {#德国人可信不过！
