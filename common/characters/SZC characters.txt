@@ -1929,7 +1929,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			desc = SZC_pan_wenhua_desc
+			desc = SZC_pan_wenhua_sic_desc
 			traits = { hill_fighter organizer harsh_leader war_hero CHN_SZC_officer }
 			skill = 3
 			attack_skill = 3
@@ -1960,27 +1960,27 @@ characters = {
 			desc = SZC_pan_wenhua_sic_desc
 		}
 		country_leader = {
-			desc = SZC_pan_wenhua_leader_desc
+			desc = SZC_pan_wenhua_sic_desc
 			ideology = paternal_autocrat_subtype
 			traits = { CHN_non_aligned }
 		}
 		country_leader = {
-			desc = SZC_pan_wenhua_leader_desc
+			desc = SZC_pan_wenhua_sic_desc
 			ideology = authoritarian_democrat_subtype
 			traits = { CHN_non_aligned }
 		}
 		country_leader = {
-			desc = SZC_pan_wenhua_leader_desc
+			desc = SZC_pan_wenhua_sic_desc
 			ideology = radical_socialist_revolutionary_tridemist_subtype
 			traits = { CHN_left_kuomintang_aligned }
 		}
 		country_leader = {
-			desc = SZC_pan_wenhua_leader_desc
+			desc = SZC_pan_wenhua_sic_desc
 			ideology = market_liberal_subtype
 			traits = { CHN_left_kuomintang_aligned }
 		}
 		country_leader = {
-			desc = SZC_pan_wenhua_leader_desc
+			desc = SZC_pan_wenhua_sic_desc
 			ideology = social_democrat_subtype
 			traits = { CHN_left_kuomintang_aligned }
 		}
@@ -2024,7 +2024,7 @@ characters = {
 			cost = 100
 		}
 		country_leader = {
-			desc = SZC_tang_shizun_desc
+			desc = SZC_tang_shizun_high_command_desc
 			ideology = authoritarian_democrat_subtype
 			traits = { CHN_statist_aligned }
 		}
@@ -2765,7 +2765,7 @@ characters = {
 		country_leader = {
 			ideology = social_liberal_liberal_technocracy_subtype
 			desc = SZC_luo_longji_desc
-			traits = { CHN_southern_republican_aligned }
+			traits = { CHN_southern_republican_aligned YUN_the_lonesome_warrior }
 		}
 		advisor = {
 			slot = political_advisor
@@ -4845,7 +4845,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = SZC_chen_zaidao_desc
+			desc = SZC_chen_zaidao_commander_desc
 			ideology = paternal_autocrat_stratocracy_subtype
 			traits = { CHN_statist_aligned }
 		}

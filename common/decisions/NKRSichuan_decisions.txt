@@ -2930,12 +2930,22 @@ foreign_politics = {
 					}
 					set_country_leader_ideology = syndicalist_peoples_democracy_subtype
 				}
+				else_if = {
+					limit = {
+						SZC = {
+							ruling_party = syndicalist
+						}
+					}
+					set_politics = {
+						ruling_party = syndicalist
+					}
+					set_country_leader_ideology = syndicalist_revolutionary_tridemist_subtype
+				}
 				else = {
 					set_politics = {
 						ruling_party = radical_socialist
 					}
 					set_country_leader_ideology = radical_socialist_revolutionary_tridemist_subtype
-					set_country_leader_ideology = syndicalist_revolutionary_tridemist_subtype
 				}
 			}
 		}
@@ -3172,6 +3182,58 @@ foreign_politics = {
 			FROM = {
 				set_country_flag = SZC_was_invited_into_partnership
 				country_event = { id = NKRsichuanFP.4 days = 3 } #An Invitation to the Minsheng Partnership
+			}
+		}
+	}
+	
+	SZC_YCP_liberation_war_decision = {
+		icon = GFX_decision_lkmt_flag
+		allowed = { always = no }
+		available = {
+			can_declare_war_on = FROM
+			is_subject = no
+		}
+		visible = {
+			hidden_trigger = {
+				FROM = {
+					OR = {
+						any_owned_state = { OR = { is_claim_or_core_of_ROOT = yes } }
+					}
+					any_owned_state = {
+						OR = {
+							is_on_continent = asia
+							is_on_continent = australia
+							is_on_continent = india
+							is_on_continent = middle_east
+						}
+					}
+				}
+			}
+		}
+
+		cost = 35
+		days_remove = 30
+		fire_only_once = yes
+		war_with_target_on_remove = yes
+		cancel_if_not_visible = yes
+
+		cancel_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision cancel SZC_YCP_liberation_war_decision"
+			clear_decision_attack_AI = yes
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_YCP_liberation_war_decision"
+			FROM = { incoming_war_notification_effect = yes }
+			setup_decision_attack_AI = yes
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove SZC_YCP_liberation_war_decision"
+			clear_decision_attack_AI = yes
+			create_wargoal = {
+				target = FROM
+				type = topple_government
 			}
 		}
 	}
