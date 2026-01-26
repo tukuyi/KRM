@@ -1,3 +1,0 @@
-@echo off
-python focusgfxentry.py SZC_YCP_descent_of_the_fire_cauldron
-pause
