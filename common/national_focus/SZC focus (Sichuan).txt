@@ -16096,7 +16096,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_CDL_FORPOL_pacific_pact_organisation"
 			
-			create_faction_from_template = { template = faction_template_generic name = SZC_PPO_faction }
+			create_faction_from_template = { template = faction_template_PPO name = SZC_PPO_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			country_event = {
 				id = NKRsichuanFP.27
@@ -19864,7 +19864,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_CSAT"
-			create_faction_from_template = { template = faction_template_generic name = SZC_CSAT_faction }
+			create_faction_from_template = { template = faction_template_CSAT name = SZC_CSAT_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			custom_effect_tooltip = SZC_pan_FORPOL_CSAT_tt
 			save_global_event_target_as = KR_CSAT_leader
@@ -20046,7 +20046,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_eastern_internationale"
-			create_faction_from_template = { template = faction_template_generic name = SZC_eastern_internationale_faction }
+			create_faction_from_template = { template = faction_template_EI name = SZC_eastern_internationale_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			custom_effect_tooltip = SZC_pan_FORPOL_eastern_internationale_tt
 			add_ideas = {
@@ -31974,7 +31974,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_zeng_faction"
 			
-			create_faction_from_template = { template = faction_template_generic name = SZC_YRF_faction }
+			create_faction_from_template = { template = faction_template_YRF name = SZC_YRF_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 
 			country_event = {
@@ -32161,7 +32161,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_li_faction"
 			
 			
-			create_faction_from_template = { template = faction_template_generic name = SZC_CEA_faction }
+			create_faction_from_template = { template = faction_template_CEA name = SZC_CEA_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			
 			country_event = {
@@ -32371,7 +32371,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_zuo_faction"
 			
 			
-			create_faction_from_template = { template = faction_template_generic name = SZC_XHP_faction }
+			create_faction_from_template = { template = faction_template_XHP name = SZC_XHP_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			country_event = {
 				id = NKRsichuanFP.48
@@ -32552,7 +32552,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_chen_faction"
 			
 			
-			create_faction_from_template = { template = faction_template_generic name = SZC_NI_faction }
+			create_faction_from_template = { template = faction_template_NI name = SZC_NI_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			country_event = {
 				id = NKRsichuanFP.52
@@ -32769,7 +32769,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_jiang_faction"
 			
 			
-			create_faction_from_template = { template = faction_template_generic name = SZC_AOM_faction }
+			create_faction_from_template = { template = faction_template_AOM name = SZC_AOM_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			country_event = {
 				id = NKRsichuanFP.56
@@ -32993,7 +32993,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_anarkiddy"
 			
 			
-			create_faction_from_template = { template = faction_template_generic name = SZC_WZRC_faction }
+			create_faction_from_template = { template = faction_template_WZRC name = SZC_WZRC_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			country_event = {
 				id = NKRsichuanFP.60
@@ -33257,7 +33257,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_taozi_faction"
 			
 			
-			create_faction_from_template = { template = faction_template_generic name = SZC_YI_faction }
+			create_faction_from_template = { template = faction_template_YI name = SZC_YI_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			country_event = {
 				id = NKRsichuanFP.66

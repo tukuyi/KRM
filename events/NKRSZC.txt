@@ -19025,10 +19025,11 @@ country_event = { #中国希望和我们共进
 			limit = {
 				is_faction_leader = yes
 			}
+			set_faction_name = SZC_NATO_faction
 			add_to_faction = FROM
 		}
 		else = {
-			create_faction = SZC_NATO_faction
+			create_faction_from_template = { template = faction_template_NATO name = SZC_NATO_faction }
 			add_to_faction = FROM
 		}
 	}
@@ -19598,7 +19599,8 @@ country_event = { #拒绝的余波
 		log = "[GetLogInfo]: event NKRsichuanFP.39 option NKRsichuanFP.39.a"
 		name = NKRsichuanFP.39.a
 		leave_faction = yes
-		create_faction = SZC_CTO_faction
+		
+		create_faction_from_template = { template = faction_template_generic name = SZC_CTO_faction }
 		NFA = {
 			leave_faction = yes
 			add_to_faction = SZC
