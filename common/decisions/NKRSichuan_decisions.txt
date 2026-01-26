@@ -3153,7 +3153,10 @@ foreign_politics = {
 			has_completed_focus = SZC_YCP_FORPOL_mandate_heaven_of_china
 			OR = {
 				FROM = {
-					is_ally_with = SZC
+					OR = {
+						is_ally_with = ROOT
+						is_subject_of = ROOT
+					}
 					NOT = { has_country_flag = SZC_was_invited_into_partnership }
 					any_owned_state = {
 						is_capital = yes
@@ -3163,7 +3166,10 @@ foreign_politics = {
 		}
 		target_trigger = {
 			FROM = {
-				is_ally_with = SZC
+				OR = {
+					is_ally_with = ROOT
+					is_subject_of = ROOT
+				}
 				NOT = { has_country_flag = SZC_was_invited_into_partnership }
 				NOT = {
 					is_in_economic_sphere = yes

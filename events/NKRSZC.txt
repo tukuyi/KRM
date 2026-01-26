@@ -19988,6 +19988,11 @@ country_event = { #解放全世界？
 			}
 			
 		}
+		set_cosmetic_tag = SZC_YCP_WFT
+		every_state = {
+			add_claim_by = ROOT
+			enable_state_integration_80_compliance = yes
+		}
 	}
 }
 
@@ -20139,6 +20144,7 @@ country_event = { #大亚理想
 			limit = {
 				is_on_continent = asia
 			}
+			add_claim_by = ROOT
 			enable_state_integration_80_compliance = yes
 		}
 	}
