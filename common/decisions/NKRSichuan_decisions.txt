@@ -3009,19 +3009,18 @@ foreign_politics = {
 		allowed = { is_economic_sphere_leader = yes }
 
 		visible = {
-			has_completed_focus = SZC_pan_dream_of_a_federation
+			OR = {
+				has_completed_focus = SZC_pan_dream_of_a_federation
+				has_country_flag = SZC_YCP_PAF_available
+			}
 		}
 		target_trigger = {
 			FROM = {
-				is_ally_with = ROOT
-				NOT = {
-					is_puppet_of = ROOT
-				}
-				any_owned_state = {
-					is_capital = yes
-					OR = {
-						is_on_continent = asia
-					}
+				is_in_economic_sphere_led_by_ROOT = yes
+				is_in_faction_with = ROOT
+				any_of = {
+					array = global.asian_tags_array
+					value = PREV
 				}
 			}
 		}
@@ -3042,16 +3041,17 @@ foreign_politics = {
 		allowed = { is_economic_sphere_leader = yes }
 
 		visible = {
-			has_completed_focus = SZC_pan_our_finest_hours
+			OR = {
+				has_completed_focus = SZC_pan_our_finest_hours
+				has_country_flag = SZC_YCP_PAF_available
+			}
 		}
 		target_trigger = {
 			FROM = {
 				is_puppet_of = ROOT
-				any_owned_state = {
-					is_capital = yes
-					OR = {
-						is_on_continent = asia
-					}
+				any_of = {
+					array = global.asian_tags_array
+					value = PREV
 				}
 			}
 		}
@@ -3071,6 +3071,7 @@ foreign_politics = {
 			annex_country = {
 				target = FROM
 				transfer_troops = yes
+				transfer_all_unit_leaders_to_FROM = yes
 			}
 		}
 	}

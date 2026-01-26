@@ -15666,7 +15666,7 @@ focus_tree = {
 				any_state_in = {
 					continent = asia
 					
-					is_owned_by_ROOT_or_subject = no
+					is_owned_by_ROOT_or_subject = NO
 				}
 			}
 		}
@@ -15680,6 +15680,7 @@ focus_tree = {
 				limit = {
 					is_on_continent = asia
 				}
+				add_claim_by = ROOT
 				enable_state_integration_80_compliance = yes
 			}
 			country_event = {
@@ -32676,7 +32677,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_world_socialist_goal"
-			#解锁输出法家社民 东亚联邦
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanFP.69
+					days = 15
+				}
+			}
 			country_event = {
 				id = NKRsichuanFP.54
 			}

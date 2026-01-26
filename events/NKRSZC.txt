@@ -20087,7 +20087,7 @@ country_event = { #经互会扩张
 	}
 }
 
-country_event = { #
+country_event = { #联合体构想？
 	id = NKRsichuanFP.69
 	title = NKRsichuanFP.69.t
 	desc = NKRsichuanFP.69.d
@@ -20097,26 +20097,50 @@ country_event = { #
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#这必将实现！
 		log = "[GetLogInfo]: event NKRsichuanFP.69 option NKRsichuanFP.69.a"
 		name = NKRsichuanFP.69.a
+		custom_effect_tooltip = NKRsichuanFP.69.a.tt
+		set_country_flag = SZC_YCP_PAF_available
+	}
+	option = {#这大概不是我们这一代人的使命了
+		log = "[GetLogInfo]: event NKRsichuanFP.69 option NKRsichuanFP.69.b"
+		name = NKRsichuanFP.69.b
+		add_political_power = 150
 	}
 }
 
 
-country_event = { #
+country_event = { #大亚理想
 	id = NKRsichuanFP.70
 	title = NKRsichuanFP.70.t
 	desc = NKRsichuanFP.70.d
 	picture = GFX_report_event_SZC_56
 
+	trigger = {
+		has_country_flag = SZC_YCP_PAF_available
+		NOT = {
+			any_state_in = {
+				continent = asia
+				is_owned_by_ROOT_or_subject = NO
+			}
+		}
+	}
+
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#建立泛亚联盟！
 		log = "[GetLogInfo]: event NKRsichuanFP.70 option NKRsichuanFP.70.a"
 		name = NKRsichuanFP.70.a
+		set_cosmetic_tag = SZC_YCP_PAF
+		every_state = {
+			limit = {
+				is_on_continent = asia
+			}
+			enable_state_integration_80_compliance = yes
+		}
 	}
 }
 
