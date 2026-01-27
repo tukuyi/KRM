@@ -2787,6 +2787,7 @@ country_event = { #统一建国同志会
 		SZC_zhang_lan = {
 			promote_character = social_democrat_subtype
 			promote_character = social_liberal_subtype
+			china_set_character_alignment_chinese_southern_republican = yes
 		}
 		set_party_name = {
 			ideology = social_democrat
@@ -4077,6 +4078,7 @@ country_event = { #南京，朝阳升起
 		add_manpower = -89
 		complete_national_focus = SZC_pan_against_all_odds
 		complete_national_focus = SZC_pan_iron_and_blood
+		mark_focus_tree_layout_dirty = yes
 		add_ideas = {
 			SZC_pan_constitutional_chaos
 		}
@@ -4399,6 +4401,7 @@ country_event = { #就职典礼
 		custom_effect_tooltip = focus_tree_will_change_tt
 		complete_national_focus = SZC_pan_against_all_odds
 		complete_national_focus = SZC_pan_zhang_lan_presidency
+		mark_focus_tree_layout_dirty = yes
 		SZC_zhang_lan = {
 			set_portraits = {
 				civilian = {
@@ -4540,6 +4543,7 @@ country_event = { #就职典礼
 		custom_effect_tooltip = focus_tree_will_change_tt
 		complete_national_focus = SZC_pan_against_all_odds
 		complete_national_focus = SZC_pan_luo_longji_presidency
+		mark_focus_tree_layout_dirty = yes
 		add_stability = 0.1
 		set_politics = {
 			ruling_party = social_liberal
@@ -4737,6 +4741,7 @@ country_event = { #就职典礼
 		custom_effect_tooltip = focus_tree_will_change_tt
 		complete_national_focus = SZC_pan_against_all_odds
 		complete_national_focus = SZC_pan_shen_junru_presidency
+		mark_focus_tree_layout_dirty = yes
 		add_stability = 0.05
 		add_ideas = {
 			SZC_pan_CDL_supremacy
