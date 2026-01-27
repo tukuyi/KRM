@@ -20326,9 +20326,12 @@ country_event = { #党务整顿
 		log = "[GetLogInfo]: event NKRsichuanPI.1 option NKRsichuanPI.1.a"
 		name = NKRsichuanPI.1.a
 		custom_effect_tooltip = NKRsichuanPI.1.tt
-		SZC_YCP_party_issue_setup = yes
-		YCP_party_issue_setup_21 = yes
-		YCP_party_issue_setup_3 = yes
+		hidden_effect = {
+			SZC_YCP_party_issue_setup = yes
+			YCP_party_issue_setup_21 = yes
+			YCP_party_issue_setup_3 = yes
+
+		}
 	}
 	
 
@@ -20337,9 +20340,12 @@ country_event = { #党务整顿
 		name = NKRsichuanPI.1.b
 		custom_effect_tooltip = NKRsichuanPI.1.tt
 		custom_effect_tooltip = NKRsichuanPI.1.tt2
-		SZC_YCP_party_issue_setup = yes
-		YCP_party_issue_setup_2 = yes
-		YCP_party_issue_setup_3 = yes
+		hidden_effect = {
+			SZC_YCP_party_issue_setup = yes
+			YCP_party_issue_setup_2 = yes
+			YCP_party_issue_setup_3 = yes
+
+		}
 		add_political_power = -400
 
 	}
