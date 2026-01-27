@@ -11767,7 +11767,7 @@ focus_tree = {
 				custom_effect_tooltip = tooltip_white_line
 				add_power_balance_value = {
 					id = SZC_CDL_power_balance
-					value = 0.10
+					value = 0.15
 					tooltip_side = SZC_bop_CDL_winning_side
 				}
 			}
@@ -11913,7 +11913,7 @@ focus_tree = {
 				custom_effect_tooltip = tooltip_white_line
 				add_power_balance_value = {
 					id = SZC_CDL_power_balance
-					value = 0.10
+					value = 0.15
 					tooltip_side = SZC_bop_CDL_winning_side
 				}
 			}
@@ -32827,6 +32827,7 @@ focus_tree = {
 				limit = {
 					OR = {
 						state = 408
+						state = 409
 						state = 657
 						state = 560
 						state = 577

@@ -105,6 +105,10 @@ NKR_new_age_of_sturm_drang_achievement = {
 				is_subject_of = ROOT
 				has_country_leader = { character = USA_francis_parker_yockey }
 			}
+			SPR = {
+				is_subject_of = ROOT
+				has_country_leader = { character = SPA_jose_maria_peman }
+			}
 		}
 		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
 	}
