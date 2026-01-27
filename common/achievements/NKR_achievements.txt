@@ -159,7 +159,7 @@ NKR_white_sun_over_mittelafrika_achievement = {
 		if = {
 			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
 			custom_override_tooltip = {
-				tooltip = NKR_unthinkable_president_achievement_tt
+				tooltip = NKR_white_sun_over_mittelafrika_achievement_tt
 				has_country_flag = NKRSZC_joinkmt
 				is_economic_sphere_leader = yes
 				has_completed_focus = SZC_pan_FORPOL_age_of_eagle_and_sun
@@ -200,7 +200,7 @@ NKR_dr_latencys_freak_report_achievement = {
 		if = {
 			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
 			custom_override_tooltip = {
-				tooltip = NKR_unthinkable_president_achievement_tt
+				tooltip = NKR_dr_latencys_freak_report_achievement_tt
 				AND = {
 					has_country_flag = Esoteric_events_complete_1
 					has_country_flag = Esoteric_events_complete_2
