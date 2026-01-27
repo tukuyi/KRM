@@ -22179,15 +22179,16 @@ country_event = { #德属东亚的新星？
 					SZC_recruit_character_effect = yes
 				}
 			}
-			GEA_erwin_rommel = {
-				set_portraits = {
-					army = {
-						large = GFX_portrait_SZC_erwin_rommel_large
-						small = GFX_portrait_SZC_erwin_rommel_small
-					}
+		}
+		GEA_erwin_rommel = { custom_effect_tooltip = character_becomes_a_general }
+		
+		GEA_erwin_rommel = {
+			set_portraits = {
+				army = {
+					large = GFX_portrait_SZC_erwin_rommel_large
+					small = GFX_portrait_SZC_erwin_rommel_small
 				}
 			}
-			GEA_erwin_rommel = { custom_effect_tooltip = character_becomes_a_general }
 		}
 	}
 	option = {#德国人可信不过！
