@@ -11149,7 +11149,7 @@ focus_tree = {
 
 
 	default = no
-	continuous_focus_position = { x = 5350 y = 2250 }
+	continuous_focus_position = { x = 6350 y = 2250 }
 
 	shared_focus = SZC_Chengdu_Chongqing_Railway
 
@@ -15643,8 +15643,10 @@ focus_tree = {
 		available = {
 			NOT = {
 				any_state_in = {
-					continent = asia
-					
+					OR = {
+						continent = asia
+						continent = india
+					}
 					is_owned_by_ROOT_or_ally = no
 				}
 			}
@@ -15657,7 +15659,10 @@ focus_tree = {
 			unlock_decision_tooltip = SZC_CDL_invite_into_federation_system
 			every_state = {
 				limit = {
-					is_on_continent = asia
+					OR = {
+						is_on_continent = asia
+						is_on_continent = india
+					}
 				}
 				add_claim_by = ROOT
 			}
@@ -15685,7 +15690,10 @@ focus_tree = {
 		available = {
 			NOT = {
 				any_state_in = {
-					continent = asia
+					OR = {
+						continent = asia
+						continent = india
+					}
 					
 					is_owned_by_ROOT_or_subject = NO
 				}
@@ -15699,9 +15707,11 @@ focus_tree = {
 			unlock_decision_tooltip = SZC_CDL_invite_into_federation_system
 			every_state = {
 				limit = {
-					is_on_continent = asia
+					OR = {
+						is_on_continent = asia
+						is_on_continent = india
+					}
 				}
-				add_claim_by = ROOT
 				enable_state_integration_80_compliance = yes
 			}
 			country_event = {

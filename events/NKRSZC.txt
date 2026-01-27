@@ -19986,7 +19986,10 @@ country_event = { #大亚理想
 		has_country_flag = SZC_YCP_PAF_available
 		NOT = {
 			any_state_in = {
-				continent = asia
+				OR = {
+					continent = asia
+					continent = india
+				}
 				is_owned_by_ROOT_or_subject = NO
 			}
 		}
@@ -20002,7 +20005,10 @@ country_event = { #大亚理想
 		set_cosmetic_tag = SZC_YCP_PAF
 		every_state = {
 			limit = {
-				is_on_continent = asia
+				OR = {
+					is_on_continent = asia
+					is_on_continent = india
+				}
 			}
 			add_claim_by = ROOT
 			enable_state_integration_80_compliance = yes
