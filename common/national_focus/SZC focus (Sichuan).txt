@@ -64,6 +64,14 @@ focus_tree = {
 				limit = { has_idea = SZC_civil_war_idea }
 				NOT = { has_idea = SZC_civil_war_idea }
 			}
+			hidden_trigger = {
+				NOT = {
+					OR = {
+						has_country_leader = { character = SZC_liu_xiang }
+						has_country_leader = { character = SZC_power_vacuum }
+					}
+				}
+			}
 		}
 		offset = {
 			x = -1
