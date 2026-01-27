@@ -2961,9 +2961,6 @@ foreign_politics = {
 		visible = {
 			hidden_trigger = {
 				FROM = {
-					OR = {
-						any_owned_state = { OR = { is_claim_or_core_of_ROOT = yes } }
-					}
 					any_owned_state = {
 						OR = {
 							is_on_continent = asia
@@ -3203,9 +3200,6 @@ foreign_politics = {
 		visible = {
 			hidden_trigger = {
 				FROM = {
-					OR = {
-						any_owned_state = { OR = { is_claim_or_core_of_ROOT = yes } }
-					}
 					any_owned_state = {
 						OR = {
 							is_on_continent = asia
