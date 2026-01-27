@@ -1324,6 +1324,11 @@ focus_tree = {
 
 		allow_branch = {
 			has_country_flag = SZC_accelerated_department_in_power
+			hidden_trigger = {
+				OR = {
+					has_country_leader = SZC_yang_sen
+				}
+			}
 		}
 		prerequisite = {
 			focus = SZC_New_Infantry_Weapons
