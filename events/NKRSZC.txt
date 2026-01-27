@@ -20567,7 +20567,7 @@ country_event = { #曾琦的崇拜者
 	}
 }
 
-country_event = { #二刘
+country_event = { #二刘一王
     id = NKRsichuanPI.10
     title = NKRsichuanPI.10.t
     desc = NKRsichuanPI.10.d
@@ -20584,14 +20584,21 @@ country_event = { #二刘
 			SZC_liu_yongji = {
 				SZC_recruit_character_effect = yes
 			}
+			SZC_wang_lanseng = {
+				SZC_recruit_character_effect= yes
+			}
 		}
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_liu_dongyan_advisor
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = SZC_liu_yongji_advisor
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = SZC_wang_lanseng_advisor
 		set_temp_variable = { temp_select_token = token:SZC_liu_dongyan }
 		YCP_party_issue_add_S = yes
 		set_temp_variable = { temp_select_token = token:SZC_liu_yongji }
+		YCP_party_issue_add_S = yes
+		set_temp_variable = { temp_select_token = token:SZC_wang_lanseng }
 		YCP_party_issue_add_S = yes
     }
 }
