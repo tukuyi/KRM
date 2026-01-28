@@ -24684,6 +24684,12 @@ focus_tree = {
 				SZC_zeng_qi = {
 					add_trait = {
 						trait = SZC_YCP_literati_in_20C
+						ideology = paternal_autocrat_revolutionary_statist_subtype
+					}
+				}
+				SZC_zeng_qi = {
+					add_trait = {
+						trait = SZC_YCP_literati_in_20C
 						ideology = authoritarian_democrat_statist_subtype
 					}
 				}
@@ -24767,6 +24773,14 @@ focus_tree = {
 				add_trait = {
 					trait = SZC_YCP_machiavelli_today
 					ideology = paternal_autocrat_statist_subtype
+				}
+			}
+			hidden_effect = {
+				SZC_zeng_qi = {
+					add_trait = {
+						trait = SZC_YCP_machiavelli_today
+						ideology = paternal_autocrat_revolutionary_statist_subtype
+					}
 				}
 			}
 			add_popularity = {
@@ -24924,6 +24938,14 @@ focus_tree = {
 				add_trait = {
 					trait = SZC_YCP_the_great_leader
 					ideology = paternal_autocrat_statist_subtype
+				}
+			}
+			hidden_effect = {
+				SZC_zeng_qi = {
+					add_trait = {
+						trait = SZC_YCP_the_great_leader
+						ideology = paternal_autocrat_revolutionary_statist_subtype
+					}
 				}
 			}
 			add_political_power = 50
