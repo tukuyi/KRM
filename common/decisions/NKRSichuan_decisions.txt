@@ -845,6 +845,102 @@ SZC_grand_sichuan_plan_category = {
 }
 
 chinese_unification = {
+	
+	SZC_open_the_port_decision = {
+		allowed = { 
+			always = no
+		 }
+		highlight_states = {
+			highlight_state_targets = { state = FROM }
+		}
+		visible = {
+			ROOT = {
+				owns_state = FROM
+				has_full_control_of_state = FROM
+			}
+		}
+		available = {
+			ROOT = {
+				surrender_progress < 0.01
+			}
+			FROM = {
+				is_core_of = ROOT
+			}
+		}
+		state_target = yes
+		fire_only_once = yes
+		icon = GFX_decision_eng_trade_unions_support
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 50 }
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_open_the_port_decision target: [From.GetName]"
+		}
+		days_remove = 70
+		modifier = {
+			stability_weekly = 0.0010
+			market_liberal_drift = 0.01
+			social_liberal_drift = 0.01
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SZC_open_the_port_decision target: [From.GetName]"
+			FROM = {#111
+				add_dynamic_modifier = {
+					modifier = SZC_open_port_city
+					scope = THIS
+				}
+			}
+		}
+	}
+
+	SZC_inland_sez_decision = {
+		allowed = { 
+			always = no
+		 }
+		highlight_states = {
+			highlight_state_targets = { state = FROM }
+		}
+		visible = {
+			ROOT = {
+				owns_state = FROM
+				has_full_control_of_state = FROM
+			}
+		}
+		available = {
+			ROOT = {
+				surrender_progress < 0.01
+			}
+			FROM = {
+				is_core_of = ROOT
+			}
+		}
+		state_target = yes
+		fire_only_once = yes
+		icon = GFX_decision_eng_trade_unions_support
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 50 }
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_inland_sez_decision target: [From.GetName]"
+		}
+		days_remove = 70
+		modifier = {
+			stability_weekly = 0.0010
+			market_liberal_drift = 0.01
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SZC_inland_sez_decision target: [From.GetName]"
+			FROM = {#111
+				add_dynamic_modifier = {
+					modifier = SZC_open_inland
+					scope = THIS
+				}
+			}
+		}
+	}
+
+
+
 	SZC_resist_the_silver_offensive_mission = { #mission for FROM who's attacking alongside them - can select to bail out early
 		allowed = {
 				always = no
@@ -2961,8 +3057,12 @@ foreign_politics = {
 		visible = {
 			hidden_trigger = {
 				FROM = {
-					OR = {
-						any_owned_state = { OR = { is_claim_or_core_of_ROOT = yes } }
+					NOT = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
 					}
 					any_owned_state = {
 						OR = {
@@ -3203,8 +3303,12 @@ foreign_politics = {
 		visible = {
 			hidden_trigger = {
 				FROM = {
-					OR = {
-						any_owned_state = { OR = { is_claim_or_core_of_ROOT = yes } }
+					NOT = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
 					}
 					any_owned_state = {
 						OR = {
@@ -3253,7 +3357,7 @@ foreign_politics = {
 		visible = {
 			AND = {
 				has_completed_focus = SZC_YCP_FORPOL_expand_yellow_revolution
-				has_country_leader = SZC_zhang_guotao
+				has_country_leader = { character = SZC_zhang_guotao }
 				has_government = syndicalist
 			}
 		}
@@ -3548,12 +3652,11 @@ SZC_YCP_COB_category = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_YCP_advanced_rifle_research"
-			clr_country_flag = SZC_YCP_COB_researching
-			enable_tech_YCP_infantry_weapon = yes
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_YCP_advanced_rifle_research"
 			clr_country_flag = SZC_YCP_COB_researching
+			enable_tech_YCP_infantry_weapon = yes
 		}
 		fixed_random_seed = no
 	}
@@ -3594,12 +3697,11 @@ SZC_YCP_COB_category = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_YCP_hellpod_research"
-			clr_country_flag = SZC_YCP_COB_researching
-			enable_tech_YCP_hellpod = yes
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_YCP_hellpod_research"
 			clr_country_flag = SZC_YCP_COB_researching
+			enable_tech_YCP_hellpod = yes
 		}
 		fixed_random_seed = no
 	}
@@ -3639,14 +3741,13 @@ SZC_YCP_COB_category = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_YCP_advanced_helicopter_research"
-			clr_country_flag = SZC_YCP_COB_researching
-			add_ideas = {
-				SZC_YCP_advanced_helicopter
-			}
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_YCP_advanced_helicopter_research"
 			clr_country_flag = SZC_YCP_COB_researching
+			add_ideas = {
+				SZC_YCP_advanced_helicopter
+			}
 		}
 		fixed_random_seed = no
 	}
@@ -3686,12 +3787,11 @@ SZC_YCP_COB_category = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_YCP_helicarrier_tech_research"
-			clr_country_flag = SZC_YCP_COB_researching
-			enable_tech_YCP_helicarrier = yes
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_YCP_helicarrier_tech_research"
 			clr_country_flag = SZC_YCP_COB_researching
+			enable_tech_YCP_helicarrier = yes
 		}
 		fixed_random_seed = no
 	}

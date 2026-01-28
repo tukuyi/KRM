@@ -91,6 +91,7 @@ country_event = { id = sichuan_events.125 days = 451 random_hours = 288 }
 
 ### Country Leaders ###
 recruit_character = SZC_assorted_leaders
+recruit_character = SZC_assorted_leaders_unique
 
 recruit_character = SZC_yang_angong
 recruit_character = SZC_wu_yuzhang
@@ -681,6 +682,9 @@ recruit_character = SZC_han_xianchu
 recruit_character = SZC_xu_shiyou
 
 ### Character Setup ###
+SZC_assorted_leaders_unique = {
+	retire = yes
+}
 SZC_yang_sen = {
 	china_set_character_alignment_northern_zhili = yes
 	set_character_flag = SZC_armament_leader

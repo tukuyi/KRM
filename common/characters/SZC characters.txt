@@ -48,6 +48,19 @@ characters = {
 			ideology = national_populist_subtype
 		}
 	}
+	#各色领袖2
+	SZC_assorted_leaders_unique = {
+		name = SZC_assorted_leaders
+		portraits = {
+			civilian = {
+				large = GFX_portrait_CHI_lixingshe_civilian_large
+			}
+		}
+		country_leader = {
+			# Placeholder leader, doesn't need desc
+			ideology = syndicalist_yellow_syndicalist_subtype
+		}
+	}
 	#赤心社
 	SZC_yang_angong = {
 		name = SZC_yang_angong
@@ -467,12 +480,7 @@ characters = {
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 2
-			visible = {
-				if = {
-					limit = { tag = SZC }
-					NOT = { has_country_flag = SZC_li_jiayu_unavailable }
-				}
-			}
+			
 		}
 		advisor = {
 			slot = army_chief
@@ -2405,15 +2413,6 @@ characters = {
 			traits = { SZC_liu_bowen_sic }
 		}
 		advisor = {
-			slot = political_advisor
-			idea_token = SZC_liu_bocheng_advisor
-			desc = SZC_liu_bocheng_high_command_desc
-			available = {
-				not_already_hired_except_as = political_advisor
-			}
-			traits = { KR_patriotic_socialist }
-		}
-		advisor = {
 			slot = high_command
 			idea_token = SZC_liu_bocheng_high_command
 			ledger = army
@@ -2502,8 +2501,8 @@ characters = {
 		name = SZC_lv_yifeng
 		portraits = {
 			civilian = {
-				large = GFX_portrait_SZC_lv_yifeng_civilian_large
-				small = GFX_portrait_SZC_lv_yifeng_civilian_small
+				large = GFX_portrait_SZC_lv_yifeng_large
+				small = GFX_portrait_SZC_lv_yifeng_small
 			}
 		}
 		advisor = {
@@ -2583,10 +2582,10 @@ characters = {
 			traits = { KR_patriotic_socialist }
 			available = {
 				NOT = {
-					has_country_leader = SZC_qi_nanxun
+					has_country_leader = { character = SZC_qi_nanxun }
 				}
 			}
-			cost = 100
+			cost = 150
 			desc = SZC_qi_nanxun_desc
 		}
 		country_leader = {
@@ -3428,6 +3427,13 @@ characters = {
 				}
 			}
 		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_chang_yansheng_sic
+			traits = { SZC_refined_social_democrat }
+			desc = SZC_chang_yansheng_desc
+			
+		}
 
 		advisor = {
 			slot = second_in_command
@@ -3561,6 +3567,13 @@ characters = {
 				}
 			}
 		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_zheng_zhenwen_sic
+			traits = { SZC_liaison_to_overseas_merchants }
+			desc = SZC_zheng_zhenwen_desc
+			
+		}
 	}
 
 	#谢澄平
@@ -3595,6 +3608,13 @@ characters = {
 					}
 				}
 			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_xie_chengping_sic
+			traits = { SZC_columbian_constitutionalist }
+			desc = SZC_xie_chengping_desc
+			
 		}
 	}
 
@@ -4851,7 +4871,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_chen_zaidao_commander_desc
-			traits = { light_infantry_officer reckless naval_lineage organizer naval_liason }
+			traits = { war_hero light_infantry_officer reckless naval_lineage organizer naval_liason }
 			skill = 2
 			attack_skill = 3
 			defense_skill = 1
@@ -4866,12 +4886,12 @@ characters = {
 			traits = { SZC_the_arrogant_warlord_sic }
 			cost = 0
 			can_be_fired = no
-			desc = SZC_chen_zaidao_desc
+			desc = SZC_chen_zaidao_commander_desc
 		}
 		advisor = {
 			slot = 	navy_chief
 			idea_token = SZC_chen_zaidao_MHC
-			desc = SZC_chen_zaidao_desc
+			desc = SZC_chen_zaidao_commander_desc
 			ledger = army
 			traits = { KR_navy_chief_decisive_battle_3 }
 			cost = 150
@@ -4966,13 +4986,13 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = SZC_xu_shiyou_desc
+			desc = SZC_xu_shiyou_commander_desc
 			ideology = paternal_autocrat_stratocracy_subtype
 			traits = { CHN_statist_aligned }
 		}
 		corps_commander = {
 			desc = SZC_xu_shiyou_commander_desc
-			traits = { infantry_officer reckless commando }
+			traits = { war_hero infantry_officer reckless commando }
 			skill = 2
 			attack_skill = 4
 			defense_skill = 1
@@ -4987,17 +5007,12 @@ characters = {
 			traits = { SZC_reckless_monk_sic }
 			cost = 0
 			can_be_fired = no
-			desc = SZC_xu_shiyou_desc
-		}
-		country_leader = {
-			desc = SZC_xu_shiyou_desc
-			ideology = paternal_autocrat_stratocracy_subtype
-			traits = { CHN_statist_aligned }
+			desc = SZC_xu_shiyou_commander_desc
 		}
 		advisor = {
 			slot = 	high_command
 			idea_token = SZC_xu_shiyou_MHC
-			desc = SZC_xu_shiyou_desc
+			desc = SZC_xu_shiyou_commander_desc
 			ledger = army
 			traits = { KR_MHC_commando_3 }
 			cost = 150

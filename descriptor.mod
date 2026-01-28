@@ -1,4 +1,4 @@
-version="0.10"
+version="1.0"
 tags={
 	"Alternative History"
 	"Events"
@@ -19,6 +19,7 @@ dependencies={
 	"Kaiserreich Models - Base Game"
 	"Kaiserreich Models - Waking the Tiger DLC"
 }
-name="KR 命运新生"
+name="Kaiserreich: 命运新生"
 picture="Thumbnail.png"
-supported_version="1.15.*"
+supported_version="1.17.*"
+remote_file_id="3654510042"

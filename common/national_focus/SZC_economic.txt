@@ -11,6 +11,11 @@ shared_focus = {
 	y = 0
 
 	available = {
+		hidden_trigger = {
+			NOT = {
+				has_country_leader = { character = SZC_liu_xiang }
+			}
+		}
 		if = {
 			limit = { has_idea = SZC_internal_divisions }
 			NOT = { has_idea = SZC_internal_divisions }
@@ -590,7 +595,6 @@ shared_focus = {
 		custom_effect_tooltip = available_industrial_concern
 		show_ideas_tooltip = tianfu_mines
 	}
-	search_filters = { FOCUS_FILTER_RESEARCH }
 }
 
 shared_focus = {
