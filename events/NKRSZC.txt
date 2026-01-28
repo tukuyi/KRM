@@ -13713,6 +13713,15 @@ country_event = { #至高权力
 		log = "[GetLogInfo]: event NKRsichuan.695 option NKRsichuan.695.a"
 		name = NKRsichuan.695.a
 		custom_effect_tooltip = NKRsichuan.695.tt
+		QIE_hu_shih = {
+			add_advisor_role = {
+				advisor = {
+					slot = second_in_command
+					idea_token = QIE_hu_shih_sic
+					traits = { QIE_the_lone_idealist }
+				}
+			}
+		}
 		activate_advisor = QIE_hu_shih_sic
 		set_country_leader_ideology = market_liberal_clientelist_subtype
 		if = {

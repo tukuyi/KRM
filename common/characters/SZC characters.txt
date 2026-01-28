@@ -2413,15 +2413,6 @@ characters = {
 			traits = { SZC_liu_bowen_sic }
 		}
 		advisor = {
-			slot = political_advisor
-			idea_token = SZC_liu_bocheng_advisor
-			desc = SZC_liu_bocheng_high_command_desc
-			available = {
-				not_already_hired_except_as = political_advisor
-			}
-			traits = { KR_patriotic_socialist }
-		}
-		advisor = {
 			slot = high_command
 			idea_token = SZC_liu_bocheng_high_command
 			ledger = army
@@ -2594,7 +2585,7 @@ characters = {
 					has_country_leader = { character = SZC_qi_nanxun }
 				}
 			}
-			cost = 100
+			cost = 150
 			desc = SZC_qi_nanxun_desc
 		}
 		country_leader = {
