@@ -19995,14 +19995,19 @@ country_event = { #大亚理想
 	picture = GFX_report_event_SZC_PWH_rock
 
 	trigger = {
-		has_country_flag = SZC_YCP_PAF_available
-		NOT = {
-			any_state_in = {
-				OR = {
-					continent = asia
-					continent = india
+		AND = {
+			has_country_flag = SZC_YCP_PAF_available
+			all_state = {
+				limit = {
+					is_on_continent = india
 				}
-				is_owned_by_ROOT_or_subject = NO
+				is_owned_by_ROOT_or_subject = yes
+			}
+			all_state = {
+				limit = {
+					is_on_continent = asia
+				}
+				is_owned_by_ROOT_or_subject = yes
 			}
 		}
 	}

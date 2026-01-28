@@ -15707,14 +15707,17 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {
-				any_state_in = {
-					OR = {
-						continent = asia
-						continent = india
-					}
-					is_owned_by_ROOT_or_ally = no
+			all_state = {
+				limit = {
+					is_on_continent = india
 				}
+				is_owned_by_ROOT_or_ally = yes
+			}
+			all_state = {
+				limit = {
+					is_on_continent = asia
+				}
+				is_owned_by_ROOT_or_ally = yes
 			}
 		}
 
@@ -15754,15 +15757,17 @@ focus_tree = {
 		
 
 		available = {
-			NOT = {
-				any_state_in = {
-					OR = {
-						continent = asia
-						continent = india
-					}
-					
-					is_owned_by_ROOT_or_subject = NO
+			all_state = {
+				limit = {
+					is_on_continent = india
 				}
+				is_owned_by_ROOT_or_subject = yes
+			}
+			all_state = {
+				limit = {
+					is_on_continent = asia
+				}
+				is_owned_by_ROOT_or_subject = yes
 			}
 		}
 

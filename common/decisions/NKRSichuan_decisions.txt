@@ -3118,9 +3118,13 @@ foreign_politics = {
 			FROM = {
 				is_in_economic_sphere_led_by_ROOT = yes
 				is_in_faction_with = ROOT
-				any_of = {
-					array = global.asian_tags_array
-					value = PREV
+				any_state = {
+					is_controlled_by = FROM
+					is_core_of = FROM
+					OR = {
+						is_on_continent = asia
+						is_on_continent = india
+					}
 				}
 			}
 		}
@@ -3149,9 +3153,12 @@ foreign_politics = {
 		target_trigger = {
 			FROM = {
 				is_puppet_of = ROOT
-				any_of = {
-					array = global.asian_tags_array
-					value = PREV
+				any_state = {
+					is_controlled_by = FROM
+					OR = {
+						is_on_continent = asia
+						is_on_continent = india
+					}
 				}
 			}
 		}
@@ -3162,16 +3169,10 @@ foreign_politics = {
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_CDL_integrate_into_panasian_federation"
-			every_state = {
-				limit = {
-					is_controlled_by = FROM
-				}
-				add_core_of = ROOT
-			}
+			
 			annex_country = {
 				target = FROM
 				transfer_troops = yes
-				transfer_all_unit_leaders_to_FROM = yes
 			}
 		}
 	}
