@@ -15214,6 +15214,16 @@ focus_tree = {
 			}
 			set_temp_variable = { coalition_partner_var = token:radical_socialist }
 			add_to_coalition = yes
+			CHI = {
+				CHI_deng_yanda = { CHN_recruit_character_effect = yes }
+				CHI_huang_qixiang = { CHN_recruit_character_effect = yes }
+				CHI_zhou_enlai = { CHN_recruit_character_effect = yes }
+				CHI_dai_anlan = { CHN_recruit_character_effect = yes }
+				CHI_zhang_yunchuan = { CHN_recruit_character_effect = yes }
+				CHI_he_xiangning = { CHN_recruit_character_effect = yes }
+				CHI_peng_zexiang = { CHN_recruit_character_effect = yes }
+				CHI_du_yuming = { CHN_recruit_character_effect = yes }
+			}
 		}
 	}
 
@@ -17315,6 +17325,10 @@ focus_tree = {
 					}
 				}
 			}
+			unlock_decision_tooltip = CHN_pressure_overlord_to_act_decision
+			hidden_effect = {
+				activate_targeted_decision = { target = var:overlord decision = CHN_pressure_overlord_to_act_decision }
+			}
 			effect_tooltip = {
 				activate_targeted_decision = { decision = china_demand_submission target = SHX }
 				activate_targeted_decision = { decision = china_demand_submission target = YUN }
@@ -18088,6 +18102,16 @@ focus_tree = {
 			end_coalition = yes
 			add_idea = {
 				SZC_pan_popular_revolution_idea
+			}
+			CHI = {
+				CHI_deng_yanda = { CHN_recruit_character_effect = yes }
+				CHI_huang_qixiang = { CHN_recruit_character_effect = yes }
+				CHI_zhou_enlai = { CHN_recruit_character_effect = yes }
+				CHI_dai_anlan = { CHN_recruit_character_effect = yes }
+				CHI_zhang_yunchuan = { CHN_recruit_character_effect = yes }
+				CHI_he_xiangning = { CHN_recruit_character_effect = yes }
+				CHI_peng_zexiang = { CHN_recruit_character_effect = yes }
+				CHI_du_yuming = { CHN_recruit_character_effect = yes }
 			}
 		}
 	}
@@ -23280,12 +23304,21 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_expand_dockyard"
-			add_one_random_dockyard = yes
-			add_one_random_dockyard = yes
-			add_one_random_dockyard = yes
-			add_one_random_dockyard = yes
-			add_one_random_dockyard = yes
-			add_one_random_dockyard = yes
+			
+			if = {
+				limit = {
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+			}
 		}
 	}
 
@@ -23341,7 +23374,7 @@ focus_tree = {
 
 	inlay_window = {
 		id = SZC_YCP_inlay_window
-		position = { x = 730 y = 270 }
+		position = { x = 930 y = 270 }
 	}
 
 
@@ -25344,7 +25377,6 @@ focus_tree = {
 					limit = {
 						AND = {
 							has_idea = SZC_YCP_progress_constitution
-							has_country_flag = SZC_YCP_zhang_in_government
 							has_country_flag = SZC_YCP_natpop_available
 							AND = {
 								set_temp_variable = {
@@ -35024,8 +35056,15 @@ focus_tree = {
 					idea = GXC_six_year_programme_idea
 					days = 730
 				}
-				add_one_random_dockyard = yes
-				add_one_random_dockyard = yes
+				if = {
+					limit = {
+						any_owned_state = {
+							is_coastal = yes
+						}
+					}
+					add_one_random_dockyard = yes
+					add_one_random_dockyard = yes
+				}
 			}
 		}
 
@@ -35046,12 +35085,19 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_expand_shipyards"
-				add_one_random_dockyard = yes
-				add_one_random_dockyard = yes
-				add_one_random_dockyard = yes
-				add_one_random_dockyard = yes
-				add_one_random_dockyard = yes
-				add_one_random_dockyard = yes
+				if = {
+					limit = {
+						any_owned_state = {
+							is_coastal = yes
+						}
+					}
+					add_one_random_dockyard = yes
+					add_one_random_dockyard = yes
+					add_one_random_dockyard = yes
+					add_one_random_dockyard = yes
+					add_one_random_dockyard = yes
+					add_one_random_dockyard = yes
+				}
 			}
 		}
 
@@ -35107,10 +35153,17 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-
 				
-				add_one_random_dockyard = yes
-				add_one_random_dockyard = yes
+				if = {
+					limit = {
+						any_owned_state = {
+							is_coastal = yes
+						}
+					}
+				
+					add_one_random_dockyard = yes
+					add_one_random_dockyard = yes
+				}
 			}
 		}
 
@@ -35131,19 +35184,14 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_tide_forged_precision"
-				if = {
+				
+				random_owned_controlled_state = {
 					limit = {
-						any_owned_state = {
-							is_coastal = yes
-						}
+						is_owned_by = SZC
+						can_construct_building = naval_facility
 					}
-					random_owned_controlled_state = {
-						limit = {
-							is_core_of = ROOT
-							can_construct_building = navy_facility
-						}
-						construct_building_in_random_province = { navy_facility = 1 }
-					}
+					prioritize = { 598 }
+					construct_building_in_random_province = { naval_facility = 1 }
 				}
 			}
 		}

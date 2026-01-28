@@ -1301,8 +1301,8 @@ country_event = { #一封威胁信
 		}
 	}
 	option = {#...我别无选择。
-		log = "[GetLogInfo]: event NKRsichuan.118 option NKRsichuan.118.a"
-		name = NKRsichuan.118.a
+		log = "[GetLogInfo]: event NKRsichuan.118 option NKRsichuan.118.b"
+		name = NKRsichuan.118.b
 		hidden_effect = {
 			country_event = {
 				id = NKRsichuan.121
@@ -7054,13 +7054,13 @@ country_event = { #暗流涌动
 		}
 		hidden_effect = {
 			SZC_li_jiayu = {
-				SZC_recruit_character_effect = yes
 				set_portraits = {
 					army = {
 						large = GFX_portrait_SZC_li_jiayu_army_large
 						small = GFX_portrait_SZC_li_jiayu_army_small
 					}
 				}
+				SZC_recruit_character_effect = yes
 				unit_leader_event = { 
 					id = NKRsichuanflavor.22
 					days = 2

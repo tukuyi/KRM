@@ -480,12 +480,7 @@ characters = {
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 2
-			visible = {
-				if = {
-					limit = { tag = SZC }
-					NOT = { has_country_flag = SZC_li_jiayu_unavailable }
-				}
-			}
+			
 		}
 		advisor = {
 			slot = army_chief
@@ -2596,7 +2591,7 @@ characters = {
 			traits = { KR_patriotic_socialist }
 			available = {
 				NOT = {
-					has_country_leader = SZC_qi_nanxun
+					has_country_leader = { character = SZC_qi_nanxun }
 				}
 			}
 			cost = 100
