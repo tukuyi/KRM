@@ -11358,6 +11358,7 @@ country_event = { #让贤
 		}
 		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
 		add_to_coalition = yes
+		activate_advisor = SZC_xie_chengping_sic
 		add_popularity = {
 			ideology = social_liberal
 			popularity = 0.10
@@ -11387,6 +11388,7 @@ country_event = { #年轻的民主
 			ideology = authoritarian_democrat
 			popularity = 0.10
 		}
+		activate_advisor = SZC_zheng_zhenwen_sic
 		hidden_effect = {
 			country_event = {
 				id = NKRsichuanPI.25
