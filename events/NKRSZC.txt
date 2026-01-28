@@ -1870,8 +1870,6 @@ country_event = { #步入权力殿堂
 		complete_national_focus = SZC_pan_revolution_secured
 		mark_focus_tree_layout_dirty = yes
 		hidden_effect = {
-			china_enable_concession_decisions = yes
-			china_enable_outskirts_decisions = yes
 			KUM = {
 				every_core_state = { add_claim_by = ROOT }
 			}
