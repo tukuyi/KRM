@@ -1529,13 +1529,10 @@ chinese_unification = {
 							limit = {
 								has_country_flag = SZC_YCP_xia_real_path
 							}
-							has_completed_focus = SZC_YCP_anarchist_mama_statist_son
-						}
-						else_if = {
-							limit = {
-								has_country_flag = SZC_YCP_xia_real_path
+							OR = {
+								has_completed_focus = SZC_YCP_anarchist_mama_statist_son
+								has_completed_focus = SZC_YCP_dissolve_the_YCP
 							}
-							has_completed_focus = SZC_YCP_dissolve_the_YCP
 						}
 						else_if = {
 							limit = {

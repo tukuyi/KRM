@@ -873,9 +873,21 @@ country_event = { #四川易帜
 		set_country_flag = NKRSZC_joinkmt
 		complete_national_focus = SZC_pan_a_red_sichuan
 		mark_focus_tree_layout_dirty = yes
-		swap_ideas = {
-			remove_idea = SZC_pan_legitimacy_3
-			add_idea = SZC_pan_legitimacy_4
+		if = {
+			limit = {
+				has_completed_focus = SZC_pan_political_tutelage
+			}
+			swap_ideas = {
+				remove_idea = SZC_pan_legitimacy_3
+				add_idea = SZC_pan_legitimacy_4
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = SZC_pan_legitimacy_2
+				add_idea = SZC_pan_legitimacy_4
+			}
+			bypass_national_focus = SZC_pan_political_tutelage
 		}
 		hidden_effect = {
 			country_event = {
@@ -16229,9 +16241,9 @@ country_event = { #青年德意志的复兴
 		annexations_release_republican_germany = yes
 		hidden_effect = {
 			GRU_dolf_sternberger = {
-				set_nationality = GRU
+				set_nationality = var:tag_to_release
 			}
-			GRU = {
+			var:tag_to_release = {
 				GRU_dolf_sternberger = {
 					promote_character = social_democrat_new_legalist_state_socialist_subtype
 				}
