@@ -17365,16 +17365,6 @@ country_event = { #起源之地-姜人
 		}
 		release_targeted_tag = yes
 		if = {
-			limit = {
-				NOT = { original_tag = GER }
-			}
-			hidden_effect = {
-				var:tag_to_release = {
-					country_event = france_puppet_events.1
-				}
-			}
-		}
-		if = {
 			limit = { country_exists = NFA }
 			reverse_add_opinion_modifier = {
 				target = NFA
