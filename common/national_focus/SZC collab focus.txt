@@ -1,0 +1,98 @@
+
+focus_tree = {
+	id = Sichuan_YCP_collab
+	country = {
+		factor = 0
+		modifier = {
+			add = 50
+			# add = 0
+			tag = SZC
+		}
+	}
+
+
+
+	default = no
+	continuous_focus_position = { x = 4350 y = 2250 }
+
+	shared_focus = SZC_Chengdu_Chongqing_Railway
+
+	focus = {
+		id = SZC_YCP_collab_start_the_negotiation
+		icon = GFX_goal_SZC_YCP_collab_start_the_negotiation
+		cost = 1
+
+		x = 1
+		y = 0
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_start_the_negotiation"
+			custom_effect_tooltip = SZC_YCP_collab_start_the_negotiation_tooltip
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_start_peace_propaganda
+		icon = GFX_goal_SZC_YCP_collab_start_peace_propaganda
+		cost = 2
+
+		x = -1
+		y = 1
+		relative_position_id = SZC_YCP_collab_start_the_negotiation
+
+		prerequisite = {
+			focus = SZC_YCP_collab_start_the_negotiation
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_start_peace_propaganda"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_stablize_the_hardliner
+		icon = GFX_goal_SZC_YCP_collab_stablize_the_hardliner
+		cost = 2
+
+		x = 1
+		y = 1
+		relative_position_id = SZC_YCP_collab_start_the_negotiation
+
+		prerequisite = {
+			focus = SZC_YCP_collab_start_the_negotiation
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_stablize_the_hardliner"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_constitutional_democracy_under_sun
+		icon = GFX_goal_SZC_YCP_collab_constitutional_democracy_under_sun
+		cost = 2
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_YCP_collab_start_the_negotiation
+
+		prerequisite = {
+			focus = SZC_YCP_collab_start_peace_propaganda
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_stablize_the_hardliner
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_constitutional_democracy_under_sun"
+			custom_effect_tooltip = constitutional_democracy_under_sun_tt
+		}
+	}
+
+}
