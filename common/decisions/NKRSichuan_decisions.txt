@@ -2969,7 +2969,6 @@ foreign_politics = {
 		}
 		cost = 10
 		days_remove = 7
-		fire_only_once = yes
 		ai_will_do = { base = 500 }
 
 		complete_effect = {
@@ -3047,7 +3046,6 @@ foreign_politics = {
 		ai_will_do = { factor = 50 }
 		target_non_existing = yes
 		cost = 50
-		fire_only_once = yes
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_KMT_invite_into_economic_sphere"
@@ -3105,7 +3103,6 @@ foreign_politics = {
 		ai_will_do = { factor = 50 }
 		target_non_existing = no
 		cost = 150
-		fire_only_once = yes
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_KMT_invite_into_economic_sphere"
@@ -3175,7 +3172,6 @@ foreign_politics = {
 
 		cost = 35
 		days_remove = 30
-		fire_only_once = yes
 		war_with_target_on_remove = yes
 		cancel_if_not_visible = yes
 
@@ -3228,7 +3224,6 @@ foreign_politics = {
 		ai_will_do = { factor = 50 }
 		target_non_existing = yes
 		cost = 250
-		fire_only_once = yes
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_CDL_invite_into_federation_system"
@@ -3262,7 +3257,6 @@ foreign_politics = {
 		ai_will_do = { factor = 50 }
 		target_non_existing = yes
 		cost = 250
-		fire_only_once = yes
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_CDL_integrate_into_panasian_federation"
@@ -3316,7 +3310,6 @@ foreign_politics = {
 		}
 		cost = 10
 		days_remove = 7
-		fire_only_once = yes
 		ai_will_do = { base = 500 }
 
 		complete_effect = {
@@ -3374,7 +3367,6 @@ foreign_politics = {
 		ai_will_do = { factor = 50 }
 		target_non_existing = yes
 		cost = 50
-		fire_only_once = yes
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_YCP_invite_into_economic_sphere"
@@ -3416,7 +3408,6 @@ foreign_politics = {
 
 		cost = 35
 		days_remove = 30
-		fire_only_once = yes
 		war_with_target_on_remove = yes
 		cancel_if_not_visible = yes
 
@@ -3466,7 +3457,6 @@ foreign_politics = {
 		ai_will_do = { factor = 50 }
 		target_non_existing = yes
 		cost = 250
-		fire_only_once = yes
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_YCP_yellow_syndicalization"
