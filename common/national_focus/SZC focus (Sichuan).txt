@@ -11735,7 +11735,7 @@ focus_tree = {
 					id = NKRsichuan.211
 				}
 			}
-			SZC_end_opium_crisis = yes
+			
 			set_country_flag = NKRSZC_remove_ind_tree
 			mark_focus_tree_layout_dirty = yes
 			hidden_effect = { news_event = NKRnews.20 }
@@ -17998,7 +17998,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_revolution_secured"
 			custom_effect_tooltip = SZC_pan_revolution_secured_tooltip
-			SZC_end_opium_crisis = yes
+			
 			set_country_flag = NKRSZC_remove_ind_tree
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -24110,7 +24110,7 @@ focus_tree = {
 					id = NKRsichuan.488
 					days = 15
 				}
-				SZC_end_opium_crisis = yes
+				
 				set_country_flag = NKRSZC_remove_ind_tree
 				mark_focus_tree_layout_dirty = yes
 			}
