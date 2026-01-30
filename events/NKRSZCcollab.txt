@@ -44,3 +44,18 @@
  }
  
 }
+
+country_event = {#
+	id = NKRsichuanCollabDEBUG.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollabDEBUG.1" }
+	title = NKRsichuanCollabDEBUG.2.t
+	desc = NKRsichuanCollabDEBUG.2.d
+	picture = GFX_report_event_SZC_trigroup
+
+	is_triggered_only = yes
+
+	option = {#
+  	 	name = NKRsichuanCollabDEBUG.2.a
+   	}
+}
+
