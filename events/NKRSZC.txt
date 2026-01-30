@@ -1751,8 +1751,10 @@ country_event = { #南京的不满
 			}
 			else = {
 				CHI = {
-					annex_country = ROOT
-					transfer_troops = yes
+					annex_country = {
+						target = ROOT
+						transfer_troops = yes
+					}
 				}
 			}
 		}
