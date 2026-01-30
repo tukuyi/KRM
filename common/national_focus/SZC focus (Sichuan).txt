@@ -21088,8 +21088,10 @@ focus_tree = {
 			change_ruling_party_popularity = yes
 			army_experience = 50
 			hidden_effect = {
-				country_event = NKRsichuanflavor.1
-				days = 3
+				country_event = {
+					id = NKRsichuanflavor.1
+					days = 3
+				}
 			}
 		}
 	}
@@ -21209,8 +21211,10 @@ focus_tree = {
 			}
 			enable_tech_anti_fortification_artillery = yes
 			hidden_effect = {
-				country_event = NKRsichuanflavor.2
-				days = 3
+				country_event = { 
+					id = NKRsichuanflavor.2
+					days = 3
+				}
 			}
 		}
 	}
@@ -21316,8 +21320,10 @@ focus_tree = {
 				producer = SZC
 			}
 			hidden_effect = {
-				country_event = NKRsichuanflavor.4
-				days = 3
+				country_event = {
+					id = NKRsichuanflavor.4
+					days = 3
+				}
 			}
 		}
 	}
@@ -21367,8 +21373,10 @@ focus_tree = {
 			set_technology = { tech_assault_battalion = 1 }
 			add_war_support = 0.05
 			hidden_effect = {
-				country_event = NKRsichuanflavor.5
-				days = 3
+				country_event = {
+					id = NKRsichuanflavor.5
+					days = 3
+				}
 			}
 		}
 	}
@@ -21433,8 +21441,10 @@ focus_tree = {
 				SZC_pan_chuanjun_go_out_idea
 			}
 			hidden_effect = {
-				country_event = NKRsichuanflavor.6
-				days = 3
+				country_event = {
+					id = NKRsichuanflavor.6
+					days = 3
+				}
 			}
 		}
 	}
@@ -21468,8 +21478,10 @@ focus_tree = {
 				add_idea = SZC_pan_new_model_army_idea
 			}
 			hidden_effect = {
-				country_event = NKRsichuanflavor.17
-				days = 3
+				country_event = {
+					id = NKRsichuanflavor.17
+					days = 3
+				}
 			}
 		}
 	}

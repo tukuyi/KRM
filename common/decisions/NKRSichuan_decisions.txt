@@ -2961,7 +2961,6 @@ foreign_politics = {
 						has_socialist_government = yes
 						FROM = { has_socialist_government = yes }
 					}
-					SZC_MT_FROM_has_compatible_government_trigger = yes
 					SZC = {
 						has_completed_focus = SZC_pan_FORPOL_CSAT
 					}
@@ -3312,13 +3311,7 @@ foreign_politics = {
 				OR = {
 					is_in_faction = no
 				}
-				OR = {
-					AND = {
-						has_socialist_government = yes
-						FROM = { has_socialist_government = yes }
-					}
-					SZC_MT_FROM_has_compatible_government_trigger = yes
-				}
+				
 			}
 		}
 		cost = 10
@@ -3744,13 +3737,10 @@ SZC_YCP_COB_category = {
 			consumer_goods_factor = 0.15
 		}
 
-		select_effect = {
-			log = "[GetLogRoot]: Decision select SZC_YCP_advanced_rifle_research"
-			set_country_flag = SZC_YCP_COB_researching
-		}
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_YCP_advanced_rifle_research"
+			set_country_flag = SZC_YCP_COB_researching
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_YCP_advanced_rifle_research"
@@ -3789,13 +3779,9 @@ SZC_YCP_COB_category = {
 			consumer_goods_factor = 0.15
 		}
 
-		select_effect = {
-			log = "[GetLogRoot]: Decision select SZC_YCP_hellpod_research"
-			set_country_flag = SZC_YCP_COB_researching
-		}
-
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_YCP_hellpod_research"
+			set_country_flag = SZC_YCP_COB_researching
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_YCP_hellpod_research"
@@ -3833,13 +3819,9 @@ SZC_YCP_COB_category = {
 			consumer_goods_factor = 0.15
 		}
 
-		select_effect = {
-			log = "[GetLogRoot]: Decision select SZC_YCP_advanced_helicopter_research"
-			set_country_flag = SZC_YCP_COB_researching
-		}
-
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_YCP_advanced_helicopter_research"
+			set_country_flag = SZC_YCP_COB_researching
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_YCP_advanced_helicopter_research"
@@ -3879,18 +3861,15 @@ SZC_YCP_COB_category = {
 			consumer_goods_factor = 0.20
 		}
 
-		select_effect = {
-			log = "[GetLogRoot]: Decision select SZC_YCP_helicarrier_tech_research"
-			set_country_flag = SZC_YCP_COB_researching
-		}
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_YCP_helicarrier_tech_research"
+			set_country_flag = SZC_YCP_COB_researching
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_YCP_helicarrier_tech_research"
 			clr_country_flag = SZC_YCP_COB_researching
-			enable_tech_YCP_helicarrier = yes
+			enable_tech_YCP_helicarrier_tech = yes
 		}
 		fixed_random_seed = no
 	}
