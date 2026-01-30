@@ -19986,23 +19986,7 @@ country_event = { #大亚理想
 	desc = NKRsichuanFP.70.d
 	picture = GFX_report_event_SZC_lassalle
 
-	trigger = {
-		AND = {
-			has_country_flag = SZC_YCP_PAF_available
-			all_state = {
-				limit = {
-					is_on_continent = india
-				}
-				is_owned_by_ROOT_or_subject = yes
-			}
-			all_state = {
-				limit = {
-					is_on_continent = asia
-				}
-				is_owned_by_ROOT_or_subject = yes
-			}
-		}
-	}
+	triggered_only = yes
 	fire_only_once = yes
 	
 

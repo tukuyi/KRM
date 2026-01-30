@@ -2421,6 +2421,104 @@ SZC_YCP_balance_of_power_category = {
 }
 
 chinese_unification = {
+	SZC_control_beijing_mission = {
+		allowed = { 
+			tag = SZC
+			has_country_flag = NKRsichuan_YCPpath
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 608 }
+		}
+		activation = {
+			608 = { is_controlled_by = ROOT }
+			ROOT = {
+				has_war = yes
+			}
+			has_war_with = var:608.owner
+		}
+		available = {
+			608 = { is_controlled_by = ROOT }
+			ROOT = {
+				has_war = yes
+			}
+			has_war_with = var:608.owner
+		}
+		cancel_trigger = {
+			has_war = no
+		}
+		is_good = yes
+		fire_only_once = yes
+		icon = GFX_decision_mission_icon
+		days_mission_timeout = 30
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SZC_control_beijing_mission target: [From.GetName]"
+			608 = {
+				transfer_state_to = ROOT
+			}
+		}
+	}
+	SZC_YCP_PAF_decision = { #CHEN PAF
+		allowed = { tag = SZC }
+
+
+		visible = {
+			has_country_flag = SZC_YCP_PAF_available
+		}
+	
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_80_percent_of_asia_and_india_tt
+				# 初始化变量
+				set_temp_variable = { total_states_count = 0 }
+				set_temp_variable = { controlled_states_count = 0 }
+		
+				# 遍历所有状态并筛选
+				every_state = {
+					limit = {
+						OR = {
+							is_on_continent = india
+							is_on_continent = asia
+						}
+					}
+					ROOT = { add_to_temp_variable = { total_states_count = 1 } }
+				}
+
+				every_state = {
+					limit = {
+						CONTROLLER = {
+							is_owned_and_controlled_by_ROOT_or_subject = yes
+						}
+					}
+					ROOT = { add_to_temp_variable = { controlled_states_count = 1 } }
+				}
+		
+				# 计算 80% 阈值
+				set_temp_variable = { threshold = total_states_count }
+				multiply_temp_variable = { threshold = 0.8 }
+		
+				# 判断是否达标
+				check_variable = {
+					var = controlled_states_count 
+					value = threshold
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		fire_only_once = yes
+		icon = GFX_decision_peace_dove
+
+		cost = 200
+
+
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_NAP_with_federalists_decision"
+			country_event = {
+				id = NKRsichuanFP.70
+			}
+		}
+	}
 	SZC_NAP_with_federalists_decision = { #Potential NAP with
 		allowed = { tag = SZC }
 
@@ -3146,8 +3244,8 @@ foreign_politics = {
 
 		visible = {
 			OR = {
-				has_completed_focus = SZC_pan_our_finest_hours
-				has_country_flag = SZC_YCP_PAF_available
+				has_cosmetic_tag = SZC_PAF
+				has_cosmetic_tag = SZC_YCP_PAF
 			}
 		}
 		target_trigger = {
