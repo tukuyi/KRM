@@ -11434,7 +11434,7 @@ focus_tree = {
 				}
 			}
 			add_offsite_building = { type = arms_factory level = 2 }
-			add_offsite_building = { type = civilian_factory level = 2 }
+			add_offsite_building = { type = industrial_complex level = 2 }
 		}
 	}
 
@@ -11642,7 +11642,7 @@ focus_tree = {
 				add_to_array = { ROOT.china_possible_targets_array = HNN }
 				activate_targeted_decision = { target = HNN decision = china_attack_decision }
 			}
-			custom_effect_tooltip = SZC_pan_march_east_tooltip
+			custom_effect_tooltip = SZC_pan_march_huxiang_tooltip
 			if = {
 				limit = {
 					has_completed_focus = SZC_pan_march_east
@@ -21171,7 +21171,7 @@ focus_tree = {
 				name = SZC_pan_focus_on_artillery_power
 				bonus = 0.75
 				uses = 1
-				category = artillery_tech
+				category = artillery
 			}
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
@@ -21234,6 +21234,7 @@ focus_tree = {
 			add_stability = -0.05
 			add_war_support = 0.1
 			add_command_power = 50
+			create_intelligence_agency = yes
 			upgrade_intelligence_agency = upgrade_psycho_warfare
 			hidden_effect = {
 				country_event = NKRsichuanflavor.3
