@@ -15707,17 +15707,42 @@ focus_tree = {
 		}
 
 		available = {
-			all_state = {
-				limit = {
-					is_on_continent = india
+			custom_trigger_tooltip = {
+				tooltip = has_80_percent_of_asia_and_india_tt
+				# 初始化变量
+				set_temp_variable = { total_states_count = 0 }
+				set_temp_variable = { controlled_states_count = 0 }
+		
+				# 遍历所有状态并筛选
+				every_state = {
+					limit = {
+						OR = {
+							is_on_continent = india
+							is_on_continent = asia
+						}
+					}
+					ROOT = { add_to_temp_variable = { total_states_count = 1 } }
 				}
-				is_owned_by_ROOT_or_ally = yes
-			}
-			all_state = {
-				limit = {
-					is_on_continent = asia
+
+				every_state = {
+					limit = {
+						CONTROLLER = {
+							is_owned_and_controlled_by_ROOT_or_subject = yes
+						}
+					}
+					ROOT = { add_to_temp_variable = { controlled_states_count = 1 } }
 				}
-				is_owned_by_ROOT_or_ally = yes
+		
+				# 计算 80% 阈值
+				set_temp_variable = { threshold = total_states_count }
+				multiply_temp_variable = { threshold = 0.8 }
+		
+				# 判断是否达标
+				check_variable = {
+					var = controlled_states_count 
+					value = threshold
+					compare = greater_than_or_equals
+				}
 			}
 		}
 
@@ -15757,17 +15782,43 @@ focus_tree = {
 		
 
 		available = {
-			all_state = {
-				limit = {
-					is_on_continent = india
+			
+			custom_trigger_tooltip = {
+				tooltip = has_80_percent_of_asia_and_india_tt
+				# 初始化变量
+				set_temp_variable = { total_states_count = 0 }
+				set_temp_variable = { controlled_states_count = 0 }
+		
+				# 遍历所有状态并筛选
+				every_state = {
+					limit = {
+						OR = {
+							is_on_continent = india
+							is_on_continent = asia
+						}
+					}
+					ROOT = { add_to_temp_variable = { total_states_count = 1 } }
 				}
-				is_owned_by_ROOT_or_subject = yes
-			}
-			all_state = {
-				limit = {
-					is_on_continent = asia
+
+				every_state = {
+					limit = {
+						CONTROLLER = {
+							is_owned_and_controlled_by_ROOT_or_subject = yes
+						}
+					}
+					ROOT = { add_to_temp_variable = { controlled_states_count = 1 } }
 				}
-				is_owned_by_ROOT_or_subject = yes
+		
+				# 计算 80% 阈值
+				set_temp_variable = { threshold = total_states_count }
+				multiply_temp_variable = { threshold = 0.8 }
+		
+				# 判断是否达标
+				check_variable = {
+					var = controlled_states_count 
+					value = threshold
+					compare = greater_than_or_equals
+				}
 			}
 		}
 
