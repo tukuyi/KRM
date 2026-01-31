@@ -5471,6 +5471,12 @@ country_event = { #解散民盟
 			name = SZC_CDLPRP_party
 			long_name = SZC_CDLPRP_party_long
 		}
+		GXC = {
+			GXC_zhang_dongsun = {
+				SZC_recruit_character_effect = yes
+			}
+		}
+		activate_advisor = GXC_zhang_dongsun_sic
 	}
 }
 
@@ -8967,7 +8973,7 @@ country_event = { #计票之时
 				limit = {
 					is_power_balance_in_range = {
 						id = SZC_YCP_power_balance
-						range < SZC_bop_li_stronger
+						range < SZC_bop_li_bit_stronger
 					}
 				}
 				country_event = {
@@ -8979,7 +8985,7 @@ country_event = { #计票之时
 				limit = {
 					is_power_balance_in_range = {
 						id = SZC_YCP_power_balance
-						range > SZC_bop_zeng_stronger
+						range > SZC_bop_zeng_bit_stronger
 					}
 				}
 				country_event = {

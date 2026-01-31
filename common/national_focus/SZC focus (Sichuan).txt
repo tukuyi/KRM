@@ -29334,12 +29334,6 @@ focus_tree = {
 					ideology = social_democrat
 					popularity = 0.25
 				}
-				GXC = {
-					GXC_zhang_dongsun = {
-						SZC_recruit_character_effect = yes
-					}
-				}
-				activate_advisor = GXC_zhang_dongsun_sic
 			}
 		}
 	}
@@ -33080,6 +33074,26 @@ focus_tree = {
 					}
 				}
 				add_claim_by = ROOT
+			}
+			hidden_effect = {
+				
+			every_state = {
+				limit = {
+					OR = {
+						state = 408
+						state = 409
+						state = 657
+						state = 560
+						state = 577
+						state = 537
+						state = 561
+						state = 1042
+						state = 1111
+					}
+					is_owned_by_ROOT_or_subject = yes
+				}
+				transfer_state_to = ROOT
+			}
 			}
 			
 			
