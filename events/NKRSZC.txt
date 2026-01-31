@@ -347,12 +347,21 @@ country_event = { #刘神仙
 		set_politics = {
 			ruling_party = national_populist
 		}
+		set_party_name = {
+			ideology = national_populist
+			name = SZC_KMD_party
+			long_name = SZC_KMD_party_long
+		}
 		SZC_liu_congyun = {
-			promote_character = national_populist_subtype
+			SZC_recruit_character_effect = yes
+			promote_character = national_populist_kongmengdao_subtype
 		}
 		swap_ideas = {
 			remove_idea = SZC_after_liu
 			add_idea = SZC_after_liu_2
+		}
+		SZC_pan_wenhua = {
+			kill = yes
 		}
 	}
 }
