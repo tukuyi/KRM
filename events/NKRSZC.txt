@@ -1749,9 +1749,7 @@ country_event = { #南京的不满
 		hidden_effect = {
 			if = {
 				limit = {
-					RKT = {
-						exists = no
-					}
+					NOT = { country_exists = RKT } 
 				}
 				country_event = {
 					id = NKRsichuan.138
