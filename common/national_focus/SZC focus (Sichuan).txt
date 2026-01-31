@@ -35600,3 +35600,515 @@ focus_tree = {
 
 
 }
+
+focus_tree = {
+	id = Sichuan_Clique_KongMengDao
+	country = {
+		factor = 0
+		modifier = {
+			add = 50
+			tag = SZC
+		}
+	}
+
+
+	default = no
+	continuous_focus_position = { x = 6350 y = 2250 }
+
+	shared_focus = SZC_Chengdu_Chongqing_Railway
+
+
+	focus = {
+		id = SZC_KMD_victory_of_shenbing
+		icon = GFX_goal_SZC_KMD_victory_of_shenbing
+		cost = 0
+
+		x = 3
+		y = 0
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_victory_of_shenbing"
+			custom_effect_tooltip = SZC_KMD_victory_of_shenbing_tooltip
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_seize_government
+		icon = GFX_goal_SZC_KMD_seize_government
+		cost = 4
+
+		x = -1
+		y = 1
+
+		relative_position_id = SZC_KMD_victory_of_shenbing
+
+		prerequisite = {
+			focus = SZC_KMD_victory_of_shenbing
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_seize_government"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_subject_army
+		icon = GFX_goal_SZC_KMD_subject_army
+		cost = 4
+
+		x = 1
+		y = 1
+
+		relative_position_id = SZC_KMD_victory_of_shenbing
+
+		prerequisite = {
+			focus = SZC_KMD_victory_of_shenbing
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_subject_army"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_arrest_heretics
+		icon = GFX_goal_SZC_KMD_arrest_heretics
+		cost = 4
+
+		x = -3
+		y = 2
+
+		relative_position_id = SZC_KMD_victory_of_shenbing
+
+		prerequisite = {
+			focus = SZC_KMD_seize_government
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_arrest_heretics"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_expand_KMD_influence
+		icon = GFX_goal_SZC_KMD_expand_KMD_influence
+		cost = 4
+
+		x = 0
+		y = 2
+
+		relative_position_id = SZC_KMD_victory_of_shenbing
+
+		prerequisite = {
+			focus = SZC_KMD_seize_government
+			focus = SZC_KMD_subject_army
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_expand_KMD_influence"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_arise_shenbings
+		icon = GFX_goal_SZC_KMD_arise_shenbings
+		cost = 4
+
+		x = 3
+		y = 2
+
+		relative_position_id = SZC_KMD_victory_of_shenbing
+
+		prerequisite = {
+			focus = SZC_KMD_subject_army
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_arise_shenbings"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_time_is_running
+		icon = GFX_goal_SZC_KMD_time_is_running
+		cost = 4
+
+		x = 0
+		y = 3
+
+		relative_position_id = SZC_KMD_victory_of_shenbing
+
+		prerequisite = {
+			focus = SZC_KMD_arrest_heretics
+		}
+		prerequisite = {
+			focus = SZC_KMD_expand_KMD_influence
+		}
+		prerequisite = {
+			focus = SZC_KMD_arise_shenbings
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_time_is_running"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_doomday_is_near
+		icon = GFX_goal_SZC_KMD_doomday_is_near
+		cost = 4
+
+		x = 0
+		y = 4
+
+		relative_position_id = SZC_KMD_victory_of_shenbing
+
+		prerequisite = {
+			focus = SZC_KMD_time_is_running
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_doomday_is_near"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_his_word_for_eternality
+		icon = GFX_goal_SZC_KMD_his_word_for_eternality
+		cost = 4
+
+		x = -4
+		y = 1
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_doomday_is_near
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_his_word_for_eternality"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_gods_arrive
+		icon = GFX_goal_SZC_KMD_gods_arrive
+		cost = 4
+
+		x = -5
+		y = 2
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_his_word_for_eternality
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_gods_arrive"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_kongmeng_awakens
+		icon = GFX_goal_SZC_KMD_gods_arrive
+		cost = 4
+
+		x = -5
+		y = 3
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_gods_arrive
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_kongmeng_awakens"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_dare_to_die
+		icon = GFX_goal_SZC_KMD_dare_to_die
+		cost = 4
+
+		x = -3
+		y = 2
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_his_word_for_eternality
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_dare_to_die"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_yisiyueduoyuegaoming
+		icon = GFX_goal_SZC_KMD_yisiyueduoyuegaoming
+		cost = 4
+
+		x = -3
+		y = 3
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_dare_to_die
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_yisiyueduoyuegaoming"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_republic_against_republic
+		icon = GFX_goal_SZC_KMD_republic_against_republic
+		cost = 4
+
+		x = 0
+		y = 1
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_doomday_is_near
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_hrepublic_against_republic"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_create_value
+		icon = GFX_goal_SZC_KMD_create_value
+		cost = 4
+
+		x = -1
+		y = 2
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_republic_against_republic
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_create_value"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_incorporating_civilian_parties
+		icon = GFX_goal_SZC_KMD_incorporating_civilian_parties
+		cost = 4
+
+		x = -1
+		y = 3
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_create_value
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_incorporating_civilian_parties"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_claim_salvation_government
+		icon = GFX_goal_SZC_KMD_claim_salvation_government
+		cost = 4
+
+		x = 1
+		y = 2
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_republic_against_republic
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_claim_salvation_government"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_popular_movement_against_injustice
+		icon = GFX_goal_SZC_KMD_popular_movement_against_injustice
+		cost = 4
+
+		x = 1
+		y = 3
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_claim_salvation_government
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_popular_movement_against_injustice"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_rise_again_never_surrender
+		icon = GFX_goal_SZC_KMD_his_word_for_eternality
+		cost = 4
+
+		x = 4
+		y = 1
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_doomday_is_near
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_rise_again_never_surrender"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_wind_follows_tiger
+		icon = GFX_goal_SZC_KMD_his_word_for_eternality
+		cost = 4
+
+		x = 3
+		y = 2
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_rise_again_never_surrender
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_wind_follows_tiger"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_smiling_tigers_legacy
+		icon = GFX_goal_SZC_KMD_smiling_tigers_legacy
+		cost = 4
+
+		x = 3
+		y = 3
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_wind_follows_tiger
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_smiling_tigers_legacy"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_cloud_follows_dragon
+		icon = GFX_goal_SZC_KMD_cloud_follows_dragon
+		cost = 4
+
+		x = 5
+		y = 2
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_rise_again_never_surrender
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_cloud_follows_dragon"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_blackfishs_legacy
+		icon = GFX_goal_SZC_KMD_blackfishs_legacy
+		cost = 4
+
+		x = 5
+		y = 3
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_cloud_follows_dragon
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_blackfishs_legacy"
+			
+		}
+	}
+
+	
+
+	focus = {
+		id = SZC_KMD_cheers_for_justice_wins
+		icon = GFX_goal_SZC_KMD_kongmeng_supremacy
+		cost = 4
+
+		x = 0
+		y = 4
+
+		relative_position_id = SZC_KMD_doomday_is_near
+
+		prerequisite = {
+			focus = SZC_KMD_kongmeng_awakens
+			focus = SZC_KMD_yisiyueduoyuegaoming
+			focus = SZC_KMD_incorporating_civilian_parties
+			focus = SZC_KMD_popular_movement_against_injustice
+			focus = SZC_KMD_smiling_tigers_legacy
+			focus = SZC_KMD_blackfishs_legacy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_cheers_for_justice_wins"
+			
+		}
+	}
+
+}
