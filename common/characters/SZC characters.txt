@@ -2942,27 +2942,6 @@ characters = {
 			desc = SZC_xia_daoping_desc
 		}
 	}
-	#刘丛云
-	SZC_liu_congyun = {
-		name = SZC_liu_congyun
-		portraits = {
-			civilian = {
-				small = GFX_portrait_SZC_liu_congyun_small
-				large = GFX_portrait_SZC_liu_congyun_large
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SZC_liu_congyun_advisor
-			traits = { KR_silent_workhorse }
-			desc = SZC_liu_congyun_desc
-		}
-		country_leader = {
-			desc = SZC_liu_congyun_desc
-			ideology = national_populist_kongmengdao_subtype
-			traits = { CHN_non_aligned }
-		}
-	}
 
 
 
@@ -5018,6 +4997,232 @@ characters = {
 			cost = 150
 		}
 	}
+	#刘丛云
+	SZC_liu_congyun = {
+		name = SZC_liu_congyun
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_liu_congyun_small
+				large = GFX_portrait_SZC_liu_congyun_large
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_liu_congyun_advisor
+			traits = { KR_silent_workhorse }
+			desc = SZC_liu_congyun_desc
+		}
+		country_leader = {
+			desc = SZC_liu_congyun_desc
+			ideology = national_populist_kongmengdao_subtype
+			traits = { CHN_non_aligned }
+		}
+	}
+
+	#刘成勋
+	SZC_liu_chengxun = {
+		name = SZC_liu_chengxun
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_liu_chengxun_large
+				small = GFX_portrait_SZC_liu_chengxun_small
+			}
+		}
+		country_leader = {
+			desc = SZC_liu_chengxun_desc
+			ideology = paternal_autocrat_subtype
+			traits = { CHN_non_aligned }
+		}
+		corps_commander = {
+			desc = SZC_liu_chengxun_desc
+			traits = { war_hero infantry_officer reckless commando }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_liu_chengxun_sic
+			ledger = army
+			traits = {  }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_liu_chengxun_desc
+		}
+		advisor = {
+			slot = 	high_command
+			idea_token = SZC_liu_chengxun_army_chief
+			desc = SZC_liu_chengxun_desc
+			ledger = army
+			traits = { KR_army_chief_morale_2 }
+			cost = 150
+		}
+	}
+
+	#蒋上朴
+	SZC_jiang_shangpu = {
+		name = SZC_jiang_shangpu
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_jiang_shangpu_large
+				small = GFX_portrait_SZC_jiang_shangpu_small
+			}
+		}
+		country_leader = {
+			desc = SZC_jiang_shangpu_desc
+			ideology = authoritarian_democrat_subtype
+			traits = { CHN_non_aligned }
+		}
+		corps_commander = {
+			desc = SZC_jiang_shangpu_desc
+			traits = { war_hero infantry_officer  }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_jiang_shangpu_sic
+			ledger = army
+			traits = {  }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_jiang_shangpu_desc
+		}
+		advisor = {
+			slot = 	high_command
+			idea_token = SZC_jiang_shangpu_MHC
+			desc = SZC_jiang_shangpu_desc
+			ledger = army
+			traits = { KR_MHC_army_staffer_1 }
+			cost = 150
+		}
+	}
+
+	#刘晓岚
+	SZC_liu_xiaolan = {
+		name = SZC_liu_xiaolan
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_liu_xiaolan_large
+				small = GFX_portrait_SZC_liu_xiaolan_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_liu_xiaolan_desc
+			traits = { irregulars_officer  }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = 	high_command
+			idea_token = SZC_liu_xiaolan_MHC
+			desc = SZC_liu_xiaolan_desc
+			ledger = army
+			traits = { KR_MHC_cavalry_2 }
+			cost = 150
+		}
+	}
+
+	#刘晓岚
+	SZC_wu_shantang = {
+		name = SZC_wu_shantang
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_wu_shantang_large
+				small = GFX_portrait_SZC_wu_shantang_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_wu_shantang_desc
+			traits = { irregulars_officer reckless }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = 	high_command
+			idea_token = SZC_liu_xiaolan_MHC
+			desc = SZC_liu_xiaolan_desc
+			ledger = army
+			traits = { KR_MHC_irregular_2 }
+			cost = 150
+		}
+	}
+
+	#关羽
+	SZC_guan_yu = {
+		name = SZC_guan_yu
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_guan_yu_large
+				small = GFX_portrait_SZC_guan_yu_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_guan_yu_desc
+			traits = { irregulars_officer reckless }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	#黄忠
+	SZC_huang_zhong = {
+		name = SZC_huang_zhong
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_huang_zhong_large
+				small = GFX_portrait_SZC_huang_zhong_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_huang_zhong_desc
+			traits = { irregulars_officer reckless }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+	#岳飞
+	SZC_yue_fei = {
+		name = SZC_yue_fei
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_yue_fei_large
+				small = GFX_portrait_SZC_yue_fei_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_yue_fei_desc
+			traits = { irregulars_officer reckless }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+
+	############################
 
 	#MMIC四川分署
 	SZC_MMIC = {
