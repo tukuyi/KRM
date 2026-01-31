@@ -363,6 +363,25 @@ country_event = { #刘神仙
 		SZC_pan_wenhua = {
 			kill = yes
 		}
+		hidden_effect = {
+			SZC_liu_chengxun = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_jiang_shangpu = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_liu_xiaolan = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_wu_shantang = {
+				SZC_recruit_character_effect = yes
+			}
+		}
+		activate_advisor = SZC_liu_chengxun_sic
+		SZC_liu_chengxun = { custom_effect_tooltip = character_becomes_a_general }
+		SZC_jiang_shangpu = { custom_effect_tooltip = character_becomes_a_general }
+		SZC_liu_xiaolan = { custom_effect_tooltip = character_becomes_a_general }
+		SZC_wu_shantang = { custom_effect_tooltip = character_becomes_a_general }
 	}
 }
 
