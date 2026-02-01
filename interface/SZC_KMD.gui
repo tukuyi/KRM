@@ -1,0 +1,126 @@
+guiTypes = {
+	### Trouble in Liangguang GUI ###
+	containerWindowType = {
+		name = "SZC_KMD_god_arrive_container"
+		size = { width = 100%% height = 554 }
+
+		iconType = {
+			name = "SZC_KMD_god_arrive_pictures"
+			position = { x = 280 y = 30 }
+			spriteType = GFX_SZC_KMD_god_arrive_pictures
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "SZC_KMD_god_arrive_map_total_textbox"
+			position = { x = -15 y = 270 }
+			orientation = CENTER_UP
+			text = "GXC_situation_in_liangguang_total_text"
+			font = "hoi_24header"
+			format = center
+			maxWidth = 300
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "SZC_KMD_god_arrive_map_container"
+			position = { x = 0 y = 20 }
+			size = { width = 280 height = 340 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_decisions_bg_small"
+				alwaystransparent = yes
+			}
+
+			containerWindowType = {
+				name = "SZC_KMD_god_arrive_map_title_container"
+				position = { x = 1 y = 0 }
+				size = { width = 278 height = 30 }
+
+				background = {
+					name = "background"
+					spriteType = "GFX_tiled_header_1"
+					alwaystransparent = yes
+				}
+
+				instantTextBoxType = {
+					name = "SZC_KMD_god_arrive_map_title_container_textbox"
+					position = { x = -126 y = 2 }
+					orientation = CENTER_UP
+					text = "GXC_situation_in_liangguang_title_text"
+					font = "hoi_24header"
+					format = left
+					maxWidth = 300
+					alwaystransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "SZC_KMD_god_arrive_map_description_container"
+				position = { x = 1 y = 180 }
+				size = { width = 288 height = 30 }
+
+				instantTextBoxType = {
+					name = "SZC_KMD_god_arrive_map_description_container_textbox"
+					position = { x = -126 y = 2 }
+					orientation = CENTER_UP
+					text = "GXC_situation_in_liangguang_description_text"
+					font = "hoi_16mbs"
+					format = left
+					maxWidth = 300
+					alwaystransparent = yes
+				}
+			}
+
+			iconType = {
+				name = "SZC_KMD_god_arrive_outline"
+				position = { x = 37 y = 30 }
+				spriteType = GFX_SZC_KMD_god_arrive_outline
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "SZC_KMD_god_arrive_state_nanning"
+				position = { x = 85 y = 74 }
+				spriteType = GFX_SZC_KMD_god_arrive_state_nanning
+				pdx_tooltip = GXC_liangguang_state_nanning_tt
+			}
+
+			iconType = {
+				name = "SZC_KMD_god_arrive_state_guangzhou"
+				position = { x = 137 y = 71 }
+				spriteType = GFX_SZC_KMD_god_arrive_state_guangzhou
+				pdx_tooltip = GXC_liangguang_state_guangzhou_tt
+			}
+
+			iconType = {
+				name = "SZC_KMD_god_arrive_state_baise"
+				position = { x = 42 y = 53 }
+				spriteType = GFX_SZC_KMD_god_arrive_state_baise
+				pdx_tooltip = GXC_liangguang_state_baise_tt
+			}
+
+			iconType = {
+				name = "SZC_KMD_god_arrive_state_guilin"
+				position = { x = 82 y = 35 }
+				spriteType = GFX_SZC_KMD_god_arrive_state_guilin
+				pdx_tooltip = GXC_liangguang_state_guilin_tt
+			}
+
+			iconType = {
+				name = "SZC_KMD_god_arrive_state_shaoguan"
+				position = { x = 157 y = 48 }
+				spriteType = GFX_SZC_KMD_god_arrive_state_shaoguan
+				pdx_tooltip = GXC_liangguang_state_shaoguan_tt
+			}
+
+			iconType = {
+				name = "SZC_KMD_god_arrive_state_haikou"
+				position = { x = 84 y = 102 }
+				spriteType = GFX_SZC_KMD_god_arrive_state_haikou
+				pdx_tooltip = GXC_liangguang_state_haikou_tt
+			}
+		}
+	}
+}

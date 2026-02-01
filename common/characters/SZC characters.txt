@@ -2510,6 +2510,11 @@ characters = {
 			idea_token = SZC_lv_yifeng_advisor
 			traits = { SZC_come_from_nanking }
 			can_be_fired = no
+			available = {
+				NOT = {
+					has_war_with = CHI
+				}
+			}
 		}
 	}
 	#李宏锟
