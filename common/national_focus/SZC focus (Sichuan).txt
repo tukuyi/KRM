@@ -12349,6 +12349,11 @@ focus_tree = {
 				custom_effect_tooltip = SZC_pan_changyou_is_helpful_tt
 				custom_effect_tooltip = tooltip_white_line
 				
+				add_power_balance_value = {
+					id = SZC_CDL_power_balance
+					value = -0.05
+					tooltip_side = SZC_bop_PWH_winning_side
+				}
 				add_one_random_civilian_factory = yes
 				add_one_random_civilian_factory = yes
 				add_political_power = -50
