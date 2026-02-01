@@ -3867,6 +3867,28 @@ SZC_YCP_COB_category = {
 
 SZC_KMD_god_arrive_category = {
 	
+	SZC_KMD_long_live_kongmengdao = {
+		icon = generic_ignite_civil_war
+		allowed = { tag = SZC }
+
+		visible = {
+			# has_country_flag = SZC_KMD_gods_arrive_available
+			always = yes
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete SZC_KMD_long_live_kongmengdao"
+		}
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove SZC_KMD_long_live_kongmengdao"
+		}
+	}
 
 
 }

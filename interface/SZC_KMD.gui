@@ -1,126 +1,123 @@
 guiTypes = {
 	### Trouble in Liangguang GUI ###
 	containerWindowType = {
-		name = "SZC_KMD_god_arrive_container"
-		size = { width = 100%% height = 554 }
+		name = "SZC_KMD_god_arrive_gui"
+		size = { width = 100%% height = 480 }
+		
 
-		iconType = {
-			name = "SZC_KMD_god_arrive_pictures"
-			position = { x = 280 y = 30 }
-			spriteType = GFX_SZC_KMD_god_arrive_pictures
-			alwaystransparent = yes
+
+		
+		containerWindowType = {
+			name = "SZC_KMD_god_arrive_grid_container"
+			position = { x = 5 y = -20 }
+			size = { width = 500 height = 480 }
+
+			verticalScrollbar = "right_vertical_slider"	
+			smooth_scrolling = yes
+			background = {
+				name = "Background"
+				spriteType ="GFX_tiled_window_transparent"
+				alwaystransparent = yes
+			}
+
+			gridboxtype = {
+				name = "SZC_KMD_GOD_main_gridbox"
+				position = { x = 0 y = 0 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 166 height = 230 }
+				max_slots_horizontal = 3
+				format = "UPPER_LEFT"
+			}
+
+			
+
 		}
+	}
 
-		instantTextBoxType = {
-			name = "SZC_KMD_god_arrive_map_total_textbox"
-			position = { x = -15 y = 270 }
-			orientation = CENTER_UP
-			text = "GXC_situation_in_liangguang_total_text"
-			font = "hoi_24header"
-			format = center
-			maxWidth = 300
+	containerWindowType = {
+		name = "SZC_KMD_GOD_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 166 height = 222 }
+		orientation = UPPER_LEFT
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_thin_border2"
+		}
+		containerWindowType = {
+			name = "SZC_KMD_god_arrive_entry_name_container"
+			position = { x = 7 y = 5 }
+			size = { width = 152 height = 30 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_header_1"
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "SZC_KMD_god_arrive_entry_name_container_textbox"
+				position = { x = -126 y = 2 }
+				orientation = CENTER_UP
+				text = "[GetKMDGodName]"
+				font = "hoi_24header"
+				format = center
+				maxWidth = 300
+				alwaystransparent = yes
+			}
+		}
+		iconType = {
+			name = "SZC_KMD_god_arrive_icon"
+			position = { x = 37 y = 40 }
+			spriteType = GFX_SZC_KMD_god_arrive_icon
 			alwaystransparent = yes
 		}
 
 		containerWindowType = {
-			name = "SZC_KMD_god_arrive_map_container"
-			position = { x = 0 y = 20 }
-			size = { width = 280 height = 340 }
+			name = SZC_KMD_action_button_panel
+			position = { x = 5 y = 175 }
 
-			background = {
-				name = "background"
-				spriteType = "GFX_tiled_decisions_bg_small"
-				alwaystransparent = yes
-			}
-
-			containerWindowType = {
-				name = "SZC_KMD_god_arrive_map_title_container"
-				position = { x = 1 y = 0 }
-				size = { width = 278 height = 30 }
-
-				background = {
-					name = "background"
-					spriteType = "GFX_tiled_header_1"
-					alwaystransparent = yes
-				}
-
-				instantTextBoxType = {
-					name = "SZC_KMD_god_arrive_map_title_container_textbox"
-					position = { x = -126 y = 2 }
-					orientation = CENTER_UP
-					text = "GXC_situation_in_liangguang_title_text"
-					font = "hoi_24header"
-					format = left
-					maxWidth = 300
-					alwaystransparent = yes
-				}
-			}
-
-			containerWindowType = {
-				name = "SZC_KMD_god_arrive_map_description_container"
-				position = { x = 1 y = 180 }
-				size = { width = 288 height = 30 }
-
-				instantTextBoxType = {
-					name = "SZC_KMD_god_arrive_map_description_container_textbox"
-					position = { x = -126 y = 2 }
-					orientation = CENTER_UP
-					text = "GXC_situation_in_liangguang_description_text"
-					font = "hoi_16mbs"
-					format = left
-					maxWidth = 300
-					alwaystransparent = yes
-				}
-			}
+			@state_action_button_slot_1 = 26
+			@state_action_button_slot_2 = 62
+			@state_action_button_slot_3 = 98
+			@state_action_button_slot_y = 10
 
 			iconType = {
-				name = "SZC_KMD_god_arrive_outline"
-				position = { x = 37 y = 30 }
-				spriteType = GFX_SZC_KMD_god_arrive_outline
-				alwaystransparent = yes
+				name = "KMD_Background_panel"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_nee_ability_bar"
+				frame = 1
+			}
+			buttonType = {
+				name = "KMD_action_god_arrive_button"
+				position = { x = @state_action_button_slot_1 y = @state_action_button_slot_y }
+				spriteType = "GFX_decision_generic_police_action"
+				frame = 1
+
+				pdx_tooltip = "OTT_action_declare_martial_law"
+			}
+			buttonType = {
+				name = "KMD_god_stronger_button"
+				position = { x = @state_action_button_slot_2 y = @state_action_button_slot_y }
+				spriteType = "GFX_decision_oppression"
+				frame = 1
+
+				pdx_tooltip = "OTT_action_detain_agitators"
+			}
+			buttonType = {
+				name = "KMD_special_idea_button"
+				position = { x = @state_action_button_slot_3 y = @state_action_button_slot_y }
+				spriteType = "GFX_decision_ITA_reorganize_ascari"
+				frame = 1
+
+				pdx_tooltip = "OTT_action_recruit_local_troops"
 			}
 
-			iconType = {
-				name = "SZC_KMD_god_arrive_state_nanning"
-				position = { x = 85 y = 74 }
-				spriteType = GFX_SZC_KMD_god_arrive_state_nanning
-				pdx_tooltip = GXC_liangguang_state_nanning_tt
-			}
-
-			iconType = {
-				name = "SZC_KMD_god_arrive_state_guangzhou"
-				position = { x = 137 y = 71 }
-				spriteType = GFX_SZC_KMD_god_arrive_state_guangzhou
-				pdx_tooltip = GXC_liangguang_state_guangzhou_tt
-			}
-
-			iconType = {
-				name = "SZC_KMD_god_arrive_state_baise"
-				position = { x = 42 y = 53 }
-				spriteType = GFX_SZC_KMD_god_arrive_state_baise
-				pdx_tooltip = GXC_liangguang_state_baise_tt
-			}
-
-			iconType = {
-				name = "SZC_KMD_god_arrive_state_guilin"
-				position = { x = 82 y = 35 }
-				spriteType = GFX_SZC_KMD_god_arrive_state_guilin
-				pdx_tooltip = GXC_liangguang_state_guilin_tt
-			}
-
-			iconType = {
-				name = "SZC_KMD_god_arrive_state_shaoguan"
-				position = { x = 157 y = 48 }
-				spriteType = GFX_SZC_KMD_god_arrive_state_shaoguan
-				pdx_tooltip = GXC_liangguang_state_shaoguan_tt
-			}
-
-			iconType = {
-				name = "SZC_KMD_god_arrive_state_haikou"
-				position = { x = 84 y = 102 }
-				spriteType = GFX_SZC_KMD_god_arrive_state_haikou
-				pdx_tooltip = GXC_liangguang_state_haikou_tt
-			}
 		}
 	}
+
+
+	}
 }
+
+

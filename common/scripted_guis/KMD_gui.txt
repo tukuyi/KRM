@@ -1,15 +1,25 @@
 scripted_gui = {
 	SZC_KMD_god_arrive_gui = {
 		context_type = decision_category
-		window_name = "SZC_KMD_god_arrive_container"
+		window_name = "SZC_KMD_god_arrive_gui"
+		dirty = SZC_KMD_god_arrive_gui_update
 
-		ai_enabled = {
-			always = no
+		dynamic_lists = {
+			SZC_KMD_GOD_main_gridbox = {
+				array = ROOT.SZC_KMD_gods_array
+				index = i
+				value = SZC_KMD_chosen_god
+				entry_container = SZC_KMD_GOD_entry
+				change_scope = yes
+			}
 		}
 
 		properties = {
-			
+			SZC_KMD_god_arrive_icon = {
+				image = "GFX_KMD_GUI_[?SZC_KMD_chosen_god.GetTokenKey]_statue"
+			}
 		}
 	}
+	
 
 }
