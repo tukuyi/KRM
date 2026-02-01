@@ -23164,19 +23164,25 @@ country_event = { #当浮一大白
 	}
 }
 
-country_event = { #已NKRsichuanKMD.36
+country_event = { #这是...
 	id = NKRsichuanKMD.36
 	title = NKRsichuanKMD.36.t
 	desc = NKRsichuanKMD.36.d
-	picture = GFX_report_event_SZC_dongdalu
+	picture = GFX_report_event_SZC_chengdi
 
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 
-	option = {#
+	option = {#...这是传国玉玺啊！
 		log = "[GetLogInfo]: event NKRsichuanKMD.36 option NKRsichuanKMD.36.a"
 		name = NKRsichuanKMD.36.a
+		custom_effect_tooltip = NKRsichuanKMD.36.tt
+		add_political_power = 50
+		CHN_setup_economic_devastation_normal_effect = yes
+		CHN_setup_military_disarray_normal_effect = yes
+		CHN_setup_national_illiteracy_effect = yes
+
 	}
 }
 
