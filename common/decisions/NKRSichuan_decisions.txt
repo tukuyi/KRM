@@ -3968,8 +3968,9 @@ SZC_KMD_god_arrive_category = {
 						retire = yes
 					}
 				}
-				KMD_GOD = "[?SZC_KMD_special_idea_boi]"
+				KMD_GOD = "[?SZC_KMD_special_idea_boi.GetTokenKey]"
 			}
+			set_variable = { SZC_KMD_special_idea_boi = 0 }
 			
 		}
 	}

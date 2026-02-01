@@ -74,6 +74,7 @@ scripted_gui = {
 					}
 					KMD_GOD = "[?SZC_KMD_chosen_god.GetTokenKey]"
 				}
+				set_variable = { SZC_KMD_special_idea_boi = var:SZC_KMD_chosen_god }
 				set_country_flag = KMD_GOD_recently_special_idea
 				activate_mission = SZC_KMD_special_idea_mission
 			}
