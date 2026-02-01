@@ -4266,6 +4266,12 @@ SZC_KMD_god_gui_update = {
 	set_variable_to_random = SZC_KMD_god_arrive_gui_update
 }
 
+SZC_KMD_add_guan_huang_yue = {
+	add_to_array = { ROOT.SZC_KMD_gods_array = token:SZC_guan_yu }
+	add_to_array = { ROOT.SZC_KMD_gods_array = token:SZC_huang_zhong }
+	add_to_array = { ROOT.SZC_KMD_gods_array = token:SZC_yue_fei }
+	SZC_KMD_god_gui_update = yes
+}
 
 
 

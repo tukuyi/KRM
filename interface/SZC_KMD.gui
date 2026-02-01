@@ -57,7 +57,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "SZC_KMD_god_arrive_entry_name_container_textbox"
-				position = { x = -126 y = 2 }
+				position = { x = -150 y = 5 }
 				orientation = CENTER_UP
 				text = "[GetKMDGodName]"
 				font = "hoi_24header"
@@ -91,7 +91,7 @@ guiTypes = {
 			buttonType = {
 				name = "KMD_action_god_arrive_button"
 				position = { x = @state_action_button_slot_1 y = @state_action_button_slot_y }
-				spriteType = "GFX_decision_generic_police_action"
+				spriteType = "GFX_decision_god_arrive"
 				frame = 1
 
 				pdx_tooltip = "OTT_action_declare_martial_law"
@@ -99,7 +99,7 @@ guiTypes = {
 			buttonType = {
 				name = "KMD_god_stronger_button"
 				position = { x = @state_action_button_slot_2 y = @state_action_button_slot_y }
-				spriteType = "GFX_decision_oppression"
+				spriteType = "GFX_decision_god_special_idea"
 				frame = 1
 
 				pdx_tooltip = "OTT_action_detain_agitators"
@@ -107,7 +107,7 @@ guiTypes = {
 			buttonType = {
 				name = "KMD_special_idea_button"
 				position = { x = @state_action_button_slot_3 y = @state_action_button_slot_y }
-				spriteType = "GFX_decision_ITA_reorganize_ascari"
+				spriteType = "GFX_decision_god_stronger"
 				frame = 1
 
 				pdx_tooltip = "OTT_action_recruit_local_troops"
