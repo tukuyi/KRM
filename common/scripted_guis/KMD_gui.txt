@@ -19,6 +19,101 @@ scripted_gui = {
 				image = "GFX_KMD_GUI_[?SZC_KMD_chosen_god.GetTokenKey]_statue"
 			}
 		}
+
+		effects = {
+			KMD_action_god_arrive_button_click = {
+				add_political_power = -100
+				meta_effect = {
+					text = {
+						[KMD_GOD] = { custom_effect_tooltip = character_becomes_a_general }
+						hidden_effect = {
+							[KMD_GOD] = {
+								SZC_recruit_character_effect = yes
+							}
+						}
+						KMD_GOD_EVENT = yes
+					}
+					KMD_GOD = "[?SZC_KMD_chosen_god.GetTokenKey]"
+				}
+				set_country_flag = KMD_GOD_recently_god_arrived
+				activate_mission = SZC_KMD_god_arrive_mission
+			}
+			KMD_action_god_stronger_button_click = {
+				add_command_power = -20
+				meta_effect = {
+					text = {
+						[KMD_GOD] = {
+							add_temporary_buff_to_units = {
+								combat_offense = 0.35
+								combat_breakthrough = 0.35
+								war_support_reduction_on_damage = -0.5
+								days = 90
+							}	
+						}
+					}
+					KMD_GOD = "[?SZC_KMD_chosen_god.GetTokenKey]"
+				}
+				set_country_flag = KMD_GOD_recently_god_stronger
+				activate_mission = SZC_KMD_god_stronger_mission
+			}
+			KMD_action_special_idea_button_click = {
+				add_political_power = -100
+				add_stability = -0.03
+				meta_effect = {
+					text = {
+						custom_effect_tooltip = [KMD_GOD]_special_idea_tt
+						set_variable = { SZC_KMD_special_idea_boi = [KMD_GOD] }
+						add_timed_idea = {
+							idea = [KMD_GOD]_god_idea
+							days = 90
+						}
+					}
+					KMD_GOD = "[?SZC_KMD_chosen_god.GetTokenKey]"
+				}
+				set_country_flag = KMD_GOD_recently_special_idea
+				activate_mission = SZC_KMD_special_idea_mission
+			}
+		}
+
+		triggers = {
+			KMD_action_god_arrive_button_click_enabled = {
+				NOT = {
+					has_country_flag = KMD_GOD_recently_god_arrived
+				}
+				has_political_power > 99.99
+				meta_trigger = {
+					text = {
+						NOT = { has_character = [KMD_GOD] }
+					}
+					KMD_GOD = "[?SZC_KMD_chosen_god.GetTokenKey]"
+				}
+			}
+			KMD_action_god_stronger_button_click_enabled = {
+				NOT = {
+					has_country_flag = KMD_GOD_recently_strong
+				}
+				meta_trigger = {
+					text = {
+						has_character = [KMD_GOD]
+					}
+					KMD_GOD = "[?SZC_KMD_chosen_god.GetTokenKey]"
+				}
+				command_power > 19.99
+			}
+			KMD_action_special_idea_button_click_enabled = {
+				NOT = {
+					has_country_flag = KMD_GOD_recently_special_idea
+				}
+				has_political_power > 99.99
+				has_stability > 0.15
+				meta_trigger = {
+					text = {
+						has_character = [KMD_GOD]
+					}
+					KMD_GOD = "[?SZC_KMD_chosen_god.GetTokenKey]"
+				}
+			}
+		}
 	}
 	
 

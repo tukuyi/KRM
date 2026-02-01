@@ -36326,6 +36326,9 @@ focus_tree = {
 			add_stability = 0.1
 			set_cosmetic_tag = SZC_KMD_CSG
 			increase_economic_mobilisation = yes
+			every_owned_state = {
+				add_compliance = 10
+			}
 			hidden_effect = {
 				country_event = {
 					id = NKRsichuanKMD.26

@@ -94,23 +94,23 @@ guiTypes = {
 				spriteType = "GFX_decision_god_arrive"
 				frame = 1
 
-				pdx_tooltip = "OTT_action_declare_martial_law"
+				pdx_tooltip = "KMD_action_god_arrive_button"
 			}
 			buttonType = {
-				name = "KMD_god_stronger_button"
+				name = "KMD_action_god_stronger_button"
 				position = { x = @state_action_button_slot_2 y = @state_action_button_slot_y }
 				spriteType = "GFX_decision_god_special_idea"
 				frame = 1
 
-				pdx_tooltip = "OTT_action_detain_agitators"
+				pdx_tooltip = "KMD_action_god_stronger_button"
 			}
 			buttonType = {
-				name = "KMD_special_idea_button"
+				name = "KMD_action_special_idea_button"
 				position = { x = @state_action_button_slot_3 y = @state_action_button_slot_y }
 				spriteType = "GFX_decision_god_stronger"
 				frame = 1
 
-				pdx_tooltip = "OTT_action_recruit_local_troops"
+				pdx_tooltip = "KMD_action_special_idea_button"
 			}
 
 		}

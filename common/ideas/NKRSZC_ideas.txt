@@ -4245,6 +4245,42 @@ ideas = {
 			}
 		}
 
+		#KMD GUI 
+		
+
+		SZC_guan_yu_god_idea = {#千里走单骑
+			on_add = { log = "[GetLogRoot]: add idea SZC_guan_yu_god_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				breakthrough_factor = 0.35
+				out_of_supply_factor = -0.95
+			}
+		}
+		
+		SZC_huang_zhong_god_idea = {#老当益壮
+			on_add = { log = "[GetLogRoot]: add idea SZC_huang_zhong_god_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				experience_gain_army_factor = 0.65
+				experience_gain_navy_factor = 0.65
+				experience_gain_air_factor = 0.65
+				experience_loss_factor = -0.25
+			}
+		}
+
+		SZC_yue_fei_god_idea = {#精忠报国
+			on_add = { log = "[GetLogRoot]: add idea SZC_yue_fei_god_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				org_loss_at_low_org_factor = -0.4
+				army_org_factor = 0.35
+				army_attack_factor = 0.1
+			}
+		}
+
 
 	}
 	

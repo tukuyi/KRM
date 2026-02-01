@@ -9,6 +9,21 @@ leader_traits = {
 			factor = 0
 		}
 	}
+	god_of_KMD = {
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		modifier = {
+			promote_cost_factor = -0.25
+			max_army_group_size = -4
+			experience_gain_factor = -0.1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
 
 	just_visiting = {
 		type = corps_commander
