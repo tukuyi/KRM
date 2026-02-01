@@ -5726,6 +5726,114 @@ chinese_unification = {
 		fixed_random_seed = no
 	}
 
+	CHN_join_YCP_decision = { #其实我早就是青年党党员了，少年中国会的时候我写过稿
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = {
+			OR = {
+				tag = HNN
+				tag = GXC
+				tag = YUN
+			}
+		}
+		available = {
+			at_peace_or_same_enemies_as_FROM = yes
+			FROM = {
+				china_is_valid_government_to_join = yes
+			}
+			OR = {
+				is_neighbor_of = FROM
+				FROM = { any_neighbor_country = { is_subject_of = ROOT } }
+				FROM = { any_subject_country = { is_neighbor_of = ROOT } }
+			}
+			NOT = { has_country_flag = CHN_has_revolted_flag }
+			if = {
+				limit = { tag = HNN }
+				OR = {
+					AND = {
+						has_global_flag = CHN_south_china_war_started
+						has_country_flag = CHN_SCW_neutral_flag
+					}
+					CHN_south_china_war_over_trigger = yes
+					date > 1938.1.1
+					YUN = { is_subject = yes }
+					GXC = { is_subject = yes }
+				}
+			}
+			else_if = {
+				limit = { tag = YUN }
+				date > 1937.7.1
+			}
+		}
+		visible = {
+			UPC = { exists = no }
+			
+			china_is_potential_government = no
+			is_subject = no
+			country_exists = YCP
+
+			if = {
+				limit = { tag = HNN }
+				has_completed_focus = HNN_the_democratic_mandate
+			}
+			else_if = {
+				limit = { tag = YUN }
+				china_is_aligned_with_federalists = yes
+				has_completed_focus = YUN_a_new_national_protection_war
+			}
+			else_if = {
+				limit = { tag = GXC }
+				china_is_aligned_with_federalists = yes
+			}
+		}
+
+		targets = { YCP }
+		target_trigger = { FROM = { tag = YCP } }
+		target_non_existing = yes
+		fire_only_once = yes
+		cost = 0
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				tag = HNN
+				has_country_leader = { character = HNN_tang_shengzhi }
+				OR = {
+					CHI = {
+						exists = yes
+						is_subject = no
+						NOT = { has_war_with = ROOT }
+						china_refused_alliance = no
+					}
+					GXC = {
+						china_is_aligned_with_kmt = yes
+						exists = yes
+						is_subject = no
+						NOT = { has_war_with = ROOT }
+						china_refused_alliance = no
+					}
+					YUN = {
+						china_is_aligned_with_kmt = yes
+						exists = yes
+						is_subject = no
+						NOT = { has_war_with = ROOT }
+						china_refused_alliance = no
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete CHN_join_YCP_decision"
+			FROM = {
+				country_event = china_events.4
+				custom_effect_tooltip = if_they_accept_newline_tt
+				effect_tooltip = { china_puppet_ROOT_effect = yes }
+			}
+		}
+		fixed_random_seed = no		
+	}
+
 	CHN_join_FROM_decision = {
 		icon = GFX_decision_eng_trade_unions_support
 		allowed = {
