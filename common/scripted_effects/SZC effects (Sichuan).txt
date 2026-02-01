@@ -4262,44 +4262,44 @@ enable_tech_YCP_helicarrier_tech = {
 
 
 
-SZC_KMD_god_gui_update = {
-	set_variable_to_random = SZC_KMD_god_arrive_gui_update
-}
 
 SZC_KMD_add_guan_huang_yue = {
 	add_to_array = { ROOT.SZC_KMD_gods_array = token:SZC_guan_yu }
 	add_to_array = { ROOT.SZC_KMD_gods_array = token:SZC_huang_zhong }
 	add_to_array = { ROOT.SZC_KMD_gods_array = token:SZC_yue_fei }
-	SZC_KMD_god_gui_update = yes
 }
 
 
 KMD_GOD_EVENT = {
 	if = {
 		limit = {
-			[KMD_GOD] = {
-				is_character = SZC_guan_yu
+			check_variable ={
+				var:KMD_chk = token:SZC_guan_yu
 			}
 		}
 	}
 	if = {
 		limit = {
-			[KMD_GOD] = {
-				is_character = SZC_huang_zhong
+			check_variable ={
+				var:KMD_chk = token:SZC_huang_zhong
 			}
 		}
-		country_event = {
-			id = NKRsichuanKMD.10
+		ROOT = {
+			country_event = {
+				id = NKRsichuanKMD.10
+			}
 		}
 	}
 	if = {
 		limit = {
-			[KMD_GOD] = {
-				is_character = SZC_yue_fei
+			check_variable ={
+				var:KMD_chk = token:SZC_yue_fei
 			}
 		}
-		country_event = {
-			id = NKRsichuanKMD.11
+		ROOT = {
+			country_event = {
+				id = NKRsichuanKMD.11
+			}
 		}
 	}
 }
