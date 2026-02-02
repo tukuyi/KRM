@@ -5038,6 +5038,11 @@ characters = {
 			ideology = paternal_autocrat_subtype
 			traits = { CHN_non_aligned }
 		}
+		country_leader = {
+			desc = SZC_liu_chengxun_desc
+			ideology = social_conservative_national_conservative_subtype
+			traits = { CHN_non_aligned }
+		}
 		field_marshal = {
 			desc = SZC_liu_chengxun_desc
 			traits = { war_hero infantry_officer reckless commando }
@@ -5078,7 +5083,7 @@ characters = {
 		}
 		country_leader = {
 			desc = SZC_jiang_shangpu_desc
-			ideology = authoritarian_democrat_subtype
+			ideology = authoritarian_democrat_moral_sovereign_democracy_subtype
 			traits = { CHN_non_aligned }
 		}
 		corps_commander = {
