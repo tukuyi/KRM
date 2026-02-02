@@ -4302,40 +4302,186 @@ KMD_GOD_EVENT = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			check_variable ={
+				var:KMD_chk = token:SZC_zhang_fei
+			}
+		}
+		ROOT = {
+		}
+	}
+	if = {
+		limit = {
+			check_variable ={
+				var:KMD_chk = token:SZC_zhao_yun
+			}
+		}
+		ROOT = {
+		}
+	}
+	if = {
+		limit = {
+			check_variable ={
+				var:KMD_chk = token:SZC_zhuge_liang
+			}
+		}
+		ROOT = {
+		}
+	}
+	if = {
+		limit = {
+			check_variable ={
+				var:KMD_chk = token:SZC_cao_cao
+			}
+		}
+		ROOT = {
+		}
+	}
+	if = {
+		limit = {
+			check_variable ={
+				var:KMD_chk = token:SZC_jiang_ziya
+			}
+		}
+		ROOT = {
+		}
+	}
+	if = {
+		limit = {
+			check_variable ={
+				var:KMD_chk = token:SZC_sun_qian
+			}
+		}
+		ROOT = {
+		}
+	}
+	if = {
+		limit = {
+			check_variable ={
+				var:KMD_chk = token:SZC_xing_daorong
+			}
+		}
+		ROOT = {
+		}
+	}
 }
 
 
 SZC_KMD_chouka_effect = {
 	random_list = {
-		33 = {
-			modifier = {
-				factor = 0
-				is_in_array = {
-					array = ROOT.SZC_KMD_gods_array
-					value = token:SZC_guan_yu
+		50 = {
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 0
+						is_in_array = {
+							array = ROOT.SZC_KMD_gods_array
+							value = token:SZC_xing_daorong
+						}
+					}
+					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_xing_daorong }
+				}
+				50 = {
+					modifier = {
+						factor = 0
+						is_in_array = {
+							array = ROOT.SZC_KMD_gods_array
+							value = token:SZC_zhuge_liang
+						}
+					}
+					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_zhuge_liang }
 				}
 			}
-			set_variable = { ROOT.SZC_KMD_your_god = token:SZC_guan_yu }
+
 		}
-		33 = {
-			modifier = {
-				factor = 0
-				is_in_array = {
-					array = ROOT.SZC_KMD_gods_array
-					value = token:SZC_huang_zhong
+		40 = {
+			random_list = {
+				17 = {
+					modifier = {
+						factor = 0
+						is_in_array = {
+							array = ROOT.SZC_KMD_gods_array
+							value = token:SZC_guan_yu
+						}
+					}
+					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_guan_yu }
+				}
+				17 = {
+					modifier = {
+						factor = 0
+						is_in_array = {
+							array = ROOT.SZC_KMD_gods_array
+							value = token:SZC_huang_zhong
+						}
+					}
+					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_huang_zhong }
+				}
+				16 = {
+					modifier = {
+						factor = 0
+						is_in_array = {
+							array = ROOT.SZC_KMD_gods_array
+							value = token:SZC_yue_fei
+						}
+					}
+					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_yue_fei }
+				}
+				17 = {
+					modifier = {
+						factor = 0
+						is_in_array = {
+							array = ROOT.SZC_KMD_gods_array
+							value = token:SZC_zhang_fei
+						}
+					}
+					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_zhang_fei }
+				}
+				17 = {
+					modifier = {
+						factor = 0
+						is_in_array = {
+							array = ROOT.SZC_KMD_gods_array
+							value = token:SZC_zhao_yun
+						}
+					}
+					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_zhao_yun }
+				}
+				16 = {
+					modifier = {
+						factor = 0
+						is_in_array = {
+							array = ROOT.SZC_KMD_gods_array
+							value = token:SZC_cao_cao
+						}
+					}
+					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_cao_cao }
 				}
 			}
-			set_variable = { ROOT.SZC_KMD_your_god = token:SZC_huang_zhong }
 		}
-		34 = {
-			modifier = {
-				factor = 0
-				is_in_array = {
-					array = ROOT.SZC_KMD_gods_array
-					value = token:SZC_yue_fei
+		10 = {
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 0
+						is_in_array = {
+							array = ROOT.SZC_KMD_gods_array
+							value = token:SZC_jiang_ziya
+						}
+					}
+					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_jiang_ziya }
+				}
+				50 = {
+					modifier = {
+						factor = 0
+						is_in_array = {
+							array = ROOT.SZC_KMD_gods_array
+							value = token:SZC_sun_qian
+						}
+					}
+					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_sun_qian }
 				}
 			}
-			set_variable = { ROOT.SZC_KMD_your_god = token:SZC_yue_fei }
 		}
 	}
 }

@@ -23524,3 +23524,38 @@ country_event = { #DEBUG-wtfjiang
 		}
 	}
 }
+
+
+country_event = { #DEBUG-lcydebug
+	id = SZCDEBUG.4
+	title = SZCDEBUG.4.t
+	desc = SZCDEBUG.4.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		SZC_liu_chengxun = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_jiang_shangpu = {
+			SZC_recruit_character_effect = yes
+		}
+	}
+	
+
+	option = {#
+		name = SZCDEBUG.4.a
+		SZC_liu_chengxun = {
+			promote_character = social_conservative_national_conservative_subtype
+		}
+	}
+
+	option = {#
+		name = SZCDEBUG.4.a
+		SZC_jiang_shangpu = {
+			promote_character = authoritarian_democrat_moral_sovereign_democracy_subtype
+		}
+	}
+}

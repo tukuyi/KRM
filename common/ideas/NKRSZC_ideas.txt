@@ -4281,6 +4281,91 @@ ideas = {
 			}
 		}
 
+		SZC_zhuge_liang_god_idea = {#武侯显圣
+			on_add = { log = "[GetLogRoot]: add idea SZC_zhuge_liang_god_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				planning_speed = 1
+				max_planning_factor = 0.65
+				army_speed_factor = 0.1
+			}
+		}
+
+		SZC_cao_cao_god_idea = {#宁教我负天下人
+			on_add = { log = "[GetLogRoot]: add idea SZC_cao_cao_god_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.5
+				stability_factor = 0.2
+				army_speed_factor = 0.1
+				justify_war_goal_time = -0.95
+			}
+		}
+
+		SZC_xing_daorong_god_idea = {#说出吾名
+			on_add = { log = "[GetLogRoot]: add idea SZC_xing_daorong_god_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				army_attack_factor = -0.5
+				army_defence_factor = -0.5
+				army_morale_factor = 1
+				breakthrough_factor = 1
+			}
+		}
+
+		SZC_zhang_fei_god_idea = {#横矛当阳桥
+			on_add = { log = "[GetLogRoot]: add idea SZC_zhang_fei_god_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				army_defence_factor = 0.3
+				army_core_defence_factor = 0.2
+				enemy_army_speed_factor = -0.3
+			}
+		}
+
+		SZC_zhao_yun_god_idea = {#七进七出
+			on_add = { log = "[GetLogRoot]: add idea SZC_zhao_yun_god_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				army_speed_factor = 0.3
+				attrition = -0.4
+				org_loss_at_low_org_factor = -0.4
+				org_loss_when_moving = -0.4
+				pocket_penalty = -0.5
+			}
+		}
+
+		SZC_sun_qian_god_idea = {#凡人皆需侍奉
+			on_add = { log = "[GetLogRoot]: add idea SZC_sun_qian_god_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				compliance_gain = 0.5
+				compliance_growth = 0.25
+				political_power_gain = 0.5
+				weekly_manpower = -200
+
+			}
+		}
+
+		SZC_jiang_ziya_god_idea = {#太公垂钓
+			on_add = { log = "[GetLogRoot]: add idea SZC_jiang_ziya_god_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				max_planning_factor = 1
+				planning_speed = 0.8
+				experience_gain_army_factor = 0.5
+
+			}
+		}
+
 
 	}
 	

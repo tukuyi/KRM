@@ -4,7 +4,7 @@
 
  NKRSZC_KR_gathering_storm_desc: "1911年来，四分五裂政出多门、城头王旗朝夕变换的四川，便是这几十年来中国诸多苦难的缩影。然而，这片无数特异人士之地不会甘于就此沉寂——未来的大门已经向无数蜀中有识之士打开..."
 
- GFX_INTRO_panwenhua_tt: "作为§P潘文华§!，在§g刘湘§!死后接管四川军政大权...\n\n§M宣布四川自治：§!\n£white_dot §S东方中道马克思主义民主§!\n£white_dot §l实现新绝对真理§!\n£white_dot §g被迫一党独大§!\n£white_dot §P东方的施莱谢尔§!\n\n§M易帜国民党：§!\n£white_dot §s全社会主义民主§!\n£white_dot §R向§!§S潘§!§m鹞§!§g子§!§P致§!§n敬§!\n£white_dot §c回归西山本源§!"
+ GFX_INTRO_panwenhua_tt: "作为§P潘文华§!，在§g刘湘§!死后接管四川军政大权...\n\n§M宣布四川自治：§!\n£white_dot §S东方中道马克思主义民主§!\n£white_dot §l实现新绝对真理§!\n£white_dot §g被迫一党独大§!\n£white_dot §P东方的施莱谢尔§!\n\n§M易帜国民党：§!\n£white_dot §S全社会主义民主§!\n£white_dot §R向§!§S潘§!§m鹞§!§g子§!§P致§!§n敬§!\n£white_dot §c回归西山本源§!"
 
  GFX_INTRO_zengqi_tt: "无法控制住§g刘湘§!残部的§g唐式遵§!最终请来了§m青年党§!...\n\n§M全民革命：§!\n£white_dot §g实现正统国家主义§!\n£white_dot §P革命的演化§!\n£white_dot §c国家主义宪政十字军§!\n£white_dot §l击垮旧帝国§!\n£white_dot §g新法家，§!§S新时代§!\n£white_dot §n社会哲学§!\n£white_dot §m自由中国§!\n£white_dot §c国家主义之无治§!\n£white_dot §m双重背叛者§!"
 
@@ -139,6 +139,8 @@
  member_of_YCP_desc: "这位将军是青年党的党员，忠诚于党的决定。"
  god_of_KMD: "神灵降世"
  god_of_KMD_desc: "这位将军据称是现世神明。"
+ nai_long: "奶龙"
+ nai_long_desc: "我们尚且不知为什么他总是能预知危险却不知该干何事。"
 
  SZC_assorted_leaders: "各色领袖"
  SZC_power_vacuum: "权力真空"
@@ -313,7 +315,20 @@
  SZC_huang_zhong_desc: ""
  SZC_yue_fei: "岳飞"
  SZC_yue_fei_desc: ""
-
+ SZC_zhuge_liang: "诸葛亮"
+ SZC_zhuge_liang_desc: ""
+ SZC_cao_cao: "曹操"
+ SZC_cao_cao_desc: ""
+ SZC_xing_daorong: "邢道荣"
+ SZC_xing_daorong_desc: ""
+ SZC_zhang_fei: "张飞"
+ SZC_zhang_fei_desc: ""
+ SZC_zhao_yun: "赵云"
+ SZC_zhao_yun_desc: ""
+ SZC_sun_qian: "孙乾"
+ SZC_sun_qian_desc: ""
+ SZC_jiang_ziya: "姜子牙"
+ SZC_jiang_ziya_desc: ""
 
 
  
@@ -605,6 +620,7 @@
 
  SZC_MMIC: "第三国际驻华军事代表团-四川分署"
  YCP_national_defense_academy: "国防军校"
+ SZC_KMD_nai_long_trait: "奶龙居士"
 
 
  SZC_Pan_LKMT_party: "国民党(四川军政委员会)"
@@ -1496,7 +1512,20 @@
  SZC_huang_zhong_god_idea_desc: ""
  SZC_yue_fei_god_idea: "§R精忠报国§!"
  SZC_yue_fei_god_idea_desc: ""
-
+ SZC_zhuge_liang_god_idea: "§l武侯显圣§!"
+ SZC_zhuge_liang_god_idea_desc: ""
+ SZC_cao_cao_god_idea: "§P宁教我负天下人§!"
+ SZC_cao_cao_god_idea_desc: ""
+ SZC_xing_daorong_god_idea: "§S说出吾名§!"
+ SZC_xing_daorong_god_idea_desc: ""
+ SZC_zhang_fei_god_idea: "§R横矛当阳桥§!"
+ SZC_zhang_fei_god_idea_desc: ""
+ SZC_zhao_yun_god_idea: "§a七进七出§!"
+ SZC_zhao_yun_god_idea_desc: ""
+ SZC_sun_qian_god_idea: "§s凡人皆需侍奉!"
+ SZC_sun_qian_god_idea_desc: ""
+ SZC_jiang_ziya_god_idea: "§g太公垂钓§!"
+ SZC_jiang_ziya_god_idea_desc: ""
 
 
 

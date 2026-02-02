@@ -24,6 +24,20 @@ leader_traits = {
 			factor = 0
 		}
 	}
+	nai_long = {
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		modifier = {
+			experience_gain_factor = -0.5
+			recon_factor = 10
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
 
 	just_visiting = {
 		type = corps_commander

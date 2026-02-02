@@ -5230,7 +5230,152 @@ characters = {
 			logistics_skill = 2
 		}
 	}
+	#张飞
+	SZC_zhang_fei = {
+		name = SZC_zhang_fei
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_zhang_fei_large
+				small = GFX_portrait_SZC_zhang_fei_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_zhang_fei_desc
+			traits = { irregulars_officer reckless god_of_KMD }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
 
+	#赵云
+	SZC_zhao_yun = {
+		name = SZC_zhao_yun
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_zhao_yun_large
+				small = GFX_portrait_SZC_zhao_yun_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_zhao_yun_desc
+			traits = { cavalry_officer trait_engineer god_of_KMD }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	#诸葛亮
+	SZC_zhuge_liang = {
+		name = SZC_zhuge_liang
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_zhuge_liang_large
+				small = GFX_portrait_SZC_zhuge_liang_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_zhuge_liang_desc
+			traits = { nai_long god_of_KMD }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = theorist
+			idea_token = SZC_zhuge_liang_theorist
+			ledger = military
+			traits = { SZC_KMD_nai_long_trait }
+			cost = 125
+		}
+	}
+
+	#曹操
+	SZC_cao_cao = {
+		name = SZC_cao_cao
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_cao_cao_large
+				small = GFX_portrait_SZC_cao_cao_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_cao_cao_desc
+			traits = { brilliant_strategist politically_connected reckless god_of_KMD }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	#孙乾
+	SZC_sun_qian = {
+		name = SZC_sun_qian
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_sun_qian_large
+				small = GFX_portrait_SZC_sun_qian_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_sun_qian_desc
+			traits = { god_of_KMD }
+			skill = 9
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	#邢道荣
+	SZC_xing_daorong = {
+		name = SZC_xing_daorong
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_xing_daorong_large
+				small = GFX_portrait_SZC_xing_daorong_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_xing_daorong_desc
+			traits = { reckless infantry_officer god_of_KMD }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	#姜子牙
+	SZC_jiang_ziya = {
+		name = SZC_jiang_ziya
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_jiang_ziya_large
+				small = GFX_portrait_SZC_jiang_ziya_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_jiang_ziya_desc
+			traits = { god_of_KMD }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
 
 	############################
 
