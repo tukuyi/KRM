@@ -3060,7 +3060,15 @@ defined_text = {
 defined_text = {
 	name = GetKMDChouGodName
 	text = {
+		trigger = {
+			NOT = {
+				check_variable = { ROOT.SZC_KMD_your_god = 0 }
+			}
+		}
 		localization_key = "[?SZC_KMD_your_god.GetTokenKey]_tittle"
+	}
+	text = {
+		localization_key = empty_key
 	}
 }
 defined_text ={
