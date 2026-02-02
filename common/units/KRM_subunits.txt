@@ -1,0 +1,12 @@
+sub_units = {
+	helicarrier = {
+		sprite = heavy_plane
+		priority = 1
+		active = yes
+		type =  strategic_bomber
+		need = { helicarrier_equipment = 1 }
+		categories = { category_strat_bomber }
+		land_air_wing_size = 5
+		mega_carrier_air_wing_size = 1
+	}
+}
