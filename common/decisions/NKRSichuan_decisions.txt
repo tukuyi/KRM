@@ -3867,6 +3867,28 @@ SZC_YCP_COB_category = {
 
 SZC_KMD_god_arrive_category = {
 	
+	SZC_KMD_woyaoyanpai = {
+		icon = generic_ignite_civil_war
+		allowed = { tag = SZC }
+
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			
+		}
+
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete SZC_KMD_long_live_kongmengdao"
+			custom_effect_tooltip = SZC_KMD_start_chouka_tt
+			set_country_flag = SZC_KMD_choukaing
+		}
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove SZC_KMD_long_live_kongmengdao"
+		}
+	}
+	
 	SZC_KMD_long_live_kongmengdao = {
 		icon = generic_ignite_civil_war
 		allowed = { tag = SZC }

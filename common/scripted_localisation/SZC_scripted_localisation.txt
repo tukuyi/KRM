@@ -3035,3 +3035,50 @@ defined_text = {
 		localization_key = [?SZC_KMD_chosen_god.GetTokenKey]_tittle
 	}
 }
+
+defined_text = {
+	name= GetKMDYourGodTittle
+	text = {
+		trigger = {
+			NOT = {
+				check_variable = { ROOT.SZC_KMD_your_god = 0 }
+			}
+		}
+		localization_key = "[?SZC_KMD_your_god.GetTokenKey]_tittle"
+	}
+	text = {
+		localization_key = empty_key
+	}
+}
+
+defined_text = {
+	name= GetKMDYourGodRESULT
+	text = {
+		localization_key = KMD_CHOUKA_GET_TT
+	}
+}
+defined_text = {
+	name = GetKMDChouGodName
+	text = {
+		localization_key = "[?SZC_KMD_your_god.GetTokenKey]_tittle"
+	}
+}
+defined_text ={
+	name = GetKMDChouStartORClose
+	text = {
+		trigger = {
+			has_country_flag = KMD_chouka_show_2
+			has_country_flag = KMD_chouka_show_3
+		}
+		localization_key = KMD_CHOUKA_CLOSE_TT
+	}
+	text = {
+		trigger = {
+			has_country_flag = KMD_chouka_show_2
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = KMD_CHOUKA_START_TT
+	}
+}

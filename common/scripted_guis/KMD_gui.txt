@@ -120,6 +120,105 @@ scripted_gui = {
 			}
 		}
 	}
-	
+
+	SZC_KMD_god_arrive_chouka_gui = {
+		context_type = player_context
+		window_name = "SZC_KMD_god_arrive_chouka_gui"
+
+		visible = {
+			has_country_flag = SZC_KMD_choukaing
+		}
+		
+		triggers = {
+			KMD_chou_arrows_visible = {
+				NOT = {
+					has_country_flag = KMD_chouka_show
+				}
+			}
+			KMD_chouka_animation_1_visible = {
+				has_country_flag = KMD_chouka_show
+				set_temp_variable = { KMD_chouka_animation_1_frame = 0 } # 1 for looping, 0 for no looping
+				multiply_temp_variable = { KMD_chouka_animation_1_frame = 256 }
+				add_to_temp_variable = { KMD_chouka_animation_1_frame = 128 } # FPS
+				multiply_temp_variable = { KMD_chouka_animation_1_frame = 64 }
+				add_to_temp_variable = { KMD_chouka_animation_1_frame = 43 } # End frame
+				multiply_temp_variable = { KMD_chouka_animation_1_frame = 64 }
+				add_to_temp_variable = { KMD_chouka_animation_1_frame = 1 } # Start frame
+
+			}
+
+			KMD_chouka_animation_1_click_enabled = {
+				has_country_flag = KMD_chouka_show
+			}
+			KMD_chou_result_visible = {
+				has_country_flag = KMD_chouka_show_2
+			}
+		}
+
+		effects = {
+			KMD_chou_click = {
+				if = {
+					limit = {
+						not = {
+							has_country_flag = KMD_chouka_show
+						}
+					}
+					set_country_flag = KMD_chouka_show
+					scoped_sound_effect = "HIE_journal_o"
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_country_flag = KMD_chouka_show_2
+						}
+					}
+					set_country_flag = KMD_chouka_show_2
+					scoped_sound_effect = "HIE_journal_o"
+					SZC_KMD_chouka_effect = yes
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_country_flag = KMD_chouka_show_3
+						}
+					}
+				}
+				else = {
+					clr_country_flag = SZC_KMD_choukaing
+					clr_country_flag = KMD_chouka_show
+					clr_country_flag = KMD_chouka_show_2
+					clr_country_flag = KMD_chouka_show_3
+				}
+			}
+			KMD_chou_result_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = KMD_chouka_show_3
+						}
+					}
+					add_to_array = { ROOT.SZC_KMD_gods_array = var:SZC_KMD_your_god }
+					set_country_flag = KMD_chouka_show_3
+				}
+				else = {
+					clr_country_flag = SZC_KMD_choukaing
+					clr_country_flag = KMD_chouka_show
+					clr_country_flag = KMD_chouka_show_2
+					clr_country_flag = KMD_chouka_show_3
+					set_variable = { SZC_KMD_your_god = 0 }
+				}
+			}
+		}
+
+		properties = {
+			KMD_chouka_animation_1 = {
+				frame = KMD_chouka_animation_1_frame
+			}
+			KMD_chou_result = {
+				image = "GFX_KMD_GUI_[?SZC_KMD_your_god.GetTokenKey]_statue"
+			}
+		}
+
+	}
 
 }

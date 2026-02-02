@@ -171,4 +171,21 @@ SpriteTypes = {
 		name = "GFX_KMD_GUI_SZC_yue_fei_statue"
 		texturefile = "gfx/interface/gui/KMD/KMD_GUI_SZC_yue_fei_statue.png"
 	}
+	spritetype = {
+		name = "GFX_KMD_GUI_chouka"
+		texturefile = "gfx/interface/gui/KMD/KMD_GUI_chouka1.png"
+		noOfFrames = 45
+		effectFile = "gfx/FX/animated_sprite.shader"
+		# animation_rate_fps = 8
+		# looping = yes
+		# play_on_show = yes
+	}
+	spriteType = {
+		name = "GFX_KMD_GUI_SZC_chouka_empty"
+		texturefile = "gfx/interface/gui/KMD/KMD_GUI_SZC_chouka_empty.png"
+	}
+	spriteType = {
+		name = "GFX_KMD_GUI_SZC_chouka_arrows"
+		texturefile = "gfx/interface/gui/KMD/KMD_GUI_SZC_chouka_arrows.png"
+	}
 }
