@@ -4406,13 +4406,11 @@ SZC_KMD_chouka_effect = {
 							}
 						}
 					}
-					#
+					set_country_flag = KMD_chouka_show_bonus
 				}
 			}
-
 		}
 		40 = {
-			
 			random_list = {
 				17 = {
 					modifier = {
@@ -4474,6 +4472,38 @@ SZC_KMD_chouka_effect = {
 					}
 					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_cao_cao }
 				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							is_in_array = {
+								array = ROOT.SZC_KMD_gods_array
+								value = token:SZC_guan_yu
+							}
+							is_in_array = {
+								array = ROOT.SZC_KMD_gods_array
+								value = token:SZC_huang_zhong
+							}
+							is_in_array = {
+								array = ROOT.SZC_KMD_gods_array
+								value = token:SZC_yue_fei
+							}
+							is_in_array = {
+								array = ROOT.SZC_KMD_gods_array
+								value = token:SZC_zhang_fei
+							}
+							is_in_array = {
+								array = ROOT.SZC_KMD_gods_array
+								value = token:SZC_zhao_yun
+							}
+							is_in_array = {
+								array = ROOT.SZC_KMD_gods_array
+								value = token:SZC_cao_cao
+							}
+						}
+					}
+					set_country_flag = KMD_chouka_show_bonus
+				}
 			}
 		}
 		10 = {
@@ -4488,7 +4518,7 @@ SZC_KMD_chouka_effect = {
 					}
 					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_jiang_ziya }
 				}
-				50 = {
+				49 = {
 					modifier = {
 						factor = 0
 						is_in_array = {
@@ -4498,7 +4528,37 @@ SZC_KMD_chouka_effect = {
 					}
 					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_sun_qian }
 				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							is_in_array = {
+								array = ROOT.SZC_KMD_gods_array
+								value = token:SZC_jiang_ziya
+							}
+							is_in_array = {
+								array = ROOT.SZC_KMD_gods_array
+								value = token:SZC_sun_qian
+							}
+						}
+					}
+					set_country_flag = KMD_chouka_show_bonus
+				}
 			}
+		}
+	}
+}
+
+KMD_only_bonus_get = {
+	random_list = {
+		33 = {
+			add_political_power = 100
+		}
+		33 = {
+			add_stability = 0.05
+		}
+		34 = {
+			add_stability = 0.05
 		}
 	}
 }

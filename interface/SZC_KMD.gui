@@ -175,6 +175,13 @@ guiTypes = {
 				pdx_tooltip = "KMD_CHOUKA_TO_GET"
 			}
 
+			buttonType = {
+				name = "KMD_chou_no_result"
+				position = { x = 110 y = 130 }
+				spriteType = "GFX_SZC_lai_yongqing_sign"
+				pdx_tooltip = "KMD_CHOUKA_ONLY_BONUS"
+			}
+
 			instantTextBoxType = {
 				name = "SZC_KMD_chou_god_TITTLE_textbox"
 				position = { x = -128 y = -35 }

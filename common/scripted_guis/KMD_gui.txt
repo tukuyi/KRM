@@ -152,6 +152,12 @@ scripted_gui = {
 			}
 			KMD_chou_result_visible = {
 				has_country_flag = KMD_chouka_show_2
+				NOT = {
+					has_country_flag = KMD_chouka_show_bonus
+				}
+			}
+			KMD_chou_no_result_visible = {
+				has_country_flag = KMD_chouka_show_bonus
 			}
 		}
 
@@ -188,6 +194,7 @@ scripted_gui = {
 					clr_country_flag = KMD_chouka_show
 					clr_country_flag = KMD_chouka_show_2
 					clr_country_flag = KMD_chouka_show_3
+					clr_country_flag = KMD_chouka_show_bonus
 					set_variable = { SZC_KMD_your_god = 0 }
 				}
 			}
@@ -206,6 +213,25 @@ scripted_gui = {
 					clr_country_flag = KMD_chouka_show
 					clr_country_flag = KMD_chouka_show_2
 					clr_country_flag = KMD_chouka_show_3
+					set_variable = { SZC_KMD_your_god = 0 }
+				}
+			}
+			KMD_chou_no_result_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = KMD_chouka_show_3
+						}
+					}
+					KMD_only_bonus_get = yes
+					set_country_flag = KMD_chouka_show_3
+				}
+				else = {
+					clr_country_flag = SZC_KMD_choukaing
+					clr_country_flag = KMD_chouka_show
+					clr_country_flag = KMD_chouka_show_2
+					clr_country_flag = KMD_chouka_show_3
+					clr_country_flag = KMD_chouka_show_bonus
 					set_variable = { SZC_KMD_your_god = 0 }
 				}
 			}
