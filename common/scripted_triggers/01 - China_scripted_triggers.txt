@@ -558,16 +558,6 @@ china_no_rival_governments_left = {
 			YUN = { has_capitulated = yes }
 		}
 	}
-	if = {
-		limit = {
-			SHC = { china_is_potential_government = yes }
-			NOT = { original_tag = SHC }
-		}
-		OR = {
-			NOT = { country_exists = SHC }
-			SHC = { has_capitulated = yes }
-		}
-	}
 }
 
 china_stronger_than_existing_governments = {
@@ -691,17 +681,6 @@ china_stronger_than_existing_governments = {
 			}
 		}
 		strength_ratio = { tag = YUN ratio > 1.2 }
-	}
-	if = {
-		limit = {
-			SHC = {
-				china_is_potential_government = yes
-				exists = yes
-				is_subject = no
-				NOT = { original_tag = ROOT }
-			}
-		}
-		strength_ratio = { tag = SHC ratio > 1.2 }
 	}
 }
 
