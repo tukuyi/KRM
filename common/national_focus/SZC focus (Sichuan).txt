@@ -35925,6 +35925,7 @@ focus_tree = {
 			effect_tooltip = {
 				activate_targeted_decision = { decision = china_demand_submission target = SHX }
 				activate_targeted_decision = { decision = china_demand_submission target = YUN }
+				activate_targeted_decision = { decision = china_demand_submission target = HNN }
 				activate_targeted_decision = { decision = china_demand_submission target = GXC }
 				activate_targeted_decision = { decision = china_demand_submission target = ANQ }
 				activate_targeted_decision = { decision = china_demand_submission target = LEP }
@@ -35936,6 +35937,8 @@ focus_tree = {
 				activate_targeted_decision = { target = SHX decision = china_attack_decision }
 				add_to_array = { ROOT.china_possible_targets_array = YUN }
 				activate_targeted_decision = { target = YUN decision = china_attack_decision }
+				add_to_array = { ROOT.china_possible_targets_array = HNN }
+				activate_targeted_decision = { target = HNN decision = china_attack_decision }
 				add_to_array = { ROOT.china_possible_targets_array = GXC }
 				activate_targeted_decision = { target = GXC decision = china_attack_decision }
 				add_to_array = { ROOT.china_possible_targets_array = ANQ }
@@ -36056,6 +36059,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_gods_arrive"
 			custom_effect_tooltip = SZC_KMD_gods_arrive_tt
+			add_to_variable = {
+				SZC_KMD_chouka_times = 5
+			}
 			hidden_effect = {
 				country_event = {
 					id = NKRsichuanKMD.19

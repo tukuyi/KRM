@@ -951,6 +951,15 @@ chinese_unification = {
 
 		is_good = no
 
+		available = {
+			OR = {
+				CHI = {
+					exists = no
+				}
+				has_completed_focus = SZC_pan_resist_the_silver_offensive
+			}
+		}
+
 		cancel_trigger = {
 			OR = {
 				CHI = {
@@ -3913,11 +3922,15 @@ SZC_KMD_god_arrive_category = {
 	}
 	SZC_KMD_god_arrive_mission = { 
 		allowed = {
-				always = no
+			always = no
 		}
 		icon = GFX_decision_generic_ignite_civil_war
 		days_mission_timeout = 70
 		priority = 200
+
+		available = {
+			always = no
+		}
 
 		is_good = yes
 
@@ -3938,17 +3951,21 @@ SZC_KMD_god_arrive_category = {
 	}
 	SZC_KMD_god_stronger_mission = { 
 		allowed = {
-				always = no
+			always = no
 		}
 		icon = GFX_decision_generic_ignite_civil_war
 		days_mission_timeout = 90
 		priority = 200
 
+		available = {
+			always = no
+		}
+
 		is_good = yes
 
 		cancel_trigger = {
 			NOT = {
-				has_country_flag = KMD_GOD_recently_god_arrived
+				has_country_flag = KMD_GOD_recently_god_stronger
 			}
 		}
 
@@ -3963,17 +3980,21 @@ SZC_KMD_god_arrive_category = {
 	}
 	SZC_KMD_special_idea_mission = { 
 		allowed = {
-				always = no
+			always = no
 		}
 		icon = GFX_decision_generic_ignite_civil_war
 		days_mission_timeout = 90
 		priority = 200
 
+		available = {
+			always = no
+		}
+
 		is_good = no
 
 		cancel_trigger = {
 			NOT = {
-				has_country_flag = KMD_GOD_recently_god_arrived
+				has_country_flag = KMD_GOD_recently_special_idea
 			}
 		}
 
@@ -3994,6 +4015,31 @@ SZC_KMD_god_arrive_category = {
 			}
 			set_variable = { SZC_KMD_special_idea_boi = 0 }
 			
+		}
+	}
+	
+	SZC_KMD_chouka_select = {
+		icon = generic_ignite_civil_war
+		allowed = { tag = SZC }
+
+		visible = {
+			always = yes
+		}
+		available = {
+			check_variable = {
+				SZC_KMD_chouka_times > 0
+			}
+		}
+
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete SZC_KMD_long_live_kongmengdao"
+			add_to_variable = { SZC_KMD_chouka_times = -1 }
+			custom_effect_tooltip = SZC_KMD_start_chouka_tt
+			set_country_flag = SZC_KMD_choukaing
+		}
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove SZC_KMD_long_live_kongmengdao"
 		}
 	}
 
