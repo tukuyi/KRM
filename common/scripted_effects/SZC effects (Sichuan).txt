@@ -4382,7 +4382,7 @@ SZC_KMD_chouka_effect = {
 					}
 					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_xing_daorong }
 				}
-				50 = {
+				49 = {
 					modifier = {
 						factor = 0
 						is_in_array = {
@@ -4391,6 +4391,22 @@ SZC_KMD_chouka_effect = {
 						}
 					}
 					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_zhuge_liang }
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							is_in_array = {
+								array = ROOT.SZC_KMD_gods_array
+								value = token:SZC_xing_daorong
+							}
+							is_in_array = {
+								array = ROOT.SZC_KMD_gods_array
+								value = token:SZC_zhuge_liang
+							}
+						}
+					}
+					#
 				}
 			}
 
