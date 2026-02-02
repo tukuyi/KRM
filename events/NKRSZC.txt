@@ -363,7 +363,7 @@ country_event = { #刘神仙
 			add_idea = SZC_after_liu_2
 		}
 		SZC_pan_wenhua = {
-			kill = yes
+			kill_character = yes
 		}
 		add_ideas = {
 			SZC_KMD_legitimacy_1
@@ -10931,7 +10931,7 @@ country_event = { #混乱即阶梯
 		log = "[GetLogInfo]: event NKRsichuan.546 option NKRsichuan.5466.a"
 		name = NKRsichuan.546.a
 		SZC_xia_taosheng = {
-			kill = yes
+			kill_character = yes
 		}
 		add_popularity = {
 			ideology = syndicalist
@@ -11505,7 +11505,7 @@ country_event = { #终局
 			popularity = 0.10
 		}
 		SZC_zhang_guotao = {
-			kill = yes
+			kill_character = yes
 		}
 		hidden_effect = {
 			country_event = {
@@ -20808,7 +20808,7 @@ country_event = { #华北的叛徒
 		add_political_power = 100
 		QIE = {
 			SZC_zhao_yusong = {
-				kill = yes
+				kill_character = yes
 			}
 		}
 		custom_effect_tooltip = NKRsichuanPI.16.tt
@@ -22674,7 +22674,7 @@ country_event = { #王者归来
 		log = "[GetLogInfo]: event NKRsichuanKMD.5 option NKRsichuanKMD.5.a"
 		name = NKRsichuanKMD.5.a
 		SZC_liu_wenhui = {
-			kill = yes
+			kill_character = yes
 		}
 		add_political_power = 50
 		add_manpower = -1

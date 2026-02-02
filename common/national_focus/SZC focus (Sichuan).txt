@@ -29587,7 +29587,7 @@ focus_tree = {
 			add_stability = -0.15
 			add_political_power = -50
 			SZC_zhang_guotao = {
-				kill = yes
+				kill_character = yes
 			}
 			GXC_zhang_junmai = {
 				retire = yes
@@ -35602,7 +35602,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 50
+			add = 0
 			tag = SZC
 		}
 	}
@@ -35710,6 +35710,9 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_arrest_heretics"
 			add_manpower = -12370
 			add_war_support = 0.15
+			remove_ideas = SZC_after_liu_2
+			
+			country_lock_all_division_template = no
 			
 			hidden_effect = {
 				country_event = {
@@ -36595,6 +36598,117 @@ focus_tree = {
 				}
 			}
 			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_xiushenzhitianxia
+		icon = GFX_goal_SZC_KMD_xiushenzhitianxia
+		cost = 4
+
+		x = 29
+		y = 0
+
+		available = {
+			has_completed_focus = SZC_KMD_arise_shenbings
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_xiushenzhitianxia"
+			army_experience = 50
+			add_ideas = {
+				SZC_KMD_shenbing_1_idea
+			}
+			hidden_effect = {
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_jinzhongzhao
+		icon = GFX_goal_SZC_KMD_jinzhongzhao
+		cost = 4
+
+		x = -1
+		y = 1
+
+		relative_position_id = SZC_KMD_xiushenzhitianxia
+
+		prerequisite = {
+			focus = SZC_KMD_xiushenzhitianxia
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_jinzhongzhao"
+			add_manpower = 20000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+			}
+			hidden_effect = {
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_tiebushan
+		icon = GFX_goal_SZC_KMD_tiebushan
+		cost = 4
+
+		x = 1
+		y = 1
+
+		relative_position_id = SZC_KMD_xiushenzhitianxia
+
+		prerequisite = {
+			focus = SZC_KMD_xiushenzhitianxia
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_tiebushan"
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1000
+			}
+			add_war_support = 0.1
+			hidden_effect = {
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_guanerye_bless
+		icon = GFX_goal_SZC_KMD_guanerye_bless
+		cost = 4
+
+		x = 0
+		y = 2
+
+		relative_position_id = SZC_KMD_xiushenzhitianxia
+
+		available = {
+			has_character = SZC_guan_yu 
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_jinzhongzhao
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_tiebushan
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_guanerye_bless"
+			swap_ideas = {
+				remove_idea = SZC_KMD_shenbing_1_idea
+				add_idea = SZC_KMD_shenbing_2_idea
+			}
+			hidden_effect = {
+				
+			}
 		}
 	}
 

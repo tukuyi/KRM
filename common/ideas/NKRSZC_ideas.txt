@@ -4245,6 +4245,54 @@ ideas = {
 			}
 		}
 
+		#MILITARY SHENBING
+		
+
+		SZC_KMD_shenbing_1_idea = {#川蜀神兵
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_shenbing_1_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				max_planning_factor = -0.1
+				army_experience_factor = 0.05
+				planning_speed = 0.1
+				land_reinforce_rate = 0.08
+				modifier_army_sub_unit_irregular_infantry_attack_factor = 0.1
+				modifier_army_sub_unit_irregular_infantry_defence_factor = 0.1
+				modifier_army_sub_unit_irregular_infantry_max_org_factor = 0.1
+				modifier_army_sub_unit_irregular_infantry_speed_factor = 0.1
+				land_reinforce_rate = 0.05
+				army_strength_factor = 0.1
+				army_morale_factor = 0.15
+				breakthrough_factor = 0.1
+				org_loss_when_moving = -0.2
+
+			}
+		}
+		
+
+		SZC_KMD_shenbing_2_idea = {#川蜀神兵
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_shenbing_2_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				max_planning_factor = -0.1
+				army_experience_factor = 0.05
+				planning_speed = 0.15
+				land_reinforce_rate = 0.1
+				modifier_army_sub_unit_irregular_infantry_attack_factor = 0.15
+				modifier_army_sub_unit_irregular_infantry_defence_factor = 0.15
+				modifier_army_sub_unit_irregular_infantry_max_org_factor = 0.15
+				modifier_army_sub_unit_irregular_infantry_speed_factor = 0.15
+				land_reinforce_rate = 0.1
+				army_strength_factor = 0.15
+				army_morale_factor = 0.15
+				breakthrough_factor = 0.15
+				org_loss_when_moving = -0.25
+
+			}
+		}
+
 		#KMD GUI 
 		
 
