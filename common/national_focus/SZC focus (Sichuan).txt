@@ -11602,19 +11602,16 @@ focus_tree = {
 					activate_targeted_decision = { decision = china_demand_submission target = LEP }
 					activate_targeted_decision = { decision = china_demand_submission target = ANQ }
 					activate_targeted_decision = { decision = china_demand_submission target = SHD }
-					activate_targeted_decision = { decision = china_demand_submission target = SHC }
 				}
 				hidden_effect = {
 					add_to_array = { ROOT.china_possible_targets_array = CHI }
 					add_to_array = { ROOT.china_possible_targets_array = LEP }
 					add_to_array = { ROOT.china_possible_targets_array = ANQ }
 					add_to_array = { ROOT.china_possible_targets_array = SHD }
-					add_to_array = { ROOT.china_possible_targets_array = SHC }
 					activate_targeted_decision = { target = CHI decision = china_attack_decision }
 					activate_targeted_decision = { target = LEP decision = china_attack_decision }
 					activate_targeted_decision = { target = ANQ decision = china_attack_decision }
 					activate_targeted_decision = { target = SHD decision = china_attack_decision }
-					activate_targeted_decision = { target = SHC decision = china_attack_decision }
 				}
 			}
 		}
@@ -11652,19 +11649,16 @@ focus_tree = {
 					activate_targeted_decision = { decision = china_demand_submission target = LEP }
 					activate_targeted_decision = { decision = china_demand_submission target = ANQ }
 					activate_targeted_decision = { decision = china_demand_submission target = SHD }
-					activate_targeted_decision = { decision = china_demand_submission target = SHC }
 				}
 				hidden_effect = {
 					add_to_array = { ROOT.china_possible_targets_array = CHI }
 					add_to_array = { ROOT.china_possible_targets_array = LEP }
 					add_to_array = { ROOT.china_possible_targets_array = ANQ }
 					add_to_array = { ROOT.china_possible_targets_array = SHD }
-					add_to_array = { ROOT.china_possible_targets_array = SHC }
 					activate_targeted_decision = { target = CHI decision = china_attack_decision }
 					activate_targeted_decision = { target = LEP decision = china_attack_decision }
 					activate_targeted_decision = { target = ANQ decision = china_attack_decision }
 					activate_targeted_decision = { target = SHD decision = china_attack_decision }
-					activate_targeted_decision = { target = SHC decision = china_attack_decision }
 				}
 			}
 		}
@@ -17397,7 +17391,6 @@ focus_tree = {
 				activate_targeted_decision = { decision = china_demand_submission target = ANQ }
 				activate_targeted_decision = { decision = china_demand_submission target = LEP }
 				activate_targeted_decision = { decision = china_demand_submission target = SHD }
-				activate_targeted_decision = { decision = china_demand_submission target = SHC }
 			}
 			hidden_effect = {
 				add_to_array = { ROOT.china_possible_targets_array = SHX }
@@ -17412,8 +17405,6 @@ focus_tree = {
 				activate_targeted_decision = { target = LEP decision = china_attack_decision }
 				add_to_array = { ROOT.china_possible_targets_array = SHD }
 				activate_targeted_decision = { target = SHD decision = china_attack_decision }
-				add_to_array = { ROOT.china_possible_targets_array = SHC }
-				activate_targeted_decision = { target = SHC decision = china_attack_decision }
 			}
 		}
 	}
