@@ -1342,7 +1342,7 @@ focus_tree = {
 			has_country_flag = SZC_accelerated_department_in_power
 			hidden_trigger = {
 				OR = {
-					has_country_leader = SZC_yang_sen
+					has_country_leader = { character = SZC_yang_sen }
 				}
 			}
 		}
@@ -3773,7 +3773,7 @@ focus_tree = {
 			NOT = { has_idea = SZC_two_lius_war }
 			NOT = { has_country_flag = SZC_liu_xiang_dead }
 		}
-		visible = {
+		allow_branch = {
 			NOT = {
 				has_country_flag = SZC_liu_xiang_dead
 			}
@@ -11602,19 +11602,16 @@ focus_tree = {
 					activate_targeted_decision = { decision = china_demand_submission target = LEP }
 					activate_targeted_decision = { decision = china_demand_submission target = ANQ }
 					activate_targeted_decision = { decision = china_demand_submission target = SHD }
-					activate_targeted_decision = { decision = china_demand_submission target = SHC }
 				}
 				hidden_effect = {
 					add_to_array = { ROOT.china_possible_targets_array = CHI }
 					add_to_array = { ROOT.china_possible_targets_array = LEP }
 					add_to_array = { ROOT.china_possible_targets_array = ANQ }
 					add_to_array = { ROOT.china_possible_targets_array = SHD }
-					add_to_array = { ROOT.china_possible_targets_array = SHC }
 					activate_targeted_decision = { target = CHI decision = china_attack_decision }
 					activate_targeted_decision = { target = LEP decision = china_attack_decision }
 					activate_targeted_decision = { target = ANQ decision = china_attack_decision }
 					activate_targeted_decision = { target = SHD decision = china_attack_decision }
-					activate_targeted_decision = { target = SHC decision = china_attack_decision }
 				}
 			}
 		}
@@ -11652,19 +11649,16 @@ focus_tree = {
 					activate_targeted_decision = { decision = china_demand_submission target = LEP }
 					activate_targeted_decision = { decision = china_demand_submission target = ANQ }
 					activate_targeted_decision = { decision = china_demand_submission target = SHD }
-					activate_targeted_decision = { decision = china_demand_submission target = SHC }
 				}
 				hidden_effect = {
 					add_to_array = { ROOT.china_possible_targets_array = CHI }
 					add_to_array = { ROOT.china_possible_targets_array = LEP }
 					add_to_array = { ROOT.china_possible_targets_array = ANQ }
 					add_to_array = { ROOT.china_possible_targets_array = SHD }
-					add_to_array = { ROOT.china_possible_targets_array = SHC }
 					activate_targeted_decision = { target = CHI decision = china_attack_decision }
 					activate_targeted_decision = { target = LEP decision = china_attack_decision }
 					activate_targeted_decision = { target = ANQ decision = china_attack_decision }
 					activate_targeted_decision = { target = SHD decision = china_attack_decision }
-					activate_targeted_decision = { target = SHC decision = china_attack_decision }
 				}
 			}
 		}
@@ -12320,7 +12314,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_against_all_odds"
 			custom_effect_tooltip = SZC_pan_against_all_odds_tt
 			effect_tooltip = {
-				remove_idea = SZC_pan_calls_for_congress
+				remove_ideas = SZC_pan_calls_for_congress
 			}
 		}
 	}
@@ -12349,6 +12343,11 @@ focus_tree = {
 				custom_effect_tooltip = SZC_pan_changyou_is_helpful_tt
 				custom_effect_tooltip = tooltip_white_line
 				
+				add_power_balance_value = {
+					id = SZC_CDL_power_balance
+					value = -0.05
+					tooltip_side = SZC_bop_PWH_winning_side
+				}
 				add_one_random_civilian_factory = yes
 				add_one_random_civilian_factory = yes
 				add_political_power = -50
@@ -15651,7 +15650,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_aspecial_RND"
 			add_research_slot = 1
-			add_breakthrough_points = 3
+			add_breakthrough_points = {
+				specialization = all
+				value = 1
+			  }
 		}
 	}
 
@@ -15707,17 +15709,19 @@ focus_tree = {
 		}
 
 		available = {
-			all_state = {
-				limit = {
-					is_on_continent = india
+			AND = {
+				525 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
 				}
-				is_owned_by_ROOT_or_ally = yes
-			}
-			all_state = {
-				limit = {
-					is_on_continent = asia
+				282 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
 				}
-				is_owned_by_ROOT_or_ally = yes
+				330 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				286 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
 			}
 		}
 
@@ -15757,17 +15761,43 @@ focus_tree = {
 		
 
 		available = {
-			all_state = {
-				limit = {
-					is_on_continent = india
+			AND = {
+				525 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
 				}
-				is_owned_by_ROOT_or_subject = yes
-			}
-			all_state = {
-				limit = {
-					is_on_continent = asia
+				282 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
 				}
-				is_owned_by_ROOT_or_subject = yes
+				330 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				408 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				286 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				431 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				439 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				427 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				289 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				336 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				1020 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				327 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
 			}
 		}
 
@@ -16575,6 +16605,10 @@ focus_tree = {
 
 		prerequisite = {
 			focus = SZC_pan_CDL_FORPOL_return_to_world_stage
+		}
+		
+		mutually_exclusive = {
+			focus = SZC_pan_CDL_FORPOL_friendship_across_pacific_ocean
 			focus = SZC_pan_CDL_FORPOL_once_the_devil_though
 		}
 
@@ -16621,7 +16655,7 @@ focus_tree = {
 				set_variable = { blue = 0.352 }
 			}
 			SZC_ECON_SPHERE_INVITE_SETUP = yes
-			for_every_scople_loop = {
+			for_each_scope_loop = {
 				array = global.african_tags_array
 				if = {
 					limit = {
@@ -16939,7 +16973,7 @@ focus_tree = {
 			SZC = {
 				add_to_economic_sphere = yes
 			}
-			for_every_scople_loop = {
+			for_each_scope_loop = {
 				array = global.african_tags_array
 				if = {
 					limit = {
@@ -17323,7 +17357,7 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = {
-						has_country_leader = SZC_pan_wenhua
+						has_country_leader = { character = SZC_pan_wenhua ruling_only = yes }
 					}
 					country_event = {
 						id =  NKRsichuan.109
@@ -17341,7 +17375,6 @@ focus_tree = {
 				activate_targeted_decision = { decision = china_demand_submission target = ANQ }
 				activate_targeted_decision = { decision = china_demand_submission target = LEP }
 				activate_targeted_decision = { decision = china_demand_submission target = SHD }
-				activate_targeted_decision = { decision = china_demand_submission target = SHC }
 			}
 			hidden_effect = {
 				add_to_array = { ROOT.china_possible_targets_array = SHX }
@@ -17356,8 +17389,6 @@ focus_tree = {
 				activate_targeted_decision = { target = LEP decision = china_attack_decision }
 				add_to_array = { ROOT.china_possible_targets_array = SHD }
 				activate_targeted_decision = { target = SHD decision = china_attack_decision }
-				add_to_array = { ROOT.china_possible_targets_array = SHC }
-				activate_targeted_decision = { target = SHC decision = china_attack_decision }
 			}
 		}
 	}
@@ -17722,15 +17753,19 @@ focus_tree = {
 			set_cosmetic_tag = SZC_KMT_SOUTHERNWEST
 			every_state = {
 				limit = {
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
 					OR = {
 						has_state_flag = guangxi_province_state
 						has_state_flag = guangdong_province_state
-						has_state_flag = yunnan_province_state
-						has_state_flag = hubei_province_state 
-						has_state_flag = hunan_province_state 
+						has_state_flag = sichuan_province_state
+						has_state_flag = hunan_province_state
+						has_state_flag = guizhou_province_state
 					}
 				}
-				add_claim_by = ROOT 
+				add_claim_by = ROOT
 			}
 		}
 	}
@@ -18105,7 +18140,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = SZC_end_coalition_tt
 			end_coalition = yes
-			add_idea = {
+			add_ideas = {
 				SZC_pan_popular_revolution_idea
 			}
 			CHI = {
@@ -18545,36 +18580,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SZC_pan_towards_liberation_of_all_asia
-		icon = GFX_goal_SZC_pan_towards_liberation_of_all_asia
-		cost = 5
-		relative_position_id = SZC_pan_red_generalissimo
-
-		x = -4
-		y = 2
-
-		available = {
-			NOT = {
-				has_completed_focus = SZC_pan_abandon_the_foolish_internationalism
-			}
-			OR = {
-				has_completed_focus = SZC_pan_all_against_capital_imperialist
-				has_completed_focus = SZC_pan_panyaozi_the_true_revolutionary
-			}
-		}
-
-		prerequisite = {
-			focus = SZC_pan_partys_line
-			focus = SZC_pan_hail_to_the_chief
-		}
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_pan_towards_liberation_of_all_asia"
-			complete_national_focus = SZC_pan_FORPOL_spread_our_revolution
-		}
-	}
-
-	focus = {
 		id = SZC_pan_red_generalissimo
 		icon = GFX_goal_SZC_pan_red_generalissimo
 		cost = 5
@@ -18614,6 +18619,36 @@ focus_tree = {
 			}
 			custom_effect_tooltip = SZC_end_coalition_tt
 			end_coalition = yes
+		}
+	}
+
+	focus = {
+		id = SZC_pan_towards_liberation_of_all_asia
+		icon = GFX_goal_SZC_pan_towards_liberation_of_all_asia
+		cost = 5
+		relative_position_id = SZC_pan_red_generalissimo
+
+		x = -4
+		y = 2
+
+		available = {
+			NOT = {
+				has_completed_focus = SZC_pan_abandon_the_foolish_internationalism
+			}
+			OR = {
+				has_completed_focus = SZC_pan_all_against_capital_imperialist
+				has_completed_focus = SZC_pan_panyaozi_the_true_revolutionary
+			}
+		}
+
+		prerequisite = {
+			focus = SZC_pan_partys_line
+			focus = SZC_pan_hail_to_the_chief
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_pan_towards_liberation_of_all_asia"
+			complete_national_focus = SZC_pan_FORPOL_spread_our_revolution
 		}
 	}
 
@@ -20080,7 +20115,7 @@ focus_tree = {
 				id = NKRsichuanFP.16
 			}
 			custom_effect_tooltip = SZC_pan_FORPOL_geopolitics_first_tt
-			for_every_scople_loop = {
+			for_each_scope_loop = {
 				array = global.african_tags_array
 				if = {
 					limit = {
@@ -20262,7 +20297,7 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuanFP.17
 			}
-			swap_idea = {
+			swap_ideas = {
 				remove_idea = SZC_KMT_EI_leader_idea
 				add_idea = SZC_KMT_EI_leader_2_idea
 			}
@@ -20625,7 +20660,7 @@ focus_tree = {
 				set_variable = { blue = 0.352 }
 			}
 			SZC_ECON_SPHERE_INVITE_SETUP = yes
-			for_every_scople_loop = {
+			for_each_scope_loop = {
 				array = global.african_tags_array
 				if = {
 					limit = {
@@ -20820,7 +20855,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_completed_decision = SZC_pan_abandon_the_foolish_internationalism
+			has_completed_focus = SZC_pan_abandon_the_foolish_internationalism
 			has_global_flag = USA_civil_war_over_flag
 			var:361.owner = {
 				has_socialist_government = no
@@ -20946,7 +20981,7 @@ focus_tree = {
 			SZC = {
 				add_to_economic_sphere = yes
 			}
-			for_every_scople_loop = {
+			for_each_scope_loop = {
 				array = global.african_tags_array
 				if = {
 					limit = {
@@ -21241,8 +21276,10 @@ focus_tree = {
 			create_intelligence_agency = yes
 			upgrade_intelligence_agency = upgrade_psycho_warfare
 			hidden_effect = {
-				country_event = NKRsichuanflavor.3
-				days = 3
+				country_event = {
+					id = NKRsichuanflavor.3
+					days = 3
+				}
 			}
 		}
 	}
@@ -21876,7 +21913,7 @@ focus_tree = {
 					is_army_leader = yes
 				}
 				add_attack = 1
-				add_defence = 1
+				add_defense = 1
 				add_logistics = 1
 				add_planning = 1
 			}
@@ -21977,8 +22014,10 @@ focus_tree = {
 				add_idea = SZC_pan_whampoa_spirit_idea
 			}
 			hidden_effect = {
-				country_event = NKRsichuanflavor.14
-				days = 3
+				country_event = {
+					id = NKRsichuanflavor.14
+					days = 3
+				}
 			}
 		}
 	}
@@ -22117,8 +22156,10 @@ focus_tree = {
 				add_idea = SZC_pan_whampoa_spirit_3_idea
 			}
 			hidden_effect = {
-				country_event = NKRsichuanflavor.15
-				days = 3
+				country_event = {
+					id = NKRsichuanflavor.15
+					days = 3
+				}
 			}
 		}
 	}
@@ -22274,8 +22315,10 @@ focus_tree = {
 				SZC_pan_baiqiuen_hospital_idea
 			}
 			hidden_effect = {
-				country_event = NKRsichuanflavor.16
-				days = 3
+				country_event = {
+					id = NKRsichuanflavor.16
+					days = 3
+				}
 			}
 		}
 	}
@@ -22882,133 +22925,8 @@ focus_tree = {
 				days = 365
 				folder = naval
 			}
-			if = {
-				limit = {
-					has_dlc_mtg = yes
-				}
-				if = {
-					limit = { NOT = { has_tech = early_ship_hull_light } }
-					set_technology = { early_ship_hull_light = 1 }
-				}
-				if = {
-					limit = { NOT = { has_tech = early_ship_hull_cruiser } }
-					set_technology = { early_ship_hull_cruiser = 1 }
-				}
-				if = {
-					limit = { NOT = { has_tech = coastal_defense_ships } }
-					set_technology = { coastal_defense_ships = 1 }
-				}
-				if = {
-					limit = { NOT = { has_tech = coastal_defense_ships } }
-					set_technology = { coastal_defense_ships = 1 }
-				}
-				if = {
-					limit = { NOT = { has_tech = basic_naval_mines } }
-					set_technology = { basic_naval_mines = 1 }
-				}
-				if = {
-					limit = { NOT = { has_tech = basic_battery } }
-					set_technology = { basic_battery = 1 }
-				}
-				if = {
-					limit = { NOT = { has_tech = basic_torpedo } }
-					set_technology = { basic_torpedo = 1 }
-				}
-			}
-			else = {
-				if = {
-					limit = { NOT = { has_tech = early_destroyer } }
-					set_technology = { early_destroyer = 1 }
-				}
-				if = {
-					limit = { NOT = { has_tech = early_submarine } }
-					set_technology = { early_submarine = 1 }
-				}
-			}
-
-			custom_effect_tooltip = tooltip_white_line
-			QIE = {
-				custom_effect_tooltip = characters_will_be_recruited
-				character_list_tooltip = {
-					limit = {
-						OR = {
-							is_character = QIE_sa_zhenbing
-							is_character = QIE_du_xigui
-							is_character = QIE_wu_yulin
-							is_character = QIE_yang_shuzhuang
-						}
-					}
-				}
-				hidden_effect = {
-					QIE_sa_zhenbing = { set_nationality = ROOT }
-					QIE_du_xigui = { set_nationality = ROOT }
-					QIE_wu_yulin = { set_nationality = ROOT }
-					QIE_yang_shuzhuang = { set_nationality = ROOT }
-				}
-			}
-			if = {
-				limit = { NOT = { country_exists = FNG } }
-				FNG = {
-					custom_effect_tooltip = characters_will_be_recruited
-					character_list_tooltip = {
-						limit = { is_character = FNG_shen_honglie }
-					}
-					hidden_effect = {
-						FNG_shen_honglie = { set_nationality = ROOT }
-					}
-				}
-			}
-			if = {
-				limit = { NOT = { country_exists = LEP } }
-				LEP = {
-					custom_effect_tooltip = characters_will_be_recruited
-					character_list_tooltip = {
-						limit = {
-							is_character = LEP_wu_zhennan
-							is_character = LEP_li_shijia
-							is_character = LEP_wang_shouting
-						}
-					}
-					hidden_effect = {
-						LEP_wu_zhennan = { set_nationality = ROOT }
-						LEP_li_shijia = { set_nationality = ROOT }
-						LEP_wang_shouting = { set_nationality = ROOT }
-					}
-				}
-			}
-			else_if = {
-				limit = { QIE = { has_character = LEP_wu_zhennan } }
-				QIE = {
-					custom_effect_tooltip = characters_will_be_recruited
-					character_list_tooltip = {
-						limit = { is_character = LEP_wu_zhennan }
-					}
-					hidden_effect = {
-						LEP_wu_zhennan = { set_nationality = ROOT }
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					ANQ = { has_character = LEP_wu_zhennan }
-					NOT = { country_exists = ANQ }
-				}
-				ANQ = {
-					custom_effect_tooltip = characters_will_be_recruited
-					character_list_tooltip = {
-						limit = {
-							is_character = LEP_wu_zhennan
-							is_character = LEP_li_shijia
-							is_character = LEP_wang_shouting
-						}
-					}
-					hidden_effect = {
-						LEP_wu_zhennan = { set_nationality = ROOT }
-						LEP_li_shijia = { set_nationality = ROOT }
-						LEP_wang_shouting = { set_nationality = ROOT }
-					}
-				}
-			}
+			
+			CHN_inherit_beiyang_fleet_effect = yes
 		}
 	}
 
@@ -23482,8 +23400,10 @@ focus_tree = {
 				id = NKRsichuan.403
 			}
 			hidden_effect = {
-				id = NKRsichuan.404
-				days = 2
+				country_event = {
+					id = NKRsichuan.404
+					days = 2
+				}
 			}
 		}
 	}
@@ -23640,8 +23560,10 @@ focus_tree = {
 				popularity = 0.03
 			}
 			hidden_effect = {
-				country_event = NKRsichuan.424
-				days = 3
+				country_event = {
+					id = NKRsichuan.424
+					days = 3
+				}
 			}
 		}
 	}
@@ -25340,8 +25262,8 @@ focus_tree = {
 					YCP_party_issue_foreign = token:SZC_xie_chengping_1
 				}
 				swap_ideas = {
-					remove_idea = YCP_xie_chengping_DMF_idea
-					add_idea = YCP_xie_chengping_1_DMF_idea
+					remove_idea = SZC_xie_chengping_DMF_idea
+					add_idea = SZC_xie_chengping_1_DMF_idea
 				}
 			}
 		}
@@ -25621,7 +25543,7 @@ focus_tree = {
 			}
 			add_timed_idea = {
 				idea = SZC_YCP_accelerate_plan_idea
-				duration = 730
+				days = 730
 			}
 		}
 	}
@@ -25779,8 +25701,8 @@ focus_tree = {
 					YCP_party_issue_train = token:SZC_chen_shanxin_1
 				}
 				swap_ideas = {
-					remove_idea = YCP_chen_shanxin_DMT_idea
-					add_idea = YCP_chen_shanxin_1_DMT_idea
+					remove_idea = SZC_chen_shanxin_DMT_idea
+					add_idea = SZC_chen_shanxin_1_DMT_idea
 				}
 			}
 		}
@@ -25821,8 +25743,8 @@ focus_tree = {
 					YCP_party_issue_foreign = token:SZC_liu_jingyuan_1
 				}
 				swap_ideas = {
-					remove_idea = YCP_liu_jingyuan_DMF_idea
-					add_idea = YCP_liu_jingyuan_1_DMF_idea
+					remove_idea = SZC_liu_jingyuan_DMF_idea
+					add_idea = SZC_liu_jingyuan_1_DMF_idea
 				}
 			}
 		}
@@ -26302,9 +26224,7 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.557
 			}
-			SZC_xia_taosheng = {
 				set_country_leader_ideology = social_conservative_anarchist_statist_subtype
-			}
 		}
 	}
 
@@ -26748,7 +26668,7 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.576
 			}
-			remove_idea = SZC_YCP_progress_constitution
+			remove_ideas = SZC_YCP_progress_constitution
 		}
 	}
 
@@ -26826,8 +26746,8 @@ focus_tree = {
 					YCP_party_issue_chairman = token:SZC_zeng_qi_suit
 				}
 				swap_ideas = {
-					remove_idea = YCP_zeng_qi_DMC_idea
-					add_idea = YCP_zeng_qi_suit_DMC_idea
+					remove_idea = SZC_zeng_qi_DMC_idea
+					add_idea = SZC_zeng_qi_suit_DMC_idea
 				}
 			}
 		}
@@ -27559,8 +27479,8 @@ focus_tree = {
 					YCP_party_issue_chairman = token:SZC_li_huang_suit
 				}
 				swap_ideas = {
-					remove_idea = YCP_li_huang_DMC_idea
-					add_idea = YCP_li_huang_suit_DMC_idea
+					remove_idea = SZC_li_huang_DMC_idea
+					add_idea = SZC_li_huang_suit_DMC_idea
 				}
 			}
 		}
@@ -28085,8 +28005,8 @@ focus_tree = {
 					YCP_party_issue_chairman = token:SZC_zuo_shunsheng_suit
 				}
 				swap_ideas = {
-					remove_idea = YCP_zuo_shunsheng_DMC_idea
-					add_idea = YCP_zuo_shunsheng_suit_DMC_idea
+					remove_idea = SZC_zuo_shunsheng_DMC_idea
+					add_idea = SZC_zuo_shunsheng_suit_DMC_idea
 				}
 			}
 		}
@@ -28113,7 +28033,7 @@ focus_tree = {
 			}
 			add_research_slot = 1
 			hidden_effect = {
-				country = {
+				country_event = {
 					id = NKRsichuan.618
 					days = 30
 				}
@@ -28285,8 +28205,8 @@ focus_tree = {
 					YCP_party_issue_foreign = token:SZC_shen_yunlong_1
 				}
 				swap_ideas = {
-					remove_idea = YCP_shen_yunlong_DMP_idea
-					add_idea = YCP_shen_yunlong_1_DMP_idea
+					remove_idea = SZC_shen_yunlong_DMP_idea
+					add_idea = SZC_shen_yunlong_1_DMP_idea
 				}
 			}
 		}
@@ -28597,8 +28517,8 @@ focus_tree = {
 					YCP_party_issue_chairman = token:SZC_chen_qitian_suit
 				}
 				swap_ideas = {
-					remove_idea = YCP_chen_qitian_DMC_idea
-					add_idea = YCP_chen_qitian_suit_DMC_idea
+					remove_idea = SZC_chen_qitian_DMC_idea
+					add_idea = SZC_chen_qitian_suit_DMC_idea
 				}
 			}
 		}
@@ -29283,12 +29203,6 @@ focus_tree = {
 					ideology = social_democrat
 					popularity = 0.25
 				}
-				GXC = {
-					GXC_zhang_dongsun = {
-						SZC_recruit_character_effect = yes
-					}
-				}
-				activate_advisor = GXC_zhang_dongsun_sic
 			}
 		}
 	}
@@ -29334,8 +29248,8 @@ focus_tree = {
 					YCP_party_issue_chairman = token:SZC_jiang_yungang_cool
 				}
 				swap_ideas = {
-					remove_idea = YCP_jiang_yungang_DMC_idea
-					add_idea = YCP_jiang_yungang_cool_DMC_idea
+					remove_idea = SZC_jiang_yungang_DMC_idea
+					add_idea = SZC_jiang_yungang_cool_DMC_idea
 				}
 			}
 		}
@@ -29546,7 +29460,7 @@ focus_tree = {
 			add_stability = -0.15
 			add_political_power = -50
 			SZC_zhang_guotao = {
-				kill = yes
+				kill_character = yes
 			}
 			GXC_zhang_junmai = {
 				retire = yes
@@ -29673,8 +29587,8 @@ focus_tree = {
 					YCP_party_issue_interior = token:SZC_tan_tiwu_armor
 				}
 				swap_ideas = {
-					remove_idea = YCP_tan_tiwu_DMC_idea
-					add_idea = YCP_tan_tiwu_armor_DMC_idea
+					remove_idea = SZC_tan_tiwu_DMI_idea
+					add_idea = SZC_tan_tiwu_armor_DMI_idea
 				}
 			}
 		}
@@ -30229,7 +30143,7 @@ focus_tree = {
 			}
 		}
 
-		visible = {
+		allow_branch = {
 			NOT = {
 				has_country_flag = SZC_CDP_haha_real_time
 			}
@@ -30344,8 +30258,8 @@ focus_tree = {
 					YCP_party_issue_interior = token:SZC_xia_taosheng_sweater
 				}
 				swap_ideas = {
-					remove_idea = YCP_SZC_xia_taosheng_DMI_idea
-					add_idea = YCP_SZC_xia_taosheng_sweater_DMI_idea
+					remove_idea = SZC_xia_taosheng_DMI_idea
+					add_idea = SZC_xia_taosheng_sweater_DMI_idea
 				}
 			}
 		}
@@ -30427,7 +30341,7 @@ focus_tree = {
 				limit = {
 					has_idea = SZC_YCP_state_union_idea
 				}
-				remove_idea = SZC_YCP_state_union_idea
+				remove_ideas = SZC_YCP_state_union_idea
 			}
 			swap_ideas = {
 				remove_idea = SZC_YCP_socialize_economy_idea
@@ -30615,8 +30529,8 @@ focus_tree = {
 					YCP_party_issue_chairman = token:SZC_yu_fuxian_1
 				}
 				swap_ideas = {
-					remove_idea = YCP_yu_fuxian_DMC_idea
-					add_idea = YCP_yu_fuxian_1_DMC_idea
+					remove_idea = SZC_yu_fuxian_DMC_idea
+					add_idea = SZC_yu_fuxian_1_DMC_idea
 				}
 			}
 		}
@@ -32080,7 +31994,7 @@ focus_tree = {
 		}
 
 		available = {
-			hidden = {
+			hidden_trigger = {
 				NOT  = {
 					has_completed_focus = SZC_YCP_post_YCP_days
 				}
@@ -32792,7 +32706,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_fighting_in_the_new_warring_states"
 			every_army_leader = {
 				add_attack = 1
-				add_defence = 1
+				add_defense = 1
 			}
 			add_war_support = 0.15
 			add_political_power = 100
@@ -33030,6 +32944,26 @@ focus_tree = {
 				}
 				add_claim_by = ROOT
 			}
+			hidden_effect = {
+				
+			every_state = {
+				limit = {
+					OR = {
+						state = 408
+						state = 409
+						state = 657
+						state = 560
+						state = 577
+						state = 537
+						state = 561
+						state = 1042
+						state = 1111
+					}
+					is_owned_by_ROOT_or_subject = yes
+				}
+				transfer_state_to = ROOT
+			}
+			}
 			
 			
 		}
@@ -33053,7 +32987,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_homeland_front"
 			every_army_leader = {
 				add_attack = 1
-				add_defence = 1
+				add_defense = 1
 			}
 			add_war_support = 0.15
 			add_political_power = 100
@@ -33430,7 +33364,7 @@ focus_tree = {
 		relative_position_id = SZC_YCP_FORPOL_libbro
 
 		available = {
-			every_other_country = {
+			all_other_country = {
 				has_socialist_government = no
 			}
 		}
@@ -33501,15 +33435,12 @@ focus_tree = {
 			#advisor update
 			if = {
 				limit = {
-					has_country_leader = SZC_zhang_guotao
-					every_country = {
-						limit = {
-							OR = {
-								is_in_faction_with = SZC
-								tag = SZC
-							}
+					has_country_leader = { character = SZC_zhang_guotao ruling_only = yes}
+					var:276.owner = {
+						OR = {
+							is_in_faction_with = SZC
+							tag = SZC
 						}
-						owns_state = 276
 					}
 				}
 				country_event = {
@@ -33838,7 +33769,7 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_hire_continental_advisors"
-				add_army_experience = 35
+				army_experience = 35
 				add_mastery_bonus = {
 					name = SZC_YCP_hire_continental_advisors
 					bonus = 0.15
@@ -34689,7 +34620,7 @@ focus_tree = {
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_iron_wings_scattered_like_stars"
-				add_air_experience = 45
+				air_experience = 45
 				add_stability = -0.15
 				complete_special_project = sp:sp_air_jet_engine
 				complete_special_project = sp:sp_air_axial_jet_engine
@@ -35476,7 +35407,7 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_hunter_killer_voyage"
 				
-				add_navy_experience = 50
+				navy_experience = 50
 				add_tech_bonus = {
 					name = SZC_YCP_shimmering_deep_ocean
 					ahead_reduction = 1

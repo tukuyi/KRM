@@ -5,7 +5,7 @@ leader_traits = {
 		random = no
 		political_power_gain = 0.05
 		stability_factor = 0.05
-		justify_wargoal_time_factor = -0.60
+		justify_war_goal_time = -0.60
 	}
 
 	SZC_PAN_second_cai_e = {
@@ -72,7 +72,7 @@ leader_traits = {
 		custom_modifier_tooltip = SZC_YCP_collaborative_yellow_syndicalist_desc
 		random = no
 		stability_factor = 0.10
-		factory_output = -0.05   
+		industrial_capacity_factory = -0.05   
 		consumer_goods_factor = -0.15
 		political_power_gain = -0.05   
 		trade_opinion_factor = 0.10      
@@ -109,7 +109,7 @@ leader_traits = {
 		political_power_gain = 0.1
 		stability_factor = 0.05
 		political_advisor_cost_factor = -0.15
-		army_experience_factor = 0.1
+		experience_gain_army_factor = 0.1
 		army_attack_factor = 0.05
 	}
 	SZC_YCP_new_legalist_helmsman = {

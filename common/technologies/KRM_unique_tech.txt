@@ -12,8 +12,8 @@ technologies = {
 		paratroopers_special_forces_contribution_factor = 0.5
 		paratrooper_aa_defense = 0.8
 		paratrooper_weight_factor = 0.5
-		paratrooper_attack_factor = 0.4
-		paratrooper_speed_factor = 0.4
+		special_forces_attack_factor = 0.4
+		special_forces_defence_factor = 0.2
 		experience_gain_paratrooper_combat_factor = 0.25
 	}
 
@@ -29,10 +29,10 @@ technologies = {
 		}
 	}
 
-	YCP_helicarrier_tech = {
+	helicarrier_tech = {
 
 		enable_equipments = {
-			YCP_helicarrier_equipment_0
+			helicarrier_equipment_0
 		}
 
 		research_cost = 1

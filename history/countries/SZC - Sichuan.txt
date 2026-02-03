@@ -198,11 +198,20 @@ recruit_character = SZC_ren_hongjun
 recruit_character = SZC_jiang_kui
 recruit_character = SZC_zheng_shaoyu
 recruit_character = SZC_yue_yiqin
+recruit_character = SZC_pan_changyou
 # CDL
 recruit_character = SZC_xian_ying
 recruit_character = SZC_che_yaoxian
 recruit_character = SZC_zhou_taixuan
 
+#LIUCONGYUNSLAPDOG
+recruit_character = SZC_liu_chengxun
+recruit_character = SZC_jiang_shangpu
+recruit_character = SZC_liu_xiaolan
+recruit_character = SZC_wu_shantang
+recruit_character = SZC_guan_yu
+recruit_character = SZC_huang_zhong
+recruit_character = SZC_yue_fei
 ### Character Setup ###
 SZC_zhang_lan = {
 	china_set_character_alignment_federalists = yes
@@ -648,21 +657,17 @@ recruit_character = SZC_MMIC
 recruit_character = SZC_lv_yifeng
 recruit_character = SZC_qi_nanxun
 recruit_character = SZC_xie_chi
-recruit_character = SZC_zhang_lan
 recruit_character = SZC_fan_piaozhai
 recruit_character = SZC_shen_junru
 recruit_character = SZC_luo_longji
 recruit_character = SZC_pan_guangdan
 recruit_character = SZC_yang_bokai
-recruit_character = SZC_pan_changyou
 recruit_character = SZC_zhong_tiqian
 recruit_character = SZC_fei_xiaotong
 recruit_character = SZC_shi_liang
 recruit_character = SZC_hu_yuzhi
 recruit_character = SZC_wang_shimu
 recruit_character = SZC_xia_daoping
-recruit_character = SZC_lv_yifeng
-recruit_character = SZC_ren_hongjun
 recruit_character = SZC_chen_dasan
 recruit_character = SZC_ran_jun
 
@@ -694,9 +699,6 @@ SZC_liu_cunhou = {
 	china_set_character_alignment_northern_zhili = yes
 	set_character_flag = SZC_armament_leader
 	set_character_flag = CHN_original_unit_leader
-}
-SZC_zhang_lan = {
-	china_set_character_alignment_chinese_southern_republican = yes
 }
 SZC_fan_shaozeng = {
 	set_character_flag = SZC_armament_leader
@@ -785,9 +787,6 @@ SZC_pan_guangdan = {
 	retire = yes
 }
 SZC_lv_yifeng = {
-	retire = yes
-}
-SZC_pan_changyou = {
 	retire = yes
 }
 SZC_zhong_tiqian = {
@@ -1013,6 +1012,30 @@ SZC_han_xianchu = {
 SZC_xu_shiyou = {
 	retire = yes
 }
+
+#LIUCONGYUNPATH
+SZC_liu_chengxun = {
+	retire = yes
+}
+SZC_jiang_shangpu = {
+	retire = yes
+}
+SZC_liu_xiaolan = {
+	retire = yes
+}
+SZC_wu_shantang = {
+	retire = yes
+}
+SZC_guan_yu = {
+	retire = yes
+}
+SZC_huang_zhong = {
+	retire = yes
+}
+SZC_yue_fei = {
+	retire = yes
+}
+
 
 
 

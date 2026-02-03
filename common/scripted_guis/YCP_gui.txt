@@ -17,11 +17,9 @@ scripted_gui = {
 				if = {
 					limit = { has_country_flag = YCP_party_issue_gui_visibility }
 					clr_country_flag = YCP_party_issue_gui_visibility
-					CHN_clear_YCP_party_issue_gui = yes
 				}
 				else = {
 					set_country_flag = YCP_party_issue_gui_visibility
-					CHN_calculate_YCP_party_issue_gui_effect = yes
 				}
 				SZC_update_YCP_party_issue_gui = yes
 			}
@@ -917,4 +915,3 @@ scripted_gui = {
 
 }
 
-}

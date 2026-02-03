@@ -248,7 +248,7 @@ china_is_aligned_with_CHNsyndicalist = {
 		tooltip = china_is_aligned_with_CHNsyndicalist
 		OR = {
 			china_alignment_CHNsyndicalist = yes
-			china_alignment_left_kmt = yes
+			china_is_aligned_with_left_kmt = yes
 		}
 	}
 }
@@ -276,6 +276,7 @@ china_is_aligned_with_statist = {
 		tooltip = china_is_aligned_with_statist
 		OR = {
 			china_alignment_statist = yes
+			china_is_aligned_with_federalists = yes
 		}
 	}
 }
@@ -558,16 +559,6 @@ china_no_rival_governments_left = {
 			YUN = { has_capitulated = yes }
 		}
 	}
-	if = {
-		limit = {
-			SHC = { china_is_potential_government = yes }
-			NOT = { original_tag = SHC }
-		}
-		OR = {
-			NOT = { country_exists = SHC }
-			SHC = { has_capitulated = yes }
-		}
-	}
 }
 
 china_stronger_than_existing_governments = {
@@ -691,17 +682,6 @@ china_stronger_than_existing_governments = {
 			}
 		}
 		strength_ratio = { tag = YUN ratio > 1.2 }
-	}
-	if = {
-		limit = {
-			SHC = {
-				china_is_potential_government = yes
-				exists = yes
-				is_subject = no
-				NOT = { original_tag = ROOT }
-			}
-		}
-		strength_ratio = { tag = SHC ratio > 1.2 }
 	}
 }
 

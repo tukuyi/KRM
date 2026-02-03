@@ -1567,6 +1567,10 @@ defined_text = {
 		localization_key = china_faction_tenets_statist_desc
 	}
 	text = {
+		trigger = { check_variable = { china_alignment_leader = BCN } }
+		localization_key = china_faction_tenets_CHNbritish_desc
+	}
+	text = {
 		localization_key = china_faction_tenets_independent_desc
 	}
 }
@@ -1578,14 +1582,10 @@ defined_text = {
 defined_text = {
 	name = CHN_south_china_war_get_GXC_alignment
 	text = {
-		trigger = { check_variable = { china_alignment_leader = BCN } }
-		localization_key = china_faction_tenets_CHNbritish_desc
 		trigger = { GXC = { ROOT = { china_same_alignment_as_PREV = yes } } }
 		localization_key = CHN_south_china_war_get_GXC_alignment_compatible_key
 	}
 	text = {
-		trigger = { check_variable = { china_alignment_leader = YCP } }
-		localization_key = china_faction_tenets_statist_desc
 		trigger = { GXC = { ROOT = { NOT = { china_same_alignment_as_PREV = yes } } } }
 		localization_key = CHN_south_china_war_get_GXC_alignment_incompatible_key
 	}

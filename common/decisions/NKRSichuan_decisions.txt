@@ -237,7 +237,7 @@ SZC_debug_category = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete SZC_DEBUG_YCPpath_YCPphase1_decision target: [From.GetName]"
 			hidden_effect = {
-				SZC_YCP_party_issue_setup = YES
+				SZC_YCP_party_issue_setup = yes
 				SZC_zeng_qi = {
 					SZC_recruit_character_effect = yes
 				}
@@ -1337,7 +1337,7 @@ chinese_unification = {
 			social_conservative_drift = 0.20
 			market_liberal_drift = 0.015
 			social_liberal_drift = 0.025
-			social_democrat__drift = 0.20
+			social_democrat_drift = 0.20
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SZC_expand_local_parliament_democracy_decision target: [From.GetName]"
@@ -2422,9 +2422,8 @@ SZC_YCP_balance_of_power_category = {
 
 chinese_unification = {
 	SZC_control_beijing_mission = {
-		allowed = { 
+		allowed = {
 			tag = SZC
-			has_country_flag = NKRsichuan_YCPpath
 		}
 		highlight_states = {
 			highlight_state_targets = { state = 608 }
@@ -2435,13 +2434,10 @@ chinese_unification = {
 				has_war = yes
 			}
 			has_war_with = var:608.owner
+			has_country_flag = NKRsichuan_YCPpath
 		}
 		available = {
-			608 = { is_controlled_by = ROOT }
-			ROOT = {
-				has_war = yes
-			}
-			has_war_with = var:608.owner
+			always = no
 		}
 		cancel_trigger = {
 			has_war = no
@@ -2467,41 +2463,42 @@ chinese_unification = {
 	
 		
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = has_80_percent_of_asia_and_india_tt
-				# 初始化变量
-				set_temp_variable = { total_states_count = 0 }
-				set_temp_variable = { controlled_states_count = 0 }
-		
-				# 遍历所有状态并筛选
-				every_state = {
-					limit = {
-						OR = {
-							is_on_continent = india
-							is_on_continent = asia
-						}
-					}
-					ROOT = { add_to_temp_variable = { total_states_count = 1 } }
+			AND = {
+				525 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
 				}
-
-				every_state = {
-					limit = {
-						CONTROLLER = {
-							is_owned_and_controlled_by_ROOT_or_subject = yes
-						}
-					}
-					ROOT = { add_to_temp_variable = { controlled_states_count = 1 } }
+				282 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
 				}
-		
-				# 计算 80% 阈值
-				set_temp_variable = { threshold = total_states_count }
-				multiply_temp_variable = { threshold = 0.8 }
-		
-				# 判断是否达标
-				check_variable = {
-					var = controlled_states_count 
-					value = threshold
-					compare = greater_than_or_equals
+				330 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				408 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				286 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				431 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				439 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				427 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				289 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				336 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				1020 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				327 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -2969,7 +2966,6 @@ foreign_politics = {
 		}
 		cost = 10
 		days_remove = 7
-		fire_only_once = yes
 		ai_will_do = { base = 500 }
 
 		complete_effect = {
@@ -3047,7 +3043,6 @@ foreign_politics = {
 		ai_will_do = { factor = 50 }
 		target_non_existing = yes
 		cost = 50
-		fire_only_once = yes
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_KMT_invite_into_economic_sphere"
@@ -3061,7 +3056,7 @@ foreign_politics = {
 	SZC_KMT_force_to_accept_our_doctrine = {
 		icon = GFX_decision_global_trade
 
-		allowed = { has_completed_focus = SZC_pan_FORPOL_socialist_reorganize }
+		allowed = { tag = SZC }
 
 		visible = {
 			has_completed_focus = SZC_pan_FORPOL_socialist_reorganize
@@ -3105,7 +3100,6 @@ foreign_politics = {
 		ai_will_do = { factor = 50 }
 		target_non_existing = no
 		cost = 150
-		fire_only_once = yes
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_KMT_invite_into_economic_sphere"
@@ -3126,7 +3120,7 @@ foreign_politics = {
 				else_if = {
 					limit = {
 						SZC = {
-							ruling_party = syndicalist
+							has_government = syndicalist
 						}
 					}
 					set_politics = {
@@ -3175,7 +3169,6 @@ foreign_politics = {
 
 		cost = 35
 		days_remove = 30
-		fire_only_once = yes
 		war_with_target_on_remove = yes
 		cancel_if_not_visible = yes
 
@@ -3228,7 +3221,6 @@ foreign_politics = {
 		ai_will_do = { factor = 50 }
 		target_non_existing = yes
 		cost = 250
-		fire_only_once = yes
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_CDL_invite_into_federation_system"
@@ -3262,7 +3254,6 @@ foreign_politics = {
 		ai_will_do = { factor = 50 }
 		target_non_existing = yes
 		cost = 250
-		fire_only_once = yes
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_CDL_integrate_into_panasian_federation"
@@ -3316,7 +3307,6 @@ foreign_politics = {
 		}
 		cost = 10
 		days_remove = 7
-		fire_only_once = yes
 		ai_will_do = { base = 500 }
 
 		complete_effect = {
@@ -3374,7 +3364,6 @@ foreign_politics = {
 		ai_will_do = { factor = 50 }
 		target_non_existing = yes
 		cost = 50
-		fire_only_once = yes
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_YCP_invite_into_economic_sphere"
@@ -3416,7 +3405,6 @@ foreign_politics = {
 
 		cost = 35
 		days_remove = 30
-		fire_only_once = yes
 		war_with_target_on_remove = yes
 		cancel_if_not_visible = yes
 
@@ -3466,7 +3454,6 @@ foreign_politics = {
 		ai_will_do = { factor = 50 }
 		target_non_existing = yes
 		cost = 250
-		fire_only_once = yes
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_YCP_yellow_syndicalization"
