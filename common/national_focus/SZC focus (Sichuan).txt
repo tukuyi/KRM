@@ -35602,7 +35602,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 50
 			tag = SZC
 		}
 	}
@@ -36220,6 +36220,8 @@ focus_tree = {
 			add_stability = 0.05
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
+			unlock_decision_category_tooltip = SZC_grand_sichuan_plan_category
+			set_country_flag = SZC_grand_sichuan_plan_available
 			hidden_effect = {
 				country_event = {
 					id = NKRsichuanKMD.23
@@ -36656,6 +36658,575 @@ focus_tree = {
 					remember_old_capital = no
 				}
 			}
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_construct_for_heaven_state
+		icon = GFX_goal_SZC_KMD_construct_for_heaven_state
+		cost = 3
+
+		x = -4
+		y = 1
+
+		relative_position_id = SZC_KMD_cheers_for_justice_wins
+
+		# allow_branch = {
+		# 	has_country_flag = SZC_KMD_phase_2
+		# }
+
+		prerequisite = {
+			focus = SZC_KMD_cheers_for_justice_wins
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_construct_for_heaven_state"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_west_technology_from_east
+		icon = GFX_goal_SZC_KMD_west_technology_from_east
+		cost = 3
+
+		x = -3
+		y = 1
+
+		relative_position_id = SZC_KMD_construct_for_heaven_state
+
+
+		prerequisite = {
+			focus = SZC_KMD_construct_for_heaven_state
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_west_technology_from_east"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_gewu_yinyang
+		icon = GFX_goal_SZC_KMD_gewu_yinyang
+		cost = 3
+
+		x = -3
+		y = 2
+
+		relative_position_id = SZC_KMD_construct_for_heaven_state
+
+
+		prerequisite = {
+			focus = SZC_KMD_west_technology_from_east
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_gewu_yinyang"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_new_nalai_zhuyi
+		icon = GFX_goal_SZC_KMD_new_nalai_zhuyi
+		cost = 3
+
+		x = -2
+		y = 3
+
+		relative_position_id = SZC_KMD_construct_for_heaven_state
+
+
+		prerequisite = {
+			focus = SZC_KMD_west_technology_from_east
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_new_nalai_zhuyi"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_tianji_keji
+		icon = GFX_goal_SZC_KMD_tianji_keji
+		cost = 3
+
+		x = -3
+		y = 4
+
+		relative_position_id = SZC_KMD_construct_for_heaven_state
+
+
+		prerequisite = {
+			focus = SZC_KMD_gewu_yinyang
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_new_nalai_zhuyi
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_tianji_keji"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_new_well_field_system
+		icon = GFX_goal_SZC_KMD_new_well_field_system
+		cost = 3
+
+		x = 2
+		y = 1
+
+		relative_position_id = SZC_KMD_construct_for_heaven_state
+
+
+		prerequisite = {
+			focus = SZC_KMD_construct_for_heaven_state
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_new_well_field_system"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_taoist_bi
+		icon = GFX_goal_SZC_KMD_taoist_bi
+		cost = 3
+
+		x = 3
+		y = 2
+
+		relative_position_id = SZC_KMD_construct_for_heaven_state
+
+
+		prerequisite = {
+			focus = SZC_KMD_new_well_field_system
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_taoist_bi"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_shiyi_tax
+		icon = GFX_goal_SZC_KMD_shiyi_tax
+		cost = 3
+
+		x = 1
+		y = 2
+
+		relative_position_id = SZC_KMD_construct_for_heaven_state
+
+
+		prerequisite = {
+			focus = SZC_KMD_new_well_field_system
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_shiyi_tax"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_guild_system
+		icon = GFX_goal_SZC_KMD_guild_system
+		cost = 3
+
+		x = 2
+		y = 3
+
+		relative_position_id = SZC_KMD_construct_for_heaven_state
+
+
+		prerequisite = {
+			focus = SZC_KMD_shiyi_tax
+		}
+		prerequisite = {
+			focus = SZC_KMD_taoist_bi
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_guild_system"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_lingqi_first
+		icon = GFX_goal_SZC_KMD_lingqi_first
+		cost = 3
+
+		x = -1
+		y = 2
+
+		relative_position_id = SZC_KMD_construct_for_heaven_state
+
+
+		prerequisite = {
+			focus = SZC_KMD_west_technology_from_east
+			focus = SZC_KMD_new_well_field_system
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_lingqi_first"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_expand_temples
+		icon = GFX_goal_SZC_KMD_expand_temples
+		cost = 3
+
+		x = 0
+		y = 4
+
+		relative_position_id = SZC_KMD_construct_for_heaven_state
+
+
+		prerequisite = {
+			focus = SZC_KMD_lingqi_first
+		}
+		prerequisite = {
+			focus = SZC_KMD_guild_system
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_expand_temples"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_duty_to_serve
+		icon = GFX_goal_SZC_KMD_duty_to_serve
+		cost = 3
+
+		x = 3
+		y = 4
+
+		relative_position_id = SZC_KMD_construct_for_heaven_state
+
+
+		prerequisite = {
+			focus = SZC_KMD_guild_system
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_duty_to_serve"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_baijian_hanzhongwang
+		icon = GFX_goal_SZC_KMD_baijian_hanzhongwang
+		cost = 3
+
+		x = 4
+		y = 1
+
+		relative_position_id = SZC_KMD_cheers_for_justice_wins
+
+		allow_branch = {
+			has_country_flag = SZC_KMD_phase_2
+			has_country_flag = SZC_KMD_chengxun_path
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_cheers_for_justice_wins
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_baijian_hanzhongwang"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_dahan_qiannian
+		icon = GFX_goal_SZC_KMD_dahan_qiannian
+		cost = 3
+
+		x = -1
+		y = 1
+
+		relative_position_id = SZC_KMD_baijian_hanzhongwang
+
+		prerequisite = {
+			focus = SZC_KMD_baijian_hanzhongwang
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_dahan_qiannian"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_law_and_order
+		icon = GFX_goal_SZC_KMD_law_and_order
+		cost = 3
+
+		x = -2
+		y = 2
+
+		relative_position_id = SZC_KMD_baijian_hanzhongwang
+
+		prerequisite = {
+			focus = SZC_KMD_dahan_qiannian
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_law_and_order"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_death_to_republican
+		icon = GFX_goal_SZC_KMD_death_to_republican
+		cost = 3
+
+		x = -2
+		y = 3
+
+		relative_position_id = SZC_KMD_baijian_hanzhongwang
+
+		prerequisite = {
+			focus = SZC_KMD_law_and_order
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_death_to_republican"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_guozuo_yongxu
+		icon = GFX_goal_SZC_KMD_guozuo_yongxu
+		cost = 3
+
+		x = 1
+		y = 1
+
+		relative_position_id = SZC_KMD_baijian_hanzhongwang
+
+		prerequisite = {
+			focus = SZC_KMD_baijian_hanzhongwang
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_guozuo_yongxu"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_the_oath_of_taoyuan
+		icon = GFX_goal_SZC_KMD_the_oath_of_taoyuan
+		cost = 3
+
+		x = 2
+		y = 2
+
+		relative_position_id = SZC_KMD_baijian_hanzhongwang
+
+		prerequisite = {
+			focus = SZC_KMD_guozuo_yongxu
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_the_oath_of_taoyuan"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_integrate_constitutionist
+		icon = GFX_goal_SZC_KMD_integrate_constitutionist
+		cost = 3
+
+		x = 0
+		y = 2
+
+		relative_position_id = SZC_KMD_baijian_hanzhongwang
+
+		prerequisite = {
+			focus = SZC_KMD_guozuo_yongxu
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_dahan_qiannian
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_integrate_constitutionist"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_people_of_han
+		icon = GFX_goal_SZC_KMD_people_of_han
+		cost = 3
+
+		x = 1
+		y = 3
+
+		relative_position_id = SZC_KMD_baijian_hanzhongwang
+
+		prerequisite = {
+			focus = SZC_KMD_guozuo_yongxu
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_people_of_han"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_rebuild_great_han
+		icon = GFX_goal_SZC_KMD_rebuild_great_han
+		cost = 3
+
+		x = 0
+		y = 4
+
+		relative_position_id = SZC_KMD_baijian_hanzhongwang
+
+		prerequisite = {
+			focus = SZC_KMD_people_of_han
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_integrate_constitutionist
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_rebuild_great_han"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_so_me_too
+		icon = GFX_goal_SZC_KMD_so_me_too
+		cost = 3
+
+		x = 4
+		y = 1
+
+		relative_position_id = SZC_KMD_cheers_for_justice_wins
+
+		# allow_branch = {
+		# 	has_country_flag = SZC_KMD_phase_2
+		# 	has_country_flag = SZC_KMD_shangpu_path
+		# }
+
+		prerequisite = {
+			focus = SZC_KMD_cheers_for_justice_wins
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_so_me_too"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_reclaim_republican_legitimacy
+		icon = GFX_goal_SZC_KMD_reclaim_republican_legitimacy
+		cost = 3
+
+		x = -2
+		y = 1
+
+		relative_position_id = SZC_KMD_so_me_too
+
+		prerequisite = {
+			focus = SZC_KMD_so_me_too
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_reclaim_republican_legitimacy"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_theory_of_national_salvation
+		icon = GFX_goal_SZC_KMD_theory_of_national_salvation
+		cost = 3
+
+		x = 0
+		y = 1
+
+		relative_position_id = SZC_KMD_so_me_too
+
+		prerequisite = {
+			focus = SZC_KMD_so_me_too
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_theory_of_national_salvation"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_expand_komeito
+		icon = GFX_goal_SZC_KMD_expand_komeito
+		cost = 3
+
+		x = 2
+		y = 1
+
+		relative_position_id = SZC_KMD_so_me_too
+
+		prerequisite = {
+			focus = SZC_KMD_so_me_too
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_expand_komeito"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_better_than_fire_of_yiling
+		icon = GFX_goal_SZC_KMD_better_than_fire_of_yiling
+		cost = 3
+
+		x = 4
+		y = 1
+
+		relative_position_id = SZC_KMD_cheers_for_justice_wins
+
+		allow_branch = {
+			has_country_flag = SZC_KMD_phase_2
+			has_country_flag = SZC_KMD_congyun_path
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_cheers_for_justice_wins
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_better_than_fire_of_yiling"
 			
 		}
 	}

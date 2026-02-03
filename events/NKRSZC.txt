@@ -23494,6 +23494,11 @@ country_event = { #我是不会客气的
 	option = {#不瞒你讲，尚朴兄，其实我早就是刘备后人了。
 		log = "[GetLogInfo]: event NKRsichuanKMD.45 option NKRsichuanKMD.45.a"
 		name = NKRsichuanKMD.45.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.46
+			}
+		}
 	}
 }
 
@@ -23510,6 +23515,12 @@ country_event = { #谈神仙
 	option = {#非英雄也！
 		log = "[GetLogInfo]: event NKRsichuanKMD.46 option NKRsichuanKMD.46.a"
 		name = NKRsichuanKMD.46.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.47
+				days = 2
+			}
+		}
 	}
 }
 
@@ -23523,14 +23534,43 @@ country_event = { #存在主义实践
 	fire_only_once = yes
 	
 
-	option = {#刘从云不等于刘成勋
+	option = {#那就去拜神仙吧！
 		log = "[GetLogInfo]: event NKRsichuanKMD.47 option NKRsichuanKMD.47.a"
 		name = NKRsichuanKMD.47.a
+		trigger = {
+			NOT = {
+				check_variable = {
+					var = SZC_KMD_chengxun_focus
+					value = var:SZC_KMD_congyun_focus
+					compare = equals
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.48
+				days = 2
+			}
+		}
 	}
 	
-	option = {#刘从云=刘成勋
+	option = {#我为何不能与这刘成勋一同把刘神仙拉下来？
 		log = "[GetLogInfo]: event NKRsichuanKMD.47 option NKRsichuanKMD.47.b"
 		name = NKRsichuanKMD.47.b
+		custom_effect_tooltip = NKRsichuanKMD.47.b.tt
+		trigger = {
+			check_variable = {
+				var = SZC_KMD_chengxun_focus
+				value = var:SZC_KMD_congyun_focus
+				compare = equals
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.58
+				days = 4
+			}
+		}
 	}
 }
 
@@ -23544,14 +23584,44 @@ country_event = { #泰山之下
 	fire_only_once = yes
 	
 
-	option = {#其他
+	option = {#“你做得很好，我的门徒。”
 		log = "[GetLogInfo]: event NKRsichuanKMD.48 option NKRsichuanKMD.48.a"
 		name = NKRsichuanKMD.48.a
+		custom_effect_tooltip = NKRsichuanKMD.48.a.tt
+		trigger = {
+			check_variable = {
+				var = SZC_KMD_congyun_focus
+				value = var:SZC_KMD_shangpu_focus
+				compare = greater_than_or_equals
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.51
+				days = 4
+			}
+		}
 	}
 	
-	option = {#蒋尚朴大于刘从云
+	option = {#了无音讯。
 		log = "[GetLogInfo]: event NKRsichuanKMD.48 option NKRsichuanKMD.48.b"
 		name = NKRsichuanKMD.48.b
+		custom_effect_tooltip = NKRsichuanKMD.48.b.tt
+		trigger = {
+			NOT = {
+				check_variable = {
+					var = SZC_KMD_congyun_focus
+					value = var:SZC_KMD_shangpu_focus
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.49
+				days = 4
+			}
+		}
 	}
 }
 
@@ -23568,6 +23638,12 @@ country_event = { #救国之愿
 	option = {#让刘成勋来，我要和他好好喝上一阵。
 		log = "[GetLogInfo]: event NKRsichuanKMD.49 option NKRsichuanKMD.49.a"
 		name = NKRsichuanKMD.49.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.50
+				days = 2
+			}
+		}
 	}
 }
 
@@ -23584,6 +23660,28 @@ country_event = { #刘成勋是第一个来开会的
 	option = {#蒋尚朴冷冷地看着他。
 		log = "[GetLogInfo]: event NKRsichuanKMD.50 option NKRsichuanKMD.50.a"
 		name = NKRsichuanKMD.50.a
+		add_political_power = 100
+		add_stability = 0.1
+		SZC_liu_chengxun = {
+			retire = yes
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.54
+				days = 2
+			}
+		}
+	}
+	option = {#但也并非不可一用。
+		log = "[GetLogInfo]: event NKRsichuanKMD.50 option NKRsichuanKMD.50.b"
+		name = NKRsichuanKMD.50.b
+		add_political_power = -50
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.54
+				days = 2
+			}
+		}
 	}
 }
 
@@ -23600,6 +23698,12 @@ country_event = { #神仙下山
 	option = {#是时候出山了。
 		log = "[GetLogInfo]: event NKRsichuanKMD.51 option NKRsichuanKMD.51.a"
 		name = NKRsichuanKMD.51.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.52
+				days = 2
+			}
+		}
 	}
 }
 
@@ -23616,11 +23720,29 @@ country_event = { #神仙驾到（刘从云线）
 	option = {#罪无可赦，叉出去！
 		log = "[GetLogInfo]: event NKRsichuanKMD.52 option NKRsichuanKMD.52.a"
 		name = NKRsichuanKMD.52.a
+		add_political_power = 100
+		add_stability = 0.1
+		SZC_liu_chengxun = {
+			retire = yes
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.53
+				days = 2
+			}
+		}
 	}
 	
 	option = {#世人皆看错了我，也许还会看错我，下不为例！
 		log = "[GetLogInfo]: event NKRsichuanKMD.52 option NKRsichuanKMD.52.b"
 		name = NKRsichuanKMD.52.b
+		add_political_power = -50
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.53
+				days = 2
+			}
+		}
 	}
 }
 
@@ -23637,6 +23759,15 @@ country_event = { #对酒，当歌
 	option = {#唯有，杜康！
 		log = "[GetLogInfo]: event NKRsichuanKMD.53 option NKRsichuanKMD.53.a"
 		name = NKRsichuanKMD.53.a
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.08
+		}
+		complete_national_focus = SZC_KMD_cheers_for_justice_wins
+		set_country_flag = SZC_KMD_congyun_path
+		set_country_flag = SZC_KMD_phase_2
+		mark_focus_tree_layout_dirty = yes
+		activate_advisor = SZC_jiang_shangpu_sic
 	}
 }
 
@@ -23653,6 +23784,13 @@ country_event = { #神仙驾到（蒋尚朴线）
 	option = {#...我也要当吗？
 		log = "[GetLogInfo]: event NKRsichuanKMD.54 option NKRsichuanKMD.54.a"
 		name = NKRsichuanKMD.54.a
+		
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.55
+				days = 2
+			}
+		}
 	}
 }
 
@@ -23669,6 +23807,29 @@ country_event = { #临时总执政
 	option = {#我宣誓忠于国家...
 		log = "[GetLogInfo]: event NKRsichuanKMD.55 option NKRsichuanKMD.55.a"
 		name = NKRsichuanKMD.55.a
+		set_politics = {
+			ruling_party = authoritarian_democrat
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.08
+		}
+		complete_national_focus = SZC_KMD_cheers_for_justice_wins
+		set_country_flag = SZC_KMD_shangpu_path
+		set_country_flag = SZC_KMD_phase_2
+		mark_focus_tree_layout_dirty = yes
+		activate_advisor = SZC_liu_xiaolan_sic
+		hidden_effect = {
+			set_cosmetic_tag = SZC_KMD_CSG
+			set_party_name = {
+				ideology = authoritarian_democrat
+				name = SZC_KMD_Komeito_party
+				long_name = SZC_KMD_Komeito_party_long
+			}
+			SZC_jiang_shangpu = {
+				promote_character = authoritarian_democrat_moral_sovereign_democracy_subtype
+			}
+		}
 	}
 }
 
@@ -23728,15 +23889,72 @@ country_event = { #进位
 		set_politics = {
 			ruling_party = paternal_autocrat
 		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.08
+		}
 		set_cosmetic_tag = SZC_KMD_hanzhong
 		complete_national_focus = SZC_KMD_cheers_for_justice_wins
 		set_country_flag = SZC_KMD_chengxun_path
 		set_country_flag = SZC_KMD_phase_2
 		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = {
+				has_country_flag = SZC_KMD_chengxun_shangpu_path
+			}
+			activate_advisor = SZC_jiang_shangpu_sic
+		}
+	}
+}
+country_event = { #叛变
+	id = NKRsichuanKMD.58
+	title = NKRsichuanKMD.58.t
+	desc = NKRsichuanKMD.58.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#干吧，阁下！
+		log = "[GetLogInfo]: event NKRsichuanKMD.58 option NKRsichuanKMD.58.a"
+		name = NKRsichuanKMD.58.a
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.59
+				days = 2
+			}
+		}
 	}
 }
 
-	country_event = { #已NKRsichuanKMD.60
+country_event = { #最卑劣的刺杀
+	id = NKRsichuanKMD.59
+	title = NKRsichuanKMD.59.t
+	desc = NKRsichuanKMD.59.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {#打你一万个透明窟窿！
+		log = "[GetLogInfo]: event NKRsichuanKMD.59 option NKRsichuanKMD.59.a"
+		name = NKRsichuanKMD.59.a
+		SZC_liu_congyun = {
+			kill_character = yes
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanKMD.60
+			}
+		}
+	}
+}
+	country_event = { #双重背叛
 		id = NKRsichuanKMD.60
 		title = NKRsichuanKMD.60.t
 		desc = NKRsichuanKMD.60.d
@@ -23746,13 +23964,27 @@ country_event = { #进位
 		fire_only_once = yes
 		
 
-		option = {#
+		option = {#快看，你妈在飞。
 			log = "[GetLogInfo]: event NKRsichuanKMD.60 option NKRsichuanKMD.60.a"
 			name = NKRsichuanKMD.60.a
+			SZC_liu_chengxun = {
+				kill_character = yes
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.61
+				}
+				set_politics = {
+					ruling_party = authoritarian_democrat
+				}
+				SZC_power_vacuum = {
+					promote_character = authoritarian_democrat_subtype
+				}
+			}
 		}
 	}
 
-	country_event = { #已NKRsichuanKMD.61
+	country_event = { #我的宝贝
 		id = NKRsichuanKMD.61
 		title = NKRsichuanKMD.61.t
 		desc = NKRsichuanKMD.61.d
@@ -23762,13 +23994,22 @@ country_event = { #进位
 		fire_only_once = yes
 		
 
-		option = {#
+		option = {#蜀中前途灿烂啊...
 			log = "[GetLogInfo]: event NKRsichuanKMD.61 option NKRsichuanKMD.61.a"
 			name = NKRsichuanKMD.61.a
+			SZC_jiang_shangpu = {
+				retire = yes
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.62
+					days = 7
+				}
+			}
 		}
 	}
 
-	country_event = { #已NKRsichuanKMD.62
+	country_event = { #他去哪了？
 		id = NKRsichuanKMD.62
 		title = NKRsichuanKMD.62.t
 		desc = NKRsichuanKMD.62.d
@@ -23778,9 +24019,16 @@ country_event = { #进位
 		fire_only_once = yes
 		
 
-		option = {#
+		option = {#宗教实验的终结...
 			log = "[GetLogInfo]: event NKRsichuanKMD.62 option NKRsichuanKMD.62.a"
 			name = NKRsichuanKMD.62.a
+			custom_effect_tooltip = NKRsichuanKMD.62.tt
+			add_ideas = {
+				SZC_KMD_army_revolt
+				SZC_liu_xiang_dead
+			}
+			add_stability = -100
+			add_war_support = -100
 		}
 	}
 
