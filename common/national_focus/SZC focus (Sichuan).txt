@@ -15650,7 +15650,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_aspecial_RND"
 			add_research_slot = 1
-			add_breakthrough_points = 3
+			add_breakthrough_points = {
+				specialization = all
+				value = 1
+			  }
 		}
 	}
 
@@ -20294,7 +20297,7 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuanFP.17
 			}
-			swap_idea = {
+			swap_ideas = {
 				remove_idea = SZC_KMT_EI_leader_idea
 				add_idea = SZC_KMT_EI_leader_2_idea
 			}
@@ -20852,7 +20855,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_completed_decision = SZC_pan_abandon_the_foolish_internationalism
+			has_completed_focus = SZC_pan_abandon_the_foolish_internationalism
 			has_global_flag = USA_civil_war_over_flag
 			var:361.owner = {
 				has_socialist_government = no

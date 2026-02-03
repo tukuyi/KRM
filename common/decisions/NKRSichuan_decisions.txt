@@ -3056,7 +3056,7 @@ foreign_politics = {
 	SZC_KMT_force_to_accept_our_doctrine = {
 		icon = GFX_decision_global_trade
 
-		allowed = { has_completed_focus = SZC_pan_FORPOL_socialist_reorganize }
+		allowed = { tag = SZC }
 
 		visible = {
 			has_completed_focus = SZC_pan_FORPOL_socialist_reorganize
