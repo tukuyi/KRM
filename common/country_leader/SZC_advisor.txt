@@ -94,7 +94,7 @@ leader_traits = {
         high_command_cost_factor = -0.20
 		crypto_strength = 2
 		surrender_limit = 0.15 
-		resistance_damage_to_garrisons = -0.20
+		resistance_damage_to_garrison = -0.20
 	}
 
 	SZC_lion_roars = {#李璜
@@ -120,7 +120,7 @@ leader_traits = {
 		sprite = 19
 		consumer_goods_factor = -0.05
 		production_factory_efficiency_gain_factor = 0.05
-		division_recovery_rate = 0.05
+		army_morale_factor = 0.05
 	}
 
 	SZC_cultivator_of_the_party = {#张伯伦
@@ -128,14 +128,14 @@ leader_traits = {
 		sprite = 19
 		command_power_gain = 0.10
 		political_power_gain = 0.05
-		industrial_capacity_gain_factor = 0.05
+		industrial_capacity_factory = 0.05
         local_factory_energy_consumption_per_infrastructure = -0.10
 	}
 
 	SZC_military_evangelist = {#王师曾
 		random = no
 		sprite = 19
-		division_recovery_rate = 0.1
+		army_morale_factor = 0.1
 		army_org_factor = 0.05
         resistance_target = -0.05
 	}
@@ -152,7 +152,7 @@ leader_traits = {
 	SZC_beliver_in_will_to_power = {#姜蕴刚
 		random = no
 		sprite = 19
-		division_recovery_rate = 0.1
+		army_morale_factor = 0.1
 		war_support_factor = 0.10
 		research_speed_factor = 0.05
 		surrender_limit = 0.15
@@ -183,7 +183,7 @@ leader_traits = {
 		sprite = 19
 		stability_factor = -0.2
 		consumer_goods_factor = -0.075
-		resistance_damage_to_garrisons = -0.10
+		resistance_damage_to_garrison = -0.10
 		political_power_gain = 0.10
 	}
 
@@ -212,7 +212,7 @@ leader_traits = {
 		sprite = 19
 		research_speed_factor = 0.15
 		research_sharing_per_country_bonus = 0.15
-        nuclear_research = 0.15
+        nuclear_production_factor = 0.15
 		political_power_gain = -0.05
 	}
 
@@ -239,8 +239,8 @@ leader_traits = {
 		sprite = 19
 		political_power_gain = 0.05
 		cic_construction_boost = 0.10
-		industrial_capacity_gain_factor = 0.05
-		industrial_research = 0.10
+		industrial_capacity_factory = 0.05
+		research_sharing_per_country_bonus = 0.10
 	}
 
 	SZC_vanguard_of_mass_politics = {#刘静远
@@ -265,7 +265,7 @@ leader_traits = {
 		sprite = 19
 		political_advisor_cost_factor = -0.20
         high_command_cost_factor = -0.20
-        economy_law_cost_factor = -0.15
+        economy_cost_factor = -0.15
 		political_power_gain = -0.10
 		research_speed_factor = 0.08
 	}
@@ -323,7 +323,7 @@ leader_traits = {
 		random = no
 		sprite = 19
 		war_support_factor = 0.15
-		division_recovery_rate = 0.10
+		army_morale_factor = 0.10
 		research_speed_factor = 0.03
 	}
 
@@ -332,7 +332,7 @@ leader_traits = {
 		sprite = 19
 		monthly_population = 0.05
 		training_time_factor = -0.1
-		division_recovery_rate = 0.05
+		army_morale_factor = 0.05
 	}
 
 	SZC_chief_surgeon = {#于复先
@@ -349,7 +349,7 @@ leader_traits = {
 		political_power_gain = 0.05
 		enemy_operative_detection_chance_factor = 0.10
 		production_speed_dockyard_factor = 0.10
-		naval_research = 0.10
+		naval_equipment_upgrade_xp_cost = -0.10
 	}
 
 	SZC_independent_liberal_statist = {#余家菊
@@ -362,7 +362,7 @@ leader_traits = {
 		market_liberal_acceptance = 20
 		social_conservative_acceptance = 20
 		planning_speed = 0.05
-		division_recovery_rate = 0.15
+		army_morale_factor = 0.15
 	}
 
 	SZC_erudite_historian = {#何鲁之
@@ -377,7 +377,7 @@ leader_traits = {
 		random = no
 		sprite = 19
 		training_time_factor = -0.24
-		division_recovery_rate = 0.08
+		army_morale_factor = 0.08
 		land_night_attack = 0.04
 		air_accidents_factor = 0.24
 		scientist_breakthrough_bonus_factor = 0.08
@@ -431,7 +431,7 @@ leader_traits = {
 		totalist_acceptance = -50
 		syndicalist_acceptance = -50
 		radical_socialist_acceptance = -50
-		resistance_damage_to_garrisons = -0.20
+		resistance_damage_to_garrison = -0.20
         resistance_target = -0.10
 		compliance_gain = -0.02
 		army_speed_factor = 0.025
@@ -465,7 +465,7 @@ leader_traits = {
 	SZC_radical_anti_red_fighter = {#陶元珍
 		random = no
 		sprite = 19
-		resistance_damage_to_garrisons = -0.15
+		resistance_damage_to_garrison = -0.15
         resistance_target = -0.10
 		stability_factor = -0.05
 		consumer_goods_factor = -0.05

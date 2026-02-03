@@ -762,7 +762,7 @@ ideas = {
 				high_command_cost_factor = -0.33
 				cic_construction_boost = 0.125
 				industrial_capacity_factory = 0.075
-				industrial_research = 0.125
+				military_industrial_organization_research_bonus = 0.125
 			}
 		}
 		SZC_wei_shizhen_DMO_idea = {
@@ -771,13 +771,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = 0.05
+				political_power_gain = 0.04
 				political_advisor_cost_factor = -0.33
 				high_command_cost_factor = -0.33
 				research_speed_factor = 0.175
 				research_sharing_per_country_bonus = 0.175
-				nuclear_research = 0.175
-				political_power_gain = -0.075
+				nuclear_production_factor = 0.175
 			}
 		}
 		SZC_wang_shizeng_DMO_idea = {
@@ -805,13 +804,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = 0.05
+				political_power_gain = 0.04
 				recruitable_population_factor = 0.05
     			war_support_factor = 0.1
 				compliance_growth = 0.125
 				production_factory_efficiency_gain_factor = 0.075
 				non_core_manpower = 0.04
-				political_power_gain = -0.05
 			}
 		}
 		SZC_zhen_zhengwen_DMY_idea = {
@@ -914,7 +912,7 @@ ideas = {
 				war_support_factor = 0.1
 				enemy_operative_detection_chance_factor = 0.125
 				production_speed_dockyard_factor = 0.125
-				naval_research = 0.125
+				experience_gain_navy_factor = 0.125
 			}
 		}
 		SZC_xia_erkang_DMY_idea = {
@@ -1088,7 +1086,7 @@ ideas = {
 				political_power_gain = 0.05
 				cic_construction_boost = 0.10
 				industrial_capacity_factory = 0.05
-				industrial_research = 0.10
+				military_industrial_organization_research_bonus = 0.10
 			}
 		}
 		SZC_tan_tiwu_DM_idea = {
@@ -1123,7 +1121,7 @@ ideas = {
 			modifier = {
 				research_speed_factor = 0.15
 				research_sharing_per_country_bonus = 0.15
-				nuclear_research = 0.15
+				nuclear_production_factor = 0.15
 				political_power_gain = -0.05
 			}
 		}
@@ -1308,7 +1306,7 @@ ideas = {
 				political_power_gain = 0.05
 				enemy_operative_detection_chance_factor = 0.10
 				production_speed_dockyard_factor = 0.10
-				naval_research = 0.10
+				experience_gain_navy_factor = 0.10
 			}
 		}
 		SZC_jiang_yungang_DM_idea = {

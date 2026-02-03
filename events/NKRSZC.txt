@@ -204,7 +204,6 @@ country_event = { #刘湘之死
 		}
 		hidden_effect = {
 			SZC_liu_xiang = {
-				retire_character = yes
 				retire = yes
 			}
 			SZC_power_vacuum = {
@@ -1405,7 +1404,7 @@ country_event = { #会面
 		log = "[GetLogInfo]: event NKRsichuan.121 option NKRsichuan.121.a"
 		name = NKRsichuan.121.a
 		SZC_pan_wenhua = {
-			retire_character = yes
+			retire = yes
 		}
 		hidden_effect = {
 			SZC_power_vacuum = {
@@ -4679,10 +4678,10 @@ country_event = { #元老的辞职
 		name = NKRsichuan.282.a
 		clr_country_flag = SZC_fan_piaozhai_available
 		SZC_zhang_lan = {
-			retire_character = yes
+			retire = yes
 		}
 		SZC_fan_piaozhai = {
-			retire_character = yes
+			retire = yes
 		}
 		hidden_effect = {
 			SZC_shen_junru = {
@@ -6208,7 +6207,7 @@ country_event = { #退役仪式
 		log = "[GetLogInfo]: event NKRsichuan.363 option NKRsichuan.363.a"
 		name = NKRsichuan.363.a
 		SZC_pan_wenhua = {
-			retire_character = yes
+			retire = yes
 		}
 	}
 }
@@ -7537,13 +7536,6 @@ country_event = { #社会进步
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	hidden_effect = {
-		
-		country_event = {
-			id = NKRsichuanPI.10
-			days = 5
-		}
-	}
 	
 
 	option = {#为了我们的首要目标暂且让步也是可行的...
@@ -18830,8 +18822,14 @@ country_event = { #傻逼德国人
 			target = FROM
 			modifier = KR_disapproves_of_govt
 		}
-		uncomplete_national_focus = SZC_pan_FORPOL_kaiser_and_president
-		uncomplete_national_focus = SZC_pan_CDL_FORPOL_kaiser_and_president
+		uncomplete_national_focus = {
+			focus = SZC_pan_FORPOL_kaiser_and_president
+			uncomplete_children = yes
+		}
+		uncomplete_national_focus = {
+			focus = SZC_pan_CDL_FORPOL_kaiser_and_president
+			uncomplete_children = yes
+		}
 	}
 }
 

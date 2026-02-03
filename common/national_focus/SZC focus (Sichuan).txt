@@ -1342,7 +1342,7 @@ focus_tree = {
 			has_country_flag = SZC_accelerated_department_in_power
 			hidden_trigger = {
 				OR = {
-					has_country_leader = SZC_yang_sen
+					has_country_leader = { character = SZC_yang_sen }
 				}
 			}
 		}
@@ -3773,7 +3773,7 @@ focus_tree = {
 			NOT = { has_idea = SZC_two_lius_war }
 			NOT = { has_country_flag = SZC_liu_xiang_dead }
 		}
-		visible = {
+		allow_branch = {
 			NOT = {
 				has_country_flag = SZC_liu_xiang_dead
 			}
@@ -15706,41 +15706,18 @@ focus_tree = {
 		}
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = has_80_percent_of_asia_and_india_tt
-				# 初始化变量
-				set_temp_variable = { total_states_count = 0 }
-				set_temp_variable = { controlled_states_count = 0 }
-		
-				# 遍历所有状态并筛选
-				every_state = {
-					limit = {
-						OR = {
-							is_on_continent = india
-							is_on_continent = asia
-						}
-					}
-					ROOT = { add_to_temp_variable = { total_states_count = 1 } }
+			AND = {
+				525 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
 				}
-
-				every_state = {
-					limit = {
-						CONTROLLER = {
-							is_owned_and_controlled_by_ROOT_or_subject = yes
-						}
-					}
-					ROOT = { add_to_temp_variable = { controlled_states_count = 1 } }
+				282 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
 				}
-		
-				# 计算 80% 阈值
-				set_temp_variable = { threshold = total_states_count }
-				multiply_temp_variable = { threshold = 0.8 }
-		
-				# 判断是否达标
-				check_variable = {
-					var = controlled_states_count 
-					value = threshold
-					compare = greater_than_or_equals
+				330 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				286 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -15781,42 +15758,42 @@ focus_tree = {
 		
 
 		available = {
-			
-			custom_trigger_tooltip = {
-				tooltip = has_80_percent_of_asia_and_india_tt
-				# 初始化变量
-				set_temp_variable = { total_states_count = 0 }
-				set_temp_variable = { controlled_states_count = 0 }
-		
-				# 遍历所有状态并筛选
-				every_state = {
-					limit = {
-						OR = {
-							is_on_continent = india
-							is_on_continent = asia
-						}
-					}
-					ROOT = { add_to_temp_variable = { total_states_count = 1 } }
+			AND = {
+				525 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
 				}
-
-				every_state = {
-					limit = {
-						CONTROLLER = {
-							is_owned_and_controlled_by_ROOT_or_subject = yes
-						}
-					}
-					ROOT = { add_to_temp_variable = { controlled_states_count = 1 } }
+				282 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
 				}
-		
-				# 计算 80% 阈值
-				set_temp_variable = { threshold = total_states_count }
-				multiply_temp_variable = { threshold = 0.8 }
-		
-				# 判断是否达标
-				check_variable = {
-					var = controlled_states_count 
-					value = threshold
-					compare = greater_than_or_equals
+				330 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				408 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				286 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				431 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				439 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				427 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				289 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				336 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				1020 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				327 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
 				}
 			}
 		}
@@ -16625,6 +16602,10 @@ focus_tree = {
 
 		prerequisite = {
 			focus = SZC_pan_CDL_FORPOL_return_to_world_stage
+		}
+		
+		mutually_exclusive = {
+			focus = SZC_pan_CDL_FORPOL_friendship_across_pacific_ocean
 			focus = SZC_pan_CDL_FORPOL_once_the_devil_though
 		}
 
@@ -16671,7 +16652,7 @@ focus_tree = {
 				set_variable = { blue = 0.352 }
 			}
 			SZC_ECON_SPHERE_INVITE_SETUP = yes
-			for_every_scople_loop = {
+			for_each_scope_loop = {
 				array = global.african_tags_array
 				if = {
 					limit = {
@@ -16989,7 +16970,7 @@ focus_tree = {
 			SZC = {
 				add_to_economic_sphere = yes
 			}
-			for_every_scople_loop = {
+			for_each_scope_loop = {
 				array = global.african_tags_array
 				if = {
 					limit = {
@@ -20131,7 +20112,7 @@ focus_tree = {
 				id = NKRsichuanFP.16
 			}
 			custom_effect_tooltip = SZC_pan_FORPOL_geopolitics_first_tt
-			for_every_scople_loop = {
+			for_each_scope_loop = {
 				array = global.african_tags_array
 				if = {
 					limit = {
@@ -20676,7 +20657,7 @@ focus_tree = {
 				set_variable = { blue = 0.352 }
 			}
 			SZC_ECON_SPHERE_INVITE_SETUP = yes
-			for_every_scople_loop = {
+			for_each_scope_loop = {
 				array = global.african_tags_array
 				if = {
 					limit = {
@@ -20997,7 +20978,7 @@ focus_tree = {
 			SZC = {
 				add_to_economic_sphere = yes
 			}
-			for_every_scople_loop = {
+			for_each_scope_loop = {
 				array = global.african_tags_array
 				if = {
 					limit = {
@@ -26240,9 +26221,7 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.557
 			}
-			SZC_xia_taosheng = {
 				set_country_leader_ideology = social_conservative_anarchist_statist_subtype
-			}
 		}
 	}
 
@@ -29605,8 +29584,8 @@ focus_tree = {
 					YCP_party_issue_interior = token:SZC_tan_tiwu_armor
 				}
 				swap_ideas = {
-					remove_idea = SZC_tan_tiwu_DMC_idea
-					add_idea = SZC_tan_tiwu_armor_DMC_idea
+					remove_idea = SZC_tan_tiwu_DMI_idea
+					add_idea = SZC_tan_tiwu_armor_DMI_idea
 				}
 			}
 		}
@@ -33454,14 +33433,11 @@ focus_tree = {
 			if = {
 				limit = {
 					has_country_leader = { character = SZC_zhang_guotao ruling_only = yes}
-					all_country = {
-						limit = {
-							OR = {
-								is_in_faction_with = SZC
-								tag = SZC
-							}
+					var:276.owner = {
+						OR = {
+							is_in_faction_with = SZC
+							tag = SZC
 						}
-						owns_state = 276
 					}
 				}
 				country_event = {
