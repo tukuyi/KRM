@@ -124,7 +124,6 @@ characters = {
 			idea_token = SZC_zhang_lan_advisor
 			visible = {
 				OR = {
-					has_left_democratic_government = yes
 					has_country_leader = { character = SZC_liu_xiang ruling_only = yes }
 					has_country_leader = { character = SZC_pan_wenhua ruling_only = yes }
 				}
@@ -2667,7 +2666,7 @@ characters = {
 			traits = { SZC_the_old_right }
 			available = {
 				NOT = {
-					has_country_leader = SZC_xie_chi
+					has_country_leader = { character = SZC_xie_chi }
 				}
 			}
 			cost = 100
@@ -2743,7 +2742,7 @@ characters = {
 			traits = { SZC_old_scholar }
 			available = {
 				NOT = {
-					has_country_leader = SZC_shen_junru
+					has_country_leader = { character = SZC_shen_junru }
 				}
 			}
 			cost = 150
@@ -2773,7 +2772,7 @@ characters = {
 			traits = { SZC_a_liberal_statist }
 			available = {
 				NOT = {
-					has_country_leader = SZC_luo_longji
+					has_country_leader = { character = SZC_luo_longji }
 				}
 			}
 			cost = 150
@@ -3406,14 +3405,6 @@ characters = {
 				}
 			}
 		}
-		advisor = {
-			slot = second_in_command
-			idea_token = SZC_chang_yansheng_sic
-			traits = { SZC_refined_social_democrat }
-			desc = SZC_chang_yansheng_desc
-			
-		}
-
 		advisor = {
 			slot = second_in_command
 			idea_token = SZC_chang_yansheng_sic

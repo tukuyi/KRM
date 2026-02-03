@@ -1059,7 +1059,7 @@ ideas = {
 				army_org_factor = 0.05
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
-				army_experience_factor = 0.15
+				experience_gain_army_factor = 0.15
 			}
 			targeted_modifier = {
 				tag = GER
@@ -1078,7 +1078,7 @@ ideas = {
 				army_org_factor = 0.1
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
-				army_experience_factor = 0.4
+				experience_gain_army_factor = 0.4
 			}
 			targeted_modifier = {
 				tag = GER
@@ -1223,7 +1223,7 @@ ideas = {
 			picture = SZC_KMT_member_of_sino_german_sphere_idea
 			allowed = { always = no }
 			modifier = {
-				construction_speed_factor = 0.2
+				production_speed_buildings_factor = 0.2
 				consumer_goods_factor = -0.15
 				production_factory_max_efficiency_factor = 0.05
 				army_org_factor = 0.05
@@ -1247,7 +1247,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = -0.15
-				construction_speed_factor = 0.3
+				production_speed_buildings_factor = 0.3
 				trade_opinion_factor = 20
 			}
 			targeted_modifier = {
@@ -1782,8 +1782,6 @@ ideas = {
 			picture = SZC_pan_catch_the_rainbow_idea
 			allowed = { always = no }
 			modifier = {
-				navy_carrier_air_agility_factor = 0.15
-				navy_carrier_air_attack_factor = 0.15
 				navy_screen_attack_factor = 0.15
 				naval_night_attack = 0.3
 				navy_max_range_factor = 0.1
@@ -2192,7 +2190,7 @@ ideas = {
 				planning_speed = 0.35
 				max_planning_factor = 0.2
 				army_attack_factor = 0.15
-				army_experience_factor = 0.3
+				experience_gain_army_factor = 0.3
 				army_org_factor = 0.15
 			}
 		}
@@ -2330,7 +2328,7 @@ ideas = {
 			picture = SZC_healthcare
 			modifier = {
 				monthly_population = 0.15
-				add_stability = 0.1
+				stability_factor = 0.1
 			}
 		}
 		SZC_YCP_modern_agriculture = {#现代农业
@@ -2566,7 +2564,7 @@ ideas = {
 				experience_gain_army_factor = 0.25
 				experience_gain_navy_factor = 0.25
 				experience_gain_air_factor = 0.25
-				justify_wargoal_time_factor = -0.25
+				justify_war_goal_time = -0.25
 			}
 		}
 		SZC_YCP_beyond_impossible_idea = {#超越不可能
@@ -2689,7 +2687,7 @@ ideas = {
 				consumer_goods_factor = -0.05
 				non_core_manpower = 0.01
 				stability_factor = 0.05
-				construction_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05
 			}
 		}
 		SZC_YCP_national_units_2_idea = {#国家单元2
@@ -2700,7 +2698,7 @@ ideas = {
 				consumer_goods_factor = -0.10
 				non_core_manpower = 0.05
 				stability_factor = 0.10
-				construction_speed_factor = 0.15
+				production_speed_buildings_factor = 0.15
 			}
 		}
 		SZC_YCP_new_age_patriotism_idea = {#新时代爱国主义
@@ -2906,7 +2904,7 @@ ideas = {
 				consumer_goods_expected_value = -0.1
 				cic_construction_boost = 0.3
 				production_speed_industrial_complex_factor = 0.2
-				add_political_power = -0.2
+				political_power_gain = -0.15
 			}
 		}
 		SZC_YCP_patrioc_liberalism_idea = {#爱国的自由主义
@@ -3021,7 +3019,7 @@ ideas = {
 				experience_gain_army_factor = 0.35
 				experience_gain_navy_factor = 0.35
 				experience_gain_air_factor = 0.35
-				justify_wargoal_time_factor = -0.65
+				justify_war_goal_time = -0.65
 
 			}
 		}
@@ -3107,7 +3105,7 @@ ideas = {
 				consumer_goods_factor = -0.15
 				non_core_manpower = 0.08
 				stability_factor = 0.15
-				construction_speed_factor = 0.15
+				production_speed_buildings_factor = 0.15
 			}
 		}
 		SZC_YCP_national_units_4_idea = {#国家单元4
@@ -3118,7 +3116,7 @@ ideas = {
 				consumer_goods_factor = -0.175
 				non_core_manpower = 0.10
 				stability_factor = 0.2
-				construction_speed_factor = 0.2
+				production_speed_buildings_factor = 0.2
 			}
 		}
 		SZC_YCP_sell_sell_sell_idea = {#卖卖卖！
@@ -3157,7 +3155,7 @@ ideas = {
 			modifier = {
 				stability_factor = 0.1
 				war_support_factor = -0.05
-				justify_wargoal_time_factor = 0.66
+				justify_war_goal_time = 0.66
 				army_defence_factor = 0.15
 				army_defence_against_major_factor = 0.1
 			}
@@ -3178,7 +3176,7 @@ ideas = {
 			picture = SZC_YCP_decentralize_economy_idea
 			allowed = { always = no }
 			modifier = {
-				army_core_defense_factor = 0.10
+				army_core_defence_factor = 0.10
 				local_resources_factor = 0.125
 				industrial_capacity_factory = 0.2
 			}
@@ -3407,7 +3405,7 @@ ideas = {
 				consumer_goods_factor = -0.1
 				production_factory_max_efficiency_factor = 0.1
 				research_speed_factor = 0.15
-				construction_speed_factor = 0.25
+				production_speed_buildings_factor = 0.25
 			}
 		}
 
@@ -3421,7 +3419,7 @@ ideas = {
 				consumer_goods_factor = -0.15
 				production_factory_max_efficiency_factor = 0.05
 				research_speed_factor = 0.1
-				construction_speed_factor = 0.3
+				production_speed_buildings_factor = 0.3
 			}
 			targeted_modifier = {
 				tag = SZC
@@ -3441,7 +3439,7 @@ ideas = {
 				consumer_goods_factor = -0.15
 				production_factory_max_efficiency_factor = 0.05
 				research_speed_factor = 0.1
-				construction_speed_factor = 0.35
+				production_speed_buildings_factor = 0.35
 			}
 			targeted_modifier = {
 				tag = SZC
@@ -3460,7 +3458,7 @@ ideas = {
 				consumer_goods_factor = -0.1
 				production_factory_max_efficiency_factor = 0.1
 				research_speed_factor = 0.2
-				construction_speed_factor = 0.1
+				production_speed_buildings_factor = 0.1
 				production_speed_dockyard_factor = 0.15
 				political_advisor_cost_factor = -0.33
 			}
@@ -3475,7 +3473,7 @@ ideas = {
 				consumer_goods_factor = -0.15
 				production_factory_max_efficiency_factor = 0.1
 				research_speed_factor = 0.3
-				construction_speed_factor = 0.15
+				production_speed_buildings_factor = 0.15
 				production_speed_dockyard_factor = 0.3
 				political_advisor_cost_factor = -0.66
 			}
@@ -3490,7 +3488,7 @@ ideas = {
 				consumer_goods_factor = -0.15
 				production_factory_max_efficiency_factor = 0.05
 				research_speed_factor = 0.175
-				construction_speed_factor = 0.15
+				production_speed_buildings_factor = 0.15
 				production_speed_dockyard_factor = 0.15
 				political_advisor_cost_factor = -0.33
 			}
@@ -3512,9 +3510,9 @@ ideas = {
 				consumer_goods_factor = -0.1
 				production_factory_max_efficiency_factor = 0.1
 				research_speed_factor = 0.05
-				construction_speed_factor = 0.15
+				production_speed_buildings_factor = 0.15
 				production_speed_dockyard_factor = 0.1
-				army_experience_factor = 0.15
+				experience_gain_army_factor = 0.15
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
 			}
@@ -3530,9 +3528,9 @@ ideas = {
 				consumer_goods_factor = -0.15
 				production_factory_max_efficiency_factor = 0.15
 				research_speed_factor = 0.075
-				construction_speed_factor = 0.2
+				production_speed_buildings_factor = 0.2
 				production_speed_dockyard_factor = 0.2
-				army_experience_factor = 0.3
+				experience_gain_army_factor = 0.3
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
 			}
@@ -3548,9 +3546,9 @@ ideas = {
 				consumer_goods_factor = -0.1
 				production_factory_max_efficiency_factor = 0.1
 				research_speed_factor = 0.05
-				construction_speed_factor = 0.1
+				production_speed_buildings_factor = 0.1
 				production_speed_dockyard_factor = 0.1
-				army_experience_factor = 0.1
+				experience_gain_army_factor = 0.1
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
 			}
@@ -3572,9 +3570,9 @@ ideas = {
 				consumer_goods_factor = -0.2
 				production_factory_max_efficiency_factor = 0.15
 				research_speed_factor = 0.1
-				construction_speed_factor = 0.15
+				production_speed_buildings_factor = 0.15
 				production_speed_dockyard_factor = 0.1
-				army_experience_factor = 0.1
+				experience_gain_army_factor = 0.1
 				army_core_attack_factor = 0.15
 				army_core_defence_factor = 0.15
 				social_democrat_drift = 0.05
@@ -3597,7 +3595,7 @@ ideas = {
 				consumer_goods_factor = -0.1
 				production_factory_max_efficiency_factor = 0.1
 				research_speed_factor = 0.075
-				construction_speed_factor = 0.125
+				production_speed_buildings_factor = 0.125
 				army_attack_factor = 0.1
 			}
 		}
@@ -3612,7 +3610,7 @@ ideas = {
 				consumer_goods_factor = -0.175
 				production_factory_max_efficiency_factor = 0.175
 				research_speed_factor = 0.125
-				construction_speed_factor = 0.175
+				production_speed_buildings_factor = 0.175
 				army_attack_factor = 0.15
 			}
 		}
@@ -3627,7 +3625,7 @@ ideas = {
 				consumer_goods_factor = -0.15
 				production_factory_max_efficiency_factor = 0.1
 				research_speed_factor = 0.1
-				construction_speed_factor = 0.125
+				production_speed_buildings_factor = 0.125
 				army_attack_factor = 0.125
 			}
 			targeted_modifier = {
@@ -3672,7 +3670,7 @@ ideas = {
 				consumer_goods_factor = -0.25
 				production_factory_max_efficiency_factor = 0.15
 				research_speed_factor = 0.05
-				construction_speed_factor = 0.25
+				production_speed_buildings_factor = 0.25
 			}
 		}
 
@@ -3685,7 +3683,7 @@ ideas = {
 				consumer_goods_factor = -0.1
 				production_factory_max_efficiency_factor = 0.125
 				research_speed_factor = 0.05
-				construction_speed_factor = 0.225
+				production_speed_buildings_factor = 0.225
 			}
 			targeted_modifier = {
 				tag = SZC
@@ -3704,7 +3702,7 @@ ideas = {
 				consumer_goods_factor = -0.125
 				production_factory_max_efficiency_factor = 0.125
 				research_speed_factor = 0.1
-				construction_speed_factor = 0.15
+				production_speed_buildings_factor = 0.15
 				army_attack_factor = 0.04
 				army_defence_factor = 0.04
 			}
@@ -3719,7 +3717,7 @@ ideas = {
 				consumer_goods_factor = -0.1
 				production_factory_max_efficiency_factor = 0.125
 				research_speed_factor = 0.075
-				construction_speed_factor = 0.125
+				production_speed_buildings_factor = 0.125
 				army_attack_factor = 0.04
 				army_defence_factor = 0.04
 				syndicalist_drift = 0.03
@@ -3742,7 +3740,7 @@ ideas = {
 				consumer_goods_factor = -0.15
 				production_factory_max_efficiency_factor = 0.15
 				research_speed_factor = 0.075
-				construction_speed_factor = 0.175
+				production_speed_buildings_factor = 0.175
 				army_attack_factor = 0.04
 				army_defence_factor = 0.04
 				syndicalist_drift = 0.05
@@ -4075,7 +4073,7 @@ ideas = {
 			picture = CHI_liberation_of_east_asia
 			allowed = { always = no }
 			equipment_bonus = {
-				helicopter = {
+				helicopter_equipment = {
 					build_cost_ic = 0.10
 					soft_attack = 0.25
 					hard_attack = 0.25

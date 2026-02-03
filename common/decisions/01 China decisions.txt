@@ -1513,7 +1513,7 @@ chinese_unification = {
 								has_completed_focus = SZC_YCP_young_china_and_young_democracy
 								has_completed_focus = SZC_YCP_liberal_statist_struggle
 							}
-							hidden = {
+							hidden_trigger = {
 								NOT = {
 									has_country_flag = SZC_YCP_jiang_path
 								}

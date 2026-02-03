@@ -129,7 +129,7 @@ leader_traits = {
 		command_power_gain = 0.10
 		political_power_gain = 0.05
 		industrial_capacity_gain_factor = 0.05
-        infrastructure_construction_speed_factor = 0.10
+        local_factory_energy_consumption_per_infrastructure = -0.10
 	}
 
 	SZC_military_evangelist = {#王师曾
@@ -211,7 +211,7 @@ leader_traits = {
 		random = no
 		sprite = 19
 		research_speed_factor = 0.15
-		electronics_research = 0.15
+		research_sharing_per_country_bonus = 0.15
         nuclear_research = 0.15
 		political_power_gain = -0.05
 	}
@@ -316,7 +316,7 @@ leader_traits = {
 		random = no
 		sprite = 19
 		political_power_gain = 0.10
-		electronics_research = 0.15
+		research_sharing_per_country_bonus = 0.15
 	}
 
 	SZC_composer_of_national_melody = {#王光祈
@@ -450,7 +450,7 @@ leader_traits = {
 		random = no
 		sprite = 19
 		consumer_goods_factor = -0.1
-		production_factory_efficiency_loss_factor = -0.15
+		production_factory_efficiency_gain_factor = 0.15
 		political_power_gain = 0.10
 	}
 
@@ -584,7 +584,7 @@ leader_traits = {
 		random = no
 		planning_speed = -0.30
         army_org_factor = 0.10
-        max_entrenchment = -5  
+        dig_in_speed = -5  
         army_breakthrough_against_major_factor = 0.1
 	}
 
