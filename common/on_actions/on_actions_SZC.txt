@@ -91,5 +91,35 @@ on_actions = {
 			}
 		}
 	}
+
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					tag = SZC
+					has_country_flag = NKRsichuan_KMDpath
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 597 } #JINAN
+					}
+					if = {
+						limit = {
+							FROM = {
+								tag = SHD
+							}
+							SHD = {
+								has_country_leader = { character = SHD_zhang_tianran }
+							}
+						}
+						country_event = { id = NKRsichuanKMD.33 days = 2 } #杀进泰山，夺了鸟位！
+					}
+					else = {
+						country_event = { id = NKRsichuanKMD.34 days = 2 } #杀进泰山，夺了鸟位！
+					}
+				}
+			}
+		}
+	}
 }
 

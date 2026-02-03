@@ -69,7 +69,7 @@ scripted_gui = {
 						set_variable = { SZC_KMD_special_idea_boi = [KMD_GOD] }
 						add_timed_idea = {
 							idea = [KMD_GOD]_god_idea
-							days = 90
+							days = 30
 						}
 					}
 					KMD_GOD = "[?SZC_KMD_chosen_god.GetTokenKey]"

@@ -35642,7 +35642,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_seize_government
 		icon = GFX_goal_SZC_KMD_seize_government
-		cost = 4
+		cost = 3
 
 		x = -1
 		y = 1
@@ -35669,7 +35669,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_subject_army
 		icon = GFX_goal_SZC_KMD_subject_army
-		cost = 4
+		cost = 3
 
 		x = 1
 		y = 1
@@ -35695,7 +35695,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_arrest_heretics
 		icon = GFX_goal_SZC_KMD_arrest_heretics
-		cost = 4
+		cost = 3
 
 		x = -3
 		y = 2
@@ -35744,7 +35744,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_expand_KMD_influence
 		icon = GFX_goal_SZC_KMD_expand_KMD_influence
-		cost = 4
+		cost = 3
 
 		x = 0
 		y = 2
@@ -35774,7 +35774,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_arise_shenbings
 		icon = GFX_goal_SZC_KMD_arise_shenbings
-		cost = 4
+		cost = 3
 
 		x = 3
 		y = 2
@@ -35820,47 +35820,47 @@ focus_tree = {
 					impassable = no
 				}
 				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 1"
+					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 1"
+					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 1"
+					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 1"
+					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 1"
+					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 1"
+					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 1"
+					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 1"
+					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 1"
+					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 1"
+					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 1"
+					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
 			}
@@ -35883,7 +35883,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_time_is_running
 		icon = GFX_goal_SZC_KMD_time_is_running
-		cost = 4
+		cost = 3
 
 		x = 0
 		y = 3
@@ -35900,7 +35900,7 @@ focus_tree = {
 			focus = SZC_KMD_arise_shenbings
 		}
 
-		immediate = {
+		select_effect = {
 			
 			hidden_effect = {
 				country_event = {
@@ -35962,7 +35962,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_doomday_is_near
 		icon = GFX_goal_SZC_KMD_doomday_is_near
-		cost = 4
+		cost = 3
 
 		x = 0
 		y = 4
@@ -35973,7 +35973,7 @@ focus_tree = {
 			focus = SZC_KMD_time_is_running
 		}
 
-		immediate = {
+		select_effect = {
 			
 			hidden_effect = {
 				country_event = {
@@ -36004,7 +36004,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_his_word_for_eternality
 		icon = GFX_goal_SZC_KMD_his_word_for_eternality
-		cost = 4
+		cost = 3
 
 		x = -4
 		y = 1
@@ -36032,6 +36032,9 @@ focus_tree = {
 					id = NKRsichuanKMD.18
 					days = 3
 				}
+				set_variable = {
+					SZC_KMD_congyun_focus = 1
+				}
 			}
 		}
 	}
@@ -36039,7 +36042,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_gods_arrive
 		icon = GFX_goal_SZC_KMD_gods_arrive
-		cost = 4
+		cost = 3
 
 		x = -5
 		y = 2
@@ -36067,6 +36070,9 @@ focus_tree = {
 					id = NKRsichuanKMD.19
 					days = 1
 				}
+				add_variable = {
+					SZC_KMD_congyun_focus = 1
+				}
 			}
 			
 		}
@@ -36075,7 +36081,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_kongmeng_awakens
 		icon = GFX_goal_SZC_KMD_kongmeng_awakens
-		cost = 4
+		cost = 3
 
 		x = -5
 		y = 3
@@ -36103,6 +36109,9 @@ focus_tree = {
 					id = NKRsichuanKMD.20
 					days = 3
 				}
+				add_variable = {
+					SZC_KMD_congyun_focus = 1
+				}
 			}
 		}
 	}
@@ -36110,7 +36119,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_dare_to_die
 		icon = GFX_goal_SZC_KMD_dare_to_die
-		cost = 4
+		cost = 3
 
 		x = -3
 		y = 2
@@ -36141,6 +36150,9 @@ focus_tree = {
 					id = NKRsichuanKMD.21
 					days = 3
 				}
+				add_variable = {
+					SZC_KMD_congyun_focus = 1
+				}
 			}
 		}
 	}
@@ -36148,7 +36160,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_yisiyueduoyuegaoming
 		icon = GFX_goal_SZC_KMD_yisiyueduoyuegaoming
-		cost = 4
+		cost = 3
 
 		x = -3
 		y = 3
@@ -36175,6 +36187,9 @@ focus_tree = {
 					id = NKRsichuanKMD.22
 					days = 3
 				}
+				add_variable = {
+					SZC_KMD_congyun_focus = 1
+				}
 			}
 		}
 	}
@@ -36182,7 +36197,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_republic_against_republic
 		icon = GFX_goal_SZC_KMD_republic_against_republic
-		cost = 4
+		cost = 3
 
 		x = 0
 		y = 1
@@ -36210,6 +36225,9 @@ focus_tree = {
 					id = NKRsichuanKMD.23
 					days = 3
 				}
+				set_variable = {
+					SZC_KMD_shangpu_focus = 1
+				}
 			}
 		}
 	}
@@ -36217,7 +36235,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_create_value
 		icon = GFX_goal_SZC_KMD_create_value
-		cost = 4
+		cost = 3
 
 		x = -1
 		y = 2
@@ -36244,6 +36262,9 @@ focus_tree = {
 					id = NKRsichuanKMD.24
 					days = 3
 				}
+				add_variable = {
+					SZC_KMD_shangpu_focus = 1
+				}
 			}
 		}
 	}
@@ -36251,7 +36272,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_incorporating_civilian_parties
 		icon = GFX_goal_SZC_KMD_incorporating_civilian_parties
-		cost = 4
+		cost = 3
 
 		x = -1
 		y = 3
@@ -36296,6 +36317,9 @@ focus_tree = {
 					id = NKRsichuanKMD.25
 					days = 3
 				}
+				add_variable = {
+					SZC_KMD_shangpu_focus = 1
+				}
 			}
 		}
 	}
@@ -36303,7 +36327,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_claim_salvation_government
 		icon = GFX_goal_SZC_KMD_claim_salvation_government
-		cost = 4
+		cost = 3
 
 		x = 1
 		y = 2
@@ -36333,6 +36357,9 @@ focus_tree = {
 					id = NKRsichuanKMD.26
 					days = 3
 				}
+				add_variable = {
+					SZC_KMD_shangpu_focus = 1
+				}
 			}
 		}
 	}
@@ -36340,7 +36367,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_popular_movement_against_injustice
 		icon = GFX_goal_SZC_KMD_popular_movement_against_injustice
-		cost = 4
+		cost = 3
 
 		x = 1
 		y = 3
@@ -36367,6 +36394,9 @@ focus_tree = {
 					id = NKRsichuanKMD.27
 					days = 3
 				}
+				add_variable = {
+					SZC_KMD_shangpu_focus = 1
+				}
 			}
 		}
 	}
@@ -36374,7 +36404,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_rise_again_never_surrender
 		icon = GFX_goal_SZC_KMD_rise_again_never_surrender
-		cost = 4
+		cost = 3
 
 		x = 4
 		y = 1
@@ -36408,6 +36438,9 @@ focus_tree = {
 					id = NKRsichuanKMD.28
 					days = 3
 				}
+				add_variable = {
+					SZC_KMD_chengxun_focus = 1
+				}
 			}
 		}
 	}
@@ -36415,7 +36448,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_wind_follows_tiger
 		icon = GFX_goal_SZC_KMD_wind_follows_tiger
-		cost = 4
+		cost = 3
 
 		x = 3
 		y = 2
@@ -36444,6 +36477,9 @@ focus_tree = {
 					id = NKRsichuanKMD.29
 					days = 3
 				}
+				add_variable = {
+					SZC_KMD_chengxun_focus = 1
+				}
 			}
 		}
 	}
@@ -36451,7 +36487,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_smiling_tigers_legacy
 		icon = GFX_goal_SZC_KMD_smiling_tigers_legacy
-		cost = 4
+		cost = 3
 
 		x = 3
 		y = 3
@@ -36477,6 +36513,9 @@ focus_tree = {
 					id = NKRsichuanKMD.30
 					days = 3
 				}
+				add_variable = {
+					SZC_KMD_chengxun_focus = 1
+				}
 			}
 		}
 	}
@@ -36484,7 +36523,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_cloud_follows_dragon
 		icon = GFX_goal_SZC_KMD_cloud_follows_dragon
-		cost = 4
+		cost = 3
 
 		x = 5
 		y = 2
@@ -36519,6 +36558,9 @@ focus_tree = {
 					id = NKRsichuanKMD.31
 					days = 3
 				}
+				add_variable = {
+					SZC_KMD_chengxun_focus = 1
+				}
 			}
 		}
 	}
@@ -36526,7 +36568,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_blackfishs_legacy
 		icon = GFX_goal_SZC_KMD_blackfishs_legacy
-		cost = 4
+		cost = 3
 
 		x = 5
 		y = 3
@@ -36551,6 +36593,9 @@ focus_tree = {
 					id = NKRsichuanKMD.32
 					days = 3
 				}
+				add_variable = {
+					SZC_KMD_chengxun_focus = 1
+				}
 			}
 		}
 	}
@@ -36560,7 +36605,7 @@ focus_tree = {
 	focus = {
 		id = SZC_KMD_cheers_for_justice_wins
 		icon = GFX_goal_SZC_KMD_cheers_for_justice_wins
-		cost = 4
+		cost = 7
 
 		x = 0
 		y = 4
@@ -36572,6 +36617,15 @@ focus_tree = {
 			OR = {
 				owns_state = 1048
 				owns_state = 613
+			}
+		}
+
+		select_effect = {
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.35
+					days = 1
+				}
 			}
 		}
 
