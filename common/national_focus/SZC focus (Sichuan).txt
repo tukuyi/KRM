@@ -36938,10 +36938,10 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_cheers_for_justice_wins
 
-		allow_branch = {
-			has_country_flag = SZC_KMD_phase_2
-			has_country_flag = SZC_KMD_chengxun_path
-		}
+		# allow_branch = {
+		# 	has_country_flag = SZC_KMD_phase_2
+		# 	has_country_flag = SZC_KMD_chengxun_path
+		# }
 
 		prerequisite = {
 			focus = SZC_KMD_cheers_for_justice_wins
@@ -37131,10 +37131,10 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_cheers_for_justice_wins
 
-		# allow_branch = {
-		# 	has_country_flag = SZC_KMD_phase_2
-		# 	has_country_flag = SZC_KMD_shangpu_path
-		# }
+		allow_branch = {
+			has_country_flag = SZC_KMD_phase_2
+			has_country_flag = SZC_KMD_shangpu_path
+		}
 
 		prerequisite = {
 			focus = SZC_KMD_cheers_for_justice_wins
@@ -37187,8 +37187,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SZC_KMD_expand_komeito
-		icon = GFX_goal_SZC_KMD_expand_komeito
+		id = SZC_KMD_expand_the_party
+		icon = GFX_goal_SZC_KMD_expand_the_party
 		cost = 3
 
 		x = 2
@@ -37201,7 +37201,116 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_KMD_expand_komeito"
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_expand_the_party"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_fight_against_corruption
+		icon = GFX_goal_SZC_KMD_fight_against_corruption
+		cost = 3
+
+		x = -1
+		y = 2
+
+		relative_position_id = SZC_KMD_so_me_too
+
+		prerequisite = {
+			focus = SZC_KMD_reclaim_republican_legitimacy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_fight_against_corruption"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_to_build_democratic_society
+		icon = GFX_goal_SZC_KMD_to_build_democratic_society
+		cost = 3
+
+		x = -2
+		y = 3
+
+		relative_position_id = SZC_KMD_so_me_too
+
+		prerequisite = {
+			focus = SZC_KMD_reclaim_republican_legitimacy
+		}
+		prerequisite = {
+			focus = SZC_KMD_fight_against_corruption
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_to_build_democratic_society"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_congyun_spirit_continues
+		icon = GFX_goal_SZC_KMD_congyun_spirit_continues
+		cost = 3
+
+		x = 2
+		y = 2
+
+		relative_position_id = SZC_KMD_so_me_too
+
+		prerequisite = {
+			focus = SZC_KMD_expand_the_party
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_congyun_spirit_continues"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_from_shenbing_to_army
+		icon = GFX_goal_SZC_KMD_from_shenbing_to_army
+		cost = 3
+
+		x = 1
+		y = 3
+
+		relative_position_id = SZC_KMD_so_me_too
+
+		prerequisite = {
+			focus = SZC_KMD_theory_of_national_salvation
+		}
+		prerequisite = {
+			focus = SZC_KMD_congyun_spirit_continues
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_from_shenbing_to_army"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_a_new_moral_republic
+		icon = GFX_goal_SZC_KMD_a_new_moral_republic
+		cost = 3
+
+		x = 0
+		y = 4
+
+		relative_position_id = SZC_KMD_so_me_too
+
+		prerequisite = {
+			focus = SZC_KMD_to_build_democratic_society
+		}
+		prerequisite = {
+			focus = SZC_KMD_from_shenbing_to_army
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_a_new_moral_republic"
 			
 		}
 	}
@@ -37227,6 +37336,187 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_better_than_fire_of_yiling"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_sword_of_ren
+		icon = GFX_goal_SZC_KMD_sword_of_ren
+		cost = 3
+
+		x = -1
+		y = 1
+
+		relative_position_id = SZC_KMD_better_than_fire_of_yiling
+
+		prerequisite = {
+			focus = SZC_KMD_better_than_fire_of_yiling
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_sword_of_ren"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_sword_of_yi
+		icon = GFX_goal_SZC_KMD_sword_of_yi
+		cost = 3
+
+		x = 1
+		y = 1
+
+		relative_position_id = SZC_KMD_better_than_fire_of_yiling
+
+		prerequisite = {
+			focus = SZC_KMD_better_than_fire_of_yiling
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_sword_of_yi"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_tao_is_tao
+		icon = GFX_goal_SZC_KMD_tao_is_tao
+		cost = 3
+
+		x = -1
+		y = 2
+
+		relative_position_id = SZC_KMD_better_than_fire_of_yiling
+
+		prerequisite = {
+			focus = SZC_KMD_sword_of_ren
+		}
+		prerequisite = {
+			focus = SZC_KMD_sword_of_yi
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_tao_is_tao"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_reject_every_nonsense
+		icon = GFX_goal_SZC_KMD_reject_every_nonsense
+		cost = 3
+
+		x = 1
+		y = 2
+
+		relative_position_id = SZC_KMD_better_than_fire_of_yiling
+
+		prerequisite = {
+			focus = SZC_KMD_sword_of_ren
+		}
+		prerequisite = {
+			focus = SZC_KMD_sword_of_yi
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_reject_every_nonsense"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_sword_of_wuqing
+		icon = GFX_goal_SZC_KMD_sword_of_wuqing
+		cost = 3
+
+		x = 0
+		y = 3
+
+		relative_position_id = SZC_KMD_better_than_fire_of_yiling
+
+		prerequisite = {
+			focus = SZC_KMD_reject_every_nonsense
+		}
+		prerequisite = {
+			focus = SZC_KMD_tao_is_tao
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_sword_of_wuqing"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_no_more_weakness
+		icon = GFX_goal_SZC_KMD_no_more_weakness
+		cost = 3
+
+		x = -2
+		y = 3
+
+		relative_position_id = SZC_KMD_better_than_fire_of_yiling
+
+		prerequisite = {
+			focus = SZC_KMD_reject_every_nonsense
+		}
+		prerequisite = {
+			focus = SZC_KMD_tao_is_tao
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_no_more_weakness"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_everyone_to_gods
+		icon = GFX_goal_SZC_KMD_everyone_to_gods
+		cost = 3
+
+		x = 2
+		y = 3
+
+		relative_position_id = SZC_KMD_better_than_fire_of_yiling
+
+		prerequisite = {
+			focus = SZC_KMD_reject_every_nonsense
+		}
+		prerequisite = {
+			focus = SZC_KMD_tao_is_tao
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_everyone_to_gods"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_one_step_to_eternality
+		icon = GFX_goal_SZC_KMD_one_step_to_eternality
+		cost = 3
+
+		x = 0
+		y = 4
+
+		relative_position_id = SZC_KMD_better_than_fire_of_yiling
+
+		prerequisite = {
+			focus = SZC_KMD_no_more_weakness
+		}
+		prerequisite = {
+			focus = SZC_KMD_sword_of_wuqing
+		}
+		prerequisite = {
+			focus = SZC_KMD_everyone_to_gods
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_one_step_to_eternality"
 			
 		}
 	}
