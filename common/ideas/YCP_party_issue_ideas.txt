@@ -930,6 +930,20 @@ ideas = {
 				army_org_factor = 0.05
 			}
 		}
+		SZC_zheng_zhenwen_DMY_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.05
+				recruitable_population_factor = 0.05
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.075
+				trade_opinion_factor = 0.30
+				production_speed_industrial_complex_factor = 0.125
+			}
+		}
 ####################      STANDING       ####################
 		SZC_zeng_qi_DM_idea = {
 			allowed = {
