@@ -248,7 +248,7 @@ china_is_aligned_with_CHNsyndicalist = {
 		tooltip = china_is_aligned_with_CHNsyndicalist
 		OR = {
 			china_alignment_CHNsyndicalist = yes
-			china_alignment_left_kmt = yes
+			china_is_aligned_with_left_kmt = yes
 		}
 	}
 }
@@ -276,6 +276,7 @@ china_is_aligned_with_statist = {
 		tooltip = china_is_aligned_with_statist
 		OR = {
 			china_alignment_statist = yes
+			china_is_aligned_with_federalists = yes
 		}
 	}
 }
