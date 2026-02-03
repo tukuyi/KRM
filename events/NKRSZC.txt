@@ -361,7 +361,7 @@ country_event = { #刘神仙
 			add_idea = SZC_after_liu_2
 		}
 		SZC_pan_wenhua = {
-			kill = yes
+			kill_character = yes
 		}
 		hidden_effect = {
 			SZC_liu_chengxun = {
@@ -851,12 +851,10 @@ country_event = { #四川易帜
 		custom_effect_tooltip = focus_tree_will_change_tt
 		SZC_pan_wenhua = {
 			china_set_character_alignment_left_kuomintang = yes
-			country_leader = {
-				swap_country_leader_traits = {
-					remove = CHN_non_aligned
-					add = CHN_left_kuomintang_aligned
-					ideology = paternal_autocrat_subtype
-				}
+			swap_country_leader_traits = {
+				remove = CHN_non_aligned
+				add = CHN_left_kuomintang_aligned
+				ideology = paternal_autocrat_subtype
 			}
 			set_portraits = {
 				army = {
@@ -915,7 +913,7 @@ country_event = { #四川易帜
 				remove_idea = SZC_pan_legitimacy_2
 				add_idea = SZC_pan_legitimacy_4
 			}
-			bypass_national_focus = SZC_pan_political_tutelage
+			unlock_national_focus = SZC_pan_political_tutelage
 		}
 		hidden_effect = {
 			country_event = {
@@ -1008,13 +1006,11 @@ country_event = { #四川易帜
 			}
 			SZC_pan_wenhua = {
 				promote_character = authoritarian_democrat_subtype
-				country_leader = {
-					swap_country_leader_traits = {
-						remove = CHN_non_aligned
-						add = CHN_left_kuomintang_aligned
-						ideology = authoritarian_democrat_subtype
-					}
-				}	
+				swap_country_leader_traits = {
+					remove = CHN_non_aligned
+					add = CHN_left_kuomintang_aligned
+					ideology = authoritarian_democrat_subtype
+				}
 			}
 		}
 	}
@@ -4860,7 +4856,7 @@ country_event = { #就职典礼
 		name = NKRsichuan.289.a
 		if = {
 			limit = {
-				ruling_party = paternal_autocrat
+				has_government = paternal_autocrat
 			}
 			SZC_pan_wenhua = {
 				set_portraits = {
@@ -7542,11 +7538,10 @@ country_event = { #社会进步
 	fire_only_once = yes
 
 	hidden_effect = {
-		hidden_effect = {
-			country_event = {
-				id = NKRsichuanPI.10
-				days = 5
-			}
+		
+		country_event = {
+			id = NKRsichuanPI.10
+			days = 5
 		}
 	}
 	
@@ -10925,7 +10920,7 @@ country_event = { #混乱即阶梯
 		log = "[GetLogInfo]: event NKRsichuan.546 option NKRsichuan.5466.a"
 		name = NKRsichuan.546.a
 		SZC_xia_taosheng = {
-			kill = yes
+			kill_character = yes
 		}
 		add_popularity = {
 			ideology = syndicalist
@@ -11499,7 +11494,7 @@ country_event = { #终局
 			popularity = 0.10
 		}
 		SZC_zhang_guotao = {
-			kill = yes
+			kill_character = yes
 		}
 		hidden_effect = {
 			country_event = {
@@ -13733,7 +13728,7 @@ country_event = { #一声炮响
 	option = {#铁拳出动。
 		log = "[GetLogInfo]: event NKRsichuan.694 option NKRsichuan.694.a"
 		name = NKRsichuan.694.a
-		remove_idea = SZC_YCP_break_dictatorship_idea
+		remove_ideas = SZC_YCP_break_dictatorship_idea
 		SZC_lei_zhen = {
 			retire = yes
 		}
@@ -14485,7 +14480,7 @@ country_event = { #政变
 				ideology = paternal_autocrat
 				popularity = 0.35
 			}
-			remove_idea = SZC_YCP_an_army_with_state_idea
+			remove_ideas = SZC_YCP_an_army_with_state_idea
 			every_subject_country = {
 				limit = {
 					has_socialist_government = yes
@@ -18965,8 +18960,16 @@ country_event = { #傻逼美帝
 			target = FROM
 			modifier = KR_disapproves_of_govt
 		}
-		uncomplete_national_focus = SZC_pan_FORPOL_friendship_across_pacific_ocean
-		uncomplete_national_focus = SZC_pan_CDL_FORPOL_friendship_across_pacific_ocean
+		uncomplete_national_focus = {
+			focus = SZC_pan_FORPOL_friendship_across_pacific_ocean
+			uncomplete_children = yes
+ 			refund_political_power = no
+		}
+		uncomplete_national_focus = {
+			focus = SZC_pan_CDL_FORPOL_friendship_across_pacific_ocean
+			uncomplete_children = yes
+ 			refund_political_power = no
+		}
 	}
 }
 
@@ -19100,7 +19103,7 @@ country_event = { #回绝
 		}
 		hidden_effect = {
 			every_country = {
-				remove_idea = SZC_KMT_member_of_sino_german_sphere_idea
+				remove_ideas = SZC_KMT_member_of_sino_german_sphere_idea
 			}
 		}
 	}
@@ -19348,7 +19351,11 @@ country_event = { #我们的申请被拒
 			target = FROM
 			modifier = KR_disapproves_of_govt
 		}
-		uncomplete_national_focus = SZC_pan_CDL_FORPOL_once_the_devil_though
+		uncomplete_national_focus = {
+			focus = SZC_pan_CDL_FORPOL_once_the_devil_though
+			uncomplete_children = yes
+ 			refund_political_power = no
+		}
 	}
 }
 
@@ -19421,7 +19428,7 @@ country_event = { #法国人不同意
 		}
 		uncomplete_national_focus = {
 			focus = SZC_pan_CDL_FORPOL_once_the_devil_though
-			Children = yes
+			uncomplete_children = yes
 			refund_political_power = no
 		}
 		add_opinion_modifier = {
@@ -20801,7 +20808,7 @@ country_event = { #华北的叛徒
 		add_political_power = 100
 		QIE = {
 			SZC_zhao_yusong = {
-				kill = yes
+				kill_character = yes
 			}
 		}
 		custom_effect_tooltip = NKRsichuanPI.16.tt
@@ -20964,7 +20971,7 @@ country_event = { #新党务班子
     option = {
         log = "[GetLogInfo]: event NKRsichuanPI.26 option NKRsichuanPI.26.a"
         name = NKRsichuanPI.26.a
-		YCP_zuo_shunsheng_center_setup = YES
+		YCP_zuo_shunsheng_center_setup = yes
     }
 }
 

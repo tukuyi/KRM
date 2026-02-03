@@ -32,12 +32,11 @@ on_actions = {
 		}
 	}
 
-	on_ruling_party_change = {
+	on_government_change = {
 		effect = {
 			if = {
 				limit = {
-					tag = QIE
-					has_completed_focus = QIE_restoration
+					ROOT = { tag = QIE has_completed_focus = QIE_restoration }
 					SZC = {
 						has_completed_focus = SZC_YCP_the_ninth_congress_of_YCP
 					}

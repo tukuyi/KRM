@@ -5163,10 +5163,6 @@ chinese_unification = {
 				has_country_leader = { character = SHX_yan_xishan }
 				has_completed_focus = SHX_beyond_borders
 			}
-			else_if = {
-				limit = { tag = SZC }
-				has_completed_focus = SZC_The_Lord_Of_Sichuan
-			}
 		}
 
 		targets = { AGJ }

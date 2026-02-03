@@ -606,9 +606,8 @@ ideas = {
 		}
 ####################      TRAIN       ####################
 		# generic
-		# experience_gain_army_factor = 0.15
+		# experience_gain_army_factor = 0.25
 		# training_time_factor = -0.05
-		# experience_gain_army_factor = 0.10
 		SZC_chen_qitian_DMT_idea = {
 			allowed = {
 				always = no
@@ -617,7 +616,6 @@ ideas = {
 			modifier = {
 				experience_gain_army_factor = 0.15
 				training_time_factor = -0.05
-				experience_gain_army_factor = 0.10
 				consumer_goods_factor = -0.075
 				production_factory_efficiency_gain_factor = 0.1
 				army_morale_factor = 0.075
@@ -631,7 +629,6 @@ ideas = {
 			modifier = {
 				experience_gain_army_factor = 0.15
 				training_time_factor = -0.05
-				experience_gain_army_factor = 0.10
 				war_support_factor = 0.175
 				mobilization_laws_cost_factor = -0.66
 				army_org_factor = 0.06
@@ -645,7 +642,6 @@ ideas = {
 			modifier = {
 				experience_gain_army_factor = 0.15
 				training_time_factor = -0.05
-				experience_gain_army_factor = 0.10
 				stability_factor = 0.15
 				party_popularity_stability_factor = -0.15
 				social_democrat_acceptance = 25
@@ -664,7 +660,6 @@ ideas = {
 			modifier = {
 				experience_gain_army_factor = 0.15
 				training_time_factor = -0.05
-				experience_gain_army_factor = 0.10
 				decryption_power = 1.5
 				research_speed_factor = 0.08
 			}
@@ -681,10 +676,8 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				experience_gain_army_factor = 0.15
-				training_time_factor = -0.05
-				experience_gain_army_factor = 0.10
+				training_time_factor = -0.175
 				monthly_population = 0.075
-				training_time_factor = -0.125
 				army_morale_factor = 0.075
 			}
 		}
@@ -695,10 +688,8 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				experience_gain_army_factor = 0.15
-				training_time_factor = -0.05
-				experience_gain_army_factor = 0.10
+				training_time_factor = -0.175
 				monthly_population = 0.10
-				training_time_factor = -0.15
 				army_morale_factor = 0.10
 			}
 		}
@@ -710,7 +701,6 @@ ideas = {
 			modifier = {
 				experience_gain_army_factor = 0.15
 				training_time_factor = -0.05
-				experience_gain_army_factor = 0.10
 				political_power_gain = 0.125
 				research_sharing_per_country_bonus = 0.2
 			}
@@ -723,7 +713,6 @@ ideas = {
 			modifier = {
 				experience_gain_army_factor = 0.15
 				training_time_factor = -0.05
-				experience_gain_army_factor = 0.10
 				command_power_gain = 0.125
 				political_power_gain = 0.075
 				industrial_capacity_factory = 0.075

@@ -1880,6 +1880,21 @@ characters = {
 			cost = 100
 		}
 	}
+	#穆子斌
+	SZC_mu_zibin = {
+		name = SZC_mu_zibin
+		portraits = {
+			army = {
+				small = GFX_portrait_SZC_mu_zibin_army_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_mu_zibin_advisor
+			traits = { KR_war_propagandist }
+		}
+	}
+
 	#劉咸滎
 	SZC_liu_xianying = {
 		name = SZC_liu_xianying
@@ -2546,25 +2561,7 @@ characters = {
 		}
 
 	}
-	#杨庶堪
-	SZC_lv_yifeng = {
-		name = SZC_lv_yifeng
-		portraits = {
-			civilian = {
-				small = GFX_portrait_SZC_lv_yifeng_small
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SZC_lv_yifeng_advisor
-			ledger = army
-			traits = { KR_influential_intellectual }
-			cost = 100
-			can_be_fired = no
-			desc = SZC_lv_yifeng_desc
-		}
-
-	}
+	
 	#漆南薰
 	SZC_qi_nanxun = {
 		name = SZC_qi_nanxun
@@ -3413,23 +3410,6 @@ characters = {
 			cost = 0
 			can_be_fired = no
 			desc = SZC_chang_yansheng_desc
-		}
-	}
-
-	#雷震
-	SZC_lei_zhen = {
-		name = SZC_lei_zhen
-		portraits = {
-			civilian = {
-				small = GFX_portrait_SZC_lei_zhen_small
-				large = GFX_portrait_SZC_lei_zhen_large
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SZC_lei_zhen_advisor
-			traits = {  }
-			desc = SZC_lei_zhen_desc
 		}
 	}
 
