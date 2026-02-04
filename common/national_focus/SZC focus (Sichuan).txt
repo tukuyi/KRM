@@ -35472,7 +35472,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 50
 			tag = SZC
 		}
 	}
@@ -37869,6 +37869,579 @@ focus_tree = {
 					days = 1
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_dahan_reunited
+		icon = GFX_goal_SZC_KMD_dahan_reunited
+		cost = 3
+
+		x = 0
+		y = 7
+
+		relative_position_id = SZC_KMD_cheers_for_justice_wins
+
+		# allow_branch = {
+		# 	has_global_flag = china_united
+		# 	has_country_flag = SZC_KMD_phase_3
+		# 	has_country_flag = SZC_KMD_chengxun_path
+		# }
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_dahan_reunited"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_legitimacy_through_power
+		icon = GFX_goal_SZC_KMD_legitimacy_through_power
+		cost = 3
+
+		x = -2
+		y = 1
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_dahan_reunited
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_legitimacy_through_power"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_the_coronation
+		icon = GFX_goal_SZC_KMD_the_coronation
+		cost = 3
+
+		x = 0
+		y = 1
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		available = {
+			AND = {
+				has_completed_focus = SZC_KMD_question_of_constitution
+				has_completed_focus = SZC_KMD_legitimacy_through_power
+			}
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_dahan_reunited
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_the_coronation"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_question_of_constitution
+		icon = GFX_goal_SZC_KMD_question_of_constitution
+		cost = 3
+
+		x = 2
+		y = 1
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_dahan_reunited
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_question_of_constitution"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_continue_komeito_relationship
+		icon = GFX_goal_SZC_KMD_continue_komeito_relationship
+		cost = 3
+
+		x = -5
+		y = 2
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		mutually_exclusive = {
+			focus = SZC_KMD_appoint_hu_ying_cabinet
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_the_coronation
+		}
+		prerequisite = {
+			focus = SZC_KMD_legitimacy_through_power
+		}
+		prerequisite = {
+			focus = SZC_KMD_question_of_constitution
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_continue_komeito_relationship"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_revolution_on_earth_now
+		icon = GFX_goal_SZC_KMD_revolution_on_earth_now
+		cost = 3
+
+		x = -6
+		y = 3
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_continue_komeito_relationship
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_revolution_on_earth_now"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_only_way_to_eternal_peace
+		icon = GFX_goal_SZC_KMD_only_way_to_eternal_peace
+		cost = 3
+
+		x = -7
+		y = 4
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_revolution_on_earth_now
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_only_way_to_eternal_peace"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_voice_of_us_voice_of_people
+		icon = GFX_goal_SZC_KMD_voice_of_us_voice_of_people
+		cost = 3
+
+		x = -5
+		y = 4
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_continue_komeito_relationship
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_voice_of_us_voice_of_people"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_to_against_doomday
+		icon = GFX_goal_SZC_KMD_to_against_doomday
+		cost = 3
+
+		x = -6
+		y = 5
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_revolution_on_earth_now
+		}
+		prerequisite = {
+			focus = SZC_KMD_voice_of_us_voice_of_people
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_to_against_doomday"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_fate_of_weixin
+		icon = GFX_goal_SZC_KMD_fate_of_weixin
+		cost = 3
+
+		x = -3
+		y = 3
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_continue_komeito_relationship
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_fate_of_weixin"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_wave_of_parliament_politic
+		icon = GFX_goal_SZC_KMD_wave_of_parliament_politic
+		cost = 3
+
+		x = -3
+		y = 4
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_fate_of_weixin
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_wave_of_parliament_politic"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_kongmeng_faith
+		icon = GFX_goal_SZC_KMD_kongmeng_faith
+		cost = 3
+
+		x = -4
+		y = 5
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_wave_of_parliament_politic
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_kongmeng_faith"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_appoint_hu_ying_cabinet
+		icon = GFX_goal_SZC_KMD_appoint_hu_ying_cabinet
+		cost = 3
+
+		x = 5
+		y = 2
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		mutually_exclusive = {
+			focus = SZC_KMD_continue_komeito_relationship
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_the_coronation
+		}
+		prerequisite = {
+			focus = SZC_KMD_legitimacy_through_power
+		}
+		prerequisite = {
+			focus = SZC_KMD_question_of_constitution
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_appoint_hu_ying_cabinet"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_emperors_cabinet
+		icon = GFX_goal_SZC_KMD_emperors_cabinet
+		cost = 3
+
+		x = 7
+		y = 3
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_appoint_hu_ying_cabinet
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_emperors_cabinet"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_conservative_weixin
+		icon = GFX_goal_SZC_KMD_conservative_weixin
+		cost = 3
+
+		x = 5
+		y = 3
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_appoint_hu_ying_cabinet
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_conservative_weixin"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_long_live_han
+		icon = GFX_goal_SZC_KMD_long_live_han
+		cost = 3
+
+		x = 3
+		y = 3
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_appoint_hu_ying_cabinet
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_long_live_han"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_a_general_history_of_china
+		icon = GFX_goal_SZC_KMD_a_general_history_of_china
+		cost = 3
+
+		x = 5
+		y = 4
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_long_live_han
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_conservative_weixin
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_emperors_cabinet
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_a_general_history_of_china"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_to_be_a_constitutional_monarch
+		icon = GFX_goal_SZC_KMD_to_be_a_constitutional_monarch
+		cost = 3
+
+		x = 4
+		y = 5
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_a_general_history_of_china
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_to_be_a_constitutional_monarch"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_planning_and_moderate_social_reform
+		icon = GFX_goal_SZC_KMD_planning_and_moderate_social_reform
+		cost = 3
+
+		x = 6
+		y = 5
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_a_general_history_of_china
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_planning_and_moderate_social_reform"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_yuanwu_emperor_and_his_country
+		icon = GFX_goal_SZC_KMD_yuanwu_emperor_and_his_country
+		cost = 3
+
+		x = 0
+		y = 3
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_continue_komeito_relationship
+			focus = SZC_KMD_appoint_hu_ying_cabinet
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_yuanwu_emperor_and_his_country"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_expand_privy_council_influence
+		icon = GFX_goal_SZC_KMD_expand_privy_council_influence
+		cost = 3
+
+		x = 2
+		y = 4
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_yuanwu_emperor_and_his_country
+		}
+		prerequisite = {
+			focus = SZC_KMD_long_live_han
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_expand_privy_council_influence"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_taoyuan_elders
+		icon = GFX_goal_SZC_KMD_taoyuan_elders
+		cost = 3
+
+		x = 2
+		y = 5
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_expand_privy_council_influence
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_taoyuan_elders"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_tianzi_and_his_army
+		icon = GFX_goal_SZC_KMD_tianzi_and_his_army
+		cost = 3
+
+		x = -1
+		y = 4
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_yuanwu_emperor_and_his_country
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_tianzi_and_his_army"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_tianzis_grace_is_boundless
+		icon = GFX_goal_SZC_KMD_tianzis_grace_is_boundless
+		cost = 3
+
+		x = -1
+		y = 5
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_tianzi_and_his_army
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_tianzis_grace_is_boundless"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_kongmengs_empire_on_earth
+		icon = GFX_goal_SZC_KMD_kongmengs_empire_on_earth
+		cost = 3
+
+		x = -1
+		y = 6
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_to_against_doomday
+		}
+		prerequisite = {
+			focus = SZC_KMD_kongmeng_faith
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_kongmengs_empire_on_earth"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_yuanwu_the_great
+		icon = GFX_goal_SZC_KMD_yuanwu_the_great
+		cost = 3
+
+		x = 1
+		y = 6
+
+		relative_position_id = SZC_KMD_dahan_reunited
+
+		prerequisite = {
+			focus = SZC_KMD_planning_and_moderate_social_reform
+		}
+		prerequisite = {
+			focus = SZC_KMD_to_be_a_constitutional_monarch
+		}
+		prerequisite = {
+			focus = SZC_KMD_tianzis_grace_is_boundless
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_yuanwu_the_great"
+			
 		}
 	}
 
