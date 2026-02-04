@@ -4566,7 +4566,12 @@ KMD_only_bonus_get = {
 
 
 
-
+KMD_add_chouka_time = {
+	custom_effect_tooltip = KMD_add_chouka_tt
+	add_to_variable = {
+		SZC_KMD_chouka_times = var:temp_KMD_chouka_add
+	}
+}
 
 
 

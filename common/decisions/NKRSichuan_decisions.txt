@@ -3922,7 +3922,7 @@ SZC_KMD_god_arrive_category = {
 			always = no
 		}
 		icon = GFX_decision_generic_ignite_civil_war
-		days_mission_timeout = 70
+		days_mission_timeout = var:temp_KMD_god_arrive_time
 		priority = 200
 
 		available = {
@@ -3980,7 +3980,7 @@ SZC_KMD_god_arrive_category = {
 			always = no
 		}
 		icon = GFX_decision_generic_ignite_civil_war
-		days_mission_timeout = 30
+		days_mission_timeout = var:temp_KMD_special_idea_time
 		priority = 200
 
 		available = {

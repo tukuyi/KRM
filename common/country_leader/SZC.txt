@@ -159,5 +159,26 @@ leader_traits = {
 		political_power_factor = -0.1
 		stability_factor = -0.1
 	}
+
+	SZC_KMD_hanzhongwang_1_trait = {
+		custom_modifier_tooltip = SZC_KMD_hanzhongwang_1_trait_desc
+		random = no
+		stability_factor = -0.1
+		war_support_factor = -0.05
+	}
+
+	SZC_KMD_hanzhongwang_2_trait = {
+		custom_modifier_tooltip = SZC_KMD_hanzhongwang_2_trait_desc
+		random = no
+		stability_factor = 0.05
+	}
+
+	SZC_KMD_hanzhongwang_3_trait = {
+		custom_modifier_tooltip = SZC_KMD_hanzhongwang_3_trait_desc
+		random = no
+		stability_factor = 0.1
+		war_support_factor = 0.05
+		resistance_growth_on_our_occupied_states = 0.1
+	}
 }
 	

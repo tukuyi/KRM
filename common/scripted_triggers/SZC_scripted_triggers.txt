@@ -77,3 +77,13 @@ YCP_select_standings = {
 		has_country_flag = YCP_standing_6_selected
 	}
 }
+
+KMD_god_is_available = {
+	custom_override_tooltip = {
+		tooltip = KMD_god_is_available_tt
+		is_in_array = {
+			array = SZC_KMD_gods_array
+			value = temp_KMD_check_god_in_array
+		}
+	}
+}

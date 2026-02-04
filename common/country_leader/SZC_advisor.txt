@@ -521,6 +521,22 @@ leader_traits = {
 		army_attack_factor = -0.05
 	}
 
+	SZC_KMD_i_will_not_be_polite_trait = { #我是不会客气的
+		random = no
+		political_power_gain = 0.1
+		stability_factor = 0.1
+		drift_defence_factor = 0.35
+		army_advisor_cost_factor = -0.33
+	}
+
+	SZC_KMD_she_bu_de_shuaian_ba_trait = { #舍不得帅案吧！
+		random = no
+		political_power_cost = 0.1
+		army_attack_factor = 0.08
+		army_speed_factor = 0.08
+		command_power_gain = -0.1
+	}
+
 
 
 

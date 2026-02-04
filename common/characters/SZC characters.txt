@@ -5007,7 +5007,7 @@ characters = {
 		country_leader = {
 			desc = SZC_liu_chengxun_desc
 			ideology = paternal_autocrat_subtype
-			traits = { CHN_non_aligned }
+			traits = { CHN_non_aligned SZC_KMD_hanzhongwang_1_trait }
 		}
 		country_leader = {
 			desc = SZC_liu_chengxun_desc
@@ -5160,6 +5160,15 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_guan_yu_advisor
+			desc = SZC_guan_yu_desc
+			traits = { SZC_KMD_i_will_not_be_polite_trait }
+			visible = {
+				has_completed_focus = SZC_KMD_the_oath_of_taoyuan
+			}
+		}
 	}
 
 	#黄忠
@@ -5218,6 +5227,20 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 2
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_zhang_fei_advisor
+			desc = SZC_zhang_fei_desc
+			traits = { SZC_KMD_she_bu_de_shuaian_ba_trait }
+			visible = {
+				has_completed_focus = SZC_KMD_the_oath_of_taoyuan
+			}
+			available = {
+				SZC_zhuge_liang = {
+					is_hired_as_advisor = no
+				}
+			}
 		}
 	}
 
