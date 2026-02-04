@@ -35472,7 +35472,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 50
+			add = 0
 			tag = SZC
 		}
 	}
@@ -35801,6 +35801,7 @@ focus_tree = {
 				activate_targeted_decision = { decision = china_demand_submission target = LEP }
 				activate_targeted_decision = { decision = china_demand_submission target = SHD }
 				activate_targeted_decision = { decision = china_demand_submission target = QIE }
+				activate_targeted_decision = { decision = china_demand_submission target = CHI }
 			}
 			hidden_effect = {
 				add_to_array = { ROOT.china_possible_targets_array = SHX }
@@ -35819,6 +35820,8 @@ focus_tree = {
 				activate_targeted_decision = { target = SHD decision = china_attack_decision }
 				add_to_array = { ROOT.china_possible_targets_array = QIE }
 				activate_targeted_decision = { target = QIE decision = china_attack_decision }
+				add_to_array = { ROOT.china_possible_targets_array = CHI }
+				activate_targeted_decision = { target = CHI decision = china_attack_decision }
 			}
 			hidden_effect = {
 				country_event = {
@@ -36308,7 +36311,7 @@ focus_tree = {
 					id = NKRsichuanKMD.28
 					days = 3
 				}
-				add_variable = {
+				set_variable = {
 					SZC_KMD_chengxun_focus = 1
 				}
 			}
