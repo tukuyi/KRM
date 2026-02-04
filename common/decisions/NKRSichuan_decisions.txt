@@ -3951,7 +3951,7 @@ SZC_KMD_god_arrive_category = {
 			always = no
 		}
 		icon = GFX_decision_generic_ignite_civil_war
-		days_mission_timeout = 90
+		days_mission_timeout = var:temp_KMD_god_stronger_time
 		priority = 200
 
 		available = {

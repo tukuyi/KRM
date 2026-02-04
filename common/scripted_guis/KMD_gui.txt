@@ -68,7 +68,17 @@ scripted_gui = {
 					KMD_GOD = "[?SZC_KMD_chosen_god.GetTokenKey]"
 				}
 				set_country_flag = KMD_GOD_recently_god_stronger
-				activate_mission = SZC_KMD_god_stronger_mission
+				if = {
+					limit = {
+						has_completed_focus = SZC_KMD_one_step_to_eternality
+					}
+					set_temp_variable = { temp_KMD_god_stronger_time = 45 }
+					activate_mission = SZC_KMD_god_stronger_mission
+				}
+				else = {
+					set_temp_variable = { temp_KMD_special_idea_time = 90 }
+					activate_mission = SZC_KMD_god_stronger_mission
+				}
 			}
 			KMD_action_special_idea_button_click = {
 				add_political_power = -100
