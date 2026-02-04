@@ -5071,7 +5071,7 @@ characters = {
 			slot = second_in_command
 			idea_token = SZC_jiang_shangpu_sic
 			ledger = army
-			traits = {  }
+			traits = { SZC_professional_assistant_sic }
 			cost = 0
 			can_be_fired = no
 			desc = SZC_jiang_shangpu_desc
@@ -5112,9 +5112,18 @@ characters = {
 			traits = { KR_MHC_cavalry_2 }
 			cost = 150
 		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_liu_xiaolan_sic
+			ledger = army
+			traits = { SZC_diligent_beliver_sic }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_liu_xiaolan_desc
+		}
 	}
 
-	#刘晓岚
+	#吴善堂
 	SZC_wu_shantang = {
 		name = SZC_wu_shantang
 		portraits = {

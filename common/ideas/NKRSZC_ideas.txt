@@ -4157,6 +4157,54 @@ ideas = {
 			}
 		}
 
+		SZC_KMD_legitimacy_5 = {#政教合一大势 - 道德共和
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_5" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				war_support_factor = 0.05
+				mobilization_speed = 0.05
+				party_popularity_stability_factor = 0.15
+				compliance_gain = -0.01
+				resistance_target = -0.05
+				production_factory_max_efficiency_factor = 0.05
+
+			}
+		}
+
+		SZC_KMD_legitimacy_6 = {#政教合一大势 - 道德共和
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_6" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				war_support_factor = 0.1
+				mobilization_speed = 0.05
+				party_popularity_stability_factor = 0.25
+				compliance_gain = -0.01
+				resistance_target = -0.05
+				production_factory_max_efficiency_factor = 0.1
+
+			}
+		}
+
+		SZC_KMD_legitimacy_7 = {#政教合一大势 - 孔孟大道
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_7" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_factor = 0.05
+				surrender_limit = 0.15
+				mobilization_speed = 0.2
+				party_popularity_stability_factor = 0.15
+				compliance_gain = -0.01
+				production_lack_of_resource_penalty_factor = -0.2
+				consumer_goods_factor = -0.1
+
+			}
+		}
+
 
 		SZC_KMD_kongmeng_power = {#孔孟之力
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_kongmeng_power" }
@@ -4323,6 +4371,66 @@ ideas = {
 				economy_cost_factor = -0.33
 				political_power_factor = 0.1
 				compliance_gain = 0.01
+			}
+		}
+
+		SZC_KMD_road_to_moral_democracy_idea = {#道德民主之路
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_road_to_moral_democracy_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				political_advisor_cost_factor = -0.33
+				embargo_cost_factor = -0.66
+				trade_laws_cost_factor = -0.66
+				political_power_factor = 0.05
+				authoritarian_democrat_drift = 0.03
+			}
+		}
+
+		SZC_KMD_standard_shenbings_idea = {#规范之神兵
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_standard_shenbings_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_against_major_factor = 0.05
+				army_defence_against_major_factor = 0.05
+			}
+		}
+
+		SZC_KMD_tao_is_tao_idea = {#道可道
+			on_add = { log = "[GetLogRoot]: add idea SZC_tao_is_tao_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				land_night_attack = 0.08
+				production_lack_of_resource_penalty_factor = -0.15
+				equipment_capture_factor = 0.1
+			}
+		}
+
+		SZC_KMD_sword_of_wuqing_idea = {#无情剑
+			on_add = { log = "[GetLogRoot]: add idea SZC_sword_of_wuqing_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = 0.25
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				stability_weekly = -0.0005
+			}
+		}
+
+		SZC_KMD_everyone_to_gods_idea = {#人人有功练
+			on_add = { log = "[GetLogRoot]: add idea SZC_everyone_to_gods_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				recruitable_population_factor = -0.2
+				conscription = 0.02
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_strength_factor = 0.15
 			}
 		}
 
