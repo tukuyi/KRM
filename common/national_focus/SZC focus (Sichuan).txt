@@ -36808,10 +36808,10 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_cheers_for_justice_wins
 
-		allow_branch = {
-			has_country_flag = SZC_KMD_phase_2
-			has_country_flag = SZC_KMD_chengxun_path
-		}
+		# allow_branch = {
+		# 	has_country_flag = SZC_KMD_phase_2
+		# 	has_country_flag = SZC_KMD_chengxun_path
+		# }
 
 		prerequisite = {
 			focus = SZC_KMD_cheers_for_justice_wins
@@ -37001,10 +37001,10 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_cheers_for_justice_wins
 
-			# allow_branch = {
-			# 	has_country_flag = SZC_KMD_phase_2
-			# 	has_country_flag = SZC_KMD_shangpu_path
-			# }
+			allow_branch = {
+				has_country_flag = SZC_KMD_phase_2
+				has_country_flag = SZC_KMD_shangpu_path
+			}
 
 		prerequisite = {
 			focus = SZC_KMD_cheers_for_justice_wins
