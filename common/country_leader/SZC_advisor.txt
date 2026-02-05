@@ -537,6 +537,32 @@ leader_traits = {
 		command_power_gain = -0.1
 	}
 
+	SZC_KMD_i_will_not_be_polite_2_trait = { #我是不会客气的2
+		random = no
+		political_power_gain = 0.15
+		stability_factor = 0.15
+		drift_defence_factor = 0.5
+		army_advisor_cost_factor = -0.33
+	}
+
+	SZC_KMD_she_bu_de_shuaian_ba_2_trait = { #舍不得帅案吧！2
+		random = no
+		political_power_cost = 0.15
+		army_attack_factor = 0.1
+		army_speed_factor = 0.1
+		command_power_gain = -0.15
+	}
+
+	SZC_KMD_master_of_national_history_trait = { #国学大师
+		random = no
+		stability_factor = 0.1
+		surrunder_limit = 0.1
+		drift_defence_factor = 0.25
+		war_support_reduction_on_damage = -0.5
+		research_speed_factor = 0.05
+
+	}
+
 
 
 
@@ -621,6 +647,11 @@ leader_traits = {
 		random = no
 		compliance_growth = 0.15
 		production_factory_max_efficiency_factor = 0.1
+	}
+	SZC_professional_assistant_2_sic = {
+		random = no
+		compliance_growth = 0.2
+		production_factory_max_efficiency_factor = 0.15
 	}
 	SZC_diligent_beliver_sic = {
 		random = no

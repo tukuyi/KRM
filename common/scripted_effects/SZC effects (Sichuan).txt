@@ -4573,7 +4573,98 @@ KMD_add_chouka_time = {
 	}
 }
 
+KMD_upgrade_guan_yu_advisor_effect = {
+	SZC_guan_yu = {
+		if = {
+			limit = { has_trait = SZC_KMD_i_will_not_be_polite_trait }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_replace_character_trait
+					ROLE = political_advisor
+					OLD_TRAIT = SZC_KMD_i_will_not_be_polite_trait
+					NEW_TRAIT = SZC_KMD_i_will_not_be_polite_2_trait
+				}
+				remove_trait = {
+					character = SZC_guan_yu
+					slot = political_advisor
+					trait = SZC_KMD_i_will_not_be_polite_trait
+				}
+				add_trait = {
+					character = SZC_guan_yu
+					slot = political_advisor
+					trait = SZC_KMD_i_will_not_be_polite_2_trait
+				}
+			}
+			effect_tooltip = {
+				set_temp_variable = { modifier_change_tt = 0.05 tooltip = political_power_gain_tooltip }
+				set_temp_variable = { modifier_change_tt = 0.05 tooltip = stability_factor_tooltip }
+				set_temp_variable = { modifier_change_tt = 0.15 tooltip = drift_defence_factor_tooltip }
+			}
+		}
+	}
+}
 
+KMD_upgrade_zhang_fei_advisor_effect = {
+	SZC_zhang_fei = {
+		if = {
+			limit = { has_trait = SZC_KMD_she_bu_de_shuaian_ba_trait }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_replace_character_trait
+					ROLE = political_advisor
+					OLD_TRAIT = SZC_KMD_she_bu_de_shuaian_ba_trait
+					NEW_TRAIT = SZC_KMD_she_bu_de_shuaian_ba_2_trait
+				}
+				remove_trait = {
+					character = SZC_zhang_fei
+					slot = political_advisor
+					trait = SZC_KMD_she_bu_de_shuaian_ba_trait
+				}
+				add_trait = {
+					character = SZC_zhang_fei
+					slot = political_advisor
+					trait = SZC_KMD_she_bu_de_shuaian_ba_2_trait
+				}
+			}
+			effect_tooltip = {
+				set_temp_variable = { modifier_change_tt = 0.05 tooltip = political_power_cost_tooltip }
+				set_temp_variable = { modifier_change_tt = 0.02 tooltip = army_attack_factor_tooltip }
+				set_temp_variable = { modifier_change_tt = 0.02 tooltip = army_speed_factor_tooltip }
+				set_temp_variable = { modifier_change_tt = -0.05 tooltip = command_power_gain_tooltip }
+			}
+		}
+	}
+}
+
+KMD_upgrade_jiang_shangpu_advisor_effect = {
+	SZC_jiang_shangpu = {
+		if = {
+			limit = { has_trait = SZC_professional_assistant_sic }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_replace_character_trait
+					ROLE = second_in_command
+					OLD_TRAIT = SZC_professional_assistant_sic
+					NEW_TRAIT = SZC_professional_assistant_2_sic
+				}
+				remove_trait = {
+					character = SZC_jiang_shangpu
+					slot = second_in_command
+					trait = SZC_professional_assistant_sic
+				}
+				add_trait = {
+					character = SZC_jiang_shangpu
+					slot = second_in_command
+					trait = SZC_professional_assistant_2_sic
+				}
+			}
+			effect_tooltip = {
+				set_temp_variable = { modifier_change_tt = 0.05 tooltip = compliance_growth_tooltip }
+				set_temp_variable = { modifier_change_tt = 0.05 tooltip = production_factory_max_efficiency_factor_tooltip }
+			}
+		}
+	}
+}
 
 
 

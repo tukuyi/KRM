@@ -37062,12 +37062,6 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				SZC_liu_chengxun = {
-					add_trait = {
-						ideology = social_conservative_national_conservative_subtype
-						trait = SZC_KMD_hanzhongwang_2_trait
-					}
-				}
 				country_event = {
 					id = NKRsichuanKMD.77
 					days = 1
@@ -37235,13 +37229,6 @@ focus_tree = {
 					remove = SZC_KMD_hanzhongwang_2_trait
 					add = SZC_KMD_hanzhongwang_3_trait
 					ideology = paternal_autocrat_subtype
-				}
-				hidden_effect = {
-					swap_country_leader_traits = {
-						remove = SZC_KMD_hanzhongwang_2_trait
-						add = SZC_KMD_hanzhongwang_3_trait
-						ideology = social_conservative_national_conservative_subtype
-					}
 				}
 			}
 			hidden_effect = {
@@ -37882,15 +37869,17 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_cheers_for_justice_wins
 
-		# allow_branch = {
-		# 	has_global_flag = china_united
-		# 	has_country_flag = SZC_KMD_phase_3
-		# 	has_country_flag = SZC_KMD_chengxun_path
-		# }
+		allow_branch = {
+			has_global_flag = china_united
+			has_country_flag = SZC_KMD_phase_3
+			has_country_flag = SZC_KMD_chengxun_path
+		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_dahan_reunited"
-			
+			add_political_power = 150
+			add_stability = 0.15
+			custom_effect_tooltip = SZC_KMD_dahan_reunited_tt
 		}
 	}
 
@@ -37910,7 +37899,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_legitimacy_through_power"
-			
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.05
+			}
+			every_controlled_state = {
+				add_compliance = 10
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.105
+				}
+			}
 		}
 	}
 
@@ -37931,13 +37931,22 @@ focus_tree = {
 			}
 		}
 
+		select_effect = {
+			hidden_effect = {
+				country_event = { id = NKRsichuanKMD.107 days = 19 }
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_KMD_dahan_reunited
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_the_coronation"
-			
+			swap_ideas = {
+				remove_idea = SZC_KMD_legitimacy_4
+				add_idea = SZC_KMD_legitimacy_8
+			}
 		}
 	}
 
@@ -37957,7 +37966,24 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_question_of_constitution"
-			
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.02
+			}
+			add_political_power = 300
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.106
+				}
+			}
 		}
 	}
 
@@ -37975,6 +38001,10 @@ focus_tree = {
 			focus = SZC_KMD_appoint_hu_ying_cabinet
 		}
 
+		available = {
+			SZC_jiang_shangpu = { is_second_in_command = yes }
+		}
+
 		prerequisite = {
 			focus = SZC_KMD_the_coronation
 		}
@@ -37987,7 +38017,20 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_continue_komeito_relationship"
-			
+			set_politics = {
+				ruling_party = authoritarian_democrat
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.08
+			}
+			add_political_power = 100
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.108
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38007,7 +38050,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_revolution_on_earth_now"
-			
+			add_ideas = { SZC_KMD_revolution_on_earth_under_han_idea }
+			china_generic_land_reform_setup = yes
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.109
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38021,13 +38071,35 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_dahan_reunited
 
+		available = {
+			NOT = {
+				has_completed_focus = SZC_KMD_tianzis_grace_is_boundless
+			}
+			has_completed_focus = SZC_KMD_to_against_doomday
+			has_completed_focus = SZC_KMD_kongmeng_faith
+		}
+
 		prerequisite = {
 			focus = SZC_KMD_revolution_on_earth_now
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_only_way_to_eternal_peace"
-			
+			custom_effect_tooltip = SZC_KMD_only_way_to_eternal_peace_tt
+			add_stability = -0.35
+			add_war_support = -0.15
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.35
+			}
+			add_country_leader_trait = GER_shogunate_trait
+			KMD_upgrade_jiang_shangpu_advisor_effect = yes
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.110
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38047,7 +38119,24 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_voice_of_us_voice_of_people"
-			
+			if = {
+				limit = {
+					has_idea = { SZC_KMD_the_popular_movement }
+				}
+				swap_ideas = {
+					remove_idea = SZC_KMD_the_popular_movement
+					add_idea = SZC_KMD_the_popular_movement_2
+				}
+			}
+			else = {
+				add_ideas = { SZC_KMD_the_popular_movement }
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.111
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38070,7 +38159,21 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_to_against_doomday"
-			
+			add_stability = 0.1
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.1
+			}
+			swap_ideas = {
+				remove_idea = SZC_KMD_revolution_on_earth_under_han_idea
+				add_idea = SZC_KMD_revolution_on_earth_under_han_2_idea  
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.112
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38090,7 +38193,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_fate_of_weixin"
-			
+			add_research_slot = 1
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.113
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38110,7 +38219,26 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_wave_of_parliament_politic"
-			
+			add_political_power = 150
+			QIE = {
+				QIE_hu_shih = {
+					SZC_recruit_character_effect = yes
+				}
+				QIE_huang_fu = {
+					SZC_recruit_character_effect = yes
+				}
+			}
+			GXC = {
+				GXC_zhang_junmai = {
+					SZC_recruit_character_effect = yes
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.114
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38130,7 +38258,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_kongmeng_faith"
-			
+			add_ideas = {  SZC_KMD_kongmengdao_national_faith_idea }
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.115
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38148,6 +38282,10 @@ focus_tree = {
 			focus = SZC_KMD_continue_komeito_relationship
 		}
 
+		available = {
+			SZC_jiang_shangpu = { is_second_in_command = no }
+		}
+
 		prerequisite = {
 			focus = SZC_KMD_the_coronation
 		}
@@ -38160,7 +38298,33 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_appoint_hu_ying_cabinet"
+			set_politics = {
+				ruling_party = social_conservative
+			}
+			HNN_hu_ying = {
+				add_advisor_role = {
+					advisor = {
+						slot = second_in_command
+						idea_token = HNN_hu_ying_sic
+						traits = { SZC_han_constitutionist_sic }
+						cost = 0
+						can_be_fired = no
+					}
+				}
+			}
+			set_party_name = {
+				ideology = social_conservative
+				name = SZC_KMD_hu_ying_cabinet_party
+				long_name = SZC_KMD_hu_ying_cabinet_party_long
+			}
+			activate_advisor = HNN_hu_ying_sic
 			
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.116
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38180,7 +38344,22 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_emperors_cabinet"
-			
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.03
+			}
+			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+			add_to_coalition = yes
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.117
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38200,7 +38379,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_conservative_weixin"
-			
+			add_research_slot = 1
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.118
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38220,7 +38405,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_long_live_han"
-			
+			add_ideas = { SZC_KMD_new_han_identity_idea }
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.119
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38248,7 +38439,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_a_general_history_of_china"
-			
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SZC_qian_mu_advisor
+			hidden_effect = {
+				SZC_qian_mu = {
+					SZC_recruit_character_effect = yes
+				}
+				country_event = {
+					id = NKRsichuanKMD.120
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38268,7 +38469,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_to_be_a_constitutional_monarch"
-			
+			SZC_liu_chengxun = {
+				add_trait = {
+					ideology = social_conservative_national_conservative_subtype
+					trait = SZC_KMD_constitutiional_tianzi_trait
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.121
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38288,7 +38500,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_planning_and_moderate_social_reform"
-			
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.03
+			}
+			china_generic_land_reform_setup = yes
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.122
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38309,7 +38531,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_yuanwu_emperor_and_his_country"
-			
+			add_stability = 0.15
+			add_political_power = 100
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.123
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38332,7 +38561,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_expand_privy_council_influence"
-			
+			add_political_power = 200
+			add_ideas = { SZC_KMD_privy_council_idea }
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.124
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38346,13 +38582,24 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_dahan_reunited
 
+		available = {
+			has_completed_focus = SZC_KMD_taoyuan_elders
+		}
+
 		prerequisite = {
 			focus = SZC_KMD_expand_privy_council_influence
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_taoyuan_elders"
-			
+			KMD_upgrade_guan_yu_advisor_effect = yes
+			KMD_upgrade_zhang_fei_advisor_effect = yes
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.125
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38372,7 +38619,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_tianzi_and_his_army"
-			
+			army_experience = 50
+			add_ideas = { SZC_KMD_han_new_army_idea }
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.126
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38392,7 +38646,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_tianzis_grace_is_boundless"
-			
+			custom_effect_tooltip = SZC_KMD_tianzis_grace_is_boundless_tt
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.127
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38406,6 +38666,10 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_dahan_reunited
 
+		mutually_exclusive = {
+			focus = SZC_KMD_yuanwu_the_great
+		}
+
 		prerequisite = {
 			focus = SZC_KMD_to_against_doomday
 		}
@@ -38415,7 +38679,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_kongmengs_empire_on_earth"
-			
+			custom_effect_tooltip = SZC_KMD_kongmengs_empire_on_earth_tt
+			swap_ideas = {
+				remove_idea = SZC_KMD_legitimacy_8
+				add_idea = SZC_KMD_legitimacy_9
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.128
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38429,6 +38703,10 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_dahan_reunited
 
+		mutually_exclusive = {
+			focus = SZC_KMD_kongmengs_empire_on_earth
+		}
+
 		prerequisite = {
 			focus = SZC_KMD_planning_and_moderate_social_reform
 		}
@@ -38441,7 +38719,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_yuanwu_the_great"
-			
+			custom_effect_tooltip = SZC_KMD_yuanwu_the_great_tt
+			swap_ideas = {
+				remove_idea = SZC_KMD_legitimacy_8
+				add_idea = SZC_KMD_legitimacy_10
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.129
+					days = 1
+				}
+			}
 		}
 	}
 

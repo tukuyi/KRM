@@ -5011,8 +5011,13 @@ characters = {
 		}
 		country_leader = {
 			desc = SZC_liu_chengxun_desc
+			ideology = authoritarian_democrat_moral_sovereign_democracy_subtype
+			traits = { CHN_non_aligned SZC_KMD_hanzhongwang_3_trait }
+		}
+		country_leader = {
+			desc = SZC_liu_chengxun_desc
 			ideology = social_conservative_national_conservative_subtype
-			traits = { CHN_non_aligned }
+			traits = { CHN_non_aligned SZC_KMD_hanzhongwang_3_trait }
 		}
 		field_marshal = {
 			desc = SZC_liu_chengxun_desc
@@ -5148,6 +5153,25 @@ characters = {
 			ledger = army
 			traits = { KR_MHC_irregular_2 }
 			cost = 150
+		}
+	}
+
+	#钱穆
+	SZC_qian_mu = {
+		name = SZC_qian_mu
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_qian_mu_large
+				small = GFX_portrait_SZC_qian_mu_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_qian_mu_advisor
+			ledger = civilian
+			traits = { SZC_KMD_master_of_national_history_trait }
+			cost = 150
+			desc = SZC_qian_mu_desc
 		}
 	}
 
