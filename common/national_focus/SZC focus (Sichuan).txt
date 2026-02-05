@@ -37250,10 +37250,10 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_cheers_for_justice_wins
 
-		allow_branch = {
-			has_country_flag = SZC_KMD_phase_2
-			has_country_flag = SZC_KMD_shangpu_path
-		}
+		# allow_branch = {
+		# 	has_country_flag = SZC_KMD_phase_2
+		# 	has_country_flag = SZC_KMD_shangpu_path
+		# }
 
 		prerequisite = {
 			focus = SZC_KMD_cheers_for_justice_wins
@@ -38730,6 +38730,349 @@ focus_tree = {
 					days = 1
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_theocracy_republic
+		icon = GFX_goal_SZC_KMD_theocracy_republic
+		cost = 3
+
+		x = 0
+		y = 7
+
+		relative_position_id = SZC_KMD_cheers_for_justice_wins
+
+		# allow_branch = {
+		# 	has_global_flag = china_united
+		# 	has_country_flag = SZC_KMD_phase_3
+		# 	has_country_flag = SZC_KMD_shangpu_path
+		# }
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_theocracy_republic"
+			add_political_power = 150
+			add_stability = 0.15
+			custom_effect_tooltip = SZC_KMD_theocracy_republic_tt
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_komei_politics
+		icon = GFX_goal_SZC_KMD_komei_politics
+		cost = 3
+
+		x = -1
+		y = 1
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_theocracy_republic
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_komei_politics"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_komei_republic
+		icon = GFX_goal_SZC_KMD_komei_republic
+		cost = 3
+
+		x = 1
+		y = 1
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_theocracy_republic
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_komei_republic"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_start_revolution_on_earth
+		icon = GFX_goal_SZC_KMD_start_revolution_on_earth
+		cost = 3
+
+		x = 0
+		y = 2
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_komei_politics
+		}
+		prerequisite = {
+			focus = SZC_KMD_komei_republic
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_start_revolution_on_earth"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_integrate_party_into_nation
+		icon = GFX_goal_SZC_KMD_integrate_party_into_nation
+		cost = 3
+
+		x = -3
+		y = 3
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_start_revolution_on_earth
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_integrate_party_into_nation"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_mutual_aid_societies_push
+		icon = GFX_goal_SZC_KMD_mutual_aid_societies_push
+		cost = 3
+
+		x = -4
+		y = 4
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_integrate_party_into_nation
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_mutual_aid_societies_push"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_the_great_national_unity
+		icon = GFX_goal_SZC_KMD_the_great_national_unity
+		cost = 3
+
+		x = -3
+		y = 5
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_integrate_party_into_nation
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_the_great_national_unity"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_sovereign_above_all
+		icon = GFX_goal_SZC_KMD_sovereign_above_all
+		cost = 3
+
+		x = 0
+		y = 3
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_start_revolution_on_earth
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_sovereign_above_all"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_moral_sovereign_democracy_theory
+		icon = GFX_goal_SZC_KMD_moral_sovereign_democracy_theory
+		cost = 3
+
+		x = -1
+		y = 4
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_sovereign_above_all
+			focus = SZC_KMD_integrate_party_into_nation
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_moral_sovereign_democracy_theory"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_clean_government_under_faith
+		icon = GFX_goal_SZC_KMD_clean_government_under_faith
+		cost = 3
+
+		x = 1
+		y = 4
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_sovereign_above_all
+		}
+		prerequisite = {
+			focus = SZC_KMD_declare_national_faith
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_clean_government_under_faith"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_kongmengdao_ethical_education
+		icon = GFX_goal_SZC_KMD_kongmengdao_ethical_education
+		cost = 3
+
+		x = -1
+		y = 5
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_moral_sovereign_democracy_theory
+		}
+		prerequisite = {
+			focus = SZC_KMD_clean_government_under_faith
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_kongmengdao_ethical_education"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_declare_national_faith
+		icon = GFX_goal_SZC_KMD_declare_national_faith
+		cost = 3
+
+		x = 3
+		y = 3
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_start_revolution_on_earth
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_declare_national_faith"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_social_market_economy
+		icon = GFX_goal_SZC_KMD_social_market_economy
+		cost = 3
+
+		x = 3
+		y = 4
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_declare_national_faith
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_social_market_economy"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_cooperative_agricultural_fiance
+		icon = GFX_goal_SZC_KMD_cooperative_agricultural_fiance
+		cost = 3
+
+		x = 2
+		y = 5
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_social_market_economy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_cooperative_agricultural_fiance"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_righeteous_society
+		icon = GFX_goal_SZC_KMD_righeteous_society
+		cost = 3
+
+		x = 4
+		y = 5
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_social_market_economy
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_righeteous_society"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_harmony_republic_under_heaven
+		icon = GFX_goal_SZC_KMD_harmony_republic_under_heaven
+		cost = 3
+
+		x = 0
+		y = 6
+
+		relative_position_id = SZC_KMD_theocracy_republic
+
+		prerequisite = {
+			focus = SZC_KMD_the_great_national_unity
+		}
+		prerequisite = {
+			focus = SZC_KMD_kongmengdao_ethical_education
+		}
+		prerequisite = {
+			focus = SZC_KMD_cooperative_agricultural_fiance
+		}
+		prerequisite = {
+			focus = SZC_KMD_righeteous_society
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_harmony_republic_under_heaven"
+			
 		}
 	}
 
