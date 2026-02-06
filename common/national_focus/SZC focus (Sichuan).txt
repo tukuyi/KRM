@@ -38779,7 +38779,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_komei_politics"
-			
+			add_stability = 0.1
+			add_political_power = 100
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.132
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38799,7 +38806,25 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_komei_republic"
-			
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.03
+			}
+			add_stability = 0.1
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.133
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38822,7 +38847,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_start_revolution_on_earth"
-			
+			add_ideas = { SZC_KMD_revolution_on_earth_idea }
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.134
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38842,7 +38873,24 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_integrate_party_into_nation"
-			
+			if = {
+				limit = { 
+					has_idea = { SZC_KMD_the_popular_movement }
+				}
+				swap_ideas = {
+					remove_idea = SZC_KMD_the_popular_movement
+					add_idea = SZC_KMD_the_popular_movement_3
+				}
+			}
+			else = {
+				add_ideas = { SZC_KMD_the_popular_movement }
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.135
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38862,7 +38910,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_mutual_aid_societies_push"
-			
+			set_temp_variable = { temp_KMD_chouka_add = 3 }
+			KMD_add_chouka_time = yes
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.136
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38876,13 +38931,26 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_theocracy_republic
 
+		available = {
+			authoritarian_democrat > 0.5
+		}
+
 		prerequisite = {
 			focus = SZC_KMD_integrate_party_into_nation
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_the_great_national_unity"
-			
+			swap_ideas = {
+				remove_idea = SZC_KMD_revolution_on_earth_idea 
+				add_idea = SZC_KMD_revolution_on_earth_2_idea 
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.137
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38902,7 +38970,24 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_sovereign_above_all"
-			
+			SZC_jiang_shangpu = {
+				add_trait = {
+					trait = SZC_KMD_man_of_sovereign_trait
+					ideology = authoritarian_democrat_moral_sovereign_democracy_subtype
+				}
+			}
+			add_stability = 0.08
+			add_war_support = 0.08
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.08
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.138
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38923,7 +39008,20 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_moral_sovereign_democracy_theory"
-			
+			swap_ideas = {
+				remove_idea = SZC_KMD_road_to_moral_democracy_idea 
+				add_idea = SZC_KMD_road_to_moral_sovereign_democracy_idea 
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.139
+					days = 1
+				}
+				country_event = {
+					id = NKRsichuan.140
+					days = 14
+				}
+			}
 		}
 	}
 
@@ -38946,7 +39044,19 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_clean_government_under_faith"
-			
+			add_stability = 0.05
+			add_political_power = 100
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
+			}
+			add_manpower = -12389
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.141
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38969,7 +39079,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_kongmengdao_ethical_education"
-			
+			add_research_slot = 1
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.142
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -38989,7 +39105,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_declare_national_faith"
-			
+			add_ideas = { SZC_KMD_kongmengdao_national_faith_idea }
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.143
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39009,7 +39131,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_social_market_economy"
-			
+			add_ideas = { SZC_pan_social_market_idea }
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.144
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39029,7 +39157,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_cooperative_agricultural_fiance"
-			
+			china_generic_land_reform_setup = yes
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.145
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39049,7 +39183,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_righeteous_society"
-			
+			add_stability = 0.15
+			add_war_support = 0.15
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.146
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39078,7 +39223,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_harmony_republic_under_heaven"
-			
+			custom_effect_tooltip = SZC_KMD_harmony_republic_under_heaven_tt
+			swap_ideas = {
+				remove_idea = SZC_KMD_legitimacy_6
+				add_idea = SZC_KMD_legitimacy_11
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuan.147
+					days = 1
+				}
+			}
 		}
 	}
 

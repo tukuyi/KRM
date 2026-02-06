@@ -203,5 +203,13 @@ leader_traits = {
 		stability_factor = 0.1
 		opinion_gain_monthly_factor = 0.05
 	}
+
+	SZC_KMD_man_of_sovereign_trait = {
+		custom_modifier_tooltip = SZC_KMD_man_of_sovereign_trait_desc
+		random = no
+		stability_weekly = 0.003
+		authoritarian_democrat_drift = 0.03
+		army_core_defence_factor = 0.05
+	}
 }
 	

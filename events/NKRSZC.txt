@@ -24706,6 +24706,9 @@ country_event = { #最卑劣的刺杀
 		option = {#龙虎英雄傲苍穹！
 			log = "[GetLogInfo]: event NKRsichuanKMD.104 option NKRsichuanKMD.104.a"
 			name = NKRsichuanKMD.104.a
+			set_country_flag = SZC_KMD_phase_3
+			mark_focus_tree_layout_dirty = yes
+			complete_national_focus = SZC_KMD_dahan_reunited
 		}
 	}
 
@@ -25181,7 +25184,7 @@ country_event = { #最卑劣的刺杀
 		}
 	}
 
-	country_event = { #已NKRsichuanKMD.131
+	country_event = { #蒋尚朴统一了哦耶
 		id = NKRsichuanKMD.131
 		title = NKRsichuanKMD.131.t
 		desc = NKRsichuanKMD.131.d
@@ -25191,13 +25194,24 @@ country_event = { #最卑劣的刺杀
 		fire_only_once = yes
 		
 
-		option = {#
-		log = "[GetLogInfo]: event NKRsichuanKMD.131 option NKRsichuanKMD.131.a"
-		name = NKRsichuanKMD.131.a
+		option = {#转移我们的工作重心...
+			log = "[GetLogInfo]: event NKRsichuanKMD.131 option NKRsichuanKMD.131.a"
+			name = NKRsichuanKMD.131.a
+			SZC_jiang_shangpu = {
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_SZC_jiang_shangpu_civilian_large
+						small = GFX_portrait_SZC_jiang_shangpu_civilian_small
+					}
+				}
+			}
+			set_country_flag = SZC_KMD_phase_3
+			mark_focus_tree_layout_dirty = yes
+			complete_national_focus = SZC_KMD_theocracy_republic
 		}
 	}
 
-	country_event = { #已NKRsichuanKMD.132
+	country_event = { #大众政治
 		id = NKRsichuanKMD.132
 		title = NKRsichuanKMD.132.t
 		desc = NKRsichuanKMD.132.d
@@ -25207,13 +25221,13 @@ country_event = { #最卑劣的刺杀
 		fire_only_once = yes
 		
 
-		option = {#
-		log = "[GetLogInfo]: event NKRsichuanKMD.132 option NKRsichuanKMD.132.a"
-		name = NKRsichuanKMD.132.a
+		option = {#为了全民的公义！
+			log = "[GetLogInfo]: event NKRsichuanKMD.132 option NKRsichuanKMD.132.a"
+			name = NKRsichuanKMD.132.a
 		}
 	}
 
-	country_event = { #已NKRsichuanKMD.133
+	country_event = { #共和制本源
 		id = NKRsichuanKMD.133
 		title = NKRsichuanKMD.133.t
 		desc = NKRsichuanKMD.133.d
@@ -25223,13 +25237,13 @@ country_event = { #最卑劣的刺杀
 		fire_only_once = yes
 		
 
-		option = {#
-		log = "[GetLogInfo]: event NKRsichuanKMD.133 option NKRsichuanKMD.133.a"
-		name = NKRsichuanKMD.133.a
+		option = {#中国的命运！
+			log = "[GetLogInfo]: event NKRsichuanKMD.133 option NKRsichuanKMD.133.a"
+			name = NKRsichuanKMD.133.a
 		}
 	}
 
-	country_event = { #已NKRsichuanKMD.134
+	country_event = { #真人间革命
 		id = NKRsichuanKMD.134
 		title = NKRsichuanKMD.134.t
 		desc = NKRsichuanKMD.134.d
@@ -25239,13 +25253,13 @@ country_event = { #最卑劣的刺杀
 		fire_only_once = yes
 		
 
-		option = {#
+		option = {#开启！
 		log = "[GetLogInfo]: event NKRsichuanKMD.134 option NKRsichuanKMD.134.a"
 		name = NKRsichuanKMD.134.a
 		}
 	}
 
-	country_event = { #已NKRsichuanKMD.135
+	country_event = { #党、国家、孔孟道
 		id = NKRsichuanKMD.135
 		title = NKRsichuanKMD.135.t
 		desc = NKRsichuanKMD.135.d
@@ -25255,13 +25269,13 @@ country_event = { #最卑劣的刺杀
 		fire_only_once = yes
 		
 
-		option = {#
+		option = {#内化于心，外化于行。
 		log = "[GetLogInfo]: event NKRsichuanKMD.135 option NKRsichuanKMD.135.a"
 		name = NKRsichuanKMD.135.a
 		}
 	}
 
-	country_event = { #已NKRsichuanKMD.136
+	country_event = { #社会互助
 		id = NKRsichuanKMD.136
 		title = NKRsichuanKMD.136.t
 		desc = NKRsichuanKMD.136.d
@@ -25271,13 +25285,13 @@ country_event = { #最卑劣的刺杀
 		fire_only_once = yes
 		
 
-		option = {#
+		option = {#唯有此路。
 		log = "[GetLogInfo]: event NKRsichuanKMD.136 option NKRsichuanKMD.136.a"
 		name = NKRsichuanKMD.136.a
 		}
 	}
 
-	country_event = { #已NKRsichuanKMD.137
+	country_event = { #举国一致
 		id = NKRsichuanKMD.137
 		title = NKRsichuanKMD.137.t
 		desc = NKRsichuanKMD.137.d
@@ -25287,13 +25301,13 @@ country_event = { #最卑劣的刺杀
 		fire_only_once = yes
 		
 
-		option = {#
+		option = {#民意，天意。
 		log = "[GetLogInfo]: event NKRsichuanKMD.137 option NKRsichuanKMD.137.a"
 		name = NKRsichuanKMD.137.a
 		}
 	}
 
-	country_event = { #已NKRsichuanKMD.138
+	country_event = { #主权者
 		id = NKRsichuanKMD.138
 		title = NKRsichuanKMD.138.t
 		desc = NKRsichuanKMD.138.d
@@ -25303,13 +25317,13 @@ country_event = { #最卑劣的刺杀
 		fire_only_once = yes
 		
 
-		option = {#
+		option = {#主权高于一切。
 		log = "[GetLogInfo]: event NKRsichuanKMD.138 option NKRsichuanKMD.138.a"
 		name = NKRsichuanKMD.138.a
 		}
 	}
 
-	country_event = { #已NKRsichuanKMD.139
+	country_event = { #道德主权民主理论
 		id = NKRsichuanKMD.139
 		title = NKRsichuanKMD.139.t
 		desc = NKRsichuanKMD.139.d
@@ -25319,13 +25333,13 @@ country_event = { #最卑劣的刺杀
 		fire_only_once = yes
 		
 
-		option = {#
+		option = {#是中国特色的民主！
 		log = "[GetLogInfo]: event NKRsichuanKMD.139 option NKRsichuanKMD.139.a"
 		name = NKRsichuanKMD.139.a
 		}
-	}
 
-	country_event = { #已NKRsichuanKMD.140
+
+	country_event = { #西方评论胡言
 		id = NKRsichuanKMD.140
 		title = NKRsichuanKMD.140.t
 		desc = NKRsichuanKMD.140.d
@@ -25335,9 +25349,458 @@ country_event = { #最卑劣的刺杀
 		fire_only_once = yes
 		
 
-		option = {#
+		option = {#我们拒斥这种泼脏水！我感到十分的气愤！
 		log = "[GetLogInfo]: event NKRsichuanKMD.140 option NKRsichuanKMD.140.a"
 		name = NKRsichuanKMD.140.a
+		}
+	}
+
+	country_event = { #清廉政府
+		id = NKRsichuanKMD.141
+		title = NKRsichuanKMD.141.t
+		desc = NKRsichuanKMD.141.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#否则...
+		log = "[GetLogInfo]: event NKRsichuanKMD.141 option NKRsichuanKMD.141.a"
+		name = NKRsichuanKMD.141.a
+		}
+	}
+
+	country_event = { #新式教育
+		id = NKRsichuanKMD.142
+		title = NKRsichuanKMD.142.t
+		desc = NKRsichuanKMD.142.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#...新式？
+		log = "[GetLogInfo]: event NKRsichuanKMD.142 option NKRsichuanKMD.142.a"
+		name = NKRsichuanKMD.142.a
+		}
+	}
+
+	country_event = { #在宪法层面确立国教
+		id = NKRsichuanKMD.143
+		title = NKRsichuanKMD.143.t
+		desc = NKRsichuanKMD.143.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#通过！通过！
+		log = "[GetLogInfo]: event NKRsichuanKMD.143 option NKRsichuanKMD.143.a"
+		name = NKRsichuanKMD.143.a
+		}
+	}
+
+	country_event = { #社会市场理论
+		id = NKRsichuanKMD.144
+		title = NKRsichuanKMD.144.t
+		desc = NKRsichuanKMD.144.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#不错的想法。
+		log = "[GetLogInfo]: event NKRsichuanKMD.144 option NKRsichuanKMD.144.a"
+		name = NKRsichuanKMD.144.a
+		}
+	}
+
+	country_event = { #解放土地
+		id = NKRsichuanKMD.145
+		title = NKRsichuanKMD.145.t
+		desc = NKRsichuanKMD.145.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#这是不得不解决的问题。
+		log = "[GetLogInfo]: event NKRsichuanKMD.145 option NKRsichuanKMD.145.a"
+		name = NKRsichuanKMD.145.a
+		}
+	}
+
+	country_event = { #大义
+		id = NKRsichuanKMD.146
+		title = NKRsichuanKMD.146.t
+		desc = NKRsichuanKMD.146.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#大义至上！
+		log = "[GetLogInfo]: event NKRsichuanKMD.146 option NKRsichuanKMD.146.a"
+		name = NKRsichuanKMD.146.a
+		}
+	}
+
+	country_event = { #天下为公...
+		id = NKRsichuanKMD.147
+		title = NKRsichuanKMD.147.t
+		desc = NKRsichuanKMD.147.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#...独尊保义。
+		log = "[GetLogInfo]: event NKRsichuanKMD.147 option NKRsichuanKMD.147.a"
+		name = NKRsichuanKMD.147.a
+		}
+	}
+	}
+
+	country_event = { #已NKRsichuanKMD.160
+		id = NKRsichuanKMD.160
+		title = NKRsichuanKMD.160.t
+		desc = NKRsichuanKMD.160.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.160 option NKRsichuanKMD.160.a"
+		name = NKRsichuanKMD.160.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.161
+		id = NKRsichuanKMD.161
+		title = NKRsichuanKMD.161.t
+		desc = NKRsichuanKMD.161.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.161 option NKRsichuanKMD.161.a"
+		name = NKRsichuanKMD.161.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.162
+		id = NKRsichuanKMD.162
+		title = NKRsichuanKMD.162.t
+		desc = NKRsichuanKMD.162.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.162 option NKRsichuanKMD.162.a"
+		name = NKRsichuanKMD.162.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.163
+		id = NKRsichuanKMD.163
+		title = NKRsichuanKMD.163.t
+		desc = NKRsichuanKMD.163.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.163 option NKRsichuanKMD.163.a"
+		name = NKRsichuanKMD.163.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.164
+		id = NKRsichuanKMD.164
+		title = NKRsichuanKMD.164.t
+		desc = NKRsichuanKMD.164.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.164 option NKRsichuanKMD.164.a"
+		name = NKRsichuanKMD.164.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.165
+		id = NKRsichuanKMD.165
+		title = NKRsichuanKMD.165.t
+		desc = NKRsichuanKMD.165.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.165 option NKRsichuanKMD.165.a"
+		name = NKRsichuanKMD.165.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.166
+		id = NKRsichuanKMD.166
+		title = NKRsichuanKMD.166.t
+		desc = NKRsichuanKMD.166.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.166 option NKRsichuanKMD.166.a"
+		name = NKRsichuanKMD.166.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.167
+		id = NKRsichuanKMD.167
+		title = NKRsichuanKMD.167.t
+		desc = NKRsichuanKMD.167.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.167 option NKRsichuanKMD.167.a"
+		name = NKRsichuanKMD.167.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.168
+		id = NKRsichuanKMD.168
+		title = NKRsichuanKMD.168.t
+		desc = NKRsichuanKMD.168.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.168 option NKRsichuanKMD.168.a"
+		name = NKRsichuanKMD.168.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.169
+		id = NKRsichuanKMD.169
+		title = NKRsichuanKMD.169.t
+		desc = NKRsichuanKMD.169.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.169 option NKRsichuanKMD.169.a"
+		name = NKRsichuanKMD.169.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.170
+		id = NKRsichuanKMD.170
+		title = NKRsichuanKMD.170.t
+		desc = NKRsichuanKMD.170.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.170 option NKRsichuanKMD.170.a"
+		name = NKRsichuanKMD.170.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.171
+		id = NKRsichuanKMD.171
+		title = NKRsichuanKMD.171.t
+		desc = NKRsichuanKMD.171.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.171 option NKRsichuanKMD.171.a"
+		name = NKRsichuanKMD.171.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.172
+		id = NKRsichuanKMD.172
+		title = NKRsichuanKMD.172.t
+		desc = NKRsichuanKMD.172.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.172 option NKRsichuanKMD.172.a"
+		name = NKRsichuanKMD.172.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.173
+		id = NKRsichuanKMD.173
+		title = NKRsichuanKMD.173.t
+		desc = NKRsichuanKMD.173.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.173 option NKRsichuanKMD.173.a"
+		name = NKRsichuanKMD.173.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.174
+		id = NKRsichuanKMD.174
+		title = NKRsichuanKMD.174.t
+		desc = NKRsichuanKMD.174.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.174 option NKRsichuanKMD.174.a"
+		name = NKRsichuanKMD.174.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.175
+		id = NKRsichuanKMD.175
+		title = NKRsichuanKMD.175.t
+		desc = NKRsichuanKMD.175.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.175 option NKRsichuanKMD.175.a"
+		name = NKRsichuanKMD.175.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.176
+		id = NKRsichuanKMD.176
+		title = NKRsichuanKMD.176.t
+		desc = NKRsichuanKMD.176.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.176 option NKRsichuanKMD.176.a"
+		name = NKRsichuanKMD.176.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.177
+		id = NKRsichuanKMD.177
+		title = NKRsichuanKMD.177.t
+		desc = NKRsichuanKMD.177.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.177 option NKRsichuanKMD.177.a"
+		name = NKRsichuanKMD.177.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.178
+		id = NKRsichuanKMD.178
+		title = NKRsichuanKMD.178.t
+		desc = NKRsichuanKMD.178.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.178 option NKRsichuanKMD.178.a"
+		name = NKRsichuanKMD.178.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.179
+		id = NKRsichuanKMD.179
+		title = NKRsichuanKMD.179.t
+		desc = NKRsichuanKMD.179.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.179 option NKRsichuanKMD.179.a"
+		name = NKRsichuanKMD.179.a
+		}
+	}
+
+	country_event = { #已NKRsichuanKMD.180
+		id = NKRsichuanKMD.180
+		title = NKRsichuanKMD.180.t
+		desc = NKRsichuanKMD.180.d
+		picture = GFX_report_event_SZC_dongdalu
+
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+
+		option = {#
+		log = "[GetLogInfo]: event NKRsichuanKMD.180 option NKRsichuanKMD.180.a"
+		name = NKRsichuanKMD.180.a
 		}
 	}
 
