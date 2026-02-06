@@ -71,7 +71,9 @@ guiTypes = {
 			name = "SZC_KMD_god_arrive_icon"
 			position = { x = 37 y = 40 }
 			spriteType = GFX_SZC_KMD_god_arrive_icon
-			alwaystransparent = yes
+			alwaystransparent = no
+			pdx_tooltip = "KMD_GOD_name"
+			pdx_tooltip_delayed = "KMD_GOD_desc"
 		}
 
 		containerWindowType = {

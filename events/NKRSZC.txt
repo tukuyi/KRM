@@ -25953,3 +25953,37 @@ country_event = { #DEBUG-lcydebug
 		}
 	}
 }
+
+country_event = { #DEBUG-kongmeng giant
+	id = SZCDEBUG.5
+	title = SZCDEBUG.5.t
+	desc = SZCDEBUG.5.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+	option = {#
+		name = SZCDEBUG.5.a
+		set_technology = { KMD_kongmeng_giant_tech = 1 popup = no }
+
+		division_template = {
+			name = "孔孟金刚"
+			is_locked = yes
+			regiments = {
+				kongmeng_giant = { x = 0 y = 0 }
+			}
+			support = {
+			}
+		}
+		
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "name = \"孔孟金刚原型机\" division_template = \"孔孟金刚\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				owner = ROOT
+			}
+		}
+	}
+}

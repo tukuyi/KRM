@@ -3035,6 +3035,18 @@ defined_text = {
 		localization_key = [?SZC_KMD_chosen_god.GetTokenKey]_tittle
 	}
 }
+defined_text = {
+	name = GetKMDGodRealName
+	text = {
+		localization_key = [?SZC_KMD_chosen_god.GetTokenLocalizedKey]
+	}
+}
+defined_text = {
+	name = GetKMDGodDesc
+	text = {
+		localization_key = [?SZC_KMD_chosen_god.GetTokenKey]_desc
+	}
+}
 
 defined_text = {
 	name= GetKMDYourGodTittle
