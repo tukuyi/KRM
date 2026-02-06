@@ -4666,6 +4666,36 @@ KMD_upgrade_jiang_shangpu_advisor_effect = {
 	}
 }
 
+KMD_upgrade_zhuge_liang_advisor_effect = {
+	SZC_zhuge_liang = {
+		if = {
+			limit = { has_trait = SZC_KMD_nai_long_trait }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_replace_character_trait
+					ROLE = theorist
+					OLD_TRAIT = SZC_KMD_nai_long_trait
+					NEW_TRAIT = SZC_KMD_nai_long_2_trait
+				}
+				remove_trait = {
+					character = SZC_zhuge_liang
+					slot = theorist
+					trait = SZC_KMD_nai_long_2_trait
+				}
+				add_trait = {
+					character = SZC_zhuge_liang
+					slot = theorist
+					trait = SZC_KMD_nai_long_2_trait
+				}
+			}
+			effect_tooltip = {
+				set_temp_variable = { modifier_change_tt = 0.05 tooltip = army_attack_factor_tooltip }
+				set_temp_variable = { modifier_change_tt = 7500 tooltip = weekly_manpower_tooltip }
+			}
+		}
+	}
+}
+
 
 
 

@@ -4632,6 +4632,82 @@ ideas = {
 			}
 		}
 
+		SZC_KMD_the_one_church_idea = {#世间独教
+			on_add = { log = "[GetLogRoot]: add idea SZC_the_one_church_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				land_night_attack = 0.08
+				production_lack_of_resource_penalty_factor = -0.35
+				equipment_capture_factor = 0.15
+			}
+		}
+
+		SZC_KMD_qigong_army_idea = { #气功大军
+			on_add = { log = "[GetLogRoot]: add idea SZC_qigong_army_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				conscription = 0.05
+				recruitable_population_factor = -0.9
+				army_attack_factor = 0.5
+				army_defence_factor = 0.5
+				army_speed_factor = 0.5
+				land_night_attack = 0.5
+				naval_night_attack = 0.5
+				naval_damage_factor = 0.5
+				army_strength_factor = 0.15
+				training_time_army_factor = 0.5
+			}
+		}
+
+		SZC_KMD_guild_system_2_idea = {#行会系统
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_guild_system_2_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = -0.15
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		SZC_KMD_prepare_for_crusade_idea = {#准备大远征
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_prepare_for_crusade_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				production_speed_dockyard_factor = 5
+				production_speed_arms_factory_factor = 5
+				production_speed_industrial_complex_factor = 5
+				training_time_army_factor = -0.9
+			}
+		}
+
+		SZC_KMD_war_to_purification_idea = {#净化之战
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_war_to_purification_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				weekly_manpower = 100
+				surrender_limit = 10
+				war_support_weekly_factor = -0.02
+				monthly_population = -1
+			}
+		}
+
+		SZC_KMD_xianzhong_legacy_idea = {#献忠的遗产
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_xianzhong_legacy_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				monthly_population = -1
+				resistance_growth = -0.8
+				compliance_growth = -1
+				production_factory_max_efficiency_factor = 0.5
+			}
+		}
+
 		#MILITARY SHENBING
 		
 

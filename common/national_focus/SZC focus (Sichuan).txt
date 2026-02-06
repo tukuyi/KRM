@@ -39277,7 +39277,19 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_gods_will"
-
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.1
+			}
+			add_political_power = 100
+			set_temp_variable = { temp_KMD_chouka_add = 3 }
+			KMD_add_chouka_time = yes
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.149
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39297,7 +39309,21 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_god_power_expand"
-
+			every_army_leader = {
+				limit = {
+					has_trait = god_of_KMD
+				}
+				add_attack = 2
+				add_defense = 2
+				add_logistics = 2
+				add_planning = 2
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.150
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39317,7 +39343,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_glory_to_kongmengdao"
-
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.05
+			}
 		}
 	}
 
@@ -39340,7 +39371,16 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_integrate_chrislambuddh"
-
+			swap_ideas = {
+				remove_idea = SZC_KMD_tao_is_tao_idea
+				add_idea = SZC_KMD_the_one_church_idea
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.151
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39360,7 +39400,16 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_peoples_demand"
-
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.152
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39380,7 +39429,20 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_teach_qigong"
-
+			swap_ideas = {
+				remove_idea = SZC_KMD_everyone_to_gods_idea
+				add_idea = SZC_KMD_qigong_army_idea
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.153
+					days = 1
+				}
+				country_event = {
+					id = NKRsichuanKMD.154
+					days = 15
+				}
+			}
 		}
 	}
 
@@ -39398,9 +39460,28 @@ focus_tree = {
 			focus = SZC_KMD_peoples_demand
 		}
 
+		available = {
+			has_idea = { SZC_KMD_guild_system_idea }
+		}
+
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_taoist_industry"
-
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			swap_ideas = {
+				remove_idea = SZC_KMD_guild_system_idea
+				add_idea = SZC_KMD_guild_system_2_idea
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.155
+					days = 1
+				}
+				country_event = {
+					id = NKRsichuanKMD.156
+					days = 16
+				}
+			}
 		}
 	}
 
@@ -39420,7 +39501,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_true_research_to_our_ancient"
-
+			add_research_slot = 1
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.157
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39446,7 +39533,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_death_to_heretic"
-
+			add_manpower = -123798
+			add_stability = 0.15
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.158
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39472,7 +39566,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_temple_everywhere"
-
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.05
+			}
+			custom_effect_tooltip = SZC_KMD_temple_everywhere_tt
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.159
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39492,7 +39596,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_against_evil_doomsday"
-
+			SZC_liu_congyun = {
+				add_trait = {
+					trait = SZC_KMD_chosen_one_who_against_doomsday_trait 
+					ideology = national_populist_kongmengdao_subtype
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.161
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39512,7 +39627,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_the_great_crusade_idea"
-
+			add_timed_idea = { idea = SZC_KMD_prepare_for_crusade_idea days = 180 }
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.162
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39532,7 +39653,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_awake_kongmeng_and_gods"
-
+			SZC_liu_congyun = {
+				add_trait = {
+					trait = SZC_KMD_chosen_by_four_gods_trait
+					ideology = national_populist_kongmengdao_subtype
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.163
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39561,7 +39693,20 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_holy_state_on_earth"
-
+			custom_effect_tooltip = SZC_KMD_holy_state_on_earth_tt
+			set_cosmetic_tag = SZC_KMD_tianguo
+			add_stability = 0.5
+			add_war_support = 0.5
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.5
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.163
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39581,7 +39726,29 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_preunification_of_sinosphere"
-
+			custom_override_tooltip = {
+				tooltip = SZC_KMD_preunification_of_sinosphere_tt
+				every_collection_element = {
+					input = {
+						input = constant:state_groups.sinosphere_states
+						name = collection_all_sinosphere_states
+					}
+					controller = {
+						ROOT = {
+							create_wargoal = {
+								target = PREV
+								type = topple_government
+							}
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.164
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39595,13 +39762,50 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_holy_state_on_earth
 
+		available = {
+			has_country_flag = KMD_kongmeng_giant_available
+			# special puppets amount
+		}
+
 		prerequisite = {
 			focus = SZC_KMD_holy_state_on_earth
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_blood_to_kong_skull_to_meng"
-
+			custom_override_tooltip = {
+				tooltip = SZC_KMD_blood_to_kong_skull_to_meng_tt
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"孔孟金刚\" division_template = \"孔孟金刚\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = ROOT
+					}
+				}
+				
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"孔孟金刚\" division_template = \"孔孟金刚\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = ROOT
+					}
+				}
+				
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"孔孟金刚\" division_template = \"孔孟金刚\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = ROOT
+					}
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.165
+					days = 1
+				}
+				country_event = {
+					id = NKRsichuanKMD.166
+					days = 15
+				}
+			}
 		}
 	}
 
@@ -39615,6 +39819,16 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_holy_state_on_earth
 
+		available = {
+			all_collection_elements = {
+				collection = {
+					input = constant:state_groups.sinosphere_states
+					name = collection_all_sinosphere_states
+				}
+				is_owned_and_controlled_by_ROOT_or_subject = yes
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_KMD_preunification_of_sinosphere
 		}
@@ -39622,9 +39836,46 @@ focus_tree = {
 			focus = SZC_KMD_blood_to_kong_skull_to_meng
 		}
 
+		select_effect = {
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.167
+					days = 1
+				}
+			}
+		}
+
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_awaken_war"
-
+			custom_effect_tooltip = SZC_KMD_awaken_war_tt
+			every_other_country = {
+				limit = {
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				SZC = {
+					declare_war_on = {
+						target = PREV
+						type = topple_government
+					}
+					add_opinion_modifier = {
+						target = PREV
+						modifier = KMD_heretic
+					}
+				}
+				add_opinion_modifier = {
+					target = SZC
+					modifier = KMD_crazy_boi
+				}
+			}
+			add_ideas = { SZC_KMD_war_to_purification_idea }
+			
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.168
+				}
+			}
 		}
 	}
 
@@ -39644,7 +39895,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_killkillkillkillkill"
-
+			add_ideas = { SZC_KMD_xianzhong_legacy_idea }
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.169
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39658,13 +39915,25 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_awaken_war
 
+		available = {
+			set_temp_variable = { temp_KMD_check_god_in_array = token:SZC_zhuge_liang }
+			KMD_god_is_available = yes
+		}
+
 		prerequisite = {
 			focus = SZC_KMD_awaken_war
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_forge_humanity"
-
+			KMD_upgrade_zhuge_liang_advisor_effect = yes
+			add_political_power = 150
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.170
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39684,7 +39953,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_destroy_evil_mind"
-
+			#军事树机制再弄
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.170
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39704,7 +39979,20 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_path_to_the_heaven"
-
+			every_army_leader = {
+				add_temporary_buff_to_units = {
+					combat_offense = 0.15
+					combat_breakthrough = 0.15
+					war_support_reduction_on_damage = -0.25
+					days = 365
+				}	
+			}
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.172
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39724,7 +40012,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_for_everything_will_past"
-
+			#keynes
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.173
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -39737,6 +40031,22 @@ focus_tree = {
 		y = 2
 
 		relative_position_id = SZC_KMD_awaken_war
+
+		available = {
+			has_country_flag = KMD_united_earth
+			all_state = {
+				is_owned_and_controlled_by_ROOT_or_subject = yes
+			}
+		}
+
+		select_effect = {
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanKMD.175
+					days = 1
+				}
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_KMD_killkillkillkillkill
@@ -39756,7 +40066,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_salvation_day"
-
+			custom_effect_tooltip = SZC_KMD_salvation_day_tt
+			every_other_country = {
+				SZC = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			every_state = {
+				enable_state_integration_80_compliance = yes
+			}
 		}
 	}
 

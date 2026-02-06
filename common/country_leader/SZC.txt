@@ -211,5 +211,31 @@ leader_traits = {
 		authoritarian_democrat_drift = 0.03
 		army_core_defence_factor = 0.05
 	}
+
+	SZC_KMD_chosen_one_who_against_doomsday_trait = {
+		custom_modifier_tooltip = SZC_KMD_chosen_one_who_against_doomsday_trait_desc
+		random = no
+		stability_weekly = 0.005
+		war_support_weekly = 0.005
+		national_populist_drift = 0.03
+		weekly_manpower = 800
+	}
+
+	SZC_KMD_chosen_by_four_gods_trait = {
+		custom_modifier_tooltip = SZC_KMD_chosen_by_four_gods_trait_desc
+		random = no
+		monthly_population = -0.8
+		army_attack_against_major_factor = 0.1
+		org_loss_at_low_org_factor = -0.5
+	}
+
+	SZC_KMD_true_god_trait = {
+		custom_modifier_tooltip = SZC_KMD_true_god_trait_desc
+		random = no
+		stability_factor = 10
+		consumer_goods_factor = -1
+		production_factory_max_efficiency_factor = 1
+		political_power_factor = 1
+	}
 }
 	
