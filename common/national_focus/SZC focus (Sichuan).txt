@@ -23767,10 +23767,33 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_take_southernwest"
 			effect_tooltip = {
-				activate_targeted_decision = { decision = china_attack_decision target = YUN }
-				activate_targeted_decision = { decision = china_attack_decision target = HNN }
+				custom_effect_tooltip = YCP_china_is_aligned_with_kmt_NOT
+				activate_targeted_decision = { decision = china_demand_submission target = YUN }
+				activate_targeted_decision = { decision = china_demand_submission target = HNN }
 			}
 			hidden_effect = {
+				if = {
+					limit = {
+						HNN = {
+							OR = {
+								china_is_aligned_with_federalists = yes
+								china_is_aligned_with_southern_zhili = yes
+							}
+						}
+					}
+					add_to_array = { ROOT.china_possible_targets_array = HNN }
+				}
+				if = {
+					limit = {
+						YUN = {
+							OR = {
+								china_is_aligned_with_federalists = yes
+								china_is_aligned_with_southern_zhili = yes
+							}
+						}
+					}
+					add_to_array = { ROOT.china_possible_targets_array = YUN }
+				}				
 				activate_targeted_decision = { target = YUN decision = china_attack_decision }
 				activate_targeted_decision = { target = HNN decision = china_attack_decision }
 			}
@@ -23793,22 +23816,44 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_march_east"
 			effect_tooltip = {
+				custom_effect_tooltip = YCP_china_is_aligned_with_kmt_NOT
 				activate_targeted_decision = { decision = china_demand_submission target = GXC }
 				activate_targeted_decision = { decision = china_demand_submission target = CHI }
 				activate_targeted_decision = { decision = china_demand_submission target = ANQ }
 				activate_targeted_decision = { decision = china_demand_submission target = LEP }
 				activate_targeted_decision = { decision = china_demand_submission target = SHD }
-			}
+			}		
 			hidden_effect = {
-				add_to_array = { ROOT.china_possible_targets_array = GXC }
-				activate_targeted_decision = { target = GXC decision = china_attack_decision }
-				add_to_array = { ROOT.china_possible_targets_array = CHI }
-				activate_targeted_decision = { target = CHI decision = china_attack_decision }
-				add_to_array = { ROOT.china_possible_targets_array = ANQ }
-				activate_targeted_decision = { target = ANQ decision = china_attack_decision }
+				if = {
+					limit = {
+						GXC = {
+							OR = {
+								china_is_aligned_with_federalists = yes
+								china_is_aligned_with_southern_zhili = yes
+							}
+						}
+					}
+					add_to_array = { ROOT.china_possible_targets_array = GXC }
+				}
+				if = {
+					limit = {
+						ANQ = {
+							OR = {
+								china_is_aligned_with_federalists = yes
+								china_is_aligned_with_southern_zhili = yes
+							}
+						}
+					}
+					add_to_array = { ROOT.china_possible_targets_array = ANQ }
+				}
 				add_to_array = { ROOT.china_possible_targets_array = LEP }
-				activate_targeted_decision = { target = LEP decision = china_attack_decision }
+				add_to_array = { ROOT.china_possible_targets_array = CHI }
 				add_to_array = { ROOT.china_possible_targets_array = SHD }
+
+				activate_targeted_decision = { target = GXC decision = china_attack_decision }
+				activate_targeted_decision = { target = CHI decision = china_attack_decision }
+				activate_targeted_decision = { target = ANQ decision = china_attack_decision }
+				activate_targeted_decision = { target = LEP decision = china_attack_decision }
 				activate_targeted_decision = { target = SHD decision = china_attack_decision }
 			}
 		}
