@@ -30144,6 +30144,12 @@ focus_tree = {
 		}
 
 		allow_branch = {
+			has_global_flag = china_united
+			AND = {
+				has_country_flag = NKRSZC_YCPpath_phase3
+				has_country_flag = SZC_YCP_xia_real_path
+				has_completed_focus = SZC_YCP_dissolve_the_YCP
+			}
 			NOT = {
 				has_country_flag = SZC_CDP_haha_real_time
 			}
