@@ -23767,13 +23767,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_take_southernwest"
 			effect_tooltip = {
-				activate_targeted_decision = { decision = china_demand_submission target = YUN }
-				activate_targeted_decision = { decision = china_demand_submission target = HNN }
+				activate_targeted_decision = { decision = china_attack_decision target = YUN }
+				activate_targeted_decision = { decision = china_attack_decision target = HNN }
 			}
 			hidden_effect = {
-				add_to_array = { ROOT.china_possible_targets_array = YUN }
 				activate_targeted_decision = { target = YUN decision = china_attack_decision }
-				add_to_array = { ROOT.china_possible_targets_array = HNN }
 				activate_targeted_decision = { target = HNN decision = china_attack_decision }
 			}
 		}
