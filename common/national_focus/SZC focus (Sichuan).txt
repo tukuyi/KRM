@@ -35947,7 +35947,7 @@ focus_tree = {
 					id = NKRsichuanKMD.19
 					days = 1
 				}
-				add_variable = {
+				add_to_variable = {
 					SZC_KMD_congyun_focus = 1
 				}
 			}
@@ -35986,7 +35986,7 @@ focus_tree = {
 					id = NKRsichuanKMD.20
 					days = 3
 				}
-				add_variable = {
+				add_to_variable = {
 					SZC_KMD_congyun_focus = 1
 				}
 			}
@@ -36027,7 +36027,7 @@ focus_tree = {
 					id = NKRsichuanKMD.21
 					days = 3
 				}
-				add_variable = {
+				add_to_variable = {
 					SZC_KMD_congyun_focus = 1
 				}
 			}
@@ -36064,7 +36064,7 @@ focus_tree = {
 					id = NKRsichuanKMD.22
 					days = 3
 				}
-				add_variable = {
+				add_to_variable = {
 					SZC_KMD_congyun_focus = 1
 				}
 			}
@@ -36141,7 +36141,7 @@ focus_tree = {
 					id = NKRsichuanKMD.24
 					days = 3
 				}
-				add_variable = {
+				add_to_variable = {
 					SZC_KMD_shangpu_focus = 1
 				}
 			}
@@ -36196,7 +36196,7 @@ focus_tree = {
 					id = NKRsichuanKMD.25
 					days = 3
 				}
-				add_variable = {
+				add_to_variable = {
 					SZC_KMD_shangpu_focus = 1
 				}
 			}
@@ -36236,7 +36236,7 @@ focus_tree = {
 					id = NKRsichuanKMD.26
 					days = 3
 				}
-				add_variable = {
+				add_to_variable = {
 					SZC_KMD_shangpu_focus = 1
 				}
 			}
@@ -36273,7 +36273,7 @@ focus_tree = {
 					id = NKRsichuanKMD.27
 					days = 3
 				}
-				add_variable = {
+				add_to_variable = {
 					SZC_KMD_shangpu_focus = 1
 				}
 			}
@@ -36356,7 +36356,7 @@ focus_tree = {
 					id = NKRsichuanKMD.29
 					days = 3
 				}
-				add_variable = {
+				add_to_variable = {
 					SZC_KMD_chengxun_focus = 1
 				}
 			}
@@ -36392,7 +36392,7 @@ focus_tree = {
 					id = NKRsichuanKMD.30
 					days = 3
 				}
-				add_variable = {
+				add_to_variable = {
 					SZC_KMD_chengxun_focus = 1
 				}
 			}
@@ -36437,7 +36437,7 @@ focus_tree = {
 					id = NKRsichuanKMD.31
 					days = 3
 				}
-				add_variable = {
+				add_to_variable = {
 					SZC_KMD_chengxun_focus = 1
 				}
 			}
@@ -36472,7 +36472,7 @@ focus_tree = {
 					id = NKRsichuanKMD.32
 					days = 3
 				}
-				add_variable = {
+				add_to_variable = {
 					SZC_KMD_chengxun_focus = 1
 				}
 			}
@@ -39461,7 +39461,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_idea = { SZC_KMD_guild_system_idea }
+			has_idea =  SZC_KMD_guild_system_idea 
 		}
 
 		completion_reward = {

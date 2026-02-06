@@ -25337,6 +25337,7 @@ country_event = { #最卑劣的刺杀
 		log = "[GetLogInfo]: event NKRsichuanKMD.139 option NKRsichuanKMD.139.a"
 		name = NKRsichuanKMD.139.a
 		}
+	}
 
 
 	country_event = { #西方评论胡言
@@ -25483,6 +25484,14 @@ country_event = { #最卑劣的刺杀
 			set_country_flag = SZC_KMD_phase_3
 			mark_focus_tree_layout_dirty = yes
 			complete_national_focus = SZC_KMD_kingdom_come_deliverance
+			SZC_liu_congyun = {
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_SZC_liu_congyun_final_large
+						small = GFX_portrait_SZC_liu_congyun_final_small
+					}
+				}
+			}
 		}
 	}
 	
