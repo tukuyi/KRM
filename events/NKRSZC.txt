@@ -26624,6 +26624,17 @@ country_event = { #最卑劣的刺杀
 					}
 				}
 			}
+			china_enable_outskirts_decisions = yes
+			KUM = {
+				every_core_state = { add_claim_by = ROOT }
+			}
+			ETS = {
+				every_core_state = { add_claim_by = ROOT }
+			}
+			SIK = {
+				every_core_state = { add_claim_by = ROOT }
+			}
+			china_enable_concession_decisions = yes
 		}
 	}
 	

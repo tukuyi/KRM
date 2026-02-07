@@ -1482,6 +1482,18 @@ chinese_unification = {
 			if = {
 				limit = {
 					tag = SZC
+					has_country_flag= NKRsichuan_KMDpath
+				}
+				OR = {
+					has_completed_focus = SZC_KMD_one_step_to_eternality
+					has_completed_focus = SZC_KMD_a_new_moral_republic
+					has_completed_focus = SZC_KMD_rebuild_great_han
+				}
+			}
+
+			if = {
+				limit = {
+					tag = SZC
 					has_country_flag = NKRsichuan_YCPpath
 				}
 				hidden_trigger = {
@@ -2091,6 +2103,52 @@ chinese_unification = {
 					hidden_effect = {
 						news_event = china_events.314
 						country_event = { id = china_events.2145 days = 3 } #National Unification and New Troubles
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = NKRsichuan_KMDpath
+					}
+					log = "KR_Event_Logging;CHINA UNITED BY SZC KMD;[GetDateText]"
+					activate_targeted_decision = { decision = china_move_capital target = ROOT }
+					custom_effect_tooltip = enables_new_focus_branches
+					hidden_effect = {
+						if = {
+							limit = {
+								has_country_flag = SZC_KMD_chengxun_path
+							}
+							country_event = {
+								id = NKRsichuanKMD.104
+								days = 1
+							}
+							# hidden_effect = { news_event = NKRnews.32 }
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								has_country_flag = SZC_KMD_shangpu_path
+							}
+							country_event = {
+								id = NKRsichuanKMD.131
+								days = 1
+							}
+							set_cosmetic_tag = uunited_china
+							# hidden_effect = { news_event = NKRnews.32 }
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								has_country_flag = SZC_KMD_congyun_path
+							}
+							country_event = {
+								id = NKRsichuanKMD.148
+								days = 1
+							}
+							set_cosmetic_tag = SZC_KMD
+							# hidden_effect = { news_event = NKRnews.32 }
+						}
 					}
 				}
 				else_if = {
