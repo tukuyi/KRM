@@ -134,8 +134,8 @@ on_actions = {
 						limit = {
 							has_active_mission = SZC_KMD_jiaobing_mission
 						}
-						add_days_remove = {
-							decision = SZC_KMD_jiaobing_mission
+						add_days_mission_timeout = {
+							mission = SZC_KMD_jiaobing_mission
 							days = 3
 						}
 					}
@@ -143,8 +143,8 @@ on_actions = {
 						limit = {
 							has_active_mission = SZC_KMD_aibing_mission
 						}
-						add_days_remove = {
-							decision = SZC_KMD_aibing_mission
+						add_days_mission_timeout = {
+							mission = SZC_KMD_aibing_mission
 							days = -3
 						}
 					}
@@ -165,8 +165,8 @@ on_actions = {
 						limit = {
 							has_active_mission = SZC_KMD_jiaobing_mission
 						}
-						add_days_remove = {
-							decision = SZC_KMD_jiaobing_mission
+						add_days_mission_timeout = {
+							mission = SZC_KMD_jiaobing_mission
 							days = -3
 						}
 					}
@@ -174,8 +174,8 @@ on_actions = {
 						limit = {
 							has_active_mission = SZC_KMD_aibing_mission
 						}
-						add_days_remove = {
-							decision = SZC_KMD_aibing_mission
+						add_days_mission_timeout = {
+							mission = SZC_KMD_aibing_mission
 							days = 3
 						}
 					}
