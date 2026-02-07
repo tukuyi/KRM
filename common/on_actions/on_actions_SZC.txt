@@ -124,7 +124,7 @@ on_actions = {
 
 	on_army_leader_won_combat = {
 		effect = {
-			ROOT = {
+			FROM = {
 				if = {
 					limit = {
 						tag = SZC
@@ -155,7 +155,7 @@ on_actions = {
 
 	on_army_leader_lost_combat = {
 		effect = {
-			ROOT = {
+			FROM = {
 				if = {
 					limit = {
 						tag = SZC
