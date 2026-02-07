@@ -5175,6 +5175,25 @@ characters = {
 		}
 	}
 
+	#钱穆
+	SZC_john_keynes = {
+		name = SZC_john_keynes
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_john_keynes_large
+				small = GFX_portrait_SZC_john_keynes_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_john_keynes_advisor
+			ledger = civilian
+			traits = { SZC_KMD_mandate_actuary_trait }
+			cost = 150
+			desc = SZC_john_keynes_desc
+		}
+	}
+
 	#关羽
 	SZC_guan_yu = {
 		name = SZC_guan_yu

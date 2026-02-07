@@ -40055,8 +40055,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_for_everything_will_past"
-			#keynes
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SZC_john_keynes_advisor
 			hidden_effect = {
+				SZC_john_keynes = {
+					SZC_recruit_character_effect = yes
+				}
 				country_event = {
 					id = NKRsichuanKMD.173
 					days = 1
