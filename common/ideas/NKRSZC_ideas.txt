@@ -4265,6 +4265,42 @@ ideas = {
 			}
 		}
 
+		SZC_KMD_legitimacy_12 = {#政教合一大势 - 地上天国
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_12" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.25
+				war_support_factor = 0.25
+				political_power_factor = 0.25
+				surrender_limit = 0.4
+				mobilization_speed = 0.45
+				party_popularity_stability_factor = 0.45
+				production_lack_of_resource_penalty_factor = -0.35
+				consumer_goods_factor = -0.2
+				production_factory_max_efficiency_factor = 0.1
+
+			}
+		}
+
+		SZC_KMD_legitimacy_13 = {#政教合一大势 - 天国大一统
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_13" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 1
+				war_support_factor = 1
+				political_power_factor = 1
+				surrender_limit = 11111
+				mobilization_speed = 1
+				party_popularity_stability_factor = 1
+				production_lack_of_resource_penalty_factor = -1
+				consumer_goods_factor = -1
+				production_factory_max_efficiency_factor = 1
+
+			}
+		}
+
 
 		SZC_KMD_kongmeng_power = {#孔孟之力
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_kongmeng_power" }
@@ -4711,50 +4747,134 @@ ideas = {
 		#MILITARY SHENBING
 		
 
-		SZC_KMD_shenbing_1_idea = {#川蜀神兵
+		SZC_KMD_die_summer_night_idea = {#死之夏夜
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_die_summer_night_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				experience_loss_factor = -0.25
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					casualty_trickleback = 0.3
+					instant = yes
+				}
+			}
+		}
+
+		SZC_KMD_eat_what_idea = {#是啊，吃什么！
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_eat_what_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				army_morale_factor = 0.15
+				no_supply_grace = 48
+			}
+		}
+		
+
+		SZC_KMD_shenbing_1_idea = {#华夏神兵
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_shenbing_1_idea" }
 			picture = SZC_KMD_legitimacy_low
 			allowed = { always = no }
 			modifier = {
 				max_planning_factor = -0.1
 				army_experience_factor = 0.05
-				planning_speed = 0.1
-				land_reinforce_rate = 0.08
+				planning_speed = 0.05
+				land_reinforce_rate = 0.04
 				modifier_army_sub_unit_irregular_infantry_attack_factor = 0.1
 				modifier_army_sub_unit_irregular_infantry_defence_factor = 0.1
 				modifier_army_sub_unit_irregular_infantry_max_org_factor = 0.1
 				modifier_army_sub_unit_irregular_infantry_speed_factor = 0.1
 				land_reinforce_rate = 0.05
-				army_strength_factor = 0.1
-				army_morale_factor = 0.15
+				army_strength_factor = 0.05
+				army_morale_factor = 0.1
 				breakthrough_factor = 0.1
 				org_loss_when_moving = -0.2
 
 			}
 		}
+
+		SZC_KMD_chunqiu_is_shit_idea = {#春秋胡言乱语
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_chunqiu_is_shit_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				planning_speed = 0.25
+				justify_war_goal_time = -0.5
+				political_power_factor = -0.1
+				terrain_penalty_reduction = 0.1
+			}
+		}
+
+		SZC_KMD_star_night_moving_idea = {#星夜奔驰！
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_star_night_moving_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {
+				army_speed_factor = 0.2	
+				org_loss_when_moving = -0.2
+				land_night_attack = 0.1
+				naval_night_attack = 0.1
+				air_night_penalty = -0.1
+			}
+		}
+
+		SZC_KMD_holesholesholes_idea = {#到处都是窟窿！
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_holesholesholes_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {	
+				combat_width_factor = 0.2
+				max_planning_factor = -0.2
+			}
+		}
+
+		SZC_KMD_ququs_idea = {#我想我那些个蛐蛐
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_ququs_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {	
+				army_defence_factor = 0.05
+				modifier_army_sub_unit_irregular_infantry_defence_factor = 0.05
+				dig_in_speed_factor = 0.25
+				max_command_power = 40
+			}
+		}
+
+		SZC_KMD_fangsi_idea = {#我砍你的头！
+			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_fangsi_idea" }
+			picture = SZC_KMD_legitimacy_low
+			allowed = { always = no }
+			modifier = {	
+				supply_consumption_factor = -0.15
+				pocket_penalty = -0.2
+			}
+		}
 		
 
-		SZC_KMD_shenbing_2_idea = {#川蜀神兵
+		SZC_KMD_shenbing_2_idea = {#龙虎英雄傲苍穹
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_shenbing_2_idea" }
 			picture = SZC_KMD_legitimacy_low
 			allowed = { always = no }
 			modifier = {
-				max_planning_factor = -0.1
-				army_experience_factor = 0.05
-				planning_speed = 0.15
-				land_reinforce_rate = 0.1
-				modifier_army_sub_unit_irregular_infantry_attack_factor = 0.15
-				modifier_army_sub_unit_irregular_infantry_defence_factor = 0.15
-				modifier_army_sub_unit_irregular_infantry_max_org_factor = 0.15
-				modifier_army_sub_unit_irregular_infantry_speed_factor = 0.15
-				land_reinforce_rate = 0.1
-				army_strength_factor = 0.15
+				max_planning_factor = -0.15
+				army_experience_factor = 0.1
+				planning_speed = 0.1
+				land_reinforce_rate = 0.08
+				modifier_army_sub_unit_irregular_infantry_attack_factor = 0.2
+				modifier_army_sub_unit_irregular_infantry_defence_factor = 0.2
+				modifier_army_sub_unit_irregular_infantry_max_org_factor = 0.2
+				modifier_army_sub_unit_irregular_infantry_speed_factor = 0.2
+				land_reinforce_rate = 0.08
+				army_strength_factor = 0.1
 				army_morale_factor = 0.15
 				breakthrough_factor = 0.15
-				org_loss_when_moving = -0.25
+				org_loss_when_moving = -0.3
 
 			}
 		}
+		
 
 		#KMD GUI 
 		

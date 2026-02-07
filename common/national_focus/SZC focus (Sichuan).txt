@@ -35521,7 +35521,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 50
+			add = 0
 			tag = SZC
 		}
 	}
@@ -37626,10 +37626,10 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_cheers_for_justice_wins
 
-		# allow_branch = {
-		# 	has_country_flag = SZC_KMD_phase_2
-		# 	has_country_flag = SZC_KMD_congyun_path
-		# }
+		allow_branch = {
+			has_country_flag = SZC_KMD_phase_2
+			has_country_flag = SZC_KMD_congyun_path
+		}
 
 		prerequisite = {
 			focus = SZC_KMD_cheers_for_justice_wins
@@ -39290,11 +39290,11 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_cheers_for_justice_wins
 
-		# allow_branch = {
-		# 	has_global_flag = china_united
-		# 	has_country_flag = SZC_KMD_phase_3
-		# 	has_country_flag = SZC_KMD_congyun_path
-		# }
+		allow_branch = {
+			has_global_flag = china_united
+			has_country_flag = SZC_KMD_phase_3
+			has_country_flag = SZC_KMD_congyun_path
+		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_kingdom_come_deliverance"
@@ -39996,7 +39996,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_destroy_evil_mind"
-			#军事树机制再弄
+			custom_effect_tooltip = SZC_KMD_destroy_evil_mind_tt
+			if = {
+				limit = {
+					has_country_flag = SZC_KMD_bingfa_available
+				}
+			}
+			else = {
+				add_political_power = 500
+			}
 			hidden_effect = {
 				country_event = {
 					id = NKRsichuanKMD.170
@@ -40142,9 +40150,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_evil_of_the_world_hurts_you"
 			army_experience = 50
-			
+			china_army_reform_increase_step = yes
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.71
+				}
 			}
 		}
 	}
@@ -40159,15 +40169,31 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
 
+		available = {
+			set_temp_variable = { temp_KMD_check_god_in_array = token:SZC_cao_cao }
+			KMD_god_is_available = yes
+		}
+
 		prerequisite = {
 			focus = SZC_KMD_evil_of_the_world_hurts_you
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_taoist_winwinwin"
-			
+			custom_effect_tooltip = SZC_KMD_taoist_winwinwin_tt
+			add_doctrine_cost_reduction = {
+				name = land_doctrine_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+				category = air_doctrine
+				category = naval_doctrine
+			}
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.72
+					days = 1
+				}
 			}
 		}
 	}
@@ -40182,15 +40208,37 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
 
+		available = {
+			OR = {
+				AND = {
+					set_temp_variable = { temp_KMD_check_god_in_array = token:SZC_jiang_ziya }
+					KMD_god_is_available = yes
+				}
+				AND = {
+					set_temp_variable = { temp_KMD_check_god_in_array = token:SZC_guan_yu }
+					KMD_god_is_available = yes
+					OR = {
+						set_temp_variable = { temp_KMD_check_god_in_array = token:SZC_zhang_fei }
+						KMD_god_is_available = yes
+						set_temp_variable = { temp_KMD_check_god_in_array = token:SZC_zhao_yun }
+						KMD_god_is_available = yes
+					}
+				}
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_KMD_taoist_winwinwin
 		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_kill_yourself_now"
-			
+			custom_effect_tooltip = SZC_KMD_kill_yourself_now_tt
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.73
+					days = 1
+				}
 			}
 		}
 	}
@@ -40211,9 +40259,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_die_in_cold_summer"
-			
+			add_ideas = { SZC_KMD_die_summer_night_idea }
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.74
+					days = 1
+				}
 			}
 		}
 	}
@@ -40234,9 +40285,16 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_a_divine_question"
-			
+			add_ideas = { SZC_KMD_eat_what_idea }
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1000
+			}
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.75
+					days = 1
+				}
 			}
 		}
 	}
@@ -40257,9 +40315,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_learn_kongmeng"
-			
+			army_experience = 50
+			add_mastery_bonus = {
+				name = SZC_KMD_learn_kongmeng
+				bonus = 0.3
+				days = 365
+				folder = land
+			}
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.76
+					days = 1
+				}
 			}
 		}
 	}
@@ -40280,9 +40347,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_zhengzhengrishang"
-			
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 7000
+			}
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.77
+					days = 1
+				}
 			}
 		}
 	}
@@ -40304,11 +40377,20 @@ focus_tree = {
 			focus = SZC_KMD_a_divine_question
 		}
 
+		available = {
+			has_country_flag = SZC_KMD_gods_arrive_available
+		}
+
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_benevolent_division"
-			
+			add_ideas = { SZC_KMD_shenbing_1_idea }
+			set_temp_variable = { temp_KMD_chouka_add = 3 }
+			KMD_add_chouka_time = yes
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.78
+					days = 1
+				}
 			}
 		}
 	}
@@ -40329,9 +40411,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_chunqiu_is_shit"
-			
+			add_ideas = { SZC_KMD_chunqiu_is_shit_idea }
+			army_experience = -20
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.79
+					days = 1
+				}
 			}
 		}
 	}
@@ -40352,9 +40438,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_star_night_moving"
-			
+			add_ideas = { SZC_KMD_star_night_moving_idea }
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.80
+					days = 1
+				}
 			}
 		}
 	}
@@ -40375,9 +40464,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_fireball"
-			
+			custom_effect_tooltip = SZC_KMD_fireball_tt
+			set_technology = { KMD_fireball_tech = 1 }
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.81
+					days = 1
+				}
 			}
 		}
 	}
@@ -40398,9 +40491,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_tiger_in_zhongyuan"
-			
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.82
+					days = 1
+				}
 			}
 		}
 	}
@@ -40421,9 +40520,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_my_ququs_so_renyi"
-			
+			add_ideas = { SZC_KMD_ququs_idea }
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.83
+					days = 1
+				}
 			}
 		}
 	}
@@ -40444,9 +40546,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_fangsi"
-			
+			add_ideas = { SZC_KMD_fangsi_idea }
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.84
+					days = 1
+				}
 			}
 		}
 	}
@@ -40467,9 +40572,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_ten_thousands_piercing_holes"
-			
+			add_ideas = { SZC_KMD_holesholesholes_idea }
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.85
+					days = 1
+				}
 			}
 		}
 	}
@@ -40496,9 +40604,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_dragon_tiger_heroes"
-			
+			swap_ideas = {
+				remove_idea = SZC_KMD_shenbing_1_idea
+				add_idea = SZC_KMD_shenbing_2_idea
+			}
 			hidden_effect = {
-				
+				country_event = {
+					id = NKRsichuanflavor.86
+					days = 1
+				}
 			}
 		}
 	}

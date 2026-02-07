@@ -3102,3 +3102,99 @@ defined_text ={
 		localization_key = KMD_CHOUKA_START_TT
 	}
 }
+defined_text = {
+	name = GetKMDBingfaShengTrigger
+	text = {
+		trigger = {
+			has_active_mission = SZC_KMD_shengbing_mission
+		}
+		localization_key = KMD_bingfa_trigger_tt
+	}
+	text = {
+		localization_key = empty_key
+	}
+}
+defined_text = {
+	name = GetKMDBingfaJiaoTrigger
+	text = {
+		trigger = {
+			has_active_mission = SZC_KMD_jiaobing_mission
+		}
+		localization_key = KMD_bingfa_trigger_tt
+	}
+	text = {
+		localization_key = empty_key
+	}
+}
+defined_text = {
+	name = GetKMDBingfaBaiTrigger
+	text = {
+		trigger = {
+			has_active_mission = SZC_KMD_baibing_mission
+		}
+		localization_key = KMD_bingfa_trigger_tt
+	}
+	text = {
+		localization_key = empty_key
+	}
+}
+defined_text = {
+	name = GetKMDBingfaAiTrigger
+	text = {
+		trigger = {
+			has_active_mission = SZC_KMD_aibing_mission
+		}
+		localization_key = KMD_bingfa_trigger_tt
+	}
+	text = {
+		localization_key = empty_key
+	}
+}
+defined_text = {
+	name = KMD_bingfa_sheng_check
+	text = {
+		trigger = {
+			has_active_mission = SZC_KMD_shengbing_mission
+		}
+		localization_key = GFX_JBBB_sheng_shine
+	}
+	text = {
+		localization_key = GFX_JBBB_sheng
+	}
+}
+defined_text = {
+	name = KMD_bingfa_jiao_check
+	text = {
+		trigger = {
+			has_active_mission = SZC_KMD_jiaobing_mission
+		}
+		localization_key = GFX_JBBB_jiao_shine
+	}
+	text = {
+		localization_key = GFX_JBBB_jiao
+	}
+}
+defined_text = {
+	name = KMD_bingfa_bai_check
+	text = {
+		trigger = {
+			has_active_mission = SZC_KMD_baibing_mission
+		}
+		localization_key = GFX_JBBB_bai_shine
+	}
+	text = {
+		localization_key = GFX_JBBB_bai
+	}
+}
+defined_text = {
+	name = KMD_bingfa_ai_check
+	text = {
+		trigger = {
+			has_active_mission = SZC_KMD_aibing_mission
+		}
+		localization_key = GFX_JBBB_ai_shine
+	}
+	text = {
+		localization_key = GFX_JBBB_ai
+	}
+}

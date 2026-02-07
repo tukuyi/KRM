@@ -1,0 +1,107 @@
+ability = {
+	ziwenguitian = {
+		name = ABILITY_FORCE_ZIWENGUITIAN
+		desc = ABILITY_FORCE_ZIWENGUITIAN_DESC
+
+		sound_effect = command_power_ability_offensive
+
+		type = army_leader
+
+		allowed = {
+			ROOT = {
+				has_completed_focus = SZC_KMD_kill_yourself_now
+			}
+		}
+
+		ai_will_do = {
+			factor = -1
+			modifier = {
+				FROM = {
+					has_war_support > 0.1
+					command_power > 1.5
+				}
+				check_variable = { num_units_offensive_combats > 6 }
+
+				set_temp_variable = { temp = avg_offensive_combat_status }
+				check_variable = { temp > 0.45 }
+				check_variable = { ai_random > temp }
+
+				add = 2
+			}
+		}
+
+		cost = 0.25
+		duration = 168
+
+		one_time_effect = {
+			add_temporary_buff_to_units = {
+				combat_offense = 2
+				combat_breakthrough = 2
+				combat_defense = 2
+				combat_entrenchment = 2
+				org_damage_multiplier = -1.0
+				str_damage_multiplier = 10
+				war_support_reduction_on_damage = 1
+				cannot_retreat_while_attacking = 1.0
+
+				days = 7
+				tooltip = ABILITY_FORCE_ZIWENGUITIAN_TOOLTIP
+			}
+		}
+	}
+	fireball = {
+		name = ABILITY_FIREBALL
+		desc = ABILITY_FIREBALL_DESC
+
+		sound_effect = command_power_ability_offensive
+
+		type = army_leader
+
+		allowed = {
+			ROOT = {
+				has_completed_focus = SZC_KMD_fireball
+				has_equipment = {
+					fireball_equipment_1 > 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = -1
+			modifier = {
+				FROM = {
+					has_war_support > 0.1
+					command_power > 1.5
+				}
+				check_variable = { num_units_offensive_combats > 6 }
+
+				set_temp_variable = { temp = avg_offensive_combat_status }
+				check_variable = { temp > 0.45 }
+				check_variable = { ai_random > temp }
+
+				add = 2
+			}
+		}
+
+		cost = 0.1
+		duration = 168
+
+		one_time_effect = {
+			add_temporary_buff_to_units = {
+				combat_offense = 0.3
+				combat_breakthrough = 3
+				combat_entrenchment = 1
+				org_damage_multiplier = -0.5
+
+				days = 7
+				tooltip = ABILITY_FIREBALL_TOOLTIP
+			}
+			add_equipment_to_stockpile = {
+				type = fireball_equipment_1
+				amount = -1
+			}
+		}
+	}
+
+
+}

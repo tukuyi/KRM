@@ -4041,3 +4041,181 @@ SZC_KMD_god_arrive_category = {
 	}
 
 }
+
+SZC_KMD_bingfa_category = {
+	SZC_KMD_shengbing_mission = { 
+		allowed = {
+			always = no
+		}
+		icon = GFX_decision_generic_ignite_civil_war
+		days_mission_timeout = var:temp_KMD_shengbing_time
+		priority = 200
+
+		modifier = {
+			stability_weekly = 0.05
+			war_support_factor = 0.5
+			consumer_goods_factor = 0.05
+			command_power_gain = -0.5
+		}
+
+		available = {
+			always = no
+		}
+
+		is_good = yes
+
+		cancel_trigger = {
+			always = no
+		}
+
+		ai_will_do = { factor = 0 }
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout SZC_KMD_shengbing_mission"
+			if = {
+				limit = {
+					has_country_flag = SZC_KMD_destroy_evil_mind
+				}
+				set_temp_variable = { temp_KMD_jiaobing_time = 7 }
+			}
+			else = {
+				set_temp_variable = { temp_KMD_jiaobing_time = 30 }
+			}
+			remove_decision = SZC_KMD_shengbing_mission
+			activate_mission = SZC_KMD_jiaobing_mission
+			
+		}
+	}
+
+	SZC_KMD_jiaobing_mission = { 
+		allowed = {
+			always = no
+		}
+		icon = GFX_decision_generic_ignite_civil_war
+		days_mission_timeout = var:temp_KMD_jiaobing_time
+		priority = 200
+
+		modifier = {
+			army_attack_factor = -0.55
+			army_defence_factor = -0.55
+			army_speed_factor = -0.55
+			breakthrough_factor = -0.55
+			army_org_factor = -0.55
+		}
+
+		available = {
+			always = no
+		}
+
+		is_good = no
+
+		cancel_trigger = {
+			always = no
+		}
+
+		ai_will_do = { factor = 0 }
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout SZC_KMD_jiaobing_mission"
+			if = {
+				limit = {
+					always = no
+				}
+			}
+			else = {
+				set_temp_variable = { temp_KMD_baibing_time = 30 }
+			}
+			remove_decision = SZC_KMD_jiaobing_mission
+			activate_mission = SZC_KMD_baibing_mission
+			
+		}
+	}
+
+	SZC_KMD_baibing_mission = { 
+		allowed = {
+			always = no
+		}
+		icon = GFX_decision_generic_ignite_civil_war
+		days_mission_timeout = var:temp_KMD_baibing_time
+		priority = 200
+
+		modifier = {
+			stability_weekly = -0.05
+			war_support_factor = -0.5
+			planning_speed = 1
+			command_power_gain = 0.5
+			industrial_capacity_factory = 0.3
+			army_speed_factor = 0.1
+		}
+
+		available = {
+			always = no
+		}
+
+		is_good = yes
+
+		cancel_trigger = {
+			always = no
+		}
+
+		ai_will_do = { factor = 0 }
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout SZC_KMD_baibing_mission"
+			if = {
+				limit = {
+					always = no
+				}
+			}
+			else = {
+				set_temp_variable = { temp_KMD_aibing_time = 30 }
+			}
+			remove_decision = SZC_KMD_baibing_mission
+			activate_mission = SZC_KMD_aibing_mission
+			
+		}
+	}
+
+	SZC_KMD_aibing_mission = { 
+		allowed = {
+			always = no
+		}
+		icon = GFX_decision_generic_ignite_civil_war
+		days_mission_timeout = var:temp_KMD_aibing_time
+		priority = 200
+
+		modifier = {
+			army_attack_factor = 0.55
+			army_defence_factor = 0.55
+			army_speed_factor = 0.55
+			breakthrough_factor = 0.55
+			army_org_factor = 0.55
+		}
+
+		available = {
+			always = no
+		}
+
+		is_good = no
+
+		cancel_trigger = {
+			always = no
+		}
+
+		ai_will_do = { factor = 0 }
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout SZC_KMD_aibing_mission"
+			if = {
+				limit = {
+					always = no
+				}
+			}
+			else = {
+				set_temp_variable = { temp_KMD_shengbing_time = 30 }
+			}
+			remove_decision = SZC_KMD_aibing_mission
+			activate_mission = SZC_KMD_shengbing_mission
+		}
+	}
+}

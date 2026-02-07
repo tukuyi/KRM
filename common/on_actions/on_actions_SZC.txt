@@ -121,5 +121,63 @@ on_actions = {
 			}
 		}
 	}
+
+	on_army_leader_won_combat = {
+		effect = {
+			if = {
+				limit = {
+					tag = SZC
+					has_country_flag = SZC_KMD_bingfa_available
+				}
+				if = {
+					limit = {
+						has_active_mission = SZC_KMD_jiaobing_mission
+					}
+					add_days_remove = {
+						decision = SZC_KMD_jiaobing_mission
+						days = 3
+					}
+				}
+				if = {
+					limit = {
+						has_active_mission = SZC_KMD_aibing_mission
+					}
+					add_days_remove = {
+						decision = SZC_KMD_aibing_mission
+						days = -3
+					}
+				}
+			}
+		}
+	}
+
+	on_army_leader_lost_combat = {
+		effect = {
+			if = {
+				limit = {
+					tag = SZC
+					has_country_flag = SZC_KMD_bingfa_available
+				}
+				if = {
+					limit = {
+						has_active_mission = SZC_KMD_jiaobing_mission
+					}
+					add_days_remove = {
+						decision = SZC_KMD_jiaobing_mission
+						days = -3
+					}
+				}
+				if = {
+					limit = {
+						has_active_mission = SZC_KMD_aibing_mission
+					}
+					add_days_remove = {
+						decision = SZC_KMD_aibing_mission
+						days = 3
+					}
+				}
+			}
+		}
+	}
 }
 

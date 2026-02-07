@@ -47,4 +47,35 @@ equipments = {
 		priority = 130
 		visual_level = 0
 	}
+	
+	fireball_equipment = {
+		year = 1936
+		can_be_produced = {
+			tag = SZC
+		}
+		is_archetype = yes
+		picture = archetype_infantry_equipment
+		is_buildable = yes
+		type = infantry
+		group_by = archetype
+
+		interface_category = interface_category_land
+
+		build_cost_ic = 20
+		lend_lease_cost = 50
+
+		resources = {
+			steel = 5
+			oil = 5
+		}
+	}
+
+	fireball_equipment_1 = {
+		year = 1936
+		
+		is_buildable = yes
+		archetype = fireball_equipment
+		priority = 130
+		visual_level = 0
+	}
 }

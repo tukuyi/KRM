@@ -278,4 +278,25 @@ scripted_gui = {
 
 	}
 
+	SZC_KMD_bingfa_gui = {
+		context_type = decision_category
+		window_name = "SZC_KMD_bingfa_gui"
+
+
+		properties = {
+			KMD_bingfa_sheng = {
+				image = "[KMD_bingfa_sheng_check]"
+			}
+			KMD_bingfa_jiao = {
+				image = "[KMD_bingfa_jiao_check]"
+			}
+			KMD_bingfa_bai = {
+				image = "[KMD_bingfa_bai_check]"
+			}
+			KMD_bingfa_ai = {
+				image = "[KMD_bingfa_ai_check]"
+			}
+		}
+	}
+
 }

@@ -216,8 +216,82 @@ guiTypes = {
 		
 
 	}
-	
+
+	containerWindowType = {
+		name = "SZC_KMD_bingfa_gui"
+		size = { width = 100%% height = 400 }
+		
+		
+
+		
+		containerWindowType = {
+			name = "SZC_KMD_bingfa_container"
+			position = { x = 5 y = -20 }
+			size = { width = 500 height = 410 }
+
+			verticalScrollbar = "right_vertical_slider"	
+			smooth_scrolling = yes
+			background = {
+				name = "Background"
+				spriteType ="GFX_tiled_window_transparent"
+				alwaystransparent = yes
+			}
+
+				
+			iconType = {
+				name = "KMD_bingfa_background"
+				position = { x = 53 y = 5 }
+				spriteType = "GFX_JBBB_background"
+				alwaystransparent = yes
+			}
+
+				
+			iconType = {
+				name = "KMD_bingfa_arrows"
+				position = { x = 53 y = 5 }
+				spriteType = "GFX_JBBB_arrows"
+				pdx_tooltip = "KMD_bingfa_arrows_tt"
+			}
+				
+			iconType = {
+				name = "KMD_bingfa_bing"
+				position = { x = 162 y = 113 }
+				spriteType = "GFX_JBBB_bing"
+				pdx_tooltip = "KMD_bingfa_bing_tt"
+			}
+			iconType = {
+				name = "KMD_bingfa_sheng"
+				position = { x = 225 y = 16 }
+				spriteType = "GFX_JBBB_sheng"
+				pdx_tooltip = "KMD_bingfa_sheng_tt"
+			}
+			iconType = {
+				name = "KMD_bingfa_jiao"
+				position = { x = 385 y = 180 }
+				spriteType = "GFX_JBBB_jiao"
+				pdx_tooltip = "KMD_bingfa_jiao_tt"
+			}
+			iconType = {
+				name = "KMD_bingfa_bai"
+				position = { x = 225 y = 340 }
+				spriteType = "GFX_JBBB_bai"
+				pdx_tooltip = "KMD_bingfa_bai_tt"
+			}
+			iconType = {
+				name = "KMD_bingfa_ai"
+				position = { x = 60 y = 180 }
+				spriteType = "GFX_JBBB_ai"
+				pdx_tooltip = "KMD_bingfa_ai_tt"
+			}
+
+			
+
+			
+
+		}
+
 	}
+	
 }
 
 
