@@ -40129,8 +40129,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SZC_KMD_xiushenzhitianxia
-		icon = GFX_goal_SZC_KMD_xiushenzhitianxia
+		id = SZC_KMD_evil_of_the_world_hurts_you
+		icon = GFX_goal_SZC_KMD_evil_of_the_world_hurts_you
 		cost = 4
 
 		x = 29
@@ -40140,11 +40140,9 @@ focus_tree = {
 			has_completed_focus = SZC_KMD_arise_shenbings
 		}
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_KMD_xiushenzhitianxia"
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_evil_of_the_world_hurts_you"
 			army_experience = 50
-			add_ideas = {
-				SZC_KMD_shenbing_1_idea
-			}
+			
 			hidden_effect = {
 				
 			}
@@ -40152,26 +40150,68 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SZC_KMD_jinzhongzhao
-		icon = GFX_goal_SZC_KMD_jinzhongzhao
+		id = SZC_KMD_taoist_winwinwin
+		icon = GFX_goal_SZC_KMD_taoist_winwinwin
+		cost = 4
+
+		x = -3
+		y = 1
+
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
+
+		prerequisite = {
+			focus = SZC_KMD_evil_of_the_world_hurts_you
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_taoist_winwinwin"
+			
+			hidden_effect = {
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_kill_yourself_now
+		icon = GFX_goal_SZC_KMD_kill_yourself_now
+		cost = 4
+
+		x = -3
+		y = 2
+
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
+
+		prerequisite = {
+			focus = SZC_KMD_taoist_winwinwin
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_kill_yourself_now"
+			
+			hidden_effect = {
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_die_in_cold_summer
+		icon = GFX_goal_SZC_KMD_die_in_cold_summer
 		cost = 4
 
 		x = -1
 		y = 1
 
-		relative_position_id = SZC_KMD_xiushenzhitianxia
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
 
 		prerequisite = {
-			focus = SZC_KMD_xiushenzhitianxia
+			focus = SZC_KMD_evil_of_the_world_hurts_you
 		}
 
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_KMD_jinzhongzhao"
-			add_manpower = 20000
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 5000
-			}
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_die_in_cold_summer"
+			
 			hidden_effect = {
 				
 			}
@@ -40179,26 +40219,45 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SZC_KMD_tiebushan
-		icon = GFX_goal_SZC_KMD_tiebushan
+		id = SZC_KMD_a_divine_question
+		icon = GFX_goal_SZC_KMD_a_divine_question
+		cost = 4
+
+		x = -1
+		y = 2
+
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
+
+		prerequisite = {
+			focus = SZC_KMD_die_in_cold_summer
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_a_divine_question"
+			
+			hidden_effect = {
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_learn_kongmeng
+		icon = GFX_goal_SZC_KMD_learn_kongmeng
 		cost = 4
 
 		x = 1
 		y = 1
 
-		relative_position_id = SZC_KMD_xiushenzhitianxia
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
 
 		prerequisite = {
-			focus = SZC_KMD_xiushenzhitianxia
+			focus = SZC_KMD_evil_of_the_world_hurts_you
 		}
 
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_KMD_tiebushan"
-			add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 1000
-			}
-			add_war_support = 0.1
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_learn_kongmeng"
+			
 			hidden_effect = {
 				
 			}
@@ -40206,33 +40265,238 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SZC_KMD_guanerye_bless
-		icon = GFX_goal_SZC_KMD_guanerye_bless
+		id = SZC_KMD_zhengzhengrishang
+		icon = GFX_goal_SZC_KMD_zhengzhengrishang
 		cost = 4
 
-		x = 0
+		x = 1
 		y = 2
 
-		relative_position_id = SZC_KMD_xiushenzhitianxia
-
-		available = {
-			has_character = SZC_guan_yu 
-		}
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
 
 		prerequisite = {
-			focus = SZC_KMD_jinzhongzhao
-		}
-
-		prerequisite = {
-			focus = SZC_KMD_tiebushan
+			focus = SZC_KMD_learn_kongmeng
 		}
 
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed SZC_KMD_guanerye_bless"
-			swap_ideas = {
-				remove_idea = SZC_KMD_shenbing_1_idea
-				add_idea = SZC_KMD_shenbing_2_idea
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_zhengzhengrishang"
+			
+			hidden_effect = {
+				
 			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_benevolent_division
+		icon = GFX_goal_SZC_KMD_benevolent_division
+		cost = 4
+
+		x = 0
+		y = 3
+
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
+
+		prerequisite = {
+			focus = SZC_KMD_zhengzhengrishang
+		}
+		prerequisite = {
+			focus = SZC_KMD_a_divine_question
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_benevolent_division"
+			
+			hidden_effect = {
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_chunqiu_is_shit
+		icon = GFX_goal_SZC_KMD_chunqiu_is_shit
+		cost = 4
+
+		x = -2
+		y = 4
+
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
+
+		prerequisite = {
+			focus = SZC_KMD_benevolent_division
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_chunqiu_is_shit"
+			
+			hidden_effect = {
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_star_night_moving
+		icon = GFX_goal_SZC_KMD_star_night_moving
+		cost = 4
+
+		x = -2
+		y = 5
+
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
+
+		prerequisite = {
+			focus = SZC_KMD_chunqiu_is_shit
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_star_night_moving"
+			
+			hidden_effect = {
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_fireball
+		icon = GFX_goal_SZC_KMD_fireball
+		cost = 4
+
+		x = -2
+		y = 6
+
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
+
+		prerequisite = {
+			focus = SZC_KMD_star_night_moving
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_fireball"
+			
+			hidden_effect = {
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_tiger_in_zhongyuan
+		icon = GFX_goal_SZC_KMD_tiger_in_zhongyuan
+		cost = 4
+
+		x = 2
+		y = 4
+
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
+
+		prerequisite = {
+			focus = SZC_KMD_benevolent_division
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_tiger_in_zhongyuan"
+			
+			hidden_effect = {
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_my_ququs_so_renyi
+		icon = GFX_goal_SZC_KMD_my_ququs_so_renyi
+		cost = 4
+
+		x = 2
+		y = 5
+
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
+
+		prerequisite = {
+			focus = SZC_KMD_tiger_in_zhongyuan
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_my_ququs_so_renyi"
+			
+			hidden_effect = {
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_fangsi
+		icon = GFX_goal_SZC_KMD_fangsi
+		cost = 4
+
+		x = 2
+		y = 6
+
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
+
+		prerequisite = {
+			focus = SZC_KMD_my_ququs_so_renyi
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_fangsi"
+			
+			hidden_effect = {
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_ten_thousands_piercing_holes
+		icon = GFX_goal_SZC_KMD_ten_thousands_piercing_holes
+		cost = 4
+
+		x = 0
+		y = 5
+
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
+
+		prerequisite = {
+			focus = SZC_KMD_benevolent_division
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_ten_thousands_piercing_holes"
+			
+			hidden_effect = {
+				
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_dragon_tiger_heroes
+		icon = GFX_goal_SZC_KMD_dragon_tiger_heroes
+		cost = 4
+
+		x = 0
+		y = 7
+
+		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
+
+		prerequisite = {
+			focus = SZC_KMD_fireball
+		}
+		prerequisite = {
+			focus = SZC_KMD_ten_thousands_piercing_holes
+		}
+		prerequisite = {
+			focus = SZC_KMD_fangsi
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_dragon_tiger_heroes"
+			
 			hidden_effect = {
 				
 			}
