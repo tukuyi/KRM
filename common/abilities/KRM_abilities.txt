@@ -8,7 +8,7 @@ ability = {
 		type = army_leader
 
 		allowed = {
-			ROOT = {
+			OWNER = {
 				has_completed_focus = SZC_KMD_kill_yourself_now
 			}
 		}
@@ -58,7 +58,7 @@ ability = {
 		type = army_leader
 
 		allowed = {
-			ROOT = {
+			OWNER = {
 				has_completed_focus = SZC_KMD_fireball
 				has_equipment = {
 					fireball_equipment_1 > 1
