@@ -22630,6 +22630,12 @@ country_event = { #兵法
 		set_country_flag = SZC_KMD_bingfa_available
 		set_temp_variable = { temp_KMD_shengbing_time = 30 }
 		activate_mission = SZC_KMD_shengbing_mission
+		
+		hidden_effect = {
+			add_ideas = {
+				SZC_shengbing_idea
+			}
+		}
 	}
 
 	option = {#...我也要学吗？

@@ -5027,5 +5027,77 @@ ideas = {
 		}
 	}
 
+	hidden_ideas = {
+
+		SZC_shengbing_idea = {#胜兵
+			on_add = { log = "[GetLogRoot]: add idea SZC_shengbing_idea"}
+			allowed = { 
+				always = no
+			}
+			available = {
+				has_active_mission = SZC_KMD_shengbing_mission
+			}
+			modifier = {
+				stability_weekly = 0.05
+				war_support_factor = 0.5
+				consumer_goods_factor = 0.05
+				command_power_gain = -0.5
+			}
+		}
+
+		SZC_jiaobing_idea = {#骄兵
+			on_add = { log = "[GetLogRoot]: add idea SZC_jiaobing_idea"}
+			allowed = { 
+				always = no
+			}
+			available = {
+				has_active_mission = SZC_KMD_jiaobing_mission
+			}
+			modifier = {
+				army_attack_factor = -0.55
+				army_defence_factor = -0.55
+				army_speed_factor = -0.55
+				breakthrough_factor = -0.55
+				army_org_factor = -0.55
+			}
+		}
+
+		SZC_baibing_idea = {#败兵
+			on_add = { log = "[GetLogRoot]: add idea SZC_baibing_idea"}
+			allowed = { 
+				always = no
+			}
+			available = {
+				has_active_mission = SZC_KMD_baibing_mission
+			}
+			modifier = {
+				stability_weekly = -0.05
+				war_support_factor = -0.5
+				planning_speed = 1
+				command_power_gain = 0.5
+				industrial_capacity_factory = 0.3
+				army_speed_factor = 0.1
+			}
+		}
+
+		SZC_aibing_idea = {#哀兵
+			on_add = { log = "[GetLogRoot]: add idea SZC_aibing_idea"}
+			allowed = { 
+				always = no
+			}
+			available = {
+				has_active_mission = SZC_KMD_aibing_mission
+			}
+			modifier = {
+				army_attack_factor = 0.55
+				army_defence_factor = 0.55
+				army_speed_factor = 0.55
+				breakthrough_factor = 0.55
+				army_org_factor = 0.55
+			}
+		}
+
+	}
+
 }
 
