@@ -4083,7 +4083,12 @@ SZC_KMD_bingfa_category = {
 			}
 			remove_decision = SZC_KMD_shengbing_mission
 			activate_mission = SZC_KMD_jiaobing_mission
-			
+			hidden_effect = {
+				add_timed_idea = {
+					idea = SZC_jiaobing_idea
+					days = var:temp_KMD_jiaobing_time
+				}
+			}
 		}
 	}
 
@@ -4127,7 +4132,12 @@ SZC_KMD_bingfa_category = {
 			}
 			remove_decision = SZC_KMD_jiaobing_mission
 			activate_mission = SZC_KMD_baibing_mission
-			
+			hidden_effect = {
+				add_timed_idea = {
+					idea = SZC_baibing_idea
+					days = 30
+				}
+			}
 		}
 	}
 
@@ -4172,7 +4182,12 @@ SZC_KMD_bingfa_category = {
 			}
 			remove_decision = SZC_KMD_baibing_mission
 			activate_mission = SZC_KMD_aibing_mission
-			
+			hidden_effect = {
+				add_timed_idea = {
+					idea = SZC_aibing_idea
+					days = 30
+				}
+			}
 		}
 	}
 
@@ -4216,6 +4231,12 @@ SZC_KMD_bingfa_category = {
 			}
 			remove_decision = SZC_KMD_aibing_mission
 			activate_mission = SZC_KMD_shengbing_mission
+			hidden_effect = {
+				add_timed_idea = {
+					idea = SZC_shengbing_idea
+					days = 30
+				}
+			}
 		}
 	}
 }
