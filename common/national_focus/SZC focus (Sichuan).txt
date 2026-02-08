@@ -39721,6 +39721,8 @@ focus_tree = {
 				remove_idea = SZC_KMD_legitimacy_7
 				add_idea = SZC_KMD_legitimacy_12
 			}
+			create_faction_from_template = { template = faction_template_TIANARMY name = SZC_CCE_faction }
+			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			set_cosmetic_tag = SZC_KMD_tianguo
 			add_stability = 0.5
 			add_war_support = 0.5
@@ -41061,7 +41063,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_sphere_on_earth"
 			
-			custom_effect_tooltip = SZC_KMD_FORPOL_religion_influence_tt
+			custom_effect_tooltip = SZC_KMD_FORPOL_sphere_on_earth_tt
 			save_global_event_target_as = KR_MA_leader
 			create_economic_sphere = yes
 			add_ideas = {
