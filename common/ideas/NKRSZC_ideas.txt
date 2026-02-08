@@ -4087,7 +4087,7 @@ ideas = {
 	
 
 		SZC_KMD_army_revolt = { #军队叛乱
-			picture = SZC_KMD_army_revolt
+			picture = SZC_after_liu
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.15
@@ -4115,7 +4115,7 @@ ideas = {
 
 		SZC_KMD_legitimacy_2 = {#政教合一大势 - 疯言乱语
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_2" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_legitimacy_medium
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.15
@@ -4131,7 +4131,7 @@ ideas = {
 
 		SZC_KMD_legitimacy_3 = {#政教合一大势 - 川蜀独教
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_3" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_legitimacy_high
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.05
@@ -4146,7 +4146,7 @@ ideas = {
 
 		SZC_KMD_legitimacy_4 = {#政教合一大势 - 汉中王
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_4" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_legitimacy_hzw
 			allowed = { always = no }
 			modifier = {
 				war_support_factor = 0.1
@@ -4159,7 +4159,7 @@ ideas = {
 
 		SZC_KMD_legitimacy_5 = {#政教合一大势 - 道德共和
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_5" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_legitimacy_morrep
 			allowed = { always = no }
 			modifier = {
 				war_support_factor = 0.05
@@ -4174,7 +4174,7 @@ ideas = {
 
 		SZC_KMD_legitimacy_6 = {#政教合一大势 - 道德共和
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_6" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_legitimacy_morrep
 			allowed = { always = no }
 			modifier = {
 				war_support_factor = 0.1
@@ -4189,7 +4189,7 @@ ideas = {
 
 		SZC_KMD_legitimacy_7 = {#政教合一大势 - 孔孟大道
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_7" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_legitimacy_high
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
@@ -4207,7 +4207,7 @@ ideas = {
 
 		SZC_KMD_legitimacy_8 = {#政教合一大势 - 大汉新生
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_8" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_legitimacy_han
 			allowed = { always = no }
 			modifier = {
 				war_support_factor = 0.2
@@ -4221,7 +4221,7 @@ ideas = {
 
 		SZC_KMD_legitimacy_9 = {#政教合一大势 - 保义帝国
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_9" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_legitimacy_han
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -4237,7 +4237,7 @@ ideas = {
 
 		SZC_KMD_legitimacy_10 = {#政教合一大势 - 元武新政
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_10" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_legitimacy_han
 			allowed = { always = no }
 			modifier = {
 				war_support_factor = 0.25
@@ -4252,7 +4252,7 @@ ideas = {
 
 		SZC_KMD_legitimacy_11 = {#政教合一大势 - 保义社会
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_11" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_legitimacy_jsp
 			allowed = { always = no }
 			modifier = {
 				war_support_factor = 0.05
@@ -4267,7 +4267,7 @@ ideas = {
 
 		SZC_KMD_legitimacy_12 = {#政教合一大势 - 地上天国
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_12" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_legitimacy_lcy
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.25
@@ -4285,7 +4285,7 @@ ideas = {
 
 		SZC_KMD_legitimacy_13 = {#政教合一大势 - 天国大一统
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_legitimacy_13" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_legitimacy_lcy
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 1
@@ -4304,7 +4304,7 @@ ideas = {
 
 		SZC_KMD_kongmeng_power = {#孔孟之力
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_kongmeng_power" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_kongmeng_power
 			allowed = { always = no }
 			modifier = {
 				war_support_weekly = 0.05
@@ -4376,7 +4376,7 @@ ideas = {
 
 		SZC_KMD_caos_medic = {#曹氏医术
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_caos_medic" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_caos_medic
 			allowed = { always = no }
 			modifier = {
 				stability_factor = -0.05
@@ -4390,7 +4390,7 @@ ideas = {
 
 		SZC_KMD_the_popular_movement = {#大众运动
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_the_popular_movement" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_the_popular_movement
 			allowed = { always = no }
 			modifier = {
 				political_advisor_cost_factor = -0.33
@@ -4403,7 +4403,7 @@ ideas = {
 
 		SZC_KMD_new_nalai_zhuyi_idea = {#新拿来主义
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_new_nalai_zhuyi_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_new_nalai_zhuyi_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.2
@@ -4415,7 +4415,7 @@ ideas = {
 
 		SZC_KMD_new_nalai_zhuyi_2_idea = {#永乐天机
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_new_nalai_zhuyi_2_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_new_nalai_zhuyi_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.5
@@ -4427,7 +4427,7 @@ ideas = {
 
 		SZC_KMD_guild_system_idea = {#行会系统
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_guild_system_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_guild_system_idea
 			allowed = { always = no }
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
@@ -4438,7 +4438,7 @@ ideas = {
 
 		SZC_KMD_duty_to_serve_idea = {#侍奉义务
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_duty_to_serve_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_duty_to_serve_idea
 			allowed = { always = no }
 			modifier = {
 				industry_free_repair_factor = 0.8
@@ -4449,7 +4449,7 @@ ideas = {
 
 		SZC_KMD_republican_destroyed_idea = {#消灭共和派
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_republican_destroyed_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_republican_destroyed_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -4460,7 +4460,7 @@ ideas = {
 
 		SZC_KMD_new_constitutionist_movement_idea = {#新宪政运动
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_new_constitutionist_movement_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_new_constitutionist_movement_idea
 			allowed = { always = no }
 			modifier = {
 				political_advisor_cost_factor = -0.33
@@ -4472,7 +4472,7 @@ ideas = {
 
 		SZC_KMD_road_to_moral_democracy_idea = {#道德民主之路
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_road_to_moral_democracy_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_road_to_moral_democracy_idea
 			allowed = { always = no }
 			modifier = {
 				political_advisor_cost_factor = -0.33
@@ -4485,7 +4485,7 @@ ideas = {
 
 		SZC_KMD_standard_shenbings_idea = {#规范之神兵
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_standard_shenbings_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_standard_shenbings_idea
 			allowed = { always = no }
 			modifier = {
 				army_org_factor = 0.05
@@ -4496,7 +4496,7 @@ ideas = {
 
 		SZC_KMD_tao_is_tao_idea = {#道可道
 			on_add = { log = "[GetLogRoot]: add idea SZC_tao_is_tao_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_tao_is_tao_idea
 			allowed = { always = no }
 			modifier = {
 				land_night_attack = 0.08
@@ -4507,7 +4507,7 @@ ideas = {
 
 		SZC_KMD_sword_of_wuqing_idea = {#无情剑
 			on_add = { log = "[GetLogRoot]: add idea SZC_sword_of_wuqing_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_sword_of_wuqing_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_cost = 0.25
@@ -4519,7 +4519,7 @@ ideas = {
 
 		SZC_KMD_everyone_to_gods_idea = {#人人有功练
 			on_add = { log = "[GetLogRoot]: add idea SZC_everyone_to_gods_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_everyone_to_gods_idea
 			allowed = { always = no }
 			modifier = {
 				recruitable_population_factor = -0.2
@@ -4532,7 +4532,7 @@ ideas = {
 
 		SZC_KMD_revolution_on_earth_under_han_idea = {#汉帝国的人间革命
 			on_add = { log = "[GetLogRoot]: add idea SZC_revolution_on_earth_under_han_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_revolution_on_earth_idea
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_expected_value = -0.1
@@ -4543,7 +4543,7 @@ ideas = {
 
 		SZC_KMD_revolution_on_earth_under_han_2_idea = {#汉帝国的人间革命
 			on_add = { log = "[GetLogRoot]: add idea SZC_revolution_on_earth_under_han_2_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_revolution_on_earth_idea
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_expected_value = -0.15
@@ -4555,7 +4555,7 @@ ideas = {
 
 		SZC_KMD_the_popular_movement_2 = {#大众运动
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_the_popular_movement_2" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_the_popular_movement
 			allowed = { always = no }
 			modifier = {
 				political_advisor_cost_factor = -0.5
@@ -4568,7 +4568,7 @@ ideas = {
 
 		SZC_KMD_kongmengdao_national_faith_idea = {#孔孟道国教
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_kongmengdao_national_faith_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_kongmengdao_national_faith_idea
 			allowed = { always = no }
 			modifier = {#
 				political_power_factor = 0.05
@@ -4582,7 +4582,7 @@ ideas = {
 
 		SZC_KMD_new_han_identity_idea = {#新汉认同
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_new_han_identity_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_new_han_identity_idea
 			allowed = { always = no }
 			modifier = {#
 				political_power_cost = 0.1
@@ -4595,7 +4595,7 @@ ideas = {
 
 		SZC_KMD_privy_council_idea = {#枢密院
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_privy_council_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_privy_council_idea
 			allowed = { always = no }
 			modifier = {#
 				political_advisor_cost_factor = -0.33
@@ -4608,7 +4608,7 @@ ideas = {
 
 		SZC_KMD_han_new_army_idea = {#大汉新军
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_han_new_army_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_han_new_army_idea
 			allowed = { always = no }
 			modifier = {#
 				consumer_goods_factor = 0.05
@@ -4620,7 +4620,7 @@ ideas = {
 
 		SZC_KMD_revolution_on_earth_idea = {#人间革命
 			on_add = { log = "[GetLogRoot]: add idea SZC_revolution_on_earth_under_han_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_revolution_on_earth_idea
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_expected_value = -0.15
@@ -4631,7 +4631,7 @@ ideas = {
 
 		SZC_KMD_revolution_on_earth_2_idea = {#人间革命
 			on_add = { log = "[GetLogRoot]: add idea SZC_revolution_on_earth_under_han_2_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_revolution_on_earth_idea
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_expected_value = -0.2
@@ -4643,7 +4643,7 @@ ideas = {
 
 		SZC_KMD_the_popular_movement_3 = {#大众运动
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_the_popular_movement_3" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_the_popular_movement
 			allowed = { always = no }
 			modifier = {
 				political_advisor_cost_factor = -0.66
@@ -4655,7 +4655,7 @@ ideas = {
 
 		SZC_KMD_road_to_moral_sovereign_democracy_idea = {#道德主权民主之路
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_road_to_moral_sovereign_democracy_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_road_to_moral_sovereign_democracy_idea
 			allowed = { always = no }
 			modifier = {
 				political_advisor_cost_factor = -0.33
@@ -4670,7 +4670,7 @@ ideas = {
 
 		SZC_KMD_the_one_church_idea = {#世间独教
 			on_add = { log = "[GetLogRoot]: add idea SZC_the_one_church_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_the_one_church_idea
 			allowed = { always = no }
 			modifier = {
 				land_night_attack = 0.08
@@ -4681,7 +4681,7 @@ ideas = {
 
 		SZC_KMD_qigong_army_idea = { #气功大军
 			on_add = { log = "[GetLogRoot]: add idea SZC_qigong_army_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_qigong_army_idea
 			allowed = { always = no }
 			modifier = {
 				conscription = 0.05
@@ -4699,7 +4699,7 @@ ideas = {
 
 		SZC_KMD_guild_system_2_idea = {#行会系统
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_guild_system_2_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_guild_system_idea
 			allowed = { always = no }
 			modifier = {
 				production_factory_max_efficiency_factor = 0.15
@@ -4710,7 +4710,7 @@ ideas = {
 
 		SZC_KMD_prepare_for_crusade_idea = {#准备大远征
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_prepare_for_crusade_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_prepare_for_crusade_idea
 			allowed = { always = no }
 			modifier = {
 				production_speed_dockyard_factor = 5
@@ -4722,7 +4722,7 @@ ideas = {
 
 		SZC_KMD_war_to_purification_idea = {#净化之战
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_war_to_purification_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_war_to_purification_idea
 			allowed = { always = no }
 			modifier = {
 				weekly_manpower = 100
@@ -4734,7 +4734,7 @@ ideas = {
 
 		SZC_KMD_xianzhong_legacy_idea = {#献忠的遗产
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_xianzhong_legacy_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_xianzhong_legacy_idea
 			allowed = { always = no }
 			modifier = {
 				monthly_population = -1
@@ -4749,7 +4749,7 @@ ideas = {
 
 		SZC_KMD_die_summer_night_idea = {#死之夏夜
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_die_summer_night_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_die_summer_night_idea
 			allowed = { always = no }
 			modifier = {
 				experience_loss_factor = -0.25
@@ -4764,7 +4764,7 @@ ideas = {
 
 		SZC_KMD_eat_what_idea = {#是啊，吃什么！
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_eat_what_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_eat_what_idea
 			allowed = { always = no }
 			modifier = {
 				army_morale_factor = 0.15
@@ -4775,7 +4775,7 @@ ideas = {
 
 		SZC_KMD_shenbing_1_idea = {#华夏神兵
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_shenbing_1_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_shenbing_1_idea
 			allowed = { always = no }
 			modifier = {
 				max_planning_factor = -0.1
@@ -4797,7 +4797,7 @@ ideas = {
 
 		SZC_KMD_chunqiu_is_shit_idea = {#春秋胡言乱语
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_chunqiu_is_shit_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_chunqiu_is_shit_idea
 			allowed = { always = no }
 			modifier = {
 				planning_speed = 0.25
@@ -4809,7 +4809,7 @@ ideas = {
 
 		SZC_KMD_star_night_moving_idea = {#星夜奔驰！
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_star_night_moving_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_star_night_moving_idea
 			allowed = { always = no }
 			modifier = {
 				army_speed_factor = 0.2	
@@ -4822,7 +4822,7 @@ ideas = {
 
 		SZC_KMD_holesholesholes_idea = {#到处都是窟窿！
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_holesholesholes_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_holesholesholes_idea
 			allowed = { always = no }
 			modifier = {	
 				combat_width_factor = -0.2
@@ -4832,7 +4832,7 @@ ideas = {
 
 		SZC_KMD_ququs_idea = {#我想我那些个蛐蛐
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_ququs_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_ququs_idea
 			allowed = { always = no }
 			modifier = {	
 				army_defence_factor = 0.05
@@ -4844,7 +4844,7 @@ ideas = {
 
 		SZC_KMD_fangsi_idea = {#我砍你的头！
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_fangsi_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_fangsi_idea
 			allowed = { always = no }
 			modifier = {	
 				supply_consumption_factor = -0.15
@@ -4855,7 +4855,7 @@ ideas = {
 
 		SZC_KMD_shenbing_2_idea = {#龙虎英雄傲苍穹
 			on_add = { log = "[GetLogRoot]: add idea SZC_KMD_shenbing_2_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_KMD_shenbing_2_idea
 			allowed = { always = no }
 			modifier = {
 				max_planning_factor = -0.15
@@ -4877,7 +4877,7 @@ ideas = {
 
 		SZC_KMD_tao_order_idea = {#道之秩序
 			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_tao_order_idea" }
-			picture = SZC_YCP_young_age_idea
+			picture = SZC_KMD_tao_order_idea
 			allowed = { always = no }
 			modifier = {
 				justify_war_goal_time = -0.3
@@ -4958,11 +4958,9 @@ ideas = {
 		
 
 		#KMD GUI 
-		
-
 		SZC_guan_yu_god_idea = {#千里走单骑
 			on_add = { log = "[GetLogRoot]: add idea SZC_guan_yu_god_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_guan_yu_god_idea
 			allowed = { always = no }
 			modifier = {
 				breakthrough_factor = 0.35
@@ -4972,7 +4970,7 @@ ideas = {
 		
 		SZC_huang_zhong_god_idea = {#老当益壮
 			on_add = { log = "[GetLogRoot]: add idea SZC_huang_zhong_god_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_huang_zhong_god_idea
 			allowed = { always = no }
 			modifier = {
 				experience_gain_army_factor = 0.65
@@ -4984,7 +4982,7 @@ ideas = {
 
 		SZC_yue_fei_god_idea = {#精忠报国
 			on_add = { log = "[GetLogRoot]: add idea SZC_yue_fei_god_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_yue_fei_god_idea
 			allowed = { always = no }
 			modifier = {
 				org_loss_at_low_org_factor = -0.4
@@ -4995,7 +4993,7 @@ ideas = {
 
 		SZC_zhuge_liang_god_idea = {#武侯显圣
 			on_add = { log = "[GetLogRoot]: add idea SZC_zhuge_liang_god_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_zhuge_liang_god_idea
 			allowed = { always = no }
 			modifier = {
 				planning_speed = 1
@@ -5006,7 +5004,7 @@ ideas = {
 
 		SZC_cao_cao_god_idea = {#宁教我负天下人
 			on_add = { log = "[GetLogRoot]: add idea SZC_cao_cao_god_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_cao_cao_god_idea
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.5
@@ -5018,7 +5016,7 @@ ideas = {
 
 		SZC_xing_daorong_god_idea = {#说出吾名
 			on_add = { log = "[GetLogRoot]: add idea SZC_xing_daorong_god_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_xing_daorong_god_idea
 			allowed = { always = no }
 			modifier = {
 				army_attack_factor = -0.5
@@ -5030,7 +5028,7 @@ ideas = {
 
 		SZC_zhang_fei_god_idea = {#横矛当阳桥
 			on_add = { log = "[GetLogRoot]: add idea SZC_zhang_fei_god_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_zhang_fei_god_idea
 			allowed = { always = no }
 			modifier = {
 				army_defence_factor = 0.3
@@ -5041,7 +5039,7 @@ ideas = {
 
 		SZC_zhao_yun_god_idea = {#七进七出
 			on_add = { log = "[GetLogRoot]: add idea SZC_zhao_yun_god_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_zhao_yun_god_idea
 			allowed = { always = no }
 			modifier = {
 				army_speed_factor = 0.3
@@ -5054,7 +5052,7 @@ ideas = {
 
 		SZC_sun_qian_god_idea = {#凡人皆需侍奉
 			on_add = { log = "[GetLogRoot]: add idea SZC_sun_qian_god_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_sun_qian_god_idea
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -5068,7 +5066,7 @@ ideas = {
 
 		SZC_jiang_ziya_god_idea = {#太公垂钓
 			on_add = { log = "[GetLogRoot]: add idea SZC_jiang_ziya_god_idea" }
-			picture = SZC_KMD_legitimacy_low
+			picture = SZC_jiang_ziya_god_idea
 			allowed = { always = no }
 			modifier = {
 				max_planning_factor = 1
@@ -5077,7 +5075,6 @@ ideas = {
 
 			}
 		}
-
 
 	}
 	

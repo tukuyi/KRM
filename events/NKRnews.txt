@@ -959,3 +959,173 @@
 			}
 		}
 	}
+	news_event = { #刘从云统一
+		id = NKRnews.42
+		immediate = { log = "[GetLogInfo]: event NKRnews.42" }
+		title = NKRnews.42.t
+		desc = NKRnews.42.d
+		picture = GFX_news_event_red_china_united
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.42.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.42.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+			}
+		}
+	}
+	news_event = { #神权中华民国
+		id = NKRnews.43
+		immediate = { log = "[GetLogInfo]: event NKRnews.43" }
+		title = NKRnews.43.t
+		desc = NKRnews.43.d
+		picture = GFX_news_event_empire_restored
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.43.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.43.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+			}
+		}
+	}
+	news_event = { #大汉复兴
+		id = NKRnews.44
+		immediate = { log = "[GetLogInfo]: event NKRnews.44" }
+		title = NKRnews.44.t
+		desc = NKRnews.44.d
+		picture = GFX_news_event_federation_formed
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.44.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.44.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+			}
+		}
+	}
+	news_event = { #觉醒之战
+		id = NKRnews.45
+		immediate = { log = "[GetLogInfo]: event NKRnews.45" }
+		title = NKRnews.45.t
+		desc = NKRnews.45.d
+		picture = GFX_news_event_warlord_revival
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.45.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.45.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+			}
+		}
+	}
+	news_event = { #大同之始
+		id = NKRnews.46
+		immediate = { log = "[GetLogInfo]: event NKRnews.46" }
+		title = NKRnews.46.t
+		desc = NKRnews.46.d
+		picture = GFX_news_event_nation_revival
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.46.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.46.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+			}
+		}
+	}
