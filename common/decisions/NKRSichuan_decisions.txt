@@ -3476,6 +3476,125 @@ foreign_politics = {
 			}
 		}
 	}
+	SZC_KMD_invite_countries_to_faction = {
+		icon = generic_agreement
+
+		allowed = { always = no }
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = SZC_KMT_invite_countries_to_faction_peace_requirement_tt
+				OR = {
+					AND = {
+						at_peace_or_same_enemies_as_FROM = yes
+						FROM = { at_peace_or_same_enemies_as_ROOT = yes }
+					}
+					FROM = { tag = HAW }
+				}
+			}
+			if = {
+				limit = {
+					FROM = { tag = ARM }
+				}
+				OR = {
+					is_in_faction_with = PER
+					is_in_faction_with = TUR
+				}
+			}
+		}
+
+		target_non_existing = yes
+		visible = {
+			is_faction_leader = yes
+			OR = {
+				has_completed_focus = SZC_KMD_FORPOL_return_to_world_stage
+			}
+			
+			FROM = {
+				exists = yes
+				is_subject = no
+				has_capitulated = no
+			}
+		}
+		cost = 10
+		days_remove = 7
+		ai_will_do = { base = 500 }
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_KMT_invite_countries_to_faction"
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove SZC_KMT_invite_countries_to_faction"
+			custom_effect_tooltip = KMT_invite_countries_to_faction_tt
+			if = {
+				limit = {
+					FROM = { original_tag = HAW }
+				}
+				custom_effect_tooltip = CHI_invite_HAW_warning_tt
+			}
+			FROM = { country_event = { id = NKRsichuanFP.1 days = 1 random_days = 3 } }
+		}
+	}
+
+	SZC_KMD_invite_into_economic_sphere = {
+		icon = GFX_decision_global_trade
+
+		allowed = { is_economic_sphere_leader = yes }
+
+		visible = {
+			OR = {
+				has_completed_focus = SZC_KMD_FORPOL_sphere_on_earth
+				has_completed_focus = SZC_KMD_FORPOL_new_diplomatic_system
+			}
+			OR = {
+				FROM = {
+					is_ally_with = SZC
+					NOT = { has_country_flag = SZC_was_invited_into_partnership }
+					any_owned_state = {
+						is_capital = yes
+						OR = {
+							is_on_continent = asia
+							is_on_continent = australia
+							is_on_continent = india
+							is_on_continent = middle_east
+							is_on_continent = africa
+						}
+					}
+				}
+			}
+		}
+		target_trigger = {
+			FROM = {
+				is_ally_with = SZC
+				NOT = { has_country_flag = SZC_was_invited_into_partnership }
+				NOT = {
+					is_in_economic_sphere = yes
+				}
+				any_owned_state = {
+					is_capital = yes
+					OR = {
+						is_on_continent = asia
+						is_on_continent = australia
+						is_on_continent = india
+						is_on_continent = middle_east
+						is_on_continent = africa
+					}
+				}
+			}
+		}
+		ai_will_do = { factor = 50 }
+		target_non_existing = yes
+		cost = 50
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_KMD_invite_into_economic_sphere"
+			FROM = {
+				set_country_flag = SZC_was_invited_into_partnership
+				country_event = { id = NKRsichuanFP.4 days = 3 } #An Invitation to the Minsheng Partnership
+			}
+		}
+	}
 
 	SZC_sic_destroyers = {
 		icon = generic_naval
@@ -4099,7 +4218,7 @@ SZC_KMD_bingfa_category = {
 		priority = 200
 
 		modifier = {
-			army_attack_factor = -0.55
+			army_attack_factor = -0.80
 			army_defence_factor = -0.55
 			army_speed_factor = -0.55
 			breakthrough_factor = -0.55
@@ -4194,7 +4313,7 @@ SZC_KMD_bingfa_category = {
 		priority = 200
 
 		modifier = {
-			army_attack_factor = 0.55
+			army_attack_factor = 0.80
 			army_defence_factor = 0.55
 			army_speed_factor = 0.55
 			breakthrough_factor = 0.55

@@ -2362,6 +2362,16 @@ SZC_ECON_SPHERE_INVITE_SETUP = {
 						activate_targeted_decision = { target = PREV decision = SZC_YCP_invite_into_economic_sphere }
 					}
 				}
+				else_if = {
+					limit = {
+						SZC = {
+							has_country_flag = NKRsichuan_KMDpath
+						}
+					}
+					ROOT = {
+						activate_targeted_decision = { target = PREV decision = SZC_KMD_invite_into_economic_sphere }
+					}
+				}
 				else = {
 					ROOT = {
 						activate_targeted_decision = { target = PREV decision = SZC_KMT_invite_into_economic_sphere }
@@ -2382,6 +2392,16 @@ SZC_ECON_SPHERE_INVITE_SETUP = {
 					activate_targeted_decision = { target = PREV decision = SZC_YCP_invite_into_economic_sphere }
 				}
 			}
+			else_if = {
+				limit = {
+					SZC = {
+						has_country_flag = NKRsichuan_KMDpath
+					}
+				}
+				ROOT = {
+					activate_targeted_decision = { target = PREV decision = SZC_KMD_invite_into_economic_sphere }
+				}
+			}
 			else = {
 				ROOT = {
 					activate_targeted_decision = { target = PREV decision = SZC_KMT_invite_into_economic_sphere }
@@ -2399,6 +2419,16 @@ SZC_ECON_SPHERE_INVITE_SETUP = {
 				}
 				ROOT = {
 					activate_targeted_decision = { target = PREV decision = SZC_YCP_invite_into_economic_sphere }
+				}
+			}
+			if = {
+				limit = {
+					SZC = {
+						has_country_flag = NKRsichuan_KMDpath
+					}
+				}
+				ROOT = {
+					activate_targeted_decision = { target = PREV decision = SZC_KMD_invite_into_economic_sphere }
 				}
 			}
 			else = {
@@ -2576,6 +2606,22 @@ SZC_ECON_SPHERE_ADD = {
 		else = {
 			add_ideas = { SZC_YCP_YI_member_idea }
 		}
+	}
+	if = {
+		limit = {
+			SZC = {
+				has_completed_focus = SZC_KMD_FORPOL_sphere_on_earth
+			}
+		}
+		add_ideas = { SZC_KMD_MA_member_idea }
+	}
+	if = {
+		limit = {
+			SZC = {
+				has_completed_focus = SZC_KMD_FORPOL_new_diplomatic_system
+			}
+		}
+		add_ideas = { SZC_KMD_CCE_member_idea }
 	}
 	hidden_effect = {
 		set_temp_variable = { sphere_target = THIS }

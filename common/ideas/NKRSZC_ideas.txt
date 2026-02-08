@@ -4874,6 +4874,87 @@ ideas = {
 
 			}
 		}
+
+		SZC_KMD_tao_order_idea = {#道之秩序
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_YCP_tao_order_idea" }
+			picture = SZC_YCP_young_age_idea
+			allowed = { always = no }
+			modifier = {
+				justify_war_goal_time = -0.3
+				stability_factor = 0.35
+				political_power_gain = 0.25
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		SZC_KMD_MA_leader_idea = {#道德协约领袖
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_KMD_MA_leader_idea" }
+			picture = SZC_KMD_MA_leader_idea
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.25
+				drift_defence_factor = 0.2
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+				research_speed_factor = 0.1
+				party_popularity_stability_factor = 0.5
+			}
+		}
+		SZC_KMD_MA_member_idea = {#道德协约成员
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_KMD_MA_member_idea" }
+			picture = SZC_KMD_MA_member_idea
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.3
+				drift_defence_factor = 0.1
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				party_popularity_stability_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = SZC
+				trade_cost_for_target_factor = -0.2
+				extra_trade_to_target_factor = 0.2
+				cic_to_target_factor = 0.05
+			}
+		}
+		SZC_KMD_CCE_leader_idea = {#天朝上国领袖
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_KMD_CCE_leader_idea" }
+			picture = SZC_KMD_CCE_leader_idea
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				drift_defence_factor = 0.1
+				war_support_factor = 0.25
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+				research_speed_factor = 0.05
+				party_popularity_stability_factor = 0.2
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.2
+				enemy_justify_war_goal_time = 0.35
+			}
+		}
+		SZC_KMD_CCE_member_idea = {#天朝上国成员
+			on_add = { log = "[GetLogRoot]: add idea 	SZC_KMD_CCE_member_idea" }
+			picture = SZC_KMD_CCE_member_idea
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				drift_defence_factor = 0.15
+				war_support_factor = 0.3
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.15
+				production_speed_buildings_factor = 0.25
+				enemy_justify_war_goal_time = 0.35
+			}
+			targeted_modifier = {
+				tag = SZC
+				trade_cost_for_target_factor = -0.2
+				extra_trade_to_target_factor = 0.2
+				cic_to_target_factor = 0.08
+			}
+		}
 		
 
 		#KMD GUI 
