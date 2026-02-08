@@ -23749,12 +23749,18 @@ country_event = { #神仙之下
 		log = "[GetLogInfo]: event NKRsichuanKMD.1 option NKRsichuanKMD.1.a"
 		name = NKRsichuanKMD.1.a
 		add_political_power = 50
+		hidden_effect = {
+			scoped_play_song = "song_of_guanyu"
+		}
 	}
 	option = {#那究竟是谁呢？
 		log = "[GetLogInfo]: event NKRsichuanKMD.1 option NKRsichuanKMD.1.b"
 		name = NKRsichuanKMD.1.b
 		country_event = {
 			id = NKRsichuanKMD.2
+		}
+		hidden_effect = {
+			scoped_play_song = "song_of_guanyu"
 		}
 	}
 }
@@ -23896,6 +23902,9 @@ country_event = { #神仙降世
 		custom_effect_tooltip = NKRsichuanKMD.9.tt
 		set_country_flag = SZC_KMD_gods_arrive_available
 		add_to_array = { ROOT.SZC_KMD_gods_array = token:SZC_guan_yu }
+		hidden_effect = {
+			scoped_play_song = "song_of_guanyu"
+		}
 	}
 }
 
@@ -24241,6 +24250,9 @@ country_event = { #一对笑面虎
 	option = {#真是一对笑面虎...
 		log = "[GetLogInfo]: event NKRsichuanKMD.30 option NKRsichuanKMD.30.a"
 		name = NKRsichuanKMD.30.a
+		hidden_effect = {
+			scoped_play_song = "song_of_guanyu"
+		}
 	}
 }
 
@@ -24352,6 +24364,12 @@ country_event = { #这是...
 
 	is_triggered_only = yes
 	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			scoped_play_song = "song_of_guanyu"
+		}
+	}
 	
 
 	option = {#...这是传国玉玺啊！
@@ -24911,6 +24929,9 @@ country_event = { #对酒，当歌
 		set_country_flag = SZC_KMD_phase_2
 		mark_focus_tree_layout_dirty = yes
 		activate_advisor = SZC_jiang_shangpu_sic
+		hidden_effect = {
+			scoped_play_song = "song_of_guanyu"
+		}
 	}
 }
 
@@ -24972,6 +24993,9 @@ country_event = { #临时总执政
 			SZC_jiang_shangpu = {
 				promote_character = authoritarian_democrat_moral_sovereign_democracy_subtype
 			}
+		}
+		hidden_effect = {
+			scoped_play_song = "song_of_guanyu"
 		}
 	}
 }
@@ -25046,6 +25070,9 @@ country_event = { #进位
 				has_country_flag = SZC_KMD_chengxun_shangpu_path
 			}
 			activate_advisor = SZC_jiang_shangpu_sic
+		}
+		hidden_effect = {
+			scoped_play_song = "song_of_guanyu"
 		}
 	}
 }
@@ -25847,6 +25874,10 @@ country_event = { #最卑劣的刺杀
 			set_country_flag = SZC_KMD_phase_3
 			mark_focus_tree_layout_dirty = yes
 			complete_national_focus = SZC_KMD_dahan_reunited
+			hidden_effect = {
+				scoped_play_song = "song_of_guanyu"
+			}
+			
 		}
 	}
 
@@ -26346,6 +26377,9 @@ country_event = { #最卑劣的刺杀
 			set_country_flag = SZC_KMD_phase_3
 			mark_focus_tree_layout_dirty = yes
 			complete_national_focus = SZC_KMD_theocracy_republic
+			hidden_effect = {
+				scoped_play_song = "song_of_guanyu"
+			}
 		}
 	}
 
@@ -26641,6 +26675,9 @@ country_event = { #最卑劣的刺杀
 				every_core_state = { add_claim_by = ROOT }
 			}
 			china_enable_concession_decisions = yes
+			hidden_effect = {
+				scoped_play_song = "song_of_guanyu"
+			}
 		}
 	}
 	
@@ -26857,6 +26894,9 @@ country_event = { #最卑劣的刺杀
 				division = "name = \"孔孟金刚原型机\" division_template = \"孔孟金刚\" start_experience_factor = 0.5 start_equipment_factor = 1"
 				owner = ROOT
 				}
+			}
+			hidden_effect = {
+				scoped_play_song = "song_of_guanyu"
 			}
 		
 		}

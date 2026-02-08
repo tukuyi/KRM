@@ -35762,26 +35762,6 @@ focus_tree = {
 					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
-				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
-					owner = ROOT
-				}
-				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
-					owner = ROOT
-				}
 			}
 			hidden_effect = {
 				country_event = {
@@ -39737,6 +39717,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_holy_state_on_earth"
 			custom_effect_tooltip = SZC_KMD_holy_state_on_earth_tt
+			swap_ideas = {
+				remove_idea = SZC_KMD_legitimacy_7
+				add_idea = SZC_KMD_legitimacy_12
+			}
 			set_cosmetic_tag = SZC_KMD_tianguo
 			add_stability = 0.5
 			add_war_support = 0.5
@@ -40122,6 +40106,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_salvation_day"
 			custom_effect_tooltip = SZC_KMD_salvation_day_tt
+			swap_ideas = {
+				remove_idea = SZC_KMD_legitimacy_12
+				add_idea = SZC_KMD_legitimacy_13
+			}
 			every_other_country = {
 				SZC = {
 					annex_country = {
