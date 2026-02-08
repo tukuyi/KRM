@@ -35521,7 +35521,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 50
 			tag = SZC
 		}
 	}
@@ -40604,5 +40604,553 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = SZC_KMD_FORPOL_return_to_world_stage
+		icon = GFX_goal_SZC_KMD_FORPOL_return_to_world_stage
+		cost = 2
+
+		x = 16
+		y = 10	
+
+		
+		# allow_branch = {
+		# 	has_country_flag = NKRsichuan_KMDpath
+		# 	has_country_flag = SZC_KMD_phase_3
+		# 	OR = {
+		# 		has_country_flag = SZC_KMD_chengxun_path
+		# 		has_country_flag = SZC_KMD_shangpu_path
+		# 	}
+		# }
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_return_to_world_stage"
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_FORPOL_frontier_issue
+		icon = GFX_goal_SZC_KMD_FORPOL_frontier_issue
+		cost = 2
+
+		x = -2
+		y = 1
+
+		relative_position_id = SZC_KMD_FORPOL_return_to_world_stage
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_return_to_world_stage
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_frontier_issue"
+			china_enable_outskirts_decisions = yes
+			KUM = {
+				every_core_state = { add_claim_by = ROOT }
+			}
+			ETS = {
+				every_core_state = { add_claim_by = ROOT }
+			}
+			SIK = {
+				every_core_state = { add_claim_by = ROOT }
+			}
+			
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_FORPOL_to_end_national_humiliation
+		icon = GFX_goal_SZC_KMD_FORPOL_to_end_national_humiliation
+		cost = 2
+
+		x = 0
+		y = 1
+
+		relative_position_id = SZC_KMD_FORPOL_return_to_world_stage
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_return_to_world_stage
+		}
+
+		bypass = {
+			LEC = { exists = no }
+			AND = {
+				owns_state = 326 #Hong Kong
+				owns_state = 609 #Tianjin
+				owns_state = 728 #Guangzhouwan
+				owns_state = 729 #Macau
+				owns_state = 743 #Shanghai
+				owns_state = 744 #Qingdao
+				owns_state = 745 #Kwantung
+				owns_state = 746 #Ningbo
+				owns_state = 747 #Fuzhou
+				owns_state = 801 #Shantou
+				owns_state = 802 #Xiamen
+				owns_state = 803 #Wenzhou
+				owns_state = 996 #Weihaiwei
+				owns_state = 1075 #Nantong
+			}
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_to_end_national_humiliation"
+			china_enable_concession_decisions = yes
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_FORPOL_tangnu_what
+		icon = GFX_goal_SZC_KMD_FORPOL_tangnu_what
+		cost = 2
+
+		x = -1
+		y = 2
+
+		relative_position_id = SZC_KMD_FORPOL_return_to_world_stage
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_frontier_issue
+		}
+		
+		bypass = {
+			NOT = {
+				can_declare_war_on = var:653.owner
+				can_declare_war_on = var:408.owner
+			}
+			var:267.owner = { has_socialist_government = yes } #Kabul
+			var:405.owner = { has_socialist_government = yes } #Bukhara
+			var:407.owner = { has_socialist_government = yes } #Tashkent
+			var:861.owner = { has_socialist_government = yes } #Khorezm
+			var:810.owner = { has_socialist_government = yes } #Semipalatinsk
+		}
+
+		will_lead_to_war_with = RUS
+		will_lead_to_war_with = FER
+		will_lead_to_war_with = AFG
+		will_lead_to_war_with = BUK
+		will_lead_to_war_with = KHI
+		will_lead_to_war_with = TRK
+		will_lead_to_war_with = KAZ
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_tangnu_what"
+			activate_targeted_decision = { target = var:408.owner decision = SZC_KMT_liberation_war_decision } #Vladivostok
+			if = {
+				limit = {
+					var:653.owner = { NOT = { tag = var:408.owner } }
+				}
+				activate_targeted_decision = { target = var:653.owner decision = SZC_KMT_liberation_war_decision } #Ekaterinberg
+			}
+			activate_targeted_decision = { target = AFG decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = BUK decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = KHI decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = TRK decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = KAZ decision = SZC_KMT_liberation_war_decision }
+			
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_FORPOL_secure_the_subcontinent
+		icon = GFX_goal_SZC_KMD_FORPOL_secure_the_subcontinent
+		cost = 2
+
+		x = 1
+		y = 2
+
+		relative_position_id = SZC_KMD_FORPOL_return_to_world_stage
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_frontier_issue
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_to_end_national_humiliation
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_once_our_student
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_secure_the_subcontinent"
+			if = {
+				limit = { 858 = { NOT = { is_claimed_by = CHI } } } #Tawang
+				add_state_claim = 858
+			}
+			if = {
+				limit = { 897 = { NOT = { is_claimed_by = CHI } } } #Askai Chin
+				add_state_claim = 897
+			}
+			activate_targeted_decision = { target = HND decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = RAJ decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = PRF decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = NEP decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = BHU decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = AFG decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = CEY decision = SZC_KMT_liberation_war_decision }
+			if = {
+				limit = { var:422.owner = { NOT = { tag = CEY } } }
+				activate_targeted_decision = { target = var:422.owner decision = SZC_KMT_liberation_war_decision }
+			}
+			else_if = {
+				limit = { var:1119.owner = { NOT = { tag = CEY } } } #Trincomalee
+				activate_targeted_decision = { target = var:1119.owner decision = SZC_KMT_liberation_war_decision }
+			}
+			if = {
+				limit = { var:321.owner = { is_indian_tag = no } }
+				activate_targeted_decision = { target = var:321.owner decision = SZC_KMT_liberation_war_decision } #Goa
+			}
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_FORPOL_once_our_student
+		icon = GFX_goal_SZC_KMD_FORPOL_once_our_student
+		cost = 2
+
+		x = 2
+		y = 1
+
+		relative_position_id = SZC_KMD_FORPOL_return_to_world_stage
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_return_to_world_stage
+		}
+		bypass = { NOT = { can_declare_war_on = JAP } }
+		will_lead_to_war_with = JAP
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_once_our_student"
+			activate_targeted_decision = { target = JAP decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = KOR decision = SZC_KMT_liberation_war_decision }
+			#Fallback in case somehow another power took states CHI needs for the finisher
+			if = {
+				limit = {
+					var:282.owner = {
+						NOT = { tag = JAP }
+						NOT = { tag = CHI }
+					}
+				}
+				activate_targeted_decision = { target = var:282.owner decision = SZC_KMT_liberation_war_decision } #Kanto (Tokyo)
+			}
+			if = {
+				limit = {
+					var:525.owner = {
+						NOT = { tag = JAP }
+						NOT = { tag = KOR }
+						NOT = { tag = CHI }
+					}
+				}
+				activate_targeted_decision = { target = var:525.owner decision = SZC_KMT_liberation_war_decision } #Gyeonggi
+			}
+			if = {
+				limit = {
+					var:527.owner = {
+						NOT = { tag = JAP }
+						NOT = { tag = KOR }
+						NOT = { tag = CHI }
+					}
+				}
+				activate_targeted_decision = { target = var:527.owner decision = SZC_KMT_liberation_war_decision } #Yangseo
+			}
+			if = {
+				limit = {
+					var:1099.owner = {
+						NOT = { tag = JAP }
+						NOT = { tag = KOR }
+						NOT = { tag = CHI }
+					}
+				}
+				activate_targeted_decision = { target = var:1099.owner decision = SZC_KMT_liberation_war_decision } #Samnam
+			}
+			if = {
+				limit = {
+					var:1100.owner = {
+						NOT = { tag = JAP }
+						NOT = { tag = KOR }
+						NOT = { tag = CHI }
+					}
+				}
+				activate_targeted_decision = { target = var:1100.owner decision = SZC_KMT_liberation_war_decision } #Gwanbuk
+			}
+					
+			activate_targeted_decision = { target = GEA decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = INC decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = VIN decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = LAO decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = CAM decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = SIA decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = BRM decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = MAL decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = SAR decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = PHI decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = DEI decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = INS decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = PNG decision = SZC_KMT_liberation_war_decision }
+			if = {
+				limit = {
+					var:721.owner = {
+						NOT = {
+							tag = INS
+							tag = ROOT #In case CHI took it, don't want the goofiness of being able to liberate from yourself
+						}
+					}
+				}
+				activate_targeted_decision = { target = var:721.owner decision = SZC_KMT_liberation_war_decision } #East Timor
+			}
+			#Fallback Decisions for the "Final Focus" in case someone else occupies it.
+			if = {
+				limit = {
+					var:336.owner = {
+						NOT = {
+							tag = GEA
+							tag = MAL
+							tag = ROOT
+						}
+					}
+				}
+				activate_targeted_decision = { target = var:336.owner decision = SZC_KMT_liberation_war_decision } #Singapore
+			}
+			if = {
+				limit = {
+					var:827.owner = {
+						NOT = {
+							tag = INC
+							tag = VIN
+							tag = ROOT
+							tag = GEA
+						}
+					}
+				}
+				activate_targeted_decision = { target = var:827.owner decision = SZC_KMT_liberation_war_decision } #Hue
+			}
+			if = {
+				limit = {
+					var:327.owner = {
+						NOT = {
+							tag = PHI
+							tag = ROOT
+						}
+					}
+				}
+				activate_targeted_decision = { target = var:327.owner decision = SZC_KMT_liberation_war_decision } #Manila
+			}
+			
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_FORPOL_secure_safety_zone
+		icon = GFX_goal_SZC_KMD_FORPOL_secure_safety_zone
+		cost = 2
+
+		x = 0
+		y = 3
+
+		relative_position_id = SZC_KMD_FORPOL_return_to_world_stage
+
+		available = {
+			owns_state = 524 #Taiwan
+			owns_state = 743 #Shanghai
+			JAP = {
+				OR = {
+					has_war_with = ROOT
+					exists = no
+					has_capitulated = yes
+					is_subject = yes
+				}
+			}
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_tangnu_what
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_secure_the_subcontinent
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_secure_safety_zone"
+			activate_targeted_decision = { target = AST decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = NZL decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = var:629.owner decision = SZC_KMT_liberation_war_decision } #Honolulu
+			if = {
+				limit = { var:629.owner = { NOT = { tag = HAW } } }
+				activate_targeted_decision = { target = HAW decision = SZC_KMT_liberation_war_decision }
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_FORPOL_moral_accord
+		icon = GFX_goal_SZC_KMD_FORPOL_moral_accord
+		cost = 4
+
+		x = -4
+		y = 1	
+
+		relative_position_id = SZC_KMD_FORPOL_return_to_world_stage
+
+		available = {
+			NOT = {
+				has_completed_focus = SZC_KMD_FORPOL_rebuild_celestial_dynasty
+			}
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_return_to_world_stage
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_moral_accord"
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_FORPOL_religion_influence
+		icon = GFX_goal_SZC_KMD_FORPOL_religion_influence
+		cost = 4
+
+		x = -4
+		y = 2
+
+		relative_position_id = SZC_KMD_FORPOL_return_to_world_stage
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_moral_accord
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_religion_influence"
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_FORPOL_sphere_on_earth
+		icon = GFX_goal_SZC_KMD_FORPOL_sphere_on_earth
+		cost = 4
+
+		x = -4
+		y = 3
+
+		relative_position_id = SZC_KMD_FORPOL_return_to_world_stage
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_religion_influence
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_sphere_on_earth"
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_FORPOL_rebuild_celestial_dynasty
+		icon = GFX_goal_SZC_KMD_FORPOL_rebuild_celestial_dynasty
+		cost = 4
+
+		x = 4
+		y = 1
+
+		relative_position_id = SZC_KMD_FORPOL_return_to_world_stage
+
+		available = {
+			NOT = {
+				has_completed_focus = SZC_KMD_FORPOL_moral_accord
+			}
+		}
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_return_to_world_stage
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_rebuild_celestial_dynasty"
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_FORPOL_new_diplomatic_system
+		icon = GFX_goal_SZC_KMD_FORPOL_new_diplomatic_system
+		cost = 4
+
+		x = 4
+		y = 2
+
+		relative_position_id = SZC_KMD_FORPOL_return_to_world_stage
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_rebuild_celestial_dynasty
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_new_diplomatic_system"
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_FORPOL_old_guard_of_the_new_order
+		icon = GFX_goal_SZC_KMD_FORPOL_old_guard_of_the_new_order
+		cost = 4
+
+		x = 4
+		y = 3
+
+		relative_position_id = SZC_KMD_FORPOL_return_to_world_stage
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_new_diplomatic_system
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_old_guard_of_the_new_order"
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SZC_KMD_FORPOL_china_oh_china
+		icon = GFX_goal_SZC_KMD_FORPOL_china_oh_china
+		cost = 4
+
+		x = 0
+		y = 4
+
+		relative_position_id = SZC_KMD_FORPOL_return_to_world_stage
+
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_sphere_on_earth
+			focus = SZC_KMD_FORPOL_old_guard_of_the_new_order
+		}
+		prerequisite = {
+			focus = SZC_KMD_FORPOL_secure_safety_zone
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_china_oh_china"
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+	}
+
 
 }
