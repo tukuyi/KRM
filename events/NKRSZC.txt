@@ -24705,6 +24705,16 @@ country_event = { #存在主义实践
 					value = var:SZC_KMD_congyun_focus
 					compare = equals
 				}
+				check_variable = {
+					var = SZC_KMD_shangpu_focus
+					value = var:SZC_KMD_congyun_focus
+					compare = less_than
+				}
+				check_variable = {
+					var = SZC_KMD_shangpu_focus
+					value = var:SZC_KMD_chengxun_focus
+					compare = less_than
+				}
 			}
 		}
 		hidden_effect = {
@@ -24724,6 +24734,16 @@ country_event = { #存在主义实践
 				var = SZC_KMD_chengxun_focus
 				value = var:SZC_KMD_congyun_focus
 				compare = equals
+			}
+			check_variable = {
+				var = SZC_KMD_shangpu_focus
+				value = var:SZC_KMD_congyun_focus
+				compare = less_than
+			}
+			check_variable = {
+				var = SZC_KMD_shangpu_focus
+				value = var:SZC_KMD_chengxun_focus
+				compare = less_than
 			}
 		}
 		hidden_effect = {
@@ -27130,6 +27150,7 @@ country_event = { #最卑劣的刺杀
 			name = NKRsichuanKMD.174.a
 			set_country_flag = KMD_united_earth
 			custom_effect_tooltip = NKRsichuanKMD.174.tt
+			hidden_effect = { news_event = NKRnews.46 }
 		}
 	}
 	

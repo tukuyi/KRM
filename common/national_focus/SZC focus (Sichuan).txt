@@ -35602,6 +35602,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_subject_army"
 			remove_ideas = SZC_KMD_army_revolt
+			add_political_power = 100
+			add_command_power = 50
 			hidden_effect = {
 				country_event = {
 					id = NKRsichuanKMD.5
@@ -35681,6 +35683,8 @@ focus_tree = {
 				remove_idea = SZC_KMD_legitimacy_1
 				add_idea = SZC_KMD_legitimacy_2
 			}
+			add_political_power = 100
+			add_command_power = 50
 			hidden_effect = {
 				country_event = {
 					id = NKRsichuanKMD.5
@@ -39905,6 +39909,7 @@ focus_tree = {
 					id = NKRsichuanKMD.168
 				}
 			}
+			hidden_effect = { news_event = NKRnews.45 }
 		}
 	}
 
