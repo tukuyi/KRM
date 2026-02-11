@@ -72,16 +72,6 @@ KOR_return_of_the_provisional_government = {
 
 		else_if = {
 			limit = {
-				OR = {
-					has_authoritarian_government = yes
-					china_alignment_right_kuomintang = yes
-					tag = QIE
-				}
-			}
-			KOR_authoritarian_government = yes
-		}
-		else_if = {
-			limit = {
 				has_country_leader = { character = SZC_liu_congyun }
 			}
 			KOR_authoritarian_government = yes
@@ -91,6 +81,7 @@ KOR_return_of_the_provisional_government = {
 				set_politics = {
 					ruling_party = national_populist
 				}
+				set_cosmetic_tag = KOR_LCY
 				set_party_name = {
 					ideology = national_populist
 					name = KOR_LCY_party
@@ -119,6 +110,16 @@ KOR_return_of_the_provisional_government = {
 					long_name = KOR_JSP_party_long
 				}
 			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_authoritarian_government = yes
+					china_alignment_right_kuomintang = yes
+					tag = QIE
+				}
+			}
+			KOR_authoritarian_government = yes
 		}
 		else = {
 			KOR_democratic_government = yes
