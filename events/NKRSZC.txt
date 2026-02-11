@@ -18408,165 +18408,2506 @@ country_event = { #大越民族党
 	}
 }
 
-country_event = { #
+country_event = { #高卢 啊 高卢
 	id = NKRsichuanpuppet.50
 	title = NKRsichuanpuppet.50.t
 	desc = NKRsichuanpuppet.50.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
 	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { country_exists = FRA } }
+				FRA = { clear_cores_of_tag_if_possible = yes }
+			}
+			if = {
+				limit = { NOT = { country_exists = NFA } }
+				NFA = { clear_cores_of_tag_if_possible = yes }
+			}
+			if = {
+				limit = { NOT = { country_exists = FRP } }
+				FRP = {
+					clear_cores_of_tag_if_possible = yes
+					if = {
+						limit = { has_character = GER_fedor_von_bock }
+						GER_fedor_von_bock = {
+							remove_all_country_leader_roles = yes
+							set_nationality = GER
+						}
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { country_exists = LIL } }
+				LIL = {
+					clear_cores_of_tag_if_possible = yes
+					if = {
+						limit = { has_character = GER_roland_koster }
+						GER_roland_koster = {
+							remove_all_country_leader_roles = yes
+							set_nationality = GER
+						}
+					}
+				}
+			}
+			if = {
+				limit = { is_french_tag = yes }
+				save_event_target_as = can_annex
+			}
+			random_other_country = {
+				limit = {
+					is_french_tag = yes
+					is_ally_with = ROOT
+					OR = {
+						is_subject = no
+						is_subject_of = ROOT
+					}
+				}
+				save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS }
+			}
+			if = {
+				limit = { NOT = { has_event_target = france } }
+				if = {
+					limit = { FRA = { ROOT_can_grant_land = yes } }
+					FRA = { save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+				else_if = {
+					limit = { FRP = { ROOT_can_grant_land = yes } }
+					FRP = { save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+				if = {
+					limit = { NFA = { ROOT_can_grant_land = yes } }
+					NFA = { save_event_target_as = france_exile add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+			}
+			1 = { retain_state = yes } #Corsica
+			14 = { retain_state = yes } #Upper Brittany
+			17 = { retain_state = yes } #Pas-de-Calais
+			28 = { retain_state = yes } #Alsace-Lorraine
+			29 = { retain_state = yes } #Dunkirk
+			735 = { retain_state = yes } #Savoy
+			762 = { retain_state = yes } #Nice
+			779 = { retain_state = yes } #Labourd
+			817 = { retain_state = yes } #Roussillon
+			943 = { retain_state = yes } #Upper Savoy
+			980 = { retain_state = yes } #Lille
+			983 = { retain_state = yes } #Brittany
+		}
+	}
+
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.50 option NKRsichuanpuppet.50.a"
 		name = NKRsichuanpuppet.50.a
+		set_temp_variable = { tag_to_release = FRP }
+		every_state = {
+			limit = { is_france = yes }
+			add_core_of = var:tag_to_release
+			hidden_effect = { remove_claim_by = var:tag_to_release }
+		}
+		release_targeted_tag = yes
+		if = {
+			limit = { country_exists = NFA }
+			reverse_add_opinion_modifier = {
+				target = NFA
+				modifier = NFA_occupied_france
+			}
+		}
+		hidden_effect = {
+			FRA_rene_guenon = {
+				set_nationality = FRP
+			}
+			FRP = {
+				FRA_rene_guenon = {
+					promote_character = national_populist_kongmengdao_subtype
+				}
+				set_cosmetic_tag = FRA_LCY
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = FRA_LCY_party
+					long_name = FRA_LCY_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #新法兰西
 	id = NKRsichuanpuppet.51
 	title = NKRsichuanpuppet.51.t
 	desc = NKRsichuanpuppet.51.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
 	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { country_exists = FRA } }
+				FRA = { clear_cores_of_tag_if_possible = yes }
+			}
+			if = {
+				limit = { NOT = { country_exists = NFA } }
+				NFA = { clear_cores_of_tag_if_possible = yes }
+			}
+			if = {
+				limit = { NOT = { country_exists = FRP } }
+				FRP = {
+					clear_cores_of_tag_if_possible = yes
+					if = {
+						limit = { has_character = GER_fedor_von_bock }
+						GER_fedor_von_bock = {
+							remove_all_country_leader_roles = yes
+							set_nationality = GER
+						}
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { country_exists = LIL } }
+				LIL = {
+					clear_cores_of_tag_if_possible = yes
+					if = {
+						limit = { has_character = GER_roland_koster }
+						GER_roland_koster = {
+							remove_all_country_leader_roles = yes
+							set_nationality = GER
+						}
+					}
+				}
+			}
+			if = {
+				limit = { is_french_tag = yes }
+				save_event_target_as = can_annex
+			}
+			random_other_country = {
+				limit = {
+					is_french_tag = yes
+					is_ally_with = ROOT
+					OR = {
+						is_subject = no
+						is_subject_of = ROOT
+					}
+				}
+				save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS }
+			}
+			if = {
+				limit = { NOT = { has_event_target = france } }
+				if = {
+					limit = { FRA = { ROOT_can_grant_land = yes } }
+					FRA = { save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+				else_if = {
+					limit = { FRP = { ROOT_can_grant_land = yes } }
+					FRP = { save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+				if = {
+					limit = { NFA = { ROOT_can_grant_land = yes } }
+					NFA = { save_event_target_as = france_exile add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+			}
+			1 = { retain_state = yes } #Corsica
+			14 = { retain_state = yes } #Upper Brittany
+			17 = { retain_state = yes } #Pas-de-Calais
+			28 = { retain_state = yes } #Alsace-Lorraine
+			29 = { retain_state = yes } #Dunkirk
+			735 = { retain_state = yes } #Savoy
+			762 = { retain_state = yes } #Nice
+			779 = { retain_state = yes } #Labourd
+			817 = { retain_state = yes } #Roussillon
+			943 = { retain_state = yes } #Upper Savoy
+			980 = { retain_state = yes } #Lille
+			983 = { retain_state = yes } #Brittany
+		}
+	}
+
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.51 option NKRsichuanpuppet.51.a"
 		name = NKRsichuanpuppet.51.a
+		set_temp_variable = { tag_to_release = FRP }
+		every_state = {
+			limit = { is_france = yes }
+			add_core_of = var:tag_to_release
+			hidden_effect = { remove_claim_by = var:tag_to_release }
+		}
+		release_targeted_tag = yes
+		if = {
+			limit = { country_exists = NFA }
+			reverse_add_opinion_modifier = {
+				target = NFA
+				modifier = NFA_occupied_france
+			}
+		}
+		hidden_effect = {
+			FRA_jacques_bacot = {
+				set_nationality = FRP
+			}
+			FRP = {
+				FRA_jacques_bacot = {
+					promote_character = authoritarian_democrat_moral_sovereign_democracy_subtype
+				}
+				set_cosmetic_tag = FRA_JSP
+				set_politics = {
+					ruling_party = authoritarian_democrat
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = FRA_JSP_party
+					long_name = FRA_JSP_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #泰西大秦
 	id = NKRsichuanpuppet.52
 	title = NKRsichuanpuppet.52.t
 	desc = NKRsichuanpuppet.52.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
 	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { country_exists = FRA } }
+				FRA = { clear_cores_of_tag_if_possible = yes }
+			}
+			if = {
+				limit = { NOT = { country_exists = NFA } }
+				NFA = { clear_cores_of_tag_if_possible = yes }
+			}
+			if = {
+				limit = { NOT = { country_exists = FRP } }
+				FRP = {
+					clear_cores_of_tag_if_possible = yes
+					if = {
+						limit = { has_character = GER_fedor_von_bock }
+						GER_fedor_von_bock = {
+							remove_all_country_leader_roles = yes
+							set_nationality = GER
+						}
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { country_exists = LIL } }
+				LIL = {
+					clear_cores_of_tag_if_possible = yes
+					if = {
+						limit = { has_character = GER_roland_koster }
+						GER_roland_koster = {
+							remove_all_country_leader_roles = yes
+							set_nationality = GER
+						}
+					}
+				}
+			}
+			if = {
+				limit = { is_french_tag = yes }
+				save_event_target_as = can_annex
+			}
+			random_other_country = {
+				limit = {
+					is_french_tag = yes
+					is_ally_with = ROOT
+					OR = {
+						is_subject = no
+						is_subject_of = ROOT
+					}
+				}
+				save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS }
+			}
+			if = {
+				limit = { NOT = { has_event_target = france } }
+				if = {
+					limit = { FRA = { ROOT_can_grant_land = yes } }
+					FRA = { save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+				else_if = {
+					limit = { FRP = { ROOT_can_grant_land = yes } }
+					FRP = { save_event_target_as = france add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+				if = {
+					limit = { NFA = { ROOT_can_grant_land = yes } }
+					NFA = { save_event_target_as = france_exile add_to_array = { ROOT.potential_grant_targets = THIS } }
+				}
+			}
+			1 = { retain_state = yes } #Corsica
+			14 = { retain_state = yes } #Upper Brittany
+			17 = { retain_state = yes } #Pas-de-Calais
+			28 = { retain_state = yes } #Alsace-Lorraine
+			29 = { retain_state = yes } #Dunkirk
+			735 = { retain_state = yes } #Savoy
+			762 = { retain_state = yes } #Nice
+			779 = { retain_state = yes } #Labourd
+			817 = { retain_state = yes } #Roussillon
+			943 = { retain_state = yes } #Upper Savoy
+			980 = { retain_state = yes } #Lille
+			983 = { retain_state = yes } #Brittany
+		}
+	}
+
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.52 option NKRsichuanpuppet.52.a"
 		name = NKRsichuanpuppet.52.a
+		set_temp_variable = { tag_to_release = FRP }
+		every_state = {
+			limit = { is_france = yes }
+			add_core_of = var:tag_to_release
+			hidden_effect = { remove_claim_by = var:tag_to_release }
+		}
+		release_targeted_tag = yes
+		if = {
+			limit = { country_exists = NFA }
+			reverse_add_opinion_modifier = {
+				target = NFA
+				modifier = NFA_occupied_france
+			}
+		}
+		hidden_effect = {
+			FRA_liu_chengxun = {
+				set_nationality = FRP
+			}
+			set_cosmetic_tag = FRA_LCX
+			FRP = {
+				FRA_liu_chengxun = {
+					promote_character = social_conservative_national_conservative_subtype
+				}
+				set_country_leader_as_monarch = yes
+				set_politics = {
+					ruling_party = social_conservative
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = FRA_LCX_party
+					long_name = FRA_LCX_party_long
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_italy_or_potential_claim = yes
+						is_spain = yes
+						is_portugal = no
+					}
+				}
+				add_claim_by = FRP
+			}
+			every_state = {
+				limit = {
+					AND = {
+						is_owned_and_controlled_by_ROOT_or_subject = yes
+						is_claimed_by = FRP
+					}
+				}
+				transfer_state_to = FRP
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #不列颠新政
 	id = NKRsichuanpuppet.53
 	title = NKRsichuanpuppet.53.t
 	desc = NKRsichuanpuppet.53.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
 	
+	
+	immediate = {
+		hidden_effect = {
+			ENG = { drop_cosmetic_tag = yes }
+			event_target:original_britain_puppet = {
+				clear_cores_of_tag_if_possible = yes
+			}
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.53 option NKRsichuanpuppet.53.a"
 		name = NKRsichuanpuppet.53.a
+		custom_effect_tooltip = GBP_british_collab
+		hidden_effect = {
+			set_temp_variable = { tag_to_release = event_target:original_britain_puppet }
+			GBP_create_cores = yes
+			release_targeted_tag = yes
+			var:tag_to_release = {
+				GBP_set_up_government = yes
+				GBP_transfer_english_commanders = yes
+				SCO_transfer_commanders = yes
+				WLS_transfer_commanders = yes
+			}
+			if = {
+				limit = { NOT = { original_tag = GER } }
+				country_event = britain_puppet_events.7
+			}
+		}
+		hidden_effect = {
+			ENG_noel_joseph = {
+				set_nationality = GBP
+			}
+			GBP = {
+				ENG_noel_joseph = {
+					promote_character = authoritarian_democrat_moral_sovereign_democracy_subtype
+				}
+				set_cosmetic_tag = ENG_JSP
+				set_politics = {
+					ruling_party = authoritarian_democrat
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = ENG_JSP_party
+					long_name = ENG_JSP_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #混沌之治
 	id = NKRsichuanpuppet.54
 	title = NKRsichuanpuppet.54.t
 	desc = NKRsichuanpuppet.54.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
 	
+	
+	immediate = {
+		hidden_effect = {
+			ENG = { drop_cosmetic_tag = yes }
+			event_target:original_britain_puppet = {
+				clear_cores_of_tag_if_possible = yes
+			}
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.54 option NKRsichuanpuppet.54.a"
 		name = NKRsichuanpuppet.54.a
+		custom_effect_tooltip = GBP_british_collab
+		hidden_effect = {
+			set_temp_variable = { tag_to_release = event_target:original_britain_puppet }
+			GBP_create_cores = yes
+			release_targeted_tag = yes
+			var:tag_to_release = {
+				GBP_set_up_government = yes
+				GBP_transfer_english_commanders = yes
+				SCO_transfer_commanders = yes
+				WLS_transfer_commanders = yes
+			}
+			if = {
+				limit = { NOT = { original_tag = GER } }
+				country_event = britain_puppet_events.7
+			}
+		}
+		hidden_effect = {
+			ENG_marco_pallis = {
+				set_nationality = GBP
+			}
+			GBP = {
+				ENG_marco_pallis = {
+					promote_character = national_populist_kongmengdao_subtype
+				}
+				set_cosmetic_tag = ENG_LCY
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = ENG_LCY_party
+					long_name = ENG_LCY_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #大汉的联合王国
 	id = NKRsichuanpuppet.55
 	title = NKRsichuanpuppet.55.t
 	desc = NKRsichuanpuppet.55.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
 	
+	
+	immediate = {
+		hidden_effect = {
+			ENG = { drop_cosmetic_tag = yes }
+			event_target:original_britain_puppet = {
+				clear_cores_of_tag_if_possible = yes
+			}
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.55 option NKRsichuanpuppet.55.a"
 		name = NKRsichuanpuppet.55.a
+		custom_effect_tooltip = GBP_british_collab
+		hidden_effect = {
+			set_temp_variable = { tag_to_release = event_target:original_britain_puppet }
+			GBP_create_cores = yes
+			release_targeted_tag = yes
+			var:tag_to_release = {
+				GBP_set_up_government = yes
+				GBP_transfer_english_commanders = yes
+				SCO_transfer_commanders = yes
+				WLS_transfer_commanders = yes
+			}
+			if = {
+				limit = { NOT = { original_tag = GER } }
+				country_event = britain_puppet_events.7
+			}
+		}
+		hidden_effect = {
+			ENG_liu_chengxun = {
+				set_nationality = GBP
+			}
+			GBP = {
+				ENG_liu_chengxun = {
+					promote_character = social_conservative_national_conservative_subtype
+				}
+				set_country_leader_as_monarch = yes
+				set_cosmetic_tag = ENG_LCX
+				set_politics = {
+					ruling_party = social_conservative
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = ENG_LCX_party
+					long_name = ENG_LCX_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #道德之国？
 	id = NKRsichuanpuppet.56
 	title = NKRsichuanpuppet.56.t
 	desc = NKRsichuanpuppet.56.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
+	
+	
+	immediate = {
+		hidden_effect = {
+			annexations_reset_german_tags = yes
+			if = {
+				limit = {
+					OR = {
+						is_german_unifier_tag = yes
+						AND = {
+							64 = { is_claim_or_core_of_ROOT = yes } #Brandenburg
+							owns_state = 147 #Prussian Saxony
+						}
+						AND = {
+							AUS_can_form_germany = yes
+							OR = {
+								has_subject = BAY
+								any_owned_state = {
+									is_south_germany = yes
+									state_strategic_value > 89
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_german_event_targets = yes
+			if = {
+				limit = {
+					annexations_germany_is_independent_ally_or_puppet_of_ROOT = no
+					PRE = { ROOT_can_grant_land = yes }
+				}
+				PRE = { save_event_target_as = prussia add_to_array = { ROOT.potential_grant_targets = THIS } }
+			}
+			58 = { retain_state = yes } #Schleswig-Holstein
+		}
+	}
 	
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.56 option NKRsichuanpuppet.56.a"
 		name = NKRsichuanpuppet.56.a
+		
+		annexations_release_republican_germany = yes
+		hidden_effect = {
+			GRU_hans_haaso_von_veltheim = {
+				set_nationality = var:tag_to_release
+			}
+			var:tag_to_release = {
+				GRU_hans_haaso_von_veltheim = {
+					promote_character = authoritarian_democrat_moral_sovereign_democracy_subtype
+				}
+				set_cosmetic_tag = GRU_JSP
+				set_politics = {
+					ruling_party = authoritarian_democrat
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = GRU_JSP_party
+					long_name = GRU_JSP_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #祖先学会
 	id = NKRsichuanpuppet.57
 	title = NKRsichuanpuppet.57.t
 	desc = NKRsichuanpuppet.57.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
+	
+	
+	immediate = {
+		hidden_effect = {
+			annexations_reset_german_tags = yes
+			if = {
+				limit = {
+					OR = {
+						is_german_unifier_tag = yes
+						AND = {
+							64 = { is_claim_or_core_of_ROOT = yes } #Brandenburg
+							owns_state = 147 #Prussian Saxony
+						}
+						AND = {
+							AUS_can_form_germany = yes
+							OR = {
+								has_subject = BAY
+								any_owned_state = {
+									is_south_germany = yes
+									state_strategic_value > 89
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_german_event_targets = yes
+			if = {
+				limit = {
+					annexations_germany_is_independent_ally_or_puppet_of_ROOT = no
+					PRE = { ROOT_can_grant_land = yes }
+				}
+				PRE = { save_event_target_as = prussia add_to_array = { ROOT.potential_grant_targets = THIS } }
+			}
+			58 = { retain_state = yes } #Schleswig-Holstein
+		}
+	}
 	
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.57 option NKRsichuanpuppet.57.a"
 		name = NKRsichuanpuppet.57.a
+		
+		
+		annexations_release_republican_germany = yes
+		hidden_effect = {
+			GRU_karl_maria_wiligut = {
+				set_nationality = var:tag_to_release
+			}
+			var:tag_to_release = {
+				GRU_karl_maria_wiligut = {
+					promote_character = national_populist_kongmengdao_subtype
+				}
+				set_cosmetic_tag = GRU_LCY
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = GRU_LCY_party
+					long_name = GRU_LCY_party_long
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #神圣德意志
 	id = NKRsichuanpuppet.58
 	title = NKRsichuanpuppet.58.t
 	desc = NKRsichuanpuppet.58.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
+	
+	
+	immediate = {
+		hidden_effect = {
+			annexations_reset_german_tags = yes
+			if = {
+				limit = {
+					OR = {
+						is_german_unifier_tag = yes
+						AND = {
+							64 = { is_claim_or_core_of_ROOT = yes } #Brandenburg
+							owns_state = 147 #Prussian Saxony
+						}
+						AND = {
+							AUS_can_form_germany = yes
+							OR = {
+								has_subject = BAY
+								any_owned_state = {
+									is_south_germany = yes
+									state_strategic_value > 89
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_german_event_targets = yes
+			if = {
+				limit = {
+					annexations_germany_is_independent_ally_or_puppet_of_ROOT = no
+					PRE = { ROOT_can_grant_land = yes }
+				}
+				PRE = { save_event_target_as = prussia add_to_array = { ROOT.potential_grant_targets = THIS } }
+			}
+			58 = { retain_state = yes } #Schleswig-Holstein
+		}
+	}
 	
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.58 option NKRsichuanpuppet.58.a"
 		name = NKRsichuanpuppet.58.a
+		annexations_release_hohenzollern_germany = yes
+		hidden_effect = {
+			GRU_liu_chengxun = {
+				set_nationality = var:tag_to_release
+			}
+			var:tag_to_release = {
+				GRU_liu_chengxun = {
+					promote_character = social_conservative_national_conservative_subtype
+				}
+				set_cosmetic_tag = GRU_LCX
+				set_politics = {
+					ruling_party = social_conservative
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = GRU_LCX_party
+					long_name = GRU_LCX_party_long
+				}
+			}
+		}
+	}
+}
+
+country_event = { #乡土意大利
+	id = NKRsichuanpuppet.59
+	title = NKRsichuanpuppet.59.t
+	desc = NKRsichuanpuppet.59.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	immediate = {
+		hidden_effect = {
+			annexations_reset_italian_tags = yes
+			if = {
+				limit = {
+					is_italian_unifier_tag = yes
+					NOT = { has_country_flag = SIC_confed }
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_italian_event_targets = yes
+			every_owned_state = {
+				limit = { is_italian_irredentist_claim = yes }
+				retain_state = yes #just in case
+			}
+		}
+	}
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.59 option NKRsichuanpuppet.59.a"
+		name = NKRsichuanpuppet.59.a
+		set_temp_variable = { tag_to_release = ITA }
+		annexations_release_italy = yes
+		hidden_effect = {
+			ITA_lanza_del_vasto = {
+				set_nationality = ITA
+			}
+			ITA = {
+				ITA_lanza_del_vasto = {
+					promote_character = authoritarian_democrat_moral_sovereign_democracy_subtype
+				}
+				set_cosmetic_tag = ITA_JSP
+				set_politics = {
+					ruling_party = authoritarian_democrat
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = ITA_JSP_party
+					long_name = ITA_JSP_party_long
+				}
+			}
+		}
+	}
+}
+
+country_event = { #血坛
+	id = NKRsichuanpuppet.60
+	title = NKRsichuanpuppet.60.t
+	desc = NKRsichuanpuppet.60.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	immediate = {
+		hidden_effect = {
+			annexations_reset_italian_tags = yes
+			if = {
+				limit = {
+					is_italian_unifier_tag = yes
+					NOT = { has_country_flag = SIC_confed }
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_italian_event_targets = yes
+			every_owned_state = {
+				limit = { is_italian_irredentist_claim = yes }
+				retain_state = yes #just in case
+			}
+		}
+	}
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.60 option NKRsichuanpuppet.60.a"
+		name = NKRsichuanpuppet.60.a
+		set_temp_variable = { tag_to_release = ITA }
+		annexations_release_italy = yes
+		hidden_effect = {
+			ITA_giuseppe_tucci = {
+				set_nationality = ITA
+			}
+			ITA = {
+				ITA_giuseppe_tucci = {
+					promote_character = national_populist_kongmengdao_subtype
+				}
+				set_cosmetic_tag = ITA_LCY
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = ITA_LCY_party
+					long_name = ITA_LCY_party_long
+				}
+			}
+		}
+	}
+}
+
+country_event = { #创造价值
+	id = NKRsichuanpuppet.61
+	title = NKRsichuanpuppet.61.t
+	desc = NKRsichuanpuppet.61.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+		
+	immediate = {
+		hidden_effect = {
+			JAP_fading_sun = yes
+			if = {
+				limit = {
+					OR = {
+						tag = RKT
+						tag = LKT
+					}
+					owns_state = 526
+				}
+				add_state_claim = 526 #If KMT China totally conquers Japan, will occupy Okinawa like the US, will get an event later to decide to either give it back or "give it independence"
+				var:526.owner = { country_event = { id = CHI.lategame.071 days = 500 random_days = 250 } } #The Ryukyu Revival - Flavorwise needs some time to pass first for the event to make sense
+			}
+			537 = { retain_state = yes } #South Sakhalin
+			555 = { retain_state = yes } #Kuril Islands
+			577 = { retain_state = yes } #North Sakhalin
+		}
+	}
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.61 option NKRsichuanpuppet.61.a"
+		name = NKRsichuanpuppet.61.a
+		set_temp_variable = { tag_to_release = JAP }
+		release_targeted_tag = yes
+		hidden_effect = {
+			JAP_makiguchi_tsunesaburo = {
+				set_nationality = JAP
+			}
+		}
+		JAP = {
+			# All general puppet effects
+			hidden_effect = {
+				set_cosmetic_tag = JAP_state
+				load_focus_tree = japan_subject_focus
+				JAP_close_all = yes
+				JAP_clear_ideas = yes
+				if = {
+					limit = { has_character = JAP_hirohito }
+					JAP_hirohito = {
+						promote_character = social_democrat_subtype
+						promote_character = social_liberal_subtype
+						promote_character = market_liberal_subtype
+						promote_character = social_conservative_subtype
+						promote_character = authoritarian_democrat_subtype
+						promote_character = paternal_autocrat_subtype
+						promote_character = national_populist_subtype
+	
+						set_portraits = { civilian = { large = GFX_portrait_JAP_hirohito_civilian_large_suit } }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = authoritarian_democrat_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = paternal_autocrat_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = national_populist_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = social_conservative_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = market_liberal_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = social_liberal_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = social_democrat_subtype }
+					}
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = authoritarian_democrat }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = paternal_autocrat }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = national_populist }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = social_conservative }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = market_liberal }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = social_liberal }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = social_democrat }
+				}
+				if = {
+					limit = { NOT = { has_country_flag = JAP_defeated_nation } }
+					# Reset all relevant Parties in case natpops were previously in power
+					set_party_name = {
+						ideology = social_democrat
+						name = JAP_social_democrat_party
+						long_name = JAP_social_democrat_party_long
+					}
+					set_party_name = {
+						name = JAP_market_liberal_party_kd
+						ideology = market_liberal
+						long_name = JAP_market_liberal_party_long_kd
+					}
+					set_party_name = {
+						ideology = social_conservative
+						name = JAP_social_conservative_party_kd
+						long_name = JAP_social_conservative_party_long_kd
+					}
+				}
+				# Setup the other parties
+				set_party_name = {
+					ideology = authoritarian_democrat
+					long_name = JAP_zantei_gunseifu_long
+					name = JAP_zantei_gunseifu
+				}
+				set_party_name = {
+					ideology = paternal_autocrat
+					long_name = JAP_zantei_gunseifu_long
+					name = JAP_zantei_gunseifu
+				}
+				set_party_name = {
+					ideology = national_populist
+					long_name = JAP_zantei_gunseifu_long
+					name = JAP_zantei_gunseifu
+				}
+			}
+			add_ideas = {
+				JAP_shattered_people_idea
+				JAP_devastated_national_economy_idea
+				JAP_disarmed_nation_idea
+			}
+			set_country_flag = JAP_defeated_nation
+			clr_country_flag = JAP_RKMT_puppet_flag
+			clr_country_flag = JAP_nonKMT_chinese_puppet_flag
+			clr_country_flag = JAP_authoritarian_puppet_flag
+			clr_country_flag = JAP_liberal_puppet_flag
+			custom_effect_tooltip = tooltip_white_line
+			JAP_democratic_government = yes
+			mark_focus_tree_layout_dirty = yes
+			set_cosmetic_tag = JAP_JSP
+			JAP_makiguchi_tsunesaburo = {
+				promote_character = authoritarian_democrat_moral_sovereign_democracy_subtype
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				name = JAP_JSP_party
+				long_name = JAP_JSP_party_long
+			}
+		}
+	}
+}
+
+country_event = { #国神
+	id = NKRsichuanpuppet.62
+	title = NKRsichuanpuppet.62.t
+	desc = NKRsichuanpuppet.62.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+		
+	immediate = {
+		hidden_effect = {
+			JAP_fading_sun = yes
+			if = {
+				limit = {
+					OR = {
+						tag = RKT
+						tag = LKT
+					}
+					owns_state = 526
+				}
+				add_state_claim = 526 #If KMT China totally conquers Japan, will occupy Okinawa like the US, will get an event later to decide to either give it back or "give it independence"
+				var:526.owner = { country_event = { id = CHI.lategame.071 days = 500 random_days = 250 } } #The Ryukyu Revival - Flavorwise needs some time to pass first for the event to make sense
+			}
+			537 = { retain_state = yes } #South Sakhalin
+			555 = { retain_state = yes } #Kuril Islands
+			577 = { retain_state = yes } #North Sakhalin
+		}
+	}
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.62 option NKRsichuanpuppet.62.a"
+		name = NKRsichuanpuppet.62.a
+		set_temp_variable = { tag_to_release = JAP }
+		release_targeted_tag = yes
+		hidden_effect = {
+			JAP_deguchi_onisaburo = {
+				set_nationality = JAP
+			}
+		}
+		JAP = {
+			# All general puppet effects
+			hidden_effect = {
+				set_cosmetic_tag = JAP_state
+				load_focus_tree = japan_subject_focus
+				JAP_close_all = yes
+				JAP_clear_ideas = yes
+				if = {
+					limit = { has_character = JAP_hirohito }
+					JAP_hirohito = {
+						promote_character = social_democrat_subtype
+						promote_character = social_liberal_subtype
+						promote_character = market_liberal_subtype
+						promote_character = social_conservative_subtype
+						promote_character = authoritarian_democrat_subtype
+						promote_character = paternal_autocrat_subtype
+						promote_character = national_populist_subtype
+	
+						set_portraits = { civilian = { large = GFX_portrait_JAP_hirohito_civilian_large_suit } }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = authoritarian_democrat_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = paternal_autocrat_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = national_populist_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = social_conservative_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = market_liberal_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = social_liberal_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = social_democrat_subtype }
+					}
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = authoritarian_democrat }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = paternal_autocrat }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = national_populist }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = social_conservative }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = market_liberal }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = social_liberal }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = social_democrat }
+				}
+				if = {
+					limit = { NOT = { has_country_flag = JAP_defeated_nation } }
+					# Reset all relevant Parties in case natpops were previously in power
+					set_party_name = {
+						ideology = social_democrat
+						name = JAP_social_democrat_party
+						long_name = JAP_social_democrat_party_long
+					}
+					set_party_name = {
+						name = JAP_market_liberal_party_kd
+						ideology = market_liberal
+						long_name = JAP_market_liberal_party_long_kd
+					}
+					set_party_name = {
+						ideology = social_conservative
+						name = JAP_social_conservative_party_kd
+						long_name = JAP_social_conservative_party_long_kd
+					}
+				}
+				# Setup the other parties
+				set_party_name = {
+					ideology = authoritarian_democrat
+					long_name = JAP_zantei_gunseifu_long
+					name = JAP_zantei_gunseifu
+				}
+				set_party_name = {
+					ideology = paternal_autocrat
+					long_name = JAP_zantei_gunseifu_long
+					name = JAP_zantei_gunseifu
+				}
+				set_party_name = {
+					ideology = national_populist
+					long_name = JAP_zantei_gunseifu_long
+					name = JAP_zantei_gunseifu
+				}
+			}
+			add_ideas = {
+				JAP_shattered_people_idea
+				JAP_devastated_national_economy_idea
+				JAP_disarmed_nation_idea
+			}
+			set_country_flag = JAP_defeated_nation
+			clr_country_flag = JAP_RKMT_puppet_flag
+			clr_country_flag = JAP_nonKMT_chinese_puppet_flag
+			clr_country_flag = JAP_authoritarian_puppet_flag
+			clr_country_flag = JAP_liberal_puppet_flag
+			custom_effect_tooltip = tooltip_white_line
+			JAP_democratic_government = yes
+			mark_focus_tree_layout_dirty = yes
+			set_cosmetic_tag = JAP_LCY
+			JAP_deguchi_onisaburo = {
+				promote_character = national_populist_kongmengdao_subtype
+			}
+			set_party_name = {
+				ideology = national_populist
+				name = JAP_LCY_party
+				long_name = JAP_LCY_party_long
+			}
+		}
+	}
+}
+
+country_event = { #邪马台
+	id = NKRsichuanpuppet.63
+	title = NKRsichuanpuppet.63.t
+	desc = NKRsichuanpuppet.63.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+		
+	immediate = {
+		hidden_effect = {
+			JAP_fading_sun = yes
+			if = {
+				limit = {
+					OR = {
+						tag = RKT
+						tag = LKT
+					}
+					owns_state = 526
+				}
+				add_state_claim = 526 #If KMT China totally conquers Japan, will occupy Okinawa like the US, will get an event later to decide to either give it back or "give it independence"
+				var:526.owner = { country_event = { id = CHI.lategame.071 days = 500 random_days = 250 } } #The Ryukyu Revival - Flavorwise needs some time to pass first for the event to make sense
+			}
+			537 = { retain_state = yes } #South Sakhalin
+			555 = { retain_state = yes } #Kuril Islands
+			577 = { retain_state = yes } #North Sakhalin
+		}
+	}
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.63 option NKRsichuanpuppet.63.a"
+		name = NKRsichuanpuppet.63.a
+		set_temp_variable = { tag_to_release = JAP }
+		release_targeted_tag = yes
+		hidden_effect = {
+			JAP_liu_chengxun = {
+				set_nationality = JAP
+			}
+		}
+		JAP = {
+			# All general puppet effects
+			hidden_effect = {
+				set_cosmetic_tag = JAP_state
+				load_focus_tree = japan_subject_focus
+				JAP_close_all = yes
+				JAP_clear_ideas = yes
+				if = {
+					limit = { has_character = JAP_hirohito }
+					JAP_hirohito = {
+						promote_character = social_democrat_subtype
+						promote_character = social_liberal_subtype
+						promote_character = market_liberal_subtype
+						promote_character = social_conservative_subtype
+						promote_character = authoritarian_democrat_subtype
+						promote_character = paternal_autocrat_subtype
+						promote_character = national_populist_subtype
+	
+						set_portraits = { civilian = { large = GFX_portrait_JAP_hirohito_civilian_large_suit } }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = authoritarian_democrat_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = paternal_autocrat_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = national_populist_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = social_conservative_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = market_liberal_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = social_liberal_subtype }
+						add_trait = { trait = JAP_hirohito_defeat_trait ideology = social_democrat_subtype }
+					}
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = authoritarian_democrat }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = paternal_autocrat }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = national_populist }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = social_conservative }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = market_liberal }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = social_liberal }
+					set_country_leader_description = { desc = JAP_hirohito_defeat_leader_desc ideology = social_democrat }
+				}
+				if = {
+					limit = { NOT = { has_country_flag = JAP_defeated_nation } }
+					# Reset all relevant Parties in case natpops were previously in power
+					set_party_name = {
+						ideology = social_democrat
+						name = JAP_social_democrat_party
+						long_name = JAP_social_democrat_party_long
+					}
+					set_party_name = {
+						name = JAP_market_liberal_party_kd
+						ideology = market_liberal
+						long_name = JAP_market_liberal_party_long_kd
+					}
+					set_party_name = {
+						ideology = social_conservative
+						name = JAP_social_conservative_party_kd
+						long_name = JAP_social_conservative_party_long_kd
+					}
+				}
+				# Setup the other parties
+				set_party_name = {
+					ideology = authoritarian_democrat
+					long_name = JAP_zantei_gunseifu_long
+					name = JAP_zantei_gunseifu
+				}
+				set_party_name = {
+					ideology = paternal_autocrat
+					long_name = JAP_zantei_gunseifu_long
+					name = JAP_zantei_gunseifu
+				}
+				set_party_name = {
+					ideology = national_populist
+					long_name = JAP_zantei_gunseifu_long
+					name = JAP_zantei_gunseifu
+				}
+			}
+			add_ideas = {
+				JAP_shattered_people_idea
+				JAP_devastated_national_economy_idea
+				JAP_disarmed_nation_idea
+			}
+			set_country_flag = JAP_defeated_nation
+			clr_country_flag = JAP_RKMT_puppet_flag
+			clr_country_flag = JAP_nonKMT_chinese_puppet_flag
+			clr_country_flag = JAP_authoritarian_puppet_flag
+			clr_country_flag = JAP_liberal_puppet_flag
+			custom_effect_tooltip = tooltip_white_line
+			JAP_democratic_government = yes
+			mark_focus_tree_layout_dirty = yes
+			set_cosmetic_tag = JAP_LCX
+			JAP_liu_chengxun = {
+				promote_character = social_conservative
+			}
+			set_party_name = {
+				ideology = social_conservative
+				name = JAP_LCX_party
+				long_name = JAP_LCX_party_long
+			}
+		}
+	}
+}
+
+country_event = { #洛里奇嫡子
+	id = NKRsichuanpuppet.64
+	title = NKRsichuanpuppet.64.t
+	desc = NKRsichuanpuppet.64.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		hidden_effect = {
+			every_collection_element = {
+				input = {
+					input = constant:state_groups.russia_starting_states
+					name = collection_russia_starting_states
+				}
+				THIS = { add_core_of = RSA }
+			}
+			RSA = { drop_cosmetic_tag = yes }
+			RUS = { clear_cores_of_tag_if_possible = yes }
+			if = {
+				limit = { NOT = { country_exists = FER } }
+				FER = { clear_cores_of_tag_if_possible = yes }
+			}
+			213 = { retain_state = yes } #Murmansk
+			215 = { retain_state = yes } #White Karelia
+			216 = { retain_state = yes } #Petrozavodsk
+			218 = { retain_state = yes } #Rostov
+			234 = { retain_state = yes } #Ekaterinodar
+			242 = { retain_state = yes } #Smolensk
+			243 = { retain_state = yes } #Krichev
+			329 = { retain_state = yes } #Tuva
+			537 = { retain_state = yes } #North Sakhalin
+			577 = { retain_state = yes } #South Sakhalin
+			722 = { retain_state = yes } #Petsamo
+			755 = { retain_state = yes } #Vitebsk
+			880 = { retain_state = yes } #Latgale
+			1006 = { retain_state = yes } #Novorossiysk
+			MNR = { every_core_state = { retain_state = yes } }
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_alash = yes
+						is_siberia = yes
+						is_russian_far_east = yes
+					}
+				}
+				retain_state = yes
+			}
+		}
+	}
+
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.64 option NKRsichuanpuppet.64.a"
+		name = NKRsichuanpuppet.64.a
+		
+		set_temp_variable = { tag_to_release = RSA }
+		release_targeted_tag = yes
+		hidden_effect = {
+			set_autonomy = {
+				target = var:tag_to_release
+				autonomy_state = autonomous_puppet
+				end_wars = no
+			}
+			RUS_puppet_setup = yes
+		}
+		hidden_effect = {
+			RSA_svetoslav_roerich = {
+				set_nationality = RSA
+			}
+			RSA = {
+				RSA_svetoslav_roerich = {
+					promote_character = authoritarian_democrat_moral_sovereign_democracy_subtype
+				}
+				set_cosmetic_tag = RUS_JSP
+				set_politics = {
+					ruling_party = authoritarian_democrat
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = RUS_JSP_party
+					long_name = RUS_JSP_party_long
+				}
+			}
+		}
+	}
+}
+
+country_event = { #妖僧的遗产
+	id = NKRsichuanpuppet.65
+	title = NKRsichuanpuppet.65.t
+	desc = NKRsichuanpuppet.65.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		hidden_effect = {
+			every_collection_element = {
+				input = {
+					input = constant:state_groups.russia_starting_states
+					name = collection_russia_starting_states
+				}
+				THIS = { add_core_of = RSA }
+			}
+			RSA = { drop_cosmetic_tag = yes }
+			RUS = { clear_cores_of_tag_if_possible = yes }
+			if = {
+				limit = { NOT = { country_exists = FER } }
+				FER = { clear_cores_of_tag_if_possible = yes }
+			}
+			213 = { retain_state = yes } #Murmansk
+			215 = { retain_state = yes } #White Karelia
+			216 = { retain_state = yes } #Petrozavodsk
+			218 = { retain_state = yes } #Rostov
+			234 = { retain_state = yes } #Ekaterinodar
+			242 = { retain_state = yes } #Smolensk
+			243 = { retain_state = yes } #Krichev
+			329 = { retain_state = yes } #Tuva
+			537 = { retain_state = yes } #North Sakhalin
+			577 = { retain_state = yes } #South Sakhalin
+			722 = { retain_state = yes } #Petsamo
+			755 = { retain_state = yes } #Vitebsk
+			880 = { retain_state = yes } #Latgale
+			1006 = { retain_state = yes } #Novorossiysk
+			MNR = { every_core_state = { retain_state = yes } }
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_alash = yes
+						is_siberia = yes
+						is_russian_far_east = yes
+					}
+				}
+				retain_state = yes
+			}
+		}
+	}
+
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.65 option NKRsichuanpuppet.65.a"
+		name = NKRsichuanpuppet.65.a
+		
+		set_temp_variable = { tag_to_release = RSA }
+		release_targeted_tag = yes
+		hidden_effect = {
+			set_autonomy = {
+				target = var:tag_to_release
+				autonomy_state = autonomous_puppet
+				end_wars = no
+			}
+			RUS_puppet_setup = yes
+		}
+		hidden_effect = {
+			RSA_maria_rasputin = {
+				set_nationality = RSA
+			}
+			RSA = {
+				RSA_maria_rasputin = {
+					promote_character = national_populist_kongmengdao_subtype
+				}
+				set_cosmetic_tag = RUS_LCY
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = RUS_LCY_party
+					long_name = RUS_LCY_party_long
+				}
+			}
+		}
+	}
+}
+
+country_event = { #极北皇冠
+	id = NKRsichuanpuppet.66
+	title = NKRsichuanpuppet.66.t
+	desc = NKRsichuanpuppet.66.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		hidden_effect = {
+			every_collection_element = {
+				input = {
+					input = constant:state_groups.russia_starting_states
+					name = collection_russia_starting_states
+				}
+				THIS = { add_core_of = RSA }
+			}
+			RSA = { drop_cosmetic_tag = yes }
+			RUS = { clear_cores_of_tag_if_possible = yes }
+			if = {
+				limit = { NOT = { country_exists = FER } }
+				FER = { clear_cores_of_tag_if_possible = yes }
+			}
+			213 = { retain_state = yes } #Murmansk
+			215 = { retain_state = yes } #White Karelia
+			216 = { retain_state = yes } #Petrozavodsk
+			218 = { retain_state = yes } #Rostov
+			234 = { retain_state = yes } #Ekaterinodar
+			242 = { retain_state = yes } #Smolensk
+			243 = { retain_state = yes } #Krichev
+			329 = { retain_state = yes } #Tuva
+			537 = { retain_state = yes } #North Sakhalin
+			577 = { retain_state = yes } #South Sakhalin
+			722 = { retain_state = yes } #Petsamo
+			755 = { retain_state = yes } #Vitebsk
+			880 = { retain_state = yes } #Latgale
+			1006 = { retain_state = yes } #Novorossiysk
+			MNR = { every_core_state = { retain_state = yes } }
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_alash = yes
+						is_siberia = yes
+						is_russian_far_east = yes
+					}
+				}
+				retain_state = yes
+			}
+		}
+	}
+
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.66 option NKRsichuanpuppet.66.a"
+		name = NKRsichuanpuppet.66.a
+		set_temp_variable = { tag_to_release = RSA }
+		release_targeted_tag = yes
+		hidden_effect = {
+			set_autonomy = {
+				target = var:tag_to_release
+				autonomy_state = autonomous_puppet
+				end_wars = no
+			}
+			RUS_puppet_setup = yes
+		}
+		hidden_effect = {
+			RSA_liu_chengxun = {
+				set_nationality = RSA
+			}
+			RSA = {
+				RSA_liu_chengxun = {
+					promote_character = social_conservative_national_conservative_subtype
+				}
+				set_cosmetic_tag = RUS_LCX
+				set_politics = {
+					ruling_party = social_conservative
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = RUS_LCX_party
+					long_name = RUS_LCX_party_long
+				}
+			}
+		}
+	}
+}
+
+country_event = { #自新大陆
+	id = NKRsichuanpuppet.67
+	title = NKRsichuanpuppet.67.t
+	desc = NKRsichuanpuppet.67.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { country_exists = NEE } }
+				NEE = { clear_cores_of_tag_if_possible = yes }
+			}
+			every_state = {
+				if = {
+					limit = {
+						OR = {
+							is_mainland_america = yes
+							is_american_pacific_islands = yes
+							state = 463 #Alaska
+						}
+					}
+					add_core_of = USA
+				}
+				else = {
+					remove_core_of = USA
+				}
+				remove_core_of = WCA
+				remove_core_of = ACC
+				remove_core_of = APG
+				remove_claim_by = USA
+				remove_claim_by = WCA
+				remove_claim_by = ACC
+				remove_claim_by = APG
+			}
+			463 = { retain_state = yes } #Alaska
+			every_state = {
+				limit = { is_american_pacific_islands = yes }
+				add_core_of = HAW
+				retain_state = yes
+			}
+			WCA = {
+				if = {
+					limit = { has_character = WCA_jack_reed }
+					retire_character = WCA_jack_reed
+				}
+			}
+			USA = {
+				USA_swap_to_blue_cosmetic_tag = yes
+				if = {
+					limit = { NOT = { has_character = USA_douglas_macarthur } }
+					USA_douglas_macarthur = { set_nationality = USA }
+					promote_character = { character = USA_douglas_macarthur ideology = paternal_autocrat_subtype }
+				}
+			}
+		}
+	}
+
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.67 option NKRsichuanpuppet.67.a"
+		name = NKRsichuanpuppet.67.a
+		set_temp_variable = { tag_to_release = USA }
+		release_targeted_tag_nocosmetic = yes
+		hidden_effect = {
+			var:tag_to_release = {
+				if = {
+					limit = { has_completed_focus = USA_back_in_business }
+					uncomplete_national_focus = { focus = USA_back_in_business uncomplete_children = yes }
+				}
+			}
+		}
+		hidden_effect = {
+			USA_joseph_rock = {
+				set_nationality = USA
+			}
+			USA = {
+				USA_joseph_rock = {
+					promote_character = authoritarian_democrat_moral_sovereign_democracy_subtype
+				}
+				set_cosmetic_tag = USA_JSP
+				set_politics = {
+					ruling_party = authoritarian_democrat
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = USA_JSP_party
+					long_name = USA_JSP_party_long
+				}
+			}
+		}
+	}
+}
+
+country_event = { #黄山之手
+	id = NKRsichuanpuppet.68
+	title = NKRsichuanpuppet.68.t
+	desc = NKRsichuanpuppet.68.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { country_exists = NEE } }
+				NEE = { clear_cores_of_tag_if_possible = yes }
+			}
+			every_state = {
+				if = {
+					limit = {
+						OR = {
+							is_mainland_america = yes
+							is_american_pacific_islands = yes
+							state = 463 #Alaska
+						}
+					}
+					add_core_of = USA
+				}
+				else = {
+					remove_core_of = USA
+				}
+				remove_core_of = WCA
+				remove_core_of = ACC
+				remove_core_of = APG
+				remove_claim_by = USA
+				remove_claim_by = WCA
+				remove_claim_by = ACC
+				remove_claim_by = APG
+			}
+			463 = { retain_state = yes } #Alaska
+			every_state = {
+				limit = { is_american_pacific_islands = yes }
+				add_core_of = HAW
+				retain_state = yes
+			}
+			WCA = {
+				if = {
+					limit = { has_character = WCA_jack_reed }
+					retire_character = WCA_jack_reed
+				}
+			}
+			USA = {
+				USA_swap_to_blue_cosmetic_tag = yes
+				if = {
+					limit = { NOT = { has_character = USA_douglas_macarthur } }
+					USA_douglas_macarthur = { set_nationality = USA }
+					promote_character = { character = USA_douglas_macarthur ideology = paternal_autocrat_subtype }
+				}
+			}
+		}
+	}
+
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.68 option NKRsichuanpuppet.68.a"
+		name = NKRsichuanpuppet.68.a
+		set_temp_variable = { tag_to_release = USA }
+		release_targeted_tag_nocosmetic = yes
+		hidden_effect = {
+			var:tag_to_release = {
+				if = {
+					limit = { has_completed_focus = USA_back_in_business }
+					uncomplete_national_focus = { focus = USA_back_in_business uncomplete_children = yes }
+				}
+			}
+		}
+		hidden_effect = {
+			USA_william_mcgovern = {
+				set_nationality = USA
+			}
+			USA = {
+				USA_william_mcgovernk = {
+					promote_character = national_populist_kongmengdao_subtype
+				}
+				set_cosmetic_tag = USA_LCY
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = USA_LCY_party
+					long_name = USA_LCY_party_long
+				}
+			}
+		}
+	}
+}
+
+country_event = { #华盛顿未竟之事
+	id = NKRsichuanpuppet.69
+	title = NKRsichuanpuppet.69.t
+	desc = NKRsichuanpuppet.69.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { country_exists = NEE } }
+				NEE = { clear_cores_of_tag_if_possible = yes }
+			}
+			every_state = {
+				if = {
+					limit = {
+						OR = {
+							is_mainland_america = yes
+							is_american_pacific_islands = yes
+							state = 463 #Alaska
+						}
+					}
+					add_core_of = USA
+				}
+				else = {
+					remove_core_of = USA
+				}
+				remove_core_of = WCA
+				remove_core_of = ACC
+				remove_core_of = APG
+				remove_claim_by = USA
+				remove_claim_by = WCA
+				remove_claim_by = ACC
+				remove_claim_by = APG
+			}
+			463 = { retain_state = yes } #Alaska
+			every_state = {
+				limit = { is_american_pacific_islands = yes }
+				add_core_of = HAW
+				retain_state = yes
+			}
+			WCA = {
+				if = {
+					limit = { has_character = WCA_jack_reed }
+					retire_character = WCA_jack_reed
+				}
+			}
+			USA = {
+				USA_swap_to_blue_cosmetic_tag = yes
+				if = {
+					limit = { NOT = { has_character = USA_douglas_macarthur } }
+					USA_douglas_macarthur = { set_nationality = USA }
+					promote_character = { character = USA_douglas_macarthur ideology = paternal_autocrat_subtype }
+				}
+			}
+		}
+	}
+
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.69 option NKRsichuanpuppet.69.a"
+		name = NKRsichuanpuppet.69.a
+		set_temp_variable = { tag_to_release = USA }
+		release_targeted_tag_nocosmetic = yes
+		hidden_effect = {
+			var:tag_to_release = {
+				if = {
+					limit = { has_completed_focus = USA_back_in_business }
+					uncomplete_national_focus = { focus = USA_back_in_business uncomplete_children = yes }
+				}
+			}
+		}
+		hidden_effect = {
+			USA_liu_chengxun = {
+				set_nationality = USA
+			}
+			USA = {
+				USA_liu_chengxun = {
+					promote_character = social_conservative_national_conservative_subtype
+				}
+				set_cosmetic_tag = USA_LCX
+				set_politics = {
+					ruling_party = social_conservative
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = USA_LCX_party
+					long_name = USA_LCX_party_long
+				}
+			}
+		}
+	}
+}
+
+country_event = { #宗教的民主社会党
+	id = NKRsichuanpuppet.70
+	title = NKRsichuanpuppet.70.t
+	desc = NKRsichuanpuppet.70.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { country_exists = INC } }
+				clr_global_flag = GEA_Indochina_Uprising_Fired
+				INC = {
+					drop_cosmetic_tag = yes
+					clear_cores_of_tag_if_possible = yes
+				}
+			}
+			every_state = {
+				if = {
+					limit = { is_vietnam = no }
+					remove_core_of = VIN
+				}
+				else = {
+					add_core_of = VIN
+				}
+				remove_claim_by = VIN
+			}
+			VIN = { drop_cosmetic_tag = yes }
+			if = {
+				limit = {
+					OR = {
+						original_tag = GEA
+						annexations_france_can_annex_overseas = yes
+					}
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_france_event_target = yes
+			annexations_create_german_east_asia_event_target = yes
+		}
+	}
+
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.70 option NKRsichuanpuppet.70.a"
+		name = NKRsichuanpuppet.70.a
+		set_temp_variable = { tag_to_release = VIN }
+		release_targeted_tag = yes
+		custom_effect_tooltip = tooltip_white_line
+		INC = {
+			if = {
+				limit = {
+					exists = yes
+					has_socialist_government = yes
+					NOT = { has_completed_focus = INC_Unification }
+				}
+				if = {
+					limit = { is_subject = yes }
+					overlord = { country_event = { id = indochina_events.1955 hours = 8 } }
+				}
+				else = {
+					country_event = { id = indochina_events.1955 hours = 8 }
+				}
+			}
+		}
+		var:tag_to_release = { VIN_puppet_setup = yes }
+		hidden_effect = {
+			VIN_huynh_phoso = {
+				set_nationality = VIN
+			}
+			VIN = {
+				VIN_huynh_phoso = {
+					promote_character = authoritarian_democrat_moral_sovereign_democracy_subtype
+				}
+				set_cosmetic_tag = VIN_JSP
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = VIN_JSP_party
+					long_name = VIN_JSP_long
+				}
+				set_politics = {
+					ruling_party = authoritarian_democrat
+				}
+			}
+		}
+	}
+}
+
+country_event = { #高台
+	id = NKRsichuanpuppet.71
+	title = NKRsichuanpuppet.71.t
+	desc = NKRsichuanpuppet.71.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { country_exists = INC } }
+				clr_global_flag = GEA_Indochina_Uprising_Fired
+				INC = {
+					drop_cosmetic_tag = yes
+					clear_cores_of_tag_if_possible = yes
+				}
+			}
+			every_state = {
+				if = {
+					limit = { is_vietnam = no }
+					remove_core_of = VIN
+				}
+				else = {
+					add_core_of = VIN
+				}
+				remove_claim_by = VIN
+			}
+			VIN = { drop_cosmetic_tag = yes }
+			if = {
+				limit = {
+					OR = {
+						original_tag = GEA
+						annexations_france_can_annex_overseas = yes
+					}
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_france_event_target = yes
+			annexations_create_german_east_asia_event_target = yes
+		}
+	}
+
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.71 option NKRsichuanpuppet.71.a"
+		name = NKRsichuanpuppet.71.a
+		set_temp_variable = { tag_to_release = VIN }
+		release_targeted_tag = yes
+		custom_effect_tooltip = tooltip_white_line
+		INC = {
+			if = {
+				limit = {
+					exists = yes
+					has_socialist_government = yes
+					NOT = { has_completed_focus = INC_Unification }
+				}
+				if = {
+					limit = { is_subject = yes }
+					overlord = { country_event = { id = indochina_events.1955 hours = 8 } }
+				}
+				else = {
+					country_event = { id = indochina_events.1955 hours = 8 }
+				}
+			}
+		}
+		var:tag_to_release = { VIN_puppet_setup = yes }
+		hidden_effect = {
+			VIN_pham_congtac = {
+				set_nationality = VIN
+			}
+			VIN = {
+				VIN_pham_congtac = {
+					promote_character = national_populist_kongmengdao_subtype
+				}
+				set_cosmetic_tag = VIN_LCY
+				set_party_name = {
+					ideology = national_populist
+					name = VIN_LCY_party
+					long_name = VIN_LCY_long
+				}
+				set_politics = {
+					ruling_party = national_populist
+				}
+			}
+		}
+	}
+}
+
+country_event = { #崇高国度
+	id = NKRsichuanpuppet.72
+	title = NKRsichuanpuppet.72.t
+	desc = NKRsichuanpuppet.72.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		hidden_effect = {
+			TUR = {
+				OTT_remove_sultan = yes
+				OTT_post_defeat_setup = yes
+				TUR_apply_republic_party_names = yes
+				OTT_remove_ottoman_ambitions_claims = yes
+				TUR_disable_all_decisions = yes
+				TUR_disable_traditionalist_resistance = yes
+				if = {
+					limit = { NOT = { has_focus_tree = turkish_republic_tree } }
+					load_focus_tree = turkish_republic_tree
+					remove_ideas = {
+						TUR_remnants_OHF_reforms
+						TUR_remnants_OHF_reforms_1
+						TUR_remnants_OHF_reforms_2
+						TUR_remnants_OHF_influence
+						TUR_remnants_OHF_influence_1
+						TUR_a_cabinet_alone
+						TUR_successful_coalition
+						TUR_OHF_military_clique
+						TUR_military_reorganization
+						TUR_ottoman_democracy
+						TUR_new_ottoman_military
+						TUR_political_sociology
+						TUR_women_rights_idea
+						TUR_farmer_assistance
+						TUR_people_politization
+						TUR_coranic_schools
+						TUR_progressist_islam
+						TUR_zakat_donation
+						TUR_fruit_export
+						TUR_borsa_istanbul
+						TUR_coffee_culture
+						TUR_hafiz_mustafa_monopoly
+						TUR_gendarmerie
+						TUR_powerful_sultan
+						TUR_a_throne_without_sultan
+						TUR_remnants_hif_reforms
+						TUR_kemalist_principles_idea
+						TUR_kemal_will_tarnished
+						TUR_kemal_will_honored
+						TUR_kemal_will_achieved
+						TUR_popular_sovereignty
+						TUR_classless_society_idea
+						TUR_social_nationalism_idea
+						TUR_kadroist_party
+						TUR_kadroist_party_totalist
+						TUR_new_nationalist_army
+						TUR_war_preparation
+						TUR_opposition_resistance
+						TUR_opposition_resistance_1
+						TUR_fevzi_cult_of_personality
+						TUR_religious_community_under_threat
+						TUR_economic_accord
+						TUR_kurdish_crisis
+						TUR_revanchism_for_adana
+						TUR_final_confrontation
+					}
+					TUR_ismet_inonu = {
+						set_nationality = PREV
+						promote_character = authoritarian_democrat_subtype
+					}
+					TUR_fevzi_cakmak = {
+						set_nationality = PREV
+						promote_character = paternal_autocrat_subtype
+					}
+					TUR_fahrettin_altay = { set_nationality = PREV }
+					TUR_cemil_cahit_toydemir = { set_nationality = PREV }
+					TUR_mustafa_kemal_ataturk = { set_nationality = PREV }
+					TUR_huseyin_husnu_erkilet = { set_nationality = PREV }
+					TUR_selahattin_adil = { set_nationality = PREV }
+				}
+				TUR_omer_fahrettin_turkkan = { remove_all_country_leader_roles = yes }
+				TUR_refet_bele = { remove_all_country_leader_roles = yes }
+				TUR_ahmet_muhtar_cilli = { remove_all_country_leader_roles = yes }
+			}
+			184 = { retain_state = yes } #Komotini
+			339 = { retain_state = yes } #Smyrna
+			341 = { retain_state = yes } #Adrianople
+			344 = { retain_state = yes } #Adana
+			340 = { retain_state = yes } #Bursa
+			350 = { retain_state = yes } #Diyarbekir
+			352 = { retain_state = yes } #Van
+			342 = { retain_state = yes } #Mugla
+			773 = { retain_state = yes } #Constantinople
+			1000 = { retain_state = yes } #Kars
+			1001 = { retain_state = yes } #Lazistan
+			1089 = { retain_state = yes } #Kardzhali
+		}
+	}
+
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.72 option NKRsichuanpuppet.72.a"
+		name = NKRsichuanpuppet.72.a
+		
+		hidden_effect = {
+			OTT = {
+				reserve_dynamic_country = no
+				clr_country_flag = TUR_is_ottomans
+			}
+		}
+		set_temp_variable = { tag_to_release = TUR }
+		release_targeted_tag = yes
+		TUR_liu_chengxun = {
+			set_nationality = TUR
+		}
+		var:tag_to_release = {
+			set_cosmetic_tag = TUR_ottoman_empire
+			set_country_flag = TUR_is_ottomans
+			hidden_effect = {
+				add_ideas = OTT_economic_collapse
+				OTT_create_sultan = yes
+				remove_ideas = TUR_a_throne_without_sultan
+				load_focus_tree = ottoman_provisional_government_tree
+				TUR_set_correct_capital = yes
+				TUR_apply_ottoman_party_names = yes
+			}
+			set_cosmetic_tag = TUR_LCX
+			TUR_liu_chengxun = {
+				promote_character = social_conservative_national_conservative_subtype
+			}
+			set_politics = {
+				ruling_party = social_conservative
+			}
+			set_party_name = {
+				ideology = social_conservative
+				name = TUR_LCX_party
+				long_name = TUR_LCX_party_long
+			}
+		}
 	}
 }
 
 country_event = { #
-	id = NKRsichuanpuppet.59
-	title = NKRsichuanpuppet.59.t
-	desc = NKRsichuanpuppet.59.d
-	picture = GFX_report_event_SZC_YCP
+	id = NKRsichuanpuppet.73
+	title = NKRsichuanpuppet.73.t
+	desc = NKRsichuanpuppet.73.d
+	picture = GFX_report_event_SZC_dongdalu
 
 	is_triggered_only = yes
 	
 	
 
 	option = {#
-		log = "[GetLogInfo]: event NKRsichuanpuppet.59 option NKRsichuanpuppet.59.a"
-		name = NKRsichuanpuppet.59.a
+		log = "[GetLogInfo]: event NKRsichuanpuppet.73 option NKRsichuanpuppet.73.a"
+		name = NKRsichuanpuppet.73.a
 	}
 }
+
+country_event = { #
+	id = NKRsichuanpuppet.74
+	title = NKRsichuanpuppet.74.t
+	desc = NKRsichuanpuppet.74.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.74 option NKRsichuanpuppet.74.a"
+		name = NKRsichuanpuppet.74.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.75
+	title = NKRsichuanpuppet.75.t
+	desc = NKRsichuanpuppet.75.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.75 option NKRsichuanpuppet.75.a"
+		name = NKRsichuanpuppet.75.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.76
+	title = NKRsichuanpuppet.76.t
+	desc = NKRsichuanpuppet.76.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.76 option NKRsichuanpuppet.76.a"
+		name = NKRsichuanpuppet.76.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.77
+	title = NKRsichuanpuppet.77.t
+	desc = NKRsichuanpuppet.77.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.77 option NKRsichuanpuppet.77.a"
+		name = NKRsichuanpuppet.77.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.78
+	title = NKRsichuanpuppet.78.t
+	desc = NKRsichuanpuppet.78.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.78 option NKRsichuanpuppet.78.a"
+		name = NKRsichuanpuppet.78.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.79
+	title = NKRsichuanpuppet.79.t
+	desc = NKRsichuanpuppet.79.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.79 option NKRsichuanpuppet.79.a"
+		name = NKRsichuanpuppet.79.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.80
+	title = NKRsichuanpuppet.80.t
+	desc = NKRsichuanpuppet.80.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.80 option NKRsichuanpuppet.80.a"
+		name = NKRsichuanpuppet.80.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.81
+	title = NKRsichuanpuppet.81.t
+	desc = NKRsichuanpuppet.81.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.81 option NKRsichuanpuppet.81.a"
+		name = NKRsichuanpuppet.81.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.82
+	title = NKRsichuanpuppet.82.t
+	desc = NKRsichuanpuppet.82.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.82 option NKRsichuanpuppet.82.a"
+		name = NKRsichuanpuppet.82.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.83
+	title = NKRsichuanpuppet.83.t
+	desc = NKRsichuanpuppet.83.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.83 option NKRsichuanpuppet.83.a"
+		name = NKRsichuanpuppet.83.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.84
+	title = NKRsichuanpuppet.84.t
+	desc = NKRsichuanpuppet.84.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.84 option NKRsichuanpuppet.84.a"
+		name = NKRsichuanpuppet.84.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.85
+	title = NKRsichuanpuppet.85.t
+	desc = NKRsichuanpuppet.85.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.85 option NKRsichuanpuppet.85.a"
+		name = NKRsichuanpuppet.85.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.86
+	title = NKRsichuanpuppet.86.t
+	desc = NKRsichuanpuppet.86.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.86 option NKRsichuanpuppet.86.a"
+		name = NKRsichuanpuppet.86.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.87
+	title = NKRsichuanpuppet.87.t
+	desc = NKRsichuanpuppet.87.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.87 option NKRsichuanpuppet.87.a"
+		name = NKRsichuanpuppet.87.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.88
+	title = NKRsichuanpuppet.88.t
+	desc = NKRsichuanpuppet.88.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.88 option NKRsichuanpuppet.88.a"
+		name = NKRsichuanpuppet.88.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.89
+	title = NKRsichuanpuppet.89.t
+	desc = NKRsichuanpuppet.89.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.89 option NKRsichuanpuppet.89.a"
+		name = NKRsichuanpuppet.89.a
+	}
+}
+
+country_event = { #
+	id = NKRsichuanpuppet.90
+	title = NKRsichuanpuppet.90.t
+	desc = NKRsichuanpuppet.90.d
+	picture = GFX_report_event_SZC_dongdalu
+
+	is_triggered_only = yes
+	
+	
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.90 option NKRsichuanpuppet.90.a"
+		name = NKRsichuanpuppet.90.a
+	}
+}
+
 
 country_event = { #SZC邀请
 	id = NKRsichuanFP.1

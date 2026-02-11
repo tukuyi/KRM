@@ -13,6 +13,7 @@ on_actions = {
 								SZC_normal_ycp_path = yes
 								has_country_flag = NKRSZC_CDLpath
 								has_country_flag = SZC_YCP_jiang_path
+								has_country_flag = NKRsichuan_KMDpath
 							}
 						}
 					}
@@ -38,6 +39,7 @@ on_actions = {
 							OR = {
 								SZC_normal_ycp_path = yes
 								has_country_flag = SZC_YCP_jiang_path
+								has_country_flag = NKRsichuan_KMDpath
 							}
 						}
 					}
@@ -52,6 +54,7 @@ on_actions = {
 							OR = {
 								SZC_normal_ycp_path = yes
 								has_country_flag = SZC_YCP_jiang_path
+								has_country_flag = NKRsichuan_KMDpath
 							}
 						}
 					}
@@ -66,6 +69,7 @@ on_actions = {
 							OR = {
 								SZC_normal_ycp_path = yes
 								has_country_flag = SZC_YCP_jiang_path
+								has_country_flag = NKRsichuan_KMDpath
 							}
 						}
 					}
@@ -80,6 +84,7 @@ on_actions = {
 							OR = {
 								SZC_normal_ycp_path = yes
 								has_country_flag = SZC_YCP_jiang_path
+								has_country_flag = NKRsichuan_KMDpath
 							}
 						}
 					}
@@ -94,6 +99,11 @@ on_actions = {
 							OR = {
 								SZC_normal_ycp_path = yes
 								has_country_flag = SZC_YCP_jiang_path
+								OR = {
+									has_country_leader = { character = SZC_liu_congyun }
+									SZC_jiang_shangpu = { is_second_in_command = yes }
+									has_country_leader = { character = SZC_jiang_shangpu }
+								}
 							}
 						}
 					}
@@ -122,6 +132,10 @@ on_actions = {
 							OR = {
 								SZC_normal_ycp_path = yes
 								has_country_flag = SZC_YCP_jiang_path
+								AND = {
+									has_country_leader = { character = SZC_liu_chengxun }
+									SZC_jiang_shangpu = { is_second_in_command = no }
+								}
 							}
 						}
 					}
@@ -136,6 +150,7 @@ on_actions = {
 							OR = {
 								SZC_normal_ycp_path = yes
 								has_country_flag = SZC_YCP_jiang_path
+								has_country_flag = NKRsichuan_KMDpath
 							}
 						}
 					}
@@ -150,6 +165,7 @@ on_actions = {
 							OR = {
 								SZC_normal_ycp_path = yes
 								has_country_flag = SZC_YCP_jiang_path
+								has_country_flag = NKRsichuan_KMDpath
 							}
 						}
 					}
@@ -186,6 +202,7 @@ on_actions = {
 							OR = {
 								SZC_normal_ycp_path = yes
 								has_country_flag = SZC_YCP_jiang_path
+								has_country_flag = NKRsichuan_KMDpath
 							}
 						}
 					}
@@ -212,6 +229,11 @@ on_actions = {
 						ROOT = {
 							OR = {
 								SZC_normal_ycp_path = yes
+								OR = {
+									has_country_leader = { character = SZC_liu_congyun }
+									SZC_jiang_shangpu = { is_second_in_command = yes }
+									has_country_leader = { character = SZC_jiang_shangpu }
+								}
 							}
 						}
 					}

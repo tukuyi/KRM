@@ -10,7 +10,30 @@ country_event = { #特殊吞并 - 日本
 	option = {#实行
 		log = "[GetLogInfo]: event annexation_events.9001 option annexation_events.9001.a"
 		name = annexation_events.9001.a
-		country_event = { id = NKRsichuanpuppet.46 }
+		if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_congyun }
+			}
+			country_event = { id = NKRsichuanpuppet.62 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					SZC_jiang_shangpu = { is_second_in_command = yes }
+					has_country_leader = { character = SZC_jiang_shangpu }
+				}
+			}
+			country_event = { id = NKRsichuanpuppet.61 }
+		}
+		else_if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_chengxun }
+			}
+			country_event = { id = NKRsichuanpuppet.63 }
+		}
+		else = {
+			country_event = { id = NKRsichuanpuppet.46 }
+		}
 	}
 	option = {#搁置
 		log = "[GetLogInfo]: event annexation_events.9001 option annexation_events.9001.a"
@@ -64,11 +87,32 @@ country_event = { #特殊吞并 - 法国
 			}
 			country_event = { id = NKRsichuanpuppet.35 }
 		}
-		if = {
+		else_if = {
 			limit = {
 				has_country_flag = SZC_YCP_jiang_path
 			}
 			country_event = { id = NKRsichuanpuppet.39 }
+		}
+		else_if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_congyun }
+			}
+			country_event = { id = NKRsichuanpuppet.50 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					SZC_jiang_shangpu = { is_second_in_command = yes }
+					has_country_leader = { character = SZC_jiang_shangpu }
+				}
+			}
+			country_event = { id = NKRsichuanpuppet.51 }
+		}
+		else_if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_chengxun }
+			}
+			country_event = { id = NKRsichuanpuppet.52 }
 		}
 	}
 	option = {#搁置
@@ -99,11 +143,32 @@ country_event = { #特殊吞并 - 德国
 			}
 			country_event = { id = NKRsichuanpuppet.30 }
 		}
-		if = {
+		else_if = {
 			limit = {
 				has_country_flag = SZC_YCP_jiang_path
 			}
 			country_event = { id = NKRsichuan.677 }
+		}
+		else_if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_congyun }
+			}
+			country_event = { id = NKRsichuanpuppet.57 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					SZC_jiang_shangpu = { is_second_in_command = yes }
+					has_country_leader = { character = SZC_jiang_shangpu }
+				}
+			}
+			country_event = { id = NKRsichuanpuppet.56 }
+		}
+		else_if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_chengxun }
+			}
+			country_event = { id = NKRsichuanpuppet.58 }
 		}
 	}
 	option = {#搁置
@@ -134,11 +199,26 @@ country_event = { #特殊吞并 - 意大利
 			}
 			country_event = { id = NKRsichuan.599 }
 		}
-		if = {
+		else_if = {
 			limit = {
 				has_country_flag = SZC_YCP_jiang_path
 			}
 			country_event = { id = NKRsichuanpuppet.42 }
+		}
+		else_if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_congyun }
+			}
+			country_event = { id = NKRsichuanpuppet.60 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					SZC_jiang_shangpu = { is_second_in_command = yes }
+					has_country_leader = { character = SZC_jiang_shangpu }
+				}
+			}
+			country_event = { id = NKRsichuanpuppet.59 }
 		}
 	}
 	option = {#搁置
@@ -204,11 +284,17 @@ country_event = { #特殊吞并 - 土耳其
 			}
 			country_event = { id = NKRsichuanpuppet.38 }
 		}
-		if = {
+		else_if = {
 			limit = {
 				has_country_flag = SZC_YCP_jiang_path
 			}
 			country_event = { id = NKRsichuanpuppet.43 }
+		}
+		else_if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_chengxun }
+			}
+			country_event = { id = NKRsichuanpuppet.72 }
 		}
 	}
 	option = {#搁置
@@ -239,11 +325,32 @@ country_event = { #特殊吞并 - 俄罗斯
 			}
 			country_event = { id = NKRsichuanpuppet.34 }
 		}
-		if = {
+		else_if = {
 			limit = {
 				has_country_flag = SZC_YCP_jiang_path
 			}
 			country_event = { id = NKRsichuanpuppet.45 }
+		}
+		else_if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_congyun }
+			}
+			country_event = { id = NKRsichuanpuppet.65 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					SZC_jiang_shangpu = { is_second_in_command = yes }
+					has_country_leader = { character = SZC_jiang_shangpu }
+				}
+			}
+			country_event = { id = NKRsichuanpuppet.64 }
+		}
+		else_if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_chengxun }
+			}
+			country_event = { id = NKRsichuanpuppet.66 }
 		}
 	}
 	option = {#搁置
@@ -274,11 +381,32 @@ country_event = { #特殊吞并 - 英国
 			}
 			country_event = { id = NKRsichuanpuppet.31 }
 		}
-		if = {
+		else_if = {
 			limit = {
 				has_country_flag = SZC_YCP_jiang_path
 			}
 			country_event = { id = NKRsichuanpuppet.40 }
+		}
+		else_if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_congyun }
+			}
+			country_event = { id = NKRsichuanpuppet.54 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					SZC_jiang_shangpu = { is_second_in_command = yes }
+					has_country_leader = { character = SZC_jiang_shangpu }
+				}
+			}
+			country_event = { id = NKRsichuanpuppet.53 }
+		}
+		else_if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_chengxun }
+			}
+			country_event = { id = NKRsichuanpuppet.55 }
 		}
 	}
 	option = {#搁置
@@ -367,11 +495,32 @@ country_event = { #特殊吞并 - 美国
 			}
 			country_event = { id = NKRsichuanpuppet.32 }
 		}
-		if = {
+		else_if = {
 			limit = {
 				has_country_flag = SZC_YCP_jiang_path
 			}
 			country_event = { id = NKRsichuanpuppet.44 }
+		}
+		else_if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_congyun }
+			}
+			country_event = { id = NKRsichuanpuppet.68 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					SZC_jiang_shangpu = { is_second_in_command = yes }
+					has_country_leader = { character = SZC_jiang_shangpu }
+				}
+			}
+			country_event = { id = NKRsichuanpuppet.67 }
+		}
+		else_if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_chengxun }
+			}
+			country_event = { id = NKRsichuanpuppet.69 }
 		}
 	}
 	option = {#搁置
@@ -420,7 +569,25 @@ country_event = { #特殊吞并 - 越南
 	option = {#实行
 		log = "[GetLogInfo]: event annexation_events.9014 option annexation_events.9014.a"
 		name = annexation_events.9014.a
-		country_event = { id = NKRsichuanpuppet.49 }
+		if = {
+			limit = { SZC_normal_ycp_path = yes }
+			country_event = { id = NKRsichuanpuppet.49 }
+		}
+		else_if = {
+			limit = {
+				has_country_leader = { character = SZC_liu_congyun }
+			}
+			country_event = { id = NKRsichuanpuppet.71 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					SZC_jiang_shangpu = { is_second_in_command = yes }
+					has_country_leader = { character = SZC_jiang_shangpu }
+				}
+			}
+			country_event = { id = NKRsichuanpuppet.70 }
+		}
 	}
 	option = {#搁置
 		log = "[GetLogInfo]: event annexation_events.9014 option annexation_events.9014.b"
