@@ -18780,8 +18780,8 @@ country_event = { #泰西大秦
 			FRA_liu_chengxun = {
 				set_nationality = FRP
 			}
-			set_cosmetic_tag = FRA_LCX
 			FRP = {
+				set_cosmetic_tag = FRA_LCX
 				FRA_liu_chengxun = {
 					promote_character = social_conservative_national_conservative_subtype
 				}
@@ -18800,17 +18800,15 @@ country_event = { #泰西大秦
 					OR = {
 						is_italy_or_potential_claim = yes
 						is_spain = yes
-						is_portugal = no
+						is_portugal = yes
 					}
 				}
 				add_claim_by = FRP
 			}
 			every_state = {
 				limit = {
-					AND = {
-						is_owned_and_controlled_by_ROOT_or_subject = yes
-						is_claimed_by = FRP
-					}
+					is_claimed_by = FRP
+					is_owned_and_controlled_by_ROOT_or_subject = yes
 				}
 				transfer_state_to = FRP
 			}
@@ -19597,6 +19595,9 @@ country_event = { #国神
 			JAP_deguchi_onisaburo = {
 				promote_character = national_populist_kongmengdao_subtype
 			}
+			set_politics = {
+				ruling_party = national_populist
+			}
 			set_party_name = {
 				ideology = national_populist
 				name = JAP_LCY_party
@@ -19731,7 +19732,10 @@ country_event = { #邪马台
 			mark_focus_tree_layout_dirty = yes
 			set_cosmetic_tag = JAP_LCX
 			JAP_liu_chengxun = {
-				promote_character = social_conservative
+				promote_character = social_conservative_national_conservative_subtype
+			}
+			set_politics = {
+				ruling_party = social_conservative
 			}
 			set_party_name = {
 				ideology = social_conservative
