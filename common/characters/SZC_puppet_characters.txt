@@ -619,6 +619,21 @@ characters = {
 			traits = { }
 		}
 	}
+	#阿莱斯特·克劳利
+	ENG_aleister_crowley = {
+		name = ENG_aleister_crowley
+		portraits = {
+			civilian = {
+				small = GFX_portrait_ENG_aleister_crowley_small
+				large = GFX_portrait_ENG_aleister_crowley_large
+			}
+		}
+		country_leader = {
+			desc = ENG_aleister_crowley_desc
+			ideology = national_populist_kongmengdao_subtype
+			traits = { }
+		}
+	}
 
 	#汉斯·哈索·冯·费尔特海姆
 	GRU_hans_haaso_von_veltheim = {
@@ -807,6 +822,22 @@ characters = {
 		}
 		country_leader = {
 			desc = RSA_maria_rasputin_desc
+			ideology = national_populist_kongmengdao_subtype
+			traits = { }
+		}
+	}
+
+	#乔治·葛吉夫
+	RSA_george_gurdjieff = {
+		name = RSA_george_gurdjieff
+		portraits = {
+			civilian = {
+				small = GFX_portrait_RSA_george_gurdjieff_small
+				large = GFX_portrait_RSA_george_gurdjieff_large
+			}
+		}
+		country_leader = {
+			desc = RSA_george_gurdjieff_desc
 			ideology = national_populist_kongmengdao_subtype
 			traits = { }
 		}

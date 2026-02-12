@@ -18934,6 +18934,46 @@ country_event = { #混沌之治
 			}
 		}
 	}
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.54 option NKRsichuanpuppet.54.b"
+		name = NKRsichuanpuppet.54.b
+		custom_effect_tooltip = GBP_british_collab
+		hidden_effect = {
+			set_temp_variable = { tag_to_release = event_target:original_britain_puppet }
+			GBP_create_cores = yes
+			release_targeted_tag = yes
+			var:tag_to_release = {
+				GBP_set_up_government = yes
+				GBP_transfer_english_commanders = yes
+				SCO_transfer_commanders = yes
+				WLS_transfer_commanders = yes
+			}
+			if = {
+				limit = { NOT = { original_tag = GER } }
+				country_event = britain_puppet_events.7
+			}
+		}
+		hidden_effect = {
+			ENG_aleister_crowley = {
+				set_nationality = GBP
+			}
+			GBP = {
+				ENG_aleister_crowley = {
+					promote_character = national_populist_kongmengdao_subtype
+				}
+				set_cosmetic_tag = ENG_LCY_2
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = ENG_LCY_2_party
+					long_name = ENG_LCY_2_party_long
+				}
+			}
+		}
+	}
 }
 
 country_event = { #大汉的联合王国
@@ -19918,6 +19958,41 @@ country_event = { #妖僧的遗产
 					ideology = national_populist
 					name = RUS_LCY_party
 					long_name = RUS_LCY_party_long
+				}
+			}
+		}
+	}
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.65 option NKRsichuanpuppet.65.b"
+		name = NKRsichuanpuppet.65.b
+		
+		set_temp_variable = { tag_to_release = RSA }
+		release_targeted_tag = yes
+		hidden_effect = {
+			set_autonomy = {
+				target = var:tag_to_release
+				autonomy_state = autonomous_puppet
+				end_wars = no
+			}
+			RUS_puppet_setup = yes
+		}
+		hidden_effect = {
+			RSA_george_gurdjieff = {
+				set_nationality = RSA
+			}
+			RSA = {
+				RSA_george_gurdjieff = {
+					promote_character = national_populist_kongmengdao_subtype
+				}
+				set_cosmetic_tag = RUS_LCY_2
+				set_politics = {
+					ruling_party = national_populist
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = RUS_LCY_2_party
+					long_name = RUS_LCY_2_party_long
 				}
 			}
 		}
