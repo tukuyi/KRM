@@ -19643,6 +19643,16 @@ country_event = { #国神
 				name = JAP_LCY_party
 				long_name = JAP_LCY_party_long
 			}
+			random_list = {
+				90 = { }
+				10 = {
+					JAP_deguchi_onisaburo = {
+						set_portraits = {
+							large = GFX_portrait_JAP_deguchi_onisaburo_touhou
+						}
+					}
+				}
+			}
 		}
 	}
 }
