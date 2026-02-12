@@ -5090,6 +5090,21 @@ characters = {
 			cost = 150
 		}
 	}
+	#杨正宇
+	SZC_yang_zhengyu = {
+		name = SZC_yang_zhengyu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_yang_zhengyu_small
+				large = GFX_portrait_SZC_yang_zhengyu_large
+			}
+		}
+		country_leader = {
+			desc = SZC_yang_zhengyu_desc
+			ideology = national_populist_nationalsozialismus_subtype
+			traits = { CHN_non_aligned SZC_stupid_dinner_trait }
+		}
+	}
 
 	#刘晓岚
 	SZC_liu_xiaolan = {

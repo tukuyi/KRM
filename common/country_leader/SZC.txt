@@ -237,5 +237,16 @@ leader_traits = {
 		production_factory_max_efficiency_factor = 1
 		political_power_factor = 1
 	}
+
+	SZC_stupid_dinner_trait = {
+		custom_effect_tooltip = SZC_stupid_dinner_trait_desc
+		random = no
+		stability_factor = -0.35
+		consumer_goods_factor = 0.35
+		war_support_factor = -0.35
+		army_attack_factor = -0.5
+		army_org_factor = -0.3
+		stability_weekly = -0.05
+	}
 }
 	
