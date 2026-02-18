@@ -4970,6 +4970,8 @@ KMD_setup_dynamic_breakaways = {
 				limit = {
 					OR = {
 						has_state_flag = zhili_province_state
+						state = 1060
+						state = 1063
 					}
 				}
 				if = {
@@ -5002,7 +5004,8 @@ KMD_setup_dynamic_breakaways = {
 			every_owned_state = {
 				limit = {
 					OR = {
-						has_state_flag = zhili_province_state
+						has_state_flag = henan_province_state
+						has_state_flag = hubei_province_state
 					}
 				}
 				if = {
@@ -5140,7 +5143,8 @@ KMD_setup_dynamic_breakaways = {
 			limit = {
 				OR = {
 					has_state_flag = shanxi_province_state
-					has_state_flag = shannxi_province_state
+					has_state_flag = shaanxi_province_state
+					has_state_flag = chahar_province_state
 				}
 			}
 			if = {
