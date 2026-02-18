@@ -4742,7 +4742,73 @@ KMD_upgrade_zhuge_liang_advisor_effect = {
 	}
 }
 
+KMD_dynamic_tag_set = {
+	524 = { enable_state_integration_80_compliance = yes } #Taiwan
+	
+	every_state = {
+		limit = {
+			OR = {
+				is_mongolia = yes
+				is_tibet = yes
+				is_xinjiang = yes
+			}
+		}
+		enable_state_integration_80_compliance = yes
+	}
+	every_state = {
+		limit = { is_core_china = yes }
+		enable_state_integration_50_compliance = yes
+	}
+}
 
+KMD_setup_dynamic_breakaways = {
+	create_dynamic_country = { #华强
+		original_tag = SZC
+		set_cosmetic_tag = SZC_KMD_NAZ
+		save_global_event_target_as = SZC_NAZ
+		reserve_dynamic_country = yes
+		load_focus_tree = generic_focus_tree
+		if = {
+			limit = {
+				SZC = {
+					613 = { is_owned_by_ROOT_or_subject = yes } #Nanjing
+				}
+			}
+			613 = {
+				transfer_state_to = PREV
+			}
+		}
+		SZC = {
+			SZC_yang_zhengyu = {
+				set_nationality = PREV.PREV
+			}
+		}
+		SZC_yang_zhengyu = {
+			promote_character = national_populist_nationalsozialismus_subtype
+		}
+		set_politics = {
+			ruling_party = national_populist
+		}
+		set_party_name = {
+			ideology = national_populist
+			name = SZC_KMD_NAZ_party
+			long_name = SZC_KMD_NAZ_party_long
+		}
+		set_popularities = {
+			totalist = 2
+			radical_socialist = 1
+			syndicalist = 0
+			social_democrat = 2
+			social_liberal = 3
+			market_liberal = 2
+			social_conservative = 5
+			authoritarian_democrat = 11
+			paternal_autocrat = 21
+			national_populist = 53
+		}
+		KMD_dynamic_tag_set = yes
+	}
+}
 
 
 
