@@ -36562,7 +36562,52 @@ focus_tree = {
 					remember_old_capital = no
 				}
 			}
-			
+			hidden_effect = {
+				set_party_name = {
+					ideology = totalist
+					name = SZC_KMD_CSPECC_party
+					long_name = SZC_KMD_CSPECC_party
+				}
+				set_party_name = {
+					ideology = syndicalist
+					name = SZC_KMD_CSPDCS_party
+					long_name = SZC_KMD_CSPDCS_party
+				}
+				set_party_name = {
+					ideology = radical_socialist
+					name = SZC_KMD_NSR_party
+					long_name = SZC_KMD_NSR_party
+				}
+				set_party_name = {
+					ideology = social_democrat
+					name = SZC_KMD_PLP_party
+					long_name = SZC_KMD_PLP_party
+				}
+				set_party_name = {
+					ideology = social_liberal
+					name = SZC_KMD_NLP_party
+					long_name = SZC_KMD_NLP_party
+				}
+				set_party_name = {
+					ideology = market_liberal
+					name = SZC_KMD_CPP_party
+					long_name = SZC_KMD_CPP_party
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = SZC_KMD_CFS_party
+					long_name = SZC_KMD_CFS_party
+				}
+				SZC_assorted_leaders = {
+					promote_character = totalist_subtype
+					promote_character = syndicalist_subtype
+					promote_character = radical_socialist_subtype
+					promote_character = social_liberal_subtype
+					promote_character = market_liberal_subtype
+					promote_character = social_conservative_subtype
+					promote_character = social_democrat_subtype
+				}
+			}
 		}
 	}
 
