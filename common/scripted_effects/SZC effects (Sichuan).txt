@@ -4768,17 +4768,28 @@ KMD_setup_dynamic_breakaways = {
 		save_global_event_target_as = SZC_NAZ
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
-		if = {
-			limit = {
-				SZC = {
-					613 = { is_owned_by_ROOT_or_subject = yes } #Nanjing
-				}
-			}
-			613 = {
-				transfer_state_to = PREV
-			}
-		}
 		SZC = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						has_state_flag = jiangsu_province_state
+						has_state_flag = anhui_province_state
+					}
+				}
+				if = {
+					limit = { is_fully_controlled_by = owner }
+					transfer_state_to = PREV.PREV
+				}
+				else = {
+					set_state_owner_to = PREV.PREV
+					set_state_province_controller = {
+						controller = PREV.PREV
+						limit = { NOT = { has_war_with = ROOT } }
+					}
+				}
+				add_core_of = PREV.PREV
+				restore_previous_factory_count = yes
+			}
 			SZC_yang_zhengyu = {
 				set_nationality = PREV.PREV
 			}
@@ -4807,6 +4818,364 @@ KMD_setup_dynamic_breakaways = {
 			national_populist = 53
 		}
 		KMD_dynamic_tag_set = yes
+	}
+	create_dynamic_country = { #陈健夫
+		original_tag = SZC
+		set_cosmetic_tag = SZC_KMD_NSR
+		save_global_event_target_as = SZC_NSR
+		reserve_dynamic_country = yes
+		load_focus_tree = generic_focus_tree
+		SZC = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						has_state_flag = fujian_province_state
+						has_state_flag = jiangxi_province_state
+					}
+				}
+				if = {
+					limit = { is_fully_controlled_by = owner }
+					transfer_state_to = PREV.PREV
+				}
+				else = {
+					set_state_owner_to = PREV.PREV
+					set_state_province_controller = {
+						controller = PREV.PREV
+						limit = { NOT = { has_war_with = ROOT } }
+					}
+				}
+				add_core_of = PREV.PREV
+				restore_previous_factory_count = yes
+			}
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+		}
+		set_party_name = {
+			ideology = radical_socialist
+			name = SZC_KMD_NSR_party
+			long_name = SZC_KMD_NSR_party_long
+		}
+		KMD_dynamic_tag_set = yes
+	}
+	create_dynamic_country = { #C陈渠珍
+		original_tag = SZC
+		set_cosmetic_tag = SZC_KMD_CQZ
+		save_global_event_target_as = SZC_CQZ
+		reserve_dynamic_country = yes
+		load_focus_tree = generic_focus_tree
+		SZC = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						has_state_flag = guizhou_province_state
+					}
+				}
+				if = {
+					limit = { is_fully_controlled_by = owner }
+					transfer_state_to = PREV.PREV
+				}
+				else = {
+					set_state_owner_to = PREV.PREV
+					set_state_province_controller = {
+						controller = PREV.PREV
+						limit = { NOT = { has_war_with = ROOT } }
+					}
+				}
+				add_core_of = PREV.PREV
+				restore_previous_factory_count = yes
+			}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		KMD_dynamic_tag_set = yes
+	}
+	create_dynamic_country = { #西康
+		original_tag = SZC
+		set_cosmetic_tag = SZC_KMD_XIK
+		save_global_event_target_as = SZC_XIK
+		reserve_dynamic_country = yes
+		load_focus_tree = generic_focus_tree
+		SZC = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 601
+						state = 1015
+					}
+				}
+				if = {
+					limit = { is_fully_controlled_by = owner }
+					transfer_state_to = PREV.PREV
+				}
+				else = {
+					set_state_owner_to = PREV.PREV
+					set_state_province_controller = {
+						controller = PREV.PREV
+						limit = { NOT = { has_war_with = ROOT } }
+					}
+				}
+				add_core_of = PREV.PREV
+				restore_previous_factory_count = yes
+			}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		KMD_dynamic_tag_set = yes
+	}
+	create_dynamic_country = { #重庆康米
+		original_tag = SZC
+		set_cosmetic_tag = SZC_KMD_CSP
+		save_global_event_target_as = SZC_CSP
+		reserve_dynamic_country = yes
+		load_focus_tree = generic_focus_tree
+		SZC = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 650
+						state = 1015
+					}
+				}
+				if = {
+					limit = { is_fully_controlled_by = owner }
+					transfer_state_to = PREV.PREV
+				}
+				else = {
+					set_state_owner_to = PREV.PREV
+					set_state_province_controller = {
+						controller = PREV.PREV
+						limit = { NOT = { has_war_with = ROOT } }
+					}
+				}
+				add_core_of = PREV.PREV
+				restore_previous_factory_count = yes
+			}
+		}
+		set_politics = {
+			ruling_party = syndicalist
+		}
+		KMD_dynamic_tag_set = yes
+	}
+	create_dynamic_country = { #NYCP
+		original_tag = SZC
+		set_cosmetic_tag = SZC_KMD_NYCP
+		save_global_event_target_as = SZC_NYCP
+		reserve_dynamic_country = yes
+		load_focus_tree = generic_focus_tree
+		SZC = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						has_state_flag = zhili_province_state
+					}
+				}
+				if = {
+					limit = { is_fully_controlled_by = owner }
+					transfer_state_to = PREV.PREV
+				}
+				else = {
+					set_state_owner_to = PREV.PREV
+					set_state_province_controller = {
+						controller = PREV.PREV
+						limit = { NOT = { has_war_with = ROOT } }
+					}
+				}
+				add_core_of = PREV.PREV
+				restore_previous_factory_count = yes
+			}
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		KMD_dynamic_tag_set = yes
+	}
+	create_dynamic_country = { #JiangBaili
+		original_tag = SZC
+		set_cosmetic_tag = SZC_KMD_JBL
+		save_global_event_target_as = SZC_JBL
+		reserve_dynamic_country = yes
+		load_focus_tree = generic_focus_tree
+		SZC = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						has_state_flag = zhili_province_state
+					}
+				}
+				if = {
+					limit = { is_fully_controlled_by = owner }
+					transfer_state_to = PREV.PREV
+				}
+				else = {
+					set_state_owner_to = PREV.PREV
+					set_state_province_controller = {
+						controller = PREV.PREV
+						limit = { NOT = { has_war_with = ROOT } }
+					}
+				}
+				add_core_of = PREV.PREV
+				restore_previous_factory_count = yes
+			}
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+		}
+		KMD_dynamic_tag_set = yes
+	}
+	create_dynamic_country = { #Baise
+		original_tag = SZC
+		set_cosmetic_tag = SZC_KMD_BS
+		save_global_event_target_as = SZC_BS
+		reserve_dynamic_country = yes
+		load_focus_tree = generic_focus_tree
+		SZC = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 1054
+					}
+				}
+				if = {
+					limit = { is_fully_controlled_by = owner }
+					transfer_state_to = PREV.PREV
+				}
+				else = {
+					set_state_owner_to = PREV.PREV
+					set_state_province_controller = {
+						controller = PREV.PREV
+						limit = { NOT = { has_war_with = ROOT } }
+					}
+				}
+				add_core_of = PREV.PREV
+				restore_previous_factory_count = yes
+			}
+		}
+		set_politics = {
+			ruling_party = radical_socialist
+		}
+		KMD_dynamic_tag_set = yes
+	}
+	SZC = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					has_state_flag = zhejiang_province_state
+				}
+			}
+			if = {
+				limit = { is_fully_controlled_by = owner }
+				transfer_state_to = LEC
+			}
+			else = {
+				set_state_owner_to = LEC
+				set_state_province_controller = {
+					controller = LEC
+					limit = { NOT = { has_war_with = ROOT } }
+				}
+			}
+			restore_previous_factory_count = yes
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					has_state_flag = shandong_province_state
+				}
+			}
+			if = {
+				limit = { is_fully_controlled_by = owner }
+				transfer_state_to = GEA
+			}
+			else = {
+				set_state_owner_to = GEA
+				set_state_province_controller = {
+					controller = GEA
+					limit = { NOT = { has_war_with = ROOT } }
+				}
+			}
+			restore_previous_factory_count = yes
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					has_state_flag = guangdong_province_state
+					has_state_flag = guangxi_province_state
+				}
+			}
+			if = {
+				limit = { is_fully_controlled_by = owner }
+				transfer_state_to = GXC
+			}
+			else = {
+				set_state_owner_to = GXC
+				set_state_province_controller = {
+					controller = GXC
+					limit = { NOT = { has_war_with = ROOT } }
+				}
+			}
+			restore_previous_factory_count = yes
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					has_state_flag = yunnan_province_state
+				}
+			}
+			if = {
+				limit = { is_fully_controlled_by = owner }
+				transfer_state_to = YUN
+			}
+			else = {
+				set_state_owner_to = YUN
+				set_state_province_controller = {
+					controller = YUN
+					limit = { NOT = { has_war_with = ROOT } }
+				}
+			}
+			restore_previous_factory_count = yes
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					has_state_flag = shanxi_province_state
+					has_state_flag = shannxi_province_state
+				}
+			}
+			if = {
+				limit = { is_fully_controlled_by = owner }
+				transfer_state_to = SHX
+			}
+			else = {
+				set_state_owner_to = SHX
+				set_state_province_controller = {
+					controller = SHX
+					limit = { NOT = { has_war_with = ROOT } }
+				}
+			}
+			restore_previous_factory_count = yes
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					has_state_flag = hunan_province_state
+					has_state_flag = hunan_province_state
+				}
+			}
+			if = {
+				limit = { is_fully_controlled_by = owner }
+				transfer_state_to = HNN
+			}
+			else = {
+				set_state_owner_to = HNN
+				set_state_province_controller = {
+					controller = HNN
+					limit = { NOT = { has_war_with = ROOT } }
+				}
+			}
+			restore_previous_factory_count = yes
+		}
 	}
 }
 
