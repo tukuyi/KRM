@@ -1,0 +1,61 @@
+########3CSPCSPCSP##############
+ add_namespace = NKRsichuanCollab
+ add_namespace = NKRsichuanCollabDEBUG
+
+
+
+ country_event = {#checkCHINAUNITED
+ id = NKRsichuanCollabDEBUG.1
+ immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollabDEBUG.1" }
+ title = NKRsichuanCollabDEBUG.1.t
+ desc = NKRsichuanCollabDEBUG.1.d
+
+ is_triggered_only = yes
+
+ option = {#
+	name = "革新国家主义赵毓松"
+	SZC_zhao_yusong = {
+		SZC_recruit_character_effect = yes
+		promote_character = authoritarian_democrat_reform_statist_subtype
+	}
+	set_politics = {
+		ruling_party = authoritarian_democrat
+	}
+	set_party_name = {
+		ideology = authoritarian_democrat
+		name = SZC_YCPC_YCPCPAC_party
+		long_name = SZC_YCPC_YCPCPAC_party_long
+	}
+ }
+ option = {#
+	name = "新民国家中心思想赵毓松"
+	SZC_zhao_yusong = {
+		SZC_recruit_character_effect = yes
+		promote_character = paternal_autocrat_new_people_statist_subtype
+	}
+	set_politics = {
+		ruling_party = paternal_autocrat
+	}
+	set_party_name = {
+		ideology = paternal_autocrat
+		name = SZC_YCPC_NYCP_party
+		long_name = SZC_YCPC_NYCP_party_long
+	}
+ }
+ 
+}
+
+country_event = {#
+	id = NKRsichuanCollabDEBUG.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollabDEBUG.1" }
+	title = NKRsichuanCollabDEBUG.2.t
+	desc = NKRsichuanCollabDEBUG.2.d
+	picture = GFX_report_event_SZC_trigroup
+
+	is_triggered_only = yes
+
+	option = {#
+  	 	name = NKRsichuanCollabDEBUG.2.a
+   	}
+}
+
