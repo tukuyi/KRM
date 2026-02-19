@@ -5696,6 +5696,9 @@ KMD_setup_dynamic_breakaways = {
 			restore_previous_factory_count = yes
 		}
 	}
+	GXC = {
+		set_cosmetic_tag = GXC_yue
+	}
 	create_dynamic_country = { #表锅
 		original_tag = GXC
 		set_cosmetic_tag = GXC_gui
