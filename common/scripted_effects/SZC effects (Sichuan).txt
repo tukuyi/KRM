@@ -5150,10 +5150,10 @@ KMD_setup_dynamic_breakaways = {
 			national_populist = 5
 		}
 	}
-	create_dynamic_country = { #陈渠珍
+	create_dynamic_country = { #贵州
 		original_tag = SZC
-		set_cosmetic_tag = SZC_KMD_CQZ
-		save_global_event_target_as = SZC_CQZ
+		set_cosmetic_tag = SZC_KMD_QNN
+		save_global_event_target_as = SZC_QNN
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
 		KMD_breakaways_remove_core = yes
@@ -5180,10 +5180,10 @@ KMD_setup_dynamic_breakaways = {
 			}
 		}
 		HNN = {
-			HNN_chen_quzhen = {
+			HNN_zhou_xicheng = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = HNN_chen_quzhen
+						desc = HNN_zhou_xicheng
 						ideology = paternal_autocrat_subtype
 						traits = { CHN_non_aligned }
 					}
@@ -5191,13 +5191,13 @@ KMD_setup_dynamic_breakaways = {
 				set_nationality = PREV.PREV
 			}
 		}
-		HNN_chen_quzhen = {
+		HNN_zhou_xicheng = {
 			promote_character = paternal_autocrat_subtype
 		}
 		set_party_name = {
 			ideology = paternal_autocrat
-			name = SZC_KMD_CQZ_party
-			long_name = SZC_KMD_CQZ_party_long
+			name = SZC_KMD_QNN_party
+			long_name = SZC_KMD_QNN_party_long
 		}
 		set_capital = {
 			state = 603
