@@ -5883,13 +5883,43 @@ KMD_setup_dynamic_breakaways = {
 	NCY = {
 		breakup_army_setup = yes
 		JAP = {
-			china_puppet_PREV_effect = yes
+			KMD_break_puppet_PREV_effect = yes
 		}
 	}
 	OAA = {
 		breakup_army_setup = yes
 		GEA = {
-			china_puppet_PREV_effect = yes
+			KMD_break_puppet_PREV_effect = yes
+		}
+	}
+}
+
+KMD_break_puppet_PREV_effect = {
+	set_temp_variable = { new_overlord = THIS }
+	PREV = {
+		get_current_government_type = yes
+	}
+	set_autonomy = {
+		target = PREV
+		autonomy_state = default_puppet
+		end_wars = no
+	}
+	hidden_effect = {
+		if = {
+			limit = { has_wargoal_against = PREV }
+			remove_wargoal = { target = PREV type = all }
+		}
+		PREV = {
+			restore_previous_government_type = yes
+			clear_potential_national_government = yes
+			every_owned_state = {
+				limit = { is_core_china = yes }
+				remove_claim_by = PREV.PREV
+			}
+			if = {
+				limit = { has_wargoal_against = PREV }
+				remove_wargoal = { target = PREV type = all }
+			}
 		}
 	}
 }
