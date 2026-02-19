@@ -4761,41 +4761,13 @@ KMD_dynamic_tag_set = {
 	}
 }
 
-KMD_setup_dynamic_breakaways = {
-	
-	create_dynamic_country = { #Baise
-		original_tag = SZC
-		set_cosmetic_tag = SZC_KMD_BS
-		save_global_event_target_as = SZC_BS
-		reserve_dynamic_country = yes
-		load_focus_tree = generic_focus_tree
-		SZC = {
-			every_owned_state = {
-				limit = {
-					OR = {
-						state = 1054
-					}
-				}
-				if = {
-					limit = { is_fully_controlled_by = owner }
-					transfer_state_to = PREV.PREV
-				}
-				else = {
-					set_state_owner_to = PREV.PREV
-					set_state_province_controller = {
-						controller = PREV.PREV
-						limit = { NOT = { has_war_with = ROOT } }
-					}
-				}
-				add_core_of = PREV.PREV
-				restore_previous_factory_count = yes
-			}
-		}
-		set_politics = {
-			ruling_party = radical_socialist
-		}
-		KMD_dynamic_tag_set = yes
+KMD_breakaways_remove_core = {
+	every_state = {
+		remove_core_of = PREV
 	}
+}
+
+KMD_setup_dynamic_breakaways = {
 	SZC = {
 		every_owned_state = {
 			limit = {
@@ -4865,6 +4837,7 @@ KMD_setup_dynamic_breakaways = {
 		save_global_event_target_as = SZC_NAZ
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -4901,6 +4874,10 @@ KMD_setup_dynamic_breakaways = {
 			name = SZC_KMD_NAZ_party
 			long_name = SZC_KMD_NAZ_party_long
 		}
+		set_capital = {
+			state = 613
+			remember_old_capital = no
+		}
 		set_popularities = {
 			totalist = 2
 			radical_socialist = 1
@@ -4921,6 +4898,7 @@ KMD_setup_dynamic_breakaways = {
 		save_global_event_target_as = SZC_KKK
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -4947,7 +4925,7 @@ KMD_setup_dynamic_breakaways = {
 			}
 		}
 		SZC_kang_baiqing = {
-			promote_character = national_populist_subtype
+			promote_character = national_populist_klansmanist_subtype
 		}
 		set_politics = {
 			ruling_party = national_populist
@@ -4956,6 +4934,10 @@ KMD_setup_dynamic_breakaways = {
 			ideology = national_populist
 			name = SZC_KMD_KKK_party
 			long_name = SZC_KMD_KKK_party_long
+		}
+		set_capital = {
+			state = 596
+			remember_old_capital = no
 		}
 		set_popularities = {
 			totalist = 2
@@ -4977,6 +4959,7 @@ KMD_setup_dynamic_breakaways = {
 		save_global_event_target_as = SZC_anh
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -4998,9 +4981,24 @@ KMD_setup_dynamic_breakaways = {
 				add_core_of = PREV.PREV
 				restore_previous_factory_count = yes
 			}
+			SZC_kexiketu = {
+				set_nationality = PREV.PREV
+			}
+		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			name = SZC_KMD_AC_party
+			long_name = SZC_KMD_AC_party_long
+		}
+		SZC_kexiketu = {
+			promote_character = authoritarian_democrat_subtype
+		}
+		set_capital = {
+			state = 606
+			remember_old_capital = no
 		}
 		set_politics = {
-			ruling_party = paternal_autocrat
+			ruling_party = authoritarian_democrat
 		}
 		KMD_dynamic_tag_set = yes
 	}
@@ -5010,6 +5008,7 @@ KMD_setup_dynamic_breakaways = {
 		save_global_event_target_as = SZC_NSR
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5031,6 +5030,16 @@ KMD_setup_dynamic_breakaways = {
 				add_core_of = PREV.PREV
 				restore_previous_factory_count = yes
 			}
+			SZC_chen_jianfu = {
+				set_nationality = PREV.PREV
+			}
+		}
+		set_capital = {
+			state = 802
+			remember_old_capital = no
+		}
+		SZC_chen_jianfu = {
+			promote_character = radical_socialist_neosocialist_subtype
 		}
 		set_politics = {
 			ruling_party = radical_socialist
@@ -5048,6 +5057,7 @@ KMD_setup_dynamic_breakaways = {
 		save_global_event_target_as = SZC_dyd
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5070,17 +5080,45 @@ KMD_setup_dynamic_breakaways = {
 				restore_previous_factory_count = yes
 			}
 		}
+		CHI = {
+			CHI_deng_yanda = {
+				set_portraits = {
+					army = {
+						large = GFX_portrait_SZC_deng_yanda_punished_large
+					}
+				}
+				add_country_leader_role = {
+					desc = CHI_deng_yanda
+					ideology = paternal_autocrat_stratocracy_subtype
+					traits = { CHN_left_kuomintang_aligned }
+				}
+				set_nationality = PREV.PREV
+			}
+		}
+		CHI_deng_yanda = {
+			promote_character = paternal_autocrat_stratocracy_subtype
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = SZC_KMD_DYD_party
+			long_name = SZC_KMD_DYD_party_long
+		}
+		set_capital = {
+			state = 1044
+			remember_old_capital = no
+		}
 		set_politics = {
 			ruling_party = paternal_autocrat
 		}
 		KMD_dynamic_tag_set = yes
 	}
-	create_dynamic_country = { #C陈渠珍
+	create_dynamic_country = { #陈渠珍
 		original_tag = SZC
 		set_cosmetic_tag = SZC_KMD_CQZ
 		save_global_event_target_as = SZC_CQZ
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5103,6 +5141,28 @@ KMD_setup_dynamic_breakaways = {
 				restore_previous_factory_count = yes
 			}
 		}
+		HNN = {
+			HNN_chen_quzhen = {
+				add_country_leader_role = {
+					desc = HNN_chen_quzhen
+					ideology = paternal_autocrat_subtype
+					traits = { CHN_non_aligned }
+				}
+				set_nationality = PREV.PREV
+			}
+		}
+		HNN_chen_quzhen = {
+			promote_character = paternal_autocrat_subtype
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = SZC_KMD_CQZ_party
+			long_name = SZC_KMD_CQZ_party_long
+		}
+		set_capital = {
+			state = 603
+			remember_old_capital = no
+		}
 		set_politics = {
 			ruling_party = paternal_autocrat
 		}
@@ -5114,6 +5174,7 @@ KMD_setup_dynamic_breakaways = {
 		save_global_event_target_as = SZC_XIK
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5136,9 +5197,24 @@ KMD_setup_dynamic_breakaways = {
 				add_core_of = PREV.PREV
 				restore_previous_factory_count = yes
 			}
+			SZC_liu_yuanxuan = {
+				set_nationality = PREV.PREV
+			}
+		}
+		SZC_liu_yuanxuan = {
+			promote_character = social_conservative
+		}
+		set_party_name = {
+			ideology = social_conservative
+			name = SZC_social_conservative_party
+			long_name = SZC_social_conservative_party_long
+		}
+		set_capital = {
+			state = 601
+			remember_old_capital = no
 		}
 		set_politics = {
-			ruling_party = paternal_autocrat
+			ruling_party = social_conservative
 		}
 		KMD_dynamic_tag_set = yes
 	}
@@ -5148,6 +5224,7 @@ KMD_setup_dynamic_breakaways = {
 		save_global_event_target_as = SZC_CSP
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5170,9 +5247,24 @@ KMD_setup_dynamic_breakaways = {
 				add_core_of = PREV.PREV
 				restore_previous_factory_count = yes
 			}
+			SZC_yang_angong = {
+				set_nationality = PREV.PREV
+			}
+		}
+		SZC_yang_angong = {
+			promote_character = radical_socialist_subtype
+		}
+		set_party_name = {
+			ideology = radical_socialist
+			name = SZC_KMD_CPYC_party
+			long_name = SZC_KMD_CPYC_party_long
+		}
+		set_capital = {
+			state = 650
+			remember_old_capital = no
 		}
 		set_politics = {
-			ruling_party = syndicalist
+			ruling_party = radical_socialist
 		}
 		KMD_dynamic_tag_set = yes
 	}
@@ -5182,6 +5274,7 @@ KMD_setup_dynamic_breakaways = {
 		save_global_event_target_as = SZC_NYCP
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5205,6 +5298,21 @@ KMD_setup_dynamic_breakaways = {
 				add_core_of = PREV.PREV
 				restore_previous_factory_count = yes
 			}
+			SZC_liu_shaokun = {
+				set_nationality = PREV.PREV
+			}
+		}
+		SZC_liu_shaokun = {
+			promote_character = paternal_autocrat_new_people_statist_subtype
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = SZC_YCPC_NYCP_party
+			long_name = SZC_YCPC_NYCP_party_long
+		}
+		set_capital = {
+			state = 608
+			remember_old_capital = no
 		}
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -5217,6 +5325,7 @@ KMD_setup_dynamic_breakaways = {
 		save_global_event_target_as = SZC_JBL
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5240,6 +5349,28 @@ KMD_setup_dynamic_breakaways = {
 				restore_previous_factory_count = yes
 			}
 		}
+		QIE = {
+			QIE_jiang_baili = {
+				add_country_leader_role = {
+					desc = QIE_jiang_baili
+					ideology = authoritarian_democrat_subtype
+					traits = { CHN_northern_zhili_aligned }
+				}
+				set_nationality = PREV.PREV
+			}
+		}
+		QIE_jiang_baili = {
+			promote_character = authoritarian_democrat_subtype
+		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			name = SZC_KMD_JBL_party
+			long_name = SZC_KMD_JBL_party_long
+		}
+		set_capital = {
+			state = 1048
+			remember_old_capital = no
+		}
 		set_politics = {
 			ruling_party = authoritarian_democrat
 		}
@@ -5251,6 +5382,7 @@ KMD_setup_dynamic_breakaways = {
 		save_global_event_target_as = SZC_OAA
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5273,6 +5405,28 @@ KMD_setup_dynamic_breakaways = {
 				restore_previous_factory_count = yes
 			}
 		}
+		GEA = {
+			GEA_erwin_rommel = {
+				add_country_leader_role = {
+					desc = GEA_erwin_rommel
+					ideology = paternal_autocrat_subtype
+					traits = { CHN_northern_zhili_aligned }
+				}
+				set_nationality = PREV.PREV
+			}
+		}
+		GEA_erwin_rommel = {
+			promote_character = paternal_autocrat_subtype
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = SZC_KMD_OAA_party
+			long_name = SZC_KMD_OAA_party_long
+		}
+		set_capital = {
+			state = 1065
+			remember_old_capital = no
+		}
 		set_politics = {
 			ruling_party = paternal_autocrat
 		}
@@ -5284,6 +5438,7 @@ KMD_setup_dynamic_breakaways = {
 		save_global_event_target_as = SHX_GMJ
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5306,9 +5461,77 @@ KMD_setup_dynamic_breakaways = {
 				add_core_of = PREV.PREV
 				restore_previous_factory_count = yes
 			}
+			SZC_men_zhizhong = {
+				set_nationality = PREV.PREV
+			}
+		}
+		SHX = {
+			every_army_leader = {
+				limit = {
+					has_trait = CHN_gmj_officer
+				}
+				set_nationality = PREV.PREV
+			}
+		}
+		SZC_men_zhizhong = {
+			promote_character = authoritarian_democrat
+		}
+		set_capital = {
+			state = 622
+			remember_old_capital = no
 		}
 		set_politics = {
 			ruling_party = authoritarian_democrat
+		}
+		KMD_dynamic_tag_set = yes
+	}
+	
+	create_dynamic_country = { #Baise
+		original_tag = SZC
+		set_cosmetic_tag = SZC_KMD_BS
+		save_global_event_target_as = SZC_BS
+		reserve_dynamic_country = yes
+		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
+		SZC = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 1054
+					}
+				}
+				if = {
+					limit = { is_fully_controlled_by = owner }
+					transfer_state_to = PREV.PREV
+				}
+				else = {
+					set_state_owner_to = PREV.PREV
+					set_state_province_controller = {
+						controller = PREV.PREV
+						limit = { NOT = { has_war_with = ROOT } }
+					}
+				}
+				add_core_of = PREV.PREV
+				restore_previous_factory_count = yes
+			}
+			SZC_wei_guoqing = {
+				set_nationality = PREV.PREV
+			}
+		}
+		SZC_wei_guoqing = {
+			promote_character = totalist_subtype
+		}
+		set_party_name = {
+			ideology = totalist
+			name = SZC_KMD_BS_party
+			long_name = SZC_KMD_BS_party_long
+		}
+		set_capital = {
+			state = 1054
+			remember_old_capital = no
+		}
+		set_politics = {
+			ruling_party = radical_socialist
 		}
 		KMD_dynamic_tag_set = yes
 	}
@@ -5333,12 +5556,13 @@ KMD_setup_dynamic_breakaways = {
 			restore_previous_factory_count = yes
 		}
 	}
-	create_dynamic_country = { #LZR
+	create_dynamic_country = { #表锅
 		original_tag = GXC
 		set_cosmetic_tag = GXC_gui
-		save_global_event_target_as = GXC_gui
+		save_global_event_target_as = GXC_GUI
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5360,6 +5584,21 @@ KMD_setup_dynamic_breakaways = {
 				add_core_of = PREV.PREV
 				restore_previous_factory_count = yes
 			}
+			SZC_wang_gongdu = {
+				set_nationality = PREV.PREV
+			}
+		}
+		SZC_wang_gongdu = {
+			promote_character = paternal_autocrat_military_trotskyist_subtype
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = SZC_KMD_GUI_party
+			long_name = SZC_KMD_GUI_party_long
+		}
+		set_capital = {
+			state = 594
+			remember_old_capital = no
 		}
 		set_politics = {
 			ruling_party = paternal_autocrat

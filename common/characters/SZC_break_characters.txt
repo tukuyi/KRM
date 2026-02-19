@@ -1,0 +1,134 @@
+characters = {
+
+	#BREAKAWAYS ONLY
+	
+	
+	#杨正宇
+	SZC_yang_zhengyu = {
+		name = SZC_yang_zhengyu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_yang_zhengyu_small
+				large = GFX_portrait_SZC_yang_zhengyu_large
+			}
+		}
+		country_leader = {
+			desc = SZC_yang_zhengyu_desc
+			ideology = national_populist_nationalsozialismus_subtype
+			traits = { CHN_non_aligned SZC_stupid_dinner_trait }
+		}
+	}
+	
+	#康白情
+	SZC_kang_baiqing = {
+		name = SZC_kang_baiqing
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_kang_baiqing_small
+				large = GFX_portrait_SZC_kang_baiqing_large
+			}
+		}
+		country_leader = {
+			desc = SZC_kang_baiqing_desc
+			ideology = national_populist_klansmanist_subtype
+			traits = { CHN_non_aligned }
+		}
+	}
+
+	#陈健夫
+	SZC_chen_jianfu = {
+		name = SZC_chen_jianfu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_chen_jianfu_small
+				large = GFX_portrait_SZC_chen_jianfu_large
+			}
+		}
+		country_leader = {
+			desc = SZC_chen_jianfu_desc
+			ideology = radical_socialist_neosocialist_subtype
+			traits = { CHN_non_aligned }
+		}
+	}
+
+	#克希克图
+	SZC_kexiketu = {
+		name = SZC_kexiketu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_kexiketu_small
+				large = GFX_portrait_SZC_kexiketu_large
+			}
+		}
+		country_leader = {
+			desc = SZC_kexiketu_desc
+			ideology = authoritarian_democrat_subtype
+			traits = { CHN_non_aligned }
+		}
+	}
+
+	#王公度
+	SZC_wang_gongdu = {
+		name = SZC_wang_gongdu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_wang_gongdu_small
+				large = GFX_portrait_SZC_wang_gongdu_large
+			}
+		}
+		country_leader = {
+			desc = SZC_wang_gongdu_desc
+			ideology = paternal_autocrat_military_trotskyist_subtype
+			traits = { CHN_right_kuomintang_aligned }
+		}
+	}
+
+	#门治中
+	SZC_men_zhizhong = {
+		name = SZC_men_zhizhong
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_men_zhizhong_small
+				large = GFX_portrait_SZC_men_zhizhong_large
+			}
+		}
+		country_leader = {
+			desc = SZC_men_zhizhong_desc
+			ideology = authoritarian_democrat_subtype
+			traits = { CHN_southern_republican_aligned }
+		}
+	}
+
+	#刘绍坤
+	SZC_liu_shaokun = {
+		name = SZC_liu_shaokun
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_liu_shaokun_small
+				large = GFX_portrait_SZC_liu_shaokun_large
+			}
+		}
+		country_leader = {
+			desc = SZC_liu_shaokun_desc
+			ideology = paternal_autocrat_new_people_statist_subtype
+			traits = { CHN_geacps_aligned }
+		}
+	}
+
+	#韦国清
+	SZC_wei_guoqing = {
+		name = SZC_wei_guoqing
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_wei_guoqing_small
+				large = GFX_portrait_SZC_wei_guoqing_large
+			}
+		}
+		country_leader = {
+			desc = SZC_wei_guoqing_desc
+			ideology = totalist_subtype
+			traits = { CHN_CHNsyndicalist_aligned }
+		}
+	}
+
+}

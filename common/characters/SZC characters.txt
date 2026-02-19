@@ -61,17 +61,22 @@ characters = {
 			ideology = syndicalist_yellow_syndicalist_subtype
 		}
 	}
-	#赤心社
+	#杨闇公
 	SZC_yang_angong = {
 		name = SZC_yang_angong
 		portraits = {
 			civilian = {
-				large = GFX_portrait_unknown #should never appear
+				large = GFX_portrait_SZC_yang_angong_large
 			}
 		}
 		country_leader = {
 			# Placeholder leader, doesn't need desc
 			ideology = totalist_subtype
+		}
+		country_leader = {
+			ideology = radical_socialist_subtype
+			desc = SZC_yang_angong_desc
+			traits = { CHN_CHNsyndicalist_aligned }
 		}
 	}
 	#吴玉章
@@ -1263,6 +1268,7 @@ characters = {
 		name = SZC_liu_yuanxuan
 		portraits = {
 			army = {
+				large = GFX_portrait_SZC_liu_yuanxuan_large
 				small = GFX_portrait_SZC_liu_yuanxuan_army_small
 			}
 		}
@@ -1281,6 +1287,12 @@ characters = {
 					}
 				}
 			}
+		}
+		country_leader = {
+			desc = SZC_liu_yuanxuan_leader_desc
+			ideology = social_conservative_subtype
+			traits = { CHN_southern_republican_aligned }
+			
 		}
 	}
 	#吴景伯
@@ -5096,21 +5108,6 @@ characters = {
 			ledger = army
 			traits = { KR_MHC_army_staffer_1 }
 			cost = 150
-		}
-	}
-	#杨正宇
-	SZC_yang_zhengyu = {
-		name = SZC_yang_zhengyu
-		portraits = {
-			civilian = {
-				small = GFX_portrait_SZC_yang_zhengyu_small
-				large = GFX_portrait_SZC_yang_zhengyu_large
-			}
-		}
-		country_leader = {
-			desc = SZC_yang_zhengyu_desc
-			ideology = national_populist_nationalsozialismus_subtype
-			traits = { CHN_non_aligned SZC_stupid_dinner_trait }
 		}
 	}
 
