@@ -1474,6 +1474,14 @@ chinese_unification = {
 			if = {
 				limit = {
 					tag = SZC
+					has_country_flag = NKRSZC_CDLpath
+				}
+				has_completed_focus = SZC_pan_nanjing_democratic_government
+			}
+
+			if = {
+				limit = {
+					tag = SZC
 					has_country_flag = NKRsichuan_YCPpath
 				}
 				hidden_trigger = {
