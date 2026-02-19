@@ -27650,6 +27650,8 @@ country_event = { #最卑劣的刺杀
 			add_stability = -100
 			add_war_support = -100
 			KMD_setup_dynamic_breakaways = yes
+			delete_unit = {}
+			country_event = { id = SZCDEBUG.6 }
 		}
 	}
 
@@ -29911,5 +29913,22 @@ country_event = { #DEBUG-kongmeng giant
 				owner = ROOT
 			}
 		}
+	}
+}
+
+country_event = { #DEBUG-breakup division
+	id = SZCDEBUG.6
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	immediate = {
+		breakup_army_setup = yes
+	}
+	
+
+	option = {#
+		name = SZCDEBUG.6.a
 	}
 }

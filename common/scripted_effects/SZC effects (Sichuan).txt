@@ -5777,7 +5777,7 @@ KMD_setup_dynamic_breakaways = {
 	}
 	###huadong###
 	NAZ = {
-		breakup_army_setup = yes
+		country_event = { id = SZCDEBUG.6 }
 		declare_war_on = {
 			target = KKK
 			type = annex_everything
@@ -5796,7 +5796,7 @@ KMD_setup_dynamic_breakaways = {
 		}
 	}
 	KKK = {
-		breakup_army_setup = yes
+		country_event = { id = SZCDEBUG.6 }
 		declare_war_on = {
 			target = WAN
 			type = annex_everything
@@ -5811,14 +5811,14 @@ KMD_setup_dynamic_breakaways = {
 		}
 	}
 	NSR = {
-		breakup_army_setup = yes
+		country_event = { id = SZCDEBUG.6 }
 		declare_war_on = {
 			target = WAN
 			type = annex_everything
 		}
 	}
 	DYD = {
-		breakup_army_setup = yes
+		country_event = { id = SZCDEBUG.6 }
 		declare_war_on = {
 			target = WAN
 			type = annex_everything
@@ -5829,11 +5829,11 @@ KMD_setup_dynamic_breakaways = {
 		}
 	}
 	WAN = {
-		breakup_army_setup = yes
+		country_event = { id = SZCDEBUG.6 }
 	}
 	###liangguang###
 	BSA = {
-		breakup_army_setup = yes
+		country_event = { id = SZCDEBUG.6 }
 		declare_war_on = {
 			target = GUI
 			type = annex_everything
@@ -5844,7 +5844,7 @@ KMD_setup_dynamic_breakaways = {
 		}
 	}
 	GUI = {
-		breakup_army_setup = yes
+		country_event = { id = SZCDEBUG.6 }
 		declare_war_on = {
 			target = GXC
 			type = annex_everything
@@ -5852,7 +5852,7 @@ KMD_setup_dynamic_breakaways = {
 	}
 	###sichuan###
 	XIK = {
-		breakup_army_setup = yes
+		country_event = { id = SZCDEBUG.6 }
 		declare_war_on = {
 			target = SZC
 			type = annex_everything
@@ -5863,7 +5863,7 @@ KMD_setup_dynamic_breakaways = {
 		}
 	}
 	CQC = {
-		breakup_army_setup = yes
+		country_event = { id = SZCDEBUG.6 }
 		declare_war_on = {
 			target = SZC
 			type = annex_everything
@@ -5871,23 +5871,23 @@ KMD_setup_dynamic_breakaways = {
 	}
 	###else###
 	QNN = {
-		breakup_army_setup = yes
+		country_event = { id = SZCDEBUG.6 }
 	}
 	JBL = {
-		breakup_army_setup = yes
+		country_event = { id = SZCDEBUG.6 }
 	}
 	GMJ = {
-		breakup_army_setup = yes
+		country_event = { id = SZCDEBUG.6 }
 	}
 	###puppet###
 	NCY = {
-		breakup_army_setup = yes
+		country_event = { id = SZCDEBUG.6 }
 		JAP = {
 			KMD_break_puppet_PREV_effect = yes
 		}
 	}
 	OAA = {
-		breakup_army_setup = yes
+		country_event = { id = SZCDEBUG.6 }
 		GEA = {
 			KMD_break_puppet_PREV_effect = yes
 		}
