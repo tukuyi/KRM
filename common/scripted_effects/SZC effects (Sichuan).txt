@@ -5000,6 +5000,18 @@ KMD_setup_dynamic_breakaways = {
 		set_politics = {
 			ruling_party = authoritarian_democrat
 		}
+		set_popularities = {
+			totalist = 2
+			radical_socialist = 1
+			syndicalist = 0
+			social_democrat = 2
+			social_liberal = 3
+			market_liberal = 2
+			social_conservative = 11
+			authoritarian_democrat = 53
+			paternal_autocrat = 21
+			national_populist = 5
+		}
 		KMD_dynamic_tag_set = yes
 	}
 	create_dynamic_country = { #陈健夫
@@ -5050,6 +5062,18 @@ KMD_setup_dynamic_breakaways = {
 			long_name = SZC_KMD_NSR_party_long
 		}
 		KMD_dynamic_tag_set = yes
+		set_popularities = {
+			totalist = 5
+			radical_socialist = 53
+			syndicalist = 11
+			social_democrat = 10
+			social_liberal = 8
+			market_liberal = 5
+			social_conservative = 3
+			authoritarian_democrat = 3
+			paternal_autocrat = 1
+			national_populist = 1
+		}
 	}
 	create_dynamic_country = { #dengyanda
 		original_tag = SZC
@@ -5088,9 +5112,11 @@ KMD_setup_dynamic_breakaways = {
 					}
 				}
 				add_country_leader_role = {
-					desc = CHI_deng_yanda
-					ideology = paternal_autocrat_stratocracy_subtype
-					traits = { CHN_left_kuomintang_aligned }
+					country_leader = {
+						desc = CHI_deng_yanda
+						ideology = paternal_autocrat_stratocracy_subtype
+						traits = { CHN_left_kuomintang_aligned }
+					}
 				}
 				set_nationality = PREV.PREV
 			}
@@ -5111,6 +5137,18 @@ KMD_setup_dynamic_breakaways = {
 			ruling_party = paternal_autocrat
 		}
 		KMD_dynamic_tag_set = yes
+		set_popularities = {
+			totalist = 3
+			radical_socialist = 25
+			syndicalist = 5
+			social_democrat = 5
+			social_liberal = 3
+			market_liberal = 2
+			social_conservative = 5
+			authoritarian_democrat = 7
+			paternal_autocrat = 40
+			national_populist = 5
+		}
 	}
 	create_dynamic_country = { #陈渠珍
 		original_tag = SZC
@@ -5144,9 +5182,11 @@ KMD_setup_dynamic_breakaways = {
 		HNN = {
 			HNN_chen_quzhen = {
 				add_country_leader_role = {
-					desc = HNN_chen_quzhen
-					ideology = paternal_autocrat_subtype
-					traits = { CHN_non_aligned }
+					country_leader = {
+						desc = HNN_chen_quzhen
+						ideology = paternal_autocrat_subtype
+						traits = { CHN_non_aligned }
+					}
 				}
 				set_nationality = PREV.PREV
 			}
@@ -5167,6 +5207,18 @@ KMD_setup_dynamic_breakaways = {
 			ruling_party = paternal_autocrat
 		}
 		KMD_dynamic_tag_set = yes
+		set_popularities = {
+			totalist = 2
+			radical_socialist = 1
+			syndicalist = 0
+			social_democrat = 2
+			social_liberal = 3
+			market_liberal = 2
+			social_conservative = 5
+			authoritarian_democrat = 11
+			paternal_autocrat = 53
+			national_populist = 21
+		}
 	}
 	create_dynamic_country = { #西康
 		original_tag = SZC
@@ -5217,6 +5269,18 @@ KMD_setup_dynamic_breakaways = {
 			ruling_party = social_conservative
 		}
 		KMD_dynamic_tag_set = yes
+		set_popularities = {
+			totalist = 2
+			radical_socialist = 1
+			syndicalist = 0
+			social_democrat = 5
+			social_liberal = 8
+			market_liberal = 5
+			social_conservative = 53
+			authoritarian_democrat = 11
+			paternal_autocrat = 10
+			national_populist = 5
+		}
 	}
 	create_dynamic_country = { #重庆康米
 		original_tag = SZC
@@ -5267,6 +5331,18 @@ KMD_setup_dynamic_breakaways = {
 			ruling_party = radical_socialist
 		}
 		KMD_dynamic_tag_set = yes
+		set_popularities = {
+			totalist = 5
+			radical_socialist = 45
+			syndicalist = 40
+			social_democrat = 5
+			social_liberal = 2
+			market_liberal = 1
+			social_conservative = 1
+			authoritarian_democrat = 1
+			paternal_autocrat = 0
+			national_populist = 0
+		}
 	}
 	create_dynamic_country = { #NYCP
 		original_tag = SZC
@@ -5318,6 +5394,18 @@ KMD_setup_dynamic_breakaways = {
 			ruling_party = paternal_autocrat
 		}
 		KMD_dynamic_tag_set = yes
+		set_popularities = {
+			totalist = 2
+			radical_socialist = 1
+			syndicalist = 0
+			social_democrat = 2
+			social_liberal = 3
+			market_liberal = 2
+			social_conservative = 5
+			authoritarian_democrat = 35
+			paternal_autocrat = 45
+			national_populist = 5
+		}
 	}
 	create_dynamic_country = { #JiangBaili
 		original_tag = SZC
@@ -5352,9 +5440,11 @@ KMD_setup_dynamic_breakaways = {
 		QIE = {
 			QIE_jiang_baili = {
 				add_country_leader_role = {
-					desc = QIE_jiang_baili
-					ideology = authoritarian_democrat_subtype
-					traits = { CHN_northern_zhili_aligned }
+					country_leader = {
+						desc = QIE_jiang_baili
+						ideology = authoritarian_democrat_subtype
+						traits = { CHN_northern_zhili_aligned }
+					}
 				}
 				set_nationality = PREV.PREV
 			}
@@ -5375,6 +5465,18 @@ KMD_setup_dynamic_breakaways = {
 			ruling_party = authoritarian_democrat
 		}
 		KMD_dynamic_tag_set = yes
+		set_popularities = {
+			totalist = 1
+			radical_socialist = 1
+			syndicalist = 1
+			social_democrat = 2
+			social_liberal = 3
+			market_liberal = 2
+			social_conservative = 5
+			authoritarian_democrat = 42
+			paternal_autocrat = 40
+			national_populist = 3
+		}
 	}
 	create_dynamic_country = { #ROMMEL
 		original_tag = SZC
@@ -5408,9 +5510,11 @@ KMD_setup_dynamic_breakaways = {
 		GEA = {
 			GEA_erwin_rommel = {
 				add_country_leader_role = {
-					desc = GEA_erwin_rommel
-					ideology = paternal_autocrat_subtype
-					traits = { CHN_northern_zhili_aligned }
+					country_leader = {
+						desc = GEA_erwin_rommel
+						ideology = paternal_autocrat_subtype
+						traits = { CHN_northern_zhili_aligned }
+					}
 				}
 				set_nationality = PREV.PREV
 			}
@@ -5431,6 +5535,18 @@ KMD_setup_dynamic_breakaways = {
 			ruling_party = paternal_autocrat
 		}
 		KMD_dynamic_tag_set = yes
+		set_popularities = {
+			totalist = 1
+			radical_socialist = 1
+			syndicalist = 1
+			social_democrat = 2
+			social_liberal = 3
+			market_liberal = 2
+			social_conservative = 5
+			authoritarian_democrat = 25
+			paternal_autocrat = 55
+			national_populist = 5
+		}
 	}
 	create_dynamic_country = { #GMJ
 		original_tag = SHX
@@ -5484,6 +5600,18 @@ KMD_setup_dynamic_breakaways = {
 			ruling_party = authoritarian_democrat
 		}
 		KMD_dynamic_tag_set = yes
+		set_popularities = {
+			totalist = 2
+			radical_socialist = 1
+			syndicalist = 0
+			social_democrat = 3
+			social_liberal = 5
+			market_liberal = 3
+			social_conservative = 10
+			authoritarian_democrat = 55
+			paternal_autocrat = 18
+			national_populist = 3
+		}
 	}
 	
 	create_dynamic_country = { #Baise
@@ -5534,6 +5662,18 @@ KMD_setup_dynamic_breakaways = {
 			ruling_party = radical_socialist
 		}
 		KMD_dynamic_tag_set = yes
+		set_popularities = {
+			totalist = 50
+			radical_socialist = 20
+			syndicalist = 15
+			social_democrat = 5
+			social_liberal = 3
+			market_liberal = 2
+			social_conservative = 2
+			authoritarian_democrat = 1
+			paternal_autocrat = 1
+			national_populist = 1
+		}
 	}
 	SZC = {
 		every_owned_state = {
@@ -5604,6 +5744,18 @@ KMD_setup_dynamic_breakaways = {
 			ruling_party = paternal_autocrat
 		}
 		KMD_dynamic_tag_set = yes
+		set_popularities = {
+			totalist = 30
+			radical_socialist = 5
+			syndicalist = 3
+			social_democrat = 2
+			social_liberal = 2
+			market_liberal = 1
+			social_conservative = 2
+			authoritarian_democrat = 5
+			paternal_autocrat = 45
+			national_populist = 5
+		}
 	}
 }
 
