@@ -5757,6 +5757,21 @@ KMD_setup_dynamic_breakaways = {
 			national_populist = 5
 		}
 	}
+	SZC = {
+		set_cosmetic_tag = SZC
+		SZC_fan_shaozeng = {
+			promote_character = authoritarian_democrat_paoge_federalist_subtype
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			name = SZC_KMD_PG_party
+			long_name = SZC_KMD_PG_party_long
+			ideology = authoritarian_democrat
+		}
+	}
 }
 
 
