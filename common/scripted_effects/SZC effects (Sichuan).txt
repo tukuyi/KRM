@@ -5775,6 +5775,198 @@ KMD_setup_dynamic_breakaways = {
 			ideology = authoritarian_democrat
 		}
 	}
+	###huadong###
+	NAZ = {
+		breakup_army_setup = yes
+		declare_war_on = {
+			target = KKK
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = WAN
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = NSR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = DYD
+			type = annex_everything
+		}
+	}
+	KKK = {
+		breakup_army_setup = yes
+		declare_war_on = {
+			target = WAN
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = NSR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = DYD
+			type = annex_everything
+		}
+	}
+	NSR = {
+		breakup_army_setup = yes
+		declare_war_on = {
+			target = WAN
+			type = annex_everything
+		}
+	}
+	DYD = {
+		breakup_army_setup = yes
+		declare_war_on = {
+			target = WAN
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = NSR
+			type = annex_everything
+		}
+	}
+	WAN = {
+		breakup_army_setup = yes
+	}
+	###liangguang###
+	BSA = {
+		breakup_army_setup = yes
+		declare_war_on = {
+			target = GUI
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = GXC
+			type = annex_everything
+		}
+	}
+	GUI = {
+		breakup_army_setup = yes
+		declare_war_on = {
+			target = GXC
+			type = annex_everything
+		}
+	}
+	###sichuan###
+	XIK = {
+		breakup_army_setup = yes
+		declare_war_on = {
+			target = SZC
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = CQC
+			type = annex_everything
+		}
+	}
+	CQC = {
+		breakup_army_setup = yes
+		declare_war_on = {
+			target = SZC
+			type = annex_everything
+		}
+	}
+	###else###
+	QNN = {
+		breakup_army_setup = yes
+	}
+	JBL = {
+		breakup_army_setup = yes
+	}
+	GMJ = {
+		breakup_army_setup = yes
+	}
+	###puppet###
+	NCY = {
+		breakup_army_setup = yes
+		JAP = {
+			china_puppet_PREV_effect = yes
+		}
+	}
+	OAA = {
+		breakup_army_setup = yes
+		GEA = {
+			china_puppet_PREV_effect = yes
+		}
+	}
+}
+
+
+breakup_army_setup = {
+
+	division_template = {
+		name = "非正规步兵师" #Temporary name for now lol - Suzu
+		division_names_group = CHYN_MIL_01
+		force_allow_recruiting = yes
+		regiments = {
+			irregular_infantry = { x = 0 y = 0 }
+			irregular_infantry = { x = 0 y = 1 }
+			irregular_infantry = { x = 0 y = 2 }
+			irregular_infantry = { x = 1 y = 0 }
+			irregular_infantry = { x = 1 y = 1 }
+			irregular_infantry = { x = 1 y = 2 }
+			irregular_infantry = { x = 2 y = 0 }
+			irregular_infantry = { x = 2 y = 1 }
+			irregular_infantry = { x = 2 y = 2 }
+		}
+	}
+	random_owned_controlled_state = {
+		limit = {
+			is_in_home_area = yes
+			impassable = no
+		}
+		create_unit = {
+			division = "name = \"非正规步兵师\" division_template = \"非正规步兵师\" start_experience_factor = 0.6"
+			owner = ROOT
+		}
+		create_unit = {
+			division = "name = \"非正规步兵师\" division_template = \"非正规步兵师\" start_experience_factor = 0.6"
+			owner = ROOT
+		}
+		create_unit = {
+			division = "name = \"非正规步兵师\" division_template = \"非正规步兵师\" start_experience_factor = 0.6"
+			owner = ROOT
+		}
+		create_unit = {
+			division = "name = \"非正规步兵师\" division_template = \"非正规步兵师\" start_experience_factor = 0.6"
+			owner = ROOT
+		}
+		create_unit = {
+			division = "name = \"非正规步兵师\" division_template = \"非正规步兵师\" start_experience_factor = 0.6"
+			owner = ROOT
+		}
+		create_unit = {
+			division = "name = \"非正规步兵师\" division_template = \"非正规步兵师\" start_experience_factor = 0.6"
+			owner = ROOT
+		}
+		create_unit = {
+			division = "name = \"非正规步兵师\" division_template = \"非正规步兵师\" start_experience_factor = 0.6"
+			owner = ROOT
+		}
+		create_unit = {
+			division = "name = \"非正规步兵师\" division_template = \"非正规步兵师\" start_experience_factor = 0.6"
+			owner = ROOT
+		}
+		create_unit = {
+			division = "name = \"非正规步兵师\" division_template = \"非正规步兵师\" start_experience_factor = 0.6"
+			owner = ROOT
+		}
+		create_unit = {
+			division = "name = \"非正规步兵师\" division_template = \"非正规步兵师\" start_experience_factor = 0.6"
+			owner = ROOT
+		}
+		create_unit = {
+			division = "name = \"非正规步兵师\" division_template = \"非正规步兵师\" start_experience_factor = 0.6"
+			owner = ROOT
+		}
+		create_unit = {
+			division = "name = \"非正规步兵师\" division_template = \"非正规步兵师\" start_experience_factor = 0.6"
+			owner = ROOT
+		}
+	}
 }
 
 

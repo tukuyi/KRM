@@ -27649,34 +27649,7 @@ country_event = { #最卑劣的刺杀
 			}
 			add_stability = -100
 			add_war_support = -100
-		}
-
-		option = {#宗教实验的终结...
-			log = "[GetLogInfo]: event NKRsichuanKMD.62 option NKRsichuanKMD.62.b"
-			name = NKRsichuanKMD.62.b
-			trigger = {
-				is_debug = yes
-			}
-			custom_effect_tooltip = NKRsichuanKMD.62.tt
-			add_ideas = {
-				SZC_KMD_army_revolt
-				SZC_liu_xiang_dead
-			}
-			add_stability = -100
-			add_war_support = -100
-			SZC_yang_zhengyu = {
-				SZC_recruit_character_effect = yes
-				promote_character = national_populist_nationalsozialismus_subtype
-			}
-			set_politics = {
-				ruling_party = national_populist
-			}
-			set_party_name = {
-				ideology = national_populist
-				name = SZC_KMD_NAZ_party
-				long_name = SZC_KMD_NAZ_party_long
-			}
-			set_cosmetic_tag = SZC_KMD_NAZ
+			KMD_setup_dynamic_breakaways = yes
 		}
 	}
 
