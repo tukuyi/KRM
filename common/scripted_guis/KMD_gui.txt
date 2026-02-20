@@ -299,4 +299,77 @@ scripted_gui = {
 		}
 	}
 
+	SZC_KMD_chengxun_home = {
+		context_type = decision_category
+		window_name = "SZC_KMD_chengxun_home"
+
+
+		properties = {
+			KMD_chengxun_visual = {
+				image = "GFX_HLZJ_[?SZC_KMD_chosen_clothe.GetTokenKey]_visual"
+			}
+		}
+
+		effects = {
+			KMD_chengxun_wardrobe_click = {
+				if = {
+					limit = {
+						has_country_flag = SZC_KMD_chengxun_home_selecting
+					}
+					clr_country_flag = SZC_KMD_chengxun_home_selecting
+				}
+				else = {
+					set_country_flag = SZC_KMD_chengxun_home_selecting
+				}
+			}
+		}
+	}
+
+	SZC_KMD_chengxun_clothes_gui = {
+		context_type = player_context
+		window_name = "SZC_KMD_chengxun_clothes_gui"
+
+		visible = {
+			has_country_flag = SZC_KMD_chengxun_home_selecting
+		}
+
+		dynamic_lists = {
+			SZC_KMD_chengxun_clothes_gridbox = {
+				array = ROOT.SZC_KMD_chengxun_clothes
+				index = i
+				value = SZC_KMD_chengxun_clothe
+				entry_container = SZC_KMD_chengxun_clothe_entry
+				change_scope = yes
+			}
+		}
+
+		effects = {
+			KMD_chengxun_clothes_gui_button_close_click = {
+				clr_country_flag = SZC_KMD_chengxun_home_selecting
+			}
+			SZC_KMD_chengxun_clothe_icon_click = {
+				set_variable = { SZC_KMD_chosen_clothe = var:SZC_KMD_chengxun_clothe }
+				meta_effect = {
+						text = {
+							SZC_liu_chengxun = {
+								set_portraits = {
+									civilian = {
+										large = "GFX_portrait_[CLOTHE]_large"
+									}
+								}
+							}
+						}
+						CLOTHE = "[?SZC_KMD_chengxun_clothe.GetTokenKey]"
+				}
+				clr_country_flag = SZC_KMD_chengxun_home_selecting
+			}
+		}
+
+		properties = {
+			SZC_KMD_chengxun_clothe_icon = {
+				image = "GFX_HLZJ_[?SZC_KMD_chengxun_clothe.GetTokenKey]_clothe"
+			}
+		}
+	}
+
 }

@@ -18762,6 +18762,9 @@ country_event = { #泰西大秦
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.52 option NKRsichuanpuppet.52.a"
 		name = NKRsichuanpuppet.52.a
+		custom_effect_tooltip = KMD_chengxun_clothe_unlock
+		add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:FRA_liu_chengxun }
+
 		set_temp_variable = { tag_to_release = FRP }
 		every_state = {
 			limit = { is_france = yes }
@@ -18998,6 +19001,8 @@ country_event = { #大汉的联合王国
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.55 option NKRsichuanpuppet.55.a"
 		name = NKRsichuanpuppet.55.a
+		custom_effect_tooltip = KMD_chengxun_clothe_unlock
+		add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:ENG_liu_chengxun }
 		custom_effect_tooltip = GBP_british_collab
 		hidden_effect = {
 			set_temp_variable = { tag_to_release = event_target:original_britain_puppet }
@@ -19239,6 +19244,8 @@ country_event = { #神圣德意志
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.58 option NKRsichuanpuppet.58.a"
 		name = NKRsichuanpuppet.58.a
+		custom_effect_tooltip = KMD_chengxun_clothe_unlock
+		add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:GRU_liu_chengxun }
 		annexations_release_hohenzollern_germany = yes
 		hidden_effect = {
 			GRU_liu_chengxun = {
@@ -19689,6 +19696,8 @@ country_event = { #邪马台
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.63 option NKRsichuanpuppet.63.a"
 		name = NKRsichuanpuppet.63.a
+		custom_effect_tooltip = KMD_chengxun_clothe_unlock
+		add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:JAP_liu_chengxun }
 		set_temp_variable = { tag_to_release = JAP }
 		release_targeted_tag = yes
 		hidden_effect = {
@@ -20065,6 +20074,8 @@ country_event = { #极北皇冠
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.66 option NKRsichuanpuppet.66.a"
 		name = NKRsichuanpuppet.66.a
+		custom_effect_tooltip = KMD_chengxun_clothe_unlock
+		add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:RSA_liu_chengxun }
 		set_temp_variable = { tag_to_release = RSA }
 		release_targeted_tag = yes
 		hidden_effect = {
@@ -20353,6 +20364,8 @@ country_event = { #华盛顿未竟之事
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.69 option NKRsichuanpuppet.69.a"
 		name = NKRsichuanpuppet.69.a
+		custom_effect_tooltip = KMD_chengxun_clothe_unlock
+		add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:USA_liu_chengxun }
 		set_temp_variable = { tag_to_release = USA }
 		release_targeted_tag_nocosmetic = yes
 		hidden_effect = {
@@ -20671,6 +20684,8 @@ country_event = { #崇高国度
 		log = "[GetLogInfo]: event NKRsichuanpuppet.72 option NKRsichuanpuppet.72.a"
 		name = NKRsichuanpuppet.72.a
 		
+		custom_effect_tooltip = KMD_chengxun_clothe_unlock
+		add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:TUR_liu_chengxun }
 		hidden_effect = {
 			OTT = {
 				reserve_dynamic_country = no
@@ -28411,7 +28426,10 @@ country_event = { #最卑劣的刺杀
 					promote_leader = yes
 				}
 			}
-			
+			custom_effect_tooltip = KMD_chengxun_clothe_available
+			set_country_flag = SZC_KMD_chengxun_home_available
+			add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:SZC_liu_chengxun }
+			add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:SZC_liu_chengxun_tianzi }
 			hidden_effect = {
 				country_event = {
 					id = NKRsichuanKMD.130

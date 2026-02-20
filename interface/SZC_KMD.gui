@@ -1,5 +1,4 @@
 guiTypes = {
-	### Trouble in Liangguang GUI ###
 	containerWindowType = {
 		name = "SZC_KMD_god_arrive_gui"
 		size = { width = 100%% height = 480 }
@@ -128,7 +127,13 @@ guiTypes = {
 		smooth_scrolling = yes
 		Orientation = centre
 
-		hide_position = { x = -700 y = -1000 }
+		hide_position = { x = 535 y = -1000 }
+
+		moveable = no
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		click_to_front = yes
 		
 
 		background = {
@@ -291,7 +296,165 @@ guiTypes = {
 		}
 
 	}
+
 	
+	containerWindowType = {
+		name = "SZC_KMD_chengxun_home"
+		size = { width = 100%% height = 360 }
+
+		position = { x = 0 y = -100 }
+		
+
+		containerWindowType = {
+			name = "SZC_CDL_bop_container"
+			position = { x = 0 y = -22 }
+			size = { width = 510 height = 400 }
+			clipping = no
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_plain_bg"
+				alwaystransparent = yes
+			}
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_research_bg"
+				alwaystransparent = yes
+			}
+	
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_research_bg"
+				alwaystransparent = yes
+			}
+			buttonType = {
+				name = "KMD_chengxun_wardrobe"
+				position = { x = 33 y = 10 }
+				spriteType = "GFX_HLZJ_wardrobe"
+				pdx_tooltip = "KMD_chengxun_wardrobe_tt"
+			}
+			iconType = {
+				name = "KMD_chengxun_visual"
+				position = { x = 293 y = -8 }
+				spriteType = "GFX_HLZJ_SZC_liu_chengxun_visual"
+				pdx_tooltip = "KMD_chengxun_visual_tt"
+				pdx_tooltip_delayed = "KMD_chengxun_visual_desc_tt"
+			}
+		}
+	}
+	
+	
+	containerWindowType = {
+		name = "SZC_KMD_chengxun_clothes_gui"
+		position = { x = 535 y = 155 }
+		size = { width = 400 height = 600 }
+
+		smooth_scrolling = yes
+		Orientation = centre
+		hide_position = { x = 535 y = -1000 }
+
+		moveable = no
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		click_to_front = yes
+		
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_bg"
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "SZC_KMD_chengxun_clothes_title_window"
+			position = { x = 16 y = 12 }
+			size = { width = 345 height = 30 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_small"
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "SZC_KMD_chengxun_clothes_title"
+				position = { x = -75 y = -2 }
+				text =  SZC_KMD_chengxun_clothes_text
+				font = "hoi_36header"
+				format = center
+				maxWidth = 500
+				alwaystransparent = yes
+			}
+		}
+			
+
+		buttonType = {
+			name = "KMD_chengxun_clothes_gui_button_close"
+			position = { x = -41 y = 8 }
+			spriteType = "GFX_closebutton"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+			shortcut = "ESCAPE"
+			orientation = UPPER_RIGHT
+		}
+		
+		containerWindowType = {
+			name = "SZC_KMD_chengxun_clothes_gui_grid_container"
+			position = { x = 15 y = 40 }
+			size = { width = 378 height = 545 }
+			Orientation = centre
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				alwaystransparent = yes
+			}
+
+			smooth_scrolling = yes
+			verticalScrollbar = "right_vertical_slider"
+
+			gridboxtype = {
+				name = "SZC_KMD_chengxun_clothes_gridbox"
+				position = { x = 0 y = 0 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 180 height = 144 }
+				max_slots_horizontal = 2
+				format = "UPPER_LEFT"
+			}
+
+		}
+
+		
+
+	}
+
+	
+
+
+	containerWindowType = {
+		name = "SZC_KMD_chengxun_clothe_entry"
+		size = { width = 170 height = 140 }
+		orientation = UPPER_LEFT
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_thin_border2"
+		}
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_research_bg"
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "SZC_KMD_chengxun_clothe_icon"
+			position = { x = 3 y = -10 }
+			spriteType = GFX_HLZJ_SZC_liu_chengxun_clothe
+			pdx_tooltip = "SZC_KMD_chengxun_clothe_icon_tt"
+		}
+
+	}
 }
 
 
