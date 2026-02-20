@@ -15,7 +15,7 @@ characters = {
 		country_leader = {
 			desc = SZC_yang_zhengyu_desc
 			ideology = national_populist_nationalsozialismus_subtype
-			traits = { CHN_non_aligned SZC_stupid_dinner_trait }
+			traits = { CHN_non_aligned }
 		}
 	}
 	
@@ -131,4 +131,51 @@ characters = {
 		}
 	}
 
+		#Tarcisio Martina
+		SZC_tarcisio_martina = {
+			name = SZC_tarcisio_martina
+			portraits = {
+				civilian = {
+					small = GFX_portrait_SZC_tarcisio_martina_small
+					large = GFX_portrait_SZC_tarcisio_martina_large
+				}
+			}
+			country_leader = {
+				desc = SZC_tarcisio_martina_desc
+				ideology = paternal_autocrat_subtype
+				traits = { CHN_non_aligned }
+			}
+		}
+
+		#萧子升
+		SZC_xiao_zisheng = {
+			name = SZC_xiao_zisheng
+			portraits = {
+				civilian = {
+					small = GFX_portrait_SZC_xiao_zisheng_small
+					large = GFX_portrait_SZC_xiao_zisheng_large
+				}
+			}
+			country_leader = {
+				desc = SZC_xiao_zisheng_desc
+				ideology = syndicalist_anarcho_tridemist_subtype
+				traits = { CHN_left_kuomintang_aligned }
+			}
+		}
+
+		#朱家壁
+		SZC_zhu_jiabi = {
+			name = SZC_zhu_jiabi
+			portraits = {
+				civilian = {
+					small = GFX_portrait_SZC_zhu_jiabi_small
+					large = GFX_portrait_SZC_zhu_jiabi_large
+				}
+			}
+			country_leader = {
+				desc = SZC_zhu_jiabi_desc
+				ideology = syndicalist_anarcho_communist_subtype
+				traits = { CHN_non_aligned }
+			}
+		}
 }

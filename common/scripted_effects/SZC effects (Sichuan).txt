@@ -4768,69 +4768,6 @@ KMD_breakaways_remove_core = {
 }
 
 KMD_setup_dynamic_breakaways = {
-	SZC = {
-		every_owned_state = {
-			limit = {
-				OR = {
-					has_state_flag = yunnan_province_state
-				}
-			}
-			if = {
-				limit = { is_fully_controlled_by = owner }
-				transfer_state_to = YUN
-			}
-			else = {
-				set_state_owner_to = YUN
-				set_state_province_controller = {
-					controller = YUN
-					limit = { NOT = { has_war_with = ROOT } }
-				}
-			}
-			restore_previous_factory_count = yes
-		}
-		every_owned_state = {
-			limit = {
-				OR = {
-					has_state_flag = shanxi_province_state
-					has_state_flag = chahar_province_state
-				}
-			}
-			if = {
-				limit = { is_fully_controlled_by = owner }
-				transfer_state_to = SHX
-			}
-			else = {
-				set_state_owner_to = SHX
-				set_state_province_controller = {
-					controller = SHX
-					limit = { NOT = { has_war_with = ROOT } }
-				}
-			}
-			restore_previous_factory_count = yes
-			set_politics = {
-				ruling_party = paternal_autocrat
-			}
-		}
-		every_owned_state = {
-			limit = {
-				OR = {
-					has_state_flag = hunan_province_state
-				}
-			}
-			if = {
-				limit = { is_fully_controlled_by = owner }
-				transfer_state_to = HNN
-			}
-			else = {
-				set_state_owner_to = HNN
-				set_state_province_controller = {
-					controller = HNN
-					limit = { NOT = { has_war_with = ROOT } }
-				}
-			}
-			restore_previous_factory_count = yes
-		}
-	}
 	create_dynamic_country = { #华强
 		original_tag = SZC
 		set_cosmetic_tag = SZC_KMD_NAZ
@@ -5407,13 +5344,13 @@ KMD_setup_dynamic_breakaways = {
 			national_populist = 5
 		}
 	}
-	create_dynamic_country = { #JiangBaili
-		original_tag = SZC
-		set_cosmetic_tag = SZC_KMD_JBL
-		save_global_event_target_as = SZC_JBL
-		reserve_dynamic_country = yes
-		load_focus_tree = generic_focus_tree
-		KMD_breakaways_remove_core = yes
+	if = {
+		limit = {
+			QIE = {
+				exists = yes
+			}
+		}
+		
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5424,58 +5361,91 @@ KMD_setup_dynamic_breakaways = {
 				}
 				if = {
 					limit = { is_fully_controlled_by = owner }
-					transfer_state_to = PREV.PREV
+					transfer_state_to = QIE
 				}
 				else = {
-					set_state_owner_to = PREV.PREV
+					set_state_owner_to = QIE
 					set_state_province_controller = {
-						controller = PREV.PREV
+						controller = QIE
 						limit = { NOT = { has_war_with = ROOT } }
 					}
 				}
-				add_core_of = PREV.PREV
+				add_core_of = QIE
 				restore_previous_factory_count = yes
 			}
 		}
-		QIE = {
-			QIE_jiang_baili = {
-				add_country_leader_role = {
-					country_leader = {
-						desc = QIE_jiang_baili
-						ideology = authoritarian_democrat_subtype
-						traits = { CHN_northern_zhili_aligned }
+	}
+	else = {
+		create_dynamic_country = { #JiangBaili
+			original_tag = SZC
+			set_cosmetic_tag = SZC_KMD_JBL
+			save_global_event_target_as = SZC_JBL
+			reserve_dynamic_country = yes
+			load_focus_tree = generic_focus_tree
+			KMD_breakaways_remove_core = yes
+			SZC = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							has_state_flag = henan_province_state
+							has_state_flag = hubei_province_state
+						}
 					}
+					if = {
+						limit = { is_fully_controlled_by = owner }
+						transfer_state_to = PREV.PREV
+					}
+					else = {
+						set_state_owner_to = PREV.PREV
+						set_state_province_controller = {
+							controller = PREV.PREV
+							limit = { NOT = { has_war_with = ROOT } }
+						}
+					}
+					add_core_of = PREV.PREV
+					restore_previous_factory_count = yes
 				}
-				set_nationality = PREV.PREV
 			}
-		}
-		QIE_jiang_baili = {
-			promote_character = authoritarian_democrat_subtype
-		}
-		set_party_name = {
-			ideology = authoritarian_democrat
-			name = SZC_KMD_JBL_party
-			long_name = SZC_KMD_JBL_party_long
-		}
-		set_capital = {
-			state = 1048
-			remember_old_capital = no
-		}
-		set_politics = {
-			ruling_party = authoritarian_democrat
-		}
-		KMD_dynamic_tag_set = yes
-		set_popularities = {
-			totalist = 1
-			radical_socialist = 1
-			syndicalist = 1
-			social_democrat = 2
-			social_liberal = 3
-			market_liberal = 2
-			social_conservative = 5
-			authoritarian_democrat = 42
-			paternal_autocrat = 40
-			national_populist = 3
+			QIE = {
+				QIE_jiang_baili = {
+					add_country_leader_role = {
+						country_leader = {
+							desc = QIE_jiang_baili
+							ideology = authoritarian_democrat_subtype
+							traits = { CHN_northern_zhili_aligned }
+						}
+					}
+					set_nationality = PREV.PREV
+				}
+			}
+			QIE_jiang_baili = {
+				promote_character = authoritarian_democrat_subtype
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				name = SZC_KMD_JBL_party
+				long_name = SZC_KMD_JBL_party_long
+			}
+			set_capital = {
+				state = 1048
+				remember_old_capital = no
+			}
+			set_politics = {
+				ruling_party = authoritarian_democrat
+			}
+			KMD_dynamic_tag_set = yes
+			set_popularities = {
+				totalist = 1
+				radical_socialist = 1
+				syndicalist = 1
+				social_democrat = 2
+				social_liberal = 3
+				market_liberal = 2
+				social_conservative = 5
+				authoritarian_democrat = 42
+				paternal_autocrat = 40
+				national_populist = 3
+			}
 		}
 	}
 	create_dynamic_country = { #ROMMEL
@@ -5546,6 +5516,68 @@ KMD_setup_dynamic_breakaways = {
 			authoritarian_democrat = 25
 			paternal_autocrat = 55
 			national_populist = 5
+		}
+	}
+	create_dynamic_country = { #SHXCAT
+		original_tag = SHX
+		set_cosmetic_tag = SHX_CAT
+		save_global_event_target_as = SHX_CAT
+		reserve_dynamic_country = yes
+		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
+		SZC = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						has_state_flag = shanxi_province_state
+						has_state_flag = chahar_province_state
+					}
+				}
+				if = {
+					limit = { is_fully_controlled_by = owner }
+					transfer_state_to = PREV.PREV
+				}
+				else = {
+					set_state_owner_to = PREV.PREV
+					set_state_province_controller = {
+						controller = PREV.PREV
+						limit = { NOT = { has_war_with = ROOT } }
+					}
+				}
+				add_core_of = PREV.PREV
+				restore_previous_factory_count = yes
+			}
+			SZC_tarcisio_martina = {
+				set_nationality = PREV.PREV
+			}
+		}
+		SZC_tarcisio_martina = {
+			promote_character = paternal_autocrat_subtype
+		}
+		set_capital = {
+			state = 1072
+			remember_old_capital = no
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = SHX_CAT_party
+			long_name = SHX_CAT_party_long
+		}
+		KMD_dynamic_tag_set = yes
+		set_popularities = {
+			totalist = 2
+			radical_socialist = 1
+			syndicalist = 0
+			social_democrat = 3
+			social_liberal = 5
+			market_liberal = 3
+			social_conservative = 10
+			authoritarian_democrat = 18
+			paternal_autocrat = 55
+			national_populist = 3
 		}
 	}
 	create_dynamic_country = { #GMJ
@@ -5696,8 +5728,138 @@ KMD_setup_dynamic_breakaways = {
 			restore_previous_factory_count = yes
 		}
 	}
-	GXC = {
-		set_cosmetic_tag = GXC_yue
+	create_dynamic_country = { #BYZ
+		original_tag = YUN
+		set_cosmetic_tag = YUN_TJY
+		save_global_event_target_as = YUN_BYZ
+		reserve_dynamic_country = yes
+		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
+		SZC = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 325
+					}
+				}
+				if = {
+					limit = { is_fully_controlled_by = owner }
+					transfer_state_to = PREV.PREV
+				}
+				else = {
+					set_state_owner_to = PREV.PREV
+					set_state_province_controller = {
+						controller = PREV.PREV
+						limit = { NOT = { has_war_with = ROOT } }
+					}
+				}
+				add_core_of = PREV.PREV
+				restore_previous_factory_count = yes
+			}
+		}
+		every_possible_country = {
+			limit = { has_character = YUN_tang_jiyao }
+			YUN_tang_jiyao = {
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_SZC_tang_jiyao_byz_large
+					}
+				}
+				add_country_leader_role = {
+					country_leader = {
+						desc = YUN_tang_jiyao_desc
+						ideology = paternal_autocrat_stratocracy_subtype
+						traits = { CHN_non_aligned }
+					}
+				}
+				set_nationality = PREV.PREV
+			}
+		}
+		YUN_tang_jiyao= {
+			promote_character = paternal_autocrat_stratocracy_subtype
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = SZC_KMD_BYZ_party
+			long_name = SZC_KMD_BYZ_party
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		KMD_dynamic_tag_set = yes
+		set_popularities = {
+			totalist = 30
+			radical_socialist = 5
+			syndicalist = 3
+			social_democrat = 2
+			social_liberal = 2
+			market_liberal = 1
+			social_conservative = 2
+			authoritarian_democrat = 5
+			paternal_autocrat = 45
+			national_populist = 5
+		}
+	}
+	create_dynamic_country = { #云南马赫诺
+		original_tag = YUN
+		set_cosmetic_tag = YUN_ANC
+		save_global_event_target_as = YUN_ANC
+		reserve_dynamic_country = yes
+		load_focus_tree = generic_focus_tree
+		KMD_breakaways_remove_core = yes
+		SZC = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 816
+					}
+				}
+				if = {
+					limit = { is_fully_controlled_by = owner }
+					transfer_state_to = PREV.PREV
+				}
+				else = {
+					set_state_owner_to = PREV.PREV
+					set_state_province_controller = {
+						controller = PREV.PREV
+						limit = { NOT = { has_war_with = ROOT } }
+					}
+				}
+				add_core_of = PREV.PREV
+				restore_previous_factory_count = yes
+			}
+			SZC_zhu_jiabi = {
+				set_nationality = PREV.PREV
+			}
+		}
+		SZC_zhu_jiabi = {
+			promote_character = syndicalist_anarcho_communist_subtype
+		}
+		set_party_name = {
+			ideology = syndicalist
+			name = YUN_ANC_party
+			long_name = YUN_ANC_party_long
+		}
+		set_capital = {
+			state = 813
+			remember_old_capital = no
+		}
+		set_politics = {
+			ruling_party = syndicalist
+		}
+		KMD_dynamic_tag_set = yes
+		set_popularities = {
+			totalist = 30
+			radical_socialist = 5
+			syndicalist = 43
+			social_democrat = 2
+			social_liberal = 2
+			market_liberal = 1
+			social_conservative = 2
+			authoritarian_democrat = 5
+			paternal_autocrat = 5
+			national_populist = 5
+		}
 	}
 	create_dynamic_country = { #表锅
 		original_tag = GXC
@@ -5773,6 +5935,53 @@ KMD_setup_dynamic_breakaways = {
 			name = SZC_KMD_PG_party
 			long_name = SZC_KMD_PG_party_long
 			ideology = authoritarian_democrat
+		}
+	}
+	if = {
+		limit = {
+			HNN = {
+				exists = no
+			}
+		}
+		SZC = {
+			SZC_xiao_zisheng = {
+				set_nationality = HNN
+			}
+		}
+		HNN = {
+			SZC_xiao_zisheng = {
+				promote_character = syndicalist_anarcho_tridemist_subtype
+			}
+			set_politics = {
+				ruling_party = syndicalist
+			}
+			set_party_name = {
+				ideology = syndicalist
+				name = SZC_KMD_HNN_party
+				long_name = SZC_KMD_HNN_party_long
+			}
+			set_cosmetic_tag = HNN_ANC
+		}
+	}
+	SZC = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					has_state_flag = hunan_province_state
+				}
+			}
+			if = {
+				limit = { is_fully_controlled_by = owner }
+				transfer_state_to = HNN
+			}
+			else = {
+				set_state_owner_to = HNN
+				set_state_province_controller = {
+					controller = HNN
+					limit = { NOT = { has_war_with = ROOT } }
+				}
+			}
+			restore_previous_factory_count = yes
 		}
 	}
 	###huadong###
@@ -5869,14 +6078,35 @@ KMD_setup_dynamic_breakaways = {
 			type = annex_everything
 		}
 	}
+	###yunnan###
+	BYZ = {
+		country_event = { id = SZCDEBUG.6 }
+		declare_war_on = {
+			target = YUA
+			type = annex_everything
+		}
+	}
+	YUA = {
+		country_event = { id = SZCDEBUG.6 }
+	}
 	###else###
+	HNN = {
+		country_event = { id = SZCDEBUG.6 }
+	}
 	QNN = {
 		country_event = { id = SZCDEBUG.6 }
+		declare_war_on = {
+			target = HNN
+			type = annex_everything
+		}
 	}
 	JBL = {
 		country_event = { id = SZCDEBUG.6 }
 	}
 	GMJ = {
+		country_event = { id = SZCDEBUG.6 }
+	}
+	SCT = {
 		country_event = { id = SZCDEBUG.6 }
 	}
 	###puppet###
