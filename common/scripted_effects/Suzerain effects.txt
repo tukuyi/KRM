@@ -1,0 +1,186 @@
+
+SZR_debug_dengyanda_speak = {
+	set_variable = { ROOT.SZR_current_speaking = token:CHI_deng_yanda }
+	set_variable = { ROOT.SZR_current_chat_content = token:demo }
+	SZR_chat_setup_first = yes
+	add_to_array = { ROOT.SZR_current_chat_messages = 10000 }
+	SZR_chat_remove_first = yes
+	add_to_array = { ROOT.SZR_current_chat_messages = 1 }
+	SZR_chat_remove_first = yes
+	SZR_option_setup_debug = yes
+}
+
+SZR_debug_wang_speak = {
+	SZR_chat_portrait_remove_first = yes
+	add_to_array = { 
+		array = ROOT.SZR_chat_speaking_bois
+		value = 10002
+	}
+}
+SZR_debug_hu_speak = {
+	SZR_chat_portrait_remove_first = yes
+	add_to_array = { 
+		array = ROOT.SZR_chat_speaking_bois
+		value = 10001
+	}
+}
+
+SZR_option_setup_debug = {
+	add_to_array = { ROOT.SZR_chat_options = 1 }
+	add_to_array = { ROOT.SZR_chat_options = 2 }
+	add_to_array = { ROOT.SZR_chat_options = 3 }
+	add_to_array = { ROOT.SZR_chat_options = 4 }
+}
+
+
+SZR_chat_setup_first = {
+	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
+	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
+	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
+	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
+	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
+	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
+	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
+	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
+	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
+	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
+	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
+	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
+	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
+	add_to_array = { ROOT.SZR_chat_speaking_bois = 9999 }
+	add_to_array = { ROOT.SZR_chat_speaking_bois = 9999 }
+	add_to_array = { ROOT.SZR_chat_speaking_bois = 9999 }
+	add_to_array = { ROOT.SZR_chat_speaking_bois = 9999 }
+}
+
+SZR_chat_remove_first = {
+	remove_from_array = { 
+		array = ROOT.SZR_current_chat_messages
+		index = 0 
+	}
+}
+SZR_chat_portrait_remove_first = {
+	remove_from_array = { 
+		array = ROOT.SZR_chat_speaking_bois
+		index = 0 
+	}
+}
+SZR_chat_portrait_add_first = {
+	add_to_array = { 
+		array = ROOT.SZR_chat_speaking_bois
+		index = 0
+		value = 9999
+	}
+}
+SZR_chat_option_select = {
+	clear_array = ROOT.SZR_chat_options
+	meta_effect = {
+		text = {
+			SZR_chat_options_get_[CONTEXT] = yes
+		}
+		CONTEXT = "[?ROOT.SZR_current_chat_content.GetTokenKey]"
+	}
+}
+
+SZR_chat_continue_effect = {
+	SZR_chat_remove_first = yes
+	set_temp_variable = { last_value = ROOT.SZR_current_chat_messages^11 }
+	SZR_chat_special_transfer_check = yes
+	SZR_chat_name_check = yes
+	add_to_array = { ROOT.SZR_current_chat_messages = var:last_value }
+	SZR_chat_option_check = yes
+}
+SZR_chat_special_transfer_check = {
+	if = {
+		limit = {
+			is_in_array = {
+				value = var:last_value
+				array = ROOT.SZR_special_transfers
+			}
+		}
+		meta_effect = {
+			text = {
+				SZR_chat_special_transfer_[CONTEXT] = yes
+			}
+			CONTEXT = "[?ROOT.SZR_current_chat_content.GetTokenKey]"
+		}
+	}
+	else = {
+		add_to_temp_variable = { last_value = 1 }
+	}
+}
+SZR_chat_option_check = {
+	if = {
+		limit = {
+			is_in_array = {
+				value = var:last_value
+				array = ROOT.SZR_chat_options
+			}
+		}
+		meta_effect = {
+			text = {
+				SZR_chat_options_get_[CONTEXT] = yes
+			}
+			CONTEXT = "[?ROOT.SZR_current_chat_content.GetTokenKey]"
+		}
+	}
+}
+SZR_chat_name_check = {
+	if = {
+		limit = {
+			is_in_array = {
+				value = var:last_value
+				array = ROOT.SZR_chat_names
+			}
+		}
+		meta_effect = {
+			text = {
+				SZR_chat_names_get_[CONTEXT] = yes
+			}
+			CONTEXT = "[?ROOT.SZR_current_chat_content.GetTokenKey]"
+		}
+	}
+}
+
+SZR_chat_generic_setup = {
+	meta_effect = {
+		text = {
+			SZR_chat_[CONTEXT]_special_transfer_setup = yes
+			SZR_chat_[CONTEXT]_option_setup = yes
+		}
+		CONTEXT = "[?ROOT.SZR_current_chat_content.GetTokenKey]"
+	}
+}
+
+SZR_chat_demo_special_transfer_setup = {
+	add_to_array = {
+		array = ROOT.SZR_special_transfers
+		value = 111
+	}
+}
+
+SZR_chat_demo_option_setup = {
+	add_to_array = {
+		array = ROOT.SZR_chat_options
+		value = 111
+	}
+}
+
+SZR_chat_demo_name_setup = {
+	add_to_array = {
+		array = ROOT.SZR_chat_names
+		value = 111
+	}
+}
+
+SZR_chat_names_get_demo = {
+
+}
+
+
+SZR_chat_special_transfer_demo = {
+
+}
+SZR_chat_options_get_demo = {
+
+}

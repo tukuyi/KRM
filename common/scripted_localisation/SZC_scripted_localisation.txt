@@ -3198,3 +3198,49 @@ defined_text = {
 		localization_key = GFX_JBBB_ai
 	}
 }
+
+defined_text = {
+	name = GetSuzerainSpeakingName
+	text = {
+		localization_key = "SZR_chat_screen_name_[?SZR_current_chat_message]_text"
+	}
+}
+
+defined_text = {
+	name = GetChatText
+	text = {
+		localization_key = "SZR_chat_screen_[?ROOT.SZR_current_chat_content.GetTokenKey]_[?SZR_current_chat_message]_text"
+	}
+}
+
+defined_text = {
+	name = GetOptionText
+	text = {
+		localization_key = "SZR_chat_option_[?ROOT.SZR_current_chat_content.GetTokenKey]_[?SZR_chat_option]_text"
+	}
+}
+
+defined_text = {
+	name = SZRSpeakingBoiGetImage
+	text = {
+		localization_key = "GFX_SZR_dialog_testpig"
+		trigger = {
+			check_variable = { SZR_chat_speaking_boi = 10000 }
+		}
+	}
+	text = {
+		localization_key = "GFX_SZR_hu_the_lei"
+		trigger = {
+			check_variable = { SZR_chat_speaking_boi = 10001 }
+		}
+	}
+	text = {
+		localization_key = "GFX_SZR_wang_the_lei"
+		trigger = {
+			check_variable = { SZR_chat_speaking_boi = 10002 }
+		}
+	}
+	text = {
+		localization_key = "GFX_SZR_dialog_empty"
+	}
+}

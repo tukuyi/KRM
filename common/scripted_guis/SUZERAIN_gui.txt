@@ -1,0 +1,80 @@
+scripted_gui = {
+
+	SZR_chat_gui = {
+		context_type = player_context
+		window_name = "SZR_chat_gui"
+
+		visible = {
+			has_country_flag = SZR_chat_gui_visible
+			# tag = SZC
+		}
+
+		dynamic_lists = {
+			SZR_chat_text_main_gridbox = {
+				array = ROOT.SZR_current_chat_messages
+				index = i
+				value = ROOT.SZR_current_chat_message
+				entry_container = SZR_chat_text_entry
+				change_scope = yes
+			}
+			SZR_chat_text_option_gridbox = {
+				array = ROOT.SZR_chat_options
+				index = i
+				value = ROOT.SZR_chat_option
+				entry_container = SZR_chat_option_entry
+				change_scope = yes
+			}
+			SZR_chat_speaking_boi_gridbox = {
+				array = ROOT.SZR_chat_speaking_bois
+				index = i
+				value = SZR_chat_speaking_boi
+				entry_container = SZR_chat_speakingboi_entry
+				change_scope = yes
+			}
+		}
+
+		triggers = {
+			SZR_chat_text_textbox_visible = {
+				NOT = {
+					check_variable = {
+						var = SZR_current_chat_message
+						compare = greater_than_or_equals
+						value = 9999
+					}
+				}
+			}
+			SZR_chat_name_textbox_visible = {
+				check_variable = {
+					var = SZR_current_chat_message
+					compare = greater_than_or_equals
+					value = 9999
+				}
+			}
+			SZR_chat_continue_textbox_visible = {
+				check_variable = { ROOT.SZR_chat_options^size = 0 }
+			}
+			SZR_chat_continue_button_visible = {
+				check_variable = { ROOT.SZR_chat_options^size = 0 }
+			}
+		}
+
+		effects = {
+			SZR_chat_button_close_click = {
+				# clr_country_flag = SZR_chat_gui_visible
+			}
+			SZR_chat_option_button_click = {
+				SZR_chat_option_select = yes
+			}
+			SZR_chat_continue_button_click = {
+				SZR_chat_continue_effect = yes
+			}
+		}
+
+		properties = {
+			SZR_chat_speaking_boi_icon = {
+				image = [SZRSpeakingBoiGetImage]
+			}
+		}
+	}
+
+}

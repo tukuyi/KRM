@@ -1,0 +1,259 @@
+guiTypes = {
+	containerWindowType = {
+		name = "SZR_chat_gui"
+		size = { width = 620 height = 1440 }
+
+		position = { x = 1040 y = 0 }
+
+		smooth_scrolling = yes
+		Orientation = centre
+
+		hide_position = { x = 1040 y = -1000 }
+
+		clipping = no
+
+		moveable = no
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		click_to_front = yes
+
+		background = {
+			name = "Background"
+			spriteType = "GFX_SZR_background"
+		}
+
+
+		buttonType = {
+			name = "SZR_chat_button_close"
+			position = { x = -164 y = 8 }
+			spriteType = "GFX_SZR_close_button"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+			shortcut = "ESCAPE"
+			orientation = UPPER_RIGHT
+		}
+		
+		# iconType = {
+		# 	name = "SZR_chat_speaking_boi"
+		# 	position = { x = -80 y = 800 }
+		# 	spriteType = "GFX_SZR_dialog_testpig"
+			
+		# 	orientation = UPPER_LEFT
+		# }
+
+		containerWindowType = {
+			name = "SZR_chat_speaking_boi_grid_container"
+			position = { x = -80 y = 350 }
+			size = { width = 151 height = 604 }
+			Orientation = centre
+
+			smooth_scrolling = yes
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				# quadTextureSprite = "GFX_tiled_research_bg"
+				alwaystransparent = yes
+			}
+
+			gridboxtype = {
+				name = "SZR_chat_speaking_boi_gridbox"
+				position = { x = 0 y = 0 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 151 height = 150 }
+				max_slots_horizontal = 1
+				format = "upper_left"
+			}
+
+			
+
+		}
+
+		containerWindowType = {
+			name = "SZR_chat_text_grid_container"
+			position = { x = 50 y = 70 }
+			size = { width = 430 height = 800 }
+			Orientation = centre
+
+			verticalScrollbar = "right_vertical_slider"	
+			smooth_scrolling = yes
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				# quadTextureSprite = "GFX_tiled_research_bg"
+				alwaystransparent = yes
+			}
+
+			gridboxtype = {
+				name = "SZR_chat_text_main_gridbox"
+				position = { x = 0 y = 0 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 430 height = 60 }
+				max_slots_horizontal = 1
+				format = "upper_left"
+			}
+
+			
+
+		}
+
+		containerWindowType = {
+			name = "SZR_chat_option_grid_container"
+			position = { x = 50 y = 855 }
+			size = { width = 430 height = 500 }
+			Orientation = centre
+
+			verticalScrollbar = "right_vertical_slider"	
+			smooth_scrolling = yes
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				# quadTextureSprite = "GFX_tiled_research_bg"
+				alwaystransparent = yes
+			}
+
+			gridboxtype = {
+				name = "SZR_chat_text_option_gridbox"
+				position = { x = 0 y = 0 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 420 height = 40 }
+				max_slots_horizontal = 1
+				format = "upper_left"
+			}
+
+			instantTextBoxType = {
+				name = "SZR_chat_continue_textbox"
+				format = left
+				position = { x = 25 y = 10 }
+				text = "SZR_chat_option_continue"
+				font = "hoi_24header"
+				maxWidth = 400
+				# alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "SZR_chat_continue_button"
+				position = { x = 25 y = 10 }
+				spriteType = "GFX_SZR_option"
+				clicksound = click_close
+			}
+
+			
+
+		}
+		
+	}
+
+	containerWindowType = {
+		name = "SZR_chat_speakingboi_entry"
+		size = { width = 151 height = 150 }
+		position = { x = 0 y = 0 }
+
+		background = {
+			name = "Background"
+			# quadTextureSprite = "GFX_tiled_research_bg"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "SZR_chat_speaking_boi_icon"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_SZR_wang_the_lei"
+		}
+
+	}
+
+	containerWindowType = {
+		name = "SZR_chat_text_entry"
+		size = { width = 430 height = 60 }
+		position = { x = 0 y = 0 }
+
+		background = {
+			name = "Background"
+			# quadTextureSprite = "GFX_tiled_research_bg"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			alwaystransparent = yes
+		}
+		containerWindowType = {
+			name = "SZR_chat_text_container"
+			position = { x = 0 y = 0 }
+			size = { width = 430 height = 60 }
+
+			background = {
+				name = "background"
+				spriteType ="GFX_tiled_window_transparent"
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "SZR_chat_text_textbox"
+				format = left
+				position = { x = 15 y = 10 }
+				text = "SZR_chat_screen_text"
+				font = "hoi_24header"
+				maxWidth = 400
+				# alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "SZR_chat_name_textbox"
+				position = { x = 0 y = 35 }
+				format = left
+				text = "SZR_chat_screen_name"
+				font = "hoi_36header"
+				maxWidth = 430
+				alwaystransparent = yes
+			}
+		}
+
+	}
+
+	
+
+	containerWindowType = {
+		name = "SZR_chat_option_entry"
+		size = { width = 420 height = 40 }
+		position = { x = 0 y = 0 }
+
+		background = {
+			name = "Background"
+			# quadTextureSprite = "GFX_tiled_research_bg"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			alwaystransparent = yes
+		}
+		containerWindowType = {
+			name = "SZR_chat_option_container"
+			position = { x = 0 y = 0 }
+			size = { width = 420 height = 40 }
+
+			background = {
+				name = "background"
+				spriteType ="GFX_tiled_window_transparent"
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "SZR_chat_option_textbox"
+				format = left
+				position = { x = 15 y = 10 }
+				text = "SZR_chat_option_get"
+				font = "hoi_24header"
+				maxWidth = 400
+				# alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "SZR_chat_option_button"
+				position = { x = 15 y = 10 }
+				spriteType = "GFX_SZR_option"
+				clicksound = click_close
+			}
+		}
+
+	}
+
+	
+}
+
+
