@@ -3,11 +3,8 @@ SZR_debug_dengyanda_speak = {
 	set_variable = { ROOT.SZR_current_speaking = token:CHI_deng_yanda }
 	set_variable = { ROOT.SZR_current_chat_content = token:demo }
 	SZR_chat_setup_first = yes
-	add_to_array = { ROOT.SZR_current_chat_messages = 10000 }
-	SZR_chat_remove_first = yes
 	add_to_array = { ROOT.SZR_current_chat_messages = 1 }
 	SZR_chat_remove_first = yes
-	SZR_option_setup_debug = yes
 }
 
 SZR_debug_wang_speak = {
@@ -23,6 +20,21 @@ SZR_debug_hu_speak = {
 		array = ROOT.SZR_chat_speaking_bois
 		value = 10001
 	}
+}
+
+SZR_demo_start = {
+	set_variable = { ROOT.SZR_current_chat_content = token:demo }
+	SZR_all_setup = yes
+	add_to_array = { ROOT.SZR_current_chat_messages = 1 }
+	SZR_chat_remove_first = yes
+}
+
+SZR_all_setup = {
+	SZR_chat_generic_setup = yes
+	SZR_chat_demo_portraits_setup = yes
+	SZR_chat_demo_special_transfer_setup = yes
+	SZR_chat_demo_option_setup = yes
+	SZR_chat_demo_name_setup = yes
 }
 
 SZR_option_setup_debug = {
@@ -53,6 +65,17 @@ SZR_chat_setup_first = {
 	add_to_array = { ROOT.SZR_chat_speaking_bois = 9999 }
 }
 
+SZR_chat_close = {
+	clear_array = ROOT.SZR_current_chat_messages
+	clear_array = ROOT.SZR_chat_speaking_bois
+	clear_array = ROOT.SZR_chat_options
+	clear_array = ROOT.SZR_chat_names
+	clear_array = ROOT.SZR_special_transfers
+	clear_array = ROOT.SZR_current_chat_content
+	clear_array = ROOT.SZR_portraits_local
+	clr_country_flag = SZR_chat_gui_visible
+}
+
 SZR_chat_remove_first = {
 	remove_from_array = { 
 		array = ROOT.SZR_current_chat_messages
@@ -72,11 +95,21 @@ SZR_chat_portrait_add_first = {
 		value = 9999
 	}
 }
+SZR_chat_portrait_move_last = {
+	remove_from_array = { 
+		array = ROOT.SZR_chat_speaking_bois
+		value = var:temp_add_boi
+	}
+	add_to_array = { 
+		array = ROOT.SZR_chat_speaking_bois
+		value = var:temp_add_boi
+	}
+}
 SZR_chat_option_select = {
 	clear_array = ROOT.SZR_chat_options
 	meta_effect = {
 		text = {
-			SZR_chat_options_get_[CONTEXT] = yes
+			SZR_chat_options_EFFECT_[CONTEXT] = yes
 		}
 		CONTEXT = "[?ROOT.SZR_current_chat_content.GetTokenKey]"
 	}
@@ -85,9 +118,11 @@ SZR_chat_option_select = {
 SZR_chat_continue_effect = {
 	SZR_chat_remove_first = yes
 	set_temp_variable = { last_value = ROOT.SZR_current_chat_messages^11 }
+	SZR_chat_END_check = yes
 	SZR_chat_special_transfer_check = yes
 	SZR_chat_name_check = yes
 	add_to_array = { ROOT.SZR_current_chat_messages = var:last_value }
+	SZR_chat_portraits_get_demo = yes
 	SZR_chat_option_check = yes
 }
 SZR_chat_special_transfer_check = {
@@ -142,6 +177,18 @@ SZR_chat_name_check = {
 	}
 }
 
+SZR_chat_END_check = {
+	if = {
+		limit = {
+			is_in_array = {
+				value = var:last_value
+				array = ROOT.SZR_END_msgs
+			}
+		}
+		SZR_chat_close = yes
+	}
+}
+
 SZR_chat_generic_setup = {
 	meta_effect = {
 		text = {
@@ -152,29 +199,100 @@ SZR_chat_generic_setup = {
 	}
 }
 
+SZR_chat_demo_portraits_setup = {
+	add_to_array = { ROOT.SZR_portraits_local = 3 }
+	add_to_array = { ROOT.SZR_portraits_local = 12 }
+	add_to_array = { ROOT.SZR_portraits_local = 21 }
+	add_to_array = { ROOT.SZR_portraits_local = 24 }
+	add_to_array = { ROOT.SZR_portraits_local = 37 }
+}
+
 SZR_chat_demo_special_transfer_setup = {
-	add_to_array = {
-		array = ROOT.SZR_special_transfers
-		value = 111
-	}
+	# add_to_array = {
+	# 	array = ROOT.SZR_special_transfers
+	# 	value = 111
+	# }
 }
 
 SZR_chat_demo_option_setup = {
-	add_to_array = {
-		array = ROOT.SZR_chat_options
-		value = 111
-	}
+	add_to_array = { ROOT.SZR_chat_options = 18 }
+	add_to_array = { ROOT.SZR_chat_options = 39 }
 }
 
 SZR_chat_demo_name_setup = {
-	add_to_array = {
-		array = ROOT.SZR_chat_names
-		value = 111
+	add_to_array = { ROOT.SZR_chat_names = 4 }
+	add_to_array = { ROOT.SZR_chat_names = 12 }
+	add_to_array = { ROOT.SZR_chat_names = 15 }
+	add_to_array = { ROOT.SZR_chat_names = 17 }
+	add_to_array = { ROOT.SZR_chat_names = 24 }
+	add_to_array = { ROOT.SZR_chat_names = 28 }
+	add_to_array = { ROOT.SZR_chat_names = 31 }
+	add_to_array = { ROOT.SZR_chat_names = 35 }
+}
+
+SZR_chat_portraits_get_demo = {
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SZR_current_chat_message = 4 }
+			}
+		}
+		SZR_chat_portrait_remove_first = yes
+		add_to_array = { ROOT.SZR_chat_speaking_bois = 10000 }
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SZR_current_chat_message = 12 }
+			}
+		}
+		SZR_chat_portrait_remove_first = yes
+		add_to_array = { ROOT.SZR_chat_speaking_bois = 10002 }
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SZR_current_chat_message = 24 }
+			}
+		}
+		SZR_chat_portrait_remove_first = yes
+		add_to_array = { ROOT.SZR_chat_speaking_bois = 10001 }
 	}
 }
 
 SZR_chat_names_get_demo = {
-
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SZR_current_chat_message = 4 }
+				check_variable = { SZR_current_chat_message = 10 }
+			}
+		}
+		add_to_array = { ROOT.SZR_current_chat_messages = 10000 }
+		SZR_chat_remove_first = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SZR_current_chat_message = 15 }
+				check_variable = { SZR_current_chat_message = 17 }
+			}
+		}
+		add_to_array = { ROOT.SZR_current_chat_messages = 10002 }
+		SZR_chat_remove_first = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SZR_current_chat_message = 24 }
+				check_variable = { SZR_current_chat_message = 28 }
+				check_variable = { SZR_current_chat_message = 31 }
+				check_variable = { SZR_current_chat_message = 35 }
+			}
+		}
+		add_to_array = { ROOT.SZR_current_chat_messages = 10001 }
+		SZR_chat_remove_first = yes
+	}
 }
 
 
@@ -182,5 +300,44 @@ SZR_chat_special_transfer_demo = {
 
 }
 SZR_chat_options_get_demo = {
-
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SZR_current_chat_message = 18 }
+			}
+		}
+		add_to_array = { ROOT.SZR_chat_options = 11 }
+		add_to_array = { ROOT.SZR_chat_options = 12 }
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SZR_current_chat_message = 39 }
+			}
+		}
+		add_to_array = { ROOT.SZR_chat_options = 21 }
+		add_to_array = { ROOT.SZR_chat_options = 22 }
+		add_to_array = { ROOT.SZR_chat_options = 23 }
+	}
+}
+SZR_chat_options_EFFECT_demo = {
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SZR_chat_option = 11 }
+				check_variable = { SZR_chat_option = 12 }
+			}
+		}
+		SZR_chat_continue_effect = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { SZR_chat_option = 21 }
+				check_variable = { SZR_chat_option = 22 }
+				check_variable = { SZR_chat_option = 23 }
+			}
+		}
+		SZR_chat_continue_effect = yes
+	}
 }
