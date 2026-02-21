@@ -29950,3 +29950,16 @@ country_event = { #DEBUG-breakup division
 		name = SZCDEBUG.6.a
 	}
 }
+
+country_event = { #DEBUG-DEMO
+	id = SZCDEBUG.7
+
+	is_triggered_only = yes
+
+	
+
+	option = {#
+		name = SZCDEBUG.7.a
+		SZR_demo_start = yes
+	}
+}

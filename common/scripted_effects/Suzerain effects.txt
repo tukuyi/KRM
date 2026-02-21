@@ -27,14 +27,12 @@ SZR_demo_start = {
 	SZR_all_setup = yes
 	add_to_array = { ROOT.SZR_current_chat_messages = 1 }
 	SZR_chat_remove_first = yes
+	ROOT = { set_country_flag = SZR_chat_gui_visible }
 }
 
 SZR_all_setup = {
+	SZR_chat_setup_first = yes
 	SZR_chat_generic_setup = yes
-	SZR_chat_demo_portraits_setup = yes
-	SZR_chat_demo_special_transfer_setup = yes
-	SZR_chat_demo_option_setup = yes
-	SZR_chat_demo_name_setup = yes
 }
 
 SZR_option_setup_debug = {
@@ -46,7 +44,6 @@ SZR_option_setup_debug = {
 
 
 SZR_chat_setup_first = {
-	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
 	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
 	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
 	add_to_array = { ROOT.SZR_current_chat_messages = 9998 }
@@ -73,6 +70,7 @@ SZR_chat_close = {
 	clear_array = ROOT.SZR_special_transfers
 	clear_array = ROOT.SZR_current_chat_content
 	clear_array = ROOT.SZR_portraits_local
+	clear_array = ROOT.SZR_END_msgs
 	clr_country_flag = SZR_chat_gui_visible
 }
 
@@ -117,13 +115,15 @@ SZR_chat_option_select = {
 
 SZR_chat_continue_effect = {
 	SZR_chat_remove_first = yes
+	log = "last_value = [?last_value]"
 	set_temp_variable = { last_value = ROOT.SZR_current_chat_messages^11 }
+	log = "last_value = [?last_value]"
 	SZR_chat_END_check = yes
 	SZR_chat_special_transfer_check = yes
 	SZR_chat_name_check = yes
-	add_to_array = { ROOT.SZR_current_chat_messages = var:last_value }
-	SZR_chat_portraits_get_demo = yes
+	SZR_chat_portrait_check = yes
 	SZR_chat_option_check = yes
+	add_to_array = { ROOT.SZR_current_chat_messages = var:last_value }
 }
 SZR_chat_special_transfer_check = {
 	if = {
@@ -137,11 +137,12 @@ SZR_chat_special_transfer_check = {
 			text = {
 				SZR_chat_special_transfer_[CONTEXT] = yes
 			}
-			CONTEXT = "[?ROOT.SZR_current_chat_content.GetTokenKey]"
+			CONTEXT = "[?SZR_current_chat_content.GetTokenKey]"
 		}
 	}
 	else = {
 		add_to_temp_variable = { last_value = 1 }
+		log = "last_value = [?last_value]"
 	}
 }
 SZR_chat_option_check = {
@@ -149,14 +150,14 @@ SZR_chat_option_check = {
 		limit = {
 			is_in_array = {
 				value = var:last_value
-				array = ROOT.SZR_chat_options
+				array = ROOT.SZR_chat_options_available
 			}
 		}
 		meta_effect = {
 			text = {
 				SZR_chat_options_get_[CONTEXT] = yes
 			}
-			CONTEXT = "[?ROOT.SZR_current_chat_content.GetTokenKey]"
+			CONTEXT = "[?SZR_current_chat_content.GetTokenKey]"
 		}
 	}
 }
@@ -172,7 +173,24 @@ SZR_chat_name_check = {
 			text = {
 				SZR_chat_names_get_[CONTEXT] = yes
 			}
-			CONTEXT = "[?ROOT.SZR_current_chat_content.GetTokenKey]"
+			CONTEXT = "[?SZR_current_chat_content.GetTokenKey]"
+		}
+	}
+}
+SZR_chat_portrait_check = {
+	if = {
+		limit = {
+			is_in_array = {
+				value = var:last_value
+				array = ROOT.SZR_portraits_local
+			}
+		}
+		meta_effect = {
+			text = {
+				SZR_chat_portraits_get_[CONTEXT] = yes
+				log = "last_value = SZR_chat_portraits_get_[CONTEXT]"
+			}
+			CONTEXT = "[?SZR_current_chat_content.GetTokenKey]"
 		}
 	}
 }
@@ -194,29 +212,37 @@ SZR_chat_generic_setup = {
 		text = {
 			SZR_chat_[CONTEXT]_special_transfer_setup = yes
 			SZR_chat_[CONTEXT]_option_setup = yes
+			SZR_chat_[CONTEXT]_END_setup = yes
+			SZR_chat_[CONTEXT]_portraits_setup = yes
+			SZR_chat_[CONTEXT]_name_setup = yes
 		}
-		CONTEXT = "[?ROOT.SZR_current_chat_content.GetTokenKey]"
+		CONTEXT = "[?SZR_current_chat_content.GetTokenKey]"
 	}
 }
 
 SZR_chat_demo_portraits_setup = {
-	add_to_array = { ROOT.SZR_portraits_local = 3 }
+	add_to_array = { ROOT.SZR_portraits_local = 4 }
 	add_to_array = { ROOT.SZR_portraits_local = 12 }
 	add_to_array = { ROOT.SZR_portraits_local = 21 }
 	add_to_array = { ROOT.SZR_portraits_local = 24 }
 	add_to_array = { ROOT.SZR_portraits_local = 37 }
+	
 }
 
 SZR_chat_demo_special_transfer_setup = {
-	# add_to_array = {
-	# 	array = ROOT.SZR_special_transfers
-	# 	value = 111
-	# }
+	add_to_array = {
+		array = ROOT.SZR_special_transfers
+		value = 99999
+	}
+}
+
+SZR_chat_demo_END_setup = {
+	add_to_array = { ROOT.SZR_END_msgs = 41 }
 }
 
 SZR_chat_demo_option_setup = {
-	add_to_array = { ROOT.SZR_chat_options = 18 }
-	add_to_array = { ROOT.SZR_chat_options = 39 }
+	add_to_array = { ROOT.SZR_chat_options_available = 18 }
+	add_to_array = { ROOT.SZR_chat_options_available = 39 }
 }
 
 SZR_chat_demo_name_setup = {
@@ -234,16 +260,17 @@ SZR_chat_portraits_get_demo = {
 	if = {
 		limit = {
 			OR = {
-				check_variable = { SZR_current_chat_message = 4 }
+				check_variable = { last_value = 4 }
 			}
 		}
 		SZR_chat_portrait_remove_first = yes
 		add_to_array = { ROOT.SZR_chat_speaking_bois = 10000 }
+		log = "last_value = deng por"
 	}
 	if = {
 		limit = {
 			OR = {
-				check_variable = { SZR_current_chat_message = 12 }
+				check_variable = { last_value = 12 }
 			}
 		}
 		SZR_chat_portrait_remove_first = yes
@@ -252,11 +279,30 @@ SZR_chat_portraits_get_demo = {
 	if = {
 		limit = {
 			OR = {
-				check_variable = { SZR_current_chat_message = 24 }
+				check_variable = { last_value = 21 }
+			}
+		}
+		set_temp_variable = { temp_add_boi = 10000 }
+		SZR_chat_portrait_move_last = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { last_value = 24 }
 			}
 		}
 		SZR_chat_portrait_remove_first = yes
 		add_to_array = { ROOT.SZR_chat_speaking_bois = 10001 }
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { last_value = 37 }
+			}
+		}
+		set_temp_variable = { temp_add_boi = 10000 }
+		SZR_chat_portrait_move_last = yes
+		log = "last_value = deng por [?SZR_chat_speaking_bois]"
 	}
 }
 
@@ -264,8 +310,8 @@ SZR_chat_names_get_demo = {
 	if = {
 		limit = {
 			OR = {
-				check_variable = { SZR_current_chat_message = 4 }
-				check_variable = { SZR_current_chat_message = 10 }
+				check_variable = { last_value = 4 }
+				check_variable = { last_value = 10 }
 			}
 		}
 		add_to_array = { ROOT.SZR_current_chat_messages = 10000 }
@@ -274,8 +320,8 @@ SZR_chat_names_get_demo = {
 	if = {
 		limit = {
 			OR = {
-				check_variable = { SZR_current_chat_message = 15 }
-				check_variable = { SZR_current_chat_message = 17 }
+				check_variable = { last_value = 15 }
+				check_variable = { last_value = 17 }
 			}
 		}
 		add_to_array = { ROOT.SZR_current_chat_messages = 10002 }
@@ -284,10 +330,10 @@ SZR_chat_names_get_demo = {
 	if = {
 		limit = {
 			OR = {
-				check_variable = { SZR_current_chat_message = 24 }
-				check_variable = { SZR_current_chat_message = 28 }
-				check_variable = { SZR_current_chat_message = 31 }
-				check_variable = { SZR_current_chat_message = 35 }
+				check_variable = { last_value = 24 }
+				check_variable = { last_value = 28 }
+				check_variable = { last_value = 31 }
+				check_variable = { last_value = 35 }
 			}
 		}
 		add_to_array = { ROOT.SZR_current_chat_messages = 10001 }
@@ -303,7 +349,7 @@ SZR_chat_options_get_demo = {
 	if = {
 		limit = {
 			OR = {
-				check_variable = { SZR_current_chat_message = 18 }
+				check_variable = { last_value = 18 }
 			}
 		}
 		add_to_array = { ROOT.SZR_chat_options = 11 }
@@ -312,7 +358,7 @@ SZR_chat_options_get_demo = {
 	if = {
 		limit = {
 			OR = {
-				check_variable = { SZR_current_chat_message = 39 }
+				check_variable = { last_value = 39 }
 			}
 		}
 		add_to_array = { ROOT.SZR_chat_options = 21 }
@@ -321,6 +367,7 @@ SZR_chat_options_get_demo = {
 	}
 }
 SZR_chat_options_EFFECT_demo = {
+	log = "option check = [?SZR_current_chat_content.GetTokenKey]"
 	if = {
 		limit = {
 			OR = {
