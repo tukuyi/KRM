@@ -201,8 +201,10 @@ SZR_chat_options_EFFECT_kmd_c1 = {
 			check_variable = { SZR_chat_option = 11 }
 		}
 		set_temp_variable = { last_value = 48 }
-		add_political_power = -50
-		add_to_array = { ROOT.SZC_KMD_gods_array = token:SZC_cao_cao }
+		ROOT = {
+			add_political_power = -50
+			add_to_array = { ROOT.SZC_KMD_gods_array = token:SZC_cao_cao }
+		}
 	}
 	if = {
 		limit = {
