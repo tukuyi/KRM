@@ -5,14 +5,14 @@ SZR_kmd_c1_start = {
 	SZR_all_setup = yes
 	SZR_chat_remove_first = yes
 	add_to_array = { ROOT.SZR_current_chat_messages = 1 }
-	ROOT = { set_country_flag = SZR_chat_gui_visible }
+	ROOT = {
+		set_country_flag = SZR_chat_gui_visible
+		scoped_play_song = "Suzerain_-_14_Pinnacle"
+	}
 }
 
 SZR_chat_kmd_c1_special_transfer_setup = {
-	add_to_array = {
-		array = ROOT.SZR_special_transfers
-		value = 99999
-	}
+	add_to_array = { ROOT.SZR_special_transfers = 86 }
 }
 
 SZR_chat_kmd_c1_portraits_setup = {
@@ -34,6 +34,7 @@ SZR_chat_kmd_c1_END_setup = {
 SZR_chat_kmd_c1_option_setup = {
 	add_to_array = { ROOT.SZR_chat_options_available = 14 }
 	add_to_array = { ROOT.SZR_chat_options_available = 47 }
+	add_to_array = { ROOT.SZR_chat_options_available = 71 }
 }
 
 SZR_chat_kmd_c1_name_setup = {
@@ -61,135 +62,159 @@ SZR_chat_kmd_c1_name_setup = {
 	add_to_array = { ROOT.SZR_chat_names = 82 }
 }
 
+SZR_chat_special_transfer_kmd_c1 = {
+	if = {
+		limit = { check_variable = { last_value = 86 } }
+		set_temp_variable = { last_value = 26 }
+	}
+}
+
 SZR_chat_portraits_get_kmd_c1 = {
 	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 4 }
-			}
-		}
+		limit = { check_variable = { last_value = 6 } }
 		SZR_chat_portrait_remove_first = yes
-		add_to_array = { ROOT.SZR_chat_speaking_bois = 10000 }
-		log = "last_value = deng por"
+		add_to_array = { ROOT.SZR_chat_speaking_bois = 10004 }
 	}
 	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 12 }
-			}
-		}
+		limit = { check_variable = { last_value = 26 } }
 		SZR_chat_portrait_remove_first = yes
-		add_to_array = { ROOT.SZR_chat_speaking_bois = 10002 }
+		add_to_array = { ROOT.SZR_chat_speaking_bois = 10005 }
+		scoped_play_song = "song_of_guanyu"
 	}
 	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 21 }
-			}
-		}
-		set_temp_variable = { temp_add_boi = 10000 }
+		limit = { check_variable = { last_value = 35 } }
+		set_temp_variable = { temp_add_boi = 10004 }
 		SZR_chat_portrait_move_last = yes
 	}
 	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 24 }
-			}
-		}
-		SZR_chat_portrait_remove_first = yes
-		add_to_array = { ROOT.SZR_chat_speaking_bois = 10001 }
+		limit = { check_variable = { last_value = 40 } }
+		set_temp_variable = { temp_add_boi = 10005 }
+		SZR_chat_portrait_move_last = yes
 	}
 	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 37 }
-			}
-		}
-		set_temp_variable = { temp_add_boi = 10000 }
+		limit = { check_variable = { last_value = 46 } }
+		set_temp_variable = { temp_add_boi = 10004 }
 		SZR_chat_portrait_move_last = yes
-		log = "last_value = deng por [?SZR_chat_speaking_bois]"
+	}
+	if = {
+		limit = { check_variable = { last_value = 54 } }
+		SZR_chat_portrait_remove_first = yes
+		add_to_array = { ROOT.SZR_chat_speaking_bois = 10006 }
+	}
+	if = {
+		limit = { check_variable = { last_value = 75 } }
+		clear_array = ROOT.SZR_portraits_local
 	}
 }
 
 SZR_chat_names_get_kmd_c1 = {
 	if = {
-		limit = {
+		limit = { 
 			OR = {
-				check_variable = { last_value = 4 }
-				check_variable = { last_value = 10 }
+				check_variable = { last_value = 6 }
+				check_variable = { last_value = 20 }
+				check_variable = { last_value = 35 }
+				check_variable = { last_value = 37 }
+				check_variable = { last_value = 46 }
+				check_variable = { last_value = 50 }
+				check_variable = { last_value = 66 }
+				check_variable = { last_value = 68 }
+				check_variable = { last_value = 71 }
+				check_variable = { last_value = 82 }
 			}
 		}
-		add_to_array = { ROOT.SZR_current_chat_messages = 10000 }
+		add_to_array = { ROOT.SZR_current_chat_messages = 10004 }
 		SZR_chat_remove_first = yes
 	}
 	if = {
-		limit = {
+		limit = { 
 			OR = {
-				check_variable = { last_value = 15 }
 				check_variable = { last_value = 17 }
+				check_variable = { last_value = 48 }
+				check_variable = { last_value = 63 }
+				check_variable = { last_value = 72 }
 			}
 		}
-		add_to_array = { ROOT.SZR_current_chat_messages = 10002 }
+		add_to_array = { ROOT.SZR_current_chat_messages = 10003 }
 		SZR_chat_remove_first = yes
 	}
 	if = {
-		limit = {
+		limit = { 
 			OR = {
-				check_variable = { last_value = 24 }
+				check_variable = { last_value = 26 }
 				check_variable = { last_value = 28 }
 				check_variable = { last_value = 31 }
-				check_variable = { last_value = 35 }
+				check_variable = { last_value = 40 }
+				check_variable = { last_value = 42 }
 			}
 		}
-		add_to_array = { ROOT.SZR_current_chat_messages = 10001 }
+		add_to_array = { ROOT.SZR_current_chat_messages = 10005 }
+		SZR_chat_remove_first = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { last_value = 54 }
+				check_variable = { last_value = 56 }
+				check_variable = { last_value = 58 }
+			}
+		}
+		add_to_array = { ROOT.SZR_current_chat_messages = 10006 }
 		SZR_chat_remove_first = yes
 	}
 }
 
-
-SZR_chat_special_transfer_kmd_c1 = {
-
-}
 SZR_chat_options_get_kmd_c1 = {
 	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 18 }
-			}
-		}
+		limit = { check_variable = { last_value = 14 } }
+		add_to_array = { ROOT.SZR_chat_options = 1 }
+		add_to_array = { ROOT.SZR_chat_options = 2 }
+	}
+	if = {
+		limit = { check_variable = { last_value = 47 } }
 		add_to_array = { ROOT.SZR_chat_options = 11 }
 		add_to_array = { ROOT.SZR_chat_options = 12 }
 	}
 	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 39 }
-			}
-		}
+		limit = { check_variable = { last_value = 71 } }
 		add_to_array = { ROOT.SZR_chat_options = 21 }
-		add_to_array = { ROOT.SZR_chat_options = 22 }
-		add_to_array = { ROOT.SZR_chat_options = 23 }
 	}
 }
+
 SZR_chat_options_EFFECT_kmd_c1 = {
 	log = "option check = [?SZR_current_chat_content.GetTokenKey]"
+	
 	if = {
 		limit = {
-			OR = {
-				check_variable = { SZR_chat_option = 11 }
-				check_variable = { SZR_chat_option = 12 }
-			}
+			check_variable = { SZR_chat_option = 1 }
 		}
-		SZR_chat_continue_effect = yes
+		set_temp_variable = { last_value = 15 }
 	}
 	if = {
 		limit = {
-			OR = {
-				check_variable = { SZR_chat_option = 21 }
-				check_variable = { SZR_chat_option = 22 }
-				check_variable = { SZR_chat_option = 23 }
-			}
+			check_variable = { SZR_chat_option = 2 }
 		}
-		SZR_chat_continue_effect = yes
+		set_temp_variable = { last_value = 80 }
 	}
+	if = {
+		limit = {
+			check_variable = { SZR_chat_option = 11 }
+		}
+		set_temp_variable = { last_value = 48 }
+		add_political_power = -50
+		add_to_array = { ROOT.SZC_KMD_gods_array = token:SZC_cao_cao }
+	}
+	if = {
+		limit = {
+			check_variable = { SZR_chat_option = 12 }
+		}
+		set_temp_variable = { last_value = 63 }
+	}
+	if = {
+		limit = {
+			check_variable = { SZR_chat_option = 21 }
+		}
+		set_temp_variable = { last_value = 72 }
+	}
+	SZR_chat_option_select_generic_effect = yes
 }

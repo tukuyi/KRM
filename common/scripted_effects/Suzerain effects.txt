@@ -112,6 +112,13 @@ SZR_chat_continue_effect = {
 	log = "last_value = [?last_value]"
 	add_to_array = { ROOT.SZR_current_chat_messages = var:last_value }
 }
+SZR_chat_option_select_generic_effect = {
+	SZR_chat_remove_first = yes
+	SZR_chat_name_check = yes
+	SZR_chat_portrait_check = yes
+	SZR_chat_option_check = yes
+	add_to_array = { ROOT.SZR_current_chat_messages = var:last_value }
+}
 SZR_chat_special_transfer_check = {
 	if = {
 		limit = {
