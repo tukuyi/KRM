@@ -8,15 +8,6 @@ SZR_kmd_c1_start = {
 	ROOT = { set_country_flag = SZR_chat_gui_visible }
 }
 
-SZR_chat_kmd_c1_portraits_setup = {
-	add_to_array = { ROOT.SZR_portraits_local = 4 }
-	add_to_array = { ROOT.SZR_portraits_local = 12 }
-	add_to_array = { ROOT.SZR_portraits_local = 21 }
-	add_to_array = { ROOT.SZR_portraits_local = 24 }
-	add_to_array = { ROOT.SZR_portraits_local = 37 }
-	
-}
-
 SZR_chat_kmd_c1_special_transfer_setup = {
 	add_to_array = {
 		array = ROOT.SZR_special_transfers
@@ -24,24 +15,50 @@ SZR_chat_kmd_c1_special_transfer_setup = {
 	}
 }
 
+SZR_chat_kmd_c1_portraits_setup = {
+	add_to_array = { ROOT.SZR_portraits_local = 6 }
+	add_to_array = { ROOT.SZR_portraits_local = 26 }
+	add_to_array = { ROOT.SZR_portraits_local = 35 }
+	add_to_array = { ROOT.SZR_portraits_local = 40 }
+	add_to_array = { ROOT.SZR_portraits_local = 46 }
+	add_to_array = { ROOT.SZR_portraits_local = 54 }
+	add_to_array = { ROOT.SZR_portraits_local = 75 }
+	
+}
+
 SZR_chat_kmd_c1_END_setup = {
-	add_to_array = { ROOT.SZR_END_msgs = 41 }
+	add_to_array = { ROOT.SZR_END_msgs = 62 }
+	add_to_array = { ROOT.SZR_END_msgs = 79 }
 }
 
 SZR_chat_kmd_c1_option_setup = {
-	add_to_array = { ROOT.SZR_chat_options_available = 18 }
-	add_to_array = { ROOT.SZR_chat_options_available = 39 }
+	add_to_array = { ROOT.SZR_chat_options_available = 14 }
+	add_to_array = { ROOT.SZR_chat_options_available = 47 }
 }
 
 SZR_chat_kmd_c1_name_setup = {
-	add_to_array = { ROOT.SZR_chat_names = 4 }
-	add_to_array = { ROOT.SZR_chat_names = 12 }
-	add_to_array = { ROOT.SZR_chat_names = 15 }
+	add_to_array = { ROOT.SZR_chat_names = 6 }
 	add_to_array = { ROOT.SZR_chat_names = 17 }
-	add_to_array = { ROOT.SZR_chat_names = 24 }
+	add_to_array = { ROOT.SZR_chat_names = 20 }
+	add_to_array = { ROOT.SZR_chat_names = 26 }
 	add_to_array = { ROOT.SZR_chat_names = 28 }
 	add_to_array = { ROOT.SZR_chat_names = 31 }
 	add_to_array = { ROOT.SZR_chat_names = 35 }
+	add_to_array = { ROOT.SZR_chat_names = 37 }
+	add_to_array = { ROOT.SZR_chat_names = 40 }
+	add_to_array = { ROOT.SZR_chat_names = 42 }
+	add_to_array = { ROOT.SZR_chat_names = 46 }
+	add_to_array = { ROOT.SZR_chat_names = 48 }
+	add_to_array = { ROOT.SZR_chat_names = 50 }
+	add_to_array = { ROOT.SZR_chat_names = 54 }
+	add_to_array = { ROOT.SZR_chat_names = 56 }
+	add_to_array = { ROOT.SZR_chat_names = 58 }
+	add_to_array = { ROOT.SZR_chat_names = 63 }
+	add_to_array = { ROOT.SZR_chat_names = 66 }
+	add_to_array = { ROOT.SZR_chat_names = 68 }
+	add_to_array = { ROOT.SZR_chat_names = 71 }
+	add_to_array = { ROOT.SZR_chat_names = 72 }
+	add_to_array = { ROOT.SZR_chat_names = 82 }
 }
 
 SZR_chat_portraits_get_kmd_c1 = {
