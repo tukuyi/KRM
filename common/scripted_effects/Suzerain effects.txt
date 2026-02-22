@@ -23,24 +23,27 @@ SZR_debug_hu_speak = {
 }
 
 SZR_chat_content_check = {
-	if = {
-		limit = {
-			is_state = 613
+	ROOT = {
+		SZR_chat_close = yes
+		if = {
+			limit = {
+				is_state = 613
+			}
+			set_variable = { ROOT.SZR_current_chat_content = token:demo }
 		}
-		set_variable = { ROOT.SZR_current_chat_content = token:demo }
+		SZR_all_setup = yes
+		SZR_chat_remove_first = yes
+		add_to_array = { ROOT.SZR_current_chat_messages = 1 }
+		ROOT = { set_country_flag = SZR_chat_gui_visible }
 	}
-	
-	SZR_all_setup = yes
-	add_to_array = { ROOT.SZR_current_chat_messages = 1 }
-	SZR_chat_remove_first = yes
-	ROOT = { set_country_flag = SZR_chat_gui_visible }
 }
 
 SZR_demo_start = {
+	SZR_chat_close = yes
 	set_variable = { ROOT.SZR_current_chat_content = token:demo }
 	SZR_all_setup = yes
-	add_to_array = { ROOT.SZR_current_chat_messages = 1 }
 	SZR_chat_remove_first = yes
+	add_to_array = { ROOT.SZR_current_chat_messages = 1 }
 	ROOT = { set_country_flag = SZR_chat_gui_visible }
 }
 
@@ -128,16 +131,18 @@ SZR_chat_option_select = {
 }
 
 SZR_chat_continue_effect = {
+	log = "last_value = [?last_value]"
 	SZR_chat_remove_first = yes
-	log = "last_value = [?last_value]"
 	set_temp_variable = { last_value = ROOT.SZR_current_chat_messages^10 }
-	log = "last_value = [?last_value]"
 	SZR_chat_END_check = yes
 	SZR_chat_special_transfer_check = yes
 	SZR_chat_name_check = yes
 	SZR_chat_portrait_check = yes
 	SZR_chat_option_check = yes
-		log = "last_value = [?last_value]"
+	log = "msg = [?ROOT.SZR_current_chat_messages^9]"
+	log = "msg = [?ROOT.SZR_current_chat_messages^10]"
+	log = "msg = [?ROOT.SZR_current_chat_messages^11]"
+	log = "last_value = [?last_value]"
 	add_to_array = { ROOT.SZR_current_chat_messages = var:last_value }
 }
 SZR_chat_special_transfer_check = {
