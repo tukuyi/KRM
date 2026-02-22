@@ -259,13 +259,13 @@ guiTypes = {
 	containerWindowType = {
 		name = "SZR_alert_chat_Window"
 		position = { x = 0 y = 0 }
-		size = { width = 46 height = 46 }
+		size = { width = 150 height = 150 }
 		clipping = no
 
 		buttonType = {
 			name = "SZR_alert_chat_BUTTON"
-			position = { x = 13 y = 60 }
-			spriteType = "GFX_SZR_SZR_map_alert"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_SZR_map_alert"
 			clicksound = click_ok
 			shortcut = "shift+RETURN"
 

@@ -29962,4 +29962,8 @@ country_event = { #DEBUG-DEMO
 		name = SZCDEBUG.7.a
 		SZR_demo_start = yes
 	}
+	option = {
+		name = SZCDEBUG.7.b
+		add_to_array = { ROOT.SZR_chat_target_array = 613 }
+	}
 }

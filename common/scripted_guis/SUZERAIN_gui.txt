@@ -82,6 +82,7 @@ scripted_gui = {
 		window_name = "SZR_alert_chat_Window"
 		visible = {
 			ROOT = {
+				tag = SZC
 				is_ai = no
 			}
 		}
@@ -91,13 +92,18 @@ scripted_gui = {
 			SZR_alert_chat_BUTTON_click = {
 				if = {
 					limit = {
-						check_variable = { ROOT.SZR_current_chat_content = 0}
+						check_variable = { ROOT.SZR_current_chat_content = 0 }
 					}
 					SZR_chat_content_check = yes
-					remove_from_array = { ROOT.SZR_chat_target_array = THIS }
+					meta_effect = {
+						text = {
+							remove_from_array = { ROOT.SZR_chat_target_array = [CONTEXT] }
+						}
+						CONTEXT = "[THIS.GetID]"
+					}
 				}
 				else = {
-					#blablabla
+				# 	SZR_chat_close = yes
 				}
 			}
 		}

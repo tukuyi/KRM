@@ -1104,6 +1104,40 @@ guiTypes = {
 			}
 		}
 	}
+	containerWindowType = {
+		name = "SZC_YCP_zuo_dating_gui"
+		size = { width = 100%% height = 480 }
+		
+
+
+		
+		containerWindowType = {
+			name = "SZC_YCP_zuo_dating_container"
+			position = { x = 5 y = -20 }
+			size = { width = 500 height = 480 }
+
+			verticalScrollbar = "bottom_horizontal_slider"	
+			smooth_scrolling = yes
+			background = {
+				name = "Background"
+				spriteType ="GFX_tiled_window_transparent"
+				alwaystransparent = yes
+			}
+
+			gridboxtype = {
+				name = "SZC_YCP_zuo_dating_gridbox"
+				position = { x = 0 y = 0 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 166 height = 230 }
+				max_slots_horizontal = 3
+				format = "UPPER_LEFT"
+			}
+
+			
+
+		}
+		
+	}
 
 
 }
