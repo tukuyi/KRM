@@ -7,6 +7,13 @@ SZR_chat_content_check = {
 			}
 			set_variable = { ROOT.SZR_current_chat_content = token:demo }
 		}
+		if = {
+			limit = {
+				is_state = 650
+			}
+			set_variable = { ROOT.SZR_current_chat_content = token:kmd_c1 }
+			scoped_play_song = "Suzerain_-_14_Pinnacle"
+		}
 		SZR_all_setup = yes
 		SZR_chat_remove_first = yes
 		add_to_array = { ROOT.SZR_current_chat_messages = 1 }
