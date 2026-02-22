@@ -115,3 +115,17 @@ SZC_KMD_chengxun_home_category = {
 	visible_when_empty = yes
 	scripted_gui = SZC_KMD_chengxun_home
 }
+
+
+SZC_YCP_zuo_dating_category = {
+	
+	icon = GFX_decision_category_qing_hall
+	allowed = { original_tag = SZC }
+	visible = { 
+		# has_country_flag = SZC_YCP_zuo_dating_available
+		always = yes
+	}
+	priority = 1145
+	visible_when_empty = yes
+	scripted_gui = SZC_KMD_chengxun_home
+}

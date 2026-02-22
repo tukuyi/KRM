@@ -77,4 +77,35 @@ scripted_gui = {
 		}
 	}
 
+	SZR_alert_chat_Window = {
+		context_type = state_mapicon
+		window_name = "SZR_alert_chat_Window"
+		visible = {
+			ROOT = {
+				is_ai = no
+			}
+		}
+		mapicon_targets = { target_array = ROOT.SZR_chat_target_array }
+
+		effects = {
+			SZR_alert_chat_BUTTON_click = {
+				if = {
+					limit = {
+						check_variable = { ROOT.SZR_current_chat_content = 0}
+					}
+					SZR_chat_content_check = yes
+					remove_from_array = { ROOT.SZR_chat_target_array = THIS }
+				}
+				else = {
+					#blablabla
+				}
+			}
+		}
+
+		triggers = {
+			SZR_alert_chat_button_visible = {
+				check_variable = { ROOT.SZR_current_chat_content = 0 }
+			}
+		}
+	}
 }
