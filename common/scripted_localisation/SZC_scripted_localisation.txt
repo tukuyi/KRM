@@ -3248,6 +3248,24 @@ defined_text = {
 		}
 	}
 	text = {
+		localization_key = "GFX_SZR_liu_congyun"
+		trigger = {
+			check_variable = { SZR_chat_speaking_boi = 10004 }
+		}
+	}
+	text = {
+		localization_key = "GFX_SZR_guan_yu"
+		trigger = {
+			check_variable = { SZR_chat_speaking_boi = 10005 }
+		}
+	}
+	text = {
+		localization_key = "GFX_SZR_cao_cao"
+		trigger = {
+			check_variable = { SZR_chat_speaking_boi = 10006 }
+		}
+	}
+	text = {
 		localization_key = "GFX_SZR_dialog_empty"
 	}
 }

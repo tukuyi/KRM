@@ -1,27 +1,3 @@
-
-SZR_debug_dengyanda_speak = {
-	set_variable = { ROOT.SZR_current_speaking = token:CHI_deng_yanda }
-	set_variable = { ROOT.SZR_current_chat_content = token:demo }
-	SZR_chat_setup_first = yes
-	add_to_array = { ROOT.SZR_current_chat_messages = 1 }
-	SZR_chat_remove_first = yes
-}
-
-SZR_debug_wang_speak = {
-	SZR_chat_portrait_remove_first = yes
-	add_to_array = { 
-		array = ROOT.SZR_chat_speaking_bois
-		value = 10002
-	}
-}
-SZR_debug_hu_speak = {
-	SZR_chat_portrait_remove_first = yes
-	add_to_array = { 
-		array = ROOT.SZR_chat_speaking_bois
-		value = 10001
-	}
-}
-
 SZR_chat_content_check = {
 	ROOT = {
 		SZR_chat_close = yes
@@ -36,15 +12,6 @@ SZR_chat_content_check = {
 		add_to_array = { ROOT.SZR_current_chat_messages = 1 }
 		ROOT = { set_country_flag = SZR_chat_gui_visible }
 	}
-}
-
-SZR_demo_start = {
-	SZR_chat_close = yes
-	set_variable = { ROOT.SZR_current_chat_content = token:demo }
-	SZR_all_setup = yes
-	SZR_chat_remove_first = yes
-	add_to_array = { ROOT.SZR_current_chat_messages = 1 }
-	ROOT = { set_country_flag = SZR_chat_gui_visible }
 }
 
 SZR_all_setup = {
@@ -225,6 +192,7 @@ SZR_chat_END_check = {
 		}
 		SZR_chat_close = yes
 	}
+	custom_effect_tooltip = SZR_chat_continue_tt
 }
 
 SZR_chat_generic_setup = {
@@ -237,174 +205,5 @@ SZR_chat_generic_setup = {
 			SZR_chat_[CONTEXT]_name_setup = yes
 		}
 		CONTEXT = "[?SZR_current_chat_content.GetTokenKey]"
-	}
-}
-
-SZR_chat_demo_portraits_setup = {
-	add_to_array = { ROOT.SZR_portraits_local = 4 }
-	add_to_array = { ROOT.SZR_portraits_local = 12 }
-	add_to_array = { ROOT.SZR_portraits_local = 21 }
-	add_to_array = { ROOT.SZR_portraits_local = 24 }
-	add_to_array = { ROOT.SZR_portraits_local = 37 }
-	
-}
-
-SZR_chat_demo_special_transfer_setup = {
-	add_to_array = {
-		array = ROOT.SZR_special_transfers
-		value = 99999
-	}
-}
-
-SZR_chat_demo_END_setup = {
-	add_to_array = { ROOT.SZR_END_msgs = 41 }
-}
-
-SZR_chat_demo_option_setup = {
-	add_to_array = { ROOT.SZR_chat_options_available = 18 }
-	add_to_array = { ROOT.SZR_chat_options_available = 39 }
-}
-
-SZR_chat_demo_name_setup = {
-	add_to_array = { ROOT.SZR_chat_names = 4 }
-	add_to_array = { ROOT.SZR_chat_names = 12 }
-	add_to_array = { ROOT.SZR_chat_names = 15 }
-	add_to_array = { ROOT.SZR_chat_names = 17 }
-	add_to_array = { ROOT.SZR_chat_names = 24 }
-	add_to_array = { ROOT.SZR_chat_names = 28 }
-	add_to_array = { ROOT.SZR_chat_names = 31 }
-	add_to_array = { ROOT.SZR_chat_names = 35 }
-}
-
-SZR_chat_portraits_get_demo = {
-	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 4 }
-			}
-		}
-		SZR_chat_portrait_remove_first = yes
-		add_to_array = { ROOT.SZR_chat_speaking_bois = 10000 }
-		log = "last_value = deng por"
-	}
-	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 12 }
-			}
-		}
-		SZR_chat_portrait_remove_first = yes
-		add_to_array = { ROOT.SZR_chat_speaking_bois = 10002 }
-	}
-	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 21 }
-			}
-		}
-		set_temp_variable = { temp_add_boi = 10000 }
-		SZR_chat_portrait_move_last = yes
-	}
-	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 24 }
-			}
-		}
-		SZR_chat_portrait_remove_first = yes
-		add_to_array = { ROOT.SZR_chat_speaking_bois = 10001 }
-	}
-	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 37 }
-			}
-		}
-		set_temp_variable = { temp_add_boi = 10000 }
-		SZR_chat_portrait_move_last = yes
-		log = "last_value = deng por [?SZR_chat_speaking_bois]"
-	}
-}
-
-SZR_chat_names_get_demo = {
-	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 4 }
-				check_variable = { last_value = 10 }
-			}
-		}
-		add_to_array = { ROOT.SZR_current_chat_messages = 10000 }
-		SZR_chat_remove_first = yes
-	}
-	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 15 }
-				check_variable = { last_value = 17 }
-			}
-		}
-		add_to_array = { ROOT.SZR_current_chat_messages = 10002 }
-		SZR_chat_remove_first = yes
-	}
-	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 24 }
-				check_variable = { last_value = 28 }
-				check_variable = { last_value = 31 }
-				check_variable = { last_value = 35 }
-			}
-		}
-		add_to_array = { ROOT.SZR_current_chat_messages = 10001 }
-		SZR_chat_remove_first = yes
-	}
-}
-
-
-SZR_chat_special_transfer_demo = {
-
-}
-SZR_chat_options_get_demo = {
-	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 18 }
-			}
-		}
-		add_to_array = { ROOT.SZR_chat_options = 11 }
-		add_to_array = { ROOT.SZR_chat_options = 12 }
-	}
-	if = {
-		limit = {
-			OR = {
-				check_variable = { last_value = 39 }
-			}
-		}
-		add_to_array = { ROOT.SZR_chat_options = 21 }
-		add_to_array = { ROOT.SZR_chat_options = 22 }
-		add_to_array = { ROOT.SZR_chat_options = 23 }
-	}
-}
-SZR_chat_options_EFFECT_demo = {
-	log = "option check = [?SZR_current_chat_content.GetTokenKey]"
-	if = {
-		limit = {
-			OR = {
-				check_variable = { SZR_chat_option = 11 }
-				check_variable = { SZR_chat_option = 12 }
-			}
-		}
-		SZR_chat_continue_effect = yes
-	}
-	if = {
-		limit = {
-			OR = {
-				check_variable = { SZR_chat_option = 21 }
-				check_variable = { SZR_chat_option = 22 }
-				check_variable = { SZR_chat_option = 23 }
-			}
-		}
-		SZR_chat_continue_effect = yes
 	}
 }

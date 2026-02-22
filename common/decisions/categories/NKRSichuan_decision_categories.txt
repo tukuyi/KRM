@@ -122,8 +122,8 @@ SZC_YCP_zuo_dating_category = {
 	icon = GFX_decision_category_qing_hall
 	allowed = { original_tag = SZC }
 	visible = { 
-		# has_country_flag = SZC_YCP_zuo_dating_available
-		always = yes
+		has_country_flag = SZC_YCP_zuo_dating_available
+		# always = yes
 	}
 	priority = 1145
 	visible_when_empty = yes
