@@ -202,8 +202,22 @@ SZR_chat_options_EFFECT_kmd_c1 = {
 		}
 		set_temp_variable = { last_value = 48 }
 		ROOT = {
-			add_political_power = -50
-			add_to_array = { ROOT.SZC_KMD_gods_array = token:SZC_cao_cao }
+			if = {
+				limit = {
+					is_in_array = {
+						array = ROOT.SZC_KMD_gods_array
+						value = token:SZC_cao_cao
+					}
+				}
+				add_political_power = 25
+				SZC_cao_cao = {
+					SZC_recruit_character_effect = yes
+				}
+			}
+			else = {
+				add_to_array = { ROOT.SZC_KMD_gods_array = token:SZC_cao_cao }
+				add_political_power = -50
+			}
 		}
 	}
 	if = {
