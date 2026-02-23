@@ -1,0 +1,195 @@
+﻿# ======================================================
+# Chapter 2  (token: kmd_c2)
+# 由 SUZERAIN 剧情编辑器 v2 生成
+# ======================================================
+
+SZR_kmd_c2_start = {
+	SZR_chat_close = yes
+	set_variable = { ROOT.SZR_current_chat_content = token:kmd_c2 }
+	SZR_all_setup = yes
+	SZR_chat_remove_first = yes
+	add_to_array = { ROOT.SZR_current_chat_messages = 1 }
+	ROOT = {
+		set_country_flag = SZR_chat_gui_visible
+	}
+}
+
+SZR_chat_kmd_c2_portraits_setup = {
+	add_to_array = { ROOT.SZR_portraits_local = 6 }
+	add_to_array = { ROOT.SZR_portraits_local = 67 }
+}
+
+SZR_chat_kmd_c2_END_setup = {
+	add_to_array = { ROOT.SZR_END_msgs = 72 }
+}
+
+SZR_chat_kmd_c2_option_setup = {
+	add_to_array = { ROOT.SZR_chat_options_available = 8 }
+	add_to_array = { ROOT.SZR_chat_options_available = 10 }
+	add_to_array = { ROOT.SZR_chat_options_available = 26 }
+	add_to_array = { ROOT.SZR_chat_options_available = 41 }
+}
+
+SZR_chat_kmd_c2_name_setup = {
+	add_to_array = { ROOT.SZR_chat_names = 6 }
+	add_to_array = { ROOT.SZR_chat_names = 8 }
+	add_to_array = { ROOT.SZR_chat_names = 9 }
+	add_to_array = { ROOT.SZR_chat_names = 11 }
+	add_to_array = { ROOT.SZR_chat_names = 12 }
+	add_to_array = { ROOT.SZR_chat_names = 16 }
+	add_to_array = { ROOT.SZR_chat_names = 18 }
+	add_to_array = { ROOT.SZR_chat_names = 20 }
+	add_to_array = { ROOT.SZR_chat_names = 25 }
+	add_to_array = { ROOT.SZR_chat_names = 27 }
+	add_to_array = { ROOT.SZR_chat_names = 28 }
+	add_to_array = { ROOT.SZR_chat_names = 30 }
+	add_to_array = { ROOT.SZR_chat_names = 33 }
+	add_to_array = { ROOT.SZR_chat_names = 37 }
+	add_to_array = { ROOT.SZR_chat_names = 41 }
+	add_to_array = { ROOT.SZR_chat_names = 42 }
+	add_to_array = { ROOT.SZR_chat_names = 43 }
+	add_to_array = { ROOT.SZR_chat_names = 46 }
+	add_to_array = { ROOT.SZR_chat_names = 47 }
+	add_to_array = { ROOT.SZR_chat_names = 49 }
+	add_to_array = { ROOT.SZR_chat_names = 50 }
+	add_to_array = { ROOT.SZR_chat_names = 52 }
+	add_to_array = { ROOT.SZR_chat_names = 55 }
+	add_to_array = { ROOT.SZR_chat_names = 58 }
+	add_to_array = { ROOT.SZR_chat_names = 60 }
+	add_to_array = { ROOT.SZR_chat_names = 63 }
+	add_to_array = { ROOT.SZR_chat_names = 65 }
+	add_to_array = { ROOT.SZR_chat_names = 66 }
+}
+
+SZR_chat_kmd_c2_special_transfer_setup = {
+	add_to_array = { ROOT.SZR_special_transfers = 11 }
+	add_to_array = { ROOT.SZR_special_transfers = 45 }
+}
+
+SZR_chat_portraits_get_kmd_c2 = {
+	if = {
+		limit = { check_variable = { last_value = 6 } }
+		SZR_chat_portrait_remove_first = yes
+		add_to_array = { ROOT.SZR_chat_speaking_bois = 10006 }
+	}
+	if = {
+		limit = { check_variable = { last_value = 67 } }
+		clear_array = ROOT.SZR_portraits_local
+	}
+}
+
+SZR_chat_names_get_kmd_c2 = {
+	if = {
+		limit = {
+			OR = {
+				check_variable = { last_value = 9 }
+				check_variable = { last_value = 11 }
+				check_variable = { last_value = 12 }
+				check_variable = { last_value = 16 }
+				check_variable = { last_value = 20 }
+				check_variable = { last_value = 27 }
+				check_variable = { last_value = 42 }
+				check_variable = { last_value = 46 }
+				check_variable = { last_value = 50 }
+				check_variable = { last_value = 65 }
+			}
+		}
+		add_to_array = { ROOT.SZR_current_chat_messages = 10003 }
+		SZR_chat_remove_first = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { last_value = 6 }
+				check_variable = { last_value = 8 }
+				check_variable = { last_value = 18 }
+				check_variable = { last_value = 25 }
+				check_variable = { last_value = 28 }
+				check_variable = { last_value = 30 }
+				check_variable = { last_value = 33 }
+				check_variable = { last_value = 37 }
+				check_variable = { last_value = 41 }
+				check_variable = { last_value = 43 }
+				check_variable = { last_value = 47 }
+				check_variable = { last_value = 49 }
+				check_variable = { last_value = 52 }
+				check_variable = { last_value = 55 }
+				check_variable = { last_value = 58 }
+				check_variable = { last_value = 60 }
+				check_variable = { last_value = 63 }
+				check_variable = { last_value = 66 }
+			}
+		}
+		add_to_array = { ROOT.SZR_current_chat_messages = 10006 }
+		SZR_chat_remove_first = yes
+	}
+}
+
+SZR_chat_special_transfer_kmd_c2 = {
+	# --- node #11 ---
+	if = {
+		limit = { check_variable = { last_value = 11 } }
+		set_temp_variable = { last_value = 10 }
+	}
+	# --- node #45 ---
+	if = {
+		limit = { check_variable = { last_value = 45 } }
+		set_temp_variable = { last_value = 54 }
+	}
+}
+
+SZR_chat_options_get_kmd_c2 = {
+	if = {
+		limit = { check_variable = { last_value = 8 } }
+		add_to_array = { ROOT.SZR_chat_options = 1 }
+		add_to_array = { ROOT.SZR_chat_options = 2 }
+		add_to_array = { ROOT.SZR_chat_options = 3 }
+	}
+	if = {
+		limit = { check_variable = { last_value = 10 } }
+		add_to_array = { ROOT.SZR_chat_options = 3 }
+	}
+	if = {
+		limit = { check_variable = { last_value = 26 } }
+		add_to_array = { ROOT.SZR_chat_options = 5 }
+	}
+	if = {
+		limit = { check_variable = { last_value = 41 } }
+		add_to_array = { ROOT.SZR_chat_options = 11 }
+		add_to_array = { ROOT.SZR_chat_options = 12 }
+	}
+}
+
+SZR_chat_options_EFFECT_kmd_c2 = {
+	log = "option check = [?SZR_current_chat_content.GetTokenKey]"
+
+	if = {
+		limit = { check_variable = { SZR_chat_option = 1 } }
+		set_temp_variable = { last_value = 9 }
+	}
+	if = {
+		limit = { check_variable = { SZR_chat_option = 2 } }
+		set_temp_variable = { last_value = 11 }
+	}
+	if = {
+		limit = { check_variable = { SZR_chat_option = 3 } }
+		set_temp_variable = { last_value = 12 }
+	}
+	if = {
+		limit = { check_variable = { SZR_chat_option = 3 } }
+		set_temp_variable = { last_value = 12 }
+	}
+	if = {
+		limit = { check_variable = { SZR_chat_option = 5 } }
+		SZR_chat_continue_effect = yes
+	}
+	if = {
+		limit = { check_variable = { SZR_chat_option = 11 } }
+		SZR_chat_continue_effect = yes
+	}
+	if = {
+		limit = { check_variable = { SZR_chat_option = 12 } }
+		set_temp_variable = { last_value = 46 }
+	}
+	SZR_chat_option_select_generic_effect = yes
+}

@@ -10,9 +10,24 @@ SZR_chat_content_check = {
 		if = {
 			limit = {
 				is_state = 650
+				ROOT = {
+					has_country_flag = SZC_SZR_kmd_c1
+				}
 			}
 			set_variable = { ROOT.SZR_current_chat_content = token:kmd_c1 }
 			scoped_play_song = "Suzerain_-_14_Pinnacle"
+			clr_country_flag = SZC_SZR_kmd_c1
+		}
+		if = {
+			limit = {
+				is_state = 650
+				ROOT = {
+					has_country_flag = SZC_SZR_kmd_c2
+				}
+			}
+			set_variable = { ROOT.SZR_current_chat_content = token:kmd_c2 }
+			scoped_play_song = "Suzerain_-_18_Summary"
+			clr_country_flag = SZC_SZR_kmd_c2
 		}
 		SZR_all_setup = yes
 		SZR_chat_remove_first = yes
