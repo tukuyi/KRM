@@ -1,5 +1,5 @@
 ﻿# ======================================================
-# Chapter 2  (token: kmd_c2)
+# KMD Chapter 2  (token: kmd_c2)
 # 由 SUZERAIN 剧情编辑器 v2 生成
 # ======================================================
 
@@ -181,11 +181,11 @@ SZR_chat_options_EFFECT_kmd_c2 = {
 	}
 	if = {
 		limit = { check_variable = { SZR_chat_option = 5 } }
-		SZR_chat_continue_effect = yes
+		set_temp_variable = { last_value = 27 }
 	}
 	if = {
 		limit = { check_variable = { SZR_chat_option = 11 } }
-		SZR_chat_continue_effect = yes
+		set_temp_variable = { last_value = 42 }
 	}
 	if = {
 		limit = { check_variable = { SZR_chat_option = 12 } }
