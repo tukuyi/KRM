@@ -35743,15 +35743,15 @@ focus_tree = {
 					impassable = no
 				}
 				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
+					division = "name = \"南天门旅\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
+					division = "name = \"哪吒先锋营\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"孔孟神兵连\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
+					division = "name = \"二郎神突击队\" division_template = \"孔孟神兵\" start_experience_factor = 0.6"
 					owner = ROOT
 				}
 				create_unit = {
@@ -40249,6 +40249,9 @@ focus_tree = {
 		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
 
 		available = {
+			NOT = {
+				has_completed_focus = SZC_KMD_cheers_for_justice_wins
+			}
 			OR = {
 				AND = {
 					set_temp_variable = { temp_KMD_check_god_in_array = token:SZC_jiang_ziya }

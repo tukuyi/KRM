@@ -26347,10 +26347,9 @@ country_event = { #神仙降世
 		name = NKRsichuanKMD.9.a
 		custom_effect_tooltip = NKRsichuanKMD.9.tt
 		set_country_flag = SZC_KMD_gods_arrive_available
+		set_country_flag = SZC_SZR_kmd_c1
 		add_to_array = { ROOT.SZC_KMD_gods_array = token:SZC_guan_yu }
-		hidden_effect = {
-			scoped_play_song = "song_of_guanyu"
-		}
+		add_to_array = { ROOT.SZR_chat_target_array = 650 }
 	}
 }
 
