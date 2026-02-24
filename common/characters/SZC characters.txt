@@ -5011,7 +5011,12 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SZC_liu_congyun_advisor
-			traits = { KR_silent_workhorse }
+			visible = {
+				has_country_leader = {
+					character = SZC_liu_xiang
+				}
+			}
+			traits = { SZC_KMD_liu_the_god_trait }
 			desc = SZC_liu_congyun_desc
 		}
 		country_leader = {

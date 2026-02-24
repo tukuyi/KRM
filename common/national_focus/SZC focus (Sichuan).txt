@@ -36075,6 +36075,8 @@ focus_tree = {
 			NOT = {
 				has_completed_focus = SZC_KMD_cheers_for_justice_wins
 			}
+			set_temp_variable = { temp_KMD_check_god_in_array = token:SZC_cao_cao }
+			KMD_god_is_available = yes
 		}
 
 		prerequisite = {
