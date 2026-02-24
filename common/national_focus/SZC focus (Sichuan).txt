@@ -37443,7 +37443,7 @@ focus_tree = {
 				}
 			}
 			SHD = {
-				SHD_kong_decheng = {
+				SHD_kong_dechong = {
 					SZC_recruit_character_effect = yes
 				}
 			}
@@ -38201,7 +38201,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_voice_of_us_voice_of_people"
 			if = {
 				limit = {
-					has_idea = { SZC_KMD_the_popular_movement }
+					has_ideas = { SZC_KMD_the_popular_movement }
 				}
 				swap_ideas = {
 					remove_idea = SZC_KMD_the_popular_movement
@@ -38957,7 +38957,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_integrate_party_into_nation"
 			if = {
 				limit = { 
-					has_idea = { SZC_KMD_the_popular_movement }
+					has_ideas = { SZC_KMD_the_popular_movement }
 				}
 				swap_ideas = {
 					remove_idea = SZC_KMD_the_popular_movement

@@ -19668,11 +19668,15 @@ country_event = { #国神
 				long_name = JAP_LCY_party_long
 			}
 			random_list = {
-				90 = { }
+				90 = { 
+					#blablabla 
+				}
 				10 = {
 					JAP_deguchi_onisaburo = {
 						set_portraits = {
-							large = GFX_portrait_JAP_deguchi_onisaburo_touhou
+							civilian = {
+								large = GFX_portrait_JAP_deguchi_onisaburo_touhou
+							}
 						}
 					}
 				}
@@ -21365,7 +21369,7 @@ country_event = { #傻逼法国人
 			target = FROM
 			modifier = KR_disapproves_of_govt
 		}
-		uncomplete_national_focus = SZC_pan_FORPOL_global_revolution_cause
+		uncomplete_national_focus = { focus = SZC_pan_FORPOL_global_revolution_cause }
 	}
 }
 
@@ -26995,12 +26999,10 @@ country_event = { #传国玉玺之病
 		name = NKRsichuanKMD.40.a
 		custom_effect_tooltip = NKRsichuanKMD.40.a.tt
 		trigger = {
-			limit = {
-				check_variable = {
-					var = SZC_KMD_shangpu_focus
-					value = 5
-					compare = equals
-				}
+			check_variable = {
+				var = SZC_KMD_shangpu_focus
+				value = 5
+				compare = equals
 			}
 		}
 		
@@ -27017,13 +27019,11 @@ country_event = { #传国玉玺之病
 		name = NKRsichuanKMD.40.b
 		custom_effect_tooltip = NKRsichuanKMD.40.b.tt
 		trigger = {
-			limit = {
-				NOT = {
-					check_variable = {
-						var = SZC_KMD_shangpu_focus
-						value = 5
-						compare = equals
-					}
+			NOT = {
+				check_variable = {
+					var = SZC_KMD_shangpu_focus
+					value = 5
+					compare = equals
 				}
 			}
 		}

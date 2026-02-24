@@ -3,13 +3,13 @@ SZR_chat_content_check = {
 		SZR_chat_close = yes
 		if = {
 			limit = {
-				is_state = 613
+				state = 613
 			}
 			set_variable = { ROOT.SZR_current_chat_content = token:demo }
 		}
 		if = {
 			limit = {
-				is_state = 650
+				state = 650
 				ROOT = {
 					has_country_flag = SZC_SZR_kmd_c1
 				}
@@ -20,7 +20,7 @@ SZR_chat_content_check = {
 		}
 		if = {
 			limit = {
-				is_state = 650
+				state = 650
 				ROOT = {
 					has_country_flag = SZC_SZR_kmd_c2
 				}
