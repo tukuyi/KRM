@@ -38663,7 +38663,7 @@ focus_tree = {
 		relative_position_id = SZC_KMD_dahan_reunited
 
 		available = {
-			has_completed_focus = SZC_KMD_taoyuan_elders
+			has_completed_focus = SZC_KMD_the_oath_of_taoyuan
 		}
 
 		prerequisite = {
@@ -40222,6 +40222,9 @@ focus_tree = {
 		available = {
 			set_temp_variable = { temp_KMD_check_god_in_array = token:SZC_cao_cao }
 			KMD_god_is_available = yes
+			NOT = {
+				has_completed_focus = SZC_KMD_cheers_for_justice_wins
+			}
 		}
 
 		prerequisite = {
@@ -40259,9 +40262,6 @@ focus_tree = {
 		relative_position_id = SZC_KMD_evil_of_the_world_hurts_you
 
 		available = {
-			NOT = {
-				has_completed_focus = SZC_KMD_cheers_for_justice_wins
-			}
 			OR = {
 				AND = {
 					set_temp_variable = { temp_KMD_check_god_in_array = token:SZC_jiang_ziya }
@@ -40679,14 +40679,14 @@ focus_tree = {
 		y = 10	
 
 		
-		# allow_branch = {
-		# 	has_country_flag = NKRsichuan_KMDpath
-		# 	has_country_flag = SZC_KMD_phase_3
-		# 	OR = {
-		# 		has_country_flag = SZC_KMD_chengxun_path
-		# 		has_country_flag = SZC_KMD_shangpu_path
-		# 	}
-		# }
+		allow_branch = {
+			has_country_flag = NKRsichuan_KMDpath
+			has_country_flag = SZC_KMD_phase_3
+			OR = {
+				has_country_flag = SZC_KMD_chengxun_path
+				has_country_flag = SZC_KMD_shangpu_path
+			}
+		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_FORPOL_return_to_world_stage"
@@ -41175,7 +41175,7 @@ focus_tree = {
 			create_faction_from_template = { template = faction_template_CCE name = SZC_CCE_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			country_event = {
-				id = NKRsichuanFP.71
+				id = NKRsichuanFP.72
 			}
 		}
 	}

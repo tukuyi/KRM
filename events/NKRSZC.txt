@@ -18832,6 +18832,11 @@ country_event = { #泰西大秦
 				}
 				transfer_state_to = FRP
 			}
+			set_autonomy = {
+				target = FRP
+				autonomy_state = crownland
+				end_wars = no
+			}
 		}
 	}
 }
@@ -19054,6 +19059,11 @@ country_event = { #大汉的联合王国
 					name = ENG_LCX_party
 					long_name = ENG_LCX_party_long
 				}
+			}
+			set_autonomy = {
+				target = GBP
+				autonomy_state = crownland
+				end_wars = no
 			}
 		}
 	}
@@ -19281,6 +19291,11 @@ country_event = { #神圣德意志han
 					name = GRU_LCX_party
 					long_name = GRU_LCX_party_long
 				}
+			}
+			set_autonomy = {
+				target = var:tag_to_release
+				autonomy_state = crownland
+				end_wars = no
 			}
 		}
 	}
@@ -19823,6 +19838,11 @@ country_event = { #邪马台
 				long_name = JAP_LCX_party_long
 			}
 		}
+		set_autonomy = {
+			target = JAP
+			autonomy_state = crownland
+			end_wars = no
+		}
 	}
 }
 
@@ -20125,6 +20145,11 @@ country_event = { #极北皇冠
 					long_name = RUS_LCX_party_long
 				}
 			}
+			set_autonomy = {
+				target = RSA
+				autonomy_state = crownland
+				end_wars = no
+			}
 		}
 	}
 }
@@ -20414,6 +20439,11 @@ country_event = { #华盛顿未竟之事
 					name = USA_LCX_party
 					long_name = USA_LCX_party_long
 				}
+			}
+			set_autonomy = {
+				target = USA
+				autonomy_state = crownland
+				end_wars = no
 			}
 		}
 	}
@@ -20741,6 +20771,11 @@ country_event = { #崇高国度
 				name = TUR_LCX_party
 				long_name = TUR_LCX_party_long
 			}
+		}
+		set_autonomy = {
+			target = var:tag_to_release
+			autonomy_state = crownland
+			end_wars = no
 		}
 	}
 }
@@ -22530,7 +22565,7 @@ country_event = { #
 	id = NKRsichuanFP.71
 	title = NKRsichuanFP.71.t
 	desc = NKRsichuanFP.71.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_KMD
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -22546,7 +22581,7 @@ country_event = { #
 	id = NKRsichuanFP.72
 	title = NKRsichuanFP.72.t
 	desc = NKRsichuanFP.72.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_han
 
 	is_triggered_only = yes
 	fire_only_once = yes
