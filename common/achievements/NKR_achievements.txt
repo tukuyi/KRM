@@ -262,10 +262,7 @@ NKR_real_old_capital_achievement = {
 	happened = {
 		if = {
 			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
-			607 = {
-				is_owned_and_controlled_by = ROOT
-				is_capital = yes
-			}
+			capital_scope = { state = 607 } 
 		}
 		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
 	}
