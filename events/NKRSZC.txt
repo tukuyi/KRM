@@ -29694,20 +29694,23 @@ country_event = { #最卑劣的刺杀
 			hidden_effect = {
 				if = {
 					limit = {
-						has_country_flag = xxx
+						has_country_flag = SZC_KMD_bingfa_available
 					}
-					random_list = {
-						50 = {
-							country_event = {
-								id = NKRsichuanKMD.179
-								days = 3
+					if = {
+						limit = {
+							has_completed_custom_achievement = {
+								achievement = NKR_his_vision_achievement
 							}
 						}
-						50 = {
-							country_event = {
-								id = NKRsichuanKMD.180
-								days = 3
-							}
+						country_event = {
+							id = NKRsichuanKMD.180
+							days = 3
+						}
+					}
+					else = {
+						country_event = {
+							id = NKRsichuanKMD.179
+							days = 3
 						}
 					}
 				}

@@ -38726,7 +38726,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_tianzis_grace_is_boundless"
-			custom_effect_tooltip = SZC_KMD_tianzis_grace_is_boundless_tt
+			add_political_power = 350
+			every_army_leader = {
+				add_temporary_buff_to_units = {
+					combat_offense = 0.1
+					combat_breakthrough = 0.1
+					war_support_reduction_on_damage = -0.25
+					days = 365
+				}	
+			}
 			hidden_effect = {
 				country_event = {
 					id = NKRsichuanKMD.127
