@@ -2836,6 +2836,7 @@ country_event = { #统一建国同志会
 			promote_character = social_democrat_subtype
 			promote_character = social_liberal_subtype
 			china_set_character_alignment_chinese_southern_republican = yes
+			
 		}
 		set_party_name = {
 			ideology = social_democrat
@@ -26695,6 +26696,11 @@ country_event = { #一对笑面虎
 	option = {#真是一对笑面虎...
 		log = "[GetLogInfo]: event NKRsichuanKMD.30 option NKRsichuanKMD.30.a"
 		name = NKRsichuanKMD.30.a
+		hidden_effect = {
+			SZC_sun_chuanfang  = { SZC_recruit_character_effect = yes }
+		}
+		SZC_sun_chuanfang = { custom_effect_tooltip = character_becomes_a_general }
+
 		hidden_effect = {
 			scoped_play_song = "song_of_guanyu"
 		}

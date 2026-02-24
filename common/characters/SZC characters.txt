@@ -5182,6 +5182,26 @@ characters = {
 		}
 	}
 
+	#“孙传芳”
+	SZC_sun_chuanfang = {
+		name = SZC_sun_chuanfang
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_sun_chuanfang_large
+				small = GFX_portrait_SZC_sun_chuanfang_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_sun_chuanfang_desc
+			traits = { irregulars_officer reckless }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
 	#钱穆
 	SZC_qian_mu = {
 		name = SZC_qian_mu
