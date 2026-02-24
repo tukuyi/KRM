@@ -2997,9 +2997,10 @@ foreign_politics = {
 	SZC_KMT_invite_into_economic_sphere = {
 		icon = GFX_decision_global_trade
 
-		allowed = { is_economic_sphere_leader = yes }
+		allowed = { original_tag = SZC }
 
 		visible = {
+			is_economic_sphere_leader = yes
 			OR = {
 				has_completed_focus = SZC_pan_FORPOL_spread_our_revolution
 				has_completed_focus = SZC_pan_CDL_FORPOL_return_to_world_stage
@@ -3205,9 +3206,10 @@ foreign_politics = {
 	SZC_CDL_invite_into_federation_system = {
 		icon = GFX_decision_global_trade
 
-		allowed = { is_economic_sphere_leader = yes }
+		allowed = { original_tag = SZC }
 
 		visible = {
+			is_economic_sphere_leader = yes
 			OR = {
 				has_completed_focus = SZC_pan_dream_of_a_federation
 				has_country_flag = SZC_YCP_PAF_available
@@ -3240,9 +3242,10 @@ foreign_politics = {
 	SZC_CDL_integrate_into_panasian_federation = {
 		icon = GFX_decision_global_trade
 
-		allowed = { is_economic_sphere_leader = yes }
+		allowed = { original_tag = SZC }
 
 		visible = {
+			is_economic_sphere_leader = yes
 			OR = {
 				has_cosmetic_tag = SZC_PAF
 				has_cosmetic_tag = SZC_YCP_PAF
@@ -3338,9 +3341,10 @@ foreign_politics = {
 	SZC_YCP_invite_into_economic_sphere = {
 		icon = GFX_decision_global_trade
 
-		allowed = { is_economic_sphere_leader = yes }
+		allowed = { original_tag = SZC }
 
 		visible = {
+			is_economic_sphere_leader = yes
 			has_completed_focus = SZC_YCP_FORPOL_mandate_heaven_of_china
 			OR = {
 				FROM = {
@@ -3441,9 +3445,10 @@ foreign_politics = {
 	SZC_YCP_yellow_syndicalization = {
 		icon = GFX_decision_global_trade
 
-		allowed = { is_economic_sphere_leader = yes }
+		allowed = { original_tag = SZC }
 
 		visible = {
+			is_economic_sphere_leader = yes
 			AND = {
 				has_completed_focus = SZC_YCP_FORPOL_expand_yellow_revolution
 				has_country_leader = { character = SZC_zhang_guotao }
@@ -3540,9 +3545,10 @@ foreign_politics = {
 	SZC_KMD_invite_into_economic_sphere = {
 		icon = GFX_decision_global_trade
 
-		allowed = { is_economic_sphere_leader = yes }
+		allowed = { original_tag = SZC }
 
 		visible = {
+			is_economic_sphere_leader = yes
 			OR = {
 				has_completed_focus = SZC_KMD_FORPOL_sphere_on_earth
 				has_completed_focus = SZC_KMD_FORPOL_new_diplomatic_system
