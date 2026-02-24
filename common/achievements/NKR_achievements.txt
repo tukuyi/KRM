@@ -214,4 +214,173 @@ NKR_dr_latencys_freak_report_achievement = {
 		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
 	}
 }
+CHINA_NKR_tianlingling_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
 
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = formed_roc_tooltip
+				has_country_flag = NKRsichuan_KMDpath
+				china_is_the_unifier_of_china_trigger = yes
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_caocaos_legacy_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_caocaos_legacy_achievement_tt
+				has_country_flag = SZC_KMD_bingfa_available
+				has_completed_focus = SZC_KMD_yisiyueduoyuegaoming
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_real_old_capital_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			607 = {
+				is_owned_and_controlled_by = ROOT
+				is_capital = yes
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_chengxuns_home_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_chengxuns_home_achievement_tt
+				has_country_flag = NKR_chengxuns_home_achievement_complete
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_parn_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_parn_achievement_tt
+				JAP = {
+					is_monarchy = no
+					has_country_leader = {
+						character = JAP_makiguchi_tsunesaburo
+					}
+					is_subject_of = ROOT
+				}
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_great_crusade_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_great_crusade_achievement_tt
+				has_completed_focus = SZC_KMD_awaken_war
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_his_dream_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_his_dream_achievement_tt
+				has_country_flag = NKR_his_dream_achievement_achieve
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_his_vision_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_his_vision_achievement_tt
+				has_country_flag = NKR_his_vision_achievement_achieve
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_the_one_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_the_one_achievement_tt
+				has_country_flag = NKR_the_one_achievement_achieve
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}

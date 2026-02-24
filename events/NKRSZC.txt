@@ -25338,13 +25338,27 @@ country_event = { #
 	desc = NKRsichuanflavor.87.d
 	picture = GFX_report_event_SZC_dongdalu
 
-	is_triggered_only = yes
+	trigger = {
+		has_country_flag = SZC_KMD_chengxun_home_available
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:SZC_liu_chengxun }
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:SZC_liu_chengxun_tianzi }
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:ENG_liu_chengxun }
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:FRA_liu_chengxun }
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:RSA_liu_chengxun }
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:GRU_liu_chengxun }
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:TUR_liu_chengxun }
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:USA_liu_chengxun }
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:JAP_liu_chengxun }
+	}
 	fire_only_once = yes
 	
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanflavor.87 option NKRsichuanflavor.87.a"
 		name = NKRsichuanflavor.87.a
+		set_country_flag = NKR_chengxuns_home_achievement_complete
+		custom_effect_tooltip = NKR_chengxuns_home_achievement_tt
+		add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:SZC_liu_chengxun_tenshi }
 	}
 }
 
@@ -29738,6 +29752,7 @@ country_event = { #最卑劣的刺杀
 			log = "[GetLogInfo]: event NKRsichuanKMD.178 option NKRsichuanKMD.178.a"
 			name = NKRsichuanKMD.178.a
 			custom_effect_tooltip = KMDLCYending
+			set_country_flag = NKR_his_dream_achievement_achieve
 		}
 	}
 	
@@ -29755,6 +29770,7 @@ country_event = { #最卑劣的刺杀
 			log = "[GetLogInfo]: event NKRsichuanKMD.179 option NKRsichuanKMD.179.a"
 			name = NKRsichuanKMD.179.a
 			custom_effect_tooltip = KMDLCYending
+			set_country_flag = NKR_his_vision_achievement_achieve
 		}
 	}
 	
@@ -29772,6 +29788,7 @@ country_event = { #最卑劣的刺杀
 			log = "[GetLogInfo]: event NKRsichuanKMD.180 option NKRsichuanKMD.180.a"
 			name = NKRsichuanKMD.180.a
 			custom_effect_tooltip = KMDLCYending
+			set_country_flag = NKR_the_one_achievement_achieve
 		}
 	}
 
