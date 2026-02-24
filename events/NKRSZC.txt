@@ -3370,6 +3370,17 @@ country_event = { #政治协商会议召开
 			tooltip_side = SZC_bop_CDL_winning_side
 		}
 	}
+
+	option = {#我们的首要目标，是实现祖国统一！
+		log = "[GetLogInfo]: event NKRsichuan.222 option NKRsichuan.222.a"
+		name = NKRsichuan.222.a
+		add_political_power = 150
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = -0.05
+			tooltip_side = SZC_bop_PWH_winning_side
+		}
+	}
 }
 
 country_event = { #爱国阵线问题
@@ -3387,7 +3398,7 @@ country_event = { #爱国阵线问题
 		name = NKRsichuan.223.a
 		add_power_balance_value = {
 			id = SZC_CDL_power_balance
-			value = 0.1
+			value = 0.15
 			tooltip_side = SZC_bop_CDL_winning_side
 		}
 	}
@@ -3396,7 +3407,7 @@ country_event = { #爱国阵线问题
 		name = NKRsichuan.223.b
 		add_power_balance_value = {
 			id = SZC_CDL_power_balance
-			value = -0.1
+			value = -0.15
 			tooltip_side = SZC_bop_PWH_winning_side
 		}
 		add_popularity = {
@@ -3533,6 +3544,11 @@ country_event = { #一笔交易
 		log = "[GetLogInfo]: event NKRsichuan.229 option NKRsichuan.229.b"
 		name = NKRsichuan.229.b
 		add_stability = 0.05
+		add_power_balance_value = {
+			id = SZC_CDL_power_balance
+			value = -0.1
+			tooltip_side = SZC_bop_PWH_winning_side
+		}
 		remove_ideas = {
 			SZC_pan_anti_corruption_action
 		}
