@@ -4604,7 +4604,29 @@ KMD_only_bonus_get = {
 			add_stability = 0.05
 		}
 		34 = {
-			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+	KMD_bonus_kongmeng_effect = yes
+}
+
+KMD_bonus_kongmeng_effect = {
+	if = {
+		limit = {
+			has_country_flag = KMD_kongmeng_giant_available
+		}
+		random_list = {
+			50 = {
+				random_owned_controlled_state = {
+					create_unit = {
+					division = "name = \"孔孟金刚抽奖型\" division_template = \"孔孟金刚\" start_experience_factor = 0.1 start_equipment_factor = 1"
+					owner = ROOT
+					}
+				}
+			}
+			50 = {
+				#blablabla
+			}
 		}
 	}
 }
@@ -6235,6 +6257,7 @@ breakup_army_setup = {
 
 
 SZC_debug_chengxun_clothe_add_effect = {
+	set_country_flag = SZC_KMD_chengxun_home_available
 	add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:SZC_liu_chengxun }
 	add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:SZC_liu_chengxun_tianzi }
 	add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:ENG_liu_chengxun }
