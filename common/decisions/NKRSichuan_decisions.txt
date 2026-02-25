@@ -3004,48 +3004,23 @@ foreign_politics = {
 			OR = {
 				has_completed_focus = SZC_pan_FORPOL_spread_our_revolution
 				has_completed_focus = SZC_pan_CDL_FORPOL_return_to_world_stage
-			}
-			OR = {
-				AND = {
-					NOT = {
-						has_completed_focus = SZC_pan_FORPOL_kaiser_and_president
-					}
-					FROM = {
-						is_ally_with = SZC
-						NOT = { has_country_flag = SZC_was_invited_into_partnership }
-					}
-				}
-				FROM = {
-					is_ally_with = SZC
-					NOT = { has_country_flag = SZC_was_invited_into_partnership }
-					any_owned_state = {
-						is_capital = yes
-						OR = {
-							is_on_continent = asia
-							is_on_continent = australia
-							is_on_continent = india
-							is_on_continent = middle_east
-							is_on_continent = africa
-						}
-					}
-				}
+				has_completed_focus = SZC_pan_FORPOL_kaiser_and_president
 			}
 		}
 		target_trigger = {
 			FROM = {
 				is_ally_with = SZC
 				NOT = { has_country_flag = SZC_was_invited_into_partnership }
-				NOT = {
-					is_in_economic_sphere = yes
-				}
-				any_owned_state = {
-					is_capital = yes
-					OR = {
-						is_on_continent = asia
-						is_on_continent = australia
-						is_on_continent = india
-						is_on_continent = middle_east
-						is_on_continent = africa
+				OR = {
+					NOT = {
+						is_in_economic_sphere = yes
+					}
+					AND = {
+						OR = {
+							is_on_continent = africa
+							is_on_continent = asia
+						}
+						is_ally_with = GER
 					}
 				}
 			}
@@ -3075,36 +3050,12 @@ foreign_politics = {
 					has_completed_focus = SZC_pan_FORPOL_spread_our_revolution
 					has_completed_focus = SZC_pan_CDL_FORPOL_return_to_world_stage
 				}
-				FROM = {
-					is_ally_with = SZC
-					NOT = { has_country_flag = SZC_FORPOL_reorganized }
-					any_owned_state = {
-						is_capital = yes
-						OR = {
-							is_on_continent = asia
-							is_on_continent = australia
-							is_on_continent = india
-							is_on_continent = middle_east
-							is_on_continent = africa
-						}
-					}
-				}
 			}
 		}
 		target_trigger = {
 			FROM = {
-				is_ally_with = SZC
 				NOT = { has_country_flag = SZC_FORPOL_reorganized }
-				any_owned_state = {
-					is_capital = yes
-					OR = {
-						is_on_continent = asia
-						is_on_continent = australia
-						is_on_continent = india
-						is_on_continent = middle_east
-						is_on_continent = africa
-					}
-				}
+				is_puppet_of = SZC
 			}
 		}
 		ai_will_do = { factor = 50 }
@@ -3346,18 +3297,6 @@ foreign_politics = {
 		visible = {
 			is_economic_sphere_leader = yes
 			has_completed_focus = SZC_YCP_FORPOL_mandate_heaven_of_china
-			OR = {
-				FROM = {
-					OR = {
-						is_ally_with = ROOT
-						is_subject_of = ROOT
-					}
-					NOT = { has_country_flag = SZC_was_invited_into_partnership }
-					any_owned_state = {
-						is_capital = yes
-					}
-				}
-			}
 		}
 		target_trigger = {
 			FROM = {
@@ -3553,22 +3492,6 @@ foreign_politics = {
 				has_completed_focus = SZC_KMD_FORPOL_sphere_on_earth
 				has_completed_focus = SZC_KMD_FORPOL_new_diplomatic_system
 			}
-			OR = {
-				FROM = {
-					is_ally_with = SZC
-					NOT = { has_country_flag = SZC_was_invited_into_partnership }
-					any_owned_state = {
-						is_capital = yes
-						OR = {
-							is_on_continent = asia
-							is_on_continent = australia
-							is_on_continent = india
-							is_on_continent = middle_east
-							is_on_continent = africa
-						}
-					}
-				}
-			}
 		}
 		target_trigger = {
 			FROM = {
@@ -3576,16 +3499,6 @@ foreign_politics = {
 				NOT = { has_country_flag = SZC_was_invited_into_partnership }
 				NOT = {
 					is_in_economic_sphere = yes
-				}
-				any_owned_state = {
-					is_capital = yes
-					OR = {
-						is_on_continent = asia
-						is_on_continent = australia
-						is_on_continent = india
-						is_on_continent = middle_east
-						is_on_continent = africa
-					}
 				}
 			}
 		}
