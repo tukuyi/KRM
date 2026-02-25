@@ -1,0 +1,49 @@
+# ======================================================
+# KMD Ending 3  (token: kmd_e3)
+# 由 SUZERAIN 剧情编辑器 v2 生成
+# ======================================================
+
+SZR_kmd_e3_start = {
+	SZR_chat_close = yes
+	set_variable = { ROOT.SZR_current_chat_content = token:kmd_e3 }
+	SZR_all_setup = yes
+	SZR_chat_remove_first = yes
+	add_to_array = { ROOT.SZR_current_chat_messages = 1 }
+	ROOT = {
+		set_country_flag = SZR_chat_gui_visible
+	}
+}
+
+SZR_chat_kmd_e3_portraits_setup = {
+}
+
+SZR_chat_kmd_e3_END_setup = {
+	add_to_array = { ROOT.SZR_END_msgs = 9 }
+}
+
+SZR_chat_kmd_e3_option_setup = {
+}
+
+SZR_chat_kmd_e3_name_setup = {
+}
+
+SZR_chat_kmd_e3_special_transfer_setup = {
+	add_to_array = { ROOT.SZR_special_transfers = 99999 } # placeholder
+}
+
+SZR_chat_portraits_get_kmd_e3 = {
+}
+
+SZR_chat_names_get_kmd_e3 = {
+}
+
+SZR_chat_special_transfer_kmd_e3 = {
+}
+
+SZR_chat_options_get_kmd_e3 = {
+}
+
+SZR_chat_options_EFFECT_kmd_e3 = {
+	log = "option check = [?SZR_current_chat_content.GetTokenKey]"
+
+}

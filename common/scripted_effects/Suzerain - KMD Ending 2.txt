@@ -1,0 +1,64 @@
+# ======================================================
+# KMD Ending 2  (token: kmd_e2)
+# 由 SUZERAIN 剧情编辑器 v2 生成
+# ======================================================
+
+SZR_kmd_e2_start = {
+	SZR_chat_close = yes
+	set_variable = { ROOT.SZR_current_chat_content = token:kmd_e2 }
+	SZR_all_setup = yes
+	SZR_chat_remove_first = yes
+	add_to_array = { ROOT.SZR_current_chat_messages = 1 }
+	ROOT = {
+		set_country_flag = SZR_chat_gui_visible
+	}
+}
+
+SZR_chat_kmd_e2_portraits_setup = {
+}
+
+SZR_chat_kmd_e2_END_setup = {
+	add_to_array = { ROOT.SZR_END_msgs = 11 }
+}
+
+SZR_chat_kmd_e2_option_setup = {
+	add_to_array = { ROOT.SZR_chat_options_available = 8 }
+}
+
+SZR_chat_kmd_e2_name_setup = {
+}
+
+SZR_chat_kmd_e2_special_transfer_setup = {
+	add_to_array = { ROOT.SZR_special_transfers = 99999 } # placeholder
+}
+
+SZR_chat_portraits_get_kmd_e2 = {
+}
+
+SZR_chat_names_get_kmd_e2 = {
+}
+
+SZR_chat_special_transfer_kmd_e2 = {
+}
+
+SZR_chat_options_get_kmd_e2 = {
+	if = {
+		limit = { check_variable = { last_value = 8 } }
+		add_to_array = { ROOT.SZR_chat_options = 1 }
+		add_to_array = { ROOT.SZR_chat_options = 2 }
+	}
+}
+
+SZR_chat_options_EFFECT_kmd_e2 = {
+	log = "option check = [?SZR_current_chat_content.GetTokenKey]"
+
+	if = {
+		limit = { check_variable = { SZR_chat_option = 1 } }
+		set_temp_variable = { last_value = 9 }
+	}
+	if = {
+		limit = { check_variable = { SZR_chat_option = 2 } }
+		set_temp_variable = { last_value = 9 }
+	}
+	SZR_chat_option_select_generic_effect = yes
+}

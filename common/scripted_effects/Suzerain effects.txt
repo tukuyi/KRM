@@ -27,6 +27,34 @@ SZR_chat_content_check = {
 			scoped_play_song = "Suzerain_-_18_Summary"
 			clr_country_flag = SZC_SZR_kmd_c2
 		}
+		if = {
+			limit = {
+				ROOT = {
+					has_country_flag = SZC_SZR_kmd_e1
+				}
+			}
+			set_variable = { ROOT.SZR_current_chat_content = token:kmd_e1 }
+			scoped_play_song = "LawLoveandWill"
+			clr_country_flag = SZC_SZR_kmd_c2
+		}
+		if = {
+			limit = {
+				ROOT = {
+					has_country_flag = SZC_SZR_kmd_e2
+				}
+			}
+			set_variable = { ROOT.SZR_current_chat_content = token:kmd_e2 }
+			clr_country_flag = SZC_SZR_kmd_e2
+		}
+		if = {
+			limit = {
+				ROOT = {
+					has_country_flag = SZC_SZR_kmd_e3
+				}
+			}
+			set_variable = { ROOT.SZR_current_chat_content = token:kmd_e3 }
+			clr_country_flag = SZC_SZR_kmd_e3
+		}
 		SZR_all_setup = yes
 		SZR_chat_remove_first = yes
 		add_to_array = { ROOT.SZR_current_chat_messages = 1 }

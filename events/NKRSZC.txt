@@ -29924,7 +29924,10 @@ country_event = { #最卑劣的刺杀
 					if = {
 						limit = {
 							has_completed_custom_achievement = {
-								achievement = NKR_his_vision_achievement
+								achievement = NKR_his_evement
+							}
+							has_completed_custom_achievement = {
+								achievement = NKR_his_dream_achievement
 							}
 						}
 						country_event = {
@@ -29934,7 +29937,7 @@ country_event = { #最卑劣的刺杀
 					}
 					else = {
 						country_event = {
-							id = NKRsichuanKMD.179
+							id = NKRsichuanKMD.179vision_achi
 							days = 3
 						}
 					}
@@ -29964,6 +29967,7 @@ country_event = { #最卑劣的刺杀
 			name = NKRsichuanKMD.178.a
 			custom_effect_tooltip = KMDLCYending
 			set_country_flag = NKR_his_dream_achievement_achieve
+			SZR_kmd_e1_start = yes
 		}
 	}
 	
@@ -29982,10 +29986,11 @@ country_event = { #最卑劣的刺杀
 			name = NKRsichuanKMD.179.a
 			custom_effect_tooltip = KMDLCYending
 			set_country_flag = NKR_his_vision_achievement_achieve
+			SZR_kmd_e1_start = yes
 		}
 	}
 	
-	country_event = { #已NKRsichuanKMD.180 - 窃笑
+	country_event = { #已NKRsichuanKMD.180 - 祂
 		id = NKRsichuanKMD.180
 		title = NKRsichuanKMD.180.t
 		desc = NKRsichuanKMD.180.d
@@ -29995,11 +30000,12 @@ country_event = { #最卑劣的刺杀
 		fire_only_once = yes
 		
 	
-		option = {# 你已经证明了你可以同我一起升天。
+		option = {# 
 			log = "[GetLogInfo]: event NKRsichuanKMD.180 option NKRsichuanKMD.180.a"
 			name = NKRsichuanKMD.180.a
 			custom_effect_tooltip = KMDLCYending
 			set_country_flag = NKR_the_one_achievement_achieve
+			SZR_kmd_e1_start = yes
 		}
 	}
 
