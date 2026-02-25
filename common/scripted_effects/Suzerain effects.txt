@@ -106,6 +106,16 @@ SZR_chat_close = {
 	clr_country_flag = SZR_chat_gui_visible
 }
 
+SZR_chat_close_limit = {
+	clear_array = ROOT.SZR_current_chat_messages
+	clear_array = ROOT.SZR_chat_speaking_bois
+	clear_array = ROOT.SZR_chat_options
+	clear_array = ROOT.SZR_chat_names
+	clear_array = ROOT.SZR_special_transfers
+	clear_array = ROOT.SZR_portraits_local
+	clear_array = ROOT.SZR_END_msgs
+}
+
 SZR_chat_remove_first = {
 	remove_from_array = { 
 		array = ROOT.SZR_current_chat_messages
@@ -154,11 +164,16 @@ SZR_chat_continue_effect = {
 	SZR_chat_name_check = yes
 	SZR_chat_portrait_check = yes
 	SZR_chat_option_check = yes
-	log = "msg = [?ROOT.SZR_current_chat_messages^9]"
-	log = "msg = [?ROOT.SZR_current_chat_messages^10]"
-	log = "msg = [?ROOT.SZR_current_chat_messages^11]"
-	log = "last_value = [?last_value]"
-	add_to_array = { ROOT.SZR_current_chat_messages = var:last_value }
+	if = {
+		limit = {
+			check_variable = {
+				trans_to_new_szr = 1
+			}
+		}
+	}
+	else = {
+		add_to_array = { ROOT.SZR_current_chat_messages = var:last_value }
+	}
 }
 SZR_chat_option_select_generic_effect = {
 	SZR_chat_remove_first = yes
@@ -245,7 +260,27 @@ SZR_chat_END_check = {
 				array = ROOT.SZR_END_msgs
 			}
 		}
-		SZR_chat_close = yes
+		if = {
+			limit = {
+				is_in_array = {
+					value = var:last_value
+					array = ROOT.SZR_special_transfers
+				}
+			}
+			meta_effect = {
+				text = {
+					SZR_chat_close_limit = yes
+					SZR_chat_[CONTEXT]_special_END = yes
+					set_temp_variable = {
+						trans_to_new_szr = 1
+					}
+				}
+				CONTEXT = "[?SZR_current_chat_content.GetTokenKey]"
+			}
+		}
+		else = {
+			SZR_chat_close = yes
+		}
 	}
 	custom_effect_tooltip = SZR_chat_continue_tt
 }
