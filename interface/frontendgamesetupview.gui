@@ -1063,6 +1063,80 @@ guiTypes = {
 	### SETUP FOR HIGHLIGHTING MINOR TAGS
 
 		containerWindowType = {
+			name = "coverup_43"
+			position = { x = 528 y = 50 }
+			size = { width = 172  height = 96 }
+			clipping = yes
+
+			containerWindowType = {
+				name = "coverup_41_bg"
+				position = { x = 0   y = -190 }
+				size = { width = 172 height = 380 }
+				background = { quadTextureSprite = "GFX_tiled_paper_bg2" }
+
+				containerWindowType = {
+					name = "backdrop_texture_41"
+					background = { quadTextureSprite = "GFX_default_intro" }
+					position = { x = 2  y = 2 }
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "coverup_42"
+			position = { x = 528 y = 90 }
+			size = { width = 172  height = 96 }
+			clipping = yes
+
+			containerWindowType = {
+				name = "coverup_41_bg"
+				position = { x = 0   y = -190 }
+				size = { width = 172 height = 380 }
+				background = { quadTextureSprite = "GFX_tiled_paper_bg2" }
+
+				containerWindowType = {
+					name = "backdrop_texture_41"
+					background = { quadTextureSprite = "GFX_default_intro" }
+					position = { x = 2  y = 2 }
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "coverup_41"
+			position = { x = 528 y = 139 }
+			size = { width = 172  height = 96 }
+			clipping = yes
+
+			containerWindowType = {
+				name = "coverup_41_bg"
+				position = { x = 0   y = -190 }
+				size = { width = 172 height = 380 }
+				background = { quadTextureSprite = "GFX_tiled_paper_bg2" }
+
+				containerWindowType = {
+					name = "backdrop_texture_41"
+					background = { quadTextureSprite = "GFX_default_intro" }
+					position = { x = 2  y = 2 }
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "new_KMDpath"
+			position = { x = 512 y = 114 }
+			size = { width = 500  height = 296 }
+			clipping = yes
+
+			iconType = {
+				name = "KMDpath"
+				position = { x = 0   y = 0}
+				quadTextureSprite = "GFX_INTRO_kongmengdao_shine"
+				pdx_tooltip = GFX_INTRO_kongmengdao_tt
+			}
+		}
+
+		containerWindowType = {
 			name = highlight_minor_0
 			position = { x = 540 y = 330 }
 			## x: ± 86 to move one slot left or right

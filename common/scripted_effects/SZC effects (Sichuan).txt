@@ -6267,7 +6267,231 @@ SZC_debug_chengxun_clothe_add_effect = {
 	add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:TUR_liu_chengxun }
 	add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:USA_liu_chengxun }
 	add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:JAP_liu_chengxun }
+	add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:PRU_liu_chengxun }
 	add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:SZC_liu_chengxun_tenshi }
+}
+
+
+SZC_KMD_BAOBAOBAO_effect = {
+	for_each_scope_loop = {
+		array = global.european_tags_array
+		if = {
+			limit = {
+				NOT = { exists = yes }
+			}
+			ROOT = { release = PREV }
+		}
+	}
+	for_each_scope_loop = {
+		array = global.asian_tags_array
+		if = {
+			limit = { NOT = { exists = yes } }
+			ROOT = { release = PREV }
+		}
+		if = {
+			limit = {
+				exists = yes
+				is_subject = yes
+			}
+			overlord = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+	for_each_scope_loop = {
+		array = global.indian_tags_array
+		if = {
+			limit = { NOT = { exists = yes } }
+			ROOT = { release = PREV }
+		}
+		if = {
+			limit = {
+				exists = yes
+				is_subject = yes
+			}
+			overlord = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+	for_each_scope_loop = {
+		array = global.middle_eastern_tags_array
+		if = {
+			limit = { NOT = { exists = yes } }
+			ROOT = { release = PREV }
+		}
+		if = {
+			limit = {
+				exists = yes
+				is_subject = yes
+			}
+			overlord = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+	for_each_scope_loop = {
+		array = global.north_african_tags_array
+		if = {
+			limit = { NOT = { exists = yes } }
+			ROOT = { release = PREV }
+		}
+		if = {
+			limit = {
+				exists = yes
+				is_subject = yes
+			}
+			overlord = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+	for_each_scope_loop = {
+		array = global.african_tags_array
+		if = {
+			limit = { NOT = { exists = yes } }
+			ROOT = { release = PREV }
+		}
+		if = {
+			limit = {
+				exists = yes
+				is_subject = yes
+			}
+			overlord = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+	for_each_scope_loop = {
+		array = global.south_american_tags_array
+		if = {
+			limit = { NOT = { exists = yes } }
+			ROOT = { release = PREV }
+		}
+		if = {
+			limit = {
+				exists = yes
+				is_subject = yes
+			}
+			overlord = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+	for_each_scope_loop = {
+		array = global.central_american_tags_array
+		if = {
+			limit = { NOT = { exists = yes } }
+			ROOT = { release = PREV }
+		}
+		if = {
+			limit = {
+				exists = yes
+				is_subject = yes
+			}
+			overlord = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+	for_each_scope_loop = {
+		array = global.north_american_tags_array
+		if = {
+			limit = { NOT = { exists = yes } }
+			ROOT = { release = PREV }
+		}
+		if = {
+			limit = {
+				exists = yes
+				is_subject = yes
+			}
+			overlord = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+	for_each_scope_loop = {
+		array = global.oceania_tags_array
+		if = {
+			limit = { NOT = { exists = yes } }
+			ROOT = { release = PREV }
+		}
+		if = {
+			limit = {
+				exists = yes
+				is_subject = yes
+			}
+			overlord = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+	for_each_scope_loop = {
+		array = global.balkans_tags_array
+		if = {
+			limit = { NOT = { exists = yes } }
+			ROOT = { release = PREV }
+		}
+		if = {
+			limit = {
+				exists = yes
+				is_subject = yes
+			}
+			overlord = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+	for_each_scope_loop = {
+		array = global.china_tags_array
+		if = {
+			limit = { NOT = { exists = yes } }
+			ROOT = { release = PREV }
+		}
+		if = {
+			limit = {
+				exists = yes
+				is_subject = yes
+			}
+			overlord = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+
 }
 
 

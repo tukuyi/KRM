@@ -241,6 +241,22 @@ on_actions = {
 						set_variable = { annexation_event = 9014 }
 					}
 				}
+				if = { #秘鲁
+					limit = {
+						FROM.FROM = { state = 303 } #Lima
+						ROOT = {
+							OR = {
+								AND = {
+									has_country_leader = { character = SZC_liu_chengxun }
+									SZC_jiang_shangpu = { is_second_in_command = no }
+								}
+							}
+						}
+					}
+					303 = { #Lima
+						set_variable = { annexation_event = 9015 }
+					}
+				}
 			}
 			# if = {
 			# 	limit = {

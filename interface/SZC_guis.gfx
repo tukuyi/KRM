@@ -5,14 +5,6 @@ SpriteTypes = {
 		noOfFrames = 2
 	}
 	#intro
-	spriteType = {
-		name = "GFX_INTRO_panwenhua"
-		texturefile = "gfx/interface/gui/intro/INTRO_panwenhua.png"
-	}
-	spriteType = {
-		name = "GFX_INTRO_zengqi"
-		texturefile = "gfx/interface/gui/intro/INTRO_zengqi.png"
-	}
 	SpriteType = {
 		name = "GFX_INTRO_panwenhua_shine"
 		texturefile = "gfx/interface/gui/intro/INTRO_panwenhua.png"
@@ -65,6 +57,38 @@ SpriteTypes = {
 
 		animation = {
 			animationmaskfile = "gfx/interface/gui/intro/INTRO_zengqi.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_INTRO_kongmengdao_shine"
+		texturefile = "gfx/interface/gui/intro/INTRO_kongmengdao.png"
+				effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/gui/intro/INTRO_kongmengdao.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+
+		animation = {
+			animationmaskfile = "gfx/interface/gui/intro/INTRO_kongmengdao.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -422,6 +446,10 @@ SpriteTypes = {
 		texturefile = "gfx/interface/gui/KMD/HLZJ_SZC_liu_chengxun_tenshi_visual.png"
 	}
 	spriteType = {
+		name = "GFX_HLZJ_PRU_liu_chengxun_visual"
+		texturefile = "gfx/interface/gui/KMD/HLZJ_PRU_liu_chengxun_visual.png"
+	}
+	spriteType = {
 		name = "GFX_HLZJ_SZC_liu_chengxun_clothe"
 		texturefile = "gfx/interface/gui/KMD/HLZJ_SZC_liu_chengxun_clothe.png"
 	}
@@ -460,5 +488,19 @@ SpriteTypes = {
 	spriteType = {
 		name = "GFX_HLZJ_SZC_liu_chengxun_tenshi_clothe"
 		texturefile = "gfx/interface/gui/KMD/HLZJ_SZC_liu_chengxun_tenshi_clothe.png"
+	}
+	spriteType = {
+		name = "GFX_HLZJ_PRU_liu_chengxun_clothe"
+		texturefile = "gfx/interface/gui/KMD/HLZJ_PRU_liu_chengxun_clothe.png"
+	}
+
+	
+	spriteType = {
+		name = "GFX_ability_fireball"
+		texturefile = "gfx/interface/abilitylist/ability_fireball.png"
+	}
+	spriteType = {
+		name = "GFX_ability_ziwenguitian"
+		texturefile = "gfx/interface/abilitylist/ability_ziwenguitian.png"
 	}
 }

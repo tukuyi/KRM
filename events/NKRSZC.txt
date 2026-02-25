@@ -18824,6 +18824,7 @@ country_event = { #泰西大秦
 					}
 				}
 				add_claim_by = FRP
+				enable_state_integration_80_compliance = yes
 			}
 			every_state = {
 				limit = {
@@ -20780,19 +20781,101 @@ country_event = { #崇高国度
 	}
 }
 
-country_event = { #
+country_event = { #太阳之子与汉家天子
 	id = NKRsichuanpuppet.73
 	title = NKRsichuanpuppet.73.t
 	desc = NKRsichuanpuppet.73.d
-	picture = GFX_report_event_SZC_dongdalu
+	picture = GFX_report_event_SZC_han
 
 	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				if = {
+					limit = { is_peru = no }
+					remove_core_of = PRU
+				}
+				else = {
+					add_core_of = PRU
+				}
+				remove_claim_by = PRU
+			}
+			490 = { retain_state = yes } #Pastaza
+			506 = { retain_state = yes } #Antofagasta
+			688 = { retain_state = yes } #Northern Chaco
+			872 = { retain_state = yes } #Arica
+			873 = { retain_state = yes } #Tarapacá
+			1027 = { retain_state = yes } #Upper Chaco
+			if = {
+				limit = { NOT = { country_exists = BOL } }
+				BOL = { BOL_restore_characters = yes }
+			}
+			if = {
+				limit = { original_tag = BOL }
+				save_event_target_as = can_annex
+			}
+			if = {
+				limit = { BOL = { ROOT_can_grant_land = yes } }
+				BOL = { save_event_target_as = bolivia add_to_array = { ROOT.potential_grant_targets = THIS } }
+			}
+		}
+	}
 	
 	
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.73 option NKRsichuanpuppet.73.a"
 		name = NKRsichuanpuppet.73.a
+		custom_effect_tooltip = KMD_chengxun_clothe_unlock
+		add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:PRU_liu_chengxun }
+		set_temp_variable = { tag_to_release = PRU }
+		release_targeted_tag = yes
+		hidden_effect = {
+			var:tag_to_release = { PRU_puppet_setup = yes }
+		}
+		hidden_effect = {
+			PRU_liu_chengxun = {
+				set_nationality = var:tag_to_release
+			}
+			var:tag_to_release = {
+				set_cosmetic_tag = PRU_LCX
+				PRU_liu_chengxun = {
+					promote_character = social_conservative_national_conservative_subtype
+				}
+				set_politics = {
+					ruling_party = social_conservative
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = PRU_LCX_party
+					long_name = PRU_LCX_party_long
+				}
+				set_autonomy = {
+					autonomy_state = crownland
+					end_wars = no
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_peru = yes
+							is_ecuador = yes
+							is_bolivia = yes
+							is_chile = yes
+						}
+					}
+					add_claim_by = var:tag_to_release 
+					enable_state_integration_80_compliance = yes
+				}
+				every_state = {
+					limit = {
+						is_claimed_by = var:tag_to_release 
+						is_owned_and_controlled_by_ROOT_or_subject = yes
+					}
+					transfer_state_to = var:tag_to_release 
+				}
+				
+			}
+		}
 	}
 }
 
@@ -25388,6 +25471,7 @@ country_event = { #
 		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:TUR_liu_chengxun }
 		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:USA_liu_chengxun }
 		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:JAP_liu_chengxun }
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:PRU_liu_chengxun }
 	}
 	fire_only_once = yes
 	
@@ -30048,5 +30132,88 @@ country_event = { #DEBUG-DEMO
 		name = SZCDEBUG.7.c
 		add_to_array = { ROOT.SZR_chat_target_array = 650 }
 		# SZR_chat_close = yes
+	}
+}
+
+country_event = { #DEBUG-boom
+	id = SZCDEBUG.8
+
+	is_triggered_only = yes
+
+	
+
+	option = {#
+		name = SZCDEBUG.8.a
+		KMD_setup_dynamic_breakaways = yes
+		hidden_effect = {
+			for_each_scope_loop = {
+				array = SZC.subjects
+				SZC_KMD_BAOBAOBAO_effect = yes
+			}
+			every_controlled_state = {
+				damage_units = {
+					state = THIS
+					limit = { tag = ROOT }
+					damage = 0.5
+					ratio = yes
+					army = yes
+					navy = yes
+				}
+			}
+			set_research_slots = 2
+			dismantle_faction = yes
+			SZC_KMD_BAOBAOBAO_effect = yes
+			every_country = {
+				limit = { is_subject = yes }
+				overlord = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_free
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					exists = yes
+				}
+				breakup_army_setup = yes
+				every_neighbor_country = {
+					limit = {
+						exists = yes
+						NOT = { tag = PREV }
+						NOT = { is_subject_of = PREV }
+						NOT = { PREV = { is_subject_of = THIS } }
+					}
+					PREV = {
+						declare_war_on = {
+							target = THIS
+							type = topple_government
+						}
+					}
+				}
+			}
+		}
+	}
+	OPTION = {
+		name = SZCDEBUG.8.b
+		every_country = {
+			limit = {
+				exists = yes
+				num_owned_states > 0
+			}
+			every_neighbor_country = {
+				limit = {
+					exists = yes
+					NOT = { tag = PREV }
+					NOT = { is_in_faction_with = PREV }
+					NOT = { has_war_with = PREV }
+					num_owned_states > 0
+				}
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
 	}
 }
