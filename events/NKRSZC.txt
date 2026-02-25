@@ -25206,6 +25206,12 @@ country_event = { #兵法
 	is_triggered_only = yes
 	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			scoped_play_song = "3Kunited"
+		}
+	}
+	
 
 	option = {#兵法教出来的都是呆子！
 		log = "[GetLogInfo]: event NKRsichuanflavor.72 option NKRsichuanflavor.72.a"
@@ -25239,6 +25245,12 @@ country_event = { #三军听令
 	is_triggered_only = yes
 	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			scoped_play_song = "LostJin"
+		}
+	}
+	
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanflavor.73 option NKRsichuanflavor.73.a"
@@ -25270,6 +25282,12 @@ country_event = { #吃什么
 
 	is_triggered_only = yes
 	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = {
+			scoped_play_song = "Song_of_Lusu"
+		}
+	}
 	
 
 	option = {#
@@ -25351,6 +25369,13 @@ country_event = { #星夜进军
 	is_triggered_only = yes
 	fire_only_once = yes
 	
+	
+	immediate = {
+		hidden_effect = {
+			scoped_play_song = "CaiMaoRebellion"
+		}
+	}
+	
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanflavor.80 option NKRsichuanflavor.80.a"
@@ -25399,6 +25424,12 @@ country_event = { #我想我那些个蛐蛐
 	is_triggered_only = yes
 	fire_only_once = yes
 	
+	
+	immediate = {
+		hidden_effect = {
+			scoped_play_song = "Song_of_Lusu"
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanflavor.83 option NKRsichuanflavor.83.a"
@@ -25447,6 +25478,12 @@ country_event = { #真军
 	is_triggered_only = yes
 	fire_only_once = yes
 	
+	
+	immediate = {
+		hidden_effect = {
+			scoped_play_song = "JiuWanZi"
+		}
+	}
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanflavor.86 option NKRsichuanflavor.86.a"
@@ -26616,6 +26653,9 @@ country_event = { #末日
 	option = {#这不能发生...
 		log = "[GetLogInfo]: event NKRsichuanKMD.16 option NKRsichuanKMD.16.a"
 		name = NKRsichuanKMD.16.a
+		hidden_effect = {
+			scoped_play_song = "CaoCaoCamp"
+		}
 	}
 }
 
@@ -26713,6 +26753,9 @@ country_event = { #医术的真谛
 	option = {#真是让人茅塞顿开啊！
 		log = "[GetLogInfo]: event NKRsichuanKMD.22 option NKRsichuanKMD.22.a"
 		name = NKRsichuanKMD.22.a
+		hidden_effect = {
+			scoped_play_song = "CaoCaoCamp"
+		}
 	}
 }
 
@@ -26855,7 +26898,7 @@ country_event = { #一对笑面虎
 		SZC_sun_chuanfang = { custom_effect_tooltip = character_becomes_a_general }
 
 		hidden_effect = {
-			scoped_play_song = "song_of_guanyu"
+			scoped_play_song = "GuanSurrunder"
 		}
 	}
 }
@@ -26985,6 +27028,9 @@ country_event = { #这是...
 		CHN_setup_military_disarray_normal_effect = yes
 		CHN_setup_national_illiteracy_effect = yes
 	
+		hidden_effect = {
+			scoped_play_song = "SoldierBattleCry"
+		}
 		hidden_effect = {
 			country_event = {
 				id = NKRsichuanKMD.37
@@ -27125,6 +27171,9 @@ country_event = { #传国玉玺之病
 			}
 		}
 		
+		hidden_effect = {
+			scoped_play_song = "DongZhuo"
+		}
 		hidden_effect = {
 			country_event = {
 				id = NKRsichuanKMD.41
@@ -27437,6 +27486,11 @@ country_event = { #刘成勋是第一个来开会的
 	is_triggered_only = yes
 	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			scoped_play_song = "SoldierBattleCry"
+		}
+	}
 
 	option = {#蒋尚朴冷冷地看着他。
 		log = "[GetLogInfo]: event NKRsichuanKMD.50 option NKRsichuanKMD.50.a"
@@ -27808,6 +27862,12 @@ country_event = { #最卑劣的刺杀
 		is_triggered_only = yes
 		fire_only_once = yes
 		
+	
+		immediate = {
+			hidden_effect = {
+				scoped_play_song = "LostJin"
+			}
+		}
 
 		option = {#宗教实验的终结...
 			log = "[GetLogInfo]: event NKRsichuanKMD.62 option NKRsichuanKMD.62.a"
@@ -28105,6 +28165,14 @@ country_event = { #最卑劣的刺杀
 
 		is_triggered_only = yes
 		fire_only_once = yes
+
+		
+	
+		immediate = {
+			hidden_effect = {
+				scoped_play_song = "GuanSurrunder"
+			}
+		}
 		
 
 		option = {#但求同年同月同日死！
@@ -28409,6 +28477,12 @@ country_event = { #最卑劣的刺杀
 
 		is_triggered_only = yes
 		fire_only_once = yes
+	
+		immediate = {
+			hidden_effect = {
+				scoped_play_song = "SoldierBattleCry"
+			}
+		}
 		
 
 		option = {#那就不奇怪了。
@@ -29331,6 +29405,12 @@ country_event = { #最卑劣的刺杀
 	
 		is_triggered_only = yes
 		fire_only_once = yes
+	
+		immediate = {
+			hidden_effect = {
+				scoped_play_song = "JiuWanZi"
+			}
+		}
 		
 	
 		option = {# 三弟，我好像真是下凡了。
@@ -29632,6 +29712,12 @@ country_event = { #最卑劣的刺杀
 	
 		is_triggered_only = yes
 		fire_only_once = yes
+	
+		immediate = {
+			hidden_effect = {
+				scoped_play_song = "DongZhuo"
+			}
+		}
 		
 	
 		option = {# 为了净化大业！
@@ -29750,6 +29836,12 @@ country_event = { #最卑劣的刺杀
 		}
 		fire_only_once = yes
 		
+	
+		immediate = {
+			hidden_effect = {
+				scoped_play_song = "3Kunited"
+			}
+		}
 	
 		option = {# 诸神觉醒了吗？
 			log = "[GetLogInfo]: event NKRsichuanKMD.174 option NKRsichuanKMD.174.a"
