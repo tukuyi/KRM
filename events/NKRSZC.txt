@@ -27379,16 +27379,6 @@ country_event = { #存在主义实践
 				value = var:SZC_KMD_congyun_focus
 				compare = equals
 			}
-			check_variable = {
-				var = SZC_KMD_shangpu_focus
-				value = var:SZC_KMD_congyun_focus
-				compare = less_than
-			}
-			check_variable = {
-				var = SZC_KMD_shangpu_focus
-				value = var:SZC_KMD_chengxun_focus
-				compare = less_than
-			}
 		}
 		hidden_effect = {
 			country_event = {
