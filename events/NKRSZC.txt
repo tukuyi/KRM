@@ -27089,7 +27089,7 @@ country_event = { #又一次酒会
 	id = NKRsichuanKMD.39
 	title = NKRsichuanKMD.39.t
 	desc = NKRsichuanKMD.39.d
-	picture = GFX_report_event_SZC_huandazhzan
+	picture = GFX_report_event_SZC_huandazhan
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -27131,11 +27131,6 @@ country_event = { #又一次酒会
 						var = SZC_KMD_chengxun_focus
 						value = var:SZC_KMD_congyun_focus
 						compare = greater_than
-					}
-					check_variable = {
-						var = SZC_KMD_chengxun_focus
-						value = var:SZC_KMD_shangpu_focus
-						compare = greater_than_or_equals
 					}
 				}
 			}
