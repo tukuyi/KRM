@@ -1482,7 +1482,7 @@ chinese_unification = {
 			if = {
 				limit = {
 					tag = SZC
-					has_country_flag= NKRsichuan_KMDpath
+					has_country_flag = NKRsichuan_KMDpath
 				}
 				OR = {
 					has_completed_focus = SZC_KMD_one_step_to_eternality
@@ -2133,7 +2133,7 @@ chinese_unification = {
 								id = NKRsichuanKMD.131
 								days = 1
 							}
-							set_cosmetic_tag = uunited_china
+							set_cosmetic_tag = united_china
 							hidden_effect = { news_event = NKRnews.43 }
 						}
 					}

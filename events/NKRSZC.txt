@@ -26952,7 +26952,6 @@ country_event = { #杀进泰山，夺了鸟位！
 			}
 		}
 	}
-	
 
 	option = {#一介懦夫！
 		log = "[GetLogInfo]: event NKRsichuanKMD.33 option NKRsichuanKMD.33.a"
@@ -27126,12 +27125,10 @@ country_event = { #又一次酒会
 		custom_effect_tooltip = NKRsichuanKMD.39.b.tt
 		trigger = {
 			NOT = {
-				AND = {
-					check_variable = {
-						var = SZC_KMD_chengxun_focus
-						value = var:SZC_KMD_congyun_focus
-						compare = greater_than
-					}
+				check_variable = {
+					var = SZC_KMD_chengxun_focus
+					value = var:SZC_KMD_congyun_focus
+					compare = greater_than
 				}
 			}
 		}
@@ -27342,22 +27339,25 @@ country_event = { #存在主义实践
 	option = {#那就去拜神仙吧！
 		log = "[GetLogInfo]: event NKRsichuanKMD.47 option NKRsichuanKMD.47.a"
 		name = NKRsichuanKMD.47.a
+		custom_effect_tooltip = NKRsichuanKMD.47.a.tt
 		trigger = {
-			NOT = {
+			OR = {
 				check_variable = {
-					var = SZC_KMD_chengxun_focus
-					value = var:SZC_KMD_congyun_focus
-					compare = equals
-				}
-				check_variable = {
-					var = SZC_KMD_shangpu_focus
-					value = var:SZC_KMD_congyun_focus
-					compare = less_than
-				}
-				check_variable = {
-					var = SZC_KMD_shangpu_focus
+					var = SZC_KMD_congyun_focus
 					value = var:SZC_KMD_chengxun_focus
-					compare = less_than
+					compare = greater_than
+				}
+				AND = {
+					check_variable = {
+						var = SZC_KMD_shangpu_focus
+						value = var:SZC_KMD_congyun_focus
+						compare = greater_than
+					}
+					check_variable = {
+						var = SZC_KMD_shangpu_focus
+						value = var:SZC_KMD_chengxun_focus
+						compare = greater_than
+					}					
 				}
 			}
 		}
