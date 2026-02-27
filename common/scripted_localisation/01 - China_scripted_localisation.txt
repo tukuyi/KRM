@@ -117,6 +117,14 @@ defined_text = {
 		localization_key = taiwan_province_state
 	}
 	text = {
+		trigger = { has_state_flag = mongolia_province_state }
+		localization_key = mongolia_province_state
+	}
+	text = {
+		trigger = { has_state_flag = tibet_province_state }
+		localization_key = tibet_province_state
+	}
+	text = {
 		localization_key = "BUG - STATE TARGETED IS NOT PART OF CHINA"
 	}
 }
@@ -1228,7 +1236,7 @@ defined_text = {
 					region = 222 #Inner Mongolia
 					state = 610 #Rehe
 					state = 715 #Liaobei
-					state = 884 #Xing'an
+					state = 996 #Barga
 				}
 			}
 		}
@@ -1248,7 +1256,7 @@ defined_text = {
 				OR = {
 					is_tibet = yes
 					state = 601 #Xikang
-					state = 604 #Golmud
+					state = 604 #Babao
 					state = 1045 #Xining
 				}
 			}
@@ -1267,7 +1275,7 @@ defined_text = {
 					region = 222 #Inner Mongolia
 					state = 610 #Rehe
 					state = 715 #Liaobei
-					state = 884 #Xing'an
+					state = 996 #Barga
 				}
 			}
 		}
@@ -1287,7 +1295,7 @@ defined_text = {
 				OR = {
 					is_tibet = yes
 					state = 601 #Xikang
-					state = 604 #Golmud
+					state = 604 #Babao
 					state = 1045 #Xining
 				}
 			}
@@ -1297,6 +1305,17 @@ defined_text = {
 }
 
 ### Alignment Scripted GUI ###
+defined_text = {
+	name = ChinaGetAlignmentButtonTooltip
+	text = {
+		trigger = { has_global_flag = china_united }
+		localization_key = china_alignment_gui_button_tooltip_disabled
+	}
+	text = {
+		localization_key = china_alignment_gui_button_tooltip_enabled
+	}
+}
+
 defined_text = {
 	name = ChinaGetAlignmentTitleName
 	text = {
