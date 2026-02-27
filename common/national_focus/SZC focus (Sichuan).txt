@@ -1,7 +1,7 @@
-########################
-## Sichuan Focus Tree ##
-## By Alpinia         ##
-########################
+#################################
+####上面这依托是Alpinia的老四川####
+###下面是卧槽Tek命运新生四川哦耶###
+#################################
 
 focus_tree = {
 	id = sichuan_focus
@@ -1340,11 +1340,6 @@ focus_tree = {
 
 		allow_branch = {
 			has_country_flag = SZC_accelerated_department_in_power
-			hidden_trigger = {
-				OR = {
-					has_country_leader = { character = SZC_yang_sen }
-				}
-			}
 		}
 		prerequisite = {
 			focus = SZC_New_Infantry_Weapons
@@ -2698,7 +2693,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_game_rule = { rule = SZC_path option = SZC_PATH_MARLIB }
+				has_game_rule = { rule = SZC_path option = SZC_PATH_WENHUI_SOCCON }
 				factor = 0
 			}
 		}
@@ -2838,7 +2833,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_game_rule = { rule = SZC_path option = SZC_PATH_MARLIB }
+				has_game_rule = { rule = SZC_path option = SZC_PATH_WENHUI_SOCCON }
 				factor = 0
 			}
 		}
@@ -2868,7 +2863,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_game_rule = { rule = SZC_path option = SZC_PATH_MARLIB }
+				has_game_rule = { rule = SZC_path option = SZC_PATH_WENHUI_SOCCON }
 				factor = 0
 			}
 		}
@@ -3038,7 +3033,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_game_rule = { rule = SZC_path option = SZC_PATH_SOCCON }
+				has_game_rule = { rule = SZC_path option = SZC_PATH_XIHOU_SOCCON }
 				factor = 0
 			}
 		}
@@ -3089,7 +3084,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_game_rule = { rule = SZC_path option = SZC_PATH_SOCCON }
+				has_game_rule = { rule = SZC_path option = SZC_PATH_XIHOU_SOCCON }
 				factor = 0
 			}
 		}
@@ -4241,44 +4236,43 @@ focus_tree = {
 				amount = 200
 			}
 			custom_effect_tooltip = tooltip_white_line
-			hidden_effect = {
-				ROOT = {
-					# A division_template effect to address 'Malformed token: Luo Zezhou Division' error
-					if = {
-						limit = {
-							NOT = { has_template = "Luo Zezhou Division" }
-						}
-						division_template = { #Luo Zezhou Division
-							name = "Luo Zezhou Division"
-							division_names_group = "CHYN_MTN_01"
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								irregular_infantry = { x = 1 y = 0 }
-								irregular_infantry = { x = 1 y = 1 }
-							}
-							priority = 2
-						}
-						custom_effect_tooltip = {
-							localization_key = tooltip_create_division_template
-							NAME = "Luo Zezhou Division"
-							LINE_1 = { localization_key = line_battalion_tt NAME = infantry ICON = GFX_unit_infantry_icon_small COUNT = 2 }
-							LINE_2 = { localization_key = line_battalion_tt NAME = irregular_infantry ICON = GFX_unit_irregular_infantry_icon_small COUNT = 2 }
-						}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_create_division_template
+					NAME = "Luo Zezhou Division"
+					LINE_1 = { localization_key = line_battalion_tt NAME = infantry ICON = GFX_unit_infantry_icon_small COUNT = 2 }
+					LINE_2 = { localization_key = line_battalion_tt NAME = irregular_infantry ICON = GFX_unit_irregular_infantry_icon_small COUNT = 2 }
+				}
+				if = {
+					limit = { has_template = "Luo Zezhou Division" }
+					delete_unit_template_and_units = { division_template = "Luo Zezhou Division" disband = yes } #no cheating
+				}
+				division_template = { #Luo Zezhou Division
+					name = "Luo Zezhou Division"
+					division_names_group = CHYN_MTN_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						irregular_infantry = { x = 1 y = 0 }
+						irregular_infantry = { x = 1 y = 1 }
 					}
+					priority = 2
 				}
 			}
 			random_owned_controlled_state = {
 				prioritize = { 661 }
-				create_unit = {
-					division = "division_template = \"Luo Zezhou Division\" start_experience_factor = 0.2"
-					prioritize_location = 2030
-					owner = ROOT
-				}
-				create_unit = {
-					division = "division_template = \"Luo Zezhou Division\" start_experience_factor = 0.2"
-					prioritize_location = 2030
-					owner = ROOT
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_spawn_units
+						COUNT = 2
+						TYPE = "Luo Zezhou Division"
+					}
+					create_unit = {
+						division = "division_template = \"Luo Zezhou Division\" start_experience_factor = 0.2"
+						prioritize_location = 2030
+						owner = ROOT
+						count = 2
+					}
 				}
 			}
 		}
@@ -4542,7 +4536,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_standardise_troop_numbers"
 			add_stability = 0.05
 			add_war_support = 0.05
-			add_political_power = 40
+			add_political_power = 25
 			event_option_tooltip = sichuan_events.505.a
 			hidden_effect = { country_event = sichuan_events.505 }
 		}
@@ -4565,12 +4559,6 @@ focus_tree = {
 			focus = SZC_new_sichuans_14_points
 		}
 
-		available = {
-			if = {
-				limit = { has_country_leader = { character = SZC_xiong_kewu } }
-				has_completed_focus = SZC_solicit_cooperation_between_north_and_south
-			}
-		}
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_repeal_the_warlord_taxes"
@@ -5000,7 +4988,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_evaluating_government_finances"
 			add_one_random_civilian_factory = yes
-			add_political_power = 35
+			add_political_power = 25
 			custom_effect_tooltip = tooltip_white_line
 			add_timed_idea = {
 				idea = SZC_rectifying_economic_disaster
@@ -5718,7 +5706,7 @@ focus_tree = {
 				set_coalition_stability_market_liberal = yes
 				custom_effect_tooltip = tooltip_white_line
 				add_stability = 0.08
-				add_political_power = 50
+				add_political_power = 30
 				add_popularity = {
 					ideology = market_liberal
 					popularity = 0.08
@@ -5731,7 +5719,7 @@ focus_tree = {
 				add_to_coalition = yes
 				custom_effect_tooltip = tooltip_white_line
 				add_stability = 0.05
-				add_political_power = 25
+				add_political_power = 15
 				add_popularity = {
 					ideology = market_liberal
 					popularity = 0.05
@@ -5752,7 +5740,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SZC_curb_provincial_vices
-		icon = GFX_focus_CHI_crackdown_on_illicit_Goods
+		icon = GFX_focus_CHI_crackdown_on_illicit_goods
 		cost = 8
 
 		relative_position_id = SZC_evaluating_government_finances
@@ -6488,8 +6476,8 @@ focus_tree = {
 			custom_effect_tooltip = SZC_United_Front_tt
 			activate_targeted_decision = { decision = SZC_united_anti_japanese_front target = ROOT }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
-	
 
 	focus = {
 		id = SZC_agreements_with_the_ycp
@@ -6552,11 +6540,10 @@ focus_tree = {
 				custom_effect_tooltip = SZC_liu_yuanxuan_was_helpful_tt
 				custom_effect_tooltip = tooltip_white_line
 				UPC_ctr_enthusiasm_medium_effect = yes
-				add_political_power = 25
+				add_political_power = 15
 			}
 			else = {
 				custom_effect_tooltip = SZC_liu_yuanxuan_will_be_helpful_tt
-
 			}
 			custom_effect_tooltip = tooltip_white_line
 			if = {
@@ -6569,7 +6556,6 @@ focus_tree = {
 			}
 			else = {
 				custom_effect_tooltip = SZC_xiang_chuanyi_will_be_helpful_tt
-
 			}
 			custom_effect_tooltip = tooltip_white_line
 			if = {
@@ -6628,13 +6614,13 @@ focus_tree = {
 				custom_effect_tooltip = SZC_zeng_shufan_was_helpful_tt
 				add_stability = 0.08
 				add_war_support = 0.08
-				add_political_power = 50
+				add_political_power = 30
 			}
 			else = {
 				custom_effect_tooltip = SZC_zeng_shufan_will_be_helpful_tt
 				add_stability = 0.04
 				add_war_support = 0.04
-				add_political_power = 25
+				add_political_power = 15
 			}
 			custom_effect_tooltip = tooltip_white_line
 			if = {
@@ -6700,13 +6686,13 @@ focus_tree = {
 				custom_effect_tooltip = SZC_hu_ziang_was_helpful_tt
 				add_stability = 0.06
 				add_war_support = 0.06
-				add_political_power = 50
+				add_political_power = 35
 			}
 			else = {
 				custom_effect_tooltip = SZC_hu_ziang_will_be_helpful_tt
 				add_stability = 0.03
 				add_war_support = 0.03
-				add_political_power = 25
+				add_political_power = 15
 			}
 			UPC_ctr_enthusiasm_medium_effect = yes
 			if = {
@@ -6810,7 +6796,14 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_recruit_sympathetic_officers"
 			add_war_support = 0.05
 			if = {
-				limit = { SZC_li_jiayu = { is_high_command = yes } }
+				limit = {
+					SZC_li_jiayu = {
+						OR = {
+							is_high_command = yes
+							is_army_chief = yes
+						}
+					}
+				}
 				custom_effect_tooltip = SZC_li_jiayu_was_helpful_tt
 				army_experience = 50
 				UPC_ext_enthusiasm_medium_effect = yes
@@ -7090,7 +7083,10 @@ focus_tree = {
 		y = 12
 
 		allow_branch = {
-			has_country_flag = UPC_has_federalist_democracy_flag
+			OR = {
+				has_country_flag = UPC_has_federalist_democracy_flag
+				has_country_flag = UPC_democratic_backsliding_flag
+			}
 		}
 
 		available = {
@@ -7138,7 +7134,10 @@ focus_tree = {
 		y = 0
 
 		allow_branch = {
-			has_country_flag = UPC_has_federalist_democracy_flag
+			OR = {
+				has_country_flag = UPC_has_federalist_democracy_flag
+				has_country_flag = UPC_democratic_backsliding_flag
+			}
 		}
 
 		available = {
@@ -7551,7 +7550,10 @@ focus_tree = {
 		y = 0
 
 		allow_branch = {
-			has_country_flag = UPC_has_federalist_democracy_flag
+			OR = {
+				has_country_flag = UPC_has_federalist_democracy_flag
+				has_country_flag = UPC_democratic_backsliding_flag
+			}
 		}
 
 		available = {
@@ -7662,8 +7664,7 @@ focus_tree = {
 			UPC_GRA_small_effect = yes
 			UPC_REP_small_effect = yes
 			custom_effect_tooltip = tooltip_white_line
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			add_to_coalition = yes
+			UPC_DCP_joins_governing_coalition_effect = yes
 			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { NOT = { has_character = YUN_luo_longji } }
@@ -7821,9 +7822,9 @@ focus_tree = {
 			}
 			remove_ideas = SZC_obscurations_on_military_loyalties_2
 			custom_effect_tooltip = tooltip_white_line
-			UPC_election_ban_REG_effect = yes
-			custom_effect_tooltip = tooltip_white_line
 			UPC_STA_leaves_governing_coalition_effect = yes
+			custom_effect_tooltip = tooltip_white_line
+			UPC_election_ban_REG_effect = yes
 		}
 	}
 
@@ -8011,7 +8012,8 @@ focus_tree = {
 					character = SZC_tian_songyao
 					advisor = {
 						slot = political_advisor
-						idea_token = SZC_tian_songyao_commander_desc
+						idea_token = SZC_tian_songyao_advisor
+						desc = SZC_tian_songyao_high_command_desc
 						traits = { KR_baoding_kingmaker }
 						cost = 0
 						can_be_fired = no
@@ -8162,7 +8164,10 @@ focus_tree = {
 			remove_ideas = SZC_nonsensical_economic_situation_2
 			custom_effect_tooltip = tooltip_white_line
 			SZC = { set_variable = { generic_raise_stability_decision_cost = 75 } }
-			custom_effect_tooltip = reduce_stability_decision_cost_twenty_five_percent_tt
+			custom_effect_tooltip = {
+				localization_key = reduce_stability_decision_cost_tt
+				NUMBER = 25%
+			}
 			custom_effect_tooltip = tooltip_white_line
 			SZC_the_push_for_efficiency_effect = yes
 		}
@@ -8321,7 +8326,6 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		available = {
 			NOT = {
-				#has_country_flag = UPC_CSP_in_governing_coalition_flag
 				has_country_flag = UPC_KMT_in_governing_coalition_flag
 			}
 		}
@@ -8549,7 +8553,10 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			UPC_sub_enthusiasm_medium_effect = yes
 			SZC = { set_variable = { generic_raise_stability_decision_cost = 75 } }
-			custom_effect_tooltip = reduce_stability_decision_cost_twenty_five_percent_tt
+			custom_effect_tooltip = {
+				localization_key = reduce_stability_decision_cost_tt
+				NUMBER = 25%
+			}
 		}
 	}
 
@@ -8791,7 +8798,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_partners_of_law_and_order
-		icon = GFX_goal_COS_German_Bailout
+		icon = GFX_goal_GER_CHN_military_mission
 		cost = 5
 
 		relative_position_id = SZC_The_Zhilis_Last_Stand
@@ -9050,11 +9057,6 @@ focus_tree = {
 						irregular_infantry = { x = 1 y = 1 }
 					}
 				}
-			}
-			custom_effect_tooltip = {
-				localization_key = tooltip_create_division_template
-				NAME = "Zhili Canbu Bubing Shi"
-				LINE_1 = { localization_key = line_battalion_tt NAME = irregular_infantry ICON = GFX_unit_irregular_infantry_icon_small COUNT = 4 }
 			}
 			random_owned_controlled_state = {
 				prioritize = { 605 }
@@ -10844,7 +10846,6 @@ focus_tree = {
 			801 = { is_owned_by_ROOT_or_subject = yes } #Shantou
 			802 = { is_owned_by_ROOT_or_subject = yes } #Xiamen
 			803 = { is_owned_by_ROOT_or_subject = yes } #Wenzhou
-			996 = { is_owned_by_ROOT_or_subject = yes } #Weihaiwei
 			1075 = { is_owned_by_ROOT_or_subject = yes } #Nantong
 		}
 		prerequisite = {
@@ -11089,7 +11090,128 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_reconstitute_the_beiyang_navy"
 			navy_experience = 25
-			CHN_inherit_beiyang_fleet_effect = yes
+			add_doctrine_cost_reduction = {
+				name = SZC_reconstitute_the_beiyang_navy
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+			add_timed_idea = {
+				idea = SZC_reconstituting_the_beiyang_navy
+				days = 365
+			}
+			if = {
+				limit = { NOT = { has_tech = early_ship_hull_light } }
+				set_technology = { early_ship_hull_light = 1 }
+			}
+			if = {
+				limit = { NOT = { has_tech = early_ship_hull_cruiser } }
+				set_technology = { early_ship_hull_cruiser = 1 }
+			}
+			if = {
+				limit = { NOT = { has_tech = coastal_defense_ships } }
+				set_technology = { coastal_defense_ships = 1 }
+			}
+			if = {
+				limit = { NOT = { has_tech = coastal_defense_ships } }
+				set_technology = { coastal_defense_ships = 1 }
+			}
+			if = {
+				limit = { NOT = { has_tech = basic_naval_mines } }
+				set_technology = { basic_naval_mines = 1 }
+			}
+			if = {
+				limit = { NOT = { has_tech = basic_battery } }
+				set_technology = { basic_battery = 1 }
+			}
+			if = {
+				limit = { NOT = { has_tech = basic_torpedo } }
+				set_technology = { basic_torpedo = 1 }
+			}
+
+			custom_effect_tooltip = tooltip_white_line
+			QIE = {
+				custom_effect_tooltip = characters_will_be_recruited
+				character_list_tooltip = {
+					limit = {
+						OR = {
+							is_character = QIE_sa_zhenbing
+							is_character = QIE_du_xigui
+							is_character = QIE_wu_yulin
+							is_character = QIE_yang_shuzhuang
+						}
+					}
+				}
+				hidden_effect = {
+					QIE_sa_zhenbing = { set_nationality = ROOT }
+					QIE_du_xigui = { set_nationality = ROOT }
+					QIE_wu_yulin = { set_nationality = ROOT }
+					QIE_yang_shuzhuang = { set_nationality = ROOT }
+				}
+			}
+			if = {
+				limit = { NOT = { country_exists = FNG } }
+				FNG = {
+					custom_effect_tooltip = characters_will_be_recruited
+					character_list_tooltip = {
+						limit = { is_character = FNG_shen_honglie }
+					}
+					hidden_effect = {
+						FNG_shen_honglie = { set_nationality = ROOT }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { country_exists = LEP } }
+				LEP = {
+					custom_effect_tooltip = characters_will_be_recruited
+					character_list_tooltip = {
+						limit = {
+							is_character = LEP_wu_zhennan
+							is_character = LEP_li_shijia
+							is_character = LEP_wang_shouting
+						}
+					}
+					hidden_effect = {
+						LEP_wu_zhennan = { set_nationality = ROOT }
+						LEP_li_shijia = { set_nationality = ROOT }
+						LEP_wang_shouting = { set_nationality = ROOT }
+					}
+				}
+			}
+			else_if = {
+				limit = { QIE = { has_character = LEP_wu_zhennan } }
+				QIE = {
+					custom_effect_tooltip = characters_will_be_recruited
+					character_list_tooltip = {
+						limit = { is_character = LEP_wu_zhennan }
+					}
+					hidden_effect = {
+						LEP_wu_zhennan = { set_nationality = ROOT }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					ANQ = { has_character = LEP_wu_zhennan }
+					NOT = { country_exists = ANQ }
+				}
+				ANQ = {
+					custom_effect_tooltip = characters_will_be_recruited
+					character_list_tooltip = {
+						limit = {
+							is_character = LEP_wu_zhennan
+							is_character = LEP_li_shijia
+							is_character = LEP_wang_shouting
+						}
+					}
+					hidden_effect = {
+						LEP_wu_zhennan = { set_nationality = ROOT }
+						LEP_li_shijia = { set_nationality = ROOT }
+						LEP_wang_shouting = { set_nationality = ROOT }
+					}
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH }
 	}
