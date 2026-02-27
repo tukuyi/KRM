@@ -39912,7 +39912,7 @@ focus_tree = {
 				remove_idea = SZC_KMD_legitimacy_7
 				add_idea = SZC_KMD_legitimacy_12
 			}
-			create_faction_from_template = { template = faction_template_TIANARMY name = SZC_CCE_faction }
+			create_faction_from_template = { template = faction_template_TIANARMY name = SZC_TIANARMY_faction }
 			scope:faction = { set_variable = { non_ideological_faction = 1 } }
 			set_cosmetic_tag = SZC_KMD_tianguo
 			add_stability = 0.5
