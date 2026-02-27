@@ -35903,6 +35903,15 @@ focus_tree = {
 					id = NKRsichuanKMD.16
 					days = 3
 				}
+				set_variable = {
+					SZC_KMD_chengxun_focus = 0
+				}
+				set_variable = {
+					SZC_KMD_shangpu_focus = 0
+				}
+				set_variable = {
+					SZC_KMD_congyun_focus = 0
+				}
 			}
 		}
 	}
@@ -35938,7 +35947,7 @@ focus_tree = {
 					id = NKRsichuanKMD.18
 					days = 3
 				}
-				set_variable = {
+				add_to_variable = {
 					SZC_KMD_congyun_focus = 1
 				}
 			}
@@ -36133,7 +36142,7 @@ focus_tree = {
 					id = NKRsichuanKMD.23
 					days = 3
 				}
-				set_variable = {
+				add_to_variable = {
 					SZC_KMD_shangpu_focus = 1
 				}
 			}
@@ -36346,7 +36355,7 @@ focus_tree = {
 					id = NKRsichuanKMD.28
 					days = 3
 				}
-				set_variable = {
+				add_to_variable = {
 					SZC_KMD_chengxun_focus = 1
 				}
 			}
