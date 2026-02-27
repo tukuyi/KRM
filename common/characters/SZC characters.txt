@@ -5474,6 +5474,26 @@ characters = {
 		}
 	}
 
+	#魏延
+	SZC_wei_yan = {
+		name = SZC_wei_yan
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SZC_wei_yan_large
+				small = GFX_portrait_SZC_wei_yan_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_wei_yan_desc
+			traits = { god_of_KMD brilliant_strategist reckless }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
 	############################
 
 	#MMIC四川分署

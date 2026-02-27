@@ -4554,7 +4554,18 @@ SZC_KMD_chouka_effect = {
 		}
 		10 = {
 			random_list = {
-				50 = {
+				40 = {
+					modifier = {
+						factor = 0
+						is_in_array = {
+							array = ROOT.SZC_KMD_gods_array
+							value = token:SZC_wei_yan
+						}
+					}
+					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_wei_yan }
+					scoped_play_song = "JiuWanZi"
+				}
+				30 = {
 					modifier = {
 						factor = 0
 						is_in_array = {
@@ -4564,7 +4575,7 @@ SZC_KMD_chouka_effect = {
 					}
 					set_variable = { ROOT.SZC_KMD_your_god = token:SZC_jiang_ziya }
 				}
-				49 = {
+				29 = {
 					modifier = {
 						factor = 0
 						is_in_array = {
@@ -4818,11 +4829,11 @@ KMD_setup_dynamic_breakaways = {
 				add_core_of = PREV.PREV
 				restore_previous_factory_count = yes
 			}
-			SZC_yang_zhengyu = {
+			NAZ_yang_zhengyu = {
 				set_nationality = PREV.PREV
 			}
 		}
-		SZC_yang_zhengyu = {
+		NAZ_yang_zhengyu = {
 			promote_character = national_populist_nationalsozialismus_subtype
 		}
 		set_politics = {
@@ -4879,11 +4890,11 @@ KMD_setup_dynamic_breakaways = {
 				add_core_of = PREV.PREV
 				restore_previous_factory_count = yes
 			}
-			SZC_kang_baiqing = {
+			KKK_kang_baiqing = {
 				set_nationality = PREV.PREV
 			}
 		}
-		SZC_kang_baiqing = {
+		KKK_kang_baiqing = {
 			promote_character = national_populist_klansmanist_subtype
 		}
 		set_politics = {

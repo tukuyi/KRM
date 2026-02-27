@@ -218,6 +218,7 @@ recruit_character = SZC_zhao_yun
 recruit_character = SZC_zhuge_liang
 recruit_character = SZC_cao_cao
 recruit_character = SZC_jiang_ziya
+recruit_character = SZC_wei_yan
 recruit_character = SZC_sun_qian
 recruit_character = SZC_xing_daorong
 recruit_character = SZC_john_keynes
@@ -1065,6 +1066,9 @@ SZC_cao_cao = {
 SZC_jiang_ziya = {
 	retire = yes
 }
+SZC_wei_yan = {
+	retire = yes
+}
 SZC_sun_qian = {
 	retire = yes
 }
@@ -1294,8 +1298,8 @@ recruit_character = SZC_wang_gongdu
 recruit_character = SZC_men_zhizhong
 recruit_character = SZC_liu_shaokun
 recruit_character = SZC_wei_guoqing
-recruit_character = SZC_yang_zhengyu
-recruit_character = SZC_kang_baiqing
+recruit_character = NAZ_yang_zhengyu
+recruit_character = KKK_kang_baiqing
 recruit_character = SZC_tarcisio_martina
 recruit_character = SZC_xiao_zisheng
 recruit_character = SZC_zhu_jiabi
@@ -1320,10 +1324,10 @@ SZC_wei_guoqing = {
 	retire = yes
 	china_set_character_alignment_CHNsyndicalist = yes
 }
-SZC_yang_zhengyu = {
+NAZ_yang_zhengyu = {
 	retire = yes
 }
-SZC_kang_baiqing = {
+KKK_kang_baiqing = {
 	retire = yes
 }
 SZC_tarcisio_martina = {
