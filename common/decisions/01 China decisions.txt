@@ -2045,7 +2045,7 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { tag = SZC }
+				limit = { original_tag = SZC }
 				if = {
 					limit = { SZC_federalists_in_exile = yes }
 					if = {
@@ -2114,6 +2114,7 @@ chinese_unification = {
 					limit = {
 						has_country_flag = post_KMD_tag
 					}
+					log = "KR_Event_Logging;postkmdtag"
 					if = {
 						limit = {
 							tag = NAZ
@@ -2125,7 +2126,7 @@ chinese_unification = {
 							news_event = NKRnews.47
 						}
 					}
-					if = {
+					else_if = {
 						limit = {
 							tag = KKK
 						}
@@ -2136,7 +2137,7 @@ chinese_unification = {
 							news_event = NKRnews.48
 						}
 					}
-					if = {
+					else_if = {
 						limit = {
 							tag = NSR
 						}
@@ -2147,9 +2148,9 @@ chinese_unification = {
 							news_event = NKRnews.49
 						}
 					}
-					if = {
+					else_if = {
 						limit = {
-							tag = ANH
+							tag = WAN
 						}
 						activate_targeted_decision = { decision = china_move_capital target = ROOT }
 
@@ -2158,7 +2159,7 @@ chinese_unification = {
 							news_event = NKRnews.50
 						}
 					}
-					if = {
+					else_if = {
 						limit = {
 							tag = DYD
 						}
