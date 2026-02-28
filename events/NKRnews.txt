@@ -1129,3 +1129,173 @@
 			}
 		}
 	}
+	news_event = { #
+		id = NKRnews.47
+		immediate = { log = "[GetLogInfo]: event NKRnews.47" }
+		title = NKRnews.47.t
+		desc = NKRnews.47.d
+		picture = GFX_news_event_datong_begin
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.47.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.47.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+			}
+		}
+	}
+	news_event = { #
+		id = NKRnews.48
+		immediate = { log = "[GetLogInfo]: event NKRnews.48" }
+		title = NKRnews.48.t
+		desc = NKRnews.48.d
+		picture = GFX_news_event_datong_begin
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.48.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.48.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+			}
+		}
+	}
+	news_event = { #
+		id = NKRnews.49
+		immediate = { log = "[GetLogInfo]: event NKRnews.49" }
+		title = NKRnews.49.t
+		desc = NKRnews.49.d
+		picture = GFX_news_event_datong_begin
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.49.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.49.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+			}
+		}
+	}
+	news_event = { #
+		id = NKRnews.50
+		immediate = { log = "[GetLogInfo]: event NKRnews.50" }
+		title = NKRnews.50.t
+		desc = NKRnews.50.d
+		picture = GFX_news_event_datong_begin
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.50.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.50.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+			}
+		}
+	}
+	news_event = { #
+		id = NKRnews.51
+		immediate = { log = "[GetLogInfo]: event NKRnews.51" }
+		title = NKRnews.51.t
+		desc = NKRnews.51.d
+		picture = GFX_news_event_datong_begin
+
+		trigger = {
+			wants_world_news = yes
+		}
+
+		is_triggered_only = yes
+
+		major = yes
+		fire_for_sender = yes
+		show_major = {
+			regional_asia_news = yes
+		}
+
+		option = {
+			name = NKRnews.51.a
+			trigger = {
+				tag = SZC
+			}
+		}
+		option = {
+			name = NKRnews.51.b
+			trigger = {
+				NOT = {
+					tag = SZC
+				}
+			}
+		}
+	}

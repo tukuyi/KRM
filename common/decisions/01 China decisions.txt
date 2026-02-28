@@ -2121,6 +2121,9 @@ chinese_unification = {
 						activate_targeted_decision = { decision = china_move_capital target = ROOT }
 
 						set_cosmetic_tag = SZC_KMD_NAZ_united
+						hidden_effect = {
+							news_event = NKRnews.47
+						}
 					}
 					if = {
 						limit = {
@@ -2129,6 +2132,9 @@ chinese_unification = {
 						activate_targeted_decision = { decision = china_move_capital target = ROOT }
 
 						set_cosmetic_tag = SZC_KMD_KKK_united
+						hidden_effect = {
+							news_event = NKRnews.48
+						}
 					}
 					if = {
 						limit = {
@@ -2137,6 +2143,9 @@ chinese_unification = {
 						activate_targeted_decision = { decision = china_move_capital target = ROOT }
 
 						set_cosmetic_tag = SZC_KMD_NSR_united
+						hidden_effect = {
+							news_event = NKRnews.49
+						}
 					}
 					if = {
 						limit = {
@@ -2144,7 +2153,10 @@ chinese_unification = {
 						}
 						activate_targeted_decision = { decision = china_move_capital target = ROOT }
 
-						set_cosmetic_tag = SZC_KMD_ANH_united
+						set_cosmetic_tag = united_china
+						hidden_effect = {
+							news_event = NKRnews.50
+						}
 					}
 					if = {
 						limit = {
@@ -2152,6 +2164,9 @@ chinese_unification = {
 						}
 						activate_targeted_decision = { decision = china_move_capital target = ROOT }
 						set_cosmetic_tag = SZC_KMD_DYD_united
+						hidden_effect = {
+							news_event = NKRnews.51
+						}
 					}
 					else = {
 						log = "KR_Event_Logging;CHINA UNITED BY KMD Breakaways"
