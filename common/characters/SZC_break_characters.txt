@@ -17,7 +17,77 @@ characters = {
 			ideology = national_populist_nationalsozialismus_subtype
 			traits = { CHN_non_aligned }
 		}
+		field_marshal = {
+			desc = NAZ_zhao_nangong_desc
+			traits = { politically_connected infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
 	}
+	# 赵南公
+	NAZ_zhao_nangong = {
+		name = NAZ_zhao_nangong
+		portraits = {
+			civilian = {
+				small = GFX_portrait_NAZ_zhao_nangong_small
+				large = GFX_portrait_NAZ_zhao_nangong_large
+			}
+		}
+		corps_commander = {
+			desc = NAZ_zhao_nangong_desc
+			traits = { politically_connected infantry_officer }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	# 楼文耀
+	NAZ_lou_wenyao = {
+		name = NAZ_lou_wenyao
+		portraits = {
+			civilian = {
+				small = GFX_portrait_NAZ_lou_wenyao_small
+				large = GFX_portrait_NAZ_lou_wenyao_large
+			}
+		}
+		corps_commander = {
+			desc = NAZ_lou_wenyao_desc
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	# 郭文鹤
+	NAZ_guo_wenhe = {
+		name = NAZ_guo_wenhe
+		portraits = {
+			civilian = {
+				small = GFX_portrait_NAZ_guo_wenhe_small
+				large = GFX_portrait_NAZ_guo_wenhe_large
+			}
+		}
+		corps_commander = {
+			desc = NAZ_lou_wenyao_desc
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+
 	
 	#康白情
 	KKK_kang_baiqing = {
@@ -33,39 +103,345 @@ characters = {
 			ideology = national_populist_klansmanist_subtype
 			traits = { CHN_non_aligned }
 		}
+		field_marshal = {
+			desc = KKK_zhu_zhenxin_desc
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
 	}
 
-	#陈健夫
-	SZC_chen_jianfu = {
-		name = SZC_chen_jianfu
+	#朱枕薪
+	KKK_zhu_zhenxin = {
+		name = KKK_zhu_zhenxin
 		portraits = {
 			civilian = {
-				small = GFX_portrait_SZC_chen_jianfu_small
-				large = GFX_portrait_SZC_chen_jianfu_large
+				small = GFX_portrait_KKK_zhu_zhenxin_small
+				large = GFX_portrait_KKK_zhu_zhenxin_large
+			}
+		}
+		corps_commander = {
+			desc = KKK_zhu_zhenxin_desc
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	#陈水星
+	KKK_chen_shuixing = {
+		name = KKK_chen_shuixing
+		portraits = {
+			civilian = {
+				small = GFX_portrait_KKK_chen_shuixing_small
+				large = GFX_portrait_KKK_chen_shuixing_large
+			}
+		}
+		corps_commander = {
+			desc = KKK_chen_shuixing_desc
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	# 孤殇
+	KKK_gu_shang = {
+		name = KKK_gu_shang
+		portraits = {
+			civilian = {
+				small = GFX_portrait_KKK_gu_shang_small
+				large = GFX_portrait_KKK_gu_shang_large
+			}
+		}
+		corps_commander = {
+			desc = KKK_gu_shang_desc
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	#江亢虎
+	KKK_jiang_kanghu = {
+		name = KKK_jiang_kanghu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_KKK_jiang_kanghu_small
+				large = GFX_portrait_KKK_jiang_kanghu_large
+			}
+		}
+		corps_commander = {
+			desc = KKK_jiang_kanghu_desc
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	#冯善章
+	KKK_feng_shanzhang = {
+		name = KKK_feng_shanzhang
+		portraits = {
+			civilian = {
+				small = GFX_portrait_KKK_feng_shanzhang_small
+				large = GFX_portrait_KKK_feng_shanzhang_large
+			}
+		}
+		corps_commander = {
+			desc = KKK_feng_shanzhang_desc
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	#大龙
+	KKK_da_long = {
+		name = KKK_da_long
+		portraits = {
+			civilian = {
+				small = GFX_portrait_KKK_da_long_small
+				large = GFX_portrait_KKK_da_long_large
+			}
+		}
+		corps_commander = {
+			desc = KKK_da_long_desc
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	#大骆驼
+	KKK_noname_kkk = {
+		name = KKK_noname_kkk
+		portraits = {
+			civilian = {
+				small = GFX_portrait_KKK_noname_kkk_small
+				large = GFX_portrait_KKK_noname_kkk_large
+			}
+		}
+		corps_commander = {
+			desc = KKK_noname_kkk_desc
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+
+	#陈健夫
+	NSR_chen_jianfu = {
+		name = NSR_chen_jianfu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_NSR_chen_jianfu_small
+				large = GFX_portrait_NSR_chen_jianfu_large
+			}
+			army = {
+				small = GFX_portrait_NSR_chen_jianfu_FR_small
+				large = GFX_portrait_NSR_chen_jianfu_FR_large
 			}
 		}
 		country_leader = {
-			desc = SZC_chen_jianfu_desc
+			desc = NSR_chen_jianfu_desc
 			ideology = radical_socialist_neosocialist_subtype
 			traits = { CHN_non_aligned }
+		}
+		field_marshal = {
+			desc = NSR_chen_jianfu_desc
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	#刘瑞华
+	NSR_liu_ruihua = {
+		name = NSR_liu_ruihua
+		portraits = {
+			civilian = {
+				small = GFX_portrait_NSR_liu_ruihua_small
+				large = GFX_portrait_NSR_liu_ruihua_large
+			}
+		}
+		corps_commander = {
+			desc = NSR_liu_ruihua_desc
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	#明秋水
+	NSR_ming_qiushui = {
+		name = NSR_ming_qiushui
+		portraits = {
+			civilian = {
+				small = GFX_portrait_NSR_ming_qiushui_small
+				large = GFX_portrait_NSR_ming_qiushui_large
+			}
+		}
+		corps_commander = {
+			desc = NSR_ming_qiushui_desc
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	#沈志远
+	NSR_shen_zhiyuan = {
+		name = NSR_shen_zhiyuan
+		portraits = {
+			civilian = {
+				small = GFX_portrait_NSR_shen_zhiyuan_small
+				large = GFX_portrait_NSR_shen_zhiyuan_large
+			}
+		}
+		corps_commander = {
+			desc = NSR_shen_zhiyuan_desc
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
 		}
 	}
 
 	#克希克图
-	SZC_kexiketu = {
-		name = SZC_kexiketu
+	ANH_kexiketu = {
+		name = ANH_kexiketu
 		portraits = {
 			civilian = {
-				small = GFX_portrait_SZC_kexiketu_small
-				large = GFX_portrait_SZC_kexiketu_large
+				small = GFX_portrait_ANH_kexiketu_small
+				large = GFX_portrait_ANH_kexiketu_large
 			}
 		}
 		country_leader = {
-			desc = SZC_kexiketu_desc
+			desc = ANH_kexiketu_desc
 			ideology = authoritarian_democrat_subtype
 			traits = { CHN_non_aligned }
 		}
 	}
+
+	#徐树铮
+	ANH_xu_shuzheng = {
+		name = ANH_xu_shuzheng
+		portraits = {
+			civilian = {
+				small = GFX_portrait_ANH_xu_shuzheng_small
+				large = GFX_portrait_ANH_xu_shuzheng_large
+			}
+		}
+		field_marshal = {
+			desc = ANH_xu_shuzheng_desc
+			traits = { infantry_officer reckless brilliant_strategist }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+
+	#陈树藩
+	ANH_chen_shufan = {
+		name = ANH_chen_shufan
+		portraits = {
+			civilian = {
+				small = GFX_portrait_ANH_chen_shufan_small
+				large = GFX_portrait_ANH_chen_shufan_large
+			}
+		}
+		corps_commander = {
+			desc = ANH_chen_shufan_desc
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+
+	# 郭沫若
+	DYD_guo_moruo = {
+		name = DYD_guo_moruo
+		portraits = {
+			civilian = {
+				small = GFX_portrait_DYD_guo_moruo_small
+				large = GFX_portrait_DYD_guo_moruo_large
+			}
+		}
+		corps_commander = {
+			desc = DYD_guo_moruo_desc
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	# 纪方
+	DYD_ji_fang = {
+		name = DYD_ji_fang
+		portraits = {
+			civilian = {
+				small = GFX_portrait_DYD_ji_fang_small
+				large = GFX_portrait_DYD_ji_fang_large
+			}
+		}
+		corps_commander = {
+			desc = DYD_ji_fang_desc
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+
 
 	#王公度
 	SZC_wang_gongdu = {

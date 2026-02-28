@@ -1292,23 +1292,62 @@ PRU_liu_chengxun = {
 }
 
 #breakaways
-recruit_character = SZC_chen_jianfu
-recruit_character = SZC_kexiketu
+recruit_character = NSR_chen_jianfu
+recruit_character = NSR_liu_ruihua
+recruit_character = NSR_ming_qiushui
+recruit_character = NSR_shen_zhiyuan
+
+
+recruit_character = ANH_kexiketu
+recruit_character = ANH_xu_shuzheng
+recruit_character = ANH_chen_shufan
+
 recruit_character = SZC_wang_gongdu
 recruit_character = SZC_men_zhizhong
 recruit_character = SZC_liu_shaokun
 recruit_character = SZC_wei_guoqing
+
 recruit_character = NAZ_yang_zhengyu
+recruit_character = NAZ_zhao_nangong
+recruit_character = NAZ_lou_wenyao
+recruit_character = NAZ_guo_wenhe
+
 recruit_character = KKK_kang_baiqing
+recruit_character = KKK_zhu_zhenxin
+recruit_character = KKK_gu_shang
+recruit_character = KKK_jiang_kanghu
+recruit_character = KKK_chen_shuixing
+recruit_character = KKK_feng_shanzhang
+recruit_character = KKK_da_long
+recruit_character = KKK_noname_kkk
+
 recruit_character = SZC_tarcisio_martina
 recruit_character = SZC_xiao_zisheng
 recruit_character = SZC_zhu_jiabi
-SZC_chen_jianfu = {
+
+NSR_chen_jianfu = {
 	retire = yes
 }
-SZC_kexiketu = {
+NSR_liu_ruihua = {
 	retire = yes
 }
+NSR_ming_qiushui = {
+	retire = yes
+}
+NSR_shen_zhiyuan = {
+	retire = yes
+}
+
+ANH_kexiketu = {
+	retire = yes
+}
+ANH_xu_shuzheng = {
+	retire = yes
+}
+ANH_chen_shufan = {
+	retire = yes
+}
+
 SZC_wang_gongdu = {
 	retire = yes
 	china_set_character_alignment_right_kuomintang = yes
@@ -1324,12 +1363,46 @@ SZC_wei_guoqing = {
 	retire = yes
 	china_set_character_alignment_CHNsyndicalist = yes
 }
+
+
 NAZ_yang_zhengyu = {
 	retire = yes
 }
+NAZ_zhao_nangong = {
+	retire = yes
+}
+NAZ_lou_wenyao = {
+	retire = yes
+}
+NAZ_guo_wenhe = {
+	retire = yes
+}
+
 KKK_kang_baiqing = {
 	retire = yes
 }
+KKK_zhu_zhenxin = {
+	retire = yes
+}
+KKK_gu_shang = {
+	retire = yes
+}
+KKK_jiang_kanghu = {
+	retire = yes
+}
+KKK_chen_shuixing = {
+	retire = yes
+}
+KKK_feng_shanzhang = {
+	retire = yes
+}
+KKK_da_long = {
+	retire = yes
+}
+KKK_noname_kkk = {
+	retire = yes
+}
+
 SZC_tarcisio_martina = {
 	retire = yes
 }

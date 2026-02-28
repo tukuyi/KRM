@@ -2112,6 +2112,55 @@ chinese_unification = {
 				}
 				else_if = {
 					limit = {
+						has_country_flag = post_KMD_tag
+					}
+					if = {
+						limit = {
+							tag = NAZ
+						}
+						activate_targeted_decision = { decision = china_move_capital target = ROOT }
+
+						set_cosmetic_tag = SZC_KMD_NAZ_united
+					}
+					if = {
+						limit = {
+							tag = KKK
+						}
+						activate_targeted_decision = { decision = china_move_capital target = ROOT }
+
+						set_cosmetic_tag = SZC_KMD_KKK_united
+					}
+					if = {
+						limit = {
+							tag = NSR
+						}
+						activate_targeted_decision = { decision = china_move_capital target = ROOT }
+
+						set_cosmetic_tag = SZC_KMD_NSR_united
+					}
+					if = {
+						limit = {
+							tag = ANH
+						}
+						activate_targeted_decision = { decision = china_move_capital target = ROOT }
+
+						set_cosmetic_tag = SZC_KMD_ANH_united
+					}
+					if = {
+						limit = {
+							tag = DYD
+						}
+						activate_targeted_decision = { decision = china_move_capital target = ROOT }
+						set_cosmetic_tag = SZC_KMD_DYD_united
+					}
+					else = {
+						log = "KR_Event_Logging;CHINA UNITED BY KMD Breakaways"
+						china_generic_unification_effect = yes
+						hidden_effect = { news_event = china_events.314 }
+					}
+				}
+				else_if = {
+					limit = {
 						has_country_flag = NKRsichuan_KMDpath
 					}
 					log = "KR_Event_Logging;CHINA UNITED BY SZC KMD;[GetDateText]"

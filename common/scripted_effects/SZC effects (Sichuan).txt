@@ -4801,6 +4801,7 @@ KMD_breakaways_remove_core = {
 }
 
 KMD_setup_dynamic_breakaways = {
+	set_country_flag = post_KMD_tag
 	create_dynamic_country = { #华强
 		original_tag = SZC
 		set_cosmetic_tag = SZC_KMD_NAZ
@@ -4808,6 +4809,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -4830,6 +4832,15 @@ KMD_setup_dynamic_breakaways = {
 				restore_previous_factory_count = yes
 			}
 			NAZ_yang_zhengyu = {
+				set_nationality = PREV.PREV
+			}
+			NAZ_zhao_nangong = {
+				set_nationality = PREV.PREV
+			}
+			NAZ_lou_wenyao = {
+				set_nationality = PREV.PREV
+			}
+			NAZ_guo_wenhe = {
 				set_nationality = PREV.PREV
 			}
 		}
@@ -4869,6 +4880,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -4891,6 +4903,27 @@ KMD_setup_dynamic_breakaways = {
 				restore_previous_factory_count = yes
 			}
 			KKK_kang_baiqing = {
+				set_nationality = PREV.PREV
+			}
+			KKK_zhu_zhenxin = {
+				set_nationality = PREV.PREV
+			}
+			KKK_gu_shang = {
+				set_nationality = PREV.PREV
+			}
+			KKK_jiang_kanghu = {
+				set_nationality = PREV.PREV
+			}
+			KKK_chen_shuixing = {
+				set_nationality = PREV.PREV
+			}
+			KKK_feng_shanzhang = {
+				set_nationality = PREV.PREV
+			}
+			KKK_da_long = {
+				set_nationality = PREV.PREV
+			}
+			KKK_noname_kkk = {
 				set_nationality = PREV.PREV
 			}
 		}
@@ -4930,6 +4963,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -4951,7 +4985,13 @@ KMD_setup_dynamic_breakaways = {
 				add_core_of = PREV.PREV
 				restore_previous_factory_count = yes
 			}
-			SZC_kexiketu = {
+			ANH_kexiketu = {
+				set_nationality = PREV.PREV
+			}
+			ANH_xu_shuzheng = {
+				set_nationality = PREV.PREV
+			}
+			ANH_chen_shufan = {
 				set_nationality = PREV.PREV
 			}
 		}
@@ -4960,7 +5000,7 @@ KMD_setup_dynamic_breakaways = {
 			name = SZC_KMD_AC_party
 			long_name = SZC_KMD_AC_party_long
 		}
-		SZC_kexiketu = {
+		ANH_kexiketu = {
 			promote_character = authoritarian_democrat_subtype
 		}
 		set_capital = {
@@ -4991,6 +5031,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5012,7 +5053,16 @@ KMD_setup_dynamic_breakaways = {
 				add_core_of = PREV.PREV
 				restore_previous_factory_count = yes
 			}
-			SZC_chen_jianfu = {
+			NSR_chen_jianfu = {
+				set_nationality = PREV.PREV
+			}
+			NSR_liu_ruihua = {
+				set_nationality = PREV.PREV
+			}
+			NSR_ming_qiushui = {
+				set_nationality = PREV.PREV
+			}
+			NSR_shen_zhiyuan = {
 				set_nationality = PREV.PREV
 			}
 		}
@@ -5020,7 +5070,7 @@ KMD_setup_dynamic_breakaways = {
 			state = 802
 			remember_old_capital = no
 		}
-		SZC_chen_jianfu = {
+		NSR_chen_jianfu = {
 			promote_character = radical_socialist_neosocialist_subtype
 		}
 		set_politics = {
@@ -5047,11 +5097,12 @@ KMD_setup_dynamic_breakaways = {
 	}
 	create_dynamic_country = { #dengyanda
 		original_tag = SZC
-		set_cosmetic_tag = SZC_KMD_dyd
-		save_global_event_target_as = SZC_dyd
+		set_cosmetic_tag = SZC_KMD_DYD
+		save_global_event_target_as = SZC_DYD
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5073,12 +5124,19 @@ KMD_setup_dynamic_breakaways = {
 				add_core_of = PREV.PREV
 				restore_previous_factory_count = yes
 			}
+			DYD_guo_moruo = {
+				set_nationality = PREV.PREV
+			}
+			DYD_ji_fang = {
+				set_nationality = PREV.PREV
+			}
 		}
 		CHI = {
 			CHI_deng_yanda = {
 				set_portraits = {
 					army = {
-						large = GFX_portrait_SZC_deng_yanda_punished_large
+						large = GFX_portrait_DYD_deng_yanda_punished_large
+						small = GFX_portrait_DYD_deng_yanda_punished_small
 					}
 				}
 				add_country_leader_role = {
@@ -5088,6 +5146,9 @@ KMD_setup_dynamic_breakaways = {
 						traits = { CHN_left_kuomintang_aligned }
 					}
 				}
+				set_nationality = PREV.PREV
+			}
+			CHI_ye_ting = {
 				set_nationality = PREV.PREV
 			}
 		}
@@ -5127,6 +5188,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5197,6 +5259,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5259,6 +5322,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5321,6 +5385,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5416,6 +5481,7 @@ KMD_setup_dynamic_breakaways = {
 			reserve_dynamic_country = yes
 			load_focus_tree = generic_focus
 			KMD_breakaways_remove_core = yes
+			set_country_flag = post_KMD_tag
 			SZC = {
 				every_owned_state = {
 					limit = {
@@ -5488,6 +5554,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5558,6 +5625,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5620,6 +5688,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5686,6 +5755,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5768,6 +5838,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5840,6 +5911,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {
@@ -5901,6 +5973,7 @@ KMD_setup_dynamic_breakaways = {
 		reserve_dynamic_country = yes
 		load_focus_tree = generic_focus
 		KMD_breakaways_remove_core = yes
+		set_country_flag = post_KMD_tag
 		SZC = {
 			every_owned_state = {
 				limit = {

@@ -381,3 +381,21 @@ NKR_the_one_achievement = {
 		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
 	}
 }
+NKR_amusing_ourselves_to_death_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_amusing_ourselves_to_death_achievement_tt
+				has_country_flag = NKR_amusing_ourselves_to_death_achievement_achieve
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
