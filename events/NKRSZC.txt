@@ -27124,11 +27124,16 @@ country_event = { #又一次酒会
 		log = "[GetLogInfo]: event NKRsichuanKMD.39 option NKRsichuanKMD.39.b"
 		custom_effect_tooltip = NKRsichuanKMD.39.b.tt
 		trigger = {
-			NOT = {
+			OR = {
 				check_variable = {
 					var = SZC_KMD_chengxun_focus
 					value = var:SZC_KMD_congyun_focus
-					compare = greater_than
+					compare = less_than_or_equals
+				}
+				check_variable = {
+					var = SZC_KMD_chengxun_focus
+					value = var:SZC_KMD_shangpu_focus
+					compare = less_than
 				}
 			}
 		}

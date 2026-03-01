@@ -1,0 +1,48 @@
+##############
+#  KMDBREAK  #
+##############
+
+ideas = {
+	country = {
+		KMD_breaks_idea = {#后孔孟道混乱
+			on_add = {log = "[GetLogRoot]: add idea KMD_breaks_idea"}
+			allowed = { always = no }
+			picture = KMD_breaks_idea
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				surrunder_limit = 0.35
+				army_attack_factor = 0.05
+				consumer_goods_factor = 0.2
+				army_org_regain = -0.05
+			}
+		}
+
+		KMD_push_unification_war_idea = { #推进统一战争
+			on_add = {log = "[GetLogRoot]: add idea KMD_push_unification_war_idea"}
+			allowed = { always = no }
+			picture = KMD_push_unification_war_idea
+			modifier = {
+				army_attack_factor = 0.15
+				army_speed_factor = 0.1
+				army_org_regain = -0.1
+				political_power_gain = -0.2
+			}
+		}
+
+		WAN_anfu_socialism_goal_idea = { #安福社会主义理想
+			on_add = {log = "[GetLogRoot]: add idea WAN_anfu_socialism_goal_idea"}
+			allowed = { always = no }
+			picture = WAN_anfu_socialism_goal_idea
+			modifier = {
+				consumer_goods_factor = -0.1
+				line_change_production_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+	
+
+	}
+
+}
+
