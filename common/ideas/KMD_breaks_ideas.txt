@@ -51,6 +51,17 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.15
 			}
 		}
+
+		KKK_san_k_socialist_idea = { #三K社会主义
+			on_add = {log = "[GetLogRoot]: add idea KKK_san_k_socialist_idea"}
+			allowed = { always = no }
+			picture = KKK_san_k_socialist_idea
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
 	
 
 	}

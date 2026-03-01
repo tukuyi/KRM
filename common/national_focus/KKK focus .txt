@@ -1,0 +1,364 @@
+
+focus_tree = {
+	id = KMD_BREAK_KKK
+	country = {
+		factor = 0
+		modifier = {
+			add = 70
+			# add = 0
+			tag = SZC
+		}
+	}
+
+
+
+	default = no
+	continuous_focus_position = { x = 4350 y = 2250 }
+
+	focus = {
+		id = KKK_white_knights
+		icon = GFX_goal_KKK_white_knights
+		cost = 3
+
+		x = 1
+		y = 0
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed KKK_white_knights"
+			custom_effect_tooltip = KKK_white_knights_tooltip
+			add_command_power = 40
+			hidden_effect = {
+				country_event = { id = NKRKKK.1 days = 1}
+			}
+		}
+	}
+
+	focus = {
+		id = KKK_modern_crusader
+		icon = GFX_goal_KKK_modern_crusader
+		cost = 4
+
+		x = -2
+		y = 1
+		relative_position_id = KKK_white_knights
+
+		prerequisite = {
+			focus = KKK_white_knights
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed KKK_modern_crusader"
+			army_experience = 45
+			KKK_kang_baiqing = {
+				add_attack = 1
+				add_defense = 1
+			}
+			KKK_da_long = {
+				add_attack = 1
+				add_logistic = 1
+			}
+			hidden_effect = {
+				country_event = { id = NKRKKK.2 days = 1}
+			}
+		}
+	}
+
+	focus = {
+		id = KKK_san_k_power
+		icon = GFX_goal_KKK_san_k_power
+		cost = 4
+
+		x = -2
+		y = 3
+		relative_position_id = KKK_white_knights
+
+		prerequisite = {
+			focus = KKK_modern_crusader
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed KKK_san_k_power"
+			
+			if = {
+				limit = { has_template = "白骑士" }
+				delete_unit_template_and_units = { division_template = "冲锋队" disband = yes }
+				#No cheating
+			}
+			division_template = {
+				name = "白骑士" #Temporary name for now lol - Suzu
+				division_names_group = CHYN_MIL_01
+				force_allow_recruiting = yes
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+				}
+			}
+			custom_effect_tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "白骑士"
+				LINE_1 = { localization_key = line_battalion_tt NAME = infantry ICON = GFX_unit_infantry_icon_small COUNT = 7 }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					impassable = no
+				}
+				create_unit = {
+					division = "name = \"白骑士\" division_template = \"白骑士\" start_experience_factor = 0.6"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"白骑士\" division_template = \"白骑士\" start_experience_factor = 0.6"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"白骑士\" division_template = \"白骑士\" start_experience_factor = 0.6"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"白骑士\" division_template = \"白骑士\" start_experience_factor = 0.6"
+					owner = ROOT
+				}
+			}
+			hidden_effect = {
+				country_event = { id = NKRKKK.3 days = 1}
+			}
+		}
+	}
+
+	focus = {
+		id = KKK_san_k_international
+		icon = GFX_goal_KKK_san_k_international
+		cost = 4
+
+		x = 2
+		y = 1
+		relative_position_id = KKK_white_knights
+
+		prerequisite = {
+			focus = KKK_white_knights
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed KKK_san_k_international"
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_political_power = 150
+			add_opinion_modifier = {
+				target = USA
+				modifier = KR_approves_of_govt
+			}
+			add_opinion_modifier = {
+				target = APG
+				modifier = KR_approves_of_govt
+			}
+			
+			hidden_effect = {
+				country_event = { id = NKRKKK.4 days = 1}
+			}
+		}
+	}
+
+	focus = {
+		id = KKK_torch_of_nationalism
+		icon = GFX_goal_KKK_torch_of_nationalism
+		cost = 4
+
+		x = 2
+		y = 3
+		relative_position_id = KKK_white_knights
+
+		prerequisite = {
+			focus = KKK_san_k_international
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed KKK_torch_of_nationalism"
+			add_popularity = {
+				ideology = totalist
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.05
+			}
+			add_political_power = 100
+			add_stability = 0.05
+			add_one_random_civilian_factory = yes
+			hidden_effect = {
+				country_event = { id = NKRKKK.5 days = 1}
+			}
+		}
+	}
+
+	focus = {
+		id = KKK_no_more_heretic
+		icon = GFX_goal_KKK_no_more_heretic
+		cost = 4
+
+		x = -1
+		y = 2
+		relative_position_id = KKK_white_knights
+
+		prerequisite = {
+			focus = KKK_white_knights
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed KKK_no_more_heretic"
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.05
+			}
+			add_manpower = -12384
+			add_timed_idea = {
+				idea = KMD_push_unification_war_idea
+				days = 180
+			}
+			hidden_effect = {
+				country_event = { id = NKRKKK.6 days = 1}
+			}
+		}
+	}
+
+	focus = {
+		id = KKK_klux_socialist_bro
+		icon = GFX_goal_KKK_klux_socialist_bro
+		cost = 4
+
+		x = 1
+		y = 2
+		relative_position_id = KKK_white_knights
+
+		prerequisite = {
+			focus = KKK_white_knights
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed KKK_klux_socialist_bro"
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.03
+			}
+			add_ideas = {
+				KKK_san_k_socialist_idea
+			}
+			hidden_effect = {
+				country_event = { id = NKRKKK.7 days = 1}
+			}
+		}
+	}
+
+	focus = {
+		id = KKK_charge
+		icon = GFX_goal_KKK_charge
+		cost = 4
+
+		x = 0
+		y = 3
+		relative_position_id = KKK_white_knights
+
+		prerequisite = {
+			focus = KKK_klux_socialist_bro
+		}
+		prerequisite = {
+			focus = KKK_no_more_heretic
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed KKK_charge"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1000
+			}
+			every_army_leader ={
+				add_temporary_buff_to_units = {
+					combat_offense = 0.1
+					combat_breakthrough = 0.1
+					war_support_reduction_on_damage = -0.2
+					days = 180
+				}	
+			}
+			add_command_power = 45
+			hidden_effect = {
+				country_event = { id = NKRKKK.8 days = 1}
+			}
+		}
+	}
+
+	focus = {
+		id = KKK_the_birth_of_a_nation
+		icon = GFX_goal_KKK_the_birth_of_a_nation
+		cost = 4
+
+		x = 0
+		y = 4
+		relative_position_id = KKK_white_knights
+
+		prerequisite = {
+			focus = KKK_charge
+		}
+		prerequisite = {
+			focus = KKK_san_k_power
+		}
+		prerequisite = {
+			focus = KKK_torch_of_nationalism
+		}
+
+		available = {
+			AND = {
+				NSR = {
+					is_exist = no
+				}
+				NAZ = {
+					is_exist = no
+				}
+				WAN = {
+					is_exist = no
+				}
+				DYD = {
+					is_exist = no
+				}
+			}
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed KKK_the_birth_of_a_nation"
+			KMD_BREAK_set_potential_national_government = yes
+			remove_ideas = { KMD_breaks_idea }
+			hidden_effect = {
+				country_event = { id = NKRKKK.9 days = 1}
+			}
+		}
+	}
+
+
+}
