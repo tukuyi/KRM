@@ -40,6 +40,17 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.05
 			}
 		}
+
+		NAZ_natural_nationalism_idea = { #生态民族主义
+			on_add = {log = "[GetLogRoot]: add idea WAN_natural_nationalism_idea"}
+			allowed = { always = no }
+			picture = NAZ_natural_nationalism_idea
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
 	
 
 	}
