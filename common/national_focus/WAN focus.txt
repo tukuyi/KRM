@@ -165,6 +165,12 @@ focus_tree = {
 				target = JAP
 				modifier = KR_approves_of_govt
 			}
+			JAP = {
+				add_opinion_modifier = {
+					target = WAN
+					modifier = KR_approves_of_govt
+				}
+			}
 			hidden_effect = {
 				country_event = { id = NKRWanClique.4 days = 1}
 			}
