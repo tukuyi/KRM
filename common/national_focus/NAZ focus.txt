@@ -21,12 +21,6 @@ focus_tree = {
 
 		x = 1
 		y = 0
-
-		available = {
-			hidden_trigger = {
-				always = no
-			}
-		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed NAZ_brownshirts_action"
 			custom_effect_tooltip = NAZ_brownshirts_action_tooltip

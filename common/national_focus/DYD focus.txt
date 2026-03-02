@@ -21,12 +21,6 @@ focus_tree = {
 
 		x = 1
 		y = 0
-
-		available = {
-			hidden_trigger = {
-				always = no
-			}
-		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed DYD_invisible"
 			custom_effect_tooltip = DYD_invisible_tooltip

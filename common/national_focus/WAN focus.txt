@@ -21,12 +21,6 @@ focus_tree = {
 
 		x = 1
 		y = 0
-
-		available = {
-			hidden_trigger = {
-				always = no
-			}
-		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed WAN_old_guard_strike_back"
 			custom_effect_tooltip = WAN_old_guard_strike_back_tooltip
