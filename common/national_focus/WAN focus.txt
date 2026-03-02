@@ -318,16 +318,16 @@ focus_tree = {
 		available = {
 			AND = {
 				NSR = {
-					is_exist = no
+					exists = no
 				}
 				KKK = {
-					is_exist = no
+					exists = no
 				}
 				NAZ = {
-					is_exist = no
+					exists = no
 				}
 				DYD = {
-					is_exist = no
+					exists = no
 				}
 			}
 		}
@@ -336,6 +336,10 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed WAN_victory_is_near"
 			KMD_BREAK_set_potential_national_government = yes
 			KMD_BREAK_EAST_CHINA_AVAILABLE_TO_EXPAND = yes
+			set_capital = {
+				state = 613
+				remember_old_capital = no
+			}
 			remove_ideas = { KMD_breaks_idea }
 			hidden_effect = {
 				country_event = { id = NKRWanClique.9 days = 1}

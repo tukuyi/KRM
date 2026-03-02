@@ -312,16 +312,16 @@ focus_tree = {
 		available = {
 			AND = {
 				NAZ = {
-					is_exist = no
+					exists = no
 				}
 				KKK = {
-					is_exist = no
+					exists = no
 				}
 				WAN = {
-					is_exist = no
+					exists = no
 				}
 				DYD = {
-					is_exist = no
+					exists = no
 				}
 			}
 		}
@@ -330,6 +330,10 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed NSR_neo_socialist_incorrupitible"
 			KMD_BREAK_set_potential_national_government = yes
 			KMD_BREAK_EAST_CHINA_AVAILABLE_TO_EXPAND = yes
+			set_capital = {
+				state = 613
+				remember_old_capital = no
+			}
 			remove_ideas = { KMD_breaks_idea }
 			hidden_effect = {
 				country_event = { id = NKRNSR.9 days = 1}

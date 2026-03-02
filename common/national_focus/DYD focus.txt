@@ -301,16 +301,16 @@ focus_tree = {
 		available = {
 			AND = {
 				NAZ = {
-					is_exist = no
+					exists = no
 				}
 				KKK = {
-					is_exist = no
+					exists = no
 				}
 				WAN = {
-					is_exist = no
+					exists = no
 				}
 				NSR = {
-					is_exist = no
+					exists = no
 				}
 			}
 		}
@@ -318,6 +318,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed DYD_the_man_who_sold_the_world"
 			KMD_BREAK_set_potential_national_government = yes
+			set_capital = {
+				state = 613
+				remember_old_capital = no
+			}
 			remove_ideas = { KMD_breaks_idea }
 			hidden_effect = {
 				country_event = { id = NKRDYD.9 days = 1}
