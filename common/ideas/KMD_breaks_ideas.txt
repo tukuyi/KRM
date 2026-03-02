@@ -62,6 +62,19 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.15
 			}
 		}
+
+		NSR_suns_legacy_for_neosocialist_idea = { #新社会主义——孙的遗产
+			on_add = {log = "[GetLogRoot]: add idea NSR_suns_legacy_for_neosocialist_idea"}
+			allowed = { always = no }
+			picture = NSR_suns_legacy_for_neosocialist_idea
+			modifier = {
+				consumer_goods_factor = -0.03
+				political_power_gain = 0.3
+				army_attack_factor = 0.03
+				radical_socialist_drift = 0.02
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
 	
 
 	}
