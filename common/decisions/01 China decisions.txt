@@ -2174,6 +2174,9 @@ chinese_unification = {
 						china_generic_unification_effect = yes
 						hidden_effect = { news_event = china_events.314 }
 					}
+					
+					china_enable_concession_decisions = yes
+					china_enable_outskirts_decisions = yes
 				}
 				else_if = {
 					limit = {

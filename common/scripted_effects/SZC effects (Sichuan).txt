@@ -6628,6 +6628,72 @@ KMD_BREAK_set_potential_national_government = {
 	}
 }
 
+KMD_BREAK_EAST_CHINA_AVAILABLE_TO_EXPAND = {
+	effect_tooltip = {
+		activate_targeted_decision = { decision = china_demand_submission target = YUN }
+		activate_targeted_decision = { decision = china_demand_submission target = SHX }
+		activate_targeted_decision = { decision = china_demand_submission target = QIE }
+		activate_targeted_decision = { decision = china_demand_submission target = FNG }
+		activate_targeted_decision = { decision = china_demand_submission target = GXC }
+		activate_targeted_decision = { decision = china_demand_submission target = SZC }
+		activate_targeted_decision = { decision = china_demand_submission target = SHD }
+		activate_targeted_decision = { decision = china_demand_submission target = HNN }
+		activate_targeted_decision = { decision = china_demand_submission target = QNN }
+		activate_targeted_decision = { decision = china_demand_submission target = XIK }
+		activate_targeted_decision = { decision = china_demand_submission target = CQC }
+		activate_targeted_decision = { decision = china_demand_submission target = NCY }
+		activate_targeted_decision = { decision = china_demand_submission target = JBL }
+		activate_targeted_decision = { decision = china_demand_submission target = OAA }
+		activate_targeted_decision = { decision = china_demand_submission target = GMJ }
+		activate_targeted_decision = { decision = china_demand_submission target = BSA }
+		activate_targeted_decision = { decision = china_demand_submission target = GUI }
+		activate_targeted_decision = { decision = china_demand_submission target = BYZ }
+		activate_targeted_decision = { decision = china_demand_submission target = YUA }
+		activate_targeted_decision = { decision = china_demand_submission target = SCT }
+	}
+	hidden_effect = {
+		add_to_array = { ROOT.china_possible_targets_array = YUN }
+		add_to_array = { ROOT.china_possible_targets_array = SHX }
+		activate_targeted_decision = { target = SHX decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = QIE }
+		activate_targeted_decision = { target = QIE decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = FNG }
+		activate_targeted_decision = { target = FNG decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = GXC }
+		activate_targeted_decision = { target = GXC decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = SZC }
+		activate_targeted_decision = { target = SZC decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = SHD }
+		activate_targeted_decision = { target = SHD decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = HNN }
+		activate_targeted_decision = { target = HNN decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = QNN }
+		activate_targeted_decision = { target = QNN decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = XIK }
+		activate_targeted_decision = { target = XIK decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = CQC }
+		activate_targeted_decision = { target = CQC decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = NCY }
+		activate_targeted_decision = { target = NCY decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = JBL }
+		activate_targeted_decision = { target = JBL decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = OAA }
+		activate_targeted_decision = { target = OAA decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = GMJ }
+		activate_targeted_decision = { target = GMJ decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = BSA }
+		activate_targeted_decision = { target = BSA decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = GUI }
+		activate_targeted_decision = { target = GUI decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = BYZ }
+		activate_targeted_decision = { target = BYZ decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = YUA }
+		activate_targeted_decision = { target = YUA decision = china_attack_decision }
+		add_to_array = { ROOT.china_possible_targets_array = SCT }
+		activate_targeted_decision = { target = SCT decision = china_attack_decision }
+	}
+}
+
 
 add_temp_unit_leader_role = {
 	hidden_effect = {

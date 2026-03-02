@@ -335,6 +335,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed NSR_neo_socialist_incorrupitible"
 			KMD_BREAK_set_potential_national_government = yes
+			KMD_BREAK_EAST_CHINA_AVAILABLE_TO_EXPAND = yes
 			remove_ideas = { KMD_breaks_idea }
 			hidden_effect = {
 				country_event = { id = NKRNSR.9 days = 1}
