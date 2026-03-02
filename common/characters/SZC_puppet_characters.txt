@@ -763,7 +763,7 @@ characters = {
 		}
 	}
 
-	#徐太山
+	#少太山
 	KOR_so_taesan = {
 		name = KOR_so_taesan
 		portraits = {
@@ -775,6 +775,22 @@ characters = {
 		country_leader = {
 			desc = KOR_so_taesan_desc
 			ideology = authoritarian_democrat_moral_sovereign_democracy_subtype
+			traits = { }
+		}
+	}
+
+	#车京石
+	KOR_cha_yunhong = {
+		name = KOR_cha_yunhong
+		portraits = {
+			civilian = {
+				small = GFX_portrait_KOR_cha_yunhong_small
+				large = GFX_portrait_KOR_cha_yunhong_large
+			}
+		}
+		country_leader = {
+			desc = KOR_cha_yunhong_desc
+			ideology = national_populist_kongmengdao_subtype
 			traits = { }
 		}
 	}
@@ -791,6 +807,22 @@ characters = {
 		country_leader = {
 			desc = KOR_cha_yunhong_desc
 			ideology = national_populist_kongmengdao_subtype
+			traits = { }
+		}
+	}
+
+	#李鍝
+	KOR_yi_wu = {
+		name = KOR_yi_wu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_KOR_yi_wu_small
+				large = GFX_portrait_KOR_yi_wu_large
+			}
+		}
+		country_leader = {
+			desc = KOR_yi_wu_desc
+			ideology = social_conservative_national_conservative_subtype
 			traits = { }
 		}
 	}

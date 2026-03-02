@@ -114,6 +114,37 @@ KOR_return_of_the_provisional_government = {
 		else_if = {
 			limit = {
 				OR = {
+					HNN_hu_ying = { is_second_in_command = yes }
+					has_country_leader = { character = SZC_liu_chengxun }
+				}
+			}
+			KOR_authoritarian_government = yes
+			KOR_yi_wu = { set_nationality = KOR }
+			KOR = {
+				set_cosmetic_tag = KOR_LCX
+				set_country_flag = monarchy_KOR
+				uncomplete_national_focus = {
+					focus = KOR_figurehead_of_the_nation
+					uncomplete_children = yes
+				}
+				uncomplete_national_focus = {
+					focus = KOR_sponser_ilminist_groups
+					uncomplete_children = yes
+				}
+				KOR_yi_wu = { promote_character = social_conservative_national_conservative_subtype }
+				set_politics = {
+					ruling_party = social_conservative
+				}
+				set_party_name = {
+					ideology = social_conservative
+					name = KOR_LCX_party
+					long_name = KOR_LCX_party_long
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
 					has_authoritarian_government = yes
 					china_alignment_right_kuomintang = yes
 					tag = QIE
