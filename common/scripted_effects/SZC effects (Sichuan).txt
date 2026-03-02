@@ -5139,6 +5139,7 @@ KMD_setup_dynamic_breakaways = {
 						small = GFX_portrait_DYD_deng_yanda_punished_small
 					}
 				}
+				promote_to_field_marshal = yes
 				add_country_leader_role = {
 					country_leader = {
 						desc = CHI_deng_yanda
@@ -5149,6 +5150,12 @@ KMD_setup_dynamic_breakaways = {
 				set_nationality = PREV.PREV
 			}
 			CHI_ye_ting = {
+				set_nationality = PREV.PREV
+			}
+			CHI_wang_yaowu = {
+				set_nationality = PREV.PREV
+			}
+			CHI_du_yuming = {
 				set_nationality = PREV.PREV
 			}
 		}
