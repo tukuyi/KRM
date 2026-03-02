@@ -5158,6 +5158,24 @@ KMD_setup_dynamic_breakaways = {
 			CHI_du_yuming = {
 				set_nationality = PREV.PREV
 			}
+			CHI_su_yu = {
+				set_nationality = PREV.PREV
+			}
+			CHI_huang_qixiang = {
+				set_nationality = PREV.PREV
+			}
+		}
+		if = {
+			limit = {
+				YUN = {
+					exists = no
+				}
+			}
+			YUN = {
+				YUN_chen_cheng = {
+					set_nationality = PREV.PREV
+				}
+			}
 		}
 		CHI_deng_yanda = {
 			promote_character = paternal_autocrat_stratocracy_subtype
