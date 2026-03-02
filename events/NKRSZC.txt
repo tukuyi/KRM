@@ -27873,6 +27873,7 @@ country_event = { #最卑劣的刺杀
 			set_country_flag = NKR_amusing_ourselves_to_death_achievement_achieve
 			delete_unit = {}
 			country_event = { id = SZCDEBUG.6 }
+			country_event = { id = NKRsichuanKMD.181 }
 		}
 	}
 
@@ -29999,6 +30000,58 @@ country_event = { #最卑劣的刺杀
 			custom_effect_tooltip = KMDLCYending
 			set_country_flag = NKR_the_one_achievement_achieve
 			SZR_kmd_e1_start = yes
+		}
+	}
+	
+	country_event = { #崩溃之后...
+		id = NKRsichuanKMD.181
+		title = NKRsichuanKMD.181.t
+		desc = NKRsichuanKMD.181.d
+		picture = GFX_report_event_SZC_taishan
+	
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+	
+		option = {# 
+			log = "[GetLogInfo]: event NKRsichuanKMD.181 option NKRsichuanKMD.181.a"
+			name = NKRsichuanKMD.181.a
+			trigger = {
+				NAZ = { exists = yes }
+			}
+			NAZ = { change_tag_from = ROOT }
+		}
+		option = {# 
+			log = "[GetLogInfo]: event NKRsichuanKMD.181 option NKRsichuanKMD.181.b"
+			name = NKRsichuanKMD.181.b
+			trigger = {
+				KKK = { exists = yes }
+			}
+			KKK = { change_tag_from = ROOT }
+		}
+		option = {# 
+			log = "[GetLogInfo]: event NKRsichuanKMD.181 option NKRsichuanKMD.181.c"
+			name = NKRsichuanKMD.181.c
+			trigger = {
+				NSR = { exists = yes }
+			}
+			NSR = { change_tag_from = ROOT }
+		}
+		option = {# 
+			log = "[GetLogInfo]: event NKRsichuanKMD.181 option NKRsichuanKMD.181.e"
+			name = NKRsichuanKMD.181.e
+			trigger = {
+				DYD = { exists = yes }
+			}
+			DYD = { change_tag_from = ROOT }
+		}
+		option = {# 
+			log = "[GetLogInfo]: event NKRsichuanKMD.181 option NKRsichuanKMD.181.f"
+			name = NKRsichuanKMD.181.f
+			trigger = {
+				WAN = { exists = yes }
+			}
+			WAN = { change_tag_from = ROOT }
 		}
 	}
 
