@@ -11645,7 +11645,9 @@ focus_tree = {
 		relative_position_id = SZC_pan_declare_southernwest_autonomy
 
 		available = {
-			controls_state = 613
+			613 = {
+				is_owned_and_controlled_by_ROOT_or_subject = yes
+			}
 		}
 
 		prerequisite = {
@@ -11665,6 +11667,18 @@ focus_tree = {
 			custom_effect_tooltip = SZC_pan_the_new_sun_rises_tooltip
 			set_country_flag = NKRSZC_CDLpath_phase2
 			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					613 = {
+						NOT = {
+							is_owned_and_controlled_by = ROOT
+						}
+					}
+				}
+				613 = {
+					transfer_state_to = ROOT
+				}
+			}
 		}
 	}
 
