@@ -7,5 +7,7 @@
 ##############################################################
 defined_text = {
 	name = ROC_seat_party
-	text = [?ROC_seat_token^seat_idx.GetLocalizedTokenKey]
+	text = {
+		localization_key = [?ROC_seat_token^seat_idx.GetLocalizedTokenKey]
+	}
 }
