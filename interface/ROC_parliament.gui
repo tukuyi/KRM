@@ -45,7 +45,7 @@ guiTypes = {
 		# 議會圖表放置區（從左上角偏移，為標題列留空間）
 		gridboxtype = {
 			name = "roc_parliament_diagram"
-			position = { x = 200 y = 135 }
+			position = { x = 140 y = 125 }
 			size = { width = 100% height = 100% }
 			slotsize = { width = 100% height = 0 }
 			max_slots_horizontal = 1
@@ -68,6 +68,68 @@ guiTypes = {
 			pdx_tooltip = "ROC_parliament_refresh_tt"
 		}
 
+		# ── 中间栏────────────────────────
+		containerWindowType = {
+			name = "ROC_parliament_center_container"
+			size = { width = 950 height = 61 }
+			position = { x = 0 y = 464 }
+	
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_social_bg"
+			}
+			background = {
+				name = "background_overlay"
+				quadTextureSprite ="GFX_tiled_research_bg"
+			}
+
+			instantTextBoxType = {
+				name = "ROC_parliament_political_status"
+				position = { x = -450 y = 15 }
+				orientation = CENTER_UP
+				text = "ROC_parliament_political_status"
+				font = "hoi_36header"
+				format = center
+				maxWidth = 900
+				alwaystransparent = yes
+			}
+		}
+
+		# ── 下位容器────────────────────────
+		containerWindowType = {
+			name = "ROC_parliament_parties_container"
+			size = { width = 950 height = 260 }
+			position = { x = 0 y = 520 }
+	
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiled_paper_w_frame_bg"
+				alwaystransparent = yes
+			}
+			containerWindowType = {
+				name = "ROC_parliament_parties_container_2"
+				size = { width = 934 height = 260 }
+				position = { x = 0 y = 0 }
+				smooth_scrolling = yes
+				horizontalScrollbar = "bottom_horizontal_slider"
+				background_margin = { bottom = 15 }
+		
+				background = {
+					name = "background"
+					quadTextureSprite = "GFX_tiled_window_transparent"
+					alwaystransparent = yes
+				}
+				gridboxtype = {
+					name = "roc_parliament_parties_gridbox"
+					position = { x = 15 y = 14 }
+					slotsize = { width = 205 height = 230 }
+					max_slots_horizontal = 20
+					format = "UPPER_LEFT"
+				}
+			}
+
+		}
+
 	}
 
 	# ── 席位容器（每個席位一個實例）────────────────────────
@@ -80,6 +142,73 @@ guiTypes = {
 			quadTextureSprite = "GFX_ROC_Parliament_Seat"
 			pdx_tooltip = "ROC_seat_tt"
 		}
+
+		iconType = {
+			name = "roc_parliament_circle"
+			quadTextureSprite = "GFX_ROC_parliament_seat_circle"
+			alwaystransparent = yes
+		}
+	}
+
+
+			
+	# ── 党派容器────────────────────────
+	containerWindowType = {
+		name = "ROC_parliament_party_entry"
+		size = { width = 200 height = 230 }
+		clipping = no
+		orientation = UPPER_LEFT
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiled_parliament_paper_bg"
+		}
+		iconType = {
+			name = "party_emblem"
+			spriteType = "GFX_ROC_parliament_IND_emblem"
+			position = { x = 34 y = 7 }
+		}
+
+		instantTextBoxType = {
+			name = "ROC_party_name"
+			position = { x = -150 y = 130 }
+			orientation = CENTER_UP
+			text = ROC_party_name_get
+			font = "hoi_36header"
+			format = center
+			maxWidth = 300
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "ROC_seat_count"
+			position = { x = -150 y = 158 }
+			orientation = CENTER_UP
+			text = ROC_party_seats_get
+			font = "hoi_24header"
+			format = center
+			maxWidth = 300
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "ROC_party_status"
+			position = { x = -150 y = 183 }
+			orientation = CENTER_UP
+			text = ROC_party_status_get
+			font = "hoi_24header"
+			format = center
+			maxWidth = 300
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "party_clip"
+			spriteType = "GFX_event_pic_clip"
+			position = { x = -15 y = 120 }
+			alwaystransparent = yes
+		}
+		
+		
 	}
 
 }

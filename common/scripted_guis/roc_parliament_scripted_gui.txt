@@ -18,6 +18,12 @@ scripted_gui = {
 				entry_container = ROC_parliament_seat
 				change_scope = no
 			}
+			roc_parliament_parties_gridbox = {
+				array = ROC_party_tokens
+				index = party_idx
+				entry_container = ROC_parliament_party_entry
+				value = roc_cur_token
+			}
 		}
 
 		properties = {
@@ -25,6 +31,14 @@ scripted_gui = {
 				x = ROC_seat_x^seat_idx
 				y = ROC_seat_y^seat_idx
 				frame = ROC_seat_frame^seat_idx
+			}
+			roc_parliament_circle = {
+				x = ROC_circle_x^seat_idx
+				y = ROC_circle_y^seat_idx
+				image = "[ROC_parliament_circle_image]"
+			}
+			party_emblem = {
+				image = "GFX_ROC_[?roc_cur_token.GetTokenKey]_emblem"
 			}
 		}
 

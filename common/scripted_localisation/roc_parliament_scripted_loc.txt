@@ -1,13 +1,251 @@
 ##############################################################
 # 中華民國國民大會 — Scripted Localisation
 #
-# ROC_seat_token^seat_idx 存的是 token:parliament_gui_XXX
+# ROC_seat_frame^seat_idx 存的是 token:parliament_gui_XXX
 # GetTokenKey 回傳 "parliament_gui_XXX" 作為 loc key
 # 完全不依賴黨派數量，新增黨派無需修改此文件。
 ##############################################################
 defined_text = {
 	name = ROC_seat_party
 	text = {
-		localization_key = [?ROC_seat_token^seat_idx.GetLocalizedTokenKey]
+		localization_key = "[ROC_seat_party_key]_name"
+	}
+}
+defined_text = {
+	name = ROC_seat_party_key
+	text = {
+		trigger = {
+			check_variable = { ROC_seat_frame^seat_idx = 1 }
+		}
+		localization_key = parliament_gui_YCP
+	}
+	text = {
+		trigger = {
+			check_variable = { ROC_seat_frame^seat_idx = 2 }
+		}
+		localization_key = parliament_gui_NSP
+	}
+	text = {
+		trigger = {
+			check_variable = { ROC_seat_frame^seat_idx = 3 }
+		}
+		localization_key = parliament_gui_DLP
+	}
+	text = {
+		trigger = {
+			check_variable = { ROC_seat_frame^seat_idx = 4 }
+		}
+		localization_key = parliament_gui_REP
+	}
+	text = {
+		trigger = {
+			check_variable = { ROC_seat_frame^seat_idx = 5 }
+		}
+		localization_key = parliament_gui_PIP
+	}
+	text = {
+		trigger = {
+			check_variable = { ROC_seat_frame^seat_idx = 6 }
+		}
+		localization_key = parliament_gui_KMT
+	}
+	text = {
+		trigger = {
+			check_variable = { ROC_seat_frame^seat_idx = 7 }
+		}
+		localization_key = parliament_gui_FAS
+	}
+	text = {
+		trigger = {
+			check_variable = { ROC_seat_frame^seat_idx = 8 }
+		}
+		localization_key = parliament_gui_SDP
+	}
+	text = {
+		trigger = {
+			check_variable = { ROC_seat_frame^seat_idx = 9 }
+		}
+		localization_key = parliament_gui_ACU
+	}
+	text = {
+		trigger = {
+			check_variable = { ROC_seat_frame^seat_idx = 10 }
+		}
+		localization_key = parliament_gui_IND
+	}
+}
+
+defined_text = {
+	name = ROC_seat_number
+	text = {
+		trigger = {
+			set_temp_variable = { temp_seat_number = seat_idx }
+			add_to_temp_variable = { temp_seat_number = 1 }
+		}
+		localization_key = [?temp_seat_number]
+	}
+}
+
+defined_text = {
+	name = GetROCPartyName
+	text = {
+		localization_key = "[?roc_cur_token.GetTokenLocalizedKey]_name"
+	}
+}
+
+defined_text = {
+	name = GetROCPartySeats
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = {
+					any_character = {
+						is_character = [tokenbase]
+						set_temp_variable = { roc_seats = THIS.parliament_gui_seats }
+					}
+				}
+				tokenbase = "[?roc_cur_token.GetTokenKey]"
+			}
+		}
+		localization_key = [?roc_seats]
+	}
+}
+
+defined_text = {
+	name = GetROCPartyStatus
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = {
+					any_character = {
+						is_character = [tokenbase]
+						check_variable = {
+							THIS.parliament_gui_status = 1
+						}
+					}
+				}
+				tokenbase = "[?roc_cur_token.GetTokenKey]"
+			}
+		}
+		localization_key = parliament_ruling
+	}
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = {
+					any_character = {
+						is_character = [tokenbase]
+						check_variable = {
+							THIS.parliament_gui_status = 2
+						}
+					}
+				}
+				tokenbase = "[?roc_cur_token.GetTokenKey]"
+			}
+		}
+		localization_key = parliament_coalition
+	}
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = {
+					any_character = {
+						is_character = [tokenbase]
+						check_variable = {
+							THIS.parliament_gui_status = 3
+						}
+					}
+				}
+				tokenbase = "[?roc_cur_token.GetTokenKey]"
+			}
+		}
+		localization_key = parliament_opposition
+	}
+}
+
+defined_text = {
+	name = ROC_parliament_circle_image
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = {
+					[tokenbase] = {
+						OR = {
+							check_variable = {
+								THIS.parliament_gui_status = 2
+							}
+							check_variable = {
+								THIS.parliament_gui_status = 1
+							}
+						}
+					}
+				}
+				tokenbase = "[ROC_seat_party_key]"
+			}
+		}
+		localization_key = GFX_ROC_parliament_gui_seat_circle_coalition
+	}
+	text = {
+		localization_key = GFX_ROC_parliament_gui_seat_circle
+	}
+}
+
+defined_text = {
+	name = GetROCRulingPartyName
+	text = {
+		trigger = {
+			any_character = {
+				check_variable = {
+					THIS.parliament_gui_status = 1
+				}
+				set_temp_variable = { ROC_frame = parliament_gui_party }
+			}
+		}
+		localization_key = "[?ROC_frame.GetTokenKey]_name"
+	}
+	text = {
+		localization_key = "114514_name"
+	}
+}
+
+defined_text = {
+	name = GetROCPartiesCoalition
+	text = {
+		trigger = {
+			parliament_gui_YCP = {
+				check_variable = {
+					THIS.parliament_gui_status = 1
+				}
+			}
+			parliament_gui_NSP = {
+				check_variable = {
+					THIS.parliament_gui_status = 2
+				}
+			}
+		}
+		localization_key = ROCCoalitionStatistCoalition
+	}
+	text = {
+		localization_key = ROCCoalitionRuleAlone
+	}
+}
+
+defined_text = {
+	name = GetROCCoalitionSeatsStatus
+	text = {
+		trigger = {
+			ROC_seats_super_majority = yes
+		}
+		localization_key = parliament_super_majority
+	}
+	text = {
+		trigger = {
+			ROC_seats_simple_majority = yes
+		}
+		localization_key = parliament_simple_majority
+	}
+	text = {
+		localization_key = parliament_less_than_half
+		# localization_key = "114"
 	}
 }

@@ -87,3 +87,73 @@ KMD_god_is_available = {
 		}
 	}
 }
+
+
+ROC_seats_super_majority = {
+	set_temp_variable = { coalition_seats = 0 }
+	set_temp_variable = { temp_seats = 533 }
+	all_of = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		meta_trigger = {
+			text = {
+				[tokenbase] = {
+					if = {
+						limit = {
+							OR = {
+								check_variable = {
+									THIS.parliament_gui_status = 1
+								}
+								check_variable = {
+									THIS.parliament_gui_status = 2
+								}
+							}
+						}
+						add_to_temp_variable = {
+							coalition_seats = THIS.parliament_gui_seats
+						}
+					}
+				}
+			}
+			tokenbase = "[?roc_cur_token.GetTokenKey]"
+		}
+	}
+	check_variable = {
+		coalition_seats > temp_seats
+	}
+}
+
+ROC_seats_simple_majority = {
+	set_temp_variable = { coalition_seats = 0 }
+	set_temp_variable = { temp_seats = 400 }
+	all_of = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		meta_trigger = {
+			text = {
+				[tokenbase] = {
+					if = {
+						limit = {
+							OR = {
+								check_variable = {
+									THIS.parliament_gui_status = 1
+								}
+								check_variable = {
+									THIS.parliament_gui_status = 2
+								}
+							}
+						}
+						add_to_temp_variable = {
+							coalition_seats = THIS.parliament_gui_seats
+						}
+					}
+				}
+			}
+			tokenbase = "[?roc_cur_token.GetTokenKey]"
+		}
+	}
+	log = "[?coalition_seats]"
+	check_variable = {
+		coalition_seats > temp_seats
+	}
+}
