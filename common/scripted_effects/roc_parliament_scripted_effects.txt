@@ -30,6 +30,8 @@
 ROC_register_parties = {
 	clear_array = ROC_party_tokens
 
+	set_variable = { ROC_parties_max = 10}
+
 	# 青年黨 —— frame 1, 267席
 	add_to_array = { ROC_party_tokens = token:parliament_gui_YCP }
 	parliament_gui_YCP = {
@@ -179,59 +181,29 @@ ROC_init_parliament_positions = {
 	add_to_temp_variable = { t9 = t8 }
 	set_temp_variable = { t10 = 800 }
 	log = "[?t1] [?t2] [?t3] [?t4] [?t5] [?t6] [?t7] [?t8] [?t9] [?t10]"
-	add_political_power = 1
 	
 	clear_array = ROC_seat_frame
 
-	resize_array = {
-		array = ROC_seat_frame
-		value = 1
-		size = t1
-	}
-	resize_array = {
-		array = ROC_seat_frame
-		value = 2
-		size = t2
-	}
-	resize_array = {
-		array = ROC_seat_frame
-		value = 3
-		size = t3
-	}
-	resize_array = {
-		array = ROC_seat_frame
-		value = 4
-		size = t4
-	}
-	resize_array = {
-		array = ROC_seat_frame
-		value = 5
-		size = t5
-	}
-	resize_array = {
-		array = ROC_seat_frame
-		value = 6
-		size = t6
-	}
-	resize_array = {
-		array = ROC_seat_frame
-		value = 7
-		size = t7
-	}
-	resize_array = {
-		array = ROC_seat_frame
-		value = 8
-		size = t8
-	}
-	resize_array = {
-		array = ROC_seat_frame
-		value = 9
-		size = t9
-	}
-	resize_array = {
-		array = ROC_seat_frame
-		value = 10
-		size = t10
+	set_temp_variable = { ROC_resize_array_times = 0 }
+	log = "[?ROC_resize_array_times] [?ROC_parties_max]"
+	while_loop_effect = {
+		limit = {
+			check_variable = {
+				ROC_resize_array_times < ROC_parties_max
+			}
+		}
+		add_to_temp_variable = { ROC_resize_array_times = 1 }
+		meta_effect = {
+			text = {
+				resize_array = {
+					array = ROC_seat_frame
+					value = [time]
+					size = t[time]
+				}
+			}
+			time = "[?ROC_resize_array_times]"
+		}
+		log = "[?ROC_resize_array_times]"
 	}
 
 	clear_array = ROC_seat_x
