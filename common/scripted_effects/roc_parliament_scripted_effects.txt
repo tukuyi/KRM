@@ -91,6 +91,7 @@ ROC_register_parties = {
 	parliament_gui_ACU = {
 		set_variable = { parliament_gui_frame = 9 }
 		set_variable = { parliament_gui_seats = 20 }
+		log = "[?parliament_gui_frame] 114 [?parliament_gui_seats] "
 	}
 
 	# 無黨籍 —— frame 10, 82席
@@ -110,44 +111,63 @@ ROC_tseats_effect = {
 	add_political_power = 1
 	meta_effect = {
 		text = {
+			set_temp_variable = { temp_t = 0 }
+			set_temp_variable = { temp_tp = 0 }
 			[party] = {
-				set_temp_variable = { ROOT.t[?parliament_gui_frame] = parliament_gui_seats }
+				add_to_temp_variable = { ROOT.temp_t = THIS.parliament_gui_seats }
+				add_to_temp_variable = { ROOT.temp_tp = THIS.parliament_gui_frame }
 			}
-			ROOT = { log = "111ROC_tseats_effect: tier [?ROOT.temp_tier], party [?ROOT.temp_party.GetTokenKey], seats [?ROOT.t[tier]]" }
+			meta_effect = {
+				text = {
+					set_temp_variable = { t[tnumber] = [tvalue] }
+				}
+				tnumber = "[?ROOT.temp_t]"
+				tvalue = "[?ROOT.temp_tp]"
+			}
 		}
-		tier = [?ROOT.temp_tier]
-		party = [?ROOT.temp_party.GetTokenKey]
+		tier = "[?THIS.parliament_gui_frame]"
+		party = "[?ROOT.temp_party.GetTokenKey]"
 	}
 }
+
 ROC_init_parliament_positions = {
-	set_temp_variable = { temp_tier = 1 }
-	set_temp_variable = { temp_party = token:parliament_gui_YCP }
-	ROC_tseats_effect = yes
-	set_temp_variable = { temp_tier = 2 }
-	set_temp_variable = { temp_party = token:parliament_gui_NSP }
-	ROC_tseats_effect = yes
-	set_temp_variable = { temp_tier = 3 }
-	set_temp_variable = { temp_party = token:parliament_gui_DLP }
-	ROC_tseats_effect = yes
-	set_temp_variable = { temp_tier = 4 }
-	set_temp_variable = { temp_party = token:parliament_gui_REP }
-	ROC_tseats_effect = yes
-	set_temp_variable = { temp_tier = 5 }
-	set_temp_variable = { temp_party = token:parliament_gui_PIP }
-	ROC_tseats_effect = yes
-	set_temp_variable = { temp_tier = 6 }
-	set_temp_variable = { temp_party = token:parliament_gui_KMT }
-	ROC_tseats_effect = yes
-	set_temp_variable = { temp_tier = 7 }
-	set_temp_variable = { temp_party = token:parliament_gui_FAS }
-	ROC_tseats_effect = yes
-	set_temp_variable = { temp_tier = 8 }
-	set_temp_variable = { temp_party = token:parliament_gui_SDP }
-	ROC_tseats_effect = yes
-	set_temp_variable = { temp_tier = 9 }
-	set_temp_variable = { temp_party = token:parliament_gui_ACU }
-	ROC_tseats_effect = yes
-	set_temp_variable = { t10 = 800 }
+	set_temp_variable = { tempc = 0 }
+	for_each_loop = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		ROOT = {
+			set_variable = { tempc = roc_cur_token }
+			set_variable = { roc_seats = 0 }
+			set_variable = { roc_frame = 0 }
+		}
+		meta_effect = {
+			text = {
+				every_character = {
+					limit = { is_character = [tokenbase] }
+					set_temp_variable = { roc_frame = THIS.parliament_gui_frame }
+					set_temp_variable = { roc_seats = THIS.parliament_gui_seats }
+				}
+			}
+			tokenbase = "[?ROOT.tempc.GetTokenKey]"
+		}
+		log = "[tokenbase]: seats = [?roc_seats], frame = [?roc_frame]"
+		meta_effect = {
+			text = {
+				set_temp_variable = {
+					t[tier] = [party]
+				}
+				log = "[tier] [party]"
+			}
+			tier = "[?roc_frame]"
+			party = "[?roc_seats]"
+		}
+		ROOT = {
+			clear_variable = ROOT.tempc
+			clear_variable = roc_seats
+			clear_variable = roc_frame
+		}
+	}
+	log = "[?t1] [?t2] [?t3] [?t4] [?t5] [?t6] [?t7] [?t8] [?t9] [?t10]"
 
 	add_to_temp_variable = { t2 = t1 }
 	add_to_temp_variable = { t3 = t2 }
@@ -157,6 +177,9 @@ ROC_init_parliament_positions = {
 	add_to_temp_variable = { t7 = t6 }
 	add_to_temp_variable = { t8 = t7 }
 	add_to_temp_variable = { t9 = t8 }
+	set_temp_variable = { t10 = 800 }
+	log = "[?t1] [?t2] [?t3] [?t4] [?t5] [?t6] [?t7] [?t8] [?t9] [?t10]"
+	add_political_power = 1
 	
 	clear_array = ROC_seat_frame
 
