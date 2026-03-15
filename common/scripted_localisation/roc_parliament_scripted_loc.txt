@@ -5,23 +5,7 @@
 # GetTokenKey 回傳 "parliament_gui_XXX" 作為 loc key
 # 完全不依賴黨派數量，新增黨派無需修改此文件。
 ##############################################################
-
 defined_text = {
-	name = ROC_seat_party_name
-	text = {
-		trigger = { always = yes }
-		localization_key = "[ROC_seat_token^seat_idx.GetTokenKey]"
-	}
-}
-defined_text = {
-	name = ROC_seat_party_frame
-	text = {
-		localization_key = "[?ROC_party_tokens^seat_idx.GetTokenKey].parliament_gui_frame"
-	}
-}
-defined_text = {
-	name = ROC_seat_party_tempc
-	text = {
-		localization_key = "[?ROOT.tempc.GetTokenKey]"
-	}
+	name = ROC_seat_party
+	text = [?ROC_seat_token^seat_idx.GetLocalizedTokenKey]
 }
