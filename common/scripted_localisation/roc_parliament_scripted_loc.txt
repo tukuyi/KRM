@@ -1,0 +1,15 @@
+##############################################################
+# 中華民國國民大會 — Scripted Localisation
+#
+# ROC_seat_token^seat_idx 存的是 token:parliament_gui_XXX
+# GetTokenKey 回傳 "parliament_gui_XXX" 作為 loc key
+# 完全不依賴黨派數量，新增黨派無需修改此文件。
+##############################################################
+
+defined_text = {
+	name = ROC_seat_party_name
+	text = {
+		trigger = { always = yes }
+		localization_key = "[ROC_seat_token^seat_idx.GetTokenKey]"
+	}
+}

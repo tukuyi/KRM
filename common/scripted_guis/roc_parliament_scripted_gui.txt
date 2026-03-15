@@ -1,0 +1,37 @@
+scripted_gui = {
+	roc_parliament_scripted_gui = {
+		window_name = "roc_parliament_gui"
+		context_type = player_context
+
+		visible = {
+			# has_country_flag = open_roc_parliament_gui
+			always = yes
+		}
+
+		dynamic_lists = {
+			roc_parliament_diagram = {
+				array = ROC_seat_x
+				change_scope = no
+				entry_container = ROC_parliament_seat
+				index = seat_idx
+			}
+		}
+
+		properties = {
+			roc_parliament_dot_icon = {
+				x = ROC_seat_x^seat_idx
+				y = ROC_seat_y^seat_idx
+				frame = ROC_seat_frame^seat_idx
+			}
+		}
+
+		effects = {
+			roc_parliament_close_button_click = {
+				clr_country_flag = open_roc_parliament_gui
+			}
+			roc_parliament_refresh_button_click = {
+				ROC_update_parliament = yes
+			}
+		}
+	}
+}

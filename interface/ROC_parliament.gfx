@@ -1,0 +1,15 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ROC_parliament_title"
+		textureFile = "gfx/interface/gui/parliament/parliament_title.png"
+	}
+
+	# 10 frames: 1青年党 2国社党 3民自党 4共和党 5致公党 6国民党 7法西斯 8社会党 9工会 10无党籍
+	spriteType = {
+		name = "GFX_ROC_Parliament_Seat"
+		textureFile = "gfx/interface/gui/parliament/parliament_seat.png"
+		noOfFrames = 10
+	}
+
+}
