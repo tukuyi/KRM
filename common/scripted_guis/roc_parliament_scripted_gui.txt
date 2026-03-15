@@ -8,12 +8,15 @@ scripted_gui = {
 			always = yes
 		}
 
+		# array = ROC_seat_token，每個元素是 character token，
+		# change_scope = yes 讓 icon 在對應 character scope 下渲染。
+		# seat_idx 同時用來索引 x / y / frame 三條平行陣列。
 		dynamic_lists = {
 			roc_parliament_diagram = {
 				array = ROC_seat_x
-				change_scope = no
-				entry_container = ROC_parliament_seat
 				index = seat_idx
+				entry_container = ROC_parliament_seat
+				change_scope = no
 			}
 		}
 
@@ -30,7 +33,7 @@ scripted_gui = {
 				clr_country_flag = open_roc_parliament_gui
 			}
 			roc_parliament_refresh_button_click = {
-				ROC_update_parliament = yes
+				ROC_init_parliament = yes
 			}
 		}
 	}

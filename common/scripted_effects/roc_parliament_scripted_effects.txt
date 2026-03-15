@@ -1,26 +1,22 @@
 ##############################################################
 # 中華民國國民大會 — Scripted Effects
-# ── Token Scope 驅動架構 ──
+# ── Character Token Scope 架構（正確實現）──
 #
-# 設計原則：
-#   每個黨派 token 的 scope 存放該黨自己的數據，
-#   包括席次（parliament_gui_seats）和 sprite 幀號（parliament_gui_frame）。
-#   ROC_party_tokens[] 是有序的黨派注册表，決定 resize_array 的填充順序。
+# 每個黨派對應一個 character，character scope 存放：
+#   parliament_gui_frame   sprite 幀號
+#   parliament_gui_seats   席次
 #
-# 核心陣列：
-#   ROC_party_tokens[]        有序黨派 token 列表（注册表）
-#   ROC_seat_x[] / y[]        席位座標
-#   ROC_seat_frame[]          席位 sprite 幀號（由 build_seat_frames 生成）
+# ROC_party_tokens[] 是 character token 的有序注册表，
+# for_each_loop + change_scope = yes 切換到 character scope 讀數據。
 #
-# 各黨 token scope 變數：
-#   parliament_gui_seats      該黨席次
-#   parliament_gui_frame      該黨 sprite 幀號
+# Tooltip：
+#   ROC_seat_token^seat_idx 存放 token 數值
+#   scripted_gui properties 的 image/frame 用
+#   [?ROC_seat_token^seat_idx.GetTokenKey] 取 character token key
 #
-# Tooltip：[ROC_seat_token^seat_idx.GetTokenKey] → loc key
-#
-# 新增黨派只需：
-#   1. 在 ROC_register_parties 中設定其 token scope 變數
-#   2. add_to_array 把 token 加入 ROC_party_tokens[]
+# 新增黨派：
+#   1. 定義新 character（common/characters/）
+#   2. 在 ROC_register_parties 加三行（token + frame + seats）
 #   3. localisation 加 parliament_gui_XXX:0 "黨名"
 #   4. parliament_seat.dds 加一幀
 ##############################################################
@@ -28,173 +24,196 @@
 
 # ──────────────────────────────────────────────────────────
 # ROC_register_parties
-#
-# 在各黨 token 的 scope 中設定：
-#   parliament_gui_seats  = 席次
-#   parliament_gui_frame  = sprite 幀號
-#
-# 同時將 token 依序加入 ROC_party_tokens[]，
-# 這個順序決定了 resize_array 的填充順序（左翼→右翼 or 自定義）。
+# 將各黨 character token 加入注册表，
+# 並在 character scope 設定幀號與席次。
 # ──────────────────────────────────────────────────────────
 ROC_register_parties = {
 	clear_array = ROC_party_tokens
 
-	# ── 青年黨 ──
+	# 青年黨 —— frame 1, 267席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_YCP }
 	parliament_gui_YCP = {
 		set_variable = { parliament_gui_frame = 1 }
 		set_variable = { parliament_gui_seats = 267 }
 	}
-	add_to_array = { ROC_party_tokens = token:parliament_gui_YCP }
 
-	# ── 國家社會黨 ──
+	# 國家社會黨 —— frame 2, 112席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_NSP }
 	parliament_gui_NSP = {
 		set_variable = { parliament_gui_frame = 2 }
 		set_variable = { parliament_gui_seats = 112 }
 	}
-	add_to_array = { ROC_party_tokens = token:parliament_gui_NSP }
 
-	# ── 民主自由黨 ──
+	# 民主自由黨 —— frame 3, 62席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_DLP }
 	parliament_gui_DLP = {
 		set_variable = { parliament_gui_frame = 3 }
 		set_variable = { parliament_gui_seats = 62 }
 	}
-	add_to_array = { ROC_party_tokens = token:parliament_gui_DLP }
 
-	# ── 共和黨 ──
+	# 共和黨 —— frame 4, 51席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_REP }
 	parliament_gui_REP = {
 		set_variable = { parliament_gui_frame = 4 }
 		set_variable = { parliament_gui_seats = 51 }
 	}
-	add_to_array = { ROC_party_tokens = token:parliament_gui_REP }
 
-	# ── 致公黨 ──
+	# 致公黨 —— frame 5, 73席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_PIP }
 	parliament_gui_PIP = {
 		set_variable = { parliament_gui_frame = 5 }
 		set_variable = { parliament_gui_seats = 73 }
 	}
-	add_to_array = { ROC_party_tokens = token:parliament_gui_PIP }
 
-	# ── 國民黨 ──
+	# 國民黨 —— frame 6, 91席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_KMT }
 	parliament_gui_KMT = {
 		set_variable = { parliament_gui_frame = 6 }
 		set_variable = { parliament_gui_seats = 91 }
 	}
-	add_to_array = { ROC_party_tokens = token:parliament_gui_KMT }
 
-	# ── 國家法西斯黨 ──
+	# 國家法西斯黨 —— frame 7, 11席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_FAS }
 	parliament_gui_FAS = {
 		set_variable = { parliament_gui_frame = 7 }
 		set_variable = { parliament_gui_seats = 11 }
 	}
-	add_to_array = { ROC_party_tokens = token:parliament_gui_FAS }
 
-	# ── 社會民主黨 ──
+	# 社會民主黨 —— frame 8, 31席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_SDP }
 	parliament_gui_SDP = {
 		set_variable = { parliament_gui_frame = 8 }
 		set_variable = { parliament_gui_seats = 31 }
 	}
-	add_to_array = { ROC_party_tokens = token:parliament_gui_SDP }
 
-	# ── 全華聯合工會 ──
+	# 全華聯合工會 —— frame 9, 20席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_ACU }
 	parliament_gui_ACU = {
 		set_variable = { parliament_gui_frame = 9 }
 		set_variable = { parliament_gui_seats = 20 }
 	}
-	add_to_array = { ROC_party_tokens = token:parliament_gui_ACU }
 
-	# ── 無黨籍 ──
+	# 無黨籍 —— frame 10, 82席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_IND }
 	parliament_gui_IND = {
 		set_variable = { parliament_gui_frame = 10 }
 		set_variable = { parliament_gui_seats = 82 }
 	}
-	add_to_array = { ROC_party_tokens = token:parliament_gui_IND }
 }
 
 
-# ──────────────────────────────────────────────────────────
-# ROC_update_party_seats
-#
-# 中途更新席次時，只需修改各黨 token scope 的
-# parliament_gui_seats 變數，然後重跑 ROC_build_seat_frames。
-# 不需要重跑 ROC_register_parties（幀號不變）。
-#
-# 用法示例：
-#   set_variable = { token:parliament_gui_KMT.parliament_gui_seats = 150 }
-#   set_variable = { token:parliament_gui_YCP.parliament_gui_seats = 300 }
-#   ROC_build_seat_frames = yes
-# ──────────────────────────────────────────────────────────
-
 
 # ──────────────────────────────────────────────────────────
-# ROC_build_seat_frames  ← 核心通用邏輯
-#
-# 遍歷 ROC_party_tokens[]，
-# 從各 token scope 讀取 parliament_gui_seats（席次）
-# 和 parliament_gui_frame（幀號），
-# 用 resize_array 累積填充 ROC_seat_frame[]。
-#
-# 注意：resize_array 的 value 只接受數字，
-# 因此幀號從 token scope 讀到 temp 變數再傳入。
+# ROC_init_parliament_positions — 座標，只需執行一次
 # ──────────────────────────────────────────────────────────
-ROC_build_seat_frames = {
+ROC_tseats_effect = {
+	add_political_power = 1
+	meta_effect = {
+		text = {
+			[party] = {
+				set_temp_variable = { ROOT.t[?parliament_gui_frame] = parliament_gui_seats }
+			}
+			ROOT = { log = "111ROC_tseats_effect: tier [?ROOT.temp_tier], party [?ROOT.temp_party.GetTokenKey], seats [?ROOT.t[tier]]" }
+		}
+		tier = [?ROOT.temp_tier]
+		party = [?ROOT.temp_party.GetTokenKey]
+	}
+}
+ROC_init_parliament_positions = {
+	set_temp_variable = { temp_tier = 1 }
+	set_temp_variable = { temp_party = token:parliament_gui_YCP }
+	ROC_tseats_effect = yes
+	set_temp_variable = { temp_tier = 2 }
+	set_temp_variable = { temp_party = token:parliament_gui_NSP }
+	ROC_tseats_effect = yes
+	set_temp_variable = { temp_tier = 3 }
+	set_temp_variable = { temp_party = token:parliament_gui_DLP }
+	ROC_tseats_effect = yes
+	set_temp_variable = { temp_tier = 4 }
+	set_temp_variable = { temp_party = token:parliament_gui_REP }
+	ROC_tseats_effect = yes
+	set_temp_variable = { temp_tier = 5 }
+	set_temp_variable = { temp_party = token:parliament_gui_PIP }
+	ROC_tseats_effect = yes
+	set_temp_variable = { temp_tier = 6 }
+	set_temp_variable = { temp_party = token:parliament_gui_KMT }
+	ROC_tseats_effect = yes
+	set_temp_variable = { temp_tier = 7 }
+	set_temp_variable = { temp_party = token:parliament_gui_FAS }
+	ROC_tseats_effect = yes
+	set_temp_variable = { temp_tier = 8 }
+	set_temp_variable = { temp_party = token:parliament_gui_SDP }
+	ROC_tseats_effect = yes
+	set_temp_variable = { temp_tier = 9 }
+	set_temp_variable = { temp_party = token:parliament_gui_ACU }
+	ROC_tseats_effect = yes
+	set_temp_variable = { t10 = 800 }
+
+	add_to_temp_variable = { t2 = t1 }
+	add_to_temp_variable = { t3 = t2 }
+	add_to_temp_variable = { t4 = t3 }
+	add_to_temp_variable = { t5 = t4 }
+	add_to_temp_variable = { t6 = t5 }
+	add_to_temp_variable = { t7 = t6 }
+	add_to_temp_variable = { t8 = t7 }
+	add_to_temp_variable = { t9 = t8 }
+	
 	clear_array = ROC_seat_frame
 
-	set_temp_variable = { roc_cursor = 0 }
-
-	for_each_loop = {
-		array = ROC_party_tokens
-		value = roc_cur_token
-
-		# 從 token scope 讀取席次與幀號到 temp 變數
-		set_temp_variable = { roc_seats = roc_cur_token.parliament_gui_seats }
-		set_temp_variable = { roc_frame = roc_cur_token.parliament_gui_frame }
-
-		# 累積 cursor，resize_array 到新長度，填入該黨幀號
-		add_to_temp_variable = { roc_cursor = roc_seats }
-		resize_array = {
-			array = ROC_seat_frame
-			value = roc_frame
-			size = roc_cursor
-		}
+	resize_array = {
+		array = ROC_seat_frame
+		value = 1
+		size = t1
 	}
-}
-
-
-# ──────────────────────────────────────────────────────────
-# ROC_seat_token[] 供 tooltip 使用
-# 與 ROC_seat_frame[] 平行，存放每個席位對應的 token。
-# GetTokenKey → loc key → 黨名
-# ──────────────────────────────────────────────────────────
-ROC_build_seat_tokens = {
-	clear_array = ROC_seat_token
-
-	set_temp_variable = { roc_cursor = 0 }
-
-	for_each_loop = {
-		array = ROC_party_tokens
-		value = roc_cur_token
-
-		set_temp_variable = { roc_seats = roc_cur_token.parliament_gui_seats }
-		add_to_temp_variable = { roc_cursor = roc_seats }
-
-		resize_array = {
-			array = ROC_seat_token
-			value = roc_cur_token
-			size = roc_cursor
-		}
+	resize_array = {
+		array = ROC_seat_frame
+		value = 2
+		size = t2
 	}
-}
+	resize_array = {
+		array = ROC_seat_frame
+		value = 3
+		size = t3
+	}
+	resize_array = {
+		array = ROC_seat_frame
+		value = 4
+		size = t4
+	}
+	resize_array = {
+		array = ROC_seat_frame
+		value = 5
+		size = t5
+	}
+	resize_array = {
+		array = ROC_seat_frame
+		value = 6
+		size = t6
+	}
+	resize_array = {
+		array = ROC_seat_frame
+		value = 7
+		size = t7
+	}
+	resize_array = {
+		array = ROC_seat_frame
+		value = 8
+		size = t8
+	}
+	resize_array = {
+		array = ROC_seat_frame
+		value = 9
+		size = t9
+	}
+	resize_array = {
+		array = ROC_seat_frame
+		value = 10
+		size = t10
+	}
 
-
-# ──────────────────────────────────────────────────────────
-# ROC_init_parliament_positions
-# 席位座標，建議只在遊戲開始時執行一次。
-# ──────────────────────────────────────────────────────────
-ROC_init_parliament_positions = {
 	clear_array = ROC_seat_x
 	clear_array = ROC_seat_y
 
-	# ── 800席座標（Spread: 1.85, First Row Radius: 5.7）──
 	add_to_array = { ROC_seat_x = 0 }
 	add_to_array = { ROC_seat_y = 264 }
 	add_to_array = { ROC_seat_x = 12 }
@@ -1798,21 +1817,7 @@ ROC_init_parliament_positions = {
 }
 
 
-# ──────────────────────────────────────────────────────────
-# 對外入口
-# ──────────────────────────────────────────────────────────
-
-# 完整初始化（遊戲開始時執行一次）
 ROC_init_parliament = {
 	ROC_register_parties = yes
 	ROC_init_parliament_positions = yes
-	ROC_build_seat_frames = yes
-	ROC_build_seat_tokens = yes
-}
-
-# 僅更新席次分配（換屆選舉後，不重算座標）
-# 先在外部修改各黨的 parliament_gui_seats，再呼叫此 effect
-ROC_update_parliament = {
-	ROC_build_seat_frames = yes
-	ROC_build_seat_tokens = yes
 }

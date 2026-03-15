@@ -13,3 +13,9 @@ defined_text = {
 		localization_key = "[ROC_seat_token^seat_idx.GetTokenKey]"
 	}
 }
+defined_text = {
+	name = ROC_seat_party_frame
+	text = {
+		localization_key = "[?ROC_party_tokens^seat_idx.GetTokenKey].parliament_gui_frame"
+	}
+}
