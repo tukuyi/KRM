@@ -1,0 +1,287 @@
+characters = {
+	#赵毓松
+	SZC_zhao_yusong = {
+		name = SZC_zhao_yusong
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zhao_yusong_small
+				large = GFX_portrait_SZC_zhao_yusong_large
+			}
+		}
+		country_leader = {
+			desc = SZC_zhao_yusong_desc
+			ideology = national_populist_subtype #For QIE
+		}
+		country_leader = {
+			desc = SZC_zhao_yusong_desc
+			ideology = paternal_autocrat_new_people_statist_subtype
+		}
+		country_leader = {
+			desc = SZC_zhao_yusong_desc
+			ideology = authoritarian_democrat_reform_statist_subtype
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SZC_zhao_yusong_advisor
+			traits = { SZC_wandering_lobbyist }
+			desc = SZC_zhao_yusong_desc
+			available = {
+				set_temp_variable = {
+					var = YCP_adv_chk
+					value = token:SZC_zhao_yusong
+				}
+				SZC_zhao_yusong = {
+					YCP_working_in_party = no
+				}
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_zhao_yusong_sic
+			ledger = civilian
+			traits = { SZC_wandering_lobbyist }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_zhao_yusong_desc
+		}
+	}
+
+	#刘绍坤
+	SZC_liu_shaokun = {
+		name = SZC_liu_shaokun
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_liu_shaokun_small
+				large = GFX_portrait_SZC_liu_shaokun_large
+			}
+		}
+		country_leader = {
+			desc = SZC_liu_shaokun_desc
+			ideology = paternal_autocrat_new_people_statist_subtype
+			traits = { CHN_geacps_aligned }
+		}
+	}
+
+	#朱炳章
+	SZC_zhu_bingzhang = {
+		name = SZC_zhu_bingzhang
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zhu_bingzhang_small
+				large = GFX_portrait_SZC_zhu_bingzhang_large
+			}
+		}
+	}
+
+	#张英华
+	SZC_zhang_yinghua = {
+		name = SZC_zhang_yinghua
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zhang_yinghua_small
+				large = GFX_portrait_SZC_zhang_yinghua_large
+			}
+		}
+	}
+
+	#何庭琉
+	SZC_he_tingliu = {
+		name = SZC_he_tingliu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_he_tingliu_small
+				large = GFX_portrait_SZC_he_tingliu_large
+			}
+		}
+	}
+
+	#何佩瑢
+	SZC_he_peirong = {
+		name = SZC_he_peirong
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_he_peirong_small
+				large = GFX_portrait_SZC_he_peirong_large
+			}
+		}
+		country_leader = {
+			desc = SZC_he_peirong_desc
+			ideology = paternal_autocrat_subtype
+			traits = { CHN_geacps_aligned }
+		}
+	}
+
+	#金章
+	SZC_jin_zhang = {
+		name = SZC_jin_zhang
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_jin_zhang_small
+				large = GFX_portrait_SZC_jin_zhang_large
+			}
+		}
+		country_leader = {
+			desc = SZC_jin_zhang_desc
+			ideology = social_conservative_subtype
+			traits = { CHN_geacps_aligned }
+		}
+	}
+
+	#钱旦
+	SZC_qian_dan = {
+		name = SZC_qian_dan
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_qian_dan_small
+				large = GFX_portrait_SZC_qian_dan_large
+			}
+		}
+		country_leader = {
+			desc = SZC_qian_dan_desc
+			ideology = national_populist_subtype
+			traits = { CHN_geacps_aligned }
+		}
+	}
+
+	#任援道
+	SZC_ren_yuandao = {
+		name = SZC_ren_yuandao
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_ren_yuandao_small
+				large = GFX_portrait_SZC_ren_yuandao_large
+			}
+		}
+		country_leader = {
+			desc = SZC_ren_yuandao_desc
+			ideology = market_liberal_subtype
+			traits = { CHN_geacps_aligned }
+		}
+	}
+
+	#张克昌
+	SZC_zhang_kechang = {
+		name = SZC_zhang_kechang
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zhang_kechang_small
+				large = GFX_portrait_SZC_zhang_kechang_large
+			}
+		}
+		country_leader = {
+			desc = SZC_zhang_kechang_desc
+			ideology = syndicalist_subtype
+			traits = { CHN_geacps_aligned }
+		}
+	}
+
+	#周佛海
+	SZC_zhou_fohai = {
+		name = SZC_zhou_fohai
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zhou_fohai_small
+				large = GFX_portrait_SZC_zhou_fohai_large
+			}
+		}
+		country_leader = {
+			desc = SZC_zhou_fohai_desc
+			ideology = social_liberal_subtype
+			traits = { CHN_geacps_aligned }
+		}
+	}
+
+	#周毓英
+	SZC_zhou_yuying = {
+		name = SZC_zhou_yuying
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zhou_yuying_small
+				large = GFX_portrait_SZC_zhou_yuying_large
+			}
+		}
+		country_leader = {
+			desc = SZC_zhou_yuying_desc
+			ideology = totalist_subtype
+			traits = { CHN_geacps_aligned }
+		}
+	}
+
+	#诸翔
+	SZC_zhu_xiang = {
+		name = SZC_zhu_xiang
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_zhu_xiang_small
+				large = GFX_portrait_SZC_zhu_xiang_large
+			}
+		}
+		country_leader = {
+			desc = SZC_zhu_xiang_desc
+			ideology = social_democrat_national_socialist_subtype
+			traits = { CHN_geacps_aligned }
+		}
+	}
+
+	#江亢虎
+	SZC_jiang_kanghu = {
+		name = SZC_jiang_kanghu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_jiang_kanghu_small
+				large = GFX_portrait_SZC_jiang_kanghu_large
+			}
+		}
+		country_leader = {
+			desc = SZC_jiang_kanghu_desc
+			ideology = radical_socialist_subtype
+			traits = { CHN_geacps_aligned }
+		}
+	}
+
+	#独立议员
+	SZC_ROC_independent_bois = {
+		name = SZC_ROC_independent_bois
+		portraits = {
+			civilian = {
+				small = GFX_portrait_SZC_ROC_independent_bois_small
+				large = GFX_portrait_SZC_ROC_independent_bois_large
+			}
+		}
+	}
+
+	# #
+	# SZC_ = {
+	# 	name = SZC_
+	# 	portraits = {
+	# 		civilian = {
+	# 			small = GFX_portrait_SZC__small
+	# 			large = GFX_portrait_SZC__large
+	# 		}
+	# 	}
+	# }
+
+	# #
+	# SZC_ = {
+	# 	name = SZC_
+	# 	portraits = {
+	# 		civilian = {
+	# 			small = GFX_portrait_SZC__small
+	# 			large = GFX_portrait_SZC__large
+	# 		}
+	# 	}
+	# }
+
+	# #
+	# SZC_ = {
+	# 	name = SZC_
+	# 	portraits = {
+	# 		civilian = {
+	# 			small = GFX_portrait_SZC__small
+	# 			large = GFX_portrait_SZC__large
+	# 		}
+	# 	}
+	# }
+
+
+}

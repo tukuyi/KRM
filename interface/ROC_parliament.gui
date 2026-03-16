@@ -1,16 +1,43 @@
 guiTypes = {
 
+	
+	# ── UNDERBG ──────────────────────────────────────────────
+	containerWindowType = {
+		name = "roc_parliament_scripted_gui_special_under_bg_gui"
+		position = { x = 0 y = 0 }
+		show_position = { x= -6 y = 0 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		size = { width = 1200 height = 800 }
+		orientation = center
+		origo = center
+		moveable = no
+		
+		hide_sound = menu_close_window
+		show_sound = menu_open_window
+		
+
+		iconType = {
+			name = "special_under_bg"
+			spriteType = "GFX_ROC_parliament_gui_under_bg_1"
+			position = { x = -140 y = 0 }
+			alwaystransparent = yes
+			clipping = no
+		}
+	}
+		
+
 	# ── 主視窗 ──────────────────────────────────────────────
 	containerWindowType = {
 		name = "roc_parliament_gui"
 		position = { x = 0 y = 0 }
-		show_position = { x= -6 y = 78 }
+		show_position = { x= -6 y = 0 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		size = { width = 950 height = 780 }
 		orientation = center
 		origo = center
-		moveable = yes
+		moveable = no
 		
 		hide_sound = menu_close_window
 		show_sound = menu_open_window
@@ -37,8 +64,27 @@ guiTypes = {
 			# 標題文字
 			iconType = {
 				name = "roc_parliament_tittle_icon"
-				spriteType = "GFX_ROC_parliament_title"
+				spriteType = "GFX_ROC_parliament_gui_title"
 				position = { x = 138 y = 20 }
+			}
+		}
+		
+		containerWindowType = {
+			name = "ROC_parliament_background_special_zone"
+			position = { x = 4 y = 120 }
+			size = { width = 940 height = 350 }
+	
+		
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+			}
+
+			iconType = {
+				name = "specialbg"
+				spriteType = "GFX_ROC_parliament_gui_bg_1"
+				position = { x = 0 y = 0 }
+				alwaystransparent = yes
 			}
 		}
 
@@ -145,7 +191,7 @@ guiTypes = {
 
 		iconType = {
 			name = "roc_parliament_circle"
-			quadTextureSprite = "GFX_ROC_parliament_seat_circle"
+			quadTextureSprite = "GFX_ROC_parliament_gui_seat_circle"
 			alwaystransparent = yes
 		}
 	}
@@ -162,11 +208,13 @@ guiTypes = {
 		background = {
 			name = "background"
 			quadTextureSprite = "GFX_tiled_parliament_paper_bg"
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "party_emblem"
-			spriteType = "GFX_ROC_parliament_IND_emblem"
+			spriteType = "GFX_ROC_parliament_gui_IND_emblem"
 			position = { x = 34 y = 7 }
+			pdx_tooltip = "parliament_gui_emblem_tt"
 		}
 
 		instantTextBoxType = {

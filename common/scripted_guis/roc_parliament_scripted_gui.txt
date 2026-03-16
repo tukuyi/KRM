@@ -1,4 +1,21 @@
 scripted_gui = {
+	
+
+	roc_parliament_scripted_gui_special_under_bg_gui = {
+		window_name = "roc_parliament_scripted_gui_special_under_bg_gui"
+		context_type = player_context
+		
+
+		visible = {
+			# has_country_flag = open_roc_parliament_gui
+			always = yes
+		}
+		properties = {
+			special_under_bg = {
+				image = GetParliamentSpecialUnderBg
+			}
+		}
+	}
 	roc_parliament_scripted_gui = {
 		window_name = "roc_parliament_gui"
 		context_type = player_context
@@ -39,6 +56,9 @@ scripted_gui = {
 			}
 			party_emblem = {
 				image = "GFX_ROC_[?roc_cur_token.GetTokenKey]_emblem"
+			}
+			specialbg = {
+				image = GetParliamentSpecialBg
 			}
 		}
 

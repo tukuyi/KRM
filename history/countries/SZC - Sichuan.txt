@@ -643,7 +643,6 @@ recruit_character = SZC_yu_jiaju
 recruit_character = SZC_he_luzhi
 recruit_character = SZC_zhang_baoen
 recruit_character = SZC_xia_erkang
-recruit_character = SZC_zhao_yusong
 recruit_character = SZC_duan_zhenhuan
 recruit_character = SZC_shen_yunlong
 recruit_character = SZC_zhang_mengjiu
@@ -896,9 +895,6 @@ SZC_zhang_baoen = {
 	retire = yes
 }
 SZC_xia_erkang = {
-	retire = yes
-}
-SZC_zhao_yusong = {
 	retire = yes
 }
 SZC_duan_zhenhuan = {
@@ -1308,7 +1304,6 @@ recruit_character = ANH_chen_shufan
 
 recruit_character = SZC_wang_gongdu
 recruit_character = SZC_men_zhizhong
-recruit_character = SZC_liu_shaokun
 recruit_character = SZC_wei_guoqing
 
 recruit_character = NAZ_yang_zhengyu
@@ -1362,10 +1357,6 @@ SZC_wang_gongdu = {
 }
 SZC_men_zhizhong = {
 	retire = yes
-}
-SZC_liu_shaokun = {
-	retire = yes
-	china_set_character_alignment_geacps = yes
 }
 SZC_wei_guoqing = {
 	retire = yes
@@ -1432,7 +1423,9 @@ DYD_ji_fang = {
 
 
 recruit_character = parliament_gui_YCP
+recruit_character = parliament_gui_YCPCPAC
 recruit_character = parliament_gui_NSP
+recruit_character = parliament_gui_NSPPSC
 recruit_character = parliament_gui_DLP
 recruit_character = parliament_gui_REP
 recruit_character = parliament_gui_PIP
@@ -1443,3 +1436,76 @@ recruit_character = parliament_gui_IND
 recruit_character = parliament_gui_ACU
 
 
+recruit_character = SZC_zhao_yusong
+recruit_character = SZC_liu_shaokun
+recruit_character = SZC_zhu_bingzhang
+recruit_character = SZC_zhang_yinghua
+recruit_character = SZC_he_tingliu
+recruit_character = SZC_he_peirong
+recruit_character = SZC_jin_zhang
+recruit_character = SZC_qian_dan
+recruit_character = SZC_ren_yuandao
+recruit_character = SZC_zhang_kechang
+recruit_character = SZC_zhou_fohai
+recruit_character = SZC_zhou_yuying
+recruit_character = SZC_zhu_xiang
+recruit_character = SZC_jiang_kanghu
+recruit_character = SZC_ROC_independent_bois
+
+
+SZC_zhao_yusong = {
+	retire = yes
+	china_set_character_alignment_geacps = yes
+}
+SZC_liu_shaokun = {
+	retire = yes
+	china_set_character_alignment_geacps = yes
+}
+SZC_zhu_bingzhang = {
+	retire = yes
+}
+SZC_zhang_yinghua = {
+	retire = yes
+}
+SZC_he_tingliu = {
+	retire = yes
+}
+SZC_he_peirong = {
+	retire = yes
+	china_set_character_alignment_geacps = yes
+}
+SZC_jin_zhang = {
+	retire = yes
+	china_set_character_alignment_geacps = yes
+}
+SZC_qian_dan = {
+	retire = yes
+	china_set_character_alignment_geacps = yes
+}
+SZC_ren_yuandao = {
+	retire = yes
+	china_set_character_alignment_geacps = yes
+}
+SZC_zhang_kechang = {
+	retire = yes
+	china_set_character_alignment_geacps = yes
+}
+SZC_zhou_fohai = {
+	retire = yes
+	china_set_character_alignment_geacps = yes
+}
+SZC_zhou_yuying = {
+	retire = yes
+	china_set_character_alignment_geacps = yes
+}
+SZC_zhu_xiang = {
+	retire = yes
+	china_set_character_alignment_geacps = yes
+}
+SZC_jiang_kanghu = {
+	retire = yes
+	china_set_character_alignment_geacps = yes
+}
+SZC_ROC_independent_bois = {
+	retire = yes
+}

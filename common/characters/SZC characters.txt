@@ -4134,53 +4134,6 @@ characters = {
 		}
 	}
 
-	#赵毓松
-	SZC_zhao_yusong = {
-		name = SZC_zhao_yusong
-		portraits = {
-			civilian = {
-				small = GFX_portrait_SZC_zhao_yusong_small
-				large = GFX_portrait_SZC_zhao_yusong_large
-			}
-		}
-		country_leader = {
-			desc = SZC_zhao_yusong_desc
-			ideology = national_populist_subtype #For QIE
-		}
-		country_leader = {
-			desc = SZC_zhao_yusong_desc
-			ideology = paternal_autocrat_new_people_statist_subtype
-		}
-		country_leader = {
-			desc = SZC_zhao_yusong_desc
-			ideology = authoritarian_democrat_reform_statist_subtype
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SZC_zhao_yusong_advisor
-			traits = { SZC_wandering_lobbyist }
-			desc = SZC_zhao_yusong_desc
-			available = {
-				set_temp_variable = {
-					var = YCP_adv_chk
-					value = token:SZC_zhao_yusong
-				}
-				SZC_zhao_yusong = {
-					YCP_working_in_party = no
-				}
-			}
-		}
-		advisor = {
-			slot = second_in_command
-			idea_token = SZC_zhao_yusong_sic
-			ledger = civilian
-			traits = { SZC_wandering_lobbyist }
-			cost = 0
-			can_be_fired = no
-			desc = SZC_zhao_yusong_desc
-		}
-	}
-
 	#段震寰
 	SZC_duan_zhenhuan = {
 		name = SZC_duan_zhenhuan

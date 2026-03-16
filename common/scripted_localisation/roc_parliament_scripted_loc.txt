@@ -16,8 +16,26 @@ defined_text = {
 	text = {
 		trigger = {
 			check_variable = { ROC_seat_frame^seat_idx = 1 }
+			parliament_gui_YCPCPAC = {
+				check_variable = { parliament_gui_frame = 1 }
+			}
+		}
+		localization_key = parliament_gui_YCPCPAC
+	}
+	text = {
+		trigger = {
+			check_variable = { ROC_seat_frame^seat_idx = 1 }
 		}
 		localization_key = parliament_gui_YCP
+	}
+	text = {
+		trigger = {
+			check_variable = { ROC_seat_frame^seat_idx = 2 }
+			parliament_gui_NSPPSC = {
+				check_variable = { parliament_gui_frame = 2 }
+			}
+		}
+		localization_key = parliament_gui_NSPPSC
 	}
 	text = {
 		trigger = {
@@ -90,6 +108,13 @@ defined_text = {
 	name = GetROCPartyName
 	text = {
 		localization_key = "[?roc_cur_token.GetTokenLocalizedKey]_name"
+	}
+}
+
+defined_text = {
+	name = GetROCPartyNameLong
+	text = {
+		localization_key = "[?roc_cur_token.GetTokenLocalizedKey]_name_long"
 	}
 }
 
@@ -191,6 +216,43 @@ defined_text = {
 }
 
 defined_text = {
+	name = ROC_parliament_seat_status
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = {
+					[tokenbase] = {
+						check_variable = {
+							THIS.parliament_gui_status = 1
+						}
+					}
+				}
+				tokenbase = "[ROC_seat_party_key]"
+			}
+		}
+		localization_key = seat_parliament_ruling
+	}
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = {
+					[tokenbase] = {
+						check_variable = {
+							THIS.parliament_gui_status = 2
+						}
+					}
+				}
+				tokenbase = "[ROC_seat_party_key]"
+			}
+		}
+		localization_key = seat_parliament_coalition
+	}
+	text = {
+		localization_key = seat_parliament_opposition
+	}
+}
+
+defined_text = {
 	name = GetROCRulingPartyName
 	text = {
 		trigger = {
@@ -212,14 +274,28 @@ defined_text = {
 	name = GetROCPartiesCoalition
 	text = {
 		trigger = {
-			parliament_gui_YCP = {
-				check_variable = {
-					THIS.parliament_gui_status = 1
+			OR = {
+				parliament_gui_YCP = {
+					check_variable = {
+						THIS.parliament_gui_status = 1
+					}
+				}
+				parliament_gui_YCPCPAC = {
+					check_variable = {
+						THIS.parliament_gui_status = 1
+					}
 				}
 			}
-			parliament_gui_NSP = {
-				check_variable = {
-					THIS.parliament_gui_status = 2
+			OR =  {
+				parliament_gui_NSP = {
+					check_variable = {
+						THIS.parliament_gui_status = 2
+					}
+				}
+				parliament_gui_NSPPSC = {
+					check_variable = {
+						THIS.parliament_gui_status = 2
+					}
 				}
 			}
 		}
@@ -227,6 +303,20 @@ defined_text = {
 	}
 	text = {
 		localization_key = ROCCoalitionRuleAlone
+	}
+}
+
+defined_text = {
+	name = GetParliamentSpecialBg
+	text = {
+		localization_key = GFX_ROC_parliament_gui_bg_1
+	}
+}
+
+defined_text = {
+	name = GetParliamentSpecialUnderBg
+	text = {
+		localization_key = GFX_ROC_parliament_gui_under_bg_1
 	}
 }
 
@@ -247,5 +337,68 @@ defined_text = {
 	text = {
 		localization_key = parliament_less_than_half
 		# localization_key = "114"
+	}
+}
+
+defined_text = {
+	name = GetROCParliamentPartyChairman
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = {
+					any_character = {
+						is_character = [tokenbase]
+						set_temp_variable = { temp_chairmanget = var:parliament_gui_chairman }
+					}
+				}
+				tokenbase = "[?roc_cur_token.GetTokenKey]"
+			}
+		}
+		localization_key = "GFX_portrait_[?temp_chairmanget.GetTokenKey]_large"
+	}
+}
+
+defined_text = {
+	name = GetROCParliamentPartyChairmanInText
+	text = {
+		trigger = {
+		}
+		localization_key = parliament_gui_chairman_portrait
+	}
+}
+
+defined_text = {
+	name = GetROCParliamentPartyChairmanName
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = {
+					any_character = {
+						is_character = [tokenbase]
+						set_temp_variable = { temp_chairmanget = var:parliament_gui_chairman }
+					}
+				}
+				tokenbase = "[?roc_cur_token.GetTokenKey]"
+			}
+		}
+		localization_key = "[?temp_chairmanget.GetTokenLocalizedKey]"
+	}
+}
+
+defined_text = {
+	name = GetROCPartyDesc
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = {
+					any_character = {
+						is_character = [tokenbase]
+						set_temp_variable = { temp_descget = var:parliament_gui_party }
+					}
+				}
+				tokenbase = "[?roc_cur_token.GetTokenKey]"
+			}
+		}
+		localization_key = "[?temp_descget.GetTokenKey]_desc"
 	}
 }

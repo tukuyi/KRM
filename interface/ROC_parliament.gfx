@@ -15,6 +15,16 @@ spriteTypes = {
 		textureFile = "gfx/interface/gui/parliament/parliament_seat_circle_coalition.png"
 	}	
 
+	spriteType = {
+		name = "GFX_ROC_parliament_gui_bg_1" 
+		textureFile = "gfx/interface/gui/parliament/parliament_bg/parliament_bg_1.png"
+	}
+
+	spriteType = {
+		name = "GFX_ROC_parliament_gui_under_bg_1"
+		textureFile = "gfx/interface/gui/parliament/parliament_bg/parliament_under_bg_1.png"
+	}
+
 	corneredTileSpriteType = {
 		name = "GFX_tiled_parliament_paper_bg"
 		size= { x=196 y=196 }
@@ -23,7 +33,7 @@ spriteTypes = {
 
 	# 10 frames: 1青年党 2国社党 3民自党 4共和党 5致公党 6国民党 7法西斯 8社会党 9工会 10无党籍
 	spriteType = {
-		name = "GFX_ROC_parliament_gui_Seat"
+		name = "GFX_ROC_Parliament_Seat"
 		textureFile = "gfx/interface/gui/parliament/parliament_seat.png"
 		noOfFrames = 10
 	}
@@ -34,9 +44,17 @@ spriteTypes = {
 		name = "GFX_ROC_parliament_gui_YCP_emblem"
 		textureFile = "gfx/interface/gui/parliament/party_emblems/parliament_gui_YCP_emblem.png"
 	}
-
+	spriteType = {
+		name = "GFX_ROC_parliament_gui_YCPCPAC_emblem"
+		textureFile = "gfx/interface/gui/parliament/party_emblems/parliament_gui_YCPCPAC_emblem.png"
+	}
 	spriteType = {
 		name = "GFX_ROC_parliament_gui_NSP_emblem"
+		textureFile = "gfx/interface/gui/parliament/party_emblems/parliament_gui_NSP_emblem.png"
+	}
+
+	spriteType = {
+		name = "GFX_ROC_parliament_gui_NSPPSC_emblem"
 		textureFile = "gfx/interface/gui/parliament/party_emblems/parliament_gui_NSP_emblem.png"
 	}
 
