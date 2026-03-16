@@ -58,7 +58,10 @@ scripted_gui = {
 				image = "GFX_ROC_[?roc_cur_token.GetTokenKey]_emblem"
 			}
 			specialbg = {
-				image = GetParliamentSpecialBg
+				image = "[GetParliamentSpecialBg]"
+			}
+			party_coalition_statue = {
+				image = "[GetParliamentPartyCoalitionStatue]"
 			}
 		}
 

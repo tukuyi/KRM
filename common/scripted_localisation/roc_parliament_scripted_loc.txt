@@ -8,7 +8,7 @@
 defined_text = {
 	name = ROC_seat_party
 	text = {
-		localization_key = "[ROC_seat_party_key]_name"
+		localization_key = "[ROC_seat_party_key]_name_long"
 	}
 }
 defined_text = {
@@ -274,35 +274,25 @@ defined_text = {
 	name = GetROCPartiesCoalition
 	text = {
 		trigger = {
-			OR = {
-				parliament_gui_YCP = {
-					check_variable = {
-						THIS.parliament_gui_status = 1
-					}
-				}
-				parliament_gui_YCPCPAC = {
-					check_variable = {
-						THIS.parliament_gui_status = 1
-					}
-				}
-			}
-			OR =  {
-				parliament_gui_NSP = {
-					check_variable = {
-						THIS.parliament_gui_status = 2
-					}
-				}
-				parliament_gui_NSPPSC = {
-					check_variable = {
-						THIS.parliament_gui_status = 2
-					}
-				}
-			}
+			ROC_parliament_statist_coalition_check = yes
 		}
 		localization_key = ROCCoalitionStatistCoalition
 	}
 	text = {
 		localization_key = ROCCoalitionRuleAlone
+	}
+}
+
+defined_text = {
+	name = GetParliamentPartyCoalitionStatue
+	text = {
+		trigger = {
+			ROC_parliament_statist_coalition_check = yes
+		}
+		localization_key = GFX_ROC_parliament_statue_statist_coalition
+	}
+	text = {
+		localization_key = GFX_KMD_GUI_SZC_naidesu_statue
 	}
 }
 
@@ -317,6 +307,42 @@ defined_text = {
 	name = GetParliamentSpecialUnderBg
 	text = {
 		localization_key = GFX_ROC_parliament_gui_under_bg_1
+	}
+}
+
+defined_text = {
+	name = GetROCParliamentCoalitionSeatsNumber
+	text = {
+		trigger = {
+			set_temp_variable = { coalition_seats = 0 }
+			all_of = {
+				array = ROC_party_tokens
+				value = roc_cur_token
+				meta_trigger = {
+					text = {
+						[tokenbase] = {
+							if = {
+								limit = {
+									OR = {
+										check_variable = {
+											THIS.parliament_gui_status = 1
+										}
+										check_variable = {
+											THIS.parliament_gui_status = 2
+										}
+									}
+								}
+								add_to_temp_variable = {
+									coalition_seats = THIS.parliament_gui_seats
+								}
+							}
+						}
+					}
+					tokenbase = "[?roc_cur_token.GetTokenKey]"
+				}
+			}
+		}
+		localization_key = "[?coalition_seats]"
 	}
 }
 
