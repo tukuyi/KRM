@@ -274,49 +274,48 @@ ROC_parliament_statist_coalition_check = {
 		}
 	}
 }
-
 ROC_parliament_statist_coalition_check_CONSTRUCT = {
-	OR = {
-		parliament_gui_YCP = {
+    OR = {
+        parliament_gui_YCP = {
 			check_variable = {
 				THIS.parliament_gui_constructalig = 1
 			}
-		}
-		parliament_gui_YCPCPAC = {
+        }
+        parliament_gui_YCPCPAC = {
 			check_variable = {
 				THIS.parliament_gui_constructalig = 1
 			}
-		}
-	}
-	OR =  {
-		parliament_gui_NSP = {
+        }
+    }
+    OR = {
+        parliament_gui_NSP = {
 			check_variable = {
 				THIS.parliament_gui_constructalig = 2
 			}
-		}
-		parliament_gui_NSPPSC = {
+        }
+        parliament_gui_NSPPSC = {
 			check_variable = {
 				THIS.parliament_gui_constructalig = 2
 			}
-		}
-	}
-	any_character = {
-		limit = {
-			NOT = {
-				OR = {
-					is_character = parliament_gui_YCP
-					is_character = parliament_gui_YCPCPAC
-					is_character = parliament_gui_NSP
-					is_character = parliament_gui_NSPPSC
-				}
-			}
-		}
-		NOT = {
-			check_variable = {
-				THIS.parliament_gui_constructalig = 2
-			}
-		}
-	}
+        }
+    }
+    NOT = {
+        any_character = {
+            limit = {
+                NOT = {
+                    OR = {
+                        is_character = parliament_gui_YCP
+                        is_character = parliament_gui_YCPCPAC
+                        is_character = parliament_gui_NSP
+                        is_character = parliament_gui_NSPPSC
+                    }
+                }
+            }
+            check_variable = {
+                THIS.parliament_gui_constructalig = 2
+            }
+        }
+    }
 }
 
 ROC_parliament_wuhan_coalition_check = {
