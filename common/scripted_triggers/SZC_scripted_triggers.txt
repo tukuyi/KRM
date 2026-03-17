@@ -275,6 +275,7 @@ ROC_parliament_statist_coalition_check = {
 	}
 }
 ROC_parliament_statist_coalition_check_CONSTRUCT = {
+	set_temp_variable = { temp_not_coalition_avaialble = 0 }
     OR = {
         parliament_gui_YCP = {
 			check_variable = {
@@ -299,23 +300,39 @@ ROC_parliament_statist_coalition_check_CONSTRUCT = {
 			}
         }
     }
-    NOT = {
-        any_character = {
-            limit = {
-                NOT = {
-                    OR = {
-                        is_character = parliament_gui_YCP
-                        is_character = parliament_gui_YCPCPAC
-                        is_character = parliament_gui_NSP
-                        is_character = parliament_gui_NSPPSC
-                    }
-                }
-            }
-            check_variable = {
-                THIS.parliament_gui_constructalig = 2
-            }
-        }
-    }
+	all_of = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		meta_trigger = {
+			text = {
+				[tokenbase] = {
+					if = {
+						limit = {
+							NOT = {
+								OR = {
+									is_character = parliament_gui_YCP
+									is_character = parliament_gui_YCPCPAC
+									is_character = parliament_gui_NSP
+									is_character = parliament_gui_NSPPSC
+								}
+							}
+							check_variable = {
+								THIS.parliament_gui_constructalig = 2
+							}
+						}
+						set_temp_variable = { temp_not_coalition_avaialble = 1 }
+						log = "[?parliament_gui_seats]"
+					}
+				}
+			}
+			tokenbase = "[?roc_cur_token.GetTokenKey]"
+		}
+	}
+	NOT = {
+		check_variable = {
+			temp_not_coalition_avaialble = 1
+		}
+	}
 }
 
 ROC_parliament_wuhan_coalition_check = {
@@ -331,6 +348,7 @@ ROC_parliament_wuhan_coalition_check = {
 }
 
 ROC_parliament_wuhan_coalition_check_CONSTRUCT = {
+	set_temp_variable = { temp_not_coalition_avaialble = 0 }
 	parliament_gui_YCPCPAC = {
 		check_variable = {
 			THIS.parliament_gui_constructalig = 1
@@ -346,20 +364,36 @@ ROC_parliament_wuhan_coalition_check_CONSTRUCT = {
 			THIS.parliament_gui_constructalig = 2
 		}
 	}
-	NOT = {
-		every_character = {
-			limit = {
-				NOT = {
-					OR = {
-						is_character = parliament_gui_YCPCPAC
-						is_character = parliament_gui_REP
-						is_character = parliament_gui_NSPPSC
+	all_of = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		meta_trigger = {
+			text = {
+				[tokenbase] = {
+					if = {
+						limit = {
+							NOT = {
+								OR = {
+									is_character = parliament_gui_YCPCPAC
+									is_character = parliament_gui_NSPPSC
+									is_character = parliament_gui_REP
+								}
+							}
+							check_variable = {
+								THIS.parliament_gui_constructalig = 2
+							}
+						}
+						set_temp_variable = { temp_not_coalition_avaialble = 1 }
+						log = "[?parliament_gui_seats]"
 					}
 				}
 			}
-			check_variable = {
-				THIS.parliament_gui_constructalig = 2
-			}
+			tokenbase = "[?roc_cur_token.GetTokenKey]"
+		}
+	}
+	NOT = {
+		check_variable = {
+			temp_not_coalition_avaialble = 1
 		}
 	}
 }
@@ -377,6 +411,7 @@ ROC_parliament_xinhai_coalition_check = {
 }
 
 ROC_parliament_xinhai_coalition_check_CONSTRUCT = {
+	set_temp_variable = { temp_not_coalition_avaialble = 0 }
 	parliament_gui_YCPCPAC = {
 		check_variable = {
 			THIS.parliament_gui_constructalig = 1
@@ -392,18 +427,36 @@ ROC_parliament_xinhai_coalition_check_CONSTRUCT = {
 			THIS.parliament_gui_constructalig = 2
 		}
 	}
-	NOT = {
-		any_character = {
-			limit = {
-				OR = {
-					is_character = parliament_gui_YCPCPAC
-					is_character = parliament_gui_DLP
-					is_character = parliament_gui_NSPPSC
+	all_of = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		meta_trigger = {
+			text = {
+				[tokenbase] = {
+					if = {
+						limit = {
+							NOT = {
+								OR = {
+									is_character = parliament_gui_YCPCPAC
+									is_character = parliament_gui_NSPPSC
+									is_character = parliament_gui_DLP
+								}
+							}
+							check_variable = {
+								THIS.parliament_gui_constructalig = 2
+							}
+						}
+						set_temp_variable = { temp_not_coalition_avaialble = 1 }
+						log = "[?parliament_gui_seats]"
+					}
 				}
 			}
-			check_variable = {
-				THIS.parliament_gui_constructalig = 2
-			}
+			tokenbase = "[?roc_cur_token.GetTokenKey]"
+		}
+	}
+	NOT = {
+		check_variable = {
+			temp_not_coalition_avaialble = 1
 		}
 	}
 }
@@ -421,6 +474,7 @@ ROC_parliament_central_reform_coalition_check = {
 }
 
 ROC_parliament_central_reform_coalition_check_CONSTRUCT = {
+	set_temp_variable = { temp_not_coalition_avaialble = 0 }
 	parliament_gui_YCPCPAC = {
 		check_variable = {
 			THIS.parliament_gui_constructalig = 1
@@ -436,18 +490,36 @@ ROC_parliament_central_reform_coalition_check_CONSTRUCT = {
 			THIS.parliament_gui_constructalig = 2
 		}
 	}
-	NOT = {
-		any_character = {
-			limit = {
-				OR = {
-					is_character = parliament_gui_YCPCPAC
-					is_character = parliament_gui_PIP
-					is_character = parliament_gui_NSPPSC
+	all_of = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		meta_trigger = {
+			text = {
+				[tokenbase] = {
+					if = {
+						limit = {
+							NOT = {
+								OR = {
+									is_character = parliament_gui_YCPCPAC
+									is_character = parliament_gui_NSPPSC
+									is_character = parliament_gui_PIP
+								}
+							}
+							check_variable = {
+								THIS.parliament_gui_constructalig = 2
+							}
+						}
+						set_temp_variable = { temp_not_coalition_avaialble = 1 }
+						log = "[?parliament_gui_seats]"
+					}
 				}
 			}
-			check_variable = {
-				THIS.parliament_gui_constructalig = 2
-			}
+			tokenbase = "[?roc_cur_token.GetTokenKey]"
+		}
+	}
+	NOT = {
+		check_variable = {
+			temp_not_coalition_avaialble = 1
 		}
 	}
 }
@@ -465,6 +537,7 @@ ROC_parliament_progressive_coalition_check = {
 }
 
 ROC_parliament_progressive_coalition_check_CONSTRUCT = {
+	set_temp_variable = { temp_not_coalition_avaialble = 0 }
 	parliament_gui_YCPCPAC = {
 		check_variable = {
 			THIS.parliament_gui_constructalig = 1
@@ -480,18 +553,36 @@ ROC_parliament_progressive_coalition_check_CONSTRUCT = {
 			THIS.parliament_gui_constructalig = 2
 		}
 	}
-	NOT = {
-		any_character = {
-			limit = {
-				OR = {
-					is_character = parliament_gui_YCPCPAC
-					is_character = parliament_gui_KMT
-					is_character = parliament_gui_NSPPSC
+	all_of = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		meta_trigger = {
+			text = {
+				[tokenbase] = {
+					if = {
+						limit = {
+							NOT = {
+								OR = {
+									is_character = parliament_gui_YCPCPAC
+									is_character = parliament_gui_NSPPSC
+									is_character = parliament_gui_KMT
+								}
+							}
+							check_variable = {
+								THIS.parliament_gui_constructalig = 2
+							}
+						}
+						set_temp_variable = { temp_not_coalition_avaialble = 1 }
+						log = "[?parliament_gui_seats]"
+					}
 				}
 			}
-			check_variable = {
-				THIS.parliament_gui_constructalig = 2
-			}
+			tokenbase = "[?roc_cur_token.GetTokenKey]"
+		}
+	}
+	NOT = {
+		check_variable = {
+			temp_not_coalition_avaialble = 1
 		}
 	}
 }
@@ -512,6 +603,7 @@ ROC_parliament_reformist_coalition_check = {
 }
 
 ROC_parliament_reformist_coalition_check_CONSTRUCT = {
+	set_temp_variable = { temp_not_coalition_avaialble = 0 }
 	parliament_gui_YCPCPAC = {
 		check_variable = {
 			THIS.parliament_gui_constructalig = 1
@@ -532,24 +624,43 @@ ROC_parliament_reformist_coalition_check_CONSTRUCT = {
 			THIS.parliament_gui_constructalig = 2
 		}
 	}
-	NOT = {
-		any_character = {
-			limit = {
-				OR = {
-					is_character = parliament_gui_YCPCPAC
-					is_character = parliament_gui_KMT
-					is_character = parliament_gui_SDP
-					is_character = parliament_gui_NSPPSC
+	all_of = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		meta_trigger = {
+			text = {
+				[tokenbase] = {
+					if = {
+						limit = {
+							NOT = {
+								OR = {
+									is_character = parliament_gui_YCPCPAC
+									is_character = parliament_gui_NSPPSC
+									is_character = parliament_gui_KMT
+									is_character = parliament_gui_SDP
+								}
+							}
+							check_variable = {
+								THIS.parliament_gui_constructalig = 2
+							}
+						}
+						set_temp_variable = { temp_not_coalition_avaialble = 1 }
+						log = "[?parliament_gui_seats]"
+					}
 				}
 			}
-			check_variable = {
-				THIS.parliament_gui_constructalig = 2
-			}
+			tokenbase = "[?roc_cur_token.GetTokenKey]"
+		}
+	}
+	NOT = {
+		check_variable = {
+			temp_not_coalition_avaialble = 1
 		}
 	}
 }
 
 ROC_parliament_great_coalition_check_CONSTRUCT = {
+	set_temp_variable = { temp_not_coalition_avaialble = 0 }
 	parliament_gui_YCPCPAC = {
 		check_variable = {
 			THIS.parliament_gui_constructalig = 1
@@ -575,20 +686,38 @@ ROC_parliament_great_coalition_check_CONSTRUCT = {
 			THIS.parliament_gui_constructalig = 2
 		}
 	}
-	NOT = {
-		any_character = {
-			limit = {
-				OR = {
-					is_character = parliament_gui_YCPCPAC
-					is_character = parliament_gui_REP
-					is_character = parliament_gui_PIP
-					is_character = parliament_gui_DLP
-					is_character = parliament_gui_NSPPSC
+	all_of = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		meta_trigger = {
+			text = {
+				[tokenbase] = {
+					if = {
+						limit = {
+							NOT = {
+								OR = {
+									is_character = parliament_gui_YCPCPAC
+									is_character = parliament_gui_NSPPSC
+									is_character = parliament_gui_REP
+									is_character = parliament_gui_PIP
+									is_character = parliament_gui_DLP
+								}
+							}
+							check_variable = {
+								THIS.parliament_gui_constructalig = 2
+							}
+						}
+						set_temp_variable = { temp_not_coalition_avaialble = 1 }
+						log = "[?parliament_gui_seats]"
+					}
 				}
 			}
-			check_variable = {
-				THIS.parliament_gui_constructalig = 2
-			}
+			tokenbase = "[?roc_cur_token.GetTokenKey]"
+		}
+	}
+	NOT = {
+		check_variable = {
+			temp_not_coalition_avaialble = 1
 		}
 	}
 }
