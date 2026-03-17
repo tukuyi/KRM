@@ -7,8 +7,8 @@ scripted_gui = {
 		
 
 		visible = {
-			# has_country_flag = open_roc_parliament_gui
-			always = yes
+			has_country_flag = open_roc_parliament_gui
+			# always = yes
 		}
 		properties = {
 			special_under_bg = {
@@ -21,8 +21,8 @@ scripted_gui = {
 		context_type = player_context
 
 		visible = {
-			# has_country_flag = open_roc_parliament_gui
-			always = yes
+			has_country_flag = open_roc_parliament_gui
+			# always = yes
 		}
 
 		# array = ROC_seat_token，每個元素是 character token，
@@ -71,6 +71,141 @@ scripted_gui = {
 			}
 			roc_parliament_refresh_button_click = {
 				ROC_init_parliament = yes
+			}
+		}
+	}
+
+	roc_parliament_coalition_scripted_gui = {
+		window_name = "roc_parliament_coalition_gui"
+		context_type = player_context
+ 
+		visible = {
+			# has_country_flag = open_roc_coalition_gui
+			always = yes
+		}
+ 
+		dynamic_lists = {
+			roc_coalition_parties_gridbox = {
+				array = ROC_party_tokens
+				index = party_idx
+				value = roc_cur_token
+				entry_container = ROC_coalition_party_entry
+			}
+		}
+ 
+		properties = {
+			coalition_party_emblem = {
+				image = "GFX_ROC_[?roc_cur_token.GetTokenKey]_emblem"
+			}
+			ROC_coalition_progressbar = {
+				frame = var:temp_coalition_frame
+			}
+			roc_coalition_interact_button = {
+				frame = roc_coalition_interact_button_frame
+			}
+		}
+ 
+		triggers = {
+			ROC_coalition_seats_calculate_hidden_visible = {
+				always = no
+			}
+			roc_coalition_interact_button_click_enabled = {
+				meta_trigger = {
+					text = {
+						[tokenbase] = {
+							check_variable =  {
+								THIS.parliament_gui_interacted = 1
+							}
+						}
+					}
+					tokenbase = "[?roc_cur_token.GetTokenKey]"
+				}
+			}
+			roc_coalition_interact_button_visible = {
+				meta_trigger = {
+					text = {
+						[tokenbase] = {
+							check_variable =  {
+								THIS.parliament_gui_interacted = 1
+							}
+						}
+					}
+					tokenbase = "[?roc_cur_token.GetTokenKey]"
+				}
+				set_temp_variable = { roc_coalition_interact_button_frame = 0 } # 1 for looping, 0 for no looping
+				multiply_temp_variable = { roc_coalition_interact_button_frame = 256 }
+				add_to_temp_variable = { roc_coalition_interact_button_frame = 125 } # FPS
+				multiply_temp_variable = { roc_coalition_interact_button_frame = 64 }
+				add_to_temp_variable = { roc_coalition_interact_button_frame = 11 } # End frame
+				multiply_temp_variable = { roc_coalition_interact_button_frame = 64 }
+				add_to_temp_variable = { roc_coalition_interact_button_frame = 1 } # Start frame
+			}
+			roc_coalition_interact_button_enabled = {
+				meta_trigger = {
+					text = {
+						[tokenbase] = {
+							check_variable = { THIS.parliament_gui_status = 3 }
+						}
+					}
+					tokenbase = "[?roc_cur_token.GetTokenKey]"
+				}
+			}
+			roc_coalition_confirm_button_click_enabled = {
+				ROC_coalition_available_trigger = yes
+			}
+		}
+ 
+		effects = {
+			# 邀請在野黨加入聯盟
+			roc_coalition_interact_toclick_click = {
+				meta_effect = {
+					text = {
+						[tokenbase] = {
+							if = {
+								limit = {
+									OR = {
+										is_character = parliament_gui_IND
+										check_variable = {
+											parliament_gui_constructalig = 1
+										}
+									}
+								}
+								#blablabla
+							}
+							else = {
+								if = {
+									limit = {
+										check_variable = {
+											parliament_gui_interacted = 1
+										}
+									}
+									set_variable = {
+										parliament_gui_interacted = 0
+									}
+									set_variable = {
+										parliament_gui_constructalig = 0
+									}
+								}
+								else = {
+									set_variable = {
+										parliament_gui_interacted = 1
+									}
+									set_variable = {
+										parliament_gui_constructalig = 2
+									}
+								}
+							}
+						}
+					}
+					tokenbase = "[?roc_cur_token.GetTokenKey]"
+				}
+			}
+ 
+			# 確認組建（扣 PP、設旗標、關閉視窗）
+			roc_coalition_confirm_button_click = {
+				ROC_coalition_complete = yes
+				clr_country_flag = open_roc_coalition_gui
+				set_country_flag = open_roc_parliament_gui
 			}
 		}
 	}

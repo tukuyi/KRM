@@ -159,6 +159,95 @@ ROC_seats_simple_majority = {
 }
 
 
+ROC_seats_super_majority_CONSTRUCT = {
+	set_temp_variable = { coalition_seats = 0 }
+	set_temp_variable = { temp_seats = 533 }
+	all_of = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		meta_trigger = {
+			text = {
+				[tokenbase] = {
+					if = {
+						limit = {
+							OR = {
+								check_variable = {
+									THIS.parliament_gui_constructalig = 1
+								}
+								check_variable = {
+									THIS.parliament_gui_constructalig = 2
+								}
+							}
+						}
+						add_to_temp_variable = {
+							coalition_seats = THIS.parliament_gui_seats
+						}
+					}
+				}
+			}
+			tokenbase = "[?roc_cur_token.GetTokenKey]"
+		}
+	}
+	check_variable = {
+		coalition_seats > temp_seats
+	}
+}
+
+ROC_seats_simple_majority_CONSTRUCT = {
+	set_temp_variable = { coalition_seats = 0 }
+	set_temp_variable = { temp_seats = 400 }
+	all_of = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		meta_trigger = {
+			text = {
+				[tokenbase] = {
+					if = {
+						limit = {
+							OR = {
+								check_variable = {
+									THIS.parliament_gui_constructalig = 1
+								}
+								check_variable = {
+									THIS.parliament_gui_constructalig = 2
+								}
+							}
+						}
+						add_to_temp_variable = {
+							coalition_seats = THIS.parliament_gui_seats
+						}
+					}
+				}
+			}
+			tokenbase = "[?roc_cur_token.GetTokenKey]"
+		}
+	}
+	log = "[?coalition_seats]"
+	check_variable = {
+		coalition_seats > temp_seats
+	}
+}
+
+ROC_parliament_rule_alone_check = {
+	NOT = {
+		any_character = {
+			check_variable = {
+				THIS.parliament_gui_status = 2
+			}
+		}
+	}
+}
+
+ROC_parliament_rule_alone_check_CONSTRUCT = {
+	NOT = {
+		any_character = {
+			check_variable = {
+				THIS.parliament_gui_constructalig = 2
+			}
+		}
+	}
+}
+
 ROC_parliament_statist_coalition_check = {
 	OR = {
 		parliament_gui_YCP = {
@@ -181,6 +270,362 @@ ROC_parliament_statist_coalition_check = {
 		parliament_gui_NSPPSC = {
 			check_variable = {
 				THIS.parliament_gui_status = 2
+			}
+		}
+	}
+}
+
+ROC_parliament_statist_coalition_check_CONSTRUCT = {
+	OR = {
+		parliament_gui_YCP = {
+			check_variable = {
+				THIS.parliament_gui_constructalig = 1
+			}
+		}
+		parliament_gui_YCPCPAC = {
+			check_variable = {
+				THIS.parliament_gui_constructalig = 1
+			}
+		}
+	}
+	OR =  {
+		parliament_gui_NSP = {
+			check_variable = {
+				THIS.parliament_gui_constructalig = 2
+			}
+		}
+		parliament_gui_NSPPSC = {
+			check_variable = {
+				THIS.parliament_gui_constructalig = 2
+			}
+		}
+	}
+	any_character = {
+		limit = {
+			NOT = {
+				OR = {
+					is_character = parliament_gui_YCP
+					is_character = parliament_gui_YCPCPAC
+					is_character = parliament_gui_NSP
+					is_character = parliament_gui_NSPPSC
+				}
+			}
+		}
+		NOT = {
+			check_variable = {
+				THIS.parliament_gui_constructalig = 2
+			}
+		}
+	}
+}
+
+ROC_parliament_wuhan_coalition_check = {
+	parliament_gui_YCPCPAC = {
+		check_variable = { THIS.parliament_gui_status = 1 }
+	}
+	parliament_gui_NSPPSC = {
+		check_variable = { THIS.parliament_gui_status = 2 }
+	}
+	parliament_gui_REP = {
+		check_variable = { THIS.parliament_gui_status = 2 }
+	}
+}
+
+ROC_parliament_wuhan_coalition_check_CONSTRUCT = {
+	parliament_gui_YCPCPAC = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 1
+		}
+	}
+	parliament_gui_NSPPSC = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	parliament_gui_REP = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	NOT = {
+		every_character = {
+			limit = {
+				NOT = {
+					OR = {
+						is_character = parliament_gui_YCPCPAC
+						is_character = parliament_gui_REP
+						is_character = parliament_gui_NSPPSC
+					}
+				}
+			}
+			check_variable = {
+				THIS.parliament_gui_constructalig = 2
+			}
+		}
+	}
+}
+
+ROC_parliament_xinhai_coalition_check = {
+	parliament_gui_YCPCPAC = {
+		check_variable = { THIS.parliament_gui_status = 1 }
+	}
+	parliament_gui_NSPPSC = {
+		check_variable = { THIS.parliament_gui_status = 2 }
+	}
+	parliament_gui_DLP = {
+		check_variable = { THIS.parliament_gui_status = 2 }
+	}
+}
+
+ROC_parliament_xinhai_coalition_check_CONSTRUCT = {
+	parliament_gui_YCPCPAC = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 1
+		}
+	}
+	parliament_gui_NSPPSC = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	parliament_gui_DLP = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	NOT = {
+		any_character = {
+			limit = {
+				OR = {
+					is_character = parliament_gui_YCPCPAC
+					is_character = parliament_gui_DLP
+					is_character = parliament_gui_NSPPSC
+				}
+			}
+			check_variable = {
+				THIS.parliament_gui_constructalig = 2
+			}
+		}
+	}
+}
+
+ROC_parliament_central_reform_coalition_check = {
+	parliament_gui_YCPCPAC = {
+		check_variable = { THIS.parliament_gui_status = 1 }
+	}
+	parliament_gui_NSPPSC = {
+		check_variable = { THIS.parliament_gui_status = 2 }
+	}
+	parliament_gui_PIP = {
+		check_variable = { THIS.parliament_gui_status = 2 }
+	}
+}
+
+ROC_parliament_central_reform_coalition_check_CONSTRUCT = {
+	parliament_gui_YCPCPAC = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 1
+		}
+	}
+	parliament_gui_NSPPSC = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	parliament_gui_PIP = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	NOT = {
+		any_character = {
+			limit = {
+				OR = {
+					is_character = parliament_gui_YCPCPAC
+					is_character = parliament_gui_PIP
+					is_character = parliament_gui_NSPPSC
+				}
+			}
+			check_variable = {
+				THIS.parliament_gui_constructalig = 2
+			}
+		}
+	}
+}
+
+ROC_parliament_progressive_coalition_check = {
+	parliament_gui_YCPCPAC = {
+		check_variable = { THIS.parliament_gui_status = 1 }
+	}
+	parliament_gui_NSPPSC = {
+		check_variable = { THIS.parliament_gui_status = 2 }
+	}
+	parliament_gui_KMT = {
+		check_variable = { THIS.parliament_gui_status = 2 }
+	}
+}
+
+ROC_parliament_progressive_coalition_check_CONSTRUCT = {
+	parliament_gui_YCPCPAC = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 1
+		}
+	}
+	parliament_gui_NSPPSC = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	parliament_gui_KMT = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	NOT = {
+		any_character = {
+			limit = {
+				OR = {
+					is_character = parliament_gui_YCPCPAC
+					is_character = parliament_gui_KMT
+					is_character = parliament_gui_NSPPSC
+				}
+			}
+			check_variable = {
+				THIS.parliament_gui_constructalig = 2
+			}
+		}
+	}
+}
+
+ROC_parliament_reformist_coalition_check = {
+	parliament_gui_YCPCPAC = {
+		check_variable = { THIS.parliament_gui_status = 1 }
+	}
+	parliament_gui_NSPPSC = {
+		check_variable = { THIS.parliament_gui_status = 2 }
+	}
+	parliament_gui_KMT = {
+		check_variable = { THIS.parliament_gui_status = 2 }
+	}
+	parliament_gui_SDP = {
+		check_variable = { THIS.parliament_gui_status = 2 }
+	}
+}
+
+ROC_parliament_reformist_coalition_check_CONSTRUCT = {
+	parliament_gui_YCPCPAC = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 1
+		}
+	}
+	parliament_gui_NSPPSC = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	parliament_gui_KMT = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	parliament_gui_SDP = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	NOT = {
+		any_character = {
+			limit = {
+				OR = {
+					is_character = parliament_gui_YCPCPAC
+					is_character = parliament_gui_KMT
+					is_character = parliament_gui_SDP
+					is_character = parliament_gui_NSPPSC
+				}
+			}
+			check_variable = {
+				THIS.parliament_gui_constructalig = 2
+			}
+		}
+	}
+}
+
+ROC_parliament_great_coalition_check_CONSTRUCT = {
+	parliament_gui_YCPCPAC = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 1
+		}
+	}
+	parliament_gui_NSPPSC = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	parliament_gui_REP = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	parliament_gui_PIP = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	parliament_gui_DLP = {
+		check_variable = {
+			THIS.parliament_gui_constructalig = 2
+		}
+	}
+	NOT = {
+		any_character = {
+			limit = {
+				OR = {
+					is_character = parliament_gui_YCPCPAC
+					is_character = parliament_gui_REP
+					is_character = parliament_gui_PIP
+					is_character = parliament_gui_DLP
+					is_character = parliament_gui_NSPPSC
+				}
+			}
+			check_variable = {
+				THIS.parliament_gui_constructalig = 2
+			}
+		}
+	}
+}
+
+ROC_coalition_available_trigger = {
+	custom_override_tooltip = {
+		tooltip = ROC_coalition_trigger_simple_majority_tt
+		ROC_seats_simple_majority_CONSTRUCT = yes
+	}
+	custom_override_tooltip = {
+		tooltip = ROC_coalition_trigger_available_coalition_tt
+		OR = {
+			ROC_parliament_rule_alone_check_CONSTRUCT = yes
+			ROC_parliament_statist_coalition_check_CONSTRUCT = yes
+			ROC_parliament_wuhan_coalition_check_CONSTRUCT = yes
+			ROC_parliament_xinhai_coalition_check_CONSTRUCT = yes
+			ROC_parliament_central_reform_coalition_check_CONSTRUCT = yes
+			ROC_parliament_progressive_coalition_check_CONSTRUCT = yes
+			ROC_parliament_reformist_coalition_check_CONSTRUCT = yes
+			ROC_parliament_great_coalition_check_CONSTRUCT = yes
+		}
+	}
+	if = {
+		limit = {
+			parliament_gui_YCPCPAC = {
+				check_variable = {
+					THIS.parliament_gui_constructalig = 1
+				}
+			}
+		}
+		custom_override_tooltip = {
+			tooltip = ROC_coalition_trigger_YCPCPAC_must_with_NSPPSC_tt
+			parliament_gui_NSPPSC = {
+				check_variable = {
+					THIS.parliament_gui_constructalig = 2
+				}
 			}
 		}
 	}

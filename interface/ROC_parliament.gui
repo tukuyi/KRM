@@ -266,4 +266,315 @@ guiTypes = {
 		
 	}
 
+	# ══════════════════════════════════════════════════════════
+	# 執政聯盟組建視窗
+	# 在 ROC_parliament.gui 的 guiTypes = { } 內部末尾追加
+	# ══════════════════════════════════════════════════════════
+
+	containerWindowType = {
+		name = "roc_parliament_coalition_gui"
+		position = { x = 0 y = 0 }
+		show_position = { x = -6 y = 0 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		size = { width = 620 height = 765 }
+		orientation = center
+		origo = center
+		moveable = yes
+
+		hide_sound = menu_close_window
+		show_sound = menu_open_window
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiled_paper_bg"
+		}
+
+		# ── 統計欄 ──
+		containerWindowType = {
+			name = "ROC_coalition_stats_zone"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 150 }
+
+
+			containerwindowtype = {
+				name = "ROC_coalition_progressbar_container"
+				position = { x = 10 y = 75 }
+				icontype = { 
+					name = "ROC_coalition_progressbar"
+					quadtexturesprite = "GFX_ROC_parliament_coalition_progressbar"
+				}
+				icontype = {
+					name = "ROC_coalition_progressbar_frame"
+					spritetype = "GFX_ROC_parliament_coalition_progressbar_frame"
+					alwaystransparent = yes
+				}
+			}
+
+			instantTextBoxType = {
+				name = "ROC_coalition_seats_calculate_hidden"
+				position = { x = 30 y = 8 }
+				text = "ROC_coalition_attempt_seat"
+				font = "hoi_24header"
+				maxWidth = 0
+			}
+
+			# 過半狀態
+			instantTextBoxType = {
+				name = "ROC_coalition_status_text"
+				position = { x = 0 y = 102 }
+				text = "ROC_coalition_construct_status"
+				font = "hoi_36header"
+				maxWidth = 620
+				format = center
+			}
+
+			# 联盟席次
+			instantTextBoxType = {
+				name = "ROC_coalition_seat_text"
+				position = { x = 35 y = 20 }
+				text = "ROC_coalition_seat_text"
+				font = "hoi_24header"
+				format = left
+				maxWidth = 300
+				alwaystransparent = yes
+			}
+
+			# 联盟席次数字
+			instantTextBoxType = {
+				name = "ROC_coalition_seat_count"
+				position = { x = 35 y = 40 }
+				text = "ROC_coalition_attempt_seat"
+				font = "hoi_30header"
+				format = left
+				maxWidth = 300
+				alwaystransparent = yes
+			}
+
+			# 过半门槛
+			instantTextBoxType = {
+				name = "ROC_coalition_half_text"
+				position = { x = 185 y = 20 }
+				text = "ROC_coalition_half_text"
+				font = "hoi_24header"
+				format = left
+				maxWidth = 300
+				alwaystransparent = yes
+			}
+
+			# 过半门槛数字
+			instantTextBoxType = {
+				name = "ROC_coalition_half_number"
+				position = { x = 185 y = 40 }
+				text = "401"
+				font = "hoi_30header"
+				format = left
+				maxWidth = 300
+				alwaystransparent = yes
+			}
+
+			# 占比
+			instantTextBoxType = {
+				name = "ROC_coalition_percentage_text"
+				position = { x = 335 y = 20 }
+				text = "ROC_coalition_percentage_text"
+				font = "hoi_24header"
+				format = left
+				maxWidth = 300
+				alwaystransparent = yes
+			}
+
+			# 占比数字
+			instantTextBoxType = {
+				name = "ROC_coalition_percentage_number"
+				position = { x = 335 y = 40 }
+				text = "ROC_coalition_percentage_number"
+				font = "hoi_30header"
+				format = left
+				maxWidth = 300
+				alwaystransparent = yes
+			}
+
+			# PP
+			instantTextBoxType = {
+				name = "ROC_coalition_cost_text"
+				position = { x = 485 y = 20 }
+				text = "ROC_coalition_cost_text"
+				font = "hoi_24header"
+				format = left
+				maxWidth = 300
+				alwaystransparent = yes
+			}
+
+			# PP数字
+			instantTextBoxType = {
+				name = "ROC_coalition_cost_number"
+				position = { x = 485 y = 40 }
+				text = "ROC_coalition_cost_number"
+				font = "hoi_30header"
+				format = left
+				maxWidth = 300
+				alwaystransparent = yes
+			}
+
+		}
+
+		# ── 黨派選擇區 ──
+		containerWindowType = {
+			name = "ROC_coalition_parties_zone"
+			position = { x = 0 y = 128 }
+			size = { width = 100% height = 500 }
+
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiled_paper_w_frame_bg"
+				alwaystransparent = yes
+			}
+
+			containerWindowType = {
+				name = "ROC_coalition_parties_scroll"
+				size = { width = 100% height = 479 }
+				position = { x = 0 y = 5 }
+
+				background = {
+					name = "background"
+					quadTextureSprite = "GFX_tiled_window_transparent"
+					alwaystransparent = yes
+				}
+				smooth_scrolling = yes
+				verticalScrollbar = "right_vertical_slider"	
+
+				gridboxtype = {
+					name = "roc_coalition_parties_gridbox"
+					position = { x = 15 y = 14 }
+					slotsize = { width = 100% height = 75 }
+					max_slots_horizontal = 1
+					format = "UPPER_LEFT"
+				}
+			}
+		}
+
+		# ── 底部按鈕區 ──
+		containerWindowType = {
+			name = "ROC_coalition_buttons_zone"
+			position = { x = 0 y = 625 }
+			size = { width =100% height = 60 }
+
+			# 確認組建
+			buttonType = {
+				name = "roc_coalition_confirm_button"
+				spriteType = "GFX_sp_entry_bg"
+				position = { x = 55 y = 0 }
+				pdx_tooltip = parliament_coalition_establish_trigger
+			}
+
+			# 是否可组建政府
+			instantTextBoxType = {
+				name = "ROC_coalition_confirm_text"
+				position = { x = 0 y = 50 }
+				text = "ROC_coalition_confirm_text"
+				font = "hoi_36header"
+				maxWidth = 620
+				format = center
+				alwaystransparent = yes
+			}
+		}
+	}
+
+
+	# ── 聯盟組建黨派卡片容器 ──────────────────────────────────
+	containerWindowType = {
+		name = "ROC_coalition_party_entry"
+		size = { width = 580 height = 75 }
+		clipping = no
+		orientation = UPPER_LEFT
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "ROC_coalition_party_entry_selectbg"
+			size = { width = 100% height = 100% }
+			alwaystransparent = yes
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiled_research_bg"
+				alwaystransparent = yes
+			}
+		}
+
+		# 黨徽
+		iconType = {
+			name = "coalition_party_emblem"
+			spriteType = "GFX_ROC_parliament_gui_IND_emblem"
+			position = { x = 10 y = 14 }
+			scale = 0.4
+		}
+
+		# 黨名
+		instantTextBoxType = {
+			name = "ROC_coalition_party_name"
+			position = { x = 70 y = 14 }
+			text = ROC_party_long_name_get
+			font = "hoi_24header"
+			format = left
+			maxWidth = 800
+			alwaystransparent = yes
+		}
+
+		# 席次
+		instantTextBoxType = {
+			name = "ROC_coalition_seat_count"
+			position = { x = 75 y = 40 }
+			text = ROC_party_seats_get
+			font = "hoi_18mbs"
+			format = left
+			maxWidth = 300
+			alwaystransparent = yes
+		}
+
+		# 當前狀態（執政/聯合/在野）
+		instantTextBoxType = {
+			name = "ROC_coalition_party_status"
+			position = { x = 225 y = 40 }
+			text = ROC_party_status_get
+			font = "hoi_18mbs"
+			format = left
+			maxWidth = 300
+			alwaystransparent = yes
+		}
+
+		# 邀請成本
+		instantTextBoxType = {
+			name = "ROC_coalition_invite_cost"
+			position = { x = 330 y = 40 }
+			text = parliament_coalition_pp_cost
+			font = "hoi_18mbs"
+			format = left
+			maxWidth = 300
+			alwaystransparent = yes
+		}
+
+		# ── 操作按鈕 ──
+		# 邀請加入聯盟
+		buttonType = {
+			name = "roc_coalition_interact_toclick"
+			position = { x = 470 y = -5 }
+			spriteType = "GFX_ROC_parliament_select_icon_empty"
+			pdx_tooltip = "ROC_coalition_interact_tt"
+		}
+		buttonType = {
+			name = "roc_coalition_interact_button"
+			spriteType = "GFX_ROC_parliament_select_icon_animated"
+			position = { x = 505 y = 20 }
+			alwaystransparent = yes
+		}
+	}
+
+
+	
+
 }

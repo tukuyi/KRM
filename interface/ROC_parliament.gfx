@@ -88,11 +88,38 @@ spriteTypes = {
 		name = "GFX_ROC_parliament_gui_IND_emblem"
 		textureFile = "gfx/interface/gui/parliament/party_emblems/parliament_gui_IND_emblem.png"
 	}
+	spritetype = {
+		name = "GFX_ROC_parliament_select_icon_animated"
+		texturefile = "gfx/interface/gui/parliament/parliament_select_icon_animated.png"
+		noOfFrames = 13
+		effectFile = "gfx/FX/animated_sprite.shader"
+		# animation_rate_fps = 8
+		# looping = yes
+		# play_on_show = yes
+	}
 
 	
 
 	spriteType = {
 		name = "GFX_ROC_parliament_statue_statist_coalition"
 		textureFile = "gfx/interface/gui/parliament/parliament_statue/parliament_statue_statist_coalition.png"
+	}
+	
+	spritetype = {
+		name = "GFX_ROC_parliament_coalition_progressbar_frame"
+		texturefile = "gfx/interface/gui/parliament/parliament_coalition_progressbar_frame.png"
+	}
+	
+	spritetype = {
+		name = "GFX_ROC_parliament_select_icon_empty"
+		texturefile = "gfx/interface/gui/parliament/parliament_select_icon_empty.png"
+	}
+
+	progressbartype = {
+		name = "GFX_ROC_parliament_coalition_progressbar"
+		texturefile1 = "gfx/interface/gui/parliament/parliament_coalition_progressbar_green.png"
+		texturefile2 = "gfx/interface/gui/parliament/parliament_coalition_progressbar_red.png"
+		size = { x = 600 y = 26 }
+		effectfile = "gfx/FX/progress.lua"
 	}
 }

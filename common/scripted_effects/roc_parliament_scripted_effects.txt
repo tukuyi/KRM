@@ -1,36 +1,12 @@
 ##############################################################
 # 中華民國國民大會 — Scripted Effects
-# ── Character Token Scope 架構（正確實現）──
-#
-# 每個黨派對應一個 character，character scope 存放：
-#   parliament_gui_frame   sprite 幀號
-#   parliament_gui_seats   席次
-#
-# ROC_party_tokens[] 是 character token 的有序注册表，
-# for_each_loop + change_scope = yes 切換到 character scope 讀數據。
-#
-# Tooltip：
-#   ROC_seat_token^seat_idx 存放 token 數值
-#   scripted_gui properties 的 image/frame 用
-#   [?ROC_seat_token^seat_idx.GetTokenKey] 取 character token key
-#
-# 新增黨派：
-#   1. 定義新 character（common/characters/）
-#   2. 在 ROC_register_parties 加三行（token + frame + seats）
-#   3. localisation 加 parliament_gui_XXX:0 "黨名"
-#   4. parliament_seat.dds 加一幀
 ##############################################################
 
-
-# ──────────────────────────────────────────────────────────
-# ROC_register_parties
-# 將各黨 character token 加入注册表，
-# 並在 character scope 設定幀號與席次。
-# ──────────────────────────────────────────────────────────
 ROC_register_parties = {
 	clear_array = ROC_party_tokens
 
-	set_variable = { ROC_parties_max = 10}
+	set_variable = { ROC_parties_max = 10 }
+	set_variable = { ROC_seats_max = 800 }
 	
 	#parliament_gui_status - 1执政 2联合 3在野
 
@@ -42,6 +18,7 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 1 }
 		set_variable = { parliament_gui_party = token:parliament_gui_YCPCPAC }
 		set_variable = { parliament_gui_chairman = token:SZC_zhao_yusong }
+		set_variable = { parliament_gui_ideology = token:authoritatrian_democrat }
 	}
 
 	# 國家社會黨 - PSC —— frame 2, 112席
@@ -49,9 +26,10 @@ ROC_register_parties = {
 	parliament_gui_NSPPSC = {
 		set_variable = { parliament_gui_frame = 2 }
 		set_variable = { parliament_gui_seats = 112 }
-		set_variable = { parliament_gui_status = 2 }
+		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_NSPPSC }
 		set_variable = { parliament_gui_chairman = token:SZC_zhu_xiang }
+		set_variable = { parliament_gui_ideology = token:social_democrat }
 	}
 
 	# 民主自由黨 —— frame 3, 62席
@@ -62,6 +40,7 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_DLP }
 		set_variable = { parliament_gui_chairman = token:SZC_ren_yuandao }
+		set_variable = { parliament_gui_ideology = token:market_liberal }
 	}
 
 	# 共和黨 —— frame 4, 51席
@@ -72,6 +51,7 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_REP }
 		set_variable = { parliament_gui_chairman = token:SZC_he_peirong }
+		set_variable = { parliament_gui_ideology = token:paternal_autocrat }
 	}
 
 	# 致公黨 —— frame 5, 73席
@@ -82,6 +62,7 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_PIP }
 		set_variable = { parliament_gui_chairman = token:SZC_jin_zhang }
+		set_variable = { parliament_gui_ideology = token:social_conservative }
 	}
 
 	# 國民黨 —— frame 6, 91席
@@ -92,6 +73,7 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_KMT }
 		set_variable = { parliament_gui_chairman = token:SZC_zhou_fohai }
+		set_variable = { parliament_gui_ideology = token:social_liberal }
 	}
 
 	# 國家法西斯黨 —— frame 7, 11席
@@ -102,6 +84,7 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_FAS }
 		set_variable = { parliament_gui_chairman = token:SZC_zhou_yuying }
+		set_variable = { parliament_gui_ideology = token:totalist }
 	}
 
 	# 社會民主黨 —— frame 8, 31席
@@ -112,6 +95,7 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_SDP }
 		set_variable = { parliament_gui_chairman = token:SZC_jiang_kanghu }
+		set_variable = { parliament_gui_ideology = token:radical_socialist }
 	}
 
 	# 全華聯合工會 —— frame 9, 20席
@@ -122,6 +106,7 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_ACU }
 		set_variable = { parliament_gui_chairman = token:SZC_zhang_kechang }
+		set_variable = { parliament_gui_ideology = token:syndicalist }
 	}
 
 	# 無黨籍 —— frame 10, 82席
@@ -138,11 +123,336 @@ ROC_register_parties = {
 
 
 
-# ──────────────────────────────────────────────────────────
-# ROC_init_parliament_positions — 座標，只需執行一次
-# ──────────────────────────────────────────────────────────
 
-ROC_init_parliament_positions = {
+ROC_parliament_reorder_parties = {
+    # 创建临时数组存储排序后的结果
+    clear_array = temp_ROC_party_tokens_reordered
+    
+    # 第一步：找到执政党并添加到临时数组
+    set_temp_variable = { ruling_party_found = 0 }
+    for_each_loop = {
+        array = ROC_party_tokens
+        value = roc_cur_token
+        meta_trigger = {
+            text = {
+                [tokenbase] = {
+                    check_variable = {
+                        THIS.parliament_gui_status = 1
+                    }
+                }
+            }
+            tokenbase = "[?roc_cur_token.GetTokenKey]"
+        }
+        meta_effect = {
+            text = {
+                add_to_array = { temp_ROC_party_tokens_reordered = [tokenbase] }
+                set_temp_variable = { ruling_party_found = 1 }
+            }
+            tokenbase = "token:[?roc_cur_token.GetTokenKey]"
+        }
+    }
+    
+    # 第二步：添加所有联合党派
+    for_each_loop = {
+        array = ROC_party_tokens
+        value = roc_cur_token
+        meta_trigger = {
+            text = {
+                [tokenbase] = {
+                    check_variable = {
+                        THIS.parliament_gui_status = 2
+                    }
+                }
+            }
+            tokenbase = "[?roc_cur_token.GetTokenKey]"
+        }
+        meta_effect = {
+            text = {
+                add_to_array = { temp_ROC_party_tokens_reordered = [tokenbase] }
+            }
+            tokenbase = "token:[?roc_cur_token.GetTokenKey]"
+        }
+    }
+    
+    # 第三步：添加所有在野党
+    for_each_loop = {
+        array = ROC_party_tokens
+        value = roc_cur_token
+        meta_trigger = {
+            text = {
+                [tokenbase] = {
+                    check_variable = {
+                        THIS.parliament_gui_status = 3
+                    }
+                }
+            }
+            tokenbase = "[?roc_cur_token.GetTokenKey]"
+        }
+        meta_effect = {
+            text = {
+                add_to_array = { temp_ROC_party_tokens_reordered = [tokenbase] }
+            }
+            tokenbase = "token:[?roc_cur_token.GetTokenKey]"
+        }
+    }
+    
+    # 第四步：用排序后的数组替换原数组
+    clear_array = ROC_party_tokens
+    for_each_loop = {
+        array = temp_ROC_party_tokens_reordered
+        value = temp_roc_token
+        meta_effect = {
+            text = {
+                add_to_array = { ROC_party_tokens = [tokenbase] }
+            }
+            tokenbase = "token:[?temp_roc_token.GetTokenKey]"
+        }
+    }
+    
+    # 清理临时数组
+    clear_array = temp_ROC_party_tokens_reordered
+}
+
+# 用法：
+#   set_temp_variable = { parliament_adjust_party = token:parliament_gui_KMT }  # 目标政党
+#   set_temp_variable = { parliament_adjust_value = 10 }  # 正数增加、负数减少
+#   parliament_adjust_seats = yes
+parliament_adjust_seats = {
+    set_temp_variable = { target_party = parliament_adjust_party }
+    set_temp_variable = { adjust_value = parliament_adjust_value }
+    
+    if = {
+        limit = {
+            check_variable = { adjust_value < 0 }
+        }
+        parliament_decrease_seats = yes
+    }
+    else = {
+        parliament_increase_seats = yes
+    }
+    
+    # 清理临时变量
+    clear_temp_variable = target_party
+    clear_temp_variable = adjust_value
+}
+
+# 增加政党议席（随机从其他政党抽取）
+parliament_increase_seats = {
+    set_temp_variable = { seats_to_add = parliament_adjust_value }
+    
+    while = {
+        limit = {
+            check_variable = { seats_to_add > 0 }
+        }
+        
+        random_list = {
+            parliament_select_random_donor = {
+                weight = 1
+                parliament_select_donor_party = yes
+            }
+        }
+        
+        # 从捐献方减少1席，给目标政党增加1席
+        if = {
+            limit = {
+                set_temp_variable = { donor_party = var:parliament_selected_donor }
+                check_variable = { 
+                    donor_party > 0  # 确保找到了捐献方
+                }
+            }
+            meta_effect = {
+                text = {
+                    [donor_token] = {
+                        add_to_variable = {
+                            parliament_gui_seats = -1
+                        }
+                    }
+                    [target_token] = {
+                        add_to_variable = {
+                            parliament_gui_seats = 1
+                        }
+                    }
+                }
+                donor_token = "[?parliament_selected_donor.GetTokenKey]"
+                target_token = "[?parliament_adjust_party.GetTokenKey]"
+            }
+        }
+        
+        add_to_temp_variable = { seats_to_add = -1 }
+    }
+}
+
+# 减少政党议席（随机分配给其他政党）
+parliament_decrease_seats = {
+    # 将负数转正
+    set_temp_variable = { seats_to_remove = parliament_adjust_value }
+    if = {
+        limit = {
+            check_variable = { seats_to_remove < 0 }
+        }
+        multiply_temp_variable = { seats_to_remove = -1 }
+    }
+    
+    # 循环分配被减少的议席
+    while = {
+        limit = {
+            check_variable = { seats_to_remove > 0 }
+        }
+        
+        # 随机选择一个接收方政党
+        random_list = {
+            parliament_select_random_recipient = {
+                weight = 1
+                parliament_select_recipient_party = yes
+            }
+        }
+        
+        # 从目标政党减少1席，给接收方增加1席
+        if = {
+            limit = {
+                set_temp_variable = { recipient_party = parliament_selected_recipient }
+                check_variable = {
+                    recipient_party > 0
+                }
+            }
+            meta_effect = {
+                text = {
+                    [target_token] = {
+                        add_to_variable = {
+                            parliament_gui_seats = -1
+                        }
+                    }
+                    [recipient_token] = {
+                        add_to_variable = {
+                            parliament_gui_seats = 1
+                        }
+                    }
+                }
+                target_token = "[?parliament_adjust_party.GetTokenKey]"
+                recipient_token = "[?parliament_selected_recipient.GetTokenKey]"
+            }
+        }
+        
+        add_to_temp_variable = { seats_to_remove = -1 }
+    }
+}
+
+# 从活跃政党中随机选择一个捐献方（不能是目标政党）
+parliament_select_donor_party = {
+    set_temp_variable = { parliament_selected_donor = 0 }
+    set_temp_variable = { selection_attempts = 0 }
+    
+    while = {
+        limit = {
+            check_variable = { parliament_selected_donor = 0 }
+            check_variable = { selection_attempts < 20 }  # 防止无限循环
+        }
+        
+        # 随机选择数组中的一个政党
+        random_list = {
+            parliament_pick_random = {
+                weight = 1
+                for_each_loop = {
+                    array = ROC_party_tokens
+                    value = roc_random_token
+                    meta_effect = {
+                        text = {
+                            set_temp_variable = { temp_selected_token = [tokenbase] }
+                        }
+                        tokenbase = "token:[?roc_random_token.GetTokenKey]"
+                    }
+                }
+            }
+        }
+        
+        # 检查选中的党派是否有议席且不是目标政党
+        meta_trigger = {
+            text = {
+                [tokenbase] = {
+                    OR = {
+                        check_variable = {
+                            parliament_gui_status = 2  # 联合党
+                        }
+                        check_variable = {
+                            parliament_gui_status = 3  # 在野党
+                        }
+                    }
+                    check_variable = {
+                        parliament_gui_seats > 0
+                    }
+                    NOT = {
+                        check_variable = {
+                            parliament_gui_party = parliament_adjust_party
+                        }
+                    }
+                }
+            }
+            tokenbase = "[?temp_selected_token.GetTokenKey]"
+        }
+        meta_effect = {
+            text = {
+                set_temp_variable = { parliament_selected_donor = [tokenbase] }
+            }
+            tokenbase = "token:[?temp_selected_token.GetTokenKey]"
+        }
+        
+        add_to_temp_variable = { selection_attempts = 1 }
+    }
+}
+
+# 随机选择一个接收方政党（不能是目标政党）
+parliament_select_recipient_party = {
+    set_temp_variable = { parliament_selected_recipient = 0 }
+    set_temp_variable = { selection_attempts = 0 }
+    
+    while = {
+        limit = {
+            check_variable = { parliament_selected_recipient = 0 }
+            check_variable = { selection_attempts < 20 }
+        }
+        
+        # 随机选择数组中的一个政党
+        random_list = {
+            parliament_pick_random_recipient = {
+                weight = 1
+                for_each_loop = {
+                    array = ROC_party_tokens
+                    value = roc_random_token
+                    meta_effect = {
+                        text = {
+                            set_temp_variable = { temp_selected_recipient = [tokenbase] }
+                        }
+                        tokenbase = "token:[?roc_random_token.GetTokenKey]"
+                    }
+                }
+            }
+        }
+        
+        # 检查选中的党派不是目标政党
+        meta_trigger = {
+            text = {
+                [tokenbase] = {
+                    NOT = {
+                        check_variable = {
+                            parliament_gui_party = var:parliament_adjust_party
+                        }
+                    }
+                }
+            }
+            tokenbase = "[?temp_selected_recipient.GetTokenKey]"
+        }
+        meta_effect = {
+            text = {
+                set_temp_variable = { parliament_selected_recipient = [tokenbase] }
+            }
+            tokenbase = "token:[?temp_selected_recipient.GetTokenKey]"
+        }
+        
+        add_to_temp_variable = { selection_attempts = 1 }
+    }
+}
+
+ROC_parliament_update = {
 	set_temp_variable = { tempc = 0 }
 	for_each_loop = {
 		array = ROC_party_tokens
@@ -215,7 +525,13 @@ ROC_init_parliament_positions = {
 		}
 		log = "[?ROC_resize_array_times]"
 	}
-	
+}
+# ──────────────────────────────────────────────────────────
+# ROC_init_parliament_positions — 座標，只需執行一次
+# ──────────────────────────────────────────────────────────
+
+ROC_init_parliament_positions = {
+	ROC_parliament_update = yes
 
 	clear_array = ROC_seat_x
 	clear_array = ROC_seat_y
@@ -1847,4 +2163,108 @@ ROC_init_parliament_positions = {
 ROC_init_parliament = {
 	ROC_register_parties = yes
 	ROC_init_parliament_positions = yes
+}
+
+ROC_init_coalition_construct = {
+	set_temp_variable = { tempc = 0 }
+	for_each_loop = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		ROOT = {
+			set_variable = { tempc = roc_cur_token }
+		}
+		meta_effect = {
+			text = {
+				every_character = {
+					limit = { is_character = [tokenbase] }
+					if = {
+						limit = {
+							check_variable = {
+								THIS.parliament_gui_status = 1
+							}
+						}
+						set_variable = { parliament_gui_constructalig = 1 }
+						set_variable = { parliament_gui_interacted = 1 }
+					}
+					else_if = {
+						limit = {
+							check_variable = {
+								THIS.parliament_gui_status = 2
+							}
+						}
+						set_variable = { parliament_gui_constructalig = 2 }
+						set_variable = { parliament_gui_interacted = 1 }
+					}
+				}
+			}
+			tokenbase = "[?ROOT.tempc.GetTokenKey]"
+		}
+		ROOT = {
+			set_variable = { tempc = 0 }
+		}
+	}
+}
+
+ROC_coalition_complete = {
+	set_temp_variable = { tempc = 0 }
+	for_each_loop = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		ROOT = {
+			set_variable = { tempc = roc_cur_token }
+		}
+		meta_effect = {
+			text = {
+				every_character = {
+					limit = { is_character = [tokenbase] }
+					if = {
+						limit = {
+							check_variable = {
+								THIS.parliament_gui_constructalig = 1
+							}
+						}
+						set_variable = { parliament_gui_status = 1 }
+						clear_variable = parliament_gui_interacted
+						clear_variable = parliament_gui_constructalig
+					}
+					else_if = {
+						limit = {
+							check_variable = {
+								THIS.parliament_gui_constructalig = 2
+							}
+						}
+						set_variable = { parliament_gui_status = 2 }
+						clear_variable = parliament_gui_interacted
+						clear_variable = parliament_gui_constructalig
+						set_temp_variable = { coalition_partner_var = var:parliament_gui_ideology }
+						add_to_coalition = yes
+					}
+					else_if = {
+						limit = {
+							check_variable = {
+								THIS.parliament_gui_constructalig = 3
+							}
+						}
+						set_variable = { parliament_gui_status = 3 }
+						clear_variable = parliament_gui_interacted
+						clear_variable = parliament_gui_constructalig
+						set_temp_variable = { coalition_partner_var = var:parliament_gui_ideology }
+						remove_from_coalition = yes
+					}
+				}
+			}
+			tokenbase = "[?ROOT.tempc.GetTokenKey]"
+		}
+		ROOT = {
+			set_variable = { tempc = 0 }
+		}
+	}
+	meta_effect = {
+		text = {
+			add_political_power = [pp]
+		}
+		pp = "-[GetROCCoalitionAllPPCost]"
+	}
+	ROC_parliament_reorder_parties = yes
+	ROC_parliament_update = yes
 }

@@ -376,6 +376,7 @@
  # frame = array index + 1，與 ROC_party_seats[] 順序一致
 
  ROC_party_name_get: "[GetROCPartyName]"
+ ROC_party_long_name_get: "[GetROCPartyNameLong]"
  ROC_party_seats_get: "议席数量：§Y[GetROCPartySeats]§!/§Y800§!"
  ROC_party_status_get: "地位：[GetROCPartyStatus]"
  ROC_parliament_political_status: "执政党：[GetROCRulingPartyName]  执政联盟：[GetROCPartiesCoalition]  [GetROCCoalitionSeatsStatus]"
@@ -426,12 +427,36 @@
  parliament_gui_IND_name_long: "§g无党籍人士§!"
  parliament_gui_IND_desc: "§L国民大会中的无党籍议员来路各异，其中既有地方士绅与商界代表，也有技术官僚与地方行政人员。他们或是无意依附任何党派，或是尚未找到合适的政治归宿，以个人身份在议会中占据一席之地。这批人虽无党纪约束，却往往是各方争相拉拢的对象——在执政联盟席位不足的情况下，无党籍议员的一票有时比任何党派的承诺都更为实在。§!"
  ROCCoalitionStatistCoalition: "§m国家主§!§G义联合§!"
- ROCCoalitionRuleAlone: "§Y单独过半§!"
+ ROCCoalitionWuhanCoalition: "§a武汉§!§m联合§!"
+ ROCCoalitionXinhaiCoalition: "§l辛亥§!§m联合§!"
+ ROCCoalitionGreatCoalition: "§m大§!§G联§!§l合§!§a政§!§c府§!"
+ ROCCoalitionCentralReformCoalition: "§m中道§!§G改革§!§c连合§!"
+ ROCCoalitionProgressiveCoalition: "§m进步§!§B阵线§!"
+ ROCCoalitionReformistCoalition: "§m革§!§G新§!§B联§!§R合§!"
+ ROCCoalitionRuleAlone: "§Y单党治理§!"
+ ROCCoalitionUnavaialble: "§R不可用§!"
  parliament_gui_chairman_portrait: "\n\n\n\n\n\n\n     £[GetROCParliamentPartyChairman]\n\n\n\n\n\n\n\n"
  parliament_gui_emblem_tt: "[GetROCPartyNameLong]\n[GetROCParliamentPartyChairmanInText]\n§Y党首：[GetROCParliamentPartyChairmanName]§!\n\n§L[GetROCPartyDesc]§!"
-
-
-
+ parliament_coalition_pp_cost: "[GetROCCoalitionPPCost]"
+ ROC_coalition_no_cost: "§G无需额外£pol_power 政治点数§!"
+ ROC_coalition_costpp: "§Y需要[?temp_pp_cost]£pol_power 政治点数§!"
+ ROC_coalition_attempt_seat: "[GetROCCoalittionSeatsNumberColorized]"
+ ROC_coalition_attempt_seat_green: "§G[GetROCCoalitionGetSupportSeats]§!"
+ ROC_coalition_attempt_seat_red: "§r[GetROCCoalitionGetSupportSeats]§!"
+ ROC_coalition_seat_text: "联盟席次"
+ ROC_coalition_half_text: "过半门槛"
+ ROC_coalition_percentage_text: "占比"
+ ROC_coalition_percentage_number: "[?temp_coalition_frame]%"
+ ROC_coalition_cost_text: "政治点数"
+ ROC_coalition_cost_number: "£pol_power [GetROCCoalitionAllPPCost]"
+ ROC_coalition_construct_status: "§W目前，我们能建立[GetROCCoalitionSeatsConstructStatus]的[GetROCCoalitionSeatsConstructStatus2]！§!"
+ parliament_super_majority_government: "§Y超级多数政府§!"
+ parliament_simple_majority_government: "§G多数政府§!"
+ parliament_less_than_half_government: "§o悬浮政府§!"
+ ROC_coalition_confirm_text: "[GetROCCoalitionEstablishmentButton]"
+ parliament_coalition_establish_avaialble: "§Y建立[GetROCCoalitionSeatsConstructStatus]的[GetROCCoalitionSeatsConstructStatus2]！§!"
+ parliament_coalition_establish_not_avaialble: "§R无法建立联盟！§!"
+ parliament_coalition_establish_trigger: "[!roc_coalition_confirm_button_click_enabled]"
  
  
  

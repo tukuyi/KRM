@@ -273,13 +273,78 @@ defined_text = {
 defined_text = {
 	name = GetROCPartiesCoalition
 	text = {
-		trigger = {
-			ROC_parliament_statist_coalition_check = yes
-		}
+		trigger = { ROC_parliament_statist_coalition_check = yes }
 		localization_key = ROCCoalitionStatistCoalition
 	}
 	text = {
+		trigger = { ROC_parliament_wuhan_coalition_check = yes }
+		localization_key = ROCCoalitionWuhanCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_xinhai_coalition_check = yes }
+		localization_key = ROCCoalitionXinhaiCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_central_reform_coalition_check = yes }
+		localization_key = ROCCoalitionCentralReformCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_progressive_coalition_check = yes }
+		localization_key = ROCCoalitionProgressiveCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_reformist_coalition_check = yes }
+		localization_key = ROCCoalitionReformistCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_great_coalition_check = yes }
+		localization_key = ROCCoalitionGreatCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_rule_alone_check = yes }
 		localization_key = ROCCoalitionRuleAlone
+	}
+	text = {
+		localization_key = ROCCoalitionUnavaialble
+	}
+}
+
+defined_text = {
+	name = GetROCCoalitionSeatsConstructStatus
+	text = {
+		trigger = { ROC_parliament_statist_coalition_check_CONSTRUCT = yes }
+		localization_key = ROCCoalitionStatistCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_wuhan_coalition_check_CONSTRUCT = yes }
+		localization_key = ROCCoalitionWuhanCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_xinhai_coalition_check_CONSTRUCT = yes }
+		localization_key = ROCCoalitionXinhaiCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_central_reform_coalition_check_CONSTRUCT = yes }
+		localization_key = ROCCoalitionCentralReformCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_progressive_coalition_check_CONSTRUCT = yes }
+		localization_key = ROCCoalitionProgressiveCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_reformist_coalition_check_CONSTRUCT = yes }
+		localization_key = ROCCoalitionReformistCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_great_coalition_check_CONSTRUCT = yes }
+		localization_key = ROCCoalitionGreatCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_rule_alone_check_CONSTRUCT = yes }
+		localization_key = ROCCoalitionRuleAlone
+	}
+	text = {
+		localization_key = ROCCoalitionUnavaialble
 	}
 }
 
@@ -287,9 +352,75 @@ defined_text = {
 	name = GetParliamentPartyCoalitionStatue
 	text = {
 		trigger = {
-			ROC_parliament_statist_coalition_check = yes
+			OR = {
+				ROC_parliament_statist_coalition_check = yes
+				ROC_parliament_statist_coalition_check_CONSTRUCT = yes
+			}
 		}
 		localization_key = GFX_ROC_parliament_statue_statist_coalition
+	}
+	text = {
+		trigger = {
+			OR = {
+				ROC_parliament_wuhan_coalition_check = yes
+				ROC_parliament_wuhan_coalition_check_CONSTRUCT = yes
+			}
+		}
+		localization_key = GFX_ROC_parliament_statue_wuhan_coalition
+	}
+	text = {
+		trigger = {
+			OR = {
+				ROC_parliament_xinhai_coalition_check = yes
+				ROC_parliament_xinhai_coalition_check_CONSTRUCT = yes
+			}
+		}
+		localization_key = GFX_ROC_parliament_statue_xinhai_coalition
+	}
+	text = {
+		trigger = {
+			OR = {
+				ROC_parliament_central_reform_coalition_check = yes
+				ROC_parliament_central_reform_coalition_check_CONSTRUCT = yes
+			}
+		}
+		localization_key = GFX_ROC_parliament_statue_central_reform_coalition
+	}
+	text = {
+		trigger = {
+			OR = {
+				ROC_parliament_progressive_coalition_check = yes
+				ROC_parliament_progressive_coalition_check_CONSTRUCT = yes
+			}
+		}
+		localization_key = GFX_ROC_parliament_statue_progressive_coalition
+	}
+	text = {
+		trigger = {
+			OR = {
+				ROC_parliament_reformist_coalition_check = yes
+				ROC_parliament_reformist_coalition_check_CONSTRUCT = yes
+			}
+		}
+		localization_key = GFX_ROC_parliament_statue_reformist_coalition
+	}
+	text = {
+		trigger = {
+			OR = {
+				ROC_parliament_great_coalition_check = yes
+				ROC_parliament_great_coalition_check_CONSTRUCT = yes
+			}
+		}
+		localization_key = GFX_ROC_parliament_statue_great_coalition
+	}
+	text = {
+		trigger = {
+			OR = {
+				ROC_parliament_rule_alone_check = yes
+				ROC_parliament_rule_alone_check_CONSTRUCT = yes
+			}
+		}
+		localization_key = GFX_ROC_parliament_statue_rule_alone
 	}
 	text = {
 		localization_key = GFX_KMD_GUI_SZC_naidesu_statue
@@ -426,5 +557,211 @@ defined_text = {
 			}
 		}
 		localization_key = "[?temp_descget.GetTokenKey]_desc"
+	}
+}
+
+defined_text = {
+	name = GetROCCoalitionAlignmentPartyBG
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = {
+					[tokenbase] = {
+						OR = {
+							check_variable = { THIS.parliament_gui_constructalig = 1 }
+							check_variable = { THIS.parliament_gui_constructalig = 2 }
+						}
+					}
+				}
+				tokenbase = "[?roc_cur_token.GetTokenKey]"
+			}
+			log = "114514"
+		}
+		localization_key = "GFX_tiled_research_bg"
+	}
+	text = {
+		trigger = {}
+		localization_key = "GFX_tiled_window_transparent"
+	}
+}
+
+defined_text = {
+	name = GetROCCoalitionPPCost
+	text = {
+		trigger = {
+			# 執政黨或聯合黨不顯示成本，顯示空
+			meta_trigger = {
+				text = {
+					[tokenbase] = {
+						NOT = {
+							check_variable = { THIS.parliament_gui_status = 3 }
+						}
+					}
+				}
+				tokenbase = "[?roc_cur_token.GetTokenKey]"
+			}
+		}
+		localization_key = ROC_coalition_no_cost
+	}
+	text = {
+		trigger = {
+			# 在野黨，計算並顯示成本
+			meta_trigger = {
+				text = {
+					[tokenbase] = {
+						check_variable = { THIS.parliament_gui_status = 3 }
+						set_temp_variable = { temp_cost_seats = THIS.parliament_gui_seats }
+					}
+				}
+				tokenbase = "[?roc_cur_token.GetTokenKey]"
+			}
+			# 公式：20 + floor(seats/10)*3
+			set_temp_variable = { temp_pp_cost = temp_cost_seats }
+			divide_temp_variable = { temp_pp_cost = 10 }
+			multiply_temp_variable = { temp_pp_cost = 3 }
+			add_to_temp_variable = { temp_pp_cost = 20 }
+		}
+		# localization_key = "[?temp_pp_cost]"
+		localization_key = ROC_coalition_costpp
+	}
+}
+
+defined_text = {
+	name = GetROCCoalitionAllPPCost
+	text = {
+		trigger = {
+			set_temp_variable = { temp_allpp_cost = 0 }
+			set_temp_variable = { temp_pp_cost = 0 }
+			all_of = {
+				array = ROC_party_tokens
+				value = roc_cur_token
+				meta_trigger = {
+					text = {
+						[tokenbase] = {
+							if = {
+								limit  = {
+									AND = {
+										check_variable = { THIS.parliament_gui_constructalig = 2 }
+										check_variable = { THIS.parliament_gui_status = 3 }
+									}
+								}
+								set_temp_variable = { temp_cost_seats = var:THIS.parliament_gui_seats }
+								log = "[?parliament_gui_seats]"
+							}
+						}
+					}
+					tokenbase = "[?roc_cur_token.GetTokenKey]"
+				}
+				# 公式：35 + floor(seats/10)*3
+				if = {
+					limit = {
+						check_variable = {
+							temp_cost_seats > 0
+						}
+					}
+					set_temp_variable = { temp_pp_cost = temp_cost_seats }
+					divide_temp_variable = { temp_pp_cost = 10 }
+					multiply_temp_variable = { temp_pp_cost = 3 }
+					add_to_temp_variable = { temp_pp_cost = 35 }
+					add_to_temp_variable = { temp_allpp_cost = temp_pp_cost }
+					set_temp_variable = { temp_pp_cost = 0 }
+					set_temp_variable = { temp_cost_seats = 0 }
+				}
+			}
+			log = "[?temp_allpp_cost]"
+		}
+		localization_key = "[?temp_allpp_cost]"
+	}
+}
+ 
+ 
+defined_text = {
+	name = GetROCCoalitionGetSupportSeats
+	text = {
+		trigger = {
+			set_temp_variable = { temp_coalition_seats = 0 }
+			all_of = {
+				array = ROC_party_tokens
+				value = roc_cur_token
+				meta_trigger = {
+					text = {
+						[tokenbase] = {
+							if = {
+								limit = {
+									OR = {
+										check_variable = {
+											THIS.parliament_gui_constructalig = 1
+										}
+										check_variable = {
+											THIS.parliament_gui_constructalig = 2
+										}
+									}
+								}
+								add_to_temp_variable = {
+									temp_coalition_seats = THIS.parliament_gui_seats
+								}
+							}
+						}
+					}
+					tokenbase = "[?roc_cur_token.GetTokenKey]"
+				}
+			}
+			set_temp_variable = { temp_coalition_frame = temp_coalition_seats }
+			divide_temp_variable = { temp_coalition_frame = 8 }
+			round_temp_variable = temp_coalition_frame
+		}
+		localization_key = "[?temp_coalition_seats]"
+	}
+}
+
+defined_text = {
+	name = GetROCCoalittionSeatsNumberColorized
+	text = {
+		trigger = {
+			check_variable = {
+				temp_coalition_seats > 400
+			}
+		}
+		localization_key = ROC_coalition_attempt_seat_green
+	}
+	text = {
+		trigger = {
+		}
+		localization_key = ROC_coalition_attempt_seat_red
+	}
+}
+
+defined_text = {
+	name = GetROCCoalitionSeatsConstructStatus2
+	text = {
+		trigger = {
+			ROC_seats_super_majority_CONSTRUCT = yes
+		}
+		localization_key = parliament_super_majority_government
+	}
+	text = {
+		trigger = {
+			ROC_seats_simple_majority_CONSTRUCT = yes
+		}
+		localization_key = parliament_simple_majority_government
+	}
+	text = {
+		localization_key = parliament_less_than_half_government
+		# localization_key = "114"
+	}
+}
+
+defined_text = {
+	name = GetROCCoalitionEstablishmentButton
+	text = {
+		trigger = {
+			ROC_coalition_available_trigger = yes
+		}
+		localization_key = parliament_coalition_establish_avaialble
+	}
+	text = {
+		trigger = {
+		}
+		localization_key = parliament_coalition_establish_not_avaialble
 	}
 }
