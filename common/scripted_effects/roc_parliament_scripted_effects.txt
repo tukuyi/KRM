@@ -408,14 +408,14 @@ ROC_parliament_update = {
         ROOT = {
             set_variable = { tempc = roc_cur_token }
             set_variable = { roc_seats = 0 }
-            # roc_frame 不再需要，删去
+            set_variable = { roc_frame = 0 }
         }
         meta_effect = {
             text = {
                 every_character = {
                     limit = { is_character = [tokenbase] }
                     set_temp_variable = { roc_seats = THIS.parliament_gui_seats }
-                    # roc_frame 不再读取，删去
+					set_temp_variable = { roc_frame = THIS.parliament_gui_frame }  # ← 恢复
                 }
             }
             tokenbase = "[?ROOT.tempc.GetTokenKey]"
@@ -426,10 +426,12 @@ ROC_parliament_update = {
                 set_temp_variable = {
                     t[idx] = [seats]          # ← 下标改为循环计数器
                 }
+				set_temp_variable = { f[idx] = [frame_val] }   # ← 新增
                 log = "[idx] [seats]"
             }
             idx   = "[?ROC_loop_index]"       # ← 原来是 roc_frame
             seats = "[?roc_seats]"
+  			frame_val = "[?roc_frame]"                         # ← 新增	
         }
     }
 	ROOT = {
@@ -467,7 +469,7 @@ ROC_parliament_update = {
 			text = {
 				resize_array = {
 					array = ROC_seat_frame
-					value = [time]
+					value = f[time]
 					size = t[time]
 				}
 			}
