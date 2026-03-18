@@ -157,16 +157,14 @@ ROC_parliament_reorder_parties = {
 }
 
 # 用法：
-#   set_temp_variable = { parliament_adjust_party = token:parliament_gui_KMT }  # 目标政党
-#   set_temp_variable = { parliament_adjust_value = 10 }  # 正数增加、负数减少
+#   set_temp_variable = { parliament_adjust_party = token:parliament_gui_KMT }
+#   set_temp_variable = { parliament_adjust_value = 10 }
 #   parliament_adjust_seats = yes
+
 parliament_adjust_seats = {
-    set_temp_variable = { target_party = parliament_adjust_party }
-    set_temp_variable = { adjust_value = parliament_adjust_value }
-    
     if = {
         limit = {
-            check_variable = { adjust_value < 0 }
+            check_variable = { parliament_adjust_value < 0 }
         }
         parliament_decrease_seats = yes
     }
@@ -177,217 +175,110 @@ parliament_adjust_seats = {
 
 # 增加政党议席（随机从其他政党抽取）
 parliament_increase_seats = {
-    set_temp_variable = { seats_to_add = parliament_adjust_value }
+    set_temp_variable = { temp_seats_remaining = var:parliament_adjust_value }
     
-    while = {
-        limit = {
-            check_variable = { seats_to_add > 0 }
-        }
-        
-        random_list = {
-            parliament_select_random_donor = {
-                weight = 1
-                parliament_select_donor_party = yes
-            }
-        }
-        
-        # 从捐献方减少1席，给目标政党增加1席
-        if = {
-            limit = {
-                set_temp_variable = { donor_party = var:parliament_selected_donor }
-                check_variable = { 
-                    donor_party > 0  # 确保找到了捐献方
-                }
-            }
-            meta_effect = {
-                text = {
-                    [donor_token] = {
-                        add_to_variable = {
-                            parliament_gui_seats = -1
-                        }
-                    }
-                    [target_token] = {
-                        add_to_variable = {
-                            parliament_gui_seats = 1
-                        }
-                    }
-                }
-                donor_token = "[?parliament_selected_donor.GetTokenKey]"
-                target_token = "[?parliament_adjust_party.GetTokenKey]"
-            }
-        }
-        
-        add_to_temp_variable = { seats_to_add = -1 }
-    }
+    parliament_transfer_seat_to_target = yes
 }
 
 # 减少政党议席（随机分配给其他政党）
 parliament_decrease_seats = {
-    # 将负数转正
-    set_temp_variable = { seats_to_remove = parliament_adjust_value }
+    set_temp_variable = { temp_seats_to_distribute = var:parliament_adjust_value }
     if = {
         limit = {
-            check_variable = { seats_to_remove < 0 }
+            check_variable = { temp_seats_to_distribute < 0 }
         }
-        multiply_temp_variable = { seats_to_remove = -1 }
+        multiply_temp_variable = { temp_seats_to_distribute = -1 }
     }
     
-    # 循环分配被减少的议席
-    while = {
+    parliament_transfer_seat_from_target = yes
+}
+
+# 从其他政党转移1席给目标政党（增加）
+parliament_transfer_seat_to_target = {
+    if = {
         limit = {
-            check_variable = { seats_to_remove > 0 }
+            check_variable = { temp_seats_remaining > 0 }
         }
-        
-        # 随机选择一个接收方政党
-        random_list = {
-            parliament_select_random_recipient = {
-                weight = 1
-                parliament_select_recipient_party = yes
-            }
-        }
-        
-        # 从目标政党减少1席，给接收方增加1席
-        if = {
-            limit = {
-                set_temp_variable = { recipient_party = parliament_selected_recipient }
-                check_variable = {
-                    recipient_party > 0
-                }
-            }
-            meta_effect = {
-                text = {
-                    [target_token] = {
-                        add_to_variable = {
-                            parliament_gui_seats = -1
-                        }
-                    }
-                    [recipient_token] = {
-                        add_to_variable = {
-                            parliament_gui_seats = 1
-                        }
-                    }
-                }
-                target_token = "[?parliament_adjust_party.GetTokenKey]"
-                recipient_token = "[?parliament_selected_recipient.GetTokenKey]"
-            }
-        }
-        
-        add_to_temp_variable = { seats_to_remove = -1 }
+		set_temp_variable = { temp_select_party = 0 }
+		while_loop_effect = {
+			limit = {
+				check_variable = { temp_seats_remaining > 0 }
+			}
+			set_temp_variable_to_random = {
+				var = temp_select_party
+				min = 1
+				max = var:ROC_parties_max
+				integer = yes
+			}
+			add_to_temp_variable = { temp_select_party = -1 }
+			meta_effect = {
+				text = {
+					[tokenbase] = {
+						limit = {
+							check_variable = { THIS.parliament_gui_seats > 0 }
+							NOT = { check_variable = { THIS.parliament_gui_party = var:parliament_adjust_party } }
+						}
+						add_to_variable = { parliament_gui_seats = -1 }
+						PREV = {
+							[target_party] = {
+                                add_to_variable = { parliament_gui_seats = 1 }
+							}
+						}
+					}
+				}
+				tokenbase = "ROC_party_tokens^temp_select_party"
+				target_party = "[?parliament_adjust_party.GetTokenKey]"
+			}
+			add_to_temp_variable = { temp_seats_remaining = -1 }
+		}
     }
 }
 
-# 从活跃政党中随机选择一个捐献方（不能是目标政党）
-parliament_select_donor_party = {
-    set_temp_variable = { parliament_selected_donor = 0 }
-    set_temp_variable = { selection_attempts = 0 }
-    
-    while = {
+# 从目标政党转移1席给其他政党（减少）
+parliament_transfer_seat_from_target = {
+    if = {
         limit = {
-            check_variable = { parliament_selected_donor = 0 }
-            check_variable = { selection_attempts < 20 }  # 防止无限循环
+            check_variable = { temp_seats_to_distribute > 0 }
         }
-        
-        # 随机选择数组中的一个政党
-        random_list = {
-            parliament_pick_random = {
-                weight = 1
-                for_each_loop = {
-                    array = ROC_party_tokens
-                    value = roc_random_token
-                    meta_effect = {
-                        text = {
-                            set_temp_variable = { temp_selected_token = [tokenbase] }
-                        }
-                        tokenbase = "token:[?roc_random_token.GetTokenKey]"
-                    }
-                }
-            }
-        }
-        
-        # 检查选中的党派是否有议席且不是目标政党
-        meta_trigger = {
-            text = {
-                [tokenbase] = {
-                    OR = {
-                        check_variable = {
-                            parliament_gui_status = 2  # 联合党
-                        }
-                        check_variable = {
-                            parliament_gui_status = 3  # 在野党
-                        }
-                    }
-                    check_variable = {
-                        parliament_gui_seats > 0
-                    }
-                    NOT = {
-                        check_variable = {
-                            parliament_gui_party = parliament_adjust_party
-                        }
-                    }
-                }
-            }
-            tokenbase = "[?temp_selected_token.GetTokenKey]"
-        }
-        meta_effect = {
-            text = {
-                set_temp_variable = { parliament_selected_donor = [tokenbase] }
-            }
-            tokenbase = "token:[?temp_selected_token.GetTokenKey]"
-        }
-        
-        add_to_temp_variable = { selection_attempts = 1 }
-    }
-}
-
-# 随机选择一个接收方政党（不能是目标政党）
-parliament_select_recipient_party = {
-    set_temp_variable = { parliament_selected_recipient = 0 }
-    set_temp_variable = { selection_attempts = 0 }
-    
-    while = {
-        limit = {
-            check_variable = { parliament_selected_recipient = 0 }
-            check_variable = { selection_attempts < 20 }
-        }
-        
-        # 随机选择数组中的一个政党
-        random_list = {
-            parliament_pick_random_recipient = {
-                weight = 1
-                for_each_loop = {
-                    array = ROC_party_tokens
-                    value = roc_random_token
-                    meta_effect = {
-                        text = {
-                            set_temp_variable = { temp_selected_recipient = [tokenbase] }
-                        }
-                        tokenbase = "token:[?roc_random_token.GetTokenKey]"
-                    }
-                }
-            }
-        }
-        
-        # 检查选中的党派不是目标政党
-        meta_trigger = {
-            text = {
-                [tokenbase] = {
-                    NOT = {
-                        check_variable = {
-                            parliament_gui_party = var:parliament_adjust_party
-                        }
-                    }
-                }
-            }
-            tokenbase = "[?temp_selected_recipient.GetTokenKey]"
-        }
-        meta_effect = {
-            text = {
-                set_temp_variable = { parliament_selected_recipient = [tokenbase] }
-            }
-            tokenbase = "token:[?temp_selected_recipient.GetTokenKey]"
-        }
-        
-        add_to_temp_variable = { selection_attempts = 1 }
+		set_temp_variable = { temp_select_party = 0 }
+		while_loop_effect = {
+			limit = {
+				check_variable = { temp_seats_to_distribute > 0 }
+				meta_trigger = {
+					text = {
+						[tokenbase] = {
+							check_variable = { THIS.parliament_gui_seats > 0 }
+						}
+					}
+					tokenbase = "[?parliament_adjust_party.GetTokenKey]"
+				}
+			}
+			set_temp_variable_to_random = {
+				var = temp_select_party
+				min = 1
+				max = var:ROC_parties_max
+				integer = yes
+			}
+			add_to_temp_variable = { temp_select_party = -1 }
+			meta_effect = {
+				text = {
+					[tokenbase] = {
+						limit = {
+							NOT = { check_variable = { THIS.parliament_gui_party = var:parliament_adjust_party } }
+						}
+						add_to_variable = { parliament_gui_seats = 1 }
+						PREV = {
+							[target_party] = {
+                                add_to_variable = { parliament_gui_seats = -1 }
+							}
+						}
+					}
+				}
+				tokenbase = "ROC_party_tokens^temp_select_party"
+				target_party = "[?parliament_adjust_party.GetTokenKey]"
+			}
+			add_to_temp_variable = { temp_seats_to_distribute = -1 }
+		}
     }
 }
 
