@@ -193,6 +193,7 @@ scripted_gui = {
 									set_variable = {
 										parliament_gui_constructalig = 2
 									}
+									sound_effect = "pen2"
 								}
 							}
 						}
@@ -204,7 +205,7 @@ scripted_gui = {
 			# 確認組建（扣 PP、設旗標、關閉視窗）
 			roc_coalition_confirm_button_click = {
 				ROOT = { ROC_coalition_complete = yes }
-				
+				sound_effect = "pen1"
 				clr_country_flag = open_roc_coalition_gui
 				set_country_flag = open_roc_parliament_gui
 			}
