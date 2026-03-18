@@ -133,22 +133,21 @@ ROC_parliament_reorder_parties = {
     for_each_loop = {
         array = ROC_party_tokens
         value = roc_cur_token
-        meta_trigger = {
+        meta_effect = {
             text = {
                 [tokenbase] = {
-                    check_variable = {
-                        THIS.parliament_gui_status = 1
-                    }
+					if = {
+						limit = {
+							check_variable = {
+								THIS.parliament_gui_status = 1
+							}
+						}
+						add_to_array = { temp_ROC_party_tokens_reordered = var:parliament_gui_party }
+						set_temp_variable = { ruling_party_found = 1 }
+					}
                 }
             }
             tokenbase = "[?roc_cur_token.GetTokenKey]"
-        }
-        meta_effect = {
-            text = {
-                add_to_array = { temp_ROC_party_tokens_reordered = [tokenbase] }
-                set_temp_variable = { ruling_party_found = 1 }
-            }
-            tokenbase = "token:[?roc_cur_token.GetTokenKey]"
         }
     }
     
@@ -159,18 +158,17 @@ ROC_parliament_reorder_parties = {
         meta_trigger = {
             text = {
                 [tokenbase] = {
-                    check_variable = {
-                        THIS.parliament_gui_status = 2
-                    }
+					if = {
+						limit = {
+							check_variable = {
+								THIS.parliament_gui_status = 2
+							}
+						}
+						add_to_array = { temp_ROC_party_tokens_reordered = var:parliament_gui_party }
+					}
                 }
             }
             tokenbase = "[?roc_cur_token.GetTokenKey]"
-        }
-        meta_effect = {
-            text = {
-                add_to_array = { temp_ROC_party_tokens_reordered = [tokenbase] }
-            }
-            tokenbase = "token:[?roc_cur_token.GetTokenKey]"
         }
     }
     
@@ -181,32 +179,26 @@ ROC_parliament_reorder_parties = {
         meta_trigger = {
             text = {
                 [tokenbase] = {
-                    check_variable = {
-                        THIS.parliament_gui_status = 3
-                    }
+					if = {
+						limit = {
+							check_variable = {
+								THIS.parliament_gui_status = 3
+							}
+						}
+						add_to_array = { temp_ROC_party_tokens_reordered = var:parliament_gui_party }
+					}
                 }
             }
             tokenbase = "[?roc_cur_token.GetTokenKey]"
         }
-        meta_effect = {
-            text = {
-                add_to_array = { temp_ROC_party_tokens_reordered = [tokenbase] }
-            }
-            tokenbase = "token:[?roc_cur_token.GetTokenKey]"
-        }
     }
     
     # 第四步：用排序后的数组替换原数组
-    clear_array = ROC_party_tokens
+    clear_array = ROOT.ROC_party_tokens
     for_each_loop = {
         array = temp_ROC_party_tokens_reordered
         value = temp_roc_token
-        meta_effect = {
-            text = {
-                add_to_array = { ROC_party_tokens = [tokenbase] }
-            }
-            tokenbase = "token:[?temp_roc_token.GetTokenKey]"
-        }
+        add_to_array = { ROC_party_tokens = var:temp_roc_token }
     }
     
     # 清理临时数组
@@ -2163,9 +2155,11 @@ ROC_init_parliament_positions = {
 ROC_init_parliament = {
 	ROC_register_parties = yes
 	ROC_init_parliament_positions = yes
+	set_country_flag = open_roc_parliament_gui
 }
 
 ROC_init_coalition_construct = {
+	set_country_flag = open_roc_coalition_gui
 	set_temp_variable = { tempc = 0 }
 	for_each_loop = {
 		array = ROC_party_tokens
@@ -2215,8 +2209,7 @@ ROC_coalition_complete = {
 		}
 		meta_effect = {
 			text = {
-				every_character = {
-					limit = { is_character = [tokenbase] }
+				[tokenbase] = {
 					if = {
 						limit = {
 							check_variable = {
@@ -2238,6 +2231,7 @@ ROC_coalition_complete = {
 						clear_variable = parliament_gui_constructalig
 						set_temp_variable = { coalition_partner_var = var:parliament_gui_ideology }
 						add_to_coalition = yes
+						log = "1145141"
 					}
 					else_if = {
 						limit = {
@@ -2265,6 +2259,6 @@ ROC_coalition_complete = {
 		}
 		pp = "-[GetROCCoalitionAllPPCost]"
 	}
-	ROC_parliament_reorder_parties = yes
+	# ROC_parliament_reorder_parties = yes
 	ROC_parliament_update = yes
 }

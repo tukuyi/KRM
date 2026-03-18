@@ -273,8 +273,24 @@ defined_text = {
 defined_text = {
 	name = GetROCPartiesCoalition
 	text = {
-		trigger = { ROC_parliament_statist_coalition_check = yes }
-		localization_key = ROCCoalitionStatistCoalition
+		trigger = { ROC_parliament_rule_alone_check = yes }
+		localization_key = ROCCoalitionRuleAlone
+	}
+	text = {
+		trigger = { ROC_parliament_great_coalition_check = yes }
+		localization_key = ROCCoalitionGreatCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_reformist_coalition_check = yes }
+		localization_key = ROCCoalitionReformistCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_progressive_coalition_check = yes }
+		localization_key = ROCCoalitionProgressiveCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_central_reform_coalition_check = yes }
+		localization_key = ROCCoalitionCentralReformCoalition
 	}
 	text = {
 		trigger = { ROC_parliament_wuhan_coalition_check = yes }
@@ -285,24 +301,8 @@ defined_text = {
 		localization_key = ROCCoalitionXinhaiCoalition
 	}
 	text = {
-		trigger = { ROC_parliament_central_reform_coalition_check = yes }
-		localization_key = ROCCoalitionCentralReformCoalition
-	}
-	text = {
-		trigger = { ROC_parliament_progressive_coalition_check = yes }
-		localization_key = ROCCoalitionProgressiveCoalition
-	}
-	text = {
-		trigger = { ROC_parliament_reformist_coalition_check = yes }
-		localization_key = ROCCoalitionReformistCoalition
-	}
-	text = {
-		trigger = { ROC_parliament_great_coalition_check = yes }
-		localization_key = ROCCoalitionGreatCoalition
-	}
-	text = {
-		trigger = { ROC_parliament_rule_alone_check = yes }
-		localization_key = ROCCoalitionRuleAlone
+		trigger = { ROC_parliament_statist_coalition_check = yes }
+		localization_key = ROCCoalitionStatistCoalition
 	}
 	text = {
 		localization_key = ROCCoalitionUnavaialble
@@ -312,8 +312,24 @@ defined_text = {
 defined_text = {
 	name = GetROCCoalitionSeatsConstructStatus
 	text = {
-		trigger = { ROC_parliament_statist_coalition_check_CONSTRUCT = yes }
-		localization_key = ROCCoalitionStatistCoalition
+		trigger = { ROC_parliament_rule_alone_check_CONSTRUCT = yes }
+		localization_key = ROCCoalitionRuleAlone
+	}
+	text = {
+		trigger = { ROC_parliament_great_coalition_check_CONSTRUCT = yes }
+		localization_key = ROCCoalitionGreatCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_reformist_coalition_check_CONSTRUCT = yes }
+		localization_key = ROCCoalitionReformistCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_progressive_coalition_check_CONSTRUCT = yes }
+		localization_key = ROCCoalitionProgressiveCoalition
+	}
+	text = {
+		trigger = { ROC_parliament_central_reform_coalition_check_CONSTRUCT = yes }
+		localization_key = ROCCoalitionCentralReformCoalition
 	}
 	text = {
 		trigger = { ROC_parliament_wuhan_coalition_check_CONSTRUCT = yes }
@@ -324,24 +340,8 @@ defined_text = {
 		localization_key = ROCCoalitionXinhaiCoalition
 	}
 	text = {
-		trigger = { ROC_parliament_central_reform_coalition_check_CONSTRUCT = yes }
-		localization_key = ROCCoalitionCentralReformCoalition
-	}
-	text = {
-		trigger = { ROC_parliament_progressive_coalition_check_CONSTRUCT = yes }
-		localization_key = ROCCoalitionProgressiveCoalition
-	}
-	text = {
-		trigger = { ROC_parliament_reformist_coalition_check_CONSTRUCT = yes }
-		localization_key = ROCCoalitionReformistCoalition
-	}
-	text = {
-		trigger = { ROC_parliament_great_coalition_check_CONSTRUCT = yes }
-		localization_key = ROCCoalitionGreatCoalition
-	}
-	text = {
-		trigger = { ROC_parliament_rule_alone_check_CONSTRUCT = yes }
-		localization_key = ROCCoalitionRuleAlone
+		trigger = { ROC_parliament_statist_coalition_check_CONSTRUCT = yes }
+		localization_key = ROCCoalitionStatistCoalition
 	}
 	text = {
 		localization_key = ROCCoalitionUnavaialble

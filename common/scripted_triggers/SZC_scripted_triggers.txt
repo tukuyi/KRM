@@ -659,6 +659,34 @@ ROC_parliament_reformist_coalition_check_CONSTRUCT = {
 	}
 }
 
+ROC_parliament_great_coalition_check = {
+	parliament_gui_YCPCPAC = {
+		check_variable = {
+			THIS.parliament_gui_status = 1
+		}
+	}
+	parliament_gui_NSPPSC = {
+		check_variable = {
+			THIS.parliament_gui_status = 2
+		}
+	}
+	parliament_gui_REP = {
+		check_variable = {
+			THIS.parliament_gui_status = 2
+		}
+	}
+	parliament_gui_PIP = {
+		check_variable = {
+			THIS.parliament_gui_status = 2
+		}
+	}
+	parliament_gui_DLP = {
+		check_variable = {
+			THIS.parliament_gui_status = 2
+		}
+	}
+}
+
 ROC_parliament_great_coalition_check_CONSTRUCT = {
 	set_temp_variable = { temp_not_coalition_avaialble = 0 }
 	parliament_gui_YCPCPAC = {
