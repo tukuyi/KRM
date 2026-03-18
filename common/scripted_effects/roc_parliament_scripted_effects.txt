@@ -18,7 +18,7 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 1 }
 		set_variable = { parliament_gui_party = token:parliament_gui_YCPCPAC }
 		set_variable = { parliament_gui_chairman = token:SZC_zhao_yusong }
-		set_variable = { parliament_gui_ideology = token:authoritatrian_democrat }
+		set_variable = { parliament_gui_ideology = token:authoritarian_democrat }
 	}
 
 	# 國家社會黨 - PSC —— frame 2, 112席
@@ -282,12 +282,6 @@ parliament_transfer_seat_from_target = {
 				integer = yes
 			}
 			add_to_temp_variable = { temp_select_party = -1 }
-			meta_effect = {
-				text = {
-					set_temp_variable = { temp_current_party = var:ROC_party_tokens^[tokenbase] }
-				}
-				tokenbase = "[?temp_select_party]"
-			}
 			meta_effect = {
 				text = {
 					set_temp_variable = { temp_current_party = var:ROC_party_tokens^[tokenbase] }
