@@ -229,11 +229,48 @@ ROC_seats_simple_majority_CONSTRUCT = {
 }
 
 ROC_parliament_rule_alone_check = {
-	NOT = {
-		any_character = {
+	set_temp_variable = { temp_not_coalition_avaialble = 0 }
+	OR = {
+		parliament_gui_YCP = {
 			check_variable = {
-				THIS.parliament_gui_status = 2
+				THIS.parliament_gui_status = 1
 			}
+		}
+		parliament_gui_YCPCPAC = {
+			check_variable = {
+				THIS.parliament_gui_status = 1
+			}
+		}
+	}
+	all_of = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		meta_trigger = {
+			text = {
+				[tokenbase] = {
+					if = {
+						limit = {
+							NOT = {
+								OR = {
+									is_character = parliament_gui_YCP
+									is_character = parliament_gui_YCPCPAC
+								}
+							}
+							check_variable = {
+								THIS.parliament_gui_status = 2
+							}
+						}
+						set_temp_variable = { temp_not_coalition_avaialble = 1 }
+						log = "[?parliament_gui_seats]"
+					}
+				}
+			}
+			tokenbase = "[?roc_cur_token.GetTokenKey]"
+		}
+	}
+	NOT = {
+		check_variable = {
+			temp_not_coalition_avaialble = 1
 		}
 	}
 }

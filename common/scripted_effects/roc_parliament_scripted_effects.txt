@@ -173,10 +173,6 @@ parliament_adjust_seats = {
     else = {
         parliament_increase_seats = yes
     }
-    
-    # 清理临时变量
-    clear_temp_variable = target_party
-    clear_temp_variable = adjust_value
 }
 
 # 增加政党议席（随机从其他政党抽取）
