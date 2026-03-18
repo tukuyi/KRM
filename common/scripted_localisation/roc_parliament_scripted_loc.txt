@@ -353,11 +353,47 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = {
-				ROC_parliament_statist_coalition_check = yes
-				ROC_parliament_statist_coalition_check_CONSTRUCT = yes
+				ROC_parliament_rule_alone_check = yes
+				ROC_parliament_rule_alone_check_CONSTRUCT = yes
 			}
 		}
-		localization_key = GFX_ROC_parliament_statue_statist_coalition
+		localization_key = GFX_ROC_parliament_statue_rule_alone
+	}
+	text = {
+		trigger = {
+			OR = {
+				ROC_parliament_great_coalition_check = yes
+				ROC_parliament_great_coalition_check_CONSTRUCT = yes
+			}
+		}
+		localization_key = GFX_ROC_parliament_statue_great_coalition
+	}
+	text = {
+		trigger = {
+			OR = {
+				ROC_parliament_reformist_coalition_check = yes
+				ROC_parliament_reformist_coalition_check_CONSTRUCT = yes
+			}
+		}
+		localization_key = GFX_ROC_parliament_statue_reformist_coalition
+	}
+	text = {
+		trigger = {
+			OR = {
+				ROC_parliament_progressive_coalition_check = yes
+				ROC_parliament_progressive_coalition_check_CONSTRUCT = yes
+			}
+		}
+		localization_key = GFX_ROC_parliament_statue_progressive_coalition
+	}
+	text = {
+		trigger = {
+			OR = {
+				ROC_parliament_central_reform_coalition_check = yes
+				ROC_parliament_central_reform_coalition_check_CONSTRUCT = yes
+			}
+		}
+		localization_key = GFX_ROC_parliament_statue_central_reform_coalition
 	}
 	text = {
 		trigger = {
@@ -380,47 +416,11 @@ defined_text = {
 	text = {
 		trigger = {
 			OR = {
-				ROC_parliament_central_reform_coalition_check = yes
-				ROC_parliament_central_reform_coalition_check_CONSTRUCT = yes
+				ROC_parliament_statist_coalition_check = yes
+				ROC_parliament_statist_coalition_check_CONSTRUCT = yes
 			}
 		}
-		localization_key = GFX_ROC_parliament_statue_central_reform_coalition
-	}
-	text = {
-		trigger = {
-			OR = {
-				ROC_parliament_progressive_coalition_check = yes
-				ROC_parliament_progressive_coalition_check_CONSTRUCT = yes
-			}
-		}
-		localization_key = GFX_ROC_parliament_statue_progressive_coalition
-	}
-	text = {
-		trigger = {
-			OR = {
-				ROC_parliament_reformist_coalition_check = yes
-				ROC_parliament_reformist_coalition_check_CONSTRUCT = yes
-			}
-		}
-		localization_key = GFX_ROC_parliament_statue_reformist_coalition
-	}
-	text = {
-		trigger = {
-			OR = {
-				ROC_parliament_great_coalition_check = yes
-				ROC_parliament_great_coalition_check_CONSTRUCT = yes
-			}
-		}
-		localization_key = GFX_ROC_parliament_statue_great_coalition
-	}
-	text = {
-		trigger = {
-			OR = {
-				ROC_parliament_rule_alone_check = yes
-				ROC_parliament_rule_alone_check_CONSTRUCT = yes
-			}
-		}
-		localization_key = GFX_ROC_parliament_statue_rule_alone
+		localization_key = GFX_ROC_parliament_statue_statist_coalition
 	}
 	text = {
 		localization_key = GFX_KMD_GUI_SZC_naidesu_statue
