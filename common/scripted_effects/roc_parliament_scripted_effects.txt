@@ -125,84 +125,35 @@ ROC_register_parties = {
 
 
 ROC_parliament_reorder_parties = {
-    # 创建临时数组存储排序后的结果
-    clear_array = temp_ROC_party_tokens_reordered
-    
-    # 第一步：找到执政党并添加到临时数组
-    set_temp_variable = { ruling_party_found = 0 }
-    for_each_loop = {
-        array = ROC_party_tokens
-        value = roc_cur_token
-        meta_effect = {
-            text = {
-                [tokenbase] = {
-					if = {
-						limit = {
-							check_variable = {
-								THIS.parliament_gui_status = 1
-							}
-						}
-						add_to_array = { temp_ROC_party_tokens_reordered = var:parliament_gui_party }
-						set_temp_variable = { ruling_party_found = 1 }
-					}
-                }
-            }
-            tokenbase = "[?roc_cur_token.GetTokenKey]"
-        }
-    }
-    
-    # 第二步：添加所有联合党派
-    for_each_loop = {
-        array = ROC_party_tokens
-        value = roc_cur_token
-        meta_trigger = {
-            text = {
-                [tokenbase] = {
-					if = {
-						limit = {
-							check_variable = {
-								THIS.parliament_gui_status = 2
-							}
-						}
-						add_to_array = { temp_ROC_party_tokens_reordered = var:parliament_gui_party }
-					}
-                }
-            }
-            tokenbase = "[?roc_cur_token.GetTokenKey]"
-        }
-    }
-    
-    # 第三步：添加所有在野党
-    for_each_loop = {
-        array = ROC_party_tokens
-        value = roc_cur_token
-        meta_trigger = {
-            text = {
-                [tokenbase] = {
-					if = {
-						limit = {
-							check_variable = {
-								THIS.parliament_gui_status = 3
-							}
-						}
-						add_to_array = { temp_ROC_party_tokens_reordered = var:parliament_gui_party }
-					}
-                }
-            }
-            tokenbase = "[?roc_cur_token.GetTokenKey]"
-        }
-    }
-    
-    # 第四步：用排序后的数组替换原数组
     clear_array = ROOT.ROC_party_tokens
-    for_each_loop = {
-        array = temp_ROC_party_tokens_reordered
-        value = temp_roc_token
-        add_to_array = { ROC_party_tokens = var:temp_roc_token }
-    }
     
-    # 清理临时数组
-    clear_array = temp_ROC_party_tokens_reordered
+    set_temp_variable = { ruling_party_found = 0 }
+	every_character = {
+		limit = {
+			check_variable = {
+				THIS.parliament_gui_status = 1
+			}
+		}
+		add_to_array = { ROOT.ROC_party_tokens = var:parliament_gui_party }
+		set_temp_variable = { ruling_party_found = 1 }
+	}
+	every_character = {
+		limit = {
+			check_variable = {
+				THIS.parliament_gui_status = 2
+			}
+		}
+		add_to_array = { ROOT.ROC_party_tokens = var:parliament_gui_party }
+	}
+    
+	every_character = {
+		limit = {
+			check_variable = {
+				THIS.parliament_gui_status = 3
+			}
+		}
+		add_to_array = { ROOT.ROC_party_tokens = var:parliament_gui_party }
+	}
 }
 
 # 用法：
@@ -2160,97 +2111,73 @@ ROC_init_parliament = {
 
 ROC_init_coalition_construct = {
 	set_country_flag = open_roc_coalition_gui
-	set_temp_variable = { tempc = 0 }
-	for_each_loop = {
-		array = ROC_party_tokens
-		value = roc_cur_token
-		ROOT = {
-			set_variable = { tempc = roc_cur_token }
-		}
-		meta_effect = {
-			text = {
-				every_character = {
-					limit = { is_character = [tokenbase] }
-					if = {
-						limit = {
-							check_variable = {
-								THIS.parliament_gui_status = 1
-							}
-						}
-						set_variable = { parliament_gui_constructalig = 1 }
-						set_variable = { parliament_gui_interacted = 1 }
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								THIS.parliament_gui_status = 2
-							}
-						}
-						set_variable = { parliament_gui_constructalig = 2 }
-						set_variable = { parliament_gui_interacted = 1 }
-					}
+	every_character = {
+		if = {
+			limit = {
+				check_variable = {
+					THIS.parliament_gui_status = 1
 				}
 			}
-			tokenbase = "[?ROOT.tempc.GetTokenKey]"
+			set_variable = { parliament_gui_constructalig = 1 }
+			set_variable = { parliament_gui_interacted = 1 }
 		}
-		ROOT = {
-			set_variable = { tempc = 0 }
+		else_if = {
+			limit = {
+				check_variable = {
+					THIS.parliament_gui_status = 2
+				}
+			}
+			set_variable = { parliament_gui_constructalig = 2 }
+			set_variable = { parliament_gui_interacted = 1 }
 		}
 	}
 }
 
 ROC_coalition_complete = {
 	set_temp_variable = { tempc = 0 }
-	for_each_loop = {
-		array = ROC_party_tokens
-		value = roc_cur_token
-		ROOT = {
-			set_variable = { tempc = roc_cur_token }
-		}
-		meta_effect = {
-			text = {
-				[tokenbase] = {
-					if = {
-						limit = {
-							check_variable = {
-								THIS.parliament_gui_constructalig = 1
-							}
-						}
-						set_variable = { parliament_gui_status = 1 }
-						clear_variable = parliament_gui_interacted
-						clear_variable = parliament_gui_constructalig
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								THIS.parliament_gui_constructalig = 2
-							}
-						}
-						set_variable = { parliament_gui_status = 2 }
-						clear_variable = parliament_gui_interacted
-						clear_variable = parliament_gui_constructalig
-						set_temp_variable = { coalition_partner_var = var:parliament_gui_ideology }
-						add_to_coalition = yes
-						log = "1145141"
-					}
-					else_if = {
-						limit = {
-							check_variable = {
-								THIS.parliament_gui_constructalig = 3
-							}
-						}
-						set_variable = { parliament_gui_status = 3 }
-						clear_variable = parliament_gui_interacted
-						clear_variable = parliament_gui_constructalig
-						set_temp_variable = { coalition_partner_var = var:parliament_gui_ideology }
-						remove_from_coalition = yes
-					}
+	every_character = {
+		limit = {
+			NOT = {
+				check_variable = {
+					parliament_gui_status = 0
 				}
 			}
-			tokenbase = "[?ROOT.tempc.GetTokenKey]"
 		}
-		ROOT = {
-			set_variable = { tempc = 0 }
+		
+		if = {
+			limit = {
+				check_variable = {
+					THIS.parliament_gui_constructalig = 1
+				}
+			}
+			set_variable = { parliament_gui_status = 1 }
+			set_variable = { parliament_gui_interacted = 0 }
+			set_variable = { parliament_gui_constructalig = 0 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					THIS.parliament_gui_constructalig = 2
+				}
+			}
+			set_variable = { parliament_gui_status = 2 }
+			set_variable = { parliament_gui_interacted = 0 }
+			set_variable = { parliament_gui_constructalig = 0 }
+			set_temp_variable = { coalition_partner_var = var:parliament_gui_ideology }
+			add_to_coalition = yes
+			log = "1145141"
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					THIS.parliament_gui_constructalig = 3
+				}
+			}
+			set_variable = { parliament_gui_status = 3 }
+			set_variable = { parliament_gui_interacted = 0 }
+			set_variable = { parliament_gui_constructalig = 0 }
+			set_temp_variable = { coalition_partner_var = var:parliament_gui_ideology }
+			remove_from_coalition = yes
 		}
 	}
 	meta_effect = {
@@ -2259,6 +2186,6 @@ ROC_coalition_complete = {
 		}
 		pp = "-[GetROCCoalitionAllPPCost]"
 	}
-	# ROC_parliament_reorder_parties = yes
+	ROC_parliament_reorder_parties = yes
 	ROC_parliament_update = yes
 }
