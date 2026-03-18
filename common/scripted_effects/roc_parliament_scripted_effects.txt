@@ -397,41 +397,48 @@ parliament_select_recipient_party = {
 
 ROC_parliament_update = {
 	set_temp_variable = { tempc = 0 }
-	for_each_loop = {
-		array = ROC_party_tokens
-		value = roc_cur_token
-		ROOT = {
-			set_variable = { tempc = roc_cur_token }
-			set_variable = { roc_seats = 0 }
-			set_variable = { roc_frame = 0 }
-		}
-		meta_effect = {
-			text = {
-				every_character = {
-					limit = { is_character = [tokenbase] }
-					set_temp_variable = { roc_frame = THIS.parliament_gui_frame }
-					set_temp_variable = { roc_seats = THIS.parliament_gui_seats }
-				}
-			}
-			tokenbase = "[?ROOT.tempc.GetTokenKey]"
-		}
-		log = "[tokenbase]: seats = [?roc_seats], frame = [?roc_frame]"
-		meta_effect = {
-			text = {
-				set_temp_variable = {
-					t[tier] = [party]
-				}
-				log = "[tier] [party]"
-			}
-			tier = "[?roc_frame]"
-			party = "[?roc_seats]"
-		}
-		ROOT = {
-			clear_variable = ROOT.tempc
-			clear_variable = roc_seats
-			clear_variable = roc_frame
-		}
+    set_temp_variable = { ROC_loop_index = 0 }          # ← 新增：手动计数器
+
+    for_each_loop = {
+        array = ROC_party_tokens
+        value = roc_cur_token
+
+        add_to_temp_variable = { ROC_loop_index = 1 }   # ← 新增：每轮递增
+
+        ROOT = {
+            set_variable = { tempc = roc_cur_token }
+            set_variable = { roc_seats = 0 }
+            # roc_frame 不再需要，删去
+        }
+        meta_effect = {
+            text = {
+                every_character = {
+                    limit = { is_character = [tokenbase] }
+                    set_temp_variable = { roc_seats = THIS.parliament_gui_seats }
+                    # roc_frame 不再读取，删去
+                }
+            }
+            tokenbase = "[?ROOT.tempc.GetTokenKey]"
+        }
+        log = "[tokenbase]: seats = [?roc_seats]"
+        meta_effect = {
+            text = {
+                set_temp_variable = {
+                    t[idx] = [seats]          # ← 下标改为循环计数器
+                }
+                log = "[idx] [seats]"
+            }
+            idx   = "[?ROC_loop_index]"       # ← 原来是 roc_frame
+            seats = "[?roc_seats]"
+        }
+    }
+	ROOT = {
+		clear_variable = ROOT.tempc
+		clear_variable = roc_seats
+		# clear roc_frame 也删去
 	}
+
+    # 以下不变 ↓
 	log = "[?t1] [?t2] [?t3] [?t4] [?t5] [?t6] [?t7] [?t8] [?t9] [?t10]"
 
 	add_to_temp_variable = { t2 = t1 }
