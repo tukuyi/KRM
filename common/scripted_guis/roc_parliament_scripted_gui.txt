@@ -1,6 +1,36 @@
 scripted_gui = {
 	
 
+	roc_parliament_trigger_button = {
+		window_name = "roc_parliament_trigger_button"
+		context_type = player_context
+		parent_window_token = politics_tab
+		
+
+		visible = {
+			# has_country_flag = 
+			always = yes
+		}
+
+		effects = {
+			roc_parliament_trigger_button_realone_click = {
+				if = {
+					limit = {
+						has_country_flag = open_roc_parliament_gui
+					}
+					clr_country_flag = open_roc_parliament_gui
+				}
+				else = {
+					set_country_flag = open_roc_parliament_gui
+				}
+			}
+		}
+		properties = {
+			
+		}
+	}
+	
+
 	roc_parliament_scripted_gui_special_under_bg_gui = {
 		window_name = "roc_parliament_scripted_gui_special_under_bg_gui"
 		context_type = player_context
