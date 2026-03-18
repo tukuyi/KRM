@@ -122,8 +122,6 @@ ROC_register_parties = {
 }
 
 
-
-
 ROC_parliament_reorder_parties = {
     clear_array = ROOT.ROC_party_tokens
     
@@ -154,6 +152,13 @@ ROC_parliament_reorder_parties = {
 		}
 		add_to_array = { ROOT.ROC_party_tokens = var:parliament_gui_party }
 	}
+}
+
+
+DEBUG_ROC_parliament_remove_YCPCPAC_seats = {
+  set_temp_variable = { parliament_adjust_party = token:parliament_gui_YCPCPAC }
+  set_temp_variable = { parliament_adjust_value = -10 }
+  parliament_adjust_seats = yes
 }
 
 # 用法：
