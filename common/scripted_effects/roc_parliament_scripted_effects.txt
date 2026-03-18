@@ -157,7 +157,7 @@ ROC_parliament_reorder_parties = {
 
 DEBUG_ROC_parliament_remove_YCPCPAC_seats = {
   set_temp_variable = { parliament_adjust_party = token:parliament_gui_YCPCPAC }
-  set_temp_variable = { parliament_adjust_value = -10 }
+  set_temp_variable = { parliament_adjust_value = -30 }
   parliament_adjust_seats = yes
 }
 
@@ -176,6 +176,7 @@ parliament_adjust_seats = {
     else = {
         parliament_increase_seats = yes
     }
+	ROC_parliament_update = yes
 }
 
 # 增加政党议席（随机从其他政党抽取）
@@ -209,32 +210,46 @@ parliament_transfer_seat_to_target = {
 			limit = {
 				check_variable = { temp_seats_remaining > 0 }
 			}
+			set_temp_variable = { temp_parties_num = var:ROC_parties_max }
+			add_to_temp_variable = { temp_parties_num = 1 }
 			set_temp_variable_to_random = {
 				var = temp_select_party
 				min = 1
-				max = var:ROC_parties_max
+				max = var:temp_parties_num
 				integer = yes
 			}
 			add_to_temp_variable = { temp_select_party = -1 }
 			meta_effect = {
 				text = {
+					set_temp_variable = { temp_current_party = var:ROC_party_tokens^[tokenbase] }
+				}
+				tokenbase = "[?temp_select_party]"
+			}
+			meta_effect = {
+				text = {
 					[tokenbase] = {
-						limit = {
-							check_variable = { THIS.parliament_gui_seats > 0 }
-							NOT = { check_variable = { THIS.parliament_gui_party = var:parliament_adjust_party } }
-						}
-						add_to_variable = { parliament_gui_seats = -1 }
-						PREV = {
-							[target_party] = {
-                                add_to_variable = { parliament_gui_seats = 1 }
+						if = {
+							limit = {
+								check_variable = { THIS.parliament_gui_seats > 0 }
+								NOT = { check_variable = { THIS.parliament_gui_party = [target_party_token] } }
+							}
+							add_to_variable = { parliament_gui_seats = -1 }
+							THIS = {
+								log = "[?THIS.parliament_gui_seats]"
+							}
+							PREV = {
+								[target_party] = {
+									add_to_variable = { parliament_gui_seats = 1 }
+								}
+								add_to_temp_variable = { temp_seats_remaining = -1 }
 							}
 						}
 					}
 				}
-				tokenbase = "ROC_party_tokens^temp_select_party"
+				tokenbase = "[?temp_current_party.GetTokenKey]"
 				target_party = "[?parliament_adjust_party.GetTokenKey]"
+				target_party_token = "[?parliament_adjust_party]"
 			}
-			add_to_temp_variable = { temp_seats_remaining = -1 }
 		}
     }
 }
@@ -258,31 +273,48 @@ parliament_transfer_seat_from_target = {
 					tokenbase = "[?parliament_adjust_party.GetTokenKey]"
 				}
 			}
+			set_temp_variable = { temp_parties_num = var:ROC_parties_max }
+			add_to_temp_variable = { temp_parties_num = 1 }
 			set_temp_variable_to_random = {
 				var = temp_select_party
 				min = 1
-				max = var:ROC_parties_max
+				max = var:temp_parties_num
 				integer = yes
 			}
 			add_to_temp_variable = { temp_select_party = -1 }
 			meta_effect = {
 				text = {
+					set_temp_variable = { temp_current_party = var:ROC_party_tokens^[tokenbase] }
+				}
+				tokenbase = "[?temp_select_party]"
+			}
+			meta_effect = {
+				text = {
+					set_temp_variable = { temp_current_party = var:ROC_party_tokens^[tokenbase] }
+				}
+				tokenbase = "[?temp_select_party]"
+			}
+			meta_effect = {
+				text = {
 					[tokenbase] = {
-						limit = {
-							NOT = { check_variable = { THIS.parliament_gui_party = var:parliament_adjust_party } }
-						}
-						add_to_variable = { parliament_gui_seats = 1 }
-						PREV = {
-							[target_party] = {
-                                add_to_variable = { parliament_gui_seats = -1 }
+						if = {
+							limit = {
+								NOT = { check_variable = { THIS.parliament_gui_party = [target_party_token] } }
+							}
+							add_to_variable = { parliament_gui_seats = 1 }
+							PREV = {
+								[target_party] = {
+									add_to_variable = { parliament_gui_seats = -1 }
+								}
+								add_to_temp_variable = { temp_seats_to_distribute = -1 }
 							}
 						}
 					}
 				}
-				tokenbase = "ROC_party_tokens^temp_select_party"
+				tokenbase = "[?temp_current_party.GetTokenKey]"
 				target_party = "[?parliament_adjust_party.GetTokenKey]"
+				target_party_token = "[?parliament_adjust_party]"
 			}
-			add_to_temp_variable = { temp_seats_to_distribute = -1 }
 		}
     }
 }
@@ -312,14 +344,12 @@ ROC_parliament_update = {
             }
             tokenbase = "[?ROOT.tempc.GetTokenKey]"
         }
-        log = "[tokenbase]: seats = [?roc_seats]"
         meta_effect = {
             text = {
                 set_temp_variable = {
                     t[idx] = [seats]          # ← 下标改为循环计数器
                 }
 				set_temp_variable = { f[idx] = [frame_val] }   # ← 新增
-                log = "[idx] [seats]"
             }
             idx   = "[?ROC_loop_index]"       # ← 原来是 roc_frame
             seats = "[?roc_seats]"
@@ -332,9 +362,6 @@ ROC_parliament_update = {
 		# clear roc_frame 也删去
 	}
 
-    # 以下不变 ↓
-	log = "[?t1] [?t2] [?t3] [?t4] [?t5] [?t6] [?t7] [?t8] [?t9] [?t10]"
-
 	add_to_temp_variable = { t2 = t1 }
 	add_to_temp_variable = { t3 = t2 }
 	add_to_temp_variable = { t4 = t3 }
@@ -344,12 +371,10 @@ ROC_parliament_update = {
 	add_to_temp_variable = { t8 = t7 }
 	add_to_temp_variable = { t9 = t8 }
 	set_temp_variable = { t10 = 800 }
-	log = "[?t1] [?t2] [?t3] [?t4] [?t5] [?t6] [?t7] [?t8] [?t9] [?t10]"
 	
 	clear_array = ROC_seat_frame
 
 	set_temp_variable = { ROC_resize_array_times = 0 }
-	log = "[?ROC_resize_array_times] [?ROC_parties_max]"
 	while_loop_effect = {
 		limit = {
 			check_variable = {
@@ -367,7 +392,6 @@ ROC_parliament_update = {
 			}
 			time = "[?ROC_resize_array_times]"
 		}
-		log = "[?ROC_resize_array_times]"
 	}
 }
 # ──────────────────────────────────────────────────────────
@@ -2066,7 +2090,6 @@ ROC_coalition_complete = {
 			set_variable = { parliament_gui_constructalig = 0 }
 			set_temp_variable = { coalition_partner_var = var:parliament_gui_ideology }
 			add_to_coalition = yes
-			log = "1145141"
 		}
 		else_if = {
 			limit = {
