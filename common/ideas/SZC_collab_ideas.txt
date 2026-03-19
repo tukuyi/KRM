@@ -1,0 +1,49 @@
+##############
+#  KMDBREAK  #
+##############
+
+ideas = {
+	country = {
+		FNG_huanggutun_legacy_idea = {#皇姑屯的遗产
+			on_add = {log = "[GetLogRoot]: add idea FNG_huanggutun_legacy_idea"}
+			allowed = { always = no }
+			picture = FNG_huanggutun_legacy_idea
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				army_speed_factor = -0.25
+				consumer_goods_factor = 0.2
+				army_org_regain = -0.25
+			}
+			
+			targeted_modifier = {
+				tag = MAN
+				attack_bonus_against = -0.45
+				defense_bonus_against = -0.45
+				breakthrough_bonus_against = -0.2
+			}
+		}
+		MAN_attack_against_traitor_idea = {#扑向背信之人
+			on_add = {log = "[GetLogRoot]: add idea MAN_attack_against_traitor_idea"}
+			allowed = { always = no }
+			picture = MAN_attack_against_traitor_idea
+			modifier = {
+				surrunder_limit = 2
+				army_speed_factor = 0.2
+				army_org_regain = 0.25
+			}
+			
+			targeted_modifier = {
+				tag = FNG
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+				breakthrough_bonus_against = 0.15
+			}
+		}
+
+	
+
+	}
+
+}
+

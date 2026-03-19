@@ -1,0 +1,27 @@
+MAN_KTARMY_prepares = {
+
+	allowed = {
+    
+		original_tag = MAN
+	}
+
+	enable = {
+    	    OR = {
+      	      is_neighbor_of = FNG
+      	  }
+		
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = FNG
+		value = 2500
+	}
+	ai_strategy = {
+		type = invade
+		id = FNG
+		value = 25000
+	}
+}

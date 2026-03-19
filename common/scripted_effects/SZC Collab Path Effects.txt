@@ -1,0 +1,396 @@
+
+
+FNG_kanji_arrive_MAN_setup = {
+	JAP = {
+		JAP_itagaki_seishiro = {
+			set_nationality = MAN
+		}
+		JAP_ishiwara_kanji = {
+			set_portraits = {
+				army = {
+					large = GFX_portrait_MAN_ishiwara_kanji_large
+					small = GFX_portrait_MAN_ishiwara_kanji_large
+				}
+			}
+			add_country_leader_role = {
+				country_leader = {
+					desc = JAP_ishiwara_kanji_desc
+					ideology = paternal_autocrat_stratocracy_subtype
+					traits = { CHN_geacps_aligned }
+				}
+			}
+			set_nationality = MAN
+		}
+	}
+	745 = {
+		transfer_state_to = MAN
+	}
+	MAN = {
+		inherit_technology = JAP
+		load_focus_tree = Manchuria_KTarmy_Focus
+		JAP_ishiwara_kanji = {
+			promote_character = paternal_autocrat_stratocracy_subtype
+		}
+		add_ideas = { MAN_attack_against_traitor_idea }
+		set_cosmetic_tag =  MAN_KTARMY
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = MAN_KTARMY_party
+			long_name = MAN_KTARMY_party_long
+		}
+		declare_war_on = {
+			target = FNG
+			type = annex_everything
+		}
+		country_event = { id = NKRFengtianManchuria.0 }
+	}
+}
+
+MAN_KTARMY_template_setup = {
+	division_template = {
+        name = "关东军步兵师团"            # 对应第2、第10、第14师团
+        regiments = {
+            infantry = { x = 0 y = 0 }
+            infantry = { x = 0 y = 1 }
+            infantry = { x = 0 y = 2 }
+            infantry = { x = 1 y = 0 }
+            infantry = { x = 1 y = 1 }
+            infantry = { x = 1 y = 2 }
+            infantry = { x = 2 y = 0 }
+            infantry = { x = 2 y = 1 }
+            infantry = { x = 2 y = 2 }
+            artillery_brigade = { x = 3 y = 0 }
+            artillery_brigade = { x = 3 y = 1 }
+        }
+        support = {
+            recon       = { x = 0 y = 0 }
+            engineer    = { x = 0 y = 1 }
+            artillery   = { x = 0 y = 2 }
+            logistics_company = { x = 0 y = 3 }
+        }
+    }
+	division_template = {
+        name = "关东军独立混成旅团"         # 对应第1、第2独立混成旅团
+        regiments = {
+            infantry = { x = 0 y = 0 }
+            infantry = { x = 0 y = 1 }
+            infantry = { x = 0 y = 2 }
+            infantry = { x = 1 y = 0 }
+            infantry = { x = 1 y = 1 }
+            artillery_brigade = { x = 2 y = 0 }
+        }
+        support = {
+            recon     = { x = 0 y = 0 }
+            engineer  = { x = 0 y = 1 }
+        }
+ 
+        priority = 1
+    }
+	division_template = {
+        name = "关东军骑兵旅团"
+        regiments = {
+            cavalry = { x = 0 y = 0 }
+            cavalry = { x = 0 y = 1 }
+            cavalry = { x = 1 y = 0 }
+            cavalry = { x = 1 y = 1 }
+        }
+        support = {
+            recon     = { x = 0 y = 0 }
+        }
+    }
+	division_template = {
+        name = "关东军战车大队"
+        regiments = {
+            light_armor = { x = 0 y = 0 }
+            light_armor = { x = 0 y = 1 }
+            motorized   = { x = 1 y = 0 }
+        }
+        support = {
+            engineer    = { x = 0 y = 0 }
+            logistics_company = { x = 0 y = 1 }
+        }
+ 
+        priority = 2
+    }
+	division_template = {
+        name = "关东军要塞守备队"           # 旅顺、大连要塞驻守
+        regiments = {
+            infantry = { x = 0 y = 0 }
+            infantry = { x = 0 y = 1 }
+            infantry = { x = 1 y = 0 }
+            artillery_brigade = { x = 1 y = 1 }
+        }
+        support = {
+            engineer  = { x = 0 y = 0 }
+            artillery = { x = 0 y = 1 }
+        }
+ 
+        priority = 0
+	}
+
+	716 = {
+		create_unit = {
+			division = "name = \"第2师团（仙台）\" division_template = \"关东军步兵师团\" start_experience_factor = 2 start_equipment_factor = 1.0"
+			owner = ROOT
+			count = 2
+			prioritize_location = 964
+			allow_spawning_on_enemy_provs = yes
+		}
+		create_unit = {
+			division = "name = \"第10师团（姬路）\" division_template = \"关东军步兵师团\" start_experience_factor = 2 start_equipment_factor = 1.0"
+			owner = ROOT
+			count = 2
+			prioritize_location = 11764
+			allow_spawning_on_enemy_provs = yes
+		}
+		create_unit = {
+			division = "name = \"第1独立混成旅团\" division_template = \"关东军独立混成旅团\" start_experience_factor = 2 start_equipment_factor = 1.0"
+			owner = ROOT
+			count = 2
+			prioritize_location = 6851
+			allow_spawning_on_enemy_provs = yes
+		}
+		create_unit = {
+			division = "name = \"关东军战车大队\" division_template = \"关东军战车大队\" start_experience_factor = 1 start_equipment_factor = 1.0"
+			owner = ROOT
+			prioritize_location = 9885
+			allow_spawning_on_enemy_provs = yes
+		}
+	}
+
+	328 = {
+		create_unit = {
+			division = "name = \"第14师团（宇都宫）\" division_template = \"关东军步兵师团\" start_experience_factor = 1 start_equipment_factor = 1.0"
+			owner = ROOT
+			count = 2
+			prioritize_location = 6981
+			allow_spawning_on_enemy_provs = yes
+		}
+		create_unit = {
+			division = "name = \"第2独立混成旅团\" division_template = \"关东军独立混成旅团\" start_experience_factor = 1 start_equipment_factor = 0.9"
+			owner = ROOT
+			count = 2
+			prioritize_location = 11781
+			allow_spawning_on_enemy_provs = yes
+		}
+	}
+
+	885 = {
+		create_unit = {
+			division = "name = \"关东军骑兵旅团\" division_template = \"关东军骑兵旅团\" start_experience_factor = 1 start_equipment_factor = 1.0"
+			owner = ROOT
+			count = 2
+			prioritize_location = 944
+			allow_spawning_on_enemy_provs = yes
+		}
+	}
+
+	745 = {
+		create_unit = {
+			division = "name = \"旅顺要塞守备队\" division_template = \"关东军要塞守备队\" start_experience_factor = 1 start_equipment_factor = 1.0"
+			owner = ROOT
+			count = 3
+			prioritize_location = 1150
+			allow_spawning_on_enemy_provs = yes
+		}
+	}
+}
+
+FNG_MAN_incident_peace_setup = {
+	clear_JAP_FNG_hostile_AI = yes
+	white_peace = MAN	
+	JAP = {
+		puppet = ROOT
+		puppet = MAN
+	}
+	clr_global_flag = FNG_relations_JAP_broke
+	add_ideas = unequal_treaties_japan
+	set_cosmetic_tag = FNG_JAP
+	clear_global_event_target = AGJ_leader
+	save_global_event_target_as = RGC_leader
+	set_global_flag = FNG_projapan
+	if = {
+		limit = { has_character = FNG_zhang_zuolin }
+		retire_character = FNG_zhang_zuolin
+	}
+	if = {
+		limit = { has_character = FNG_zhang_xueliang }
+		retire_character = FNG_zhang_xueliang
+	}
+	if = {
+		limit = { has_character = FNG_wu_junsheng }
+		retire_character = FNG_wu_junsheng
+	}
+	FNG_tang_shaoyi = {
+		if = {
+			limit = { has_ideology = paternal_autocrat_subtype }
+			promote_character = paternal_autocrat_subtype
+		}
+		else = {
+			add_country_leader_role = {
+				country_leader = {
+					desc = FNG_tang_shaoyi_leader_desc
+					ideology = paternal_autocrat_subtype
+					traits = { CHN_geacps_aligned FNG_unwilling_participant }
+				}
+				promote_leader = yes
+			}
+		}
+	}
+	set_party_name = {
+		ideology = paternal_autocrat
+		name = FNG_new_peoples_society
+		long_name = FNG_new_peoples_society_tt
+	}
+	set_politics = {
+		ruling_party = paternal_autocrat
+		elections_allowed = no
+	}
+	add_popularity = {
+		ideology = paternal_autocrat
+		popularity = 0.2
+	}
+	add_popularity = {
+		ideology = social_conservative
+		popularity = 0.2
+	}
+	add_popularity = {
+		ideology = authoritarian_democrat
+		popularity = 0.2
+	}
+	activate_advisor = FNG_wang_yitang_sic
+	set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+	add_to_coalition = yes
+	set_temp_variable = { coalition_partner_var = token:social_conservative }
+	add_to_coalition = yes
+	hidden_effect = {
+		set_party_name = {
+			ideology = paternal_autocrat
+			name = FNG_new_peoples_society
+			long_name = FNG_new_peoples_society_long
+		}
+		set_popularities = {
+			totalist = 1
+			radical_socialist = 5
+			syndicalist = 1
+			social_democrat = 5
+			social_liberal = 8
+			market_liberal = 10
+			social_conservative = 20
+			authoritarian_democrat = 20
+			paternal_autocrat = 20
+			national_populist = 10
+		}
+		set_party_name = {
+			ideology = social_liberal
+			long_name = CHN_republicans_party_long
+			name = CHN_republicans_party
+		}
+		set_party_name = {
+			ideology = social_democrat
+			long_name = CHN_FCDP_party_long
+			name = CHN_FCDP_party
+		}
+		set_party_name = {
+			ideology = market_liberal
+			long_name = CHN_CCP_party_long
+			name = CHN_CCP_party
+		}
+		promote_character = {
+			character = FNG_assorted_leaders
+			ideology = social_democrat_subtype
+		}
+		promote_character = {
+			character = FNG_assorted_leaders
+			ideology = market_liberal_subtype
+		}
+		remove_ideas = {
+			FNG_Disastrous_Governance
+			FNG_Plutocratic_Exploitation
+			FNG_Expel_the_Japanese_Bandits
+		}
+		add_ideas = {
+			FNG_an_army_of_traitors
+			FNG_hollowed_out_economy
+			FNG_collaboration_the_great_evil
+		}
+		# FNG_grand_marshals_favor_category
+		remove_targeted_decision = { target = THIS decision = FNG_favor_shikan_clique }
+		remove_targeted_decision = { target = THIS decision = FNG_favor_communications_clique }
+		remove_targeted_decision = { target = THIS decision = FNG_favor_recovery_league }
+		remove_targeted_decision = { target = THIS decision = FNG_favor_zhang_clique }
+		# FNG_fixing_the_economy_category
+		remove_targeted_decision = { target = THIS decision = FNG_Centralise_the_Banks }
+		remove_targeted_decision = { target = THIS decision = FNG_Re_Introduce_the_Fengtian_Dollar }
+		remove_targeted_decision = { target = THIS decision = FNG_Fill_the_Silver_Reserve }
+		remove_targeted_decision = { target = THIS decision = FNG_Encourage_Japanese_Investment }
+		remove_targeted_decision = { target = THIS decision = FNG_Encourage_Chinese_Investment }
+		# china_army_decisions
+		remove_targeted_decision = { target = THIS decision = FNG_Revise_our_Position_on_Looting }
+		remove_targeted_decision = { target = THIS decision = FNG_Rebuild_the_Second_Army }
+		remove_targeted_decision = { target = THIS decision = FNG_Raise_Independent_Brigades_in_Dezhou }
+		remove_targeted_decision = { target = THIS decision = FNG_Raise_Independent_Brigades_in_Kaifeng }
+		remove_targeted_decision = { target = THIS decision = FNG_Raise_Independent_Brigades_in_Ruyang }
+		remove_targeted_decision = { target = THIS decision = FNG_Raise_Independent_Brigades_in_Guanzhong }
+		remove_targeted_decision = { target = THIS decision = FNG_Raise_the_Baoding_Cadet_Corps }
+		# FNG_Preparing_For_The_Princes_Visit
+		remove_targeted_decision = { target = THIS decision = FNG_increase_security_in_shenyang }
+		remove_targeted_decision = { target = THIS decision = FNG_investigate_the_junior_officer_corps }
+		remove_targeted_decision = { target = THIS decision = FNG_reinforce_soldierly_discipline }
+		remove_targeted_decision = { target = THIS decision = FNG_present_chinese_modernity }
+		remove_targeted_decision = { target = THIS decision = FNG_Fortress_Manchuria }
+		# FNG_railways
+		remove_targeted_decision = { target = THIS decision = FNG_The_Jinhan_Railway }
+		remove_targeted_decision = { target = THIS decision = FNG_The_Jinpu_Railway }
+		remove_targeted_decision = { target = THIS decision = FNG_The_Yuehan_Railway }
+		remove_targeted_decision = { target = THIS decision = FNG_Railway_Construction_Jilin_Shenyang }
+		remove_targeted_decision = { target = THIS decision = FNG_Railway_Construction_Pingqi }
+		remove_targeted_decision = { target = THIS decision = FNG_Railway_Construction_Shenyang_Chengde }
+		# FNG_foreign_policy
+		remove_targeted_decision = { target = QIE decision = FNG_Denounce_Qing_Monarchism }
+		remove_targeted_decision = { target = GER decision = FNG_Denounce_German_Imperialism }
+		remove_targeted_decision = { target = THIS decision = FNG_National_Irredentism }
+		remove_targeted_decision = { target = THIS decision = FNG_Wu_Wang_Zai_Ju }
+		remove_targeted_decision = { target = THIS decision = FNG_Escalate_the_Propaganda_War }
+		remove_targeted_decision = { target = THIS decision = FNG_The_Yanshan_Plan }
+		remove_targeted_decision = { target = THIS decision = FNG_Shanhaiguan_Infiltration }
+		remove_targeted_decision = { target = SHD decision = FNG_Annex_Shandong_Anqing_Puppet }
+		# FNG_Commission_Japanese_Ships
+		remove_targeted_decision = { target = JAP decision = FNG_JAP_destroyers }
+		remove_targeted_decision = { target = JAP decision = FNG_JAP_subs }
+		remove_targeted_decision = { target = JAP decision = FNG_JAP_cruisers }
+		remove_targeted_decision = { target = JAP decision = FNG_JAP_convoys }
+
+		CHN_setup_economic_devastation_normal_effect = yes
+		set_potential_national_government = yes
+	}
+	mark_focus_tree_layout_dirty = yes
+
+	every_owned_state = {
+		limit = {
+			OR = {
+				has_state_flag = fengtian_province_state
+				has_state_flag = jilin_province_state
+				has_state_flag = heilongjiang_province_state
+				has_state_flag = rehe_province_state
+				state = 745
+				state = 524
+			}
+		}
+		remove_core_of = ROOT
+		remove_claim_by = ROOT
+		disable_state_integration = yes
+		transfer_state_to = MAN
+	}
+	745 = {
+		transfer_state_to = JAP
+	}
+	MAN = {
+		add_ideas = unequal_treaties_japan
+
+	}
+	
+}

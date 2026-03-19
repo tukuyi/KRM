@@ -1,0 +1,437 @@
+########FNGOVERRIDES##############
+ add_namespace = NKRFengtianManchuria
+ add_namespace = fengtian_beijing_conference_events
+
+ country_event = { #The Great Decision 命新首改 再改必纠
+	id = fengtian_beijing_conference_events.005
+	title = fengtian_beijing_conference_events.005.t
+	desc = fengtian_beijing_conference_events.005.d
+	picture = GFX_report_event_CHN_new_government
+
+	is_triggered_only = yes #Triggered by [EVENT]: fengtian_beijing_conference_events.005
+
+	option = {
+		log = "[GetLogInfo]: event fengtian_beijing_conference_events.005 option fengtian_beijing_conference_events.005.a"
+		name = fengtian_beijing_conference_events.005.a #We will open negotiations to join the Sphere.
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 25
+				FNG_mantetsu_level_medium = yes
+			}
+
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = FNG_forpol option = FNG_FORPOL_CONCESSIONS_JAP }
+					has_game_rule = { rule = FNG_forpol option = FNG_FORPOL_CUF }
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					FNG_mantetsu_level_high = yes
+					FNG_mantetsu_level_very_high = yes
+				}
+			}
+			custom_effect_tooltip = FNG_JAP_influence_high_tooltip
+		}
+		add_war_support = -0.20
+		JAP = { country_event = { id = fengtian_beijing_conference_events.300 days = 7 } } #Zhang Asks to Join the Sphere
+	}
+
+	option = {
+		log = "[GetLogInfo]: event fengtian_beijing_conference_events.005 option fengtian_beijing_conference_events.005.b"
+		name = fengtian_beijing_conference_events.005.b #We will gamble that Japan values us more than the concessions.
+		trigger = {
+			OR = {
+				#Rig it if you have game rules
+				AND = {
+					is_ai = yes
+					OR = {
+						has_game_rule = { rule = FNG_forpol option = FNG_FORPOL_CONCESSIONS_JAP }
+						has_game_rule = { rule = FNG_forpol option = FNG_FORPOL_CUF }
+					}
+				}
+				#Actual Trigger
+				NOT = {
+					FNG_mantetsu_level_high = yes
+					FNG_mantetsu_level_very_high = yes
+				}
+			}
+		}
+		ai_chance = {
+			base = 50 #Zhang will normally want to demand the concessions but can be blocked with sufficient Mantetsu influence
+			modifier = {
+				add = -25
+				FNG_mantetsu_level_medium = yes
+			}
+
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = FNG_forpol option = FNG_FORPOL_UNCONDITIONAL_JAP }
+			}
+		}
+		#Choosing this option is expensive the more Japanese influence you have
+		if = {
+			limit = {
+				FNG_mantetsu_level_medium = yes
+			}
+			add_political_power = -50
+			add_stability = -0.10
+		}
+		JAP = { country_event = { id = fengtian_beijing_conference_events.200 days = 7 } } #Zhang Demands the Concessions
+		custom_effect_tooltip = FNG_split_from_japan
+	}
+
+	option = {
+		log = "[GetLogInfo]: event fengtian_beijing_conference_events.005 option fengtian_beijing_conference_events.005.c"
+		name = fengtian_beijing_conference_events.005.c #哎呀，拖一拖就好嘛，老子他妈的拖了十几年，还拖不得这几天？
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10000
+			}
+		}
+		add_war_support = -0.05
+		add_political_power = -100
+		hidden_effect = {
+			country_event = {
+				id = NKRFengtianManchuria.1
+				days = 3
+			}
+		}
+	}
+}
+
+
+	
+country_event = { #东京的照会
+	id = NKRFengtianManchuria.0
+	title = NKRFengtianManchuria.0.t
+	desc = NKRFengtianManchuria.0.d
+	picture = GFX_report_event_CHN_new_government
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+
+	option = {# 发出一份措辞得体却不作任何实质承诺的回函。
+		log = "[GetLogInfo]: event NKRFengtianManchuria.0 option NKRFengtianManchuria.0.a"
+		name = NKRFengtianManchuria.0.a
+		MAN_KTARMY_template_setup = yes
+	}
+}
+
+	
+country_event = { #东京的照会
+	id = NKRFengtianManchuria.1
+	title = NKRFengtianManchuria.1.t
+	desc = NKRFengtianManchuria.1.d
+	picture = GFX_report_event_CHN_new_government
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+
+	option = {# 发出一份措辞得体却不作任何实质承诺的回函。
+		log = "[GetLogInfo]: event NKRFengtianManchuria.1 option NKRFengtianManchuria.1.a"
+		name = NKRFengtianManchuria.1.a
+		add_political_power = -10
+		hidden_effect = {
+			country_event = {
+				id = NKRFengtianManchuria.2
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #满铁的动作
+	id = NKRFengtianManchuria.2
+	title = NKRFengtianManchuria.2.t
+	desc = NKRFengtianManchuria.2.d
+	picture = GFX_report_event_CHN_new_government
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {#继续维持现状，将满铁的动作定性为正常的商业调整。
+		log = "[GetLogInfo]: event NKRFengtianManchuria.2 option NKRFengtianManchuria.2.a"
+		name = NKRFengtianManchuria.2.a
+		add_political_power = -10
+		hidden_effect = {
+			country_event = {
+				id = NKRFengtianManchuria.3
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #关东军反应
+	id = NKRFengtianManchuria.3
+	title = NKRFengtianManchuria.3.t
+	desc = NKRFengtianManchuria.3.d
+	picture = GFX_report_event_CHN_new_government
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {#他妈了个巴子的，还敢把我炸上天不成？
+		log = "[GetLogInfo]: event NKRFengtianManchuria.3 option NKRFengtianManchuria.3.a"
+		name = NKRFengtianManchuria.3.a
+		add_political_power = -10
+		hidden_effect = {
+			country_event = {
+				id = NKRFengtianManchuria.4
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #公使警告
+	id = NKRFengtianManchuria.4
+	title = NKRFengtianManchuria.4.t
+	desc = NKRFengtianManchuria.4.d
+	picture = GFX_report_event_CHN_new_government
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {#看起来总得做出反应了...
+		log = "[GetLogInfo]: event NKRFengtianManchuria.4 option NKRFengtianManchuria.4.a"
+		name = NKRFengtianManchuria.4.a
+		add_political_power = -10
+		hidden_effect = {
+			country_event = {
+				id = NKRFengtianManchuria.5
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #皇姑屯事变
+	id = NKRFengtianManchuria.5
+	title = NKRFengtianManchuria.5.t
+	desc = NKRFengtianManchuria.5.d
+	picture = GFX_report_event_CHN_new_government
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		log = "[GetLogInfo]: event NKRFengtianManchuria.5 option NKRFengtianManchuria.5.a"
+		name = NKRFengtianManchuria.5.a
+		add_political_power = -200
+		kill_country_leader = yes
+		add_ideas = { FNG_huanggutun_legacy_idea }
+		set_JAP_FNG_hostile_AI = yes
+		set_global_flag = FNG_relations_JAP_broke
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_character = FNG_guo_enlin } }
+				FNG_guo_enlin = {
+					custom_override_tooltip = {
+						tooltip = character_becomes_a_general
+						set_nationality = ROOT
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { has_character = FNG_guo_xipeng } }
+				FNG_guo_xipeng = {
+					custom_override_tooltip = {
+						tooltip = character_becomes_a_general
+						set_nationality = ROOT
+					}
+				}
+			}
+		}
+		add_stability = -0.10
+		add_war_support = -0.10
+		hidden_effect = {
+			country_event = {
+				id = NKRFengtianManchuria.6
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #统一大会流产
+	id = NKRFengtianManchuria.6
+	title = NKRFengtianManchuria.6.t
+	desc = NKRFengtianManchuria.6.d
+	picture = GFX_report_event_CHN_new_government
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		log = "[GetLogInfo]: event NKRFengtianManchuria.6 option NKRFengtianManchuria.6.a"
+		name = NKRFengtianManchuria.6.a
+		add_political_power = -10
+		hidden_effect = {
+			country_event = {
+				id = NKRFengtianManchuria.7
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { #关东军越权行动
+	id = NKRFengtianManchuria.7
+	title = NKRFengtianManchuria.7.t
+	desc = NKRFengtianManchuria.7.d
+	picture = GFX_report_event_CHN_new_government
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		log = "[GetLogInfo]: event NKRFengtianManchuria.7 option NKRFengtianManchuria.7.a"
+		name = NKRFengtianManchuria.7.a
+		add_political_power = -10
+		hidden_effect = {
+			country_event = {
+				id = NKRFengtianManchuria.8
+				days = 3
+			}
+			country_event = {
+				id = NKRFengtianManchuria.13
+			}
+			FNG_kanji_arrive_MAN_setup = yes
+		}
+	}
+}
+
+country_event = { #不扩大方针
+	id = NKRFengtianManchuria.8
+	title = NKRFengtianManchuria.8.t
+	desc = NKRFengtianManchuria.8.d
+	picture = GFX_report_event_CHN_new_government
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		log = "[GetLogInfo]: event NKRFengtianManchuria.8 option NKRFengtianManchuria.8.a"
+		name = NKRFengtianManchuria.8.a
+		add_political_power = -10
+	}
+}
+
+country_event = { #天津军的震惊
+	id = NKRFengtianManchuria.9
+	title = NKRFengtianManchuria.9.t
+	desc = NKRFengtianManchuria.9.d
+	picture = GFX_report_event_CHN_new_government
+	trigger = {
+		AND = {
+			surrender_progress > 0.6
+			has_war_with = MAN
+			MAN = {
+				has_country_leader = {
+					character = JAP_ishiwara_kanji
+				}
+			}
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		log = "[GetLogInfo]: event NKRFengtianManchuria.9 option NKRFengtianManchuria.9.a"
+		name = NKRFengtianManchuria.9.a
+		hidden_effect = {
+			country_event = {
+				id = NKRFengtianManchuria.10
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #北京的合作者
+	id = NKRFengtianManchuria.10
+	title = NKRFengtianManchuria.10.t
+	desc = NKRFengtianManchuria.10.d
+	picture = GFX_report_event_CHN_new_government
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		log = "[GetLogInfo]: event NKRFengtianManchuria.10 option NKRFengtianManchuria.10.a"
+		name = NKRFengtianManchuria.10.a
+		hidden_effect = {
+			country_event = {
+				id = NKRFengtianManchuria.11
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #维新政府的构想
+	id = NKRFengtianManchuria.11
+	title = NKRFengtianManchuria.11.t
+	desc = NKRFengtianManchuria.11.d
+	picture = GFX_report_event_CHN_new_government
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		log = "[GetLogInfo]: event NKRFengtianManchuria.11 option NKRFengtianManchuria.11.a"
+		name = NKRFengtianManchuria.11.a
+		hidden_effect = {
+			country_event = {
+				id = NKRFengtianManchuria.12
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #中华民国维新政府
+	id = NKRFengtianManchuria.12
+	title = NKRFengtianManchuria.12.t
+	desc = NKRFengtianManchuria.12.d
+	picture = GFX_report_event_CHN_new_government
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		log = "[GetLogInfo]: event NKRFengtianManchuria.12 option NKRFengtianManchuria.12.a"
+		name = NKRFengtianManchuria.12.a
+		add_political_power = -200
+		FNG_MAN_incident_peace_setup = yes
+	}
+}
+
+country_event = { #time check
+	id = NKRFengtianManchuria.13
+	title = NKRFengtianManchuria.13.t
+	desc = NKRFengtianManchuria.13.d
+	picture = GFX_report_event_CHN_new_government
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		log = "[GetLogInfo]: event NKRFengtianManchuria.13 option NKRFengtianManchuria.13.a"
+		name = NKRFengtianManchuria.13.a
+		if = {
+			limit = {
+				AND = {
+					surrender_progress > 0.5
+					has_war_with = MAN
+					MAN = {
+						has_country_leader = {
+							character = JAP_ishiwara_kanji
+						}
+					}
+				}
+			}
+			country_event = {
+				id = NKRFengtianManchuria.9
+			}
+		}
+		else_if = {
+			limit = {
+				MAN = {
+					exists = yes
+				}
+			}
+			country_event = {
+				id = NKRFengtianManchuria.13
+				days = 1
+			}
+		}
+	}
+}
