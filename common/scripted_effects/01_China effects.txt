@@ -4385,6 +4385,10 @@ CHN_calculate_china_alignment_gui_effect = {
 			limit = { MAN = { is_ally_with = JAP } }
 			add_to_array = { RGC.china_alignment_members = THIS }
 		}
+		if = {
+			limit = { SZC = { is_ally_with = JAP NOT = { tag = RGC } } }
+			add_to_array = { RGC.china_alignment_members = THIS }
+		}
 	}
 
 	### Build non-aligned tag array ###

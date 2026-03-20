@@ -511,4 +511,23 @@ SpriteTypes = {
 		name = "GFX_ability_ziwenguitian"
 		texturefile = "gfx/interface/abilitylist/ability_ziwenguitian.png"
 	}
+
+	
+	spriteType = {
+		name = "GFX_SZC_collab_dadaodong_bg"
+		texturefile = "gfx/interface/gui/SZC_collab_dadaodong_bg.png"
+	}
+	
+	spriteType = {
+		name = "GFX_SZC_collab_dadaodong_yuan"
+		texturefile = "gfx/interface/gui/SZC_collab_dadaodong_yuan.png"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_SZC_collab_dadaodong_frames"
+		texturefile = "gfx/interface/gui/SZC_collab_dadaodong_frames.png"
+		noOfFrames = 25
+		animation_rate_fps = 10
+		looping = yes
+		play_on_show = yes
+	}
 }

@@ -1,6 +1,62 @@
 ########FNGOVERRIDES##############
  add_namespace = NKRFengtianManchuria
+ add_namespace = NKRFengtianManchuriaNews
  add_namespace = fengtian_beijing_conference_events
+
+ 
+ news_event = { #皇姑屯事变
+	id = NKRFengtianManchuriaNews.1
+	immediate = { log = "[GetLogInfo]: event NKRFengtianManchuriaNews.1" }
+	title = NKRFengtianManchuriaNews.1.t
+	desc = NKRFengtianManchuriaNews.1.d
+	picture = GFX_news_event_NSR_united
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	is_triggered_only = yes
+
+	major = yes
+	fire_for_sender = yes
+	show_major = {
+		regional_asia_news = yes
+	}
+
+	option = {
+		name = NKRFengtianManchuriaNews.1.a
+		trigger = {
+			tag = SZC
+		}
+	}
+}
+ 
+news_event = { #新国家
+   id = NKRFengtianManchuriaNews.2
+   immediate = { log = "[GetLogInfo]: event NKRFengtianManchuriaNews.2" }
+   title = NKRFengtianManchuriaNews.2.t
+   desc = NKRFengtianManchuriaNews.2.d
+   picture = GFX_news_event_NSR_united
+
+   trigger = {
+	   wants_world_news = yes
+   }
+
+   is_triggered_only = yes
+
+   major = yes
+   fire_for_sender = yes
+   show_major = {
+	   regional_asia_news = yes
+   }
+
+   option = {
+	   name = NKRFengtianManchuriaNews.2.a
+	   trigger = {
+		   tag = SZC
+	   }
+   }
+}
 
  country_event = { #The Great Decision 命新首改 再改必纠
 	id = fengtian_beijing_conference_events.005

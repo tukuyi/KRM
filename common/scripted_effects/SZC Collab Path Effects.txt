@@ -194,8 +194,26 @@ MAN_KTARMY_template_setup = {
 			owner = ROOT
 			count = 3
 			prioritize_location = 1150
-			allow_spawning_on_enemy_provs = yes
+	 		allow_spawning_on_enemy_provs = yes
 		}
+	}
+}
+
+Collab_so_you_are_hanjian = {
+	every_state = {
+		limit = {
+			OR = {
+				has_state_flag = fengtian_province_state
+				has_state_flag = jilin_province_state
+				has_state_flag = heilongjiang_province_state
+				has_state_flag = rehe_province_state
+				state = 745
+				state = 524
+			}
+		}
+		remove_core_of = ROOT
+		remove_claim_by = ROOT
+		disable_state_integration = yes
 	}
 }
 
@@ -368,7 +386,8 @@ FNG_MAN_incident_peace_setup = {
 		set_potential_national_government = yes
 	}
 	mark_focus_tree_layout_dirty = yes
-
+	Collab_so_you_are_hanjian = yes
+	remove_ideas = { FNG_huanggutun_legacy_idea }
 	every_owned_state = {
 		limit = {
 			OR = {
@@ -380,9 +399,6 @@ FNG_MAN_incident_peace_setup = {
 				state = 524
 			}
 		}
-		remove_core_of = ROOT
-		remove_claim_by = ROOT
-		disable_state_integration = yes
 		transfer_state_to = MAN
 	}
 	745 = {
@@ -390,7 +406,11 @@ FNG_MAN_incident_peace_setup = {
 	}
 	MAN = {
 		add_ideas = unequal_treaties_japan
-
+		set_cosmetic_tag = MAN_republic
+		remove_ideas = { MAN_attack_against_traitor_idea }
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
 	}
 	
 }
