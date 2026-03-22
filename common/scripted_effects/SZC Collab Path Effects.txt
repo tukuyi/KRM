@@ -220,6 +220,12 @@ Collab_so_you_are_hanjian = {
 FNG_MAN_incident_peace_setup = {
 	clear_JAP_FNG_hostile_AI = yes
 	white_peace = MAN	
+	every_subject_country = {
+		set_autonomy = {
+			target = PREV
+			autonomous_state = autonomy_free
+		}
+	}
 	JAP = {
 		puppet = ROOT
 		puppet = MAN

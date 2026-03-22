@@ -4,6 +4,592 @@
 
 
 
+
+country_event = {# 危机感
+	id = NKRsichuanCollab.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.1" }
+	title = NKRsichuanCollab.1.t
+	desc = NKRsichuanCollab.1.d
+	picture = GFX_report_event_SZC_collab_japanese_soldiers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {#快让赵毓松去看看！
+  	 	name = NKRsichuanCollab.1.a
+		add_political_power = -75
+		custom_effect_tooltip = NKRsichuanCollab.1.tt
+		# trigger = {
+		# 	has_character = SZC_zhao_yusong
+		# }
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.2 days = 2 }
+			country_event = { id = NKRsichuanCollab.3 days = 5 }
+		}
+   	}
+	
+	option = {#你他妈疯了？当汉奸？
+  	 	name = NKRsichuanCollab.1.b
+		add_war_support = 0.05
+   	}
+}
+
+country_event = {
+	id = NKRsichuanCollab.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.2" }
+	title = NKRsichuanCollab.2.t
+	desc = NKRsichuanCollab.2.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.2.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.3" }
+	title = NKRsichuanCollab.3.t
+	desc = NKRsichuanCollab.3.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.3.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.4" }
+	title = NKRsichuanCollab.4.t
+	desc = NKRsichuanCollab.4.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.4.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.5" }
+	title = NKRsichuanCollab.5.t
+	desc = NKRsichuanCollab.5.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.5.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.6" }
+	title = NKRsichuanCollab.6.t
+	desc = NKRsichuanCollab.6.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.6.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.7" }
+	title = NKRsichuanCollab.7.t
+	desc = NKRsichuanCollab.7.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.7.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.8" }
+	title = NKRsichuanCollab.8.t
+	desc = NKRsichuanCollab.8.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.8.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.9" }
+	title = NKRsichuanCollab.9.t
+	desc = NKRsichuanCollab.9.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.9.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.10" }
+	title = NKRsichuanCollab.10.t
+	desc = NKRsichuanCollab.10.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.10.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.11" }
+	title = NKRsichuanCollab.11.t
+	desc = NKRsichuanCollab.11.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.11.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.12" }
+	title = NKRsichuanCollab.12.t
+	desc = NKRsichuanCollab.12.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.12.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.13" }
+	title = NKRsichuanCollab.13.t
+	desc = NKRsichuanCollab.13.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.13.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.14" }
+	title = NKRsichuanCollab.14.t
+	desc = NKRsichuanCollab.14.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.14.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.15" }
+	title = NKRsichuanCollab.15.t
+	desc = NKRsichuanCollab.15.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.15.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.16" }
+	title = NKRsichuanCollab.16.t
+	desc = NKRsichuanCollab.16.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.16.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.17" }
+	title = NKRsichuanCollab.17.t
+	desc = NKRsichuanCollab.17.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.17.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.18" }
+	title = NKRsichuanCollab.18.t
+	desc = NKRsichuanCollab.18.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.18.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.19" }
+	title = NKRsichuanCollab.19.t
+	desc = NKRsichuanCollab.19.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.19.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.20" }
+	title = NKRsichuanCollab.20.t
+	desc = NKRsichuanCollab.20.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.20.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.21" }
+	title = NKRsichuanCollab.21.t
+	desc = NKRsichuanCollab.21.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.21.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.22" }
+	title = NKRsichuanCollab.22.t
+	desc = NKRsichuanCollab.22.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.22.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.23" }
+	title = NKRsichuanCollab.23.t
+	desc = NKRsichuanCollab.23.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.23.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.24" }
+	title = NKRsichuanCollab.24.t
+	desc = NKRsichuanCollab.24.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.24.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.25" }
+	title = NKRsichuanCollab.25.t
+	desc = NKRsichuanCollab.25.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.25.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.26" }
+	title = NKRsichuanCollab.26.t
+	desc = NKRsichuanCollab.26.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.26.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.27" }
+	title = NKRsichuanCollab.27.t
+	desc = NKRsichuanCollab.27.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.27.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.28" }
+	title = NKRsichuanCollab.28.t
+	desc = NKRsichuanCollab.28.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.28.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.29" }
+	title = NKRsichuanCollab.29.t
+	desc = NKRsichuanCollab.29.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.29.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.30" }
+	title = NKRsichuanCollab.30.t
+	desc = NKRsichuanCollab.30.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.30.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.31" }
+	title = NKRsichuanCollab.31.t
+	desc = NKRsichuanCollab.31.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.31.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.32
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.32" }
+	title = NKRsichuanCollab.32.t
+	desc = NKRsichuanCollab.32.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.32.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.33
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.33" }
+	title = NKRsichuanCollab.33.t
+	desc = NKRsichuanCollab.33.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.33.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.34
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.34" }
+	title = NKRsichuanCollab.34.t
+	desc = NKRsichuanCollab.34.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.34.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.35
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.35" }
+	title = NKRsichuanCollab.35.t
+	desc = NKRsichuanCollab.35.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.35.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.36
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.36" }
+	title = NKRsichuanCollab.36.t
+	desc = NKRsichuanCollab.36.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.36.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.37
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.37" }
+	title = NKRsichuanCollab.37.t
+	desc = NKRsichuanCollab.37.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.37.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.38
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.38" }
+	title = NKRsichuanCollab.38.t
+	desc = NKRsichuanCollab.38.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.38.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.39
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.39" }
+	title = NKRsichuanCollab.39.t
+	desc = NKRsichuanCollab.39.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.39.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.40
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.40" }
+	title = NKRsichuanCollab.40.t
+	desc = NKRsichuanCollab.40.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.40.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.41
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.41" }
+	title = NKRsichuanCollab.41.t
+	desc = NKRsichuanCollab.41.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.41.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.42
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.42" }
+	title = NKRsichuanCollab.42.t
+	desc = NKRsichuanCollab.42.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.42.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.43
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.43" }
+	title = NKRsichuanCollab.43.t
+	desc = NKRsichuanCollab.43.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.43.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.44
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.44" }
+	title = NKRsichuanCollab.44.t
+	desc = NKRsichuanCollab.44.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.44.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.45
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.45" }
+	title = NKRsichuanCollab.45.t
+	desc = NKRsichuanCollab.45.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.45.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.46
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.46" }
+	title = NKRsichuanCollab.46.t
+	desc = NKRsichuanCollab.46.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.46.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.47
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.47" }
+	title = NKRsichuanCollab.47.t
+	desc = NKRsichuanCollab.47.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.47.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.48
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.48" }
+	title = NKRsichuanCollab.48.t
+	desc = NKRsichuanCollab.48.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.48.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.49
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.49" }
+	title = NKRsichuanCollab.49.t
+	desc = NKRsichuanCollab.49.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.49.a }
+}
+
+country_event = {
+	id = NKRsichuanCollab.50
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.50" }
+	title = NKRsichuanCollab.50.t
+	desc = NKRsichuanCollab.50.d
+	picture = GFX_report_event_SZC_YCP
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { name = NKRsichuanCollab.50.a }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  country_event = {#checkCHINAUNITED
  id = NKRsichuanCollabDEBUG.1
  immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollabDEBUG.1" }

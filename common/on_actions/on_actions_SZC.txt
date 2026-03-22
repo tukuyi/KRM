@@ -183,5 +183,104 @@ on_actions = {
 			}
 		}
 	}
+
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					tag = FNG
+					SZC = {
+						has_country_flag = NKRsichuan_YCPpath
+						power_balance_in_range =  {
+							id = SZC_YCP_power_balance
+							range > SZC_bop_zeng_stronger
+						}
+						NOT = {
+							has_war_with = JAP
+						}
+					}
+				}
+				if = {
+					limit = {
+						FROM.FROM = { state = 608 } #Jingzhao
+					}
+					SZC = {
+						country_event = {
+							id = NKRsichuanCollab.1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_before_peace_conference_start = {
+		effect = {
+			ROOT = {
+				if = {
+					limit = {
+						tag = SZC
+						has_country_flag = SZC_collab_state_change_available
+					}
+					FROM = {
+						every_owned_state = {
+							limit = {
+								OR = {
+									has_state_flag = hubei_province_state
+									has_state_flag = sichuan_province_state
+									has_state_flag = guizhou_province_state
+									has_state_flag = yunnan_province_state
+									has_state_flag = hunan_province_state
+									has_state_flag = guangxi_province_state
+									has_state_flag = guangdong_province_state
+									has_state_flag = jiangxi_province_state
+									has_state_flag = fujian_province_state
+									has_state_flag = zhejiang_province_state
+									state = 1014 #wuhu
+									state = 613 #nanjing
+									state = 743 #shanghai
+								}
+							}
+							transfer_state_to = SZC
+						}
+					}
+				}
+				if = {
+					limit = {
+						tag = FNG
+						is_puppet_of = JAP
+						SZC = {
+							has_country_flag = SZC_collab_state_change_available
+						}
+					}
+					FROM = {
+						every_owned_state = {
+							limit = {
+								OR = {
+									has_state_flag = zhili_province_state
+									has_state_flag = henan_province_state
+									has_state_flag = shandong_province_state
+									has_state_flag = shanxi_province_state
+									has_state_flag = shaanxi_province_state
+									has_state_flag = chahaer_province_state
+									has_state_flag = ningxia_province_state
+									has_state_flag = qinghai_province_state
+									has_state_flag = gansu_province_state
+									has_state_flag = xinjiang_province_state
+									has_state_flag = suiyuan_province_state
+									is_core_of = MON
+									state = 1047 #xuzhou
+									state = 606 #anqing
+									state = 598 #yancheng
+									state = 1075 #nantong
+								}
+							}
+							transfer_state_to = FNG
+						}
+					}
+				}
+			}
+		}
+	}
 }
 

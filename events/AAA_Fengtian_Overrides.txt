@@ -9,7 +9,7 @@
 	immediate = { log = "[GetLogInfo]: event NKRFengtianManchuriaNews.1" }
 	title = NKRFengtianManchuriaNews.1.t
 	desc = NKRFengtianManchuriaNews.1.d
-	picture = GFX_news_event_NSR_united
+	picture = GFX_news_event_FNG_zhang_assassination
 
 	trigger = {
 		wants_world_news = yes
@@ -25,9 +25,6 @@
 
 	option = {
 		name = NKRFengtianManchuriaNews.1.a
-		trigger = {
-			tag = SZC
-		}
 	}
 }
  
@@ -36,7 +33,7 @@ news_event = { #新国家
    immediate = { log = "[GetLogInfo]: event NKRFengtianManchuriaNews.2" }
    title = NKRFengtianManchuriaNews.2.t
    desc = NKRFengtianManchuriaNews.2.d
-   picture = GFX_news_event_NSR_united
+   picture = GFX_news_event_ANQ_feng_recognised
 
    trigger = {
 	   wants_world_news = yes
@@ -52,9 +49,6 @@ news_event = { #新国家
 
    option = {
 	   name = NKRFengtianManchuriaNews.2.a
-	   trigger = {
-		   tag = SZC
-	   }
    }
 }
 
@@ -307,6 +301,9 @@ country_event = { #皇姑屯事变
 				id = NKRFengtianManchuria.6
 				days = 3
 			}
+			news_event = {
+				id = NKRFengtianManchuriaNews.1
+			}
 		}
 	}
 }
@@ -449,6 +446,9 @@ country_event = { #中华民国维新政府
 		name = NKRFengtianManchuria.12.a
 		add_political_power = -200
 		FNG_MAN_incident_peace_setup = yes
+		news_event = {
+			id = NKRFengtianManchuriaNews.2
+		}
 	}
 }
 
