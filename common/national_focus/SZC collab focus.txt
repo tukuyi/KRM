@@ -143,7 +143,46 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_peace_reconstruction_army"
-			
+			army_experience = 25
+			add_command_power = 25
+			every_unit_leader = {
+				gain_xp = 500
+				add_attack = 1
+			}
+			custom_effect_tooltip = SZC_YCP_collab_peace_reconstruction_army_tt
+			swap_ideas = {
+				remove_idea = SZC_YCP_collab_unwilling_army_idea
+				add_idea = SZC_YCP_collab_unwilling_army_2_idea
+			}
+			hidden_effect = {
+				SZC_wang_shizeng = {
+					set_portraits = {
+						army = {
+							large = GFX_portrait_SZC_wang_shizeng_collab_large
+							small = GFX_portrait_SZC_wang_shizeng_collab_small
+						}
+					}
+				}
+				SZC_liao_haitao = {
+					set_portraits = {
+						army = {
+							large = GFX_portrait_SZC_liao_haitao_collab_large
+							small = GFX_portrait_SZC_liao_haitao_collab_small
+						}
+					}
+				}
+				SZC_zhao_yinwu = {
+					set_portraits = {
+						army = {
+							large = GFX_portrait_SZC_zhao_yinwu_collab_large
+							small = GFX_portrait_SZC_zhao_yinwu_collab_small
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.31 days = 1 }
+			}
 		}
 	}
 
@@ -162,7 +201,16 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_rural_cleanup"
-			
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_manpower = -12379
+			every_owned_state = {
+				add_resistance = -10
+				add_compliance = 3
+			}
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.32 days = 1}
+			}
 		}
 	}
 
@@ -181,7 +229,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_new_nationalist_movement"
-			
+			swap_ideas = {
+				remove_idea = SZC_YCP_collab_legitimacy_1
+				add_idea = SZC_YCP_collab_legitimacy_2
+			}
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.33 days = 1}
+			}
 		}
 	}
 
@@ -200,7 +254,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_expand_eastern_asian_union"
-			
+			add_ideas = {
+				SZC_YCP_collab_construct_eastern_union_idea
+			}
+			add_political_power = -75
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.35 days = 1}
+			}
 		}
 	}
 
@@ -219,7 +279,12 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_anti_imperialism_propaganda"
-			
+			add_ideas = {
+				SZC_YCP_collab_fury_against_western_imperialism_idea
+			}
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.36 days = 1}
+			}
 		}
 	}
 
@@ -238,7 +303,38 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_rally_collaborationist"
-			
+			set_party_name = {
+				ideology = social_democrat
+				name = SZC_YCPC_NSPPSC_party
+				long_name = SZC_YCPC_NSPPSC_party
+			}
+			set_party_name = {
+				ideology = social_conservative
+				name = SZC_YCPC_PIP_party
+				long_name = SZC_YCPC_PIP_party
+			}
+			set_party_name = {
+				ideology = radical_socialist
+				name = SZC_YCPC_SDP_party
+				long_name = SZC_YCPC_SDP_party
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.03
+			}
+			add_war_support = 0.05
+			add_stability = 0.05
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.37 days = 1}
+			}
 		}
 	}
 
@@ -257,7 +353,16 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_leadership_of_peace_movement"
-			
+			SZC_zhao_yusong = {
+				add_trait = {
+					ideology = authoritarian_democrat_reform_statist_subtype
+					trait = SZC_YCP_collab_peace_leader_trait
+				}
+			}
+			add_political_power = 50
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.38 days = 1}
+			}
 		}
 	}
 
@@ -276,7 +381,12 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_the_number_seventy_sixth"
-			
+			create_intelligence_agency = yes
+			upgrade_intelligence_agency = upgrade_form_department
+			add_political_power = 100
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.40 days = 1}
+			}
 		}
 	}
 
@@ -288,6 +398,33 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SZC_YCP_collab_constitutional_democracy_under_sun
+
+		available = {
+			custom_override_tooltip = {
+				tooltip = SZC_YCP_collab_two_governments_one_sky_available_tt
+				is_in_faction_with = JAP
+				QIE = {
+					is_exists = no
+				}
+				LKT = {
+					is_exists = no
+				}
+				RKT = {
+					is_exists = no
+				}
+				UPC = {
+					is_exists = no
+				}
+				NOT = {
+					any_country = {
+						limit = {
+							is_chinese_or_potential_chinese_tag = yes
+						}
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
 
 		prerequisite = {
 			focus = SZC_YCP_collab_the_number_seventy_sixth
@@ -316,7 +453,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_two_governments_one_sky"
-			
+			custom_effect_tooltip = SZC_YCP_collab_two_governments_one_sky_tt
+			hidden_effect = {
+
+			}
 		}
 	}
 
