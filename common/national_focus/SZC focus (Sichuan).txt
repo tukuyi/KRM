@@ -23439,7 +23439,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			# add = 50
+			# add = 90
 			add = 0
 			tag = SZC
 		}
@@ -34157,6 +34157,10 @@ focus_tree = {
 				focus = SZC_YCP_reorganize_and_prepare_for_war
 			}
 
+			available = {
+				has_completed_focus = SZC_YCP_wave_of_history_victory_of_ycp
+			}
+
 
 			completion_reward = {
 				log = "[GetLogRoot]: Focus Completed SZC_YCP_central_ordnance_bureau"
@@ -34309,6 +34313,10 @@ focus_tree = {
 
 			prerequisite = {
 				focus = SZC_YCP_reorganize_and_prepare_for_war
+			}
+
+			available = {
+				has_completed_focus = SZC_YCP_wave_of_history_victory_of_ycp
 			}
 
 
@@ -34658,6 +34666,10 @@ focus_tree = {
 
 			prerequisite = {
 				focus = SZC_YCP_purge_bad_habits
+			}
+
+			available = {
+				has_completed_focus = SZC_YCP_wave_of_history_victory_of_ycp
 			}
 
 

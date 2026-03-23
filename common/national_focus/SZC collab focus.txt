@@ -32,7 +32,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_start_the_negotiation"
-			custom_effect_tooltip = SZC_YCP_collab_start_the_negotiation_tooltip
+			custom_effect_tooltip = SZC_YCP_collab_start_the_negotiation_tt
 		}
 	}
 
@@ -51,6 +51,15 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_start_peace_propaganda"
+			add_political_power = -100
+			add_war_support = -0.1
+			add_stability = -0.1
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanCollab.4
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -69,6 +78,14 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_stablize_the_hardliner"
+			army_experience = -25
+			add_command_power = -25
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanCollab.5
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -81,6 +98,16 @@ focus_tree = {
 		y = 2
 		relative_position_id = SZC_YCP_collab_start_the_negotiation
 
+		available = {
+			has_country_flag = SZC_YCP_collab_something_happened
+		}
+
+		select_effect = {
+			country_event = { id = NKRsichuanCollab.27 days = 1 }
+			country_event = { id = NKRsichuanCollab.28 days = 5 }
+			country_event = { id = NKRsichuanCollab.29 days = 10 }
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_collab_start_peace_propaganda
 		}
@@ -91,7 +118,205 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_constitutional_democracy_under_sun"
-			custom_effect_tooltip = constitutional_democracy_under_sun_tt
+			custom_effect_tooltip = SZC_YCP_collab_constitutional_democracy_under_sun_tt
+			hidden_effect = {
+				country_event = {
+					id = NKRsichuanCollab.30
+				}
+				SZC_collab_remove_prev_ideas = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_peace_reconstruction_army
+		icon = GFX_goal_SZC_YCP_collab_peace_reconstruction_army
+		cost = 4
+
+		x = -5
+		y = 1
+		relative_position_id = SZC_YCP_collab_constitutional_democracy_under_sun
+
+		prerequisite = {
+			focus = SZC_YCP_collab_constitutional_democracy_under_sun
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_peace_reconstruction_army"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_rural_cleanup
+		icon = GFX_goal_SZC_YCP_collab_rural_cleanup
+		cost = 4
+
+		x = -3
+		y = 1
+		relative_position_id = SZC_YCP_collab_constitutional_democracy_under_sun
+
+		prerequisite = {
+			focus = SZC_YCP_collab_constitutional_democracy_under_sun
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_rural_cleanup"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_new_nationalist_movement
+		icon = GFX_goal_SZC_YCP_collab_new_nationalist_movement
+		cost = 4
+
+		x = -1
+		y = 1
+		relative_position_id = SZC_YCP_collab_constitutional_democracy_under_sun
+
+		prerequisite = {
+			focus = SZC_YCP_collab_constitutional_democracy_under_sun
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_new_nationalist_movement"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_expand_eastern_asian_union
+		icon = GFX_goal_SZC_YCP_collab_expand_eastern_asian_union
+		cost = 4
+
+		x = 5
+		y = 1
+		relative_position_id = SZC_YCP_collab_constitutional_democracy_under_sun
+
+		prerequisite = {
+			focus = SZC_YCP_collab_constitutional_democracy_under_sun
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_expand_eastern_asian_union"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_anti_imperialism_propaganda
+		icon = GFX_goal_SZC_YCP_collab_anti_imperialism_propaganda
+		cost = 4
+
+		x = 3
+		y = 1
+		relative_position_id = SZC_YCP_collab_constitutional_democracy_under_sun
+
+		prerequisite = {
+			focus = SZC_YCP_collab_constitutional_democracy_under_sun
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_anti_imperialism_propaganda"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_rally_collaborationist
+		icon = GFX_goal_SZC_YCP_collab_rally_collaborationist
+		cost = 4
+
+		x = 1
+		y = 1
+		relative_position_id = SZC_YCP_collab_constitutional_democracy_under_sun
+
+		prerequisite = {
+			focus = SZC_YCP_collab_constitutional_democracy_under_sun
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_rally_collaborationist"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_leadership_of_peace_movement
+		icon = GFX_goal_SZC_YCP_collab_leadership_of_peace_movement
+		cost = 4
+
+		x = 7
+		y = 1
+		relative_position_id = SZC_YCP_collab_constitutional_democracy_under_sun
+
+		prerequisite = {
+			focus = SZC_YCP_collab_constitutional_democracy_under_sun
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_leadership_of_peace_movement"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_the_number_seventy_sixth
+		icon = GFX_goal_SZC_YCP_collab_the_number_seventy_sixth
+		cost = 4
+
+		x = -7
+		y = 1
+		relative_position_id = SZC_YCP_collab_constitutional_democracy_under_sun
+
+		prerequisite = {
+			focus = SZC_YCP_collab_constitutional_democracy_under_sun
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_the_number_seventy_sixth"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_two_governments_one_sky
+		icon = GFX_goal_SZC_YCP_collab_two_governments_one_sky
+		cost = 4
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_YCP_collab_constitutional_democracy_under_sun
+
+		prerequisite = {
+			focus = SZC_YCP_collab_the_number_seventy_sixth
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_peace_reconstruction_army
+		}
+		prerequisite = {
+			focus = SZC_YCP_collab_rural_cleanup
+		}
+		prerequisite = {
+			focus = SZC_YCP_collab_new_nationalist_movement
+		}
+		prerequisite = {
+			focus = SZC_YCP_collab_rally_collaborationist
+		}
+		prerequisite = {
+			focus = SZC_YCP_collab_anti_imperialism_propaganda
+		}
+		prerequisite = {
+			focus = SZC_YCP_collab_expand_eastern_asian_union
+		}
+		prerequisite = {
+			focus = SZC_YCP_collab_leadership_of_peace_movement
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_two_governments_one_sky"
+			
 		}
 	}
 

@@ -77,6 +77,13 @@ news_event = { #新国家
 					has_game_rule = { rule = FNG_forpol option = FNG_FORPOL_CUF }
 				}
 			}
+
+			modifier = {
+				factor = 0
+				SZC = {
+					has_country_flag = SZC_YCP_collab_path_selected
+				}
+			}
 		}
 		if = {
 			limit = {
@@ -122,6 +129,13 @@ news_event = { #新国家
 				factor = 0
 				has_game_rule = { rule = FNG_forpol option = FNG_FORPOL_UNCONDITIONAL_JAP }
 			}
+
+			modifier = {
+				factor = 0
+				SZC = {
+					has_country_flag = SZC_YCP_collab_path_selected
+				}
+			}
 		}
 		#Choosing this option is expensive the more Japanese influence you have
 		if = {
@@ -141,7 +155,10 @@ news_event = { #新国家
 		ai_chance = {
 			base = 0
 			modifier = {
-				add = 10000
+				SZC = {
+					has_country_flag = SZC_YCP_collab_path_selected
+				}
+				add = 100000
 			}
 		}
 		add_war_support = -0.05
@@ -348,6 +365,19 @@ country_event = { #关东军越权行动
 				id = NKRFengtianManchuria.13
 			}
 			FNG_kanji_arrive_MAN_setup = yes
+			if = {
+				limit = {
+					SZC = {
+						has_country_flag = SZC_YCP_collab_path_selected
+					}
+				}
+				SZC = {
+					country_event = {
+						id = NKRsichuanCollab.12
+						days = 1
+					}
+				}
+			}
 		}
 	}
 }
