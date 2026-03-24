@@ -379,7 +379,15 @@ country_event = {#枪响！
 		kill_country_leader = yes
 		hidden_effect = {
 			SZC_assorted_leaders = {
+				promote_character = authoritarian_democrat_subtype
 				promote_character = paternal_autocrat_subtype
+				promote_character = social_conservative_subtype
+				promote_character = market_liberal_subtype
+				promote_character = social_liberal_subtype
+				promote_character = national_populist_subtype
+			}
+			SZC_zeng_qi = {
+				retire = yes
 			}
 			country_event = { id = NKRsichuanCollab.24 days = 1 }
 		}
@@ -451,6 +459,7 @@ country_event = {#中央政治行动委员会
 	fire_only_once = yes
 	option = {
 		name = NKRsichuanCollab.26.a
+		YCP_party_issue_dissolve = yes
 		set_party_name = {
 			ideology = authoritarian_democrat
 			name = SZC_YCPC_YCPCPAC_party
@@ -475,6 +484,7 @@ country_event = {#中央政治行动委员会
 			promote_character = authoritarian_democrat_reform_statist_subtype
 		}
 		hidden_effect = {
+			SZC_collab_remove_normal_guys = yes
 			if = {
 				limit = {
 					OR = {

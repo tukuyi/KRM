@@ -433,3 +433,52 @@ SZC_collab_remove_prev_ideas = {
 		SZC_YCP_legitimacy_3
 	}
 }
+
+SZC_collab_remove_normal_guys = {
+	every_character = {
+		limit = {
+			OR = {
+				is_character = SZC_zeng_qi
+				is_character = SZC_li_huang
+				is_character = SZC_zuo_shunsheng
+				is_character = SZC_chen_qitian
+				is_character = SZC_jiang_yungang
+				is_character = SZC_xia_taosheng
+				is_character = SZC_zhang_bolun
+				is_character = SZC_wei_shizhen
+				is_character = SZC_chang_yansheng
+				is_character = SZC_liao_shangke 
+				is_character = SZC_zhang_zizhu
+				is_character = SZC_zheng_zhenwen
+				is_character = SZC_hu_fuxian
+				is_character = SZC_li_buwei
+				is_character = SZC_wu_tianchi
+				is_character = SZC_hu_guowei
+				is_character = SZC_yu_xiaoquan
+				is_character = SZC_liu_dongyan
+				is_character = SZC_wang_lanseng
+				is_character = SZC_liu_yongji
+				is_character = SZC_wang_guangqi
+				is_character = SZC_chen_shanxin
+				is_character = SZC_yu_fuxian
+				is_character = SZC_lin_keji
+				is_character = SZC_yu_jiaju
+				is_character = SZC_he_luzhi
+				is_character = SZC_liang_shiqiu
+				is_character = SZC_zhang_baoen
+				is_character = SZC_xia_erkang
+				is_character = SZC_duan_zhenhuan
+				is_character = SZC_shen_yunlong
+				is_character = SZC_zhang_mengjiu
+				is_character = SZC_ding_tingbiao
+				is_character = SZC_liu_pengjiu
+				is_character = SZC_tao_yuanzhen
+				is_character = SZC_tao_yuangan
+				is_character = SZC_cui_wanqiu
+				is_character = SZC_wen_yiduo
+				is_character = SZC_tan_tiwu
+			}
+		}
+		retire = yes
+	}
+}
