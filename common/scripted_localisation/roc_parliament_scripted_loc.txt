@@ -764,3 +764,23 @@ defined_text = {
 		localization_key = parliament_coalition_establish_not_avaialble
 	}
 }
+
+
+defined_text = {
+	name = GetROCLawTittle
+	text = {
+		trigger = {
+			set_temp_variable = { temp_law = var:ROC_current_law }
+		}
+		localization_key = "ROC_law_tittle_text_the_[?temp_law]"
+	}
+}
+defined_text = {
+	name = GetROCLawDetails
+	text = {
+		trigger = {
+			set_temp_variable = { temp_law = var:ROC_current_law }
+		}
+		localization_key = "ROC_law_details_text_the_[?temp_law]"
+	}
+}

@@ -247,12 +247,10 @@ scripted_gui = {
 		context_type = player_context
  
 		visible = {
-			# has_country_flag = open_roc_coalition_gui
-			always = yes
+			has_country_flag = open_law_sign_roc_gui
+			# always = yes
 		}
  
-		dynamic_lists = {
-		}
  
 		properties = {
 			roc_law_sign_interact_button = {
@@ -262,18 +260,19 @@ scripted_gui = {
  
 		triggers = {
 			
-			roc_law_sign_interact_button_click_enabled = {
-				
-			}
 			roc_law_sign_interact_button_visible = {
 				has_country_flag = roc_law_sign_interacted
 				set_temp_variable = { roc_law_sign_interact_button_frame = 0 } # 1 for looping, 0 for no looping
-				multiply_temp_variable = { roc_law_sign_interact_button_frame = 512 }
-				add_to_temp_variable = { roc_law_sign_interact_button_frame = 216 } # FPS
-				multiply_temp_variable = { roc_law_sign_interact_button_frame = 128 }
-				add_to_temp_variable = { roc_law_sign_interact_button_frame = 68 } # End frame
-				multiply_temp_variable = { roc_law_sign_interact_button_frame = 128 }
+				multiply_temp_variable = { roc_law_sign_interact_button_frame = 256 }
+				add_to_temp_variable = { roc_law_sign_interact_button_frame = 190 } # FPS
+				multiply_temp_variable = { roc_law_sign_interact_button_frame = 64 }
+				add_to_temp_variable = { roc_law_sign_interact_button_frame = 46 } # End frame
+				multiply_temp_variable = { roc_law_sign_interact_button_frame = 64 }
 				add_to_temp_variable = { roc_law_sign_interact_button_frame = 1 } # Start frame
+			}
+
+			roc_law_sign_interact_button_click_enabled = {
+				has_country_flag = roc_law_sign_interacted
 			}
 		}
  
@@ -283,10 +282,21 @@ scripted_gui = {
 					limit = {
 						has_country_flag = roc_law_sign_interacted
 					}
-					clr_country_flag = roc_law_sign_interacted
+					custom_override_tooltip = {
+						tooltip = law_sign_interact_button_clicked_exit_tooltip
+						clr_country_flag = roc_law_sign_interacted
+						clr_country_flag = open_law_sign_roc_gui
+					}
 				}
 				else = {
 					set_country_flag = roc_law_sign_interacted
+					sound_effect = "pen1"
+					meta_effect = {
+						text = {
+							[effect] = yes
+						}
+						effect = "ROC_law_the_[?ROC_current_law]_effect"
+					}
 				}
 			}
 		}
