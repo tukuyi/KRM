@@ -150,4 +150,24 @@ spriteTypes = {
 		size = { x = 600 y = 26 }
 		effectfile = "gfx/FX/progress.lua"
 	}
+
+	spritetype = {
+		name = "GFX_ROC_parliament_sign_zhao_yusong_animated"
+		texturefile = "gfx/interface/gui/parliament/parliament_sign_zhao_yusong.png"
+		noOfFrames = 70
+		effectFile = "gfx/FX/animated_sprite_128.shader"
+		# animation_rate_fps = 8
+		# looping = yes
+		# play_on_show = yes
+	}
+	
+	spritetype = {
+		name = "GFX_ROC_parliament_national_seal"
+		texturefile = "gfx/interface/gui/parliament/parliament_national_seal.png"
+	}
+	
+	spritetype = {
+		name = "GFX_ROC_parliament_law_sign_empty"
+		texturefile = "gfx/interface/gui/parliament/parliament_law_sign_empty.png"
+	}
 }

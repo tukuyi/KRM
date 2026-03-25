@@ -593,5 +593,95 @@ guiTypes = {
 
 
 	
+	# ══════════════════════════════════════════════════════════
+	# 執政聯盟組建視窗
+	# 在 ROC_parliament.gui 的 guiTypes = { } 內部末尾追加
+	# ══════════════════════════════════════════════════════════
+
+	containerWindowType = {
+		name = "roc_parliament_law_sign_gui"
+		hide_position = { x = 0 y = -2000 }
+		show_position = { x = -6 y = 0 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 600
+		size = { width = 560 height = 765 }
+		orientation = center
+		origo = center
+		moveable = yes
+
+		hide_sound = menu_close_window
+		show_sound = menu_open_window
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiled_paper_bg"
+		}
+
+
+		background = {
+			name = "background_overlay"
+			quadTextureSprite ="GFX_tiled_research_bg"
+		}
+
+		iconType = {
+			name = "ROC_law_national_seal"
+			spriteType = "GFX_ROC_parliament_national_seal"
+			position = { x = 345 y = 530 }
+			alwaystransparent = yes
+		}
+		# 法律名
+		instantTextBoxType = {
+			name = "ROC_law_tittle_text"
+			position = { x = 0 y = 35 }
+			text = "ROC_law_tittle_text"
+			font = "hoi_36header"
+			maxWidth = 560
+			format = center
+		}
+
+		# ── 内容 ──
+		containerWindowType = {
+			name = "ROC_law_sign_zone"
+			position = { x = -2 y = 80 }
+			size = { width = 558 height = 450 }
+			smooth_scrolling = yes
+			verticalScrollbar = "right_vertical_slider"	
+
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				alwaystransparent = yes
+			}
+
+			# 具体文本
+			instantTextBoxType = {
+				name = "ROC_law_details_text"
+				position = { x = 40 y = 0 }
+				text = "ROC_law_details_text"
+				font = "hoi_20bs"
+				format = left
+				maxWidth = 480
+			}
+
+
+		}
+
+		buttonType = {
+			name = "roc_law_sign_interact_toclick"
+			position = { x = 10 y = 561 }
+			spriteType = "GFX_ROC_parliament_law_sign_empty"
+			pdx_tooltip = "ROC_law_sign_interact_tt"
+			clicksound = pen1
+		}
+		buttonType = {
+			name = "roc_law_sign_interact_button"
+			spriteType = "GFX_ROC_parliament_sign_zhao_yusong_animated"
+			position = { x = 90 y = 590 }
+			alwaystransparent = yes
+		}
+
+	}
+	
 
 }

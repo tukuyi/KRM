@@ -241,4 +241,54 @@ scripted_gui = {
 			}
 		}
 	}
+
+	roc_parliament_law_sign_scripted_gui = {
+		window_name = "roc_parliament_law_sign_gui"
+		context_type = player_context
+ 
+		visible = {
+			# has_country_flag = open_roc_coalition_gui
+			always = yes
+		}
+ 
+		dynamic_lists = {
+		}
+ 
+		properties = {
+			roc_law_sign_interact_button = {
+				frame = roc_law_sign_interact_button_frame
+			}
+		}
+ 
+		triggers = {
+			
+			roc_law_sign_interact_button_click_enabled = {
+				
+			}
+			roc_law_sign_interact_button_visible = {
+				has_country_flag = roc_law_sign_interacted
+				set_temp_variable = { roc_law_sign_interact_button_frame = 0 } # 1 for looping, 0 for no looping
+				multiply_temp_variable = { roc_law_sign_interact_button_frame = 512 }
+				add_to_temp_variable = { roc_law_sign_interact_button_frame = 216 } # FPS
+				multiply_temp_variable = { roc_law_sign_interact_button_frame = 128 }
+				add_to_temp_variable = { roc_law_sign_interact_button_frame = 68 } # End frame
+				multiply_temp_variable = { roc_law_sign_interact_button_frame = 128 }
+				add_to_temp_variable = { roc_law_sign_interact_button_frame = 1 } # Start frame
+			}
+		}
+ 
+		effects = {
+			roc_law_sign_interact_toclick_click = {
+				if = {
+					limit = {
+						has_country_flag = roc_law_sign_interacted
+					}
+					clr_country_flag = roc_law_sign_interacted
+				}
+				else = {
+					set_country_flag = roc_law_sign_interacted
+				}
+			}
+		}
+	}
 }
