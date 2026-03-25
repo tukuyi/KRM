@@ -286,6 +286,7 @@ scripted_gui = {
 						tooltip = law_sign_interact_button_clicked_exit_tooltip
 						clr_country_flag = roc_law_sign_interacted
 						clr_country_flag = open_law_sign_roc_gui
+						set_variable = { ROC_current_law = 0 }
 					}
 				}
 				else = {
