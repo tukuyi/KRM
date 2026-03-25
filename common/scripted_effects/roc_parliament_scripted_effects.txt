@@ -5,7 +5,7 @@
 ROC_register_parties = {
 	clear_array = ROC_party_tokens
 
-	set_variable = { ROC_parties_max = 10 }
+	set_variable = { ROC_parties_max = 11 }
 	set_variable = { ROC_seats_max = 800 }
 	
 	#parliament_gui_status - 1执政 2联合 3在野
@@ -87,7 +87,7 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_ideology = token:totalist }
 	}
 
-	# 社會民主黨 —— frame 8, 31席
+	# 社會民主黨 —— frame 8, 27席
 	add_to_array = { ROC_party_tokens = token:parliament_gui_SDP }
 	parliament_gui_SDP = {
 		set_variable = { parliament_gui_frame = 8 }
@@ -98,7 +98,7 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_ideology = token:radical_socialist }
 	}
 
-	# 全華聯合工會 —— frame 9, 20席
+	# 全華聯合工會 —— frame 9, 18席
 	add_to_array = { ROC_party_tokens = token:parliament_gui_ACU }
 	parliament_gui_ACU = {
 		set_variable = { parliament_gui_frame = 9 }
@@ -109,7 +109,18 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_ideology = token:syndicalist }
 	}
 
-	# 無黨籍 —— frame 10, 82席
+	# 中国国民革新党 —— frame 10, 6席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_RRP }
+	parliament_gui_RRP = {
+		set_variable = { parliament_gui_frame = 11 }
+		set_variable = { parliament_gui_seats = 6 }
+		set_variable = { parliament_gui_status = 3 }
+		set_variable = { parliament_gui_party = token:parliament_gui_RRP }
+		set_variable = { parliament_gui_chairman = token:SZC_zhang_ming }
+		set_variable = { parliament_gui_ideology = token:national_populist }
+	}
+
+	# 無黨籍 —— frame 11, 82席
 	add_to_array = { ROC_party_tokens = token:parliament_gui_IND }
 	parliament_gui_IND = {
 		set_variable = { parliament_gui_frame = 10 }
@@ -364,7 +375,8 @@ ROC_parliament_update = {
 	add_to_temp_variable = { t7 = t6 }
 	add_to_temp_variable = { t8 = t7 }
 	add_to_temp_variable = { t9 = t8 }
-	set_temp_variable = { t10 = 800 }
+	add_to_temp_variable = { t10 = t9 }
+	set_temp_variable = { t11 = 800 }
 	
 	clear_array = ROC_seat_frame
 

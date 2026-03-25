@@ -91,6 +91,12 @@ defined_text = {
 		}
 		localization_key = parliament_gui_IND
 	}
+	text = {
+		trigger = {
+			check_variable = { ROC_seat_frame^seat_idx = 11 }
+		}
+		localization_key = parliament_gui_RRP
+	}
 }
 
 defined_text = {

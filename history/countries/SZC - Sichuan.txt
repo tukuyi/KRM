@@ -1434,6 +1434,7 @@ recruit_character = parliament_gui_FAS
 recruit_character = parliament_gui_SDP
 recruit_character = parliament_gui_IND
 recruit_character = parliament_gui_ACU
+recruit_character = parliament_gui_RRP
 
 
 recruit_character = SZC_zhao_yusong
@@ -1450,6 +1451,7 @@ recruit_character = SZC_zhou_fohai
 recruit_character = SZC_zhou_yuying
 recruit_character = SZC_zhu_xiang
 recruit_character = SZC_jiang_kanghu
+recruit_character = SZC_zhang_ming
 recruit_character = SZC_ROC_independent_bois
 
 
@@ -1503,6 +1505,10 @@ SZC_zhu_xiang = {
 	china_set_character_alignment_geacps = yes
 }
 SZC_jiang_kanghu = {
+	retire = yes
+	china_set_character_alignment_geacps = yes
+}
+SZC_zhang_ming = {
 	retire = yes
 	china_set_character_alignment_geacps = yes
 }
