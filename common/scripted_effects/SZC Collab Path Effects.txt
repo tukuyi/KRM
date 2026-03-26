@@ -489,3 +489,27 @@ ROC_law_the_1_effect = {
 	complete_national_focus = SZC_YCP_collab_two_governments_one_sky
 	add_political_power = 100
 }
+
+ROC_law_the_1_vote_debug = {
+	set_variable = { ROC_current_law = 1 }
+	set_temp_variable = { tempc = 0 }
+	
+	for_each_loop = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		
+        ROOT = {
+            set_variable = { tempc = roc_cur_token }
+        }
+        meta_effect = {
+            text = {
+                every_character = {
+                    limit = { is_character = [tokenbase] }
+					set_variable = { parliament_gui_seats_supporter = var:THIS.parliament_gui_seats }
+                }
+            }
+            tokenbase = "[?ROOT.tempc.GetTokenKey]"
+        }
+	}
+		clear_variable = ROOT.tempc
+}
