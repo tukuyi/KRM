@@ -803,97 +803,81 @@ defined_text = {
 			divide_temp_variable = { angle = var:ROC_parties_max }
 
 			# ==========================================
-			# --- 2. 计算 Y 坐标 (正弦 Sine) ---
+			# --- 2. 算 Sine (这次把 Sine 交给 X 坐标) ---
 			# ==========================================
-			set_temp_variable = { y_angle = var:angle }
+			set_temp_variable = { y_angle = temp_var:angle }
 			set_temp_variable = { is_neg_y = 0 }
 
-			# 如果角度 >= 180，进入下半圆，角度减去180，Y变负数
 			if = {
 				limit = { check_variable = { y_angle > 179.999 } }
 				subtract_from_temp_variable = { y_angle = 180 }
 				set_temp_variable = { is_neg_y = 1 }
 			}
 
-			# 计算 term_y = 180 - y_angle
 			set_temp_variable = { term_y = 180 }
-			subtract_from_temp_variable = { term_y = var:y_angle }
+			subtract_from_temp_variable = { term_y = temp_var:y_angle }
 
-			# 计算 T_y = y_angle * term_y
-			set_temp_variable = { T_y = var:y_angle }
-			multiply_temp_variable = { T_y = var:term_y }
+			set_temp_variable = { T_y = temp_var:y_angle }
+			multiply_temp_variable = { T_y = temp_var:term_y }
 
-			# 计算分子: num_y = T_y * 60 (半径150的缩放值)
-			set_temp_variable = { num_y = var:T_y }
-			multiply_temp_variable = { num_y = 60 }
+			set_temp_variable = { num_y = temp_var:T_y }
+			multiply_temp_variable = { num_y = 60 } # 这里 60 是半径150对应的比例，如果想改半径，修改这里即可
 
-			# 计算分母: den_y = 4050 - (T_y / 10) -> 除以10是为了防止超过HOI4的214万变量上限
-			set_temp_variable = { T_y_div_10 = var:T_y }
+			set_temp_variable = { T_y_div_10 = temp_var:T_y }
 			divide_temp_variable = { T_y_div_10 = 10 }
-
 			set_temp_variable = { den_y = 4050 }
-			subtract_from_temp_variable = { den_y = var:T_y_div_10 }
+			subtract_from_temp_variable = { den_y = temp_var:T_y_div_10 }
 
-			# 最终除法 Y = 分子 / 分母
-			set_temp_variable = { party_y = var:num_y }
-			divide_temp_variable = { party_y = var:den_y }
-
-			# 赋予正负号
+			# 赋值给 X！
+			set_temp_variable = { party_x = temp_var:num_y }
+			divide_temp_variable = { party_x = temp_var:den_y }
 			if = {
 				limit = { check_variable = { is_neg_y > 0 } }
-				multiply_temp_variable = { party_y = -1 }
+				multiply_temp_variable = { party_x = -1 }
 			}
 
 			# ==========================================
-			# --- 3. 计算 X 坐标 (余弦 Cosine) ---
+			# --- 3. 算 Cosine (这次把 Cosine 交给 Y 坐标) ---
 			# ==========================================
-			# 余弦就是正弦提前 90 度
-			set_temp_variable = { x_angle = var:angle }
+			set_temp_variable = { x_angle = temp_var:angle }
 			add_to_temp_variable = { x_angle = 90 }
 
-			# 如果超过 360 度就绕回第一圈
 			if = {
 				limit = { check_variable = { x_angle > 359.999 } }
 				subtract_from_temp_variable = { x_angle = 360 }
 			}
 
 			set_temp_variable = { is_neg_x = 0 }
-
-			# 同理，处理左半圆的负数逻辑
 			if = {
 				limit = { check_variable = { x_angle > 179.999 } }
 				subtract_from_temp_variable = { x_angle = 180 }
 				set_temp_variable = { is_neg_x = 1 }
 			}
 
-			# 计算 term_x = 180 - x_angle
 			set_temp_variable = { term_x = 180 }
-			subtract_from_temp_variable = { term_x = var:x_angle }
+			subtract_from_temp_variable = { term_x = temp_var:x_angle }
 
-			# 计算 T_x = x_angle * term_x
-			set_temp_variable = { T_x = var:x_angle }
-			multiply_temp_variable = { T_x = var:term_x }
+			set_temp_variable = { T_x = temp_var:x_angle }
+			multiply_temp_variable = { T_x = temp_var:term_x }
 
-			# 计算分子: num_x = T_x * 60
-			set_temp_variable = { num_x = var:T_x }
+			set_temp_variable = { num_x = temp_var:T_x }
 			multiply_temp_variable = { num_x = 60 }
 
-			# 计算分母: den_x = 4050 - (T_x / 10)
-			set_temp_variable = { T_x_div_10 = var:T_x }
+			set_temp_variable = { T_x_div_10 = temp_var:T_x }
 			divide_temp_variable = { T_x_div_10 = 10 }
-
 			set_temp_variable = { den_x = 4050 }
-			subtract_from_temp_variable = { den_x = var:T_x_div_10 }
+			subtract_from_temp_variable = { den_x = temp_var:T_x_div_10 }
 
-			# 最终除法 X = 分子 / 分母
-			set_temp_variable = { party_x = var:num_x }
-			divide_temp_variable = { party_x = var:den_x }
-
-			# 赋予正负号
+			# 赋值给 Y！
+			set_temp_variable = { party_y = temp_var:num_x }
+			divide_temp_variable = { party_y = temp_var:den_x }
 			if = {
 				limit = { check_variable = { is_neg_x > 0 } }
-				multiply_temp_variable = { party_x = -1 }
+				multiply_temp_variable = { party_y = -1 }
 			}
+
+			# 【关键点】：因为 12点钟 在 UI 里是上方 (负数)，我们需要把 Y 整体反转！
+			multiply_temp_variable = { party_y = -1 }
 
 			#增加基础xy
 			add_to_temp_variable = { party_x = 200 }
