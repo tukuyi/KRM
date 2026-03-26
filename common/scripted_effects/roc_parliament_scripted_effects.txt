@@ -5,7 +5,6 @@
 ROC_register_parties = {
 	clear_array = ROC_party_tokens
 
-	set_variable = { ROC_parties_max = 11 }
 	set_variable = { ROC_seats_max = 800 }
 	
 	#parliament_gui_status - 1执政 2联合 3在野
@@ -130,6 +129,18 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_chairman = token:SZC_ROC_independent_bois }
 		set_variable = { parliament_gui_desc = parliament_gui_IND_desc }
 	}
+	ROC_parliament_parties_num_check = yes
+}
+
+ROC_parliament_parties_num_check = {
+	set_temp_variable = { temp_parties_num = 0 }
+	for_each_loop = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+
+		add_to_temp_variable = { temp_parties_num = 1 }
+	}
+	set_variable = { ROC_parties_max = var:temp_parties_num }
 }
 
 
@@ -360,23 +371,37 @@ ROC_parliament_update = {
             seats = "[?roc_seats]"
   			frame_val = "[?roc_frame]"                         # ← 新增	
         }
+		if = {
+			limit = {
+				check_variable = { ROC_loop_index = var:ROC_parties_max }
+			}
+			meta_effect = {
+				text = {
+					set_temp_variable = { t[idx] = 800 }
+				}
+				idx = "[?ROC_loop_index]"
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ROC_loop_index > 1 }
+			}
+			set_temp_variable = { temp_index_calculate = var:ROC_loop_index }
+			add_to_temp_variable = { temp_index_calculate = -1 }
+			meta_effect = {
+				text = {
+					add_to_temp_variable = { t[idx] = t[calidx] }          # ← 下标改为循环计数器
+				}
+				idx = "[?ROC_loop_index]"
+				calidx = "[?temp_index_calculate]"
+			}
+		}
     }
 	ROOT = {
 		clear_variable = ROOT.tempc
 		clear_variable = roc_seats
 		# clear roc_frame 也删去
 	}
-
-	add_to_temp_variable = { t2 = t1 }
-	add_to_temp_variable = { t3 = t2 }
-	add_to_temp_variable = { t4 = t3 }
-	add_to_temp_variable = { t5 = t4 }
-	add_to_temp_variable = { t6 = t5 }
-	add_to_temp_variable = { t7 = t6 }
-	add_to_temp_variable = { t8 = t7 }
-	add_to_temp_variable = { t9 = t8 }
-	add_to_temp_variable = { t10 = t9 }
-	set_temp_variable = { t11 = 800 }
 	
 	clear_array = ROC_seat_frame
 
@@ -399,6 +424,7 @@ ROC_parliament_update = {
 			time = "[?ROC_resize_array_times]"
 		}
 	}
+	ROC_parliament_parties_num_check = yes
 }
 # ──────────────────────────────────────────────────────────
 # ROC_init_parliament_positions — 座標，只需執行一次
