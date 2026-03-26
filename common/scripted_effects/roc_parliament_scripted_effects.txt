@@ -377,7 +377,7 @@ ROC_parliament_update = {
 			}
 			meta_effect = {
 				text = {
-					set_temp_variable = { t[idx] = 800 }
+					set_temp_variable = { t[idx] = var:ROC_seats_max }
 				}
 				idx = "[?ROC_loop_index]"
 			}
@@ -2045,7 +2045,7 @@ ROC_init_parliament_positions = {
 	while_loop_effect = {
 		limit = {
 			check_variable = {
-				temp_circle_times < 800
+				temp_circle_times < var:ROC_seats_max
 			}
 		}
 		set_temp_variable = { temp_change_x = ROC_seat_x^temp_circle_times }
