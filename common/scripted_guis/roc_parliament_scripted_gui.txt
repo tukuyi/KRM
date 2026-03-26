@@ -302,4 +302,30 @@ scripted_gui = {
 			}
 		}
 	}
+	
+	roc_parliament_vote_decision_scripted_gui = {
+		window_name = "roc_parliament_vote_decision_gui"
+		context_type = decision_category
+
+
+
+		dynamic_lists = {
+			roc_vote_parties_gridbox = {
+				array = ROC_party_tokens
+				index = party_idx
+				entry_container = ROC_vote_party_entry
+				value = roc_cur_token
+			}
+		}
+
+		properties = {
+			vote_party_emblem = {
+				x = var:party_x
+				y = var:party_y
+			}
+		}
+
+		effects = {
+		}
+	}
 }

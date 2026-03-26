@@ -156,6 +156,14 @@ Effect Down
 Effect Disable
 {
 	VertexShader = "VertexShader"
+	PixelShader = "PixelShader"
+}
+
+Effect Over
+{
+	VertexShader = "VertexShader"
+	PixelShader = "PixelShader"
+}
 	PixelShader = "PixelShaderDown"
 }
 
@@ -163,4 +171,3 @@ Effect Over
 {
 	VertexShader = "VertexShader"
 	PixelShader = "PixelShaderOver"
-}

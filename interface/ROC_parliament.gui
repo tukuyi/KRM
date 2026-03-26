@@ -594,8 +594,7 @@ guiTypes = {
 
 	
 	# ══════════════════════════════════════════════════════════
-	# 執政聯盟組建視窗
-	# 在 ROC_parliament.gui 的 guiTypes = { } 內部末尾追加
+	# 签署法律
 	# ══════════════════════════════════════════════════════════
 
 	containerWindowType = {
@@ -681,6 +680,102 @@ guiTypes = {
 		}
 
 	}
+
 	
+	# ══════════════════════════════════════════════════════════
+	# 法律表决
+	# ══════════════════════════════════════════════════════════
+
+	containerWindowType = {
+		name = "roc_parliament_vote_decision_gui"
+		size = { width = 100% height = 500 }
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiled_paper_bg"
+		}
+
+
+		background = {
+			name = "background_overlay"
+			quadTextureSprite ="GFX_tiled_research_bg"
+		}
+
+
+		containerWindowType = {
+			name = "ROC_vote_parties_gridbox_container"
+			size = { width = 500 height = 500 }
+			position = { x = 0 y = 5 }
+
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+				alwaystransparent = yes
+			}
+
+			gridboxtype = {
+				name = "roc_vote_parties_gridbox"
+				position = { x = 15 y = 14 }
+				slotsize = { width = 100% height = 100% }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+		}
+	}
+	
+	# ── 黨派表决容器 ──────────────────────────────────
+	containerWindowType = {
+		name = "ROC_vote_party_entry"
+		size = { width = 100 height = 100 }
+		clipping = no
+		orientation = UPPER_LEFT
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+			alwaystransparent = yes
+		}
+
+		# 黨徽
+		iconType = {
+			name = "vote_party_emblem"
+			spriteType = "GFX_ROC_parliament_gui_IND_emblem"
+			position = { x = 10 y = 14 }
+			scale = 0.4
+		}
+
+		# 计算用
+		instantTextBoxType = {
+			name = "ROC_vote_party_XY_calculate"
+			position = { x = 70 y = 14 }
+			text = "[GetROCVoteCalculate]"
+			font = "hoi_24header"
+			format = left
+			maxWidth = 800
+			alwaystransparent = yes
+		}
+
+		# 计算用
+		instantTextBoxType = {
+			name = "ROC_vote_party_XY_calculate1"
+			position = { x = 70 y = 54 }
+			text = "[?final_x]"
+			font = "hoi_24header"
+			format = left
+			maxWidth = 800
+			alwaystransparent = yes
+		}
+
+		# 黨名
+		instantTextBoxType = {
+			name = "ROC_vote_party_name"
+			position = { x = 70 y = 14 }
+			text = ROC_party_long_name_get
+			font = "hoi_24header"
+			format = left
+			maxWidth = 800
+			alwaystransparent = yes
+		}
+	}
 
 }
