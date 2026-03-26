@@ -688,37 +688,117 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "roc_parliament_vote_decision_gui"
-		size = { width = 100% height = 500 }
+		size = { width = 100% height = 525 }
 
-		background = {
-			name = "background"
-			quadTextureSprite = "GFX_tiled_paper_bg"
-		}
+		# background = {
+		# 	name = "background"
+		# 	quadTextureSprite = "GFX_tiled_paper_bg"
+		# }
 
 
-		background = {
-			name = "background_overlay"
-			quadTextureSprite ="GFX_tiled_research_bg"
-		}
-
+		# background = {
+		# 	name = "background_overlay"
+		# 	quadTextureSprite ="GFX_tiled_research_bg"
+		# }
 
 		containerWindowType = {
-			name = "ROC_vote_parties_gridbox_container"
-			size = { width = 500 height = 500 }
-			position = { x = 0 y = 5 }
+			name = "ROC_vote_main_container"
+			size = { width = 100% height = 475 }
+	
 
 			background = {
 				name = "background"
-				quadTextureSprite = "GFX_tiled_window_transparent"
-				alwaystransparent = yes
+				quadTextureSprite = "GFX_tiled_paper_bg"
+			}
+			background = {
+				name = "background_overlay"
+				quadTextureSprite ="GFX_tiled_research_bg"
 			}
 
-			gridboxtype = {
-				name = "roc_vote_parties_gridbox"
-				position = { x = 15 y = 14 }
-				slotsize = { width = 100% height = 100% }
-				max_slots_horizontal = 1
-				format = "UPPER_LEFT"
+
+			containerWindowType = {
+				name = "ROC_vote_parties_gridbox_container"
+				size = { width = 500 height = 500 }
+				position = { x = 0 y = 25 }
+	
+				background = {
+					name = "background"
+					quadTextureSprite = "GFX_tiled_window_transparent"
+					alwaystransparent = yes
+				}
+	
+				gridboxtype = {
+					name = "roc_vote_parties_gridbox"
+					position = { x = 25 y = -18 }
+					slotsize = { width = 100% height = 100% }
+					max_slots_horizontal = 1
+					format = "UPPER_LEFT"
+				}
+
+				iconType = {
+					name = "vote_law_bg"
+					spriteType = "GFX_ROC_parliament_vote_bg"
+					position = { x = 148 y = 130 }
+				}
+
+				# 正在表决
+				instantTextBoxType = {
+					name = "ROC_current_law_c_text"
+					position = { x = 164 y = 150 }
+					text = "ROC_current_law_c_text"
+					font = "hoi_16mbs"
+					format = left
+					maxWidth = 300
+					alwaystransparent = yes
+				}
+
+				# 法案名
+				instantTextBoxType = {
+					name = "ROC_current_law_text"
+					position = { x = 105 y = 180 }
+					text = "ROC_current_law_text"
+					font = "hoi_18mbs"
+					format = center
+					maxWidth = 300
+					alwaystransparent = yes
+				}
+
+				# 法案名
+				instantTextBoxType = {
+					name = "ROC_current_supporters"
+					position = { x = 105 y = 220 }
+					text = "[GetROCLawAllSupportersGUItext]"
+					font = "hoi_36header"
+					format = center
+					maxWidth = 300
+					alwaystransparent = yes
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "ROC_vote_center_container"
+			size = { width = 100% height = 75 }
+			position = { x = 0 y = 470 }
+	
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_social_bg"
+			}
+			background = {
+				name = "background_overlay"
+				quadTextureSprite ="GFX_tiled_research_bg"
+			}
+
+			instantTextBoxType = {
+				name = "ROC_vote_result_status"
+				position = { x = -252 y = 22 }
+				orientation = CENTER_UP
+				text = "[GetROCLawPassOrNOT]"
+				font = "hoi_36header"
+				format = center
+				maxWidth = 500
+				alwaystransparent = yes
 			}
 		}
 	}
@@ -729,11 +809,18 @@ guiTypes = {
 		size = { width = 100 height = 100 }
 		clipping = no
 		orientation = UPPER_LEFT
+		
+		iconType = { 
+			name = "ROC_vote_progressbar"
+			quadtexturesprite = "GFX_ROC_parliament_vote_progressbar"
+		}
 
-		background = {
-			name = "background"
-			quadTextureSprite = "GFX_tiled_plain_bg"
-			alwaystransparent = yes
+		# 框
+		iconType = {
+			name = "vote_party_circle"
+			spriteType = "GFX_ROC_parliament_vote_circle"
+			position = { x = 0 y = 14 }
+			pdx_tooltip = "parliament_gui_emblem_tt"
 		}
 
 		# 黨徽
@@ -742,6 +829,7 @@ guiTypes = {
 			spriteType = "GFX_ROC_parliament_gui_IND_emblem"
 			position = { x = 10 y = 14 }
 			scale = 0.4
+			pdx_tooltip = "parliament_gui_emblem_tt"
 		}
 
 		# 计算用
@@ -755,27 +843,27 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
-		# 计算用
+		# 支持议员
 		instantTextBoxType = {
-			name = "ROC_vote_party_XY_calculate1"
-			position = { x = 70 y = 54 }
-			text = "[?final_x]"
-			font = "hoi_24header"
-			format = left
-			maxWidth = 800
+			name = "ROC_law_supporters_text"
+			position = { x = 40 y = 0 }
+			text = "[GetROCLawSupportersGUItext]"
+			font = "hoi_16mbs"
+			format = center
+			maxWidth = 100
 			alwaystransparent = yes
 		}
 
-		# 黨名
-		instantTextBoxType = {
-			name = "ROC_vote_party_name"
-			position = { x = 70 y = 14 }
-			text = ROC_party_long_name_get
-			font = "hoi_24header"
-			format = left
-			maxWidth = 800
-			alwaystransparent = yes
-		}
+		# # 黨名
+		# instantTextBoxType = {
+		# 	name = "ROC_vote_party_name"
+		# 	position = { x = 70 y = 14 }
+		# 	text = ROC_party_long_name_get
+		# 	font = "hoi_24header"
+		# 	format = left
+		# 	maxWidth = 800
+		# 	alwaystransparent = yes
+		# }
 	}
 
 }

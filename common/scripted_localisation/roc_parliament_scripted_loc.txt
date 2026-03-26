@@ -821,7 +821,7 @@ defined_text = {
 			multiply_temp_variable = { T_y = temp_var:term_y }
 
 			set_temp_variable = { num_y = temp_var:T_y }
-			multiply_temp_variable = { num_y = 60 } # 这里 60 是半径150对应的比例，如果想改半径，修改这里即可
+			multiply_temp_variable = { num_y = 68 } # 这里 60 是半径150对应的比例，如果想改半径，修改这里即可
 
 			set_temp_variable = { T_y_div_10 = temp_var:T_y }
 			divide_temp_variable = { T_y_div_10 = 10 }
@@ -861,7 +861,7 @@ defined_text = {
 			multiply_temp_variable = { T_x = temp_var:term_x }
 
 			set_temp_variable = { num_x = temp_var:T_x }
-			multiply_temp_variable = { num_x = 60 }
+			multiply_temp_variable = { num_x = 68 } # 这里 60 是半径150对应的比例，如果想改半径，修改这里即可
 
 			set_temp_variable = { T_x_div_10 = temp_var:T_x }
 			divide_temp_variable = { T_x_div_10 = 10 }
@@ -880,14 +880,122 @@ defined_text = {
 			multiply_temp_variable = { party_y = -1 }
 
 			#增加基础xy
-			add_to_temp_variable = { party_x = 200 }
+			add_to_temp_variable = { party_x = 202 }
 			add_to_temp_variable = { party_y = 200 }
+
+			#设置边框xy
+			set_temp_variable = { frame_x = var:party_x }
+			set_temp_variable = { frame_y = var:party_y }
+			add_to_temp_variable = { frame_x = -14 }
+			add_to_temp_variable = { frame_y = -14 }
+
+			#设置进度条xy
+			set_temp_variable = { pro_x = var:party_x }
+			set_temp_variable = { pro_y = var:party_y }
+			add_to_temp_variable = { pro_x = -8 }
+			add_to_temp_variable = { pro_y = -8 }
+
+			#设置议席人数xy
+			set_temp_variable = { seatnum_x = var:party_x }
+			set_temp_variable = { seatnum_y = var:party_y }
+			add_to_temp_variable = { seatnum_x = -23 }
+			add_to_temp_variable = { seatnum_y = 59 }
 
 			# ==========================================
 			# --- 4. 打印检查 ---
 			# ==========================================
-			log = "Party Index: [?party_idx] | Angle: [?angle] | X: [?party_x] | Y: [?party_y]"
 		}
 		localization_key = "empty_key"
+	}
+}
+
+defined_text = {
+	name = GetROCLawSupportersGUItext
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = {
+					[tokenbase] = {
+						set_temp_variable = {
+							temp_seats = THIS.parliament_gui_seats
+						}
+					}
+				}
+				tokenbase = "[?roc_cur_token.GetTokenKey]"
+			}
+		}
+		localization_key = ROC_law_seats_text
+	}
+}
+
+defined_text = {
+	name = GetROCLawAllSupportersGUItext
+	text = {
+		trigger = {
+			set_temp_variable = { temp_supporters_all_seats = 0 }
+			all_of = {
+				array = ROC_party_tokens
+				value = roc_cur_token
+				meta_trigger = {
+					text = {
+						[tokenbase] = {
+							add_to_temp_variable = {
+								temp_supporters_all_seats = THIS.parliament_gui_seats_supporter
+							}
+						}
+					}
+					tokenbase = "[?roc_cur_token.GetTokenKey]"
+				}
+			}
+			set_temp_variable = { temp_half_seats = var:ROC_seats_max }
+			divide_temp_variable = { temp_half_seats = 2 }
+			if = {
+				limit = {
+					check_variable = { temp_supporters_all_seats > var:temp_half_seats }
+				}
+				set_temp_variable = { temp_ROC_law_pass_check = 1 }
+			}
+		}
+		localization_key = ROC_current_supporters
+	}
+}
+
+defined_text = {
+	name = GetROCLawCircleColor
+	text = {
+		trigger = {
+			meta_trigger = {
+				text = {
+					[tokenbase] = {
+						OR = {
+							check_variable = {
+								THIS.parliament_gui_status = 2
+							}
+							check_variable = {
+								THIS.parliament_gui_status = 1
+							}
+						}
+					}
+				}
+				tokenbase = "[?roc_cur_token.GetTokenKey]"
+			}
+		}
+		localization_key = GFX_ROC_parliament_vote_circle_in_coalition
+	}
+	text = {
+		localization_key = GFX_ROC_parliament_vote_circle
+	}
+}
+
+defined_text = {
+	name = GetROCLawPassOrNOT
+	text = {
+		trigger = {
+			check_variable = { temp_ROC_law_pass_check = 1 }
+		}
+		localization_key = ROC_law_will_pass
+	}
+	text = {
+		localization_key = ROC_law_will_not_pass
 	}
 }

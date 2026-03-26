@@ -322,6 +322,20 @@ scripted_gui = {
 			vote_party_emblem = {
 				x = var:party_x
 				y = var:party_y
+				image = "GFX_ROC_[?roc_cur_token.GetTokenKey]_emblem"
+			}
+			vote_party_circle = {
+				x = var:frame_x
+				y = var:frame_y
+				image = "[GetROCLawCircleColor]"
+			}
+			ROC_vote_progressbar = {
+				x = var:pro_x
+				y = var:pro_y
+			}
+			ROC_law_supporters_text = {
+				x = var:seatnum_x
+				y = var:seatnum_y
 			}
 		}
 

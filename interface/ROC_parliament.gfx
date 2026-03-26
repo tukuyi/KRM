@@ -174,4 +174,38 @@ spriteTypes = {
 		name = "GFX_ROC_parliament_law_sign_empty"
 		texturefile = "gfx/interface/gui/parliament/parliament_law_sign_empty.png"
 	}
+	
+	spritetype = {
+		name = "GFX_ROC_parliament_vote_circle"
+		texturefile = "gfx/interface/gui/parliament/parliament_vote_circle.png"
+	}
+	
+	spritetype = {
+		name = "GFX_ROC_parliament_vote_circle_in_coalition"
+		texturefile = "gfx/interface/gui/parliament/parliament_vote_circle_in_coalition.png"
+	}
+	
+	spritetype = {
+		name = "GFX_ROC_parliament_vote_agree"
+		texturefile = "gfx/interface/gui/parliament/parliament_vote_agree.png"
+	}
+	
+	spritetype = {
+		name = "GFX_ROC_parliament_vote_disagree"
+		texturefile = "gfx/interface/gui/parliament/parliament_vote_disagree.png"
+	}
+	
+	spritetype = {
+		name = "GFX_ROC_parliament_vote_bg"
+		texturefile = "gfx/interface/gui/parliament/parliament_vote_bg.png"
+	}
+
+	progressbartype = {
+		name = "GFX_ROC_parliament_vote_progressbar"
+		texturefile1 = "gfx/interface/gui/parliament/parliament_vote_agree.png"
+		texturefile2 = "gfx/interface/gui/parliament/parliament_vote_disagree.png"
+		size = { x = 70 y = 70 }
+		effectfile = "gfx/FX/progress.lua"
+		horizontal = no
+	}
 }
