@@ -737,7 +737,7 @@ country_event = {#共和党再生？
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.41" }
 	title = NKRsichuanCollab.41.t
 	desc = NKRsichuanCollab.41.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_collab_REP
 	is_triggered_only = yes
 	fire_only_once = yes
 	immediate = {
@@ -784,7 +784,7 @@ country_event = {#竭诚欢迎
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.42" }
 	title = NKRsichuanCollab.42.t
 	desc = NKRsichuanCollab.42.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_collab_PIP
 	is_triggered_only = yes
 	fire_only_once = yes
 	immediate = {
@@ -831,7 +831,7 @@ country_event = {上海工联的扩张
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.43" }
 	title = NKRsichuanCollab.43.t
 	desc = NKRsichuanCollab.43.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_collab_ACU
 	is_triggered_only = yes
 	fire_only_once = yes
 	immediate = {
@@ -878,7 +878,7 @@ country_event = {#法西斯，行动！
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.44" }
 	title = NKRsichuanCollab.44.t
 	desc = NKRsichuanCollab.44.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_collab_FAS
 	is_triggered_only = yes
 	fire_only_once = yes
 	immediate = {
@@ -898,24 +898,20 @@ country_event = {#法西斯，行动！
 			name = SZC_YCPC_FAS_party
 			long_name = SZC_YCPC_FAS_party_long
 		}
-		set_party_name = {
-			ideology = national_populist
-			name = SZC_YCPC_FASN_party
-			long_name = SZC_YCPC_FASN_party_long
-		}
+		# set_party_name = {
+		# 	ideology = national_populist
+		# 	name = SZC_YCPC_FASN_party
+		# 	long_name = SZC_YCPC_FASN_party_long
+		# }
 		SZC_zhou_yuying = {
 			promote_character = totalist_subtype
 		}
-		SZC_qian_dan = {
-			promote_character = national_populist_subtype
-		}
+		# SZC_qian_dan = {
+		# 	promote_character = national_populist_subtype
+		# }
 		add_popularity = {
 			ideology = totalist
-			popularity = 0.02
-		}
-		add_popularity = {
-			ideology = national_populist
-			popularity = 0.02
+			popularity = 0.04
 		}
 	}
 	option = {#但也无伤大雅？
@@ -952,7 +948,7 @@ country_event = {#先总理遗教
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.45" }
 	title = NKRsichuanCollab.45.t
 	desc = NKRsichuanCollab.45.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_collab_KMT
 	is_triggered_only = yes
 	fire_only_once = yes
 	immediate = {
@@ -999,7 +995,7 @@ country_event = {#民主——自由
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.46" }
 	title = NKRsichuanCollab.46.t
 	desc = NKRsichuanCollab.46.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_collab_DLP
 	is_triggered_only = yes
 	fire_only_once = yes
 	immediate = {
@@ -1046,7 +1042,7 @@ country_event = {#国社党扩张
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.47" }
 	title = NKRsichuanCollab.47.t
 	desc = NKRsichuanCollab.47.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_collab_NSP
 	is_triggered_only = yes
 	fire_only_once = yes
 	immediate = {
@@ -1075,7 +1071,7 @@ country_event = {#三K危机
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.48" }
 	title = NKRsichuanCollab.48.t
 	desc = NKRsichuanCollab.48.d
-	picture = GFX_report_event_KKK_cross
+	picture = GFX_report_event_SZC_collab_SDP
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {#莫名其妙的...
@@ -1087,16 +1083,35 @@ country_event = {#三K危机
 	}
 }
 
-country_event = {
+country_event = {#大汉之意
 	id = NKRsichuanCollab.49
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.49" }
 	title = NKRsichuanCollab.49.t
 	desc = NKRsichuanCollab.49.d
-	picture = GFX_report_event_SZC_YCP
+	picture = GFX_report_event_SZC_collab_RRP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	immediate = {
+		hidden_effect = {
+			SZC_zhang_ming = {
+				SZC_recruit_character_effect = yes
+			}
+		}
+	}
+	option = {#一群疯子...
 		name = NKRsichuanCollab.49.a
+		set_party_name = {
+			ideology = national_populist
+			name = SZC_YCPC_RRP_party
+			long_name = SZC_YCPC_RRP_party_long
+		}
+		SZC_zhang_ming = {
+			promote_character = national_populist_subtype
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.02
+		}
 	}
 }
 
