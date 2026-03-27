@@ -826,7 +826,7 @@ country_event = {#竭诚欢迎
 	}
 }
 
-country_event = {上海工联的扩张
+country_event = {#上海工联的扩张
 	id = NKRsichuanCollab.43
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.43" }
 	title = NKRsichuanCollab.43.t
@@ -921,11 +921,11 @@ country_event = {#法西斯，行动！
 			name = SZC_YCPC_FAS_party
 			long_name = SZC_YCPC_FAS_party_long
 		}
-		set_party_name = {
-			ideology = national_populist
-			name = SZC_YCPC_FASN_party
-			long_name = SZC_YCPC_FASN_party_long
-		}
+		# set_party_name = {
+		# 	ideology = national_populist
+		# 	name = SZC_YCPC_FASN_party
+		# 	long_name = SZC_YCPC_FASN_party_long
+		# }
 		SZC_zhou_yuying = {
 			promote_character = totalist_subtype
 		}
