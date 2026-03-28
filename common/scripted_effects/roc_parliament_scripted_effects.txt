@@ -171,6 +171,16 @@ ROC_parliament_reorder_parties = {
 			check_variable = {
 				THIS.parliament_gui_status = 3
 			}
+			NOT = {
+				is_character = parliament_gui_IND
+			}
+		}
+		add_to_array = { ROOT.ROC_party_tokens = var:parliament_gui_party }
+	}
+
+	every_character = {
+		limit = {
+			is_character = parliament_gui_IND
 		}
 		add_to_array = { ROOT.ROC_party_tokens = var:parliament_gui_party }
 	}
@@ -256,9 +266,6 @@ parliament_transfer_seat_to_target = {
 								NOT = { check_variable = { THIS.parliament_gui_party = [target_party_token] } }
 							}
 							add_to_variable = { parliament_gui_seats = -1 }
-							THIS = {
-								log = "[?THIS.parliament_gui_seats]"
-							}
 							PREV = {
 								[target_party] = {
 									add_to_variable = { parliament_gui_seats = 1 }
@@ -2146,3 +2153,241 @@ ROC_coalition_complete = {
 	ROC_parliament_update = yes
 }
 
+
+##############################################################
+# 国民大会 — 选举结算
+#
+# 调用前设置各意识形态支持率（0–100）：
+#
+# 可选参数：
+#   ROC_election_noise_pct   随机波动幅度，默认 25（即 ±25%）
+#   ROC_election_min_seats   最低保障席位，默认 3
+##############################################################
+ 
+ROC_election_calculate = {
+ 
+    # ── 默认参数 ──────────────────────────────────────────
+    if = {
+        limit = { NOT = { check_variable = { ROC_election_noise_pct > 0 } } }
+        set_temp_variable = { ROC_election_noise_pct = 0.1 }
+    }
+    if = {
+        limit = { NOT = { check_variable = { ROC_election_min_seats > 0 } } }
+        set_temp_variable = { ROC_election_min_seats = 3 }
+    }
+ 
+    # ══════════════════════════════════════════════════════
+    # 第零步：自动计算无党籍支持率
+    #
+    # extremism = avg(极端意识形态支持率)
+    # frag      = 1 - 最强主流党支持率
+    # result    = clamp((extremism + frag) / 2, 0, 33)
+    # ══════════════════════════════════════════════════════
+
+	#载入所有意识形态支持率
+    set_temp_variable = { party_popularity_totalist = party_popularity@totalist }
+	set_temp_variable = { party_popularity_syndicalist = party_popularity@syndicalist }
+	set_temp_variable = { party_popularity_radical_socialist = party_popularity@radical_socialist }
+	set_temp_variable = { party_popularity_social_democrat = party_popularity@social_democrat }
+	set_temp_variable = { party_popularity_social_liberal = party_popularity@social_liberal }
+	set_temp_variable = { party_popularity_market_liberal = party_popularity@market_liberal }
+	set_temp_variable = { party_popularity_social_conservative = party_popularity@social_conservative }
+	set_temp_variable = { party_popularity_authoritarian_democrat = party_popularity@authoritarian_democrat }
+	set_temp_variable = { party_popularity_paternal_autocrat = party_popularity@paternal_autocrat }
+	set_temp_variable = { party_popularity_national_populist = party_popularity@national_populist }
+ 
+    # 极端化分量
+    set_temp_variable = { ROC_ind_extreme_sum = 0 }
+    add_to_temp_variable = { ROC_ind_extreme_sum = party_popularity@totalist          }
+    add_to_temp_variable = { ROC_ind_extreme_sum = party_popularity@national_populist }
+    add_to_temp_variable = { ROC_ind_extreme_sum = party_popularity@syndicalist       }
+    add_to_temp_variable = { ROC_ind_extreme_sum = party_popularity@radical_socialist }
+    divide_temp_variable  = { ROC_ind_extreme_sum = 4 }
+ 
+    # 碎片化分量：遍历各党找最强支持率，跳过无党籍
+    set_temp_variable = { ROC_ind_max_support = 0 }
+    for_each_loop = {
+        array = ROC_party_tokens
+        value = roc_cur_token
+		set_temp_variable = { tempideo = 0 }
+        meta_effect = {
+            text = {
+				every_character = {
+					limit = {
+						is_character = [party]
+					}
+					add_to_temp_variable = { tempideo = var:parliament_gui_ideology }
+				}
+            }
+            party = "[?roc_cur_token.GetTokenKey]"
+        }
+        meta_effect = {
+            text = {
+				set_temp_variable = { temppop = var:party_popularity_[ideo] }
+            }
+            ideo = "[?tempideo.GetTokenKey]"
+        }
+    }
+ 
+    set_variable = { ROC_support_independent = 1 }
+    subtract_from_variable = { ROC_support_independent = var:ROC_ind_max_support }   # frag
+    add_to_variable = { ROC_support_independent = var:ROC_ind_extreme_sum }          # + extremism
+    divide_variable  = { ROC_support_independent = 6 }
+    if = {
+        limit = { check_variable = { ROC_support_independent > 0.33 } }
+        set_variable = { ROC_support_independent = 0.33 }
+    }
+
+	# log = "[?ROC_support_independent]"
+ 
+    # ══════════════════════════════════════════════════════
+    # 第一遍：计算各党加噪权重，累计总权重，追踪最大权重党
+    # ══════════════════════════════════════════════════════
+    set_temp_variable = { elec_noise_pct = var:ROC_election_noise_pct }
+    set_temp_variable = { elec_min_seats = var:ROC_election_min_seats }
+    set_temp_variable = { elec_seats_max = var:ROC_seats_max }
+ 
+    set_temp_variable = { ROC_elec_total_weight = 0 }
+    set_temp_variable = { ROC_elec_max_w        = 0 }
+
+	parliament_gui_IND = {
+		set_temp_variable = {
+			var     = elec_base
+			value   = PREV.ROC_support_independent
+		}
+		# log = "[?elec_base]"
+	}
+	set_variable = { ROC_support_independent = 0 }
+ 
+    for_each_loop = {
+        array = ROC_party_tokens
+        value = roc_cur_token
+		set_temp_variable = { tempideo = 0 }
+        meta_effect = {
+            text = {
+				every_character = {
+					limit = {
+						is_character = [party]
+					}
+					add_to_temp_variable = { tempideo = var:parliament_gui_ideology }
+				}
+            }
+            party = "[?roc_cur_token.GetTokenKey]"
+        }
+		set_temp_variable = { parliament_gui_elec_w = 0 }
+        meta_effect = {
+            text = {
+				if = {
+					limit = {
+						[party] = {
+							NOT = { is_character = parliament_gui_IND }
+						}
+					}
+					set_temp_variable = { elec_base = party_popularity_[ideo] }
+				}
+				else = "114"
+				set_temp_variable = { elec_noise_2x = var:elec_noise_pct }
+				multiply_temp_variable = { elec_noise_2x = 2 }
+				set_temp_variable_to_random = {
+					var     = elec_roll
+					min     = 0
+					max     = var:elec_noise_2x
+				}
+				subtract_from_temp_variable = { elec_roll = var:elec_noise_pct }
+
+				set_temp_variable = { elec_delta = var:elec_base }
+				multiply_temp_variable = { elec_delta = var:elec_roll }
+
+				set_temp_variable = { elec_w = var:elec_base }
+				add_to_temp_variable = { elec_w = var:elec_delta }
+				# if = {
+				#     limit = { check_variable = { elec_w < 1 } }
+				#     set_temp_variable = { elec_w = 1 }
+				# }
+
+				add_to_temp_variable = { parliament_gui_elec_w = var:elec_w }
+				add_to_temp_variable = { ROC_elec_total_weight = var:parliament_gui_elec_w }
+				if = {
+					limit = { check_variable = { parliament_gui_elec_w > var:ROC_elec_max_w } }
+					set_temp_variable = { ROC_elec_max_w     = var:parliament_gui_elec_w }
+					set_variable = { ROC_elec_max_party = var:roc_cur_token }
+				}
+            }
+            party = "[?roc_cur_token.GetTokenKey]"
+            ideo = "[?tempideo.GetTokenKey]"
+        }
+		# log = "[?parliament_gui_elec_w]"
+        meta_effect = {
+            text = {
+				every_character = {
+					limit = {
+						is_character = [party]
+					}
+					set_variable = {
+						var     = elec_s
+						value   = var:parliament_gui_elec_w
+					}
+					# log = "[?elec_s]"
+				}
+            }
+            party = "[?roc_cur_token.GetTokenKey]"
+        }
+		# log = "[?ROC_elec_max_party.GetTokenKey]"
+    }
+ 
+    # ══════════════════════════════════════════════════════
+    # 第二遍：按权重比例换算席位，写入 parliament_gui_seats
+    # ══════════════════════════════════════════════════════
+    set_temp_variable = { elec_total_w = var:ROC_elec_total_weight }
+    set_temp_variable = { ROC_elec_seats_sum = 0 }
+	# log = "[?elec_total_w]"
+ 
+    for_each_loop = {
+        array = ROC_party_tokens
+        value = roc_cur_token
+        meta_effect = {
+            text = {
+				every_character = {
+					limit = {
+						is_character = [party]
+					}
+					# log = "[?THIS.elec_s]"
+                    multiply_variable = { elec_s = var:elec_seats_max }
+                    divide_variable = { elec_s = elec_total_w }
+                    round_variable = elec_s
+                    if = {
+                        limit = { check_variable = { elec_s < elec_min_seats } }
+                        set_variable = { elec_s = elec_min_seats }
+                    }
+                    set_variable = { parliament_gui_seats = elec_s }
+                    ROOT = { add_to_temp_variable = { ROC_elec_seats_sum = PREV.parliament_gui_seats } }
+					clear_variable = elec_s
+				}
+            }
+            party = "[?roc_cur_token.GetTokenKey]"
+        }
+    }
+		# log = "[?ROC_elec_seats_sum]"
+ 
+    # ── 余数修正 ──────────────────────────────────────────
+    set_variable = { ROC_elec_remainder = var:ROC_seats_max }
+    subtract_from_variable = { ROC_elec_remainder = var:ROC_elec_seats_sum }
+	# log = "[?ROC_elec_max_party.GetTokenKey]"
+    meta_effect = {
+        text = {
+			every_character = {
+				limit = {
+					is_character = [party]
+				}
+				set_temp_variable = { temp_change = ROOT.ROC_elec_remainder }
+				# log = "[?temp_change]"
+                add_to_variable = { parliament_gui_seats = temp_change }
+			}
+        }
+        party = "[?ROC_elec_max_party.GetTokenKey]"
+    }
+	set_variable = { ROC_elec_remainder = 0 }
+ 
+    ROC_parliament_reorder_parties = yes
+    ROC_parliament_update = yes
+}
