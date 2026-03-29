@@ -2155,8 +2155,10 @@ ROC_coalition_complete = {
 			for_each_loop = {
 				array = parliament_gui_ideologies
 				value = cur_ideo
-				set_temp_variable = { coalition_partner_var = var:cur_ideo }
-				add_to_coalition = yes
+				ROOT = {
+					set_temp_variable = { coalition_partner_var = var:cur_ideo }
+					add_to_coalition = yes
+				}
 			}
 		}
 		else_if = {
@@ -2171,14 +2173,16 @@ ROC_coalition_complete = {
 			for_each_loop = {
 				array = parliament_gui_ideologies
 				value = cur_ideo
-				set_temp_variable = { coalition_partner_var = var:cur_ideo }
-				add_to_coalition = yes
+				ROOT = {
+					set_temp_variable = { coalition_partner_var = var:cur_ideo }
+					add_to_coalition = yes
+				}
 			}
 		}
 		else_if = {
 			limit = {
 				check_variable = {
-					THIS.parliament_gui_constructalig = 3
+					THIS.parliament_gui_constructalig = 0
 				}
 			}
 			set_variable = { parliament_gui_status = 3 }
@@ -2187,8 +2191,10 @@ ROC_coalition_complete = {
 			for_each_loop = {
 				array = parliament_gui_ideologies
 				value = cur_ideo
-				set_temp_variable = { coalition_partner_var = var:cur_ideo }
-				remove_from_coalition = yes
+				ROOT = {
+					set_temp_variable = { coalition_partner_var = var:cur_ideo }
+					remove_from_coalition = yes
+				}
 			}
 		}
 	}
