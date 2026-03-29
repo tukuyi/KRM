@@ -467,8 +467,1070 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_two_governments_one_sky"
 			custom_effect_tooltip = SZC_YCP_collab_two_governments_one_sky_tt
 			hidden_effect = {
-
+				FNG = {
+					news_event = {
+						id = NKRFengtianManchuriaNews.4
+						days = 180
+					}
+				}
 			}
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_modernization_of_peace_army
+		icon = GFX_goal_SZC_YCP_collab_modernization_of_peace_army
+		cost = 4
+
+		x = -8
+		y = 1
+		relative_position_id = SZC_YCP_collab_two_governments_one_sky
+
+		prerequisite = {
+			focus = SZC_YCP_collab_two_governments_one_sky
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_modernization_of_peace_army"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_connect_with_geacps_system
+		icon = GFX_goal_SZC_YCP_collab_connect_with_geacps_system
+		cost = 4
+
+		x = -1
+		y = 1
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		prerequisite = {
+			focus = SZC_YCP_collab_modernization_of_peace_army
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_connect_with_geacps_system"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_restore_shikan_glory
+		icon = GFX_goal_SZC_YCP_collab_restore_shikan_glory
+		cost = 4
+
+		x = 1
+		y = 1
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		prerequisite = {
+			focus = SZC_YCP_collab_modernization_of_peace_army
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_restore_shikan_glory"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_role_of_our_army_in_geacps
+		icon = GFX_goal_SZC_YCP_collab_role_of_our_army_in_geacps
+		cost = 4
+
+		x = -2
+		y = 2
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+		
+		mutually_exclusive = {
+			focus = SZC_YCP_collab_continue_as_peace_keeper
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_connect_with_geacps_system
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_role_of_our_army_in_geacps"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_continue_as_peace_keeper
+		icon = GFX_goal_SZC_YCP_collab_continue_as_peace_keeper
+		cost = 4
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		mutually_exclusive = {
+			focus = SZC_YCP_collab_role_of_our_army_in_geacps
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_connect_with_geacps_system
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_continue_as_peace_keeper"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_japanese_young_turks_help
+		icon = GFX_goal_SZC_YCP_collab_japanese_young_turks_help
+		cost = 4
+
+		x = -1
+		y = 3
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		prerequisite = {
+			focus = SZC_YCP_collab_continue_as_peace_keeper
+			focus = SZC_YCP_collab_role_of_our_army_in_geacps
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_japanese_young_turks_help"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_reduce_warlordism
+		icon = GFX_goal_SZC_YCP_collab_reduce_warlordism
+		cost = 4
+
+		x = 2
+		y = 2
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		prerequisite = {
+			focus = SZC_YCP_collab_restore_shikan_glory
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_reduce_warlordism"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_new_officers_standard
+		icon = GFX_goal_SZC_YCP_collab_new_officers_standard
+		cost = 4
+
+		x = 1
+		y = 3
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		prerequisite = {
+			focus = SZC_YCP_collab_restore_shikan_glory
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_new_officers_standard"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_pan_asianist_education
+		icon = GFX_goal_SZC_YCP_collab_pan_asianist_education
+		cost = 4
+
+		x = 3
+		y = 1
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		prerequisite = {
+			focus = SZC_YCP_collab_modernization_of_peace_army
+			focus = SZC_YCP_collab_china_new_economy
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_pan_asianist_education"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_zaibatsu_rush
+		icon = GFX_goal_SZC_YCP_collab_zaibatsu_rush
+		cost = 4
+
+		x = 5
+		y = 1
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		prerequisite = {
+			focus = SZC_YCP_collab_modernization_of_peace_army
+			focus = SZC_YCP_collab_china_new_economy
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_zaibatsu_rush"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_towards_military_industrial_complex
+		icon = GFX_goal_SZC_YCP_collab_towards_military_industrial_complex
+		cost = 4
+
+		x = 4
+		y = 2
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		prerequisite = {
+			focus = SZC_YCP_collab_zaibatsu_rush
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_towards_military_industrial_complex"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_expand_japanese_investment
+		icon = GFX_goal_SZC_YCP_collab_expand_japanese_investment
+		cost = 4
+
+		x = 5
+		y = 3
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		mutually_exclusive = {
+			focus = SZC_YCP_collab_NCCA
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_zaibatsu_rush
+		}
+		prerequisite = {
+			focus = SZC_YCP_collab_towards_military_industrial_complex
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_expand_japanese_investment"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_NCCA
+		icon = GFX_goal_SZC_YCP_collab_NCCA
+		cost = 4
+
+		x = 3
+		y = 3
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		mutually_exclusive = {
+			focus = SZC_YCP_collab_expand_japanese_investment
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_towards_military_industrial_complex
+		}
+		prerequisite = {
+			focus = SZC_YCP_collab_reduce_warlordism
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_NCCA"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_armor_and_mechanized
+		icon = GFX_goal_SZC_YCP_collab_NCCA
+		cost = 4
+
+		x = -2
+		y = 4
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		prerequisite = {
+			focus = SZC_YCP_collab_japanese_young_turks_help
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_NCCA"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_a_statist_army
+		icon = GFX_goal_SZC_YCP_a_statist_army
+		cost = 4
+
+		x = 0
+		y = 4
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		mutually_exclusive = {
+			focus = SZC_YCP_collab_share_with_friends
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_japanese_young_turks_help
+			focus = SZC_YCP_collab_new_officers_standard
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_a_statist_army"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_share_with_friends
+		icon = GFX_goal_SZC_YCP_collab_share_with_friends
+		cost = 4
+
+		x = 2
+		y = 4
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		mutually_exclusive = {
+			focus = SZC_YCP_collab_a_statist_army
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_japanese_young_turks_help
+			focus = SZC_YCP_collab_new_officers_standard
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_share_with_friends"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_to_the_ocean
+		icon = GFX_goal_SZC_YCP_collab_to_the_ocean
+		cost = 4
+
+		x = 4
+		y = 4
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		prerequisite = {
+			focus = SZC_YCP_collab_NCCA
+			focus = SZC_YCP_collab_expand_japanese_investment
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_to_the_ocean"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_peace_army_stands_with_asia
+		icon = GFX_goal_SZC_YCP_collab_peace_army_stands_with_asia
+		cost = 4
+
+		x = 1
+		y = 5
+		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		prerequisite = {
+			focus = SZC_YCP_collab_armor_and_mechanized
+		}
+		prerequisite = {
+			focus = SZC_YCP_collab_to_the_ocean
+		}
+		prerequisite = {
+			focus = SZC_YCP_collab_a_statist_army
+			focus = SZC_YCP_collab_share_with_friends
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_peace_army_stands_with_asia"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_china_new_economy
+		icon = GFX_goal_SZC_YCP_collab_china_new_economy
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_collab_two_governments_one_sky
+
+		prerequisite = {
+			focus = SZC_YCP_collab_two_governments_one_sky
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_china_new_economy"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_pan_asianist_economy_policy
+		icon = GFX_goal_SZC_YCP_collab_pan_asianist_economy_policy
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_collab_china_new_economy
+
+		prerequisite = {
+			focus = SZC_YCP_collab_china_new_economy
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_pan_asianist_economy_policy"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_industrialization_first
+		icon = GFX_goal_SZC_YCP_collab_industrialization_first
+		cost = 4
+
+		x = -1
+		y = 2
+		relative_position_id = SZC_YCP_collab_china_new_economy
+
+		prerequisite = {
+			focus = SZC_YCP_collab_pan_asianist_economy_policy
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_industrialization_first"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_our_duty_to_japan
+		icon = GFX_goal_SZC_YCP_collab_our_duty_to_japan
+		cost = 4
+
+		x = 1
+		y = 2
+		relative_position_id = SZC_YCP_collab_china_new_economy
+
+		prerequisite = {
+			focus = SZC_YCP_collab_pan_asianist_economy_policy
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_our_duty_to_japan"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_organic_corporatism
+		icon = GFX_goal_SZC_YCP_collab_organic_corporatism
+		cost = 4
+
+		x = -1
+		y = 3
+		relative_position_id = SZC_YCP_collab_china_new_economy
+
+		prerequisite = {
+			focus = SZC_YCP_collab_industrialization_first
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_organic_corporatism"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_agricultural_modernization_attempt
+		icon = GFX_goal_SZC_YCP_collab_agricultural_modernization_attempt
+		cost = 4
+
+		x = 1
+		y = 3
+		relative_position_id = SZC_YCP_collab_china_new_economy
+
+		prerequisite = {
+			focus = SZC_YCP_collab_our_duty_to_japan
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_agricultural_modernization_attempt"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_the_megacorp
+		icon = GFX_goal_SZC_YCP_collab_the_megacorp
+		cost = 4
+
+		x = -2
+		y = 4
+		relative_position_id = SZC_YCP_collab_china_new_economy
+
+		prerequisite = {
+			focus = SZC_YCP_collab_organic_corporatism
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_expand_japanese_investment
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_the_megacorp"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_renegotiation_with_the_HRA
+		icon = GFX_goal_SZC_YCP_collab_the_megacorp
+		cost = 4
+
+		x = 0
+		y = 4
+		relative_position_id = SZC_YCP_collab_china_new_economy
+
+		prerequisite = {
+			focus = SZC_YCP_collab_organic_corporatism
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_agricultural_modernization_attempt
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_renegotiation_with_the_HRA"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_fiscal_reform
+		icon = GFX_goal_SZC_YCP_collab_fiscal_reform
+		cost = 4
+
+		x = 4
+		y = 1
+		relative_position_id = SZC_YCP_collab_china_new_economy
+
+		prerequisite = {
+			focus = SZC_YCP_collab_china_new_economy
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_fiscal_reform"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_introduce_modern_technology
+		icon = GFX_goal_SZC_YCP_collab_introduce_modern_technology
+		cost = 4
+
+		x = 3
+		y = 2
+		relative_position_id = SZC_YCP_collab_china_new_economy
+
+		prerequisite = {
+			focus = SZC_YCP_collab_fiscal_reform
+			focus = SZC_YCP_collab_pan_asianist_economy_policy
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_introduce_modern_technology"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_our_five_years_plan
+		icon = GFX_goal_SZC_YCP_collab_our_five_years_plan
+		cost = 4
+
+		x = 4
+		y = 3
+		relative_position_id = SZC_YCP_collab_china_new_economy
+
+		prerequisite = {
+			focus = SZC_YCP_collab_fiscal_reform
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_introduce_modern_technology
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_our_five_years_plan"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_promoting_pashina_trains
+		icon = GFX_goal_SZC_YCP_collab_promoting_pashina_trains
+		cost = 4
+
+		x = 2
+		y = 4
+		relative_position_id = SZC_YCP_collab_china_new_economy
+
+		prerequisite = {
+			focus = SZC_YCP_collab_our_five_years_plan
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_promoting_pashina_trains"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_grand_infrastructure_plan
+		icon = GFX_goal_SZC_YCP_collab_grand_infrastructure_plan
+		cost = 4
+
+		x = 4
+		y = 4
+		relative_position_id = SZC_YCP_collab_china_new_economy
+
+		prerequisite = {
+			focus = SZC_YCP_collab_our_five_years_plan
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_grand_infrastructure_plan"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_modern_china_modern_economy
+		icon = GFX_goal_SZC_YCP_collab_modern_china_modern_economy
+		cost = 4
+
+		x = 0
+		y = 5
+		relative_position_id = SZC_YCP_collab_china_new_economy
+
+		prerequisite = {
+			focus = SZC_YCP_collab_to_the_ocean
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_renegotiation_with_the_HRA
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_grand_infrastructure_plan
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_modern_china_modern_economy"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_anti_red_meance
+		icon = GFX_goal_SZC_YCP_collab_anti_red_meance
+		cost = 4
+
+		x = 6
+		y = 2
+		relative_position_id = SZC_YCP_collab_two_governments_one_sky
+
+
+		prerequisite = {
+			focus = SZC_YCP_collab_statist_coalition
+			focus = SZC_YCP_collab_xinhai_coalition
+			focus = SZC_YCP_collab_centrist_reform_alliance
+			focus = SZC_YCP_collab_progressive_front
+			focus = SZC_YCP_collab_grand_coalition
+			focus = SZC_YCP_collab_reformist_coalition
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_anti_red_meance"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_legalize_political_donations
+		icon = GFX_goal_SZC_YCP_collab_legalize_political_donations
+		cost = 4
+
+		x = 5
+		y = 3
+		relative_position_id = SZC_YCP_collab_two_governments_one_sky
+
+
+		prerequisite = {
+			focus = SZC_YCP_collab_anti_red_meance
+		}
+		prerequisite = {
+			focus = SZC_YCP_collab_fiscal_reform
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_legalize_political_donations"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_statist_coalition
+		icon = GFX_goal_SZC_YCP_collab_statist_coalition
+		cost = 4
+
+		x = 8
+		y = 1
+		relative_position_id = SZC_YCP_collab_two_governments_one_sky
+
+		allow_branch = {
+			# always = no
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_two_governments_one_sky
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_statist_coalition"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_stablize_our_political_situation
+		icon = GFX_goal_SZC_YCP_collab_stablize_our_political_situation
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = SZC_YCP_collab_statist_coalition
+
+
+		prerequisite = {
+			focus = SZC_YCP_collab_statist_coalition
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_stablize_our_political_situation"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_flowers_to_spring
+		icon = GFX_goal_SZC_YCP_collab_flowers_to_spring
+		cost = 4
+
+		x = -1
+		y = 2
+		relative_position_id = SZC_YCP_collab_statist_coalition
+
+
+		prerequisite = {
+			focus = SZC_YCP_collab_stablize_our_political_situation
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_flowers_to_spring"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_our_sozialpolitik
+		icon = GFX_goal_SZC_YCP_collab_our_sozialpolitik
+		cost = 4
+
+		x = 1
+		y = 2
+		relative_position_id = SZC_YCP_collab_statist_coalition
+
+
+		prerequisite = {
+			focus = SZC_YCP_collab_stablize_our_political_situation
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_our_sozialpolitik"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_to_heir_liangqichao
+		icon = GFX_goal_SZC_YCP_collab_to_heir_liangqichao
+		cost = 4
+
+		x = 0
+		y = 3
+		relative_position_id = SZC_YCP_collab_statist_coalition
+
+
+		prerequisite = {
+			focus = SZC_YCP_collab_our_sozialpolitik
+		}
+		prerequisite = {
+			focus = SZC_YCP_collab_flowers_to_spring
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_to_heir_liangqichao"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_push_YCPNSP_integration
+		icon = GFX_goal_SZC_YCP_collab_push_YCPNSP_integration
+		cost = 4
+
+		x = -1
+		y = 4
+		relative_position_id = SZC_YCP_collab_statist_coalition
+
+		mutually_exclusive = {
+			focus = SZC_YCP_collab_keep_a_line
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_to_heir_liangqichao
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_push_YCPNSP_integration"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_keep_a_line
+		icon = GFX_goal_SZC_YCP_collab_keep_a_line
+		cost = 4
+
+		x = 1
+		y = 4
+		relative_position_id = SZC_YCP_collab_statist_coalition
+
+		mutually_exclusive = {
+			focus = SZC_YCP_collab_push_YCPNSP_integration
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_to_heir_liangqichao
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_keep_a_line"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_statist_real_politic
+		icon = GFX_goal_SZC_YCP_collab_statist_real_politic
+		cost = 4
+
+		x = 0
+		y = 5
+		relative_position_id = SZC_YCP_collab_statist_coalition
+
+		prerequisite = {
+			focus = SZC_YCP_collab_keep_a_line
+			focus = SZC_YCP_collab_push_YCPNSP_integration
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_statist_real_politic"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_wuhan_coalition
+		icon = GFX_goal_SZC_YCP_collab_wuhan_coalition
+		cost = 4
+
+		x = 8
+		y = 1
+		relative_position_id = SZC_YCP_collab_two_governments_one_sky
+
+		allow_branch = {
+			always = no
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_two_governments_one_sky
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_wuhan_coalition"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_xinhai_coalition
+		icon = GFX_goal_SZC_YCP_collab_xinhai_coalition
+		cost = 4
+
+		x = 8
+		y = 1
+		relative_position_id = SZC_YCP_collab_two_governments_one_sky
+
+		allow_branch = {
+			always = no
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_two_governments_one_sky
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_xinhai_coalition"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_centrist_reform_alliance
+		icon = GFX_goal_SZC_YCP_collab_centrist_reform_alliance
+		cost = 4
+
+		x = 8
+		y = 1
+		relative_position_id = SZC_YCP_collab_two_governments_one_sky
+
+		allow_branch = {
+			always = no
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_two_governments_one_sky
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_centrist_reform_alliance"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_grand_coalition
+		icon = GFX_goal_SZC_YCP_collab_grand_coalition
+		cost = 4
+
+		x = 8
+		y = 1
+		relative_position_id = SZC_YCP_collab_two_governments_one_sky
+
+		allow_branch = {
+			always = no
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_two_governments_one_sky
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_grand_coalition"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_progressive_front
+		icon = GFX_goal_SZC_YCP_collab_progressive_front
+		cost = 4
+
+		x = 8
+		y = 1
+		relative_position_id = SZC_YCP_collab_two_governments_one_sky
+
+		allow_branch = {
+			always = no
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_two_governments_one_sky
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_progressive_front"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_reformist_coalition
+		icon = GFX_goal_SZC_YCP_collab_reformist_coalition
+		cost = 4
+
+		x = 8
+		y = 1
+		relative_position_id = SZC_YCP_collab_two_governments_one_sky
+
+		allow_branch = {
+			always = no
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_two_governments_one_sky
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_reformist_coalition"
+			
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_collab_all_gets_better
+		icon = GFX_goal_SZC_YCP_collab_all_gets_better
+		cost = 4
+
+		x = 0
+		y = 7
+		relative_position_id = SZC_YCP_collab_two_governments_one_sky
+
+		prerequisite = {
+			focus = SZC_YCP_collab_peace_army_stands_with_asia
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_modern_china_modern_economy
+		}
+
+		prerequisite = {
+			focus = SZC_YCP_collab_statist_real_politic
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_all_gets_better"
+			
 		}
 	}
 
