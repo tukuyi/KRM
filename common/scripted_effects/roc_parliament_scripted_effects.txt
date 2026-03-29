@@ -17,7 +17,8 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 1 }
 		set_variable = { parliament_gui_party = token:parliament_gui_YCPCPAC }
 		set_variable = { parliament_gui_chairman = token:SZC_zhao_yusong }
-		set_variable = { parliament_gui_ideology = token:authoritarian_democrat }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:authoritarian_democrat }
 	}
 
 	# 國家社會黨 - PSC —— frame 2, 112席
@@ -28,7 +29,8 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_NSPPSC }
 		set_variable = { parliament_gui_chairman = token:SZC_zhu_xiang }
-		set_variable = { parliament_gui_ideology = token:social_democrat }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:social_democrat }
 	}
 
 	# 民主自由黨 —— frame 3, 62席
@@ -39,7 +41,8 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_DLP }
 		set_variable = { parliament_gui_chairman = token:SZC_ren_yuandao }
-		set_variable = { parliament_gui_ideology = token:market_liberal }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:market_liberal }
 	}
 
 	# 共和黨 —— frame 4, 51席
@@ -50,7 +53,8 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_REP }
 		set_variable = { parliament_gui_chairman = token:SZC_he_peirong }
-		set_variable = { parliament_gui_ideology = token:paternal_autocrat }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:paternal_autocrat }
 	}
 
 	# 致公黨 —— frame 5, 73席
@@ -61,7 +65,8 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_PIP }
 		set_variable = { parliament_gui_chairman = token:SZC_jin_zhang }
-		set_variable = { parliament_gui_ideology = token:social_conservative }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:social_conservative }
 	}
 
 	# 國民黨 —— frame 6, 91席
@@ -72,7 +77,8 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_KMT }
 		set_variable = { parliament_gui_chairman = token:SZC_zhou_fohai }
-		set_variable = { parliament_gui_ideology = token:social_liberal }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:social_liberal }
 	}
 
 	# 國家法西斯黨 —— frame 7, 11席
@@ -83,7 +89,8 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_FAS }
 		set_variable = { parliament_gui_chairman = token:SZC_zhou_yuying }
-		set_variable = { parliament_gui_ideology = token:totalist }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:totalist }
 	}
 
 	# 社會民主黨 —— frame 8, 27席
@@ -94,7 +101,8 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_SDP }
 		set_variable = { parliament_gui_chairman = token:SZC_jiang_kanghu }
-		set_variable = { parliament_gui_ideology = token:radical_socialist }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:radical_socialist }
 	}
 
 	# 全華聯合工會 —— frame 9, 18席
@@ -105,10 +113,11 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_ACU }
 		set_variable = { parliament_gui_chairman = token:SZC_zhang_kechang }
-		set_variable = { parliament_gui_ideology = token:syndicalist }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:syndicalist }
 	}
 
-	# 中国国民革新党 —— frame 10, 6席
+	# 中国国民革新党 —— frame 11, 6席
 	add_to_array = { ROC_party_tokens = token:parliament_gui_RRP }
 	parliament_gui_RRP = {
 		set_variable = { parliament_gui_frame = 11 }
@@ -116,10 +125,11 @@ ROC_register_parties = {
 		set_variable = { parliament_gui_status = 3 }
 		set_variable = { parliament_gui_party = token:parliament_gui_RRP }
 		set_variable = { parliament_gui_chairman = token:SZC_zhang_ming }
-		set_variable = { parliament_gui_ideology = token:national_populist }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:national_populist }
 	}
 
-	# 無黨籍 —— frame 11, 82席
+	# 無黨籍 —— frame 10, 82席
 	add_to_array = { ROC_party_tokens = token:parliament_gui_IND }
 	parliament_gui_IND = {
 		set_variable = { parliament_gui_frame = 10 }
@@ -2117,6 +2127,12 @@ ROC_coalition_complete = {
 			set_variable = { parliament_gui_status = 1 }
 			set_variable = { parliament_gui_interacted = 0 }
 			set_variable = { parliament_gui_constructalig = 0 }
+			for_each_loop = {
+				array = parliament_gui_ideologies
+				value = cur_ideo
+				set_temp_variable = { coalition_partner_var = var:cur_ideo }
+				add_to_coalition = yes
+			}
 		}
 		else_if = {
 			limit = {
@@ -2127,8 +2143,12 @@ ROC_coalition_complete = {
 			set_variable = { parliament_gui_status = 2 }
 			set_variable = { parliament_gui_interacted = 0 }
 			set_variable = { parliament_gui_constructalig = 0 }
-			set_temp_variable = { coalition_partner_var = var:parliament_gui_ideology }
-			add_to_coalition = yes
+			for_each_loop = {
+				array = parliament_gui_ideologies
+				value = cur_ideo
+				set_temp_variable = { coalition_partner_var = var:cur_ideo }
+				add_to_coalition = yes
+			}
 		}
 		else_if = {
 			limit = {
@@ -2139,8 +2159,12 @@ ROC_coalition_complete = {
 			set_variable = { parliament_gui_status = 3 }
 			set_variable = { parliament_gui_interacted = 0 }
 			set_variable = { parliament_gui_constructalig = 0 }
-			set_temp_variable = { coalition_partner_var = var:parliament_gui_ideology }
-			remove_from_coalition = yes
+			for_each_loop = {
+				array = parliament_gui_ideologies
+				value = cur_ideo
+				set_temp_variable = { coalition_partner_var = var:cur_ideo }
+				remove_from_coalition = yes
+			}
 		}
 	}
 	meta_effect = {
@@ -2154,14 +2178,147 @@ ROC_coalition_complete = {
 }
 
 
+ROC_cal_cur_ideo_effect = {
+	if = {
+		limit = {
+			check_variable = { cur_ideo = token:totalist }
+		}
+		add_to_temp_variable = { temp_raw_w = party_popularity_totalist }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:syndicalist }
+		}
+		add_to_temp_variable = { temp_raw_w = party_popularity_syndicalist }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:radical_socialist }
+		}
+		add_to_temp_variable = { temp_raw_w = party_popularity_radical_socialist }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:social_democrat }
+		}
+		add_to_temp_variable = { temp_raw_w = party_popularity_social_democrat }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:social_liberal }
+		}
+		add_to_temp_variable = { temp_raw_w = party_popularity_social_liberal }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:market_liberal }
+		}
+		add_to_temp_variable = { temp_raw_w = party_popularity_market_liberal }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:social_conservative }
+		}
+		add_to_temp_variable = { temp_raw_w = party_popularity_social_conservative }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:authoritarian_democrat }
+		}
+		add_to_temp_variable = { temp_raw_w = party_popularity_authoritarian_democrat }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:paternal_autocrat }
+		}
+		add_to_temp_variable = { temp_raw_w = party_popularity_paternal_autocrat }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:national_populist }
+		}
+		add_to_temp_variable = { temp_raw_w = party_popularity_national_populist }
+	}
+}
+ROC_cal_elec_base_effect = {
+	if = {
+		limit = {
+			check_variable = { cur_ideo = token:totalist }
+		}
+		add_to_temp_variable = { elec_base = party_popularity_totalist }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:syndicalist }
+		}
+		add_to_temp_variable = { elec_base = party_popularity_syndicalist }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:radical_socialist }
+		}
+		add_to_temp_variable = { elec_base = party_popularity_radical_socialist }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:social_democrat }
+		}
+		add_to_temp_variable = { elec_base = party_popularity_social_democrat }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:social_liberal }
+		}
+		add_to_temp_variable = { elec_base = party_popularity_social_liberal }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:market_liberal }
+		}
+		add_to_temp_variable = { elec_base = party_popularity_market_liberal }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:social_conservative }
+		}
+		add_to_temp_variable = { elec_base = party_popularity_social_conservative }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:authoritarian_democrat }
+		}
+		add_to_temp_variable = { elec_base = party_popularity_authoritarian_democrat }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:paternal_autocrat }
+		}
+		add_to_temp_variable = { elec_base = party_popularity_paternal_autocrat }
+	}
+	else_if = {
+		limit = {
+			check_variable = { cur_ideo = token:national_populist }
+		}
+		add_to_temp_variable = { elec_base = party_popularity_national_populist }
+	}
+	# log = "Calculated elec_base for [cur_ideo]: [?elec_base]"
+}
+
+
 ##############################################################
 # 国民大会 — 选举结算
 #
-# 调用前设置各意识形态支持率（0–100）：
+# 调用前在 ROC_register_parties 中为各党设置：
+#   clear_array = parliament_gui_ideologies
+#   add_to_array = { parliament_gui_ideologies = token:authoritarian_democrat }
+#   add_to_array = { parliament_gui_ideologies = token:social_conservative }   # 可多个
 #
-# 可选参数：
-#   ROC_election_noise_pct   随机波动幅度，默认 25（即 ±25%）
+# 无党籍支持率自动计算，无需手动设置。
+#
+# 可选参数（国家变量，调用前设置）：
+#   ROC_election_noise_pct   随机波动幅度，默认 0.1（即 ±10%）
 #   ROC_election_min_seats   最低保障席位，默认 3
+#   ROC_election_ideo_penalty 多意识形态惩罚系数，默认 0.02
 ##############################################################
  
 ROC_election_calculate = {
@@ -2169,32 +2326,48 @@ ROC_election_calculate = {
     # ── 默认参数 ──────────────────────────────────────────
     if = {
         limit = { NOT = { check_variable = { ROC_election_noise_pct > 0 } } }
-        set_temp_variable = { ROC_election_noise_pct = 0.1 }
+        set_temp_variable = { ROC_election_noise_pct = 0.08 }
+    }
+    else = {
+        set_temp_variable = { ROC_election_noise_pct = var:ROC_election_noise_pct }
     }
     if = {
         limit = { NOT = { check_variable = { ROC_election_min_seats > 0 } } }
         set_temp_variable = { ROC_election_min_seats = 3 }
     }
+    else = {
+        set_temp_variable = { ROC_election_min_seats = var:ROC_election_min_seats }
+    }
+    if = {
+        limit = { NOT = { check_variable = { ROC_election_ideo_penalty > 0 } } }
+        set_temp_variable = { ROC_election_ideo_penalty = 0.02 }
+    }
+    else = {
+        set_temp_variable = { ROC_election_ideo_penalty = var:ROC_election_ideo_penalty }
+    }
+    set_temp_variable = { elec_seats_max = var:ROC_seats_max }
+ 
+    # ── 预缓存所有意识形态人气为同名 temp 变量 ───────────
+    # meta 展开时可用 party_popularity_[ideo] 直接引用
+    set_temp_variable = { party_popularity_totalist              = party_popularity@totalist              }
+    set_temp_variable = { party_popularity_syndicalist           = party_popularity@syndicalist           }
+    set_temp_variable = { party_popularity_radical_socialist     = party_popularity@radical_socialist     }
+    set_temp_variable = { party_popularity_social_democrat       = party_popularity@social_democrat       }
+    set_temp_variable = { party_popularity_social_liberal        = party_popularity@social_liberal        }
+    set_temp_variable = { party_popularity_market_liberal        = party_popularity@market_liberal        }
+    set_temp_variable = { party_popularity_social_conservative   = party_popularity@social_conservative   }
+    set_temp_variable = { party_popularity_authoritarian_democrat = party_popularity@authoritarian_democrat }
+    set_temp_variable = { party_popularity_paternal_autocrat     = party_popularity@paternal_autocrat     }
+    set_temp_variable = { party_popularity_national_populist     = party_popularity@national_populist     }
  
     # ══════════════════════════════════════════════════════
     # 第零步：自动计算无党籍支持率
     #
-    # extremism = avg(极端意识形态支持率)
-    # frag      = 1 - 最强主流党支持率
-    # result    = clamp((extremism + frag) / 2, 0, 33)
+    # extremism = avg(totalist, national_populist,
+    #                 syndicalist, radical_socialist)
+    # frag      = 1 - 各党原始权重中的最大值
+    # result    = clamp((extremism + frag) / 2, 0, 0.33)
     # ══════════════════════════════════════════════════════
-
-	#载入所有意识形态支持率
-    set_temp_variable = { party_popularity_totalist = party_popularity@totalist }
-	set_temp_variable = { party_popularity_syndicalist = party_popularity@syndicalist }
-	set_temp_variable = { party_popularity_radical_socialist = party_popularity@radical_socialist }
-	set_temp_variable = { party_popularity_social_democrat = party_popularity@social_democrat }
-	set_temp_variable = { party_popularity_social_liberal = party_popularity@social_liberal }
-	set_temp_variable = { party_popularity_market_liberal = party_popularity@market_liberal }
-	set_temp_variable = { party_popularity_social_conservative = party_popularity@social_conservative }
-	set_temp_variable = { party_popularity_authoritarian_democrat = party_popularity@authoritarian_democrat }
-	set_temp_variable = { party_popularity_paternal_autocrat = party_popularity@paternal_autocrat }
-	set_temp_variable = { party_popularity_national_populist = party_popularity@national_populist }
  
     # 极端化分量
     set_temp_variable = { ROC_ind_extreme_sum = 0 }
@@ -2204,189 +2377,184 @@ ROC_election_calculate = {
     add_to_temp_variable = { ROC_ind_extreme_sum = party_popularity@radical_socialist }
     divide_temp_variable  = { ROC_ind_extreme_sum = 4 }
  
-    # 碎片化分量：遍历各党找最强支持率，跳过无党籍
+    # 碎片化分量：遍历各党，用多意识形态求和计算原始权重，找最大值
     set_temp_variable = { ROC_ind_max_support = 0 }
     for_each_loop = {
         array = ROC_party_tokens
         value = roc_cur_token
-		set_temp_variable = { tempideo = 0 }
         meta_effect = {
             text = {
-				every_character = {
-					limit = {
-						is_character = [party]
-					}
-					add_to_temp_variable = { tempideo = var:parliament_gui_ideology }
-				}
+                every_character = {
+                    limit = {
+                        is_character = [party]
+                        NOT = { is_character = parliament_gui_IND }
+                    }
+                    # 遍历该党意识形态数组求和
+                    set_temp_variable = { temp_raw_w = 0 }
+                    set_temp_variable = { temp_ideo_n = 0 }
+                    for_each_loop = {
+                        array = parliament_gui_ideologies
+                        value = cur_ideo
+						ROC_cal_cur_ideo_effect = yes
+                        add_to_temp_variable = { temp_ideo_n = 1 }
+                    }
+                    # 多意识形态惩罚
+                    add_to_temp_variable = { temp_ideo_n = -1 }
+                    multiply_temp_variable = { temp_ideo_n = var:ROC_election_ideo_penalty }
+                    subtract_from_temp_variable = { temp_raw_w = var:temp_ideo_n }
+					# log = "[party]"
+					# log = "[?temp_raw_w]"
+                    # 更新最大值
+                    if = {
+                        limit = { check_variable = { temp_raw_w > var:ROC_ind_max_support } }
+                        set_temp_variable = { ROC_ind_max_support = var:temp_raw_w }
+						# log = "[ROC_ind_max_support] from [party]"
+                    }
+                }
             }
             party = "[?roc_cur_token.GetTokenKey]"
-        }
-        meta_effect = {
-            text = {
-				set_temp_variable = { temppop = var:party_popularity_[ideo] }
-            }
-            ideo = "[?tempideo.GetTokenKey]"
+            ideo = "[?cur_ideo.GetTokenKey]"
         }
     }
  
+    # 合并 + 钳位
     set_variable = { ROC_support_independent = 1 }
-    subtract_from_variable = { ROC_support_independent = var:ROC_ind_max_support }   # frag
-    add_to_variable = { ROC_support_independent = var:ROC_ind_extreme_sum }          # + extremism
-    divide_variable  = { ROC_support_independent = 6 }
+    subtract_from_variable = { ROC_support_independent = var:ROC_ind_max_support }
+    add_to_variable = { ROC_support_independent = var:ROC_ind_extreme_sum }
+    divide_variable  = { ROC_support_independent = 4 }
     if = {
         limit = { check_variable = { ROC_support_independent > 0.33 } }
         set_variable = { ROC_support_independent = 0.33 }
     }
-
-	# log = "[?ROC_support_independent]"
+    if = {
+        limit = { check_variable = { ROC_support_independent < 0 } }
+        set_variable = { ROC_support_independent = 0 }
+    }
+	# log = "无党籍支持率： [?ROC_support_independent]"
  
     # ══════════════════════════════════════════════════════
-    # 第一遍：计算各党加噪权重，累计总权重，追踪最大权重党
+    # 第一遍：计算各党加噪权重，存入 character.elec_w
+    #         累计总权重，追踪最大权重党
     # ══════════════════════════════════════════════════════
-    set_temp_variable = { elec_noise_pct = var:ROC_election_noise_pct }
-    set_temp_variable = { elec_min_seats = var:ROC_election_min_seats }
-    set_temp_variable = { elec_seats_max = var:ROC_seats_max }
- 
     set_temp_variable = { ROC_elec_total_weight = 0 }
     set_temp_variable = { ROC_elec_max_w        = 0 }
-
-	parliament_gui_IND = {
-		set_temp_variable = {
-			var     = elec_base
-			value   = PREV.ROC_support_independent
-		}
-		# log = "[?elec_base]"
-	}
-	set_variable = { ROC_support_independent = 0 }
  
     for_each_loop = {
         array = ROC_party_tokens
         value = roc_cur_token
-		set_temp_variable = { tempideo = 0 }
         meta_effect = {
             text = {
-				every_character = {
-					limit = {
-						is_character = [party]
+                every_character = {
+                    limit = { is_character = [party] }
+					set_temp_variable = { parliament_gui_elec_w = 0 }
+ 
+                    # 无党籍：直接用预算好的 ROC_support_independent
+                    if = {
+                        limit = { is_character = parliament_gui_IND }
+                        set_temp_variable = { elec_base = var:ROOT.ROC_support_independent }
+                    }
+                    else = {
+                        # 遍历意识形态数组求和 + 惩罚
+                        set_temp_variable = { elec_base   = 0 }
+                        set_temp_variable = { elec_ideo_n = 0 }
+                        for_each_loop = {
+                            array = parliament_gui_ideologies
+                            value = cur_ideo
+                            ROC_cal_elec_base_effect = yes
+                            add_to_temp_variable = { elec_ideo_n = 1 }
+                        }
+                        add_to_temp_variable = { elec_ideo_n = -1 }
+                        multiply_temp_variable = { elec_ideo_n = var:ROC_election_ideo_penalty }
+                        subtract_from_temp_variable = { elec_base = var:elec_ideo_n }
+                    }
+					# 噪声：base × rand([-pct, +pct])
+					set_temp_variable = { elec_noise_2x = var:ROC_election_noise_pct }
+					multiply_temp_variable = { elec_noise_2x = 2 }
+					set_temp_variable_to_random = {
+						var = elec_roll
+						min = 0
+						max = var:elec_noise_2x
 					}
-					add_to_temp_variable = { tempideo = var:parliament_gui_ideology }
-				}
+					subtract_from_temp_variable = { elec_roll = var:ROC_election_noise_pct }
+					set_temp_variable = { elec_delta = var:elec_base }
+					multiply_temp_variable = { elec_delta = var:elec_roll }
+			
+					set_temp_variable = { elec_w = var:elec_base }
+					add_to_temp_variable = { elec_w = var:elec_delta }
+			
+					add_to_temp_variable = { parliament_gui_elec_w = var:elec_w }
+					add_to_temp_variable = { ROC_elec_total_weight = var:parliament_gui_elec_w }
+					# log = "[?elec_s] [?THIS.elec_w] [?ROOT.elec_w]"
+					add_to_temp_variable = { ROC_elec_total_weight = PREV.elec_w }
+					if = {
+						limit = { check_variable = { PREV.elec_w > THIS.ROC_elec_max_w } }
+						set_temp_variable = { ROC_elec_max_w = PREV.elec_w }
+						set_variable = { ROC_elec_max_party = var:roc_cur_token }
+						# log = "114514 [?ROC_elec_max_party]"
+					}
+                }
             }
             party = "[?roc_cur_token.GetTokenKey]"
         }
-		set_temp_variable = { parliament_gui_elec_w = 0 }
+		# 存到 character 身上供第二遍读取
         meta_effect = {
             text = {
-				if = {
-					limit = {
-						[party] = {
-							NOT = { is_character = parliament_gui_IND }
-						}
-					}
-					set_temp_variable = { elec_base = party_popularity_[ideo] }
-				}
-				else = "114"
-				set_temp_variable = { elec_noise_2x = var:elec_noise_pct }
-				multiply_temp_variable = { elec_noise_2x = 2 }
-				set_temp_variable_to_random = {
-					var     = elec_roll
-					min     = 0
-					max     = var:elec_noise_2x
-				}
-				subtract_from_temp_variable = { elec_roll = var:elec_noise_pct }
-
-				set_temp_variable = { elec_delta = var:elec_base }
-				multiply_temp_variable = { elec_delta = var:elec_roll }
-
-				set_temp_variable = { elec_w = var:elec_base }
-				add_to_temp_variable = { elec_w = var:elec_delta }
-				# if = {
-				#     limit = { check_variable = { elec_w < 1 } }
-				#     set_temp_variable = { elec_w = 1 }
-				# }
-
-				add_to_temp_variable = { parliament_gui_elec_w = var:elec_w }
-				add_to_temp_variable = { ROC_elec_total_weight = var:parliament_gui_elec_w }
-				if = {
-					limit = { check_variable = { parliament_gui_elec_w > var:ROC_elec_max_w } }
-					set_temp_variable = { ROC_elec_max_w     = var:parliament_gui_elec_w }
-					set_variable = { ROC_elec_max_party = var:roc_cur_token }
-				}
-            }
-            party = "[?roc_cur_token.GetTokenKey]"
-            ideo = "[?tempideo.GetTokenKey]"
-        }
-		# log = "[?parliament_gui_elec_w]"
-        meta_effect = {
-            text = {
-				every_character = {
-					limit = {
-						is_character = [party]
-					}
-					set_variable = {
-						var     = elec_s
-						value   = var:parliament_gui_elec_w
-					}
-					# log = "[?elec_s]"
-				}
+                every_character = {
+                    limit = { is_character = [party] }
+					set_variable = { elec_s = var:parliament_gui_elec_w }
+                }
             }
             party = "[?roc_cur_token.GetTokenKey]"
         }
-		# log = "[?ROC_elec_max_party.GetTokenKey]"
     }
  
     # ══════════════════════════════════════════════════════
     # 第二遍：按权重比例换算席位，写入 parliament_gui_seats
     # ══════════════════════════════════════════════════════
-    set_temp_variable = { elec_total_w = var:ROC_elec_total_weight }
+    set_temp_variable = { elec_total_w    = var:ROC_elec_total_weight }
+	log = "Total election weight: [?elec_seats_max]"
     set_temp_variable = { ROC_elec_seats_sum = 0 }
-	# log = "[?elec_total_w]"
  
     for_each_loop = {
         array = ROC_party_tokens
         value = roc_cur_token
         meta_effect = {
             text = {
-				every_character = {
-					limit = {
-						is_character = [party]
-					}
-					# log = "[?THIS.elec_s]"
+                every_character = {
+                    limit = { is_character = [party] }
                     multiply_variable = { elec_s = var:elec_seats_max }
-                    divide_variable = { elec_s = elec_total_w }
-                    round_variable = elec_s
+                    divide_variable   = { elec_s = elec_total_w }
+                    round_variable    = elec_s
                     if = {
-                        limit = { check_variable = { elec_s < elec_min_seats } }
-                        set_variable = { elec_s = elec_min_seats }
+                        limit = { check_variable = { elec_s < var:elec_min_seats } }
+                        set_variable = { elec_s = var:elec_min_seats }
                     }
-                    set_variable = { parliament_gui_seats = elec_s }
+                    set_variable = { parliament_gui_seats = var:elec_s }
                     ROOT = { add_to_temp_variable = { ROC_elec_seats_sum = PREV.parliament_gui_seats } }
-					clear_variable = elec_s
-				}
+                    clear_variable = elec_s
+                    clear_variable = elec_w
+                }
             }
             party = "[?roc_cur_token.GetTokenKey]"
         }
     }
-		# log = "[?ROC_elec_seats_sum]"
  
     # ── 余数修正 ──────────────────────────────────────────
     set_variable = { ROC_elec_remainder = var:ROC_seats_max }
     subtract_from_variable = { ROC_elec_remainder = var:ROC_elec_seats_sum }
-	# log = "[?ROC_elec_max_party.GetTokenKey]"
     meta_effect = {
         text = {
-			every_character = {
-				limit = {
-					is_character = [party]
-				}
-				set_temp_variable = { temp_change = ROOT.ROC_elec_remainder }
-				# log = "[?temp_change]"
-                add_to_variable = { parliament_gui_seats = temp_change }
-			}
+            every_character = {
+                limit = { is_character = [party] }
+                set_temp_variable = { temp_remainder = ROOT.ROC_elec_remainder }
+                add_to_variable = { parliament_gui_seats = temp_remainder }
+            }
         }
         party = "[?ROC_elec_max_party.GetTokenKey]"
     }
-	set_variable = { ROC_elec_remainder = 0 }
+    set_variable = { ROC_elec_remainder = 0 }
+
+	set_variable = { ROC_support_independent = 0 }
  
     ROC_parliament_reorder_parties = yes
     ROC_parliament_update = yes
