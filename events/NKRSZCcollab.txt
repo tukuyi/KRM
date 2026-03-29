@@ -1115,7 +1115,7 @@ country_event = {#大汉之意
 	}
 }
 
-country_event = {
+country_event = { #宁京对峙
 	id = NKRsichuanCollab.50
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.50" }
 	title = NKRsichuanCollab.50.t
@@ -1123,12 +1123,16 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #和十几年前一模一样。
 		name = NKRsichuanCollab.50.a
+		add_political_power = -10
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.51 days = 3 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #五色乎？国会乎？
 	id = NKRsichuanCollab.51
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.51" }
 	title = NKRsichuanCollab.51.t
@@ -1136,12 +1140,20 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #我们的合法性岌岌可危！
 		name = NKRsichuanCollab.51.a
+		add_stability = -0.08
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = -0.02
+		}
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.52 days = 3 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #大宪政运动
 	id = NKRsichuanCollab.52
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.52" }
 	title = NKRsichuanCollab.52.t
@@ -1149,12 +1161,18 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #我们热诚支持宪政运动。
 		name = NKRsichuanCollab.52.a
+		add_political_power = 50
+		add_stability = 0.03
+		
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.53 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #社论支持大宪政运动
 	id = NKRsichuanCollab.53
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.53" }
 	title = NKRsichuanCollab.53.t
@@ -1162,12 +1180,16 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #媒体站在我们在这边。
 		name = NKRsichuanCollab.53.a
+		add_political_power = 25
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.54 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #上海之声
 	id = NKRsichuanCollab.54
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.54" }
 	title = NKRsichuanCollab.54.t
@@ -1175,12 +1197,20 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #也罢。
 		name = NKRsichuanCollab.54.a
+		add_political_power = -25
+		JAP = {
+			add_political_power = 25
+		}
+		
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.55 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #宪政筹备方向？
 	id = NKRsichuanCollab.55
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.55" }
 	title = NKRsichuanCollab.55.t
@@ -1188,12 +1218,17 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #嗯，看起来确实是这样。
 		name = NKRsichuanCollab.55.a
+		
+		
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.56 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #撤军方案
 	id = NKRsichuanCollab.56
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.56" }
 	title = NKRsichuanCollab.56.t
@@ -1201,12 +1236,17 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #人为刀俎，我为鱼肉。
 		name = NKRsichuanCollab.56.a
+		army_experience = 5
+		add_political_power = -5
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.57 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #议会制的具体方向
 	id = NKRsichuanCollab.57
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.57" }
 	title = NKRsichuanCollab.57.t
@@ -1214,12 +1254,16 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #国民大会...
 		name = NKRsichuanCollab.57.a
+		add_political_power = -75
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.58 days = 1 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #总统制？内阁制？
 	id = NKRsichuanCollab.58
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.58" }
 	title = NKRsichuanCollab.58.t
@@ -1227,12 +1271,15 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #就这样定了。
 		name = NKRsichuanCollab.58.a
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.59 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #杯酒释军权？不...
 	id = NKRsichuanCollab.59
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.59" }
 	title = NKRsichuanCollab.59.t
@@ -1240,12 +1287,17 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #但也没有别的办法。
 		name = NKRsichuanCollab.59.a
+		add_political_power = -25
+		add_war_support = -0.1
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.60 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #施压
 	id = NKRsichuanCollab.60
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.60" }
 	title = NKRsichuanCollab.60.t
@@ -1253,12 +1305,27 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #立刻展开反制！
 		name = NKRsichuanCollab.60.a
+		add_political_power = -50
+		add_stability = -0.05
+		add_opinion_modifier = {
+			target = FNG
+			modifier = KR_displeased
+		}
+		FNG = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = KR_displeased
+			}
+		}
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.61 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #新时代的联省自治
 	id = NKRsichuanCollab.61
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.61" }
 	title = NKRsichuanCollab.61.t
@@ -1266,12 +1333,25 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #我们必须借此反对北方！
 		name = NKRsichuanCollab.61.a
+		add_opinion_modifier = {
+			target = FNG
+			modifier = KR_hates_govt
+		}
+		FNG = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = KR_hates_govt
+			}
+		}
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.62 days = 4 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #兴亚院扩张
 	id = NKRsichuanCollab.62
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.62" }
 	title = NKRsichuanCollab.62.t
@@ -1279,12 +1359,23 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #我们接受。
 		name = NKRsichuanCollab.62.a
+		give_resource_rights = {
+			receiver = JAP
+			state = 602
+		}
+		give_resource_rights = {
+			receiver = JAP
+			state = 1014
+		}
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.63 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #华中振兴会社
 	id = NKRsichuanCollab.63
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.63" }
 	title = NKRsichuanCollab.63.t
@@ -1292,12 +1383,22 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #我们需要资本...
 		name = NKRsichuanCollab.63.a
+		add_war_support = -0.1
+		add_political_power = -50
+		#mio?
+		add_one_random_civilian_factory = yes
+		add_one_random_civilian_factory = yes
+		add_one_random_civilian_factory = yes
+		add_one_random_civilian_factory = yes
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.64 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #援助之手
 	id = NKRsichuanCollab.64
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.64" }
 	title = NKRsichuanCollab.64.t
@@ -1305,12 +1406,19 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #握握手。
 		name = NKRsichuanCollab.64.a
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.03
+		}
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.65 days = 1 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #利益交换
 	id = NKRsichuanCollab.65
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.65" }
 	title = NKRsichuanCollab.65.t
@@ -1318,12 +1426,20 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #梁启超的遗产。
 		name = NKRsichuanCollab.65.a
+		custom_effect_tooltip = NKRsichuanCollab.65.tt
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.01
+		}
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.66 days = 3 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #扩大民政治理
 	id = NKRsichuanCollab.66
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.66" }
 	title = NKRsichuanCollab.66.t
@@ -1331,12 +1447,15 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #还行吧。至少现在如此。
 		name = NKRsichuanCollab.66.a
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.67 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #组织条例出台！
 	id = NKRsichuanCollab.67
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.67" }
 	title = NKRsichuanCollab.67.t
@@ -1344,12 +1463,13 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #不错！
 		name = NKRsichuanCollab.67.a
+		ROC_law_sign_the_1 = yes
 	}
 }
 
-country_event = {
+country_event = { #组织条例通过！
 	id = NKRsichuanCollab.68
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.68" }
 	title = NKRsichuanCollab.68.t
@@ -1357,12 +1477,15 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #“大选”，在日本人之下。
 		name = NKRsichuanCollab.68.a
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.69 days = 3 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #国家主义的回响
 	id = NKRsichuanCollab.69
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.69" }
 	title = NKRsichuanCollab.69.t
@@ -1370,12 +1493,19 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #今日的国家主义...
 		name = NKRsichuanCollab.69.a
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.70 days = 3 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #神圣联合？
 	id = NKRsichuanCollab.70
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.70" }
 	title = NKRsichuanCollab.70.t
@@ -1383,12 +1513,16 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #...真乃败笔！
 		name = NKRsichuanCollab.70.a
+		add_stability = -0.03
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.71 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #枪杆子与选票
 	id = NKRsichuanCollab.71
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.71" }
 	title = NKRsichuanCollab.71.t
@@ -1396,12 +1530,19 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #于是那就成了他的私人封地？
 		name = NKRsichuanCollab.71.a
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.04
+		}
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.72 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #暗流涌动
 	id = NKRsichuanCollab.72
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.72" }
 	title = NKRsichuanCollab.72.t
@@ -1409,12 +1550,17 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #警察呢？！
 		name = NKRsichuanCollab.72.a
+		add_stability = -0.05
+		add_political_power = -25
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.73 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #罢工与刺杀
 	id = NKRsichuanCollab.73
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.73" }
 	title = NKRsichuanCollab.73.t
@@ -1422,12 +1568,16 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #快点镇压下去！
 		name = NKRsichuanCollab.73.a
+		add_political_power = -50
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.74 days = 1 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #宪兵队登场
 	id = NKRsichuanCollab.74
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.74" }
 	title = NKRsichuanCollab.74.t
@@ -1435,12 +1585,16 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #枪刺之下...
 		name = NKRsichuanCollab.74.a
+		add_manpower = -453
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.75 days = 1 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #绝密
 	id = NKRsichuanCollab.75
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.75" }
 	title = NKRsichuanCollab.75.t
@@ -1448,12 +1602,16 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #给我接影佐！
 		name = NKRsichuanCollab.75.a
+		add_political_power = -10
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.76 days = 1 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #内部施压
 	id = NKRsichuanCollab.76
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.76" }
 	title = NKRsichuanCollab.76.t
@@ -1461,12 +1619,15 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #暂时消停了...
 		name = NKRsichuanCollab.76.a
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.77 days = 2 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #洗牌
 	id = NKRsichuanCollab.77
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.77" }
 	title = NKRsichuanCollab.77.t
@@ -1474,12 +1635,15 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #但愿？
 		name = NKRsichuanCollab.77.a
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.78 days = 5 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #投票日
 	id = NKRsichuanCollab.78
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.78" }
 	title = NKRsichuanCollab.78.t
@@ -1487,12 +1651,15 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #投出你的一票。
 		name = NKRsichuanCollab.78.a
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.79 days = 1 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #...
 	id = NKRsichuanCollab.79
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.79" }
 	title = NKRsichuanCollab.79.t
@@ -1500,12 +1667,15 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #讽刺，如今反而真成了“民主”？
 		name = NKRsichuanCollab.79.a
+		hidden_effect = {
+			country_event = { id = NKRsichuanCollab.80 days = 1 }
+		}
 	}
 }
 
-country_event = {
+country_event = { #选举结果公示...
 	id = NKRsichuanCollab.80
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.80" }
 	title = NKRsichuanCollab.80.t
@@ -1513,12 +1683,19 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #让我看看结果...
 		name = NKRsichuanCollab.80.a
+		hidden_effect = {
+			ROC_collab_start_register_parties = yes
+			ROC_election_calculate = yes
+			ROC_init_parliament_positions = yes
+			set_country_flag = open_roc_parliament_gui
+			country_event = { id = NKRsichuanCollab.81 days = 1 }
+		}
 	}
 }
 
-country_event = {
+country_event = {#组建政府
 	id = NKRsichuanCollab.81
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.81" }
 	title = NKRsichuanCollab.81.t
@@ -1526,12 +1703,13 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = {#既然这样的话...
 		name = NKRsichuanCollab.81.a
+		ROC_init_coalition_construct = yes
 	}
 }
 
-country_event = {
+country_event = {#革新政府第一届民选政府就职
 	id = NKRsichuanCollab.82
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.82" }
 	title = NKRsichuanCollab.82.t
@@ -1539,8 +1717,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = {#前方的工作不少...
 		name = NKRsichuanCollab.82.a
+		custom_effect_tooltip = NKRsichuanCollab.82.tt
+		complete_national_focus = SZC_YCP_collab_two_governments_one_sky
+		set_country_flag = SZC_YCP_collab_phase_2
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 

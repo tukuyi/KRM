@@ -399,7 +399,7 @@ focus_tree = {
 	focus = {
 		id = SZC_YCP_collab_two_governments_one_sky
 		icon = GFX_goal_SZC_YCP_collab_two_governments_one_sky
-		cost = 4
+		cost = 15
 
 		x = 0
 		y = 2
@@ -429,6 +429,12 @@ focus_tree = {
 						has_war_with = ROOT
 					}
 				}
+			}
+		}
+
+		select_effect = {
+			country_event = {
+				id = NKRsichuanCollab.50
 			}
 		}
 

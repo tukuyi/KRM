@@ -51,6 +51,81 @@ news_event = { #新国家
 	   name = NKRFengtianManchuriaNews.2.a
    }
 }
+ 
+news_event = { #新国家
+   id = NKRFengtianManchuriaNews.3
+   immediate = { log = "[GetLogInfo]: event NKRFengtianManchuriaNews.3" }
+   title = NKRFengtianManchuriaNews.3.t
+   desc = NKRFengtianManchuriaNews.3.d
+   picture = GFX_news_event_ANQ_feng_recognised
+
+   trigger = {
+	   wants_world_news = yes
+   }
+
+   is_triggered_only = yes
+
+   major = yes
+   fire_for_sender = yes
+   show_major = {
+	   regional_asia_news = yes
+   }
+
+   option = {
+	   name = NKRFengtianManchuriaNews.3.a
+   }
+}
+ 
+news_event = { #第二次收复蒙古
+   id = NKRFengtianManchuriaNews.4
+   immediate = { log = "[GetLogInfo]: event NKRFengtianManchuriaNews.4" }
+   title = NKRFengtianManchuriaNews.4.t
+   desc = NKRFengtianManchuriaNews.4.d
+   picture = GFX_news_event_FNG_collab_2nd_mon
+
+   trigger = {
+	   wants_world_news = yes
+   }
+
+   is_triggered_only = yes
+
+   major = yes
+   fire_for_sender = yes
+   show_major = {
+	   regional_asia_news = yes
+   }
+
+   option = {
+	   name = NKRFengtianManchuriaNews.4.a
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = FNG
+				}
+				RUS = {
+					diplomatic_relation = {
+						country = MON
+						relation = guarantee
+						active = no
+					}
+				}
+				MON = {
+					diplomatic_relation = {
+						country = RUS
+						relation = guarantee
+						active = no
+					}
+				}
+				FNG = {
+					declare_war_on = {
+						target = MON
+						type = annex_everything
+					}
+				}
+			}
+		}
+   }
+}
 
  country_event = { #The Great Decision 命新首改 再改必纠
 	id = fengtian_beijing_conference_events.005

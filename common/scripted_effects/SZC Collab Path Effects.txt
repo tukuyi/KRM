@@ -486,30 +486,205 @@ SZC_collab_remove_normal_guys = {
 
 ROC_law_the_1_effect = {
 	custom_effect_tooltip = ROC_law_the_1_effect_tt
-	complete_national_focus = SZC_YCP_collab_two_governments_one_sky
+	country_event = { id = NKRsichuanCollab.68 }
 	add_political_power = 100
 }
 
-ROC_law_the_1_vote_debug = {
+ROC_law_sign_the_1 = {
 	set_variable = { ROC_current_law = 1 }
-	set_temp_variable = { tempc = 0 }
+	set_country_flag = open_law_sign_roc_gui
+	# set_temp_variable = { tempc = 0 }
 	
+	# for_each_loop = {
+	# 	array = ROC_party_tokens
+	# 	value = roc_cur_token
+		
+    #     ROOT = {
+    #         set_variable = { tempc = roc_cur_token }
+    #     }
+    #     meta_effect = {
+    #         text = {
+    #             every_character = {
+    #                 limit = { is_character = [tokenbase] }
+	# 				set_variable = { parliament_gui_seats_supporter = var:THIS.parliament_gui_seats }
+    #             }
+    #         }
+    #         tokenbase = "[?ROOT.tempc.GetTokenKey]"
+    #     }
+	# }
+	# clear_variable = ROOT.tempc
+}
+
+ROC_collab_start_register_parties = {
 	for_each_loop = {
 		array = ROC_party_tokens
 		value = roc_cur_token
-		
-        ROOT = {
-            set_variable = { tempc = roc_cur_token }
-        }
         meta_effect = {
             text = {
                 every_character = {
-                    limit = { is_character = [tokenbase] }
-					set_variable = { parliament_gui_seats_supporter = var:THIS.parliament_gui_seats }
+                    limit = {
+                        is_character = [party]
+                    }
+					ROC_party_remove = yes
                 }
             }
-            tokenbase = "[?ROOT.tempc.GetTokenKey]"
+            party = "[?roc_cur_token.GetTokenKey]"
+            ideo = "[?cur_ideo.GetTokenKey]"
         }
 	}
-		clear_variable = ROOT.tempc
+	clear_array = ROC_party_tokens
+
+	set_variable = { ROC_seats_max = 800 }
+	
+	#parliament_gui_status - 1执政 2联合 3在野
+
+	# 青年黨 - CPAC —— frame 1, 267席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_YCPCPAC }
+	parliament_gui_YCPCPAC = {
+		set_variable = { parliament_gui_frame = 1 }
+		set_variable = { parliament_gui_seats = 267 }
+		set_variable = { parliament_gui_status = 1 }
+		set_variable = { parliament_gui_party = token:parliament_gui_YCPCPAC }
+		set_variable = { parliament_gui_chairman = token:SZC_zhao_yusong }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:authoritarian_democrat }
+	}
+
+	# 國家社會黨 - PSC —— frame 2, 112席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_NSPPSC }
+	parliament_gui_NSPPSC = {
+		set_variable = { parliament_gui_frame = 2 }
+		set_variable = { parliament_gui_seats = 112 }
+		set_variable = { parliament_gui_status = 3 }
+		set_variable = { parliament_gui_party = token:parliament_gui_NSPPSC }
+		set_variable = { parliament_gui_chairman = token:SZC_zhu_xiang }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:social_democrat }
+	}
+
+	# 民主自由黨 —— frame 3, 62席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_DLP }
+	parliament_gui_DLP = {
+		set_variable = { parliament_gui_frame = 3 }
+		set_variable = { parliament_gui_seats = 62 }
+		set_variable = { parliament_gui_status = 3 }
+		set_variable = { parliament_gui_party = token:parliament_gui_DLP }
+		set_variable = { parliament_gui_chairman = token:SZC_ren_yuandao }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:market_liberal }
+	}
+
+	# 共和黨 —— frame 4, 51席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_REP }
+	parliament_gui_REP = {
+		set_variable = { parliament_gui_frame = 4 }
+		set_variable = { parliament_gui_seats = 51 }
+		set_variable = { parliament_gui_status = 3 }
+		set_variable = { parliament_gui_party = token:parliament_gui_REP }
+		set_variable = { parliament_gui_chairman = token:SZC_he_peirong }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:paternal_autocrat }
+	}
+
+	# 致公黨 —— frame 5, 73席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_PIP }
+	parliament_gui_PIP = {
+		set_variable = { parliament_gui_frame = 5 }
+		set_variable = { parliament_gui_seats = 73 }
+		set_variable = { parliament_gui_status = 3 }
+		set_variable = { parliament_gui_party = token:parliament_gui_PIP }
+		set_variable = { parliament_gui_chairman = token:SZC_jin_zhang }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:social_conservative }
+	}
+
+	# 國民黨 —— frame 6, 91席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_KMT }
+	parliament_gui_KMT = {
+		set_variable = { parliament_gui_frame = 6 }
+		set_variable = { parliament_gui_seats = 91 }
+		set_variable = { parliament_gui_status = 3 }
+		set_variable = { parliament_gui_party = token:parliament_gui_KMT }
+		set_variable = { parliament_gui_chairman = token:SZC_zhou_fohai }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:social_liberal }
+	}
+
+	# 國家法西斯黨 —— frame 7, 11席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_FAS }
+	parliament_gui_FAS = {
+		set_variable = { parliament_gui_frame = 7 }
+		set_variable = { parliament_gui_seats = 11 }
+		set_variable = { parliament_gui_status = 3 }
+		set_variable = { parliament_gui_party = token:parliament_gui_FAS }
+		set_variable = { parliament_gui_chairman = token:SZC_zhou_yuying }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:totalist }
+	}
+
+	# 社會民主黨 —— frame 8, 27席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_SDP }
+	parliament_gui_SDP = {
+		set_variable = { parliament_gui_frame = 8 }
+		set_variable = { parliament_gui_seats = 27 }
+		set_variable = { parliament_gui_status = 3 }
+		set_variable = { parliament_gui_party = token:parliament_gui_SDP }
+		set_variable = { parliament_gui_chairman = token:SZC_jiang_kanghu }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:radical_socialist }
+	}
+
+	# 全華聯合工會 —— frame 9, 18席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_ACU }
+	parliament_gui_ACU = {
+		set_variable = { parliament_gui_frame = 9 }
+		set_variable = { parliament_gui_seats = 18 }
+		set_variable = { parliament_gui_status = 3 }
+		set_variable = { parliament_gui_party = token:parliament_gui_ACU }
+		set_variable = { parliament_gui_chairman = token:SZC_zhang_kechang }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:syndicalist }
+	}
+
+	# 中国国民革新党 —— frame 11, 6席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_RRP }
+	parliament_gui_RRP = {
+		set_variable = { parliament_gui_frame = 11 }
+		set_variable = { parliament_gui_seats = 6 }
+		set_variable = { parliament_gui_status = 3 }
+		set_variable = { parliament_gui_party = token:parliament_gui_RRP }
+		set_variable = { parliament_gui_chairman = token:SZC_zhang_ming }
+		clear_array = parliament_gui_ideologies
+		add_to_array = { parliament_gui_ideologies = token:national_populist }
+	}
+
+	# 無黨籍 —— frame 10, 82席
+	add_to_array = { ROC_party_tokens = token:parliament_gui_IND }
+	parliament_gui_IND = {
+		set_variable = { parliament_gui_frame = 10 }
+		set_variable = { parliament_gui_seats = 82 }
+		set_variable = { parliament_gui_status = 3 }
+		set_variable = { parliament_gui_party = token:parliament_gui_IND }
+		set_variable = { parliament_gui_chairman = token:SZC_ROC_independent_bois }
+		set_variable = { parliament_gui_desc = parliament_gui_IND_desc }
+	}
+	ROC_parliament_parties_num_check = yes
+}
+
+SZC_collab_first_election_check = {
+	if = {
+		limit = {
+			has_country_leader = {
+				character = SZC_zhao_yusong
+			}
+			NOT = {
+				has_completed_focus = SZC_YCP_collab_two_governments_one_sky
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = NKRsichuanCollab.82
+			}
+		}
+	}
 }
