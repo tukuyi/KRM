@@ -3,6 +3,27 @@
 ##############################################################
 
 ROC_register_parties = {
+	for_each_loop = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+        meta_effect = {
+            text = {
+                every_character = {
+                    limit = {
+                        is_character = [party]
+                    }
+					set_variable = { parliament_gui_frame = 0 }
+					set_variable = { parliament_gui_seats = 0 }
+					set_variable = { parliament_gui_status = 0 }
+					set_variable = { parliament_gui_party = 0 }
+					set_variable = { parliament_gui_chairman = 0 }
+					clear_array = parliament_gui_ideologies
+                }
+            }
+            party = "[?roc_cur_token.GetTokenKey]"
+            ideo = "[?cur_ideo.GetTokenKey]"
+        }
+	}
 	clear_array = ROC_party_tokens
 
 	set_variable = { ROC_seats_max = 800 }
