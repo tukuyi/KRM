@@ -2,6 +2,15 @@
 # 中華民國國民大會 — Scripted Effects
 ##############################################################
 
+ROC_party_remove = {
+	set_variable = { parliament_gui_frame = 0 }
+	set_variable = { parliament_gui_seats = 0 }
+	set_variable = { parliament_gui_status = 0 }
+	set_variable = { parliament_gui_party = 0 }
+	set_variable = { parliament_gui_chairman = 0 }
+	clear_array = parliament_gui_ideologies
+}
+
 ROC_register_parties = {
 	for_each_loop = {
 		array = ROC_party_tokens
@@ -12,12 +21,7 @@ ROC_register_parties = {
                     limit = {
                         is_character = [party]
                     }
-					set_variable = { parliament_gui_frame = 0 }
-					set_variable = { parliament_gui_seats = 0 }
-					set_variable = { parliament_gui_status = 0 }
-					set_variable = { parliament_gui_party = 0 }
-					set_variable = { parliament_gui_chairman = 0 }
-					clear_array = parliament_gui_ideologies
+					ROC_party_remove = yes
                 }
             }
             party = "[?roc_cur_token.GetTokenKey]"
