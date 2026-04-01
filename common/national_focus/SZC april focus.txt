@@ -39,7 +39,7 @@ focus_tree = {
 	focus = {
 		id = SZC_YCP_AF_space_marine_coming
 		icon = GFX_goal_SZC_YCP_AF_space_marine_coming
-		cost = 2
+		cost = 4
 
 		x = -1
 		y = 1
@@ -53,4 +53,133 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_space_marine_coming"
 		}
 	}
+
+	focus = {
+		id = SZC_YCP_AF_kongmeng_power
+		icon = GFX_goal_SZC_YCP_AF_kongmeng_power
+		cost = 4
+
+		x = 1
+		y = 1
+		relative_position_id = SZC_YCP_AF_five_colors_stand
+
+		prerequisite = {
+			focus = SZC_YCP_AF_five_colors_stand
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_kongmeng_power"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_AF_expand_threads
+		icon = GFX_goal_SZC_YCP_AF_expand_threads
+		cost = 4
+
+		x = -3
+		y = 1
+		relative_position_id = SZC_YCP_AF_five_colors_stand
+
+		prerequisite = {
+			focus = SZC_YCP_AF_five_colors_stand
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_expand_threads"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_AF_integrate_yulezhisi
+		icon = GFX_goal_SZC_YCP_AF_integrate_yulezhisi
+		cost = 4
+
+		x = 3
+		y = 1
+		relative_position_id = SZC_YCP_AF_five_colors_stand
+
+		prerequisite = {
+			focus = SZC_YCP_AF_five_colors_stand
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_expand_threads"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_AF_everyone_a_ycp
+		icon = GFX_goal_SZC_YCP_AF_everyone_a_ycp
+		cost = 4
+
+		x = -5
+		y = 1
+		relative_position_id = SZC_YCP_AF_five_colors_stand
+
+		prerequisite = {
+			focus = SZC_YCP_AF_five_colors_stand
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_everyone_a_ycp"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_AF_watch_three_kingdoms
+		icon = GFX_goal_SZC_YCP_AF_watch_three_kingdoms
+		cost = 4
+
+		x = 5
+		y = 1
+		relative_position_id = SZC_YCP_AF_five_colors_stand
+
+		prerequisite = {
+			focus = SZC_YCP_AF_five_colors_stand
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_watch_three_kingdoms"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_AF_world_statism
+		icon = GFX_goal_SZC_YCP_AF_world_statism
+		cost = 4
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_YCP_AF_five_colors_stand
+
+		prerequisite = { focus = SZC_YCP_AF_space_marine_coming }
+		prerequisite = { focus = SZC_YCP_AF_kongmeng_power }
+		prerequisite = { focus = SZC_YCP_AF_expand_threads }
+		prerequisite = { focus = SZC_YCP_AF_integrate_yulezhisi }
+		prerequisite = { focus = SZC_YCP_AF_everyone_a_ycp }
+		prerequisite = { focus = SZC_YCP_AF_watch_three_kingdoms }
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_world_statism"
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_AF_a_world_set_five_colors
+		icon = GFX_goal_SZC_YCP_AF_a_world_set_five_colors
+		cost = 4
+
+		x = 0
+		y = 2
+		relative_position_id = SZC_YCP_AF_five_colors_stand
+
+		prerequisite = { focus = SZC_YCP_AF_world_statism }
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_a_world_set_five_colors"
+		}
+	}
+
+
 }

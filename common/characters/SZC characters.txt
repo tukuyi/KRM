@@ -5533,7 +5533,7 @@ characters = {
 
 
 
-	#李家鈺
+	#lizhiyi
 	SZC_li_zhiyi = {
 		name = SZC_li_zhiyi
 		portraits = {
@@ -5550,13 +5550,35 @@ characters = {
 		corps_commander = {
 			desc = SZC_li_zhiyi_desc
 			traits = { member_of_YCP infantry_officer trait_engineer rising_star }
-			skill = 5
+			skill = 4
 			attack_skill = 5
 			defense_skill = 5
 			planning_skill = 5
 			logistics_skill = 5
 			
 		}
+	}
+
+	#tek
+	SZC_tek = {
+		name = SZC_tek
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_tek_large
+				small = GFX_portrait_SZC_tek_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_tek_desc
+			traits = { infantry_officer trait_engineer rising_star }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+			
+		}
+	}
 
 
 
