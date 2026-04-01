@@ -5547,6 +5547,13 @@ characters = {
 			ideology = authoritarian_democrat_five_colors_statist_subtype
 			traits = { CHN_statist_aligned SZC_AF_chuanyuezhe_trait }
 		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_li_zhiyi_sic
+			traits = { KR_diligent_reformer_sic }
+			cost = 0
+			can_be_fired = no
+		}
 		corps_commander = {
 			desc = SZC_li_zhiyi_desc
 			traits = { member_of_YCP infantry_officer trait_engineer rising_star }

@@ -4,7 +4,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 100
+			add = 0
 			# add = 0
 			tag = SZC
 		}
@@ -34,6 +34,9 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_AF_five_colors_stand"
 			custom_effect_tooltip = SZC_YCP_AF_five_colors_stand_tt
 			add_political_power = 114514
+			hidden_effect = {
+				country_event = { id = NKRYCPAF.2 days = 1}
+			}
 		}
 	}
 
@@ -52,6 +55,9 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_space_marine_coming"
+			hidden_effect = {
+				country_event = { id = NKRYCPAF.3 days = 1}
+			}
 			enable_tech_mountain_warfare = yes
 			add_equipment_to_stockpile = {
 				type = support_equipment
@@ -189,6 +195,9 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_kongmeng_power"
 			set_technology = { KMD_kongmeng_giant_tech = 1 popup = no }
 			set_country_flag = KMD_kongmeng_giant_available
+			hidden_effect = {
+				country_event = { id = NKRYCPAF.6 days = 1}
+			}
 			division_template = {
 				name = "孔孟金刚"
 				is_locked = yes
@@ -252,6 +261,9 @@ focus_tree = {
 			add_manpower = 1919810
 			add_ideas = { YCP_AF_threads_idea }
 			add_research_slot = 3
+			hidden_effect = {
+				country_event = { id = NKRYCPAF.4 days = 1}
+			}
 		}
 	}
 
@@ -286,10 +298,6 @@ focus_tree = {
 					}
 				}
 				SZC = {
-					declare_war_on = {
-						target = PREV
-						type = topple_government
-					}
 					add_opinion_modifier = {
 						target = PREV
 						modifier = KMD_heretic
@@ -299,6 +307,9 @@ focus_tree = {
 					target = SZC
 					modifier = KMD_crazy_boi
 				}
+			}
+			hidden_effect = {
+				country_event = { id = NKRYCPAF.7 days = 1}
 			}
 		}
 	}
@@ -323,6 +334,9 @@ focus_tree = {
 				SZC_recruit_character_effect = yes
 			}
 			add_ideas = { YCP_AF_i_in_mod_idea }
+			hidden_effect = {
+				country_event = { id = NKRYCPAF.5 days = 1}
+			}
 		}
 	}
 
@@ -347,6 +361,9 @@ focus_tree = {
 			custom_effect_tooltip = SZC_KMD_fireball_tt
 			set_technology = { KMD_fireball_tech = 1 }
 			custom_effect_tooltip = SZC_KMD_kill_yourself_now_tt
+			hidden_effect = {
+				country_event = { id = NKRYCPAF.28 days = 1}
+			}
 		}
 	}
 
@@ -376,6 +393,9 @@ focus_tree = {
 						type = annex_everything
 					}
 				}
+			}
+			hidden_effect = {
+				country_event = { id = NKRYCPAF.9 days = 1}
 			}
 		}
 	}
@@ -409,6 +429,9 @@ focus_tree = {
 			}
 			every_state = {
 				enable_state_integration_80_compliance = yes
+			}
+			hidden_effect = {
+				country_event = { id = NKRYCPAF.10 days = 1}
 			}
 		}
 	}
