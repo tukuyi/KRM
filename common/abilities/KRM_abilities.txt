@@ -10,7 +10,10 @@ ability = {
 
 		allowed = {
 			OWNER = {
-				has_completed_focus = SZC_KMD_kill_yourself_now
+				OR = {
+					has_completed_focus = SZC_YCP_AF_watch_three_kingdoms
+					has_completed_focus = SZC_KMD_kill_yourself_now
+				}
 			}
 		}
 
@@ -61,7 +64,10 @@ ability = {
 
 		allowed = {
 			OWNER = {
-				has_completed_focus = SZC_KMD_fireball
+				OR = {
+					has_completed_focus = SZC_YCP_AF_watch_three_kingdoms
+					has_completed_focus = SZC_KMD_fireball
+				}
 				has_equipment = {
 					fireball_equipment_1 > 1
 				}

@@ -1,0 +1,56 @@
+##############
+#  KMDBREAK  #
+##############
+
+ideas = {
+	country = {
+		
+
+		YCP_AF_threads_idea = { #海巡！
+			on_add = {log = "[GetLogRoot]: add idea YCP_AF_threads_idea"}
+			allowed = { always = no }
+			picture = YCP_AF_threads_idea
+			modifier = {
+				political_power_gain = -0.05
+				weekly_manpower = 8000
+				authoritarian_democrat_drift = 0.05
+				consumer_goods_factor = -0.2
+				conscription = 0.02
+			}
+		}
+		YCP_AF_i_in_mod_idea = { #我进mod
+			on_add = {log = "[GetLogRoot]: add idea YCP_AF_i_in_mod_idea"}
+			allowed = { always = no }
+			picture = YCP_AF_i_in_mod_idea
+			modifier = {
+				army_attack_factor = 0.5
+				army_defence_factor = 0.5
+			}
+		}
+		YCP_AF_fish_dying_idea = { #鱼乐至死
+			on_add = {log = "[GetLogRoot]: add idea YCP_AF_fish_dying_idea"}
+			allowed = { always = no }
+			picture = YCP_AF_i_in_mod_idea
+			modifier = {
+				research_speed_factor = 2
+				justify_war_goal_time = -0.95
+				opinion_gain_monthly_factor = -100
+				production_factory_max_efficiency_factor = 0.2
+			}
+		}
+		YCP_AF_fuck_white_sun_idea = { #青天白日我草泥马
+			on_add = {log = "[GetLogRoot]: add idea YCP_AF_fuck_white_sun_idea"}
+			allowed = { always = no }
+			picture = YCP_AF_i_in_mod_idea
+			modifier = {
+				army_attack_against_major_factor = 0.3
+				army_breakthrough_against_major_factor = 0.3
+				army_defence_against_major_factor = 0.3
+			}
+		}
+	
+
+	}
+
+}
+

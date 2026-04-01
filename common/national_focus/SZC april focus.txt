@@ -19,7 +19,7 @@ focus_tree = {
 
 	focus = {
 		id = SZC_YCP_AF_five_colors_stand
-		icon = GFX_goal_SZC_AF_five_colors_stand
+		icon = GFX_goal_SZC_YCP_AF_five_colors_stand
 		cost = 1
 
 		x = 1
@@ -32,7 +32,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_AF_five_colors_stand"
-			custom_effect_tooltip = SZC_YCP_AF_five_colors_stand_tooltip
+			custom_effect_tooltip = SZC_YCP_AF_five_colors_stand_tt
+			add_political_power = 114514
 		}
 	}
 
@@ -51,6 +52,123 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_space_marine_coming"
+			enable_tech_mountain_warfare = yes
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 2000
+				producer = SZC
+			}
+			if = {
+				limit = { has_template = "星际战士" }
+				delete_unit_template_and_units = { division_template = "星际战士" disband = yes }
+				#No cheating
+			}
+			division_template = {
+				name = "星际战士" #Temporary name for now lol - Suzu
+				division_names_group = CHYN_MTN_01
+				force_allow_recruiting = yes
+				regiments = {
+					mountaineers = { x = 0 y = 0 }
+					mountaineers = { x = 0 y = 1 }
+					mountaineers = { x = 0 y = 2 }
+					mountaineers = { x = 0 y = 3 }
+					mountaineers = { x = 1 y = 0 }
+					mountaineers = { x = 1 y = 1 }
+					mountaineers = { x = 1 y = 2 }
+					mountaineers = { x = 1 y = 3 }
+				}
+			}
+			custom_effect_tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "星际战士"
+				LINE_1 = { localization_key = line_battalion_tt NAME = mountaineers ICON = GFX_unit_mountaineers_icon_small COUNT = 8 }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					impassable = no
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"星际战士\" division_template = \"星际战士\" start_experience_factor = 1"
+					owner = ROOT
+				}
+			}
 		}
 	}
 
@@ -69,6 +187,48 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_kongmeng_power"
+			set_technology = { KMD_kongmeng_giant_tech = 1 popup = no }
+			set_country_flag = KMD_kongmeng_giant_available
+			division_template = {
+				name = "孔孟金刚"
+				is_locked = yes
+				regiments = {
+				kongmeng_giant = { x = 0 y = 0 }
+				}
+				support = {
+				}
+			}
+			
+			random_owned_controlled_state = {
+				create_unit = {
+				division = "name = \"孔孟金刚原型机\" division_template = \"孔孟金刚\" start_experience_factor = 0.5 start_equipment_factor = 1"
+				owner = ROOT
+				}
+			}
+			hidden_effect = {
+				scoped_play_song = "song_of_guanyu"
+			}
+			tooltip = SZC_KMD_blood_to_kong_skull_to_meng_tt
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"孔孟金刚\" division_template = \"孔孟金刚\" start_experience_factor = 0.5 start_equipment_factor = 1"
+					owner = ROOT
+				}
+			}
+			
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"孔孟金刚\" division_template = \"孔孟金刚\" start_experience_factor = 0.5 start_equipment_factor = 1"
+					owner = ROOT
+				}
+			}
+			
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"孔孟金刚\" division_template = \"孔孟金刚\" start_experience_factor = 0.5 start_equipment_factor = 1"
+					owner = ROOT
+				}
+			}
 		}
 	}
 
@@ -87,6 +247,11 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_expand_threads"
+			add_stability = 0.5
+			add_war_support = 0.5
+			add_manpower = 1919810
+			add_ideas = { YCP_AF_threads_idea }
+			add_research_slot = 3
 		}
 	}
 
@@ -105,6 +270,36 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_expand_threads"
+			SZC_tek = {
+				SZC_recruit_character_effect = yes
+			}
+			SZC_rainspurs = {
+				SZC_recruit_character_effect = yes
+			}
+			add_ideas = {
+				YCP_AF_fish_dying_idea
+			}
+			every_other_country = {
+				limit = {
+					NOT = {
+						is_subject_of = ROOT
+					}
+				}
+				SZC = {
+					declare_war_on = {
+						target = PREV
+						type = topple_government
+					}
+					add_opinion_modifier = {
+						target = PREV
+						modifier = KMD_heretic
+					}
+				}
+				add_opinion_modifier = {
+					target = SZC
+					modifier = KMD_crazy_boi
+				}
+			}
 		}
 	}
 
@@ -123,6 +318,11 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_everyone_a_ycp"
+			custom_effect_tooltip = SZC_YCP_AF_everyone_a_ycp_tt
+			SZC_you_or_me = {
+				SZC_recruit_character_effect = yes
+			}
+			add_ideas = { YCP_AF_i_in_mod_idea }
 		}
 	}
 
@@ -141,6 +341,12 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_watch_three_kingdoms"
+			set_country_flag = SZC_KMD_gods_arrive_available
+			set_temp_variable = { temp_KMD_chouka_add = 114 }
+			KMD_add_chouka_time = yes
+			custom_effect_tooltip = SZC_KMD_fireball_tt
+			set_technology = { KMD_fireball_tech = 1 }
+			custom_effect_tooltip = SZC_KMD_kill_yourself_now_tt
 		}
 	}
 
@@ -162,6 +368,15 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_world_statism"
+			add_ideas = { YCP_AF_fuck_white_sun_idea }
+			every_other_country = {
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
 		}
 	}
 
@@ -171,13 +386,30 @@ focus_tree = {
 		cost = 4
 
 		x = 0
-		y = 2
+		y = 3
 		relative_position_id = SZC_YCP_AF_five_colors_stand
+
+		available = {
+			all_state = {
+				is_owned_and_controlled_by_ROOT_or_subject = yes
+			}
+		}
 
 		prerequisite = { focus = SZC_YCP_AF_world_statism }
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_a_world_set_five_colors"
+			every_other_country = {
+				SZC = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			every_state = {
+				enable_state_integration_80_compliance = yes
+			}
 		}
 	}
 

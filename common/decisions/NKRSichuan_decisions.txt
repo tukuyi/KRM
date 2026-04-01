@@ -3700,6 +3700,33 @@ foreign_politics = {
 		}
 	}
 
+	SZC_YCP_AF_five_colorization = {
+		icon = GFX_decision_global_trade
+
+		allowed = { original_tag = SZC }
+
+		visible = {
+			has_cosmetic_tag = SZC_YCP_AF
+		}
+		target_trigger = {
+			FROM = {
+				is_puppet_of = ROOT
+				NOT = {
+					has_cosmetic_tag = SZC_YCP_AF_puppet
+				}
+			}
+		}
+		ai_will_do = { factor = 50 }
+		cost = 5
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_YCP_AF_five_colorization"
+			FROM = {
+				set_cosmetic_tag = SZC_YCP_AF_puppet	
+			}
+		}
+	}
+
 
 }
 

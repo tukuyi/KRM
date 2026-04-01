@@ -5544,7 +5544,7 @@ characters = {
 		}
 		country_leader = {
 			desc = SZC_li_zhiyi_desc
-			ideology = authoritarian_democrat_statist_subtype
+			ideology = authoritarian_democrat_five_colors_statist_subtype
 			traits = { CHN_statist_aligned SZC_AF_chuanyuezhe_trait }
 		}
 		corps_commander = {
@@ -5570,6 +5570,48 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_tek_desc
+			traits = { infantry_officer trait_engineer rising_star }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+			
+		}
+	}
+
+	#youorme
+	SZC_you_or_me = {
+		name = SZC_you_or_me
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_you_or_me_large
+				small = GFX_portrait_SZC_you_or_me_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_you_or_me_desc
+			traits = { infantry_officer trait_engineer rising_star }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+			
+		}
+	}
+
+	#youorme
+	SZC_rainspurs = {
+		name = SZC_rainspurs
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_rainspurs_large
+				small = GFX_portrait_SZC_rainspurs_small
+			}
+		}
+		corps_commander = {
+			desc = SZC_rainspurs_desc
 			traits = { infantry_officer trait_engineer rising_star }
 			skill = 3
 			attack_skill = 4
