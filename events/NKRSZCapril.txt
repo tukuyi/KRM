@@ -1,0 +1,137 @@
+########3CSPCSPCSP##############
+add_namespace = NKRYCPAF
+
+
+country_event = {#五色旗运动崛起！
+	id = NKRYCPAF.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRYCPAF.1" }
+	title = NKRYCPAF.1.t
+	desc = NKRYCPAF.1.d
+	picture = GFX_report_event_SZC_YCP
+
+	is_triggered_only = yes
+
+	option = {#
+		name = NKRYCPAF.1.a
+		set_cosmetic_tag = SZC_YCP_AF
+		SZC_li_zhiyi = {
+			SZC_recruit_character_effect = yes
+			promote_character = authoritarian_democrat_statist_subtype
+		}
+		add_political_power = 100
+		SZC_zeng_qi = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_li_huang = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zuo_shunsheng = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_chen_qitian = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zhang_bolun = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_xia_taosheng = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_jiang_yungang = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_chang_yansheng = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_he_luzhi = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_li_buwei = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zhang_zizhu = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_wei_shizhen = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zheng_zhenwen = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_li_buwei = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_liu_siying = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_duan_zhenhuan = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_wang_shizeng = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_yu_jiaju = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_hu_fuxian = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_wei_shizhen = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zheng_zhenwen = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_hu_guowei = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_liu_siying = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_yu_fuxian = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zhang_baoen = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_duan_zhenhuan = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zhang_mengjiu = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_liao_haitao = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_liu_pengjiu = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_wang_lanseng = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_weng_zhaoyuan = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_miao_kexiu = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_liang_sizhong = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_zhu_wenbo = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_wu_lvxun = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_niu_xianming = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_sun_yuanliang = {
+			SZC_recruit_character_effect = yes
+		}
+		SZC_xie_ruchuan = {
+			SZC_recruit_character_effect = yes
+		}
+	}
+}

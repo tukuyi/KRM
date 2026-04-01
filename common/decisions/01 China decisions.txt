@@ -1499,6 +1499,14 @@ chinese_unification = {
 			if = {
 				limit = {
 					tag = SZC
+					has_cosmetic_tag = SZC_AF
+				}
+				always = yes
+			}
+
+			if = {
+				limit = {
+					tag = SZC
 					has_country_flag = NKRsichuan_YCPpath
 				}
 				hidden_trigger = {
@@ -2110,6 +2118,14 @@ chinese_unification = {
 						news_event = china_events.314
 						country_event = { id = china_events.2145 days = 3 } #National Unification and New Troubles
 					}
+				}
+				else_if = {
+					limit = {
+						has_cosmetic_tag = SZC_AF
+					}
+					activate_targeted_decision = { decision = china_move_capital target = ROOT }
+					china_enable_concession_decisions = yes
+					china_enable_outskirts_decisions = yes
 				}
 				else_if = {
 					limit = {

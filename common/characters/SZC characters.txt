@@ -5533,6 +5533,30 @@ characters = {
 
 
 
+	#李家鈺
+	SZC_li_zhiyi = {
+		name = SZC_li_zhiyi
+		portraits = {
+			army = {
+				large = GFX_portrait_SZC_li_zhiyi_large
+				small = GFX_portrait_SZC_li_zhiyi_small
+			}
+		}
+		country_leader = {
+			desc = SZC_li_zhiyi_desc
+			ideology = authoritarian_democrat_statist_subtype
+			traits = { CHN_statist_aligned SZC_AF_chuanyuezhe_trait }
+		}
+		corps_commander = {
+			desc = SZC_li_zhiyi_desc
+			traits = { member_of_YCP infantry_officer trait_engineer rising_star }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			
+		}
 
 
 

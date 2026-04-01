@@ -1,0 +1,56 @@
+
+focus_tree = {
+	id = Sichuan_YCP_AF
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			# add = 0
+			tag = SZC
+		}
+	}
+
+
+
+	default = no
+	continuous_focus_position = { x = 4350 y = 2250 }
+
+	shared_focus = SZC_Chengdu_Chongqing_Railway
+
+	focus = {
+		id = SZC_YCP_AF_five_colors_stand
+		icon = GFX_goal_SZC_AF_five_colors_stand
+		cost = 1
+
+		x = 1
+		y = 0
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_AF_five_colors_stand"
+			custom_effect_tooltip = SZC_YCP_AF_five_colors_stand_tooltip
+		}
+	}
+
+	focus = {
+		id = SZC_YCP_AF_space_marine_coming
+		icon = GFX_goal_SZC_YCP_AF_space_marine_coming
+		cost = 2
+
+		x = -1
+		y = 1
+		relative_position_id = SZC_YCP_AF_five_colors_stand
+
+		prerequisite = {
+			focus = SZC_YCP_AF_five_colors_stand
+		}
+		
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed SZC_YCP_AF_space_marine_coming"
+		}
+	}
+}

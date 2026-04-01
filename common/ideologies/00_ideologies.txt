@@ -14,7 +14,7 @@ ideologies = {
 			totalist_kleptocracy_subtype = { can_be_randomly_selected = no }#极权强盗政府
 			totalist_sorelian_marketist_subtype = { can_be_randomly_selected = no }#市场索雷尔主义
 		}
-		color = { 119 15 0 }
+		color = { 227 6 19 }
 
 		## Rules (identical for each ideology)
 		rules = {
@@ -50,7 +50,7 @@ ideologies = {
 			syndicalist_anarcho_tridemist_subtype = { can_be_randomly_selected = no }#无政府三民主义
 			syndicalist_anarcho_communist_subtype = { can_be_randomly_selected = no }#无政府共产主义
 		}
-		color = { 227 6 19 }
+		color = { 234 81 83 }
 
 		## Rules (identical for each ideology)
 		rules = {
@@ -88,7 +88,7 @@ ideologies = {
 			radical_socialist_marxist_statist_subtype = { can_be_randomly_selected = no }#马克思国家主义
 			radical_socialist_neosocialist_subtype = { can_be_randomly_selected = no }#新社会主义
 		}
-		color = { 234 81 83 }
+		color = { 119 15 0 }
 
 		## Rules (identical for each ideology)
 		rules = {
@@ -125,7 +125,7 @@ ideologies = {
 			social_democrat_centrist_marxist_subtype = { can_be_randomly_selected = no }#中间马克思主义
 			social_democrat_new_legalist_state_socialist_subtype = { can_be_randomly_selected = no }#新法家国家社会主义
 		}
-		color = { 199 23 72 }
+		color = { 0 85 255 }
 
 		## Rules (identical for each ideology)
 		rules = {
@@ -159,14 +159,14 @@ ideologies = {
 			social_liberal_constitutional_statist_subtype = { can_be_randomly_selected = no }#宪政国家主义
 			social_liberal_liberal_technocracy_subtype = { can_be_randomly_selected = no }#自由技官主义
 		}
-		color = { 239 125 0 }
+		color = { 255 216 0 }
 
 		## Rules (identical for each ideology)
 		rules = {
 			can_force_government = yes
-			can_puppet = no
-			can_join_factions = no
-			can_create_factions = no
+			can_puppet = yes
+			can_join_factions = yes
+			can_create_factions = yes
 			can_send_volunteers = yes
 		}
 		war_impact_on_world_tension = 1
@@ -179,8 +179,9 @@ ideologies = {
 			army_intel_to_others = 5.0
 			navy_intel_to_others = 20.0
 			airforce_intel_to_others = 5
+			conscription_factor = 2 # af
 		}
-		ai_fascist = yes
+		ai_democratic = yes
 		ai_ideology_wanted_units_factor = 1.5
 		ai_give_core_state_control_threshold = 0 # Extra threshold value added to DIPLOMATIC_ACTION_PROPOSE_SCORE for this ideology to give back core state control to other country
 	}
@@ -191,7 +192,7 @@ ideologies = {
 			market_liberal_clientelist_subtype = { can_be_randomly_selected = no }#庇护主义
 			market_liberal_scheme_statist_subtype = { can_be_randomly_selected = no }#传销国家主义
 		}
-		color = { 255 237 0 }
+		color = { 255 170 0 }
 
 		## Rules (identical for each ideology)
 		rules = {
@@ -225,7 +226,7 @@ ideologies = {
 			social_conservative_orthodox_tridemist_subtype = { can_be_randomly_selected = no }#正统三民主义
 			social_conservative_national_conservative_subtype = { can_be_randomly_selected = no }#民族保守主义
 		}
-		color = { 0 93 149 }
+		color = { 0 0 255 }
 
 		## Rules (identical for each ideology)
 		rules = {
@@ -339,7 +340,7 @@ ideologies = {
 			national_populist_nationalsozialismus_subtype = { can_be_randomly_selected = no }#新民族社会主义
 			national_populist_klansmanist_subtype = { can_be_randomly_selected = no }#三K民族主义
 		}
-		color = { 0 83 33 }
+		color = { 226 17 239 }
 
 		## Rules (identical for each ideology)
 		rules = {

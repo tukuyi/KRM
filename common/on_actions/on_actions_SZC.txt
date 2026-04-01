@@ -49,6 +49,15 @@ on_actions = {
 					country_event = { id = NKRsichuan.466 days = 7 } #北京已入我手
 				}
 			}
+			if = {
+				limit = {
+					is_puppet_of = SZC
+					SZC = {
+						has_cosmetic_tag = SZC_YCP_AF
+					}
+				}
+				set_cosmetic_tag = SZC_YCP_AF_puppet
+			}
 		}
 	}
 
