@@ -2121,11 +2121,12 @@ chinese_unification = {
 				}
 				else_if = {
 					limit = {
-						has_cosmetic_tag = SZC_AF
+						has_country_leader = { character = SZC_li_zhiyi }
 					}
 					activate_targeted_decision = { decision = china_move_capital target = ROOT }
 					china_enable_concession_decisions = yes
 					china_enable_outskirts_decisions = yes
+					set_cosmetic_tag = SZC_YCP_AF
 				}
 				else_if = {
 					limit = {
