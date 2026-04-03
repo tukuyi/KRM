@@ -1,5 +1,7 @@
 ########3CSPCSPCSP##############
  add_namespace = NKRsichuanCollab
+ add_namespace = NKRsichuanCollabPolitics
+ add_namespace = NKRsichuanCollabFlavour
  add_namespace = NKRsichuanCollabDEBUG
 
 
@@ -1129,6 +1131,9 @@ country_event = { #宁京对峙
 		hidden_effect = {
 			country_event = { id = NKRsichuanCollab.51 days = 3 }
 		}
+		CHN_setup_economic_devastation_normal_effect = yes
+		CHN_setup_military_disarray_normal_effect = yes
+		CHN_setup_national_illiteracy_effect = yes
 	}
 }
 

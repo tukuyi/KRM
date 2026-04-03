@@ -63,5 +63,15 @@ technologies = {
 		research_cost = 1
 	}
 
+	YCP_collab_banzai_tech = {
+		allow = {
+			always = no
+		}
+
+		enable_tactic = tactic_banzai_charge
+
+		research_cost = 1
+	}
+
 
 }

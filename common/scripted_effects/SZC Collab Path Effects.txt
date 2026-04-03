@@ -688,3 +688,15 @@ SZC_collab_first_election_check = {
 		}
 	}
 }
+
+
+enable_tech_YCP_collab_banzai_tech = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|YCP_collab_banzai_tech
+			EFFECT = tech_effect|YCP_collab_banzai_tech
+		}
+		set_technology = { YCP_collab_banzai_tech = 1 popup = no }
+	}
+}
