@@ -689,14 +689,28 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_japanese_young_turks_help"
-			#young turks generals add
+			hidden_effect = {
+				JAP_hiroshi_nemoto = { SZC_recruit_character_effect = yes }
+				JAP_wachi_takaji = { SZC_recruit_character_effect = yes }
+				JAP_ando_teruzo = { SZC_recruit_character_effect = yes }
+				JAP_koda_kiyosada = { SZC_recruit_character_effect = yes }
+				JAP_haruke_yoshitane = { SZC_recruit_character_effect = yes }
+			}
 			custom_effect_tooltip = SZC_YCP_collab_japanese_young_turks_help_tt
+			custom_effect_tooltip = tooltip_white_line
 			add_mastery_bonus = {
 				bonus = 0.75
 				days = 90
 				name = SZC_YCP_collab_japanese_young_turks_help
 				folder = land
 			}
+			custom_effect_tooltip = tooltip_white_line
+			JAP_hiroshi_nemoto = { custom_effect_tooltip = character_becomes_a_general }
+			JAP_wachi_takaji = { custom_effect_tooltip = character_becomes_a_general }
+			JAP_haruke_yoshitane = { custom_effect_tooltip = character_becomes_a_general }
+			JAP_ando_teruzo = { custom_effect_tooltip = character_becomes_a_general }
+			JAP_koda_kiyosada = { custom_effect_tooltip = character_becomes_a_general }
+			custom_effect_tooltip = tooltip_white_line
 			enable_tech_YCP_collab_banzai_tech = yes
 			hidden_effect = {
 				country_event = { id = NKRsichuanCollab.92 days = 1 }

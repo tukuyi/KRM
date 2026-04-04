@@ -482,6 +482,15 @@ characters = {
 				large = GFX_portrait_JAP_hiroshi_nemoto_large
 			}
 		}
+		corps_commander = {
+			desc = JAP_hiroshi_nemoto_desc
+			traits = { inflexible_strategist organizer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
 	}
 	#和知鹰二
 	JAP_wachi_takaji = {
@@ -491,6 +500,15 @@ characters = {
 				small = GFX_portrait_JAP_wachi_takaji_small
 				large = GFX_portrait_JAP_wachi_takaji_large
 			}
+		}
+		corps_commander = {
+			desc = JAP_wachi_takaji_desc
+			traits = { politically_connected trickster }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
 		}
 	}
 	#影佐祯昭
@@ -512,6 +530,15 @@ characters = {
 				large = GFX_portrait_JAP_ando_teruzo_large
 			}
 		}
+		corps_commander = {
+			desc = JAP_ando_teruzo_desc
+			traits = { infantry_leader reckless }
+			skill = 1
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
 	}
 	#香田清贞
 	JAP_koda_kiyosada = {
@@ -522,6 +549,15 @@ characters = {
 				large = GFX_portrait_JAP_koda_kiyosada_large
 			}
 		}
+		corps_commander = {
+			desc = JAP_koda_kiyosada_desc
+			traits = { infantry_leader harsh_leader }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
 	}
 	#晴气庆胤
 	JAP_haruke_yoshitane = {
@@ -531,6 +567,15 @@ characters = {
 				small = GFX_portrait_JAP_haruke_yoshitane_small
 				large = GFX_portrait_JAP_haruke_yoshitane_large
 			}
+		}
+		corps_commander = {
+			desc = JAP_haruke_yoshitane_desc
+			traits = { commando fast_planner }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
 		}
 	}
 
