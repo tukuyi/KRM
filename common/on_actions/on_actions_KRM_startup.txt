@@ -29,6 +29,13 @@ on_actions = {
 					retire = yes
 				}
 			}
+			SZC = {
+			  set_variable = { SZC_nccf_factory_interval = 120 }
+			  set_variable = { SZC_nccf_construction_min = 0.10 }
+			  set_variable = { SZC_nccf_construction_max = 0.40 }
+			  set_variable = { SZC_nccf_mil_chance = 50 }
+			  set_variable = { SZC_nccf_civ_chance = 50 }
+			}
 		}
 	}
 

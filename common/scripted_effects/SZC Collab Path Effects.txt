@@ -700,3 +700,43 @@ enable_tech_YCP_collab_banzai_tech = {
 		set_technology = { YCP_collab_banzai_tech = 1 popup = no }
 	}
 }
+
+SZC_collab_nccf_build_factory = {
+	random_owned_controlled_state = {
+		limit = {
+			is_core_of = SZC
+			free_building_slots = {
+				building = arms_factory
+				size > 0
+				include_locked = yes
+			}
+			NOT = { has_state_flag = SZC_collab_nccf_recent_build }
+		}
+		if = {
+			limit = {
+				check_variable = { SZC_collab_nccf_mil_chance > SZC_collab_nccf_civ_chance }
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 0.5
+			}
+		}
+		else = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.5
+			}
+		}
+		set_state_flag = { flag = SZC_collab_nccf_recent_build days = 60 }
+	}
+}

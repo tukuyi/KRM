@@ -1,0 +1,349 @@
+
+SZC_collab_nccf_organisation = {
+	name = SZC_collab_nccf_name
+	icon = GFX_idea_SZC_collab_nccf
+
+	allowed = {
+		original_tag = SZC
+	}
+
+	available = {
+		FROM = {
+			# owns_state = 524  # 南京
+		}
+	}
+
+	equipment_type = {
+		armor
+		small_plane_airframe
+		medium_plane_airframe
+		large_plane_airframe
+		cv_small_plane_airframe
+	}
+
+	research_categories = {
+		mio_cat_tech_all_armor_and_modules
+		mio_cat_all_light_aircraft_and_modules
+		mio_cat_all_medium_aircraft_and_modules
+		mio_cat_all_heavy_aircraft_and_modules
+		plane_modules_tech
+	}
+
+	on_industrial_manufacturer_assigned = {
+		if = {
+			limit = { FROM = { has_country_flag = SZC_collab_nccf_civ_active } }
+			custom_effect_tooltip = SZC_collab_nccf_factory_active_tt
+		}
+		else = {
+			custom_effect_tooltip = {
+				localization_key = KR_mio_has_completed_trait_NOT
+				TRAIT = SZC_collab_MIO_Trait_nccf_civ_1
+			}
+		}
+	}
+
+	ai_will_do = { base = 10 }
+
+	initial_trait = {
+		name = SZC_collab_nccf_mio_desc
+
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.25
+		}
+	}
+
+	# -------------------------------------------------------
+	# Y=0  总枢纽
+	# -------------------------------------------------------
+
+	trait = {
+		token = nccf_registry
+		name = SZC_collab_MIO_Trait_nccf_registry
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x = 4 y = 0 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+			production_efficiency_gain_factor = 0.03
+		}
+	}
+
+	# -------------------------------------------------------
+	# 军需统制令
+	# -------------------------------------------------------
+
+	trait = {
+		token = nccf_mil_1
+		name = SZC_collab_MIO_Trait_nccf_mil_1
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		all_parents = { nccf_registry }
+
+		position = { x = 1 y = 1 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.04
+			production_efficiency_gain_factor = 0.02
+		}
+	}
+
+	trait = {
+		token = nccf_mil_2
+		name = SZC_collab_MIO_Trait_nccf_mil_2
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		all_parents = { nccf_mil_1 }
+
+		position = { x = 0 y = 2 }
+
+		mutually_exclusive = { nccf_mil_3 }
+
+		equipment_bonus = {
+			build_cost_ic = -0.06
+			armor_value = 0.05
+		}
+	}
+
+	trait = {
+		token = nccf_mil_3
+		name = SZC_collab_MIO_Trait_nccf_mil_3
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		all_parents = { nccf_mil_1 }
+
+		position = { x = 2 y = 2 }
+
+		mutually_exclusive = { nccf_mil_2 }
+
+		equipment_bonus = {
+			maximum_speed = 0.10
+			air_agility = 0.05
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.04
+		}
+	}
+
+	trait = {
+		token = nccf_mil_4
+		name = SZC_collab_MIO_Trait_nccf_mil_4
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		any_parent = { nccf_mil_2 nccf_mil_3 }
+
+		position = { x = 1 y = 3 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = 0.04
+		}
+	}
+
+	# -------------------------------------------------------
+	# 民业统制令
+	# -------------------------------------------------------
+
+	trait = {
+		token = nccf_civ_1
+		name = SZC_collab_MIO_Trait_nccf_civ_1
+		icon = GFX_KR_generic_mio_trait_icon_civilian_factory
+
+		all_parents = { nccf_registry }
+
+		position = { x = 4 y = 1 }
+
+		on_complete = {
+			custom_effect_tooltip = SZC_collab_nccf_factory_active_tt
+			FROM = {
+				set_country_flag = SZC_collab_nccf_civ_active
+				hidden_effect = {
+					country_event = { id = SZC_collab_events.2001 days = 120 }
+				}
+			}
+		}
+	}
+
+	trait = {
+		token = nccf_civ_2
+		name = SZC_collab_MIO_Trait_nccf_civ_2
+		icon = GFX_icon_gamayun_civ_chance
+
+		all_parents = { nccf_civ_1 }
+
+		position = { x = 3 y = 2 }
+
+		mutually_exclusive = { nccf_civ_3 }
+
+		on_complete = {
+			add_to_variable = { SZC_collab_nccf_civ_chance = 30 }
+			subtract_from_variable = { SZC_collab_nccf_mil_chance = 30 }
+			custom_effect_tooltip = SZC_collab_nccf_civ_bias_tt
+		}
+	}
+
+	trait = {
+		token = nccf_civ_3
+		name = SZC_collab_MIO_Trait_nccf_civ_3
+		icon = GFX_KR_generic_mio_trait_icon_military_factory
+
+		all_parents = { nccf_civ_1 }
+
+		position = { x = 5 y = 2 }
+
+		mutually_exclusive = { nccf_civ_2 }
+
+		on_complete = {
+			add_to_variable = { SZC_collab_nccf_mil_chance = 30 }
+			subtract_from_variable = { SZC_collab_nccf_civ_chance = 30 }
+			custom_effect_tooltip = SZC_collab_nccf_mil_bias_tt
+		}
+	}
+
+	trait = {
+		token = nccf_civ_4
+		name = SZC_collab_MIO_Trait_nccf_civ_4
+		icon = GFX_generic_mio_department_icon_facilities
+
+		any_parent = { nccf_civ_2 nccf_civ_3 }
+
+		position = { x = 4 y = 3 }
+
+		on_complete = {
+			subtract_from_variable = { SZC_collab_nccf_factory_interval = 30 }
+			add_to_variable = { SZC_collab_nccf_construction_min = 0.10 }
+			add_to_variable = { SZC_collab_nccf_construction_max = 0.10 }
+			custom_effect_tooltip = SZC_collab_nccf_interval_tt
+		}
+	}
+
+	# -------------------------------------------------------
+	# 金融统制令
+	# -------------------------------------------------------
+
+	trait = {
+		token = nccf_fin_1
+		name = SZC_collab_MIO_Trait_nccf_fin_1
+		icon = GFX_KR_generic_mio_trait_icon_funds
+
+		all_parents = { nccf_registry }
+
+		position = { x = 7 y = 1 }
+
+		on_complete = {
+			FROM = { add_political_power = 15 }
+		}
+	}
+
+	trait = {
+		token = nccf_fin_2
+		name = SZC_collab_MIO_Trait_nccf_fin_2
+		icon = GFX_KR_generic_mio_trait_icon_funds
+
+		all_parents = { nccf_fin_1 }
+
+		position = { x = 6 y = 2 }
+
+		mutually_exclusive = { nccf_fin_3 }
+
+		on_complete = {
+			FROM = {
+				add_political_power = 15
+				add_tech_bonus = {
+					name = SZC_collab_nccf_fin_2_bonus
+					bonus = 0.75
+					uses = 2
+					category = mio_cat_tech_all_armor_and_modules
+				}
+			}
+		}
+	}
+
+	trait = {
+		token = nccf_fin_3
+		name = SZC_collab_MIO_Trait_nccf_fin_3
+		icon = GFX_KR_generic_mio_trait_icon_funds
+
+		all_parents = { nccf_fin_1 }
+
+		position = { x = 8 y = 2 }
+
+		mutually_exclusive = { nccf_fin_2 }
+
+		on_complete = {
+			FROM = { add_political_power = 15 }
+		}
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+			production_resource_need_factor = -0.06
+		}
+	}
+
+	trait = {
+		token = nccf_fin_4
+		name = SZC_collab_MIO_Trait_nccf_fin_4
+		icon = GFX_KR_generic_mio_trait_icon_funds
+
+		any_parent = { nccf_fin_2 nccf_fin_3 }
+
+		position = { x = 7 y = 3 }
+
+		on_complete = {
+			FROM = {
+				add_political_power = 15
+				add_tech_bonus = {
+					name = SZC_collab_nccf_fin_4_bonus
+					bonus = 0.75
+					uses = 2
+					category = mio_cat_all_light_aircraft_and_modules
+				}
+			}
+		}
+	}
+
+	# -------------------------------------------------------
+	# 总统制令
+	# -------------------------------------------------------
+
+	trait = {
+		token = nccf_grand_order
+		name = SZC_collab_MIO_Trait_nccf_grand_order
+		icon = GFX_generic_mio_department_icon_management
+
+		any_parent = { nccf_mil_2 nccf_mil_3 nccf_mil_4 }
+		any_parent = { nccf_civ_2 nccf_civ_3 nccf_civ_4 }
+		any_parent = { nccf_fin_2 nccf_fin_3 nccf_fin_4 }
+
+		special_trait_background = yes
+
+		position = { x = 4 y = 4 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = 0.05
+		}
+
+		on_complete = {
+			FROM = {
+				add_political_power = 20
+				random_owned_controlled_state = {
+					limit = {
+						OR = {
+							state = 524  # 南京
+							state = 531  # 上海
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			custom_effect_tooltip = SZC_collab_nccf_grand_order_tt
+		}
+	}
+}

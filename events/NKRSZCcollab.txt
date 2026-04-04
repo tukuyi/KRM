@@ -2,6 +2,7 @@
  add_namespace = NKRsichuanCollab
  add_namespace = NKRsichuanCollabPolitics
  add_namespace = NKRsichuanCollabFlavour
+ add_namespace = NKRsichuanCollabMIO
  add_namespace = NKRsichuanCollabDEBUG
 
 
@@ -2031,3 +2032,23 @@ country_event = {#
    	}
 }
 
+
+
+
+country_event = {
+	id = NKRsichuanCollabMIO.2001
+	hidden = yes
+
+	trigger = {
+		has_country_flag = SZC_collab_nccf_civ_active
+		is_mio_assigned_to_task = {
+			mio = SZC_collab_nccf_organisation
+			task = industrial_manufacturer
+		}
+	}
+
+	immediate = {
+		SZC_nccf_build_factory = yes
+		country_event = { id = NKRsichuanCollabMIO.2001 days = 120 }
+	}
+}
