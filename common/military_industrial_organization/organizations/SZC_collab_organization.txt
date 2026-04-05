@@ -347,3 +347,120 @@ SZC_collab_nccf_organisation = {
 		}
 	}
 }
+
+
+###################
+### Armour MIOs ###
+###################
+SZC_collab_mitsubishi_heavy_industries_organisation = {
+	include = generic_tank_organization
+	name = mitsubishi_heavy_industries
+	icon = GFX_idea_mitsubishi
+	allowed = {
+		original_tag = SZC
+	}
+	available = {
+		FROM = { has_completed_focus = SZC_YCP_collab_zaibatsu_rush }
+	}
+	visible = {
+		# SZC_collab_JAP_hostile = no
+	}
+	on_design_team_assigned_to_tech = {
+		JAP = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		JAP = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		JAP = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		JAP = { add_cic = 500 }
+	}
+}
+
+##################
+### Naval MIOs ###
+##################
+SZC_collab_sasebo_naval_arsenal_organisation = {
+	include = generic_escort_ship_organization
+	name = sasebo_naval_arsenal
+	icon = GFX_idea_sasebo_naval_arsenal
+	allowed = {
+		original_tag = SZC
+	}
+	available = {
+		FROM = { has_completed_focus = SZC_YCP_collab_zaibatsu_rush }
+	}
+	visible = {
+		# SZC_collab_JAP_hostile = no
+	}
+	on_design_team_assigned_to_tech = {
+		JAP = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		JAP = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		JAP = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		JAP = { add_cic = 500 }
+	}
+}
+SZC_collab_kure_naval_arsenal_organisation = {
+	include = generic_task_force_ship_organization
+	name = kure_naval_arsenal
+	icon = GFX_idea_kure_naval_arsenal
+	allowed = {
+		original_tag = SZC
+	}
+	available = {
+		FROM = { has_completed_focus = SZC_YCP_collab_zaibatsu_rush }
+	}
+	visible = {
+		# SZC_collab_JAP_hostile = no
+	}
+	on_design_team_assigned_to_tech = {
+		JAP = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		JAP = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		JAP = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		JAP = { add_cic = 500 }
+	}
+}
+
+#####################
+### Airplane MIOs ###
+#####################
+SZC_collab_tachikawa_organisation = {
+	include = generic_general_aircraft_organization
+	name = tachikawa
+	icon = GFX_idea_tachikawa
+	allowed = {
+		original_tag = SZC
+	}
+	available = {
+		FROM = { has_completed_focus = SZC_YCP_collab_zaibatsu_rush }
+	}
+	visible = {
+		# SZC_collab_JAP_hostile = no
+	}
+	on_design_team_assigned_to_tech = {
+		JAP = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		JAP = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		JAP = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		JAP = { add_cic = 500 }
+	}
+}

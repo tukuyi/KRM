@@ -587,7 +587,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_restore_shikan_glory"
 			add_mastery_bonus = {
 				name = SZC_YCP_collab_restore_shikan_glory
-				bonus = 0.25
+				bonus = 0.15
 				days = 730
 				folder = land
 			}
@@ -746,7 +746,20 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_reduce_warlordism"
-			
+			add_political_power = -75
+			add_stability = -0.05
+			if = {
+				limit = { check_variable = { CHN_military_disarray_fixes_needed_var > 0 } }
+				subtract_from_variable = { CHN_military_disarray_fixes_needed_var = 1 }
+				CHN_improve_military_disarray_effect = yes
+			}
+			every_unit_leader = {
+				limit = { has_trait = politically_connected }
+				add_timed_unit_leader_trait = {
+					trait = disgruntled
+					days = 60
+				}
+			}
 		}
 	}
 
@@ -765,7 +778,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_new_officers_standard"
-			
+			army_experience = 25
 		}
 	}
 
@@ -785,7 +798,9 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_pan_asianist_education"
-			
+			remove_ideas = CHN_national_illiteracy1_idea
+			custom_effect_tooltip = tooltip_white_line
+			add_research_slot = 1
 		}
 	}
 
@@ -805,7 +820,15 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_zaibatsu_rush"
-			
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = SZC_collab_mitsubishi_heavy_industries_organisation
+			show_mio_tooltip = SZC_collab_sasebo_naval_arsenal_organisation
+			show_mio_tooltip = SZC_collab_kure_naval_arsenal_organisation
+			show_mio_tooltip = SZC_collab_tachikawa_organisation
+			mio:SZC_collab_mitsubishi_heavy_industries_organisation = { add_mio_size = 2 }
+			mio:SZC_collab_sasebo_naval_arsenal_organisation = { add_mio_size = 2 }
+			mio:SZC_collab_kure_naval_arsenal_organisation = { add_mio_size = 2 }
+			mio:SZC_collab_tachikawa_organisation = { add_mio_size = 2 }
 		}
 	}
 
@@ -824,7 +847,10 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_towards_military_industrial_complex"
-			
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
 		}
 	}
 
@@ -876,7 +902,9 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_NCCA"
-			
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = SZC_collab_nccf_organisation
+			mio:SZC_collab_nccf_organisation = { add_mio_size = 2 }
 		}
 	}
 
@@ -896,6 +924,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_NCCA"
 			
+			add_tech_bonus = {
+				bonus = 1.75
+				uses = 2
+				category = armor
+				name = SZC_YCP_collab_armor_and_mechanized
+			}
 		}
 	}
 
@@ -907,6 +941,10 @@ focus_tree = {
 		x = 0
 		y = 4
 		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
+
+		available = {
+			has_completed_focus = SZC_YCP_collab_reduce_warlordism
+		}
 
 		mutually_exclusive = {
 			focus = SZC_YCP_collab_share_with_friends
@@ -956,6 +994,12 @@ focus_tree = {
 		y = 4
 		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
 
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_collab_NCCA
 			focus = SZC_YCP_collab_expand_japanese_investment
@@ -963,7 +1007,18 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_to_the_ocean"
+			if = {
+				limit = {
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
 			
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+				add_one_random_dockyard = yes
+			}
 		}
 	}
 
