@@ -591,7 +591,9 @@ focus_tree = {
 				days = 730
 				folder = land
 			}
-			#army trait unlock
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = YCP_collab_new_shikan_clique_theorist
 			hidden_effect = {
 				country_event = { id = NKRsichuanCollab.85 days = 1 }
 			}

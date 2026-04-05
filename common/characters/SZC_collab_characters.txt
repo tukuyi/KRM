@@ -579,4 +579,23 @@ characters = {
 		}
 	}
 
+	#新士官派
+	YCP_collab_new_shikan_clique = {
+		name = YCP_collab_new_shikan_clique
+		portraits = {
+			army = {
+				small = GFX_idea_YCP_collab_new_shikan_clique
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = YCP_collab_new_shikan_clique_theorist	
+			ledger = army
+			# available = {YCP_collab_new_shikan_clique
+			traits = { YCP_collab_new_shikan_clique_trait }
+			cost = 150
+		}
+	}
+
+}
 }
