@@ -592,6 +592,17 @@ focus_tree = {
 				folder = land
 			}
 			custom_effect_tooltip = tooltip_white_line
+			hidden_effect = {
+				SZC_chen_ping = { SZC_recruit_character_effect = yes }
+				SZC_ji_shixian = { SZC_recruit_character_effect = yes }
+				SZC_yang_yuchun = { SZC_recruit_character_effect = yes }
+				SZC_wang_qixin = { SZC_recruit_character_effect = yes }
+			}
+			SZC_chen_ping = { custom_effect_tooltip = character_becomes_a_general }
+			SZC_ji_shixian = { custom_effect_tooltip = character_becomes_a_general }
+			SZC_yang_yuchun = { custom_effect_tooltip = character_becomes_a_general }
+			SZC_wang_qixin = { custom_effect_tooltip = character_becomes_a_general }
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = YCP_collab_new_shikan_clique_theorist
 			hidden_effect = {
