@@ -740,3 +740,63 @@ SZC_collab_nccf_build_factory = {
 		set_state_flag = { flag = SZC_collab_nccf_recent_build days = 60 }
 	}
 }
+
+SZC_collab_KDH_setup = {
+	create_dynamic_country = { #Kodoha
+		original_tag = JAP
+		set_cosmetic_tag = JAP_KDH_nanking
+		save_global_event_target_as = JAP_KDH
+		reserve_dynamic_country = yes
+		load_focus_tree = generic_focus
+		SZC = {
+			613 = {
+				transfer_state_to = PREV.PREV
+			}
+			JAP_ando_teruzo = {
+				set_nationality = PREV.PREV
+			}
+			JAP_koda_kiyosada = {
+				set_nationality = PREV.PREV
+			}
+			JAP_wachi_takaji = {
+				set_nationality = PREV.PREV
+			}
+		}
+		JAP_ando_teruzo = {
+			promote_character = national_populist_kodoist_subtype
+			set_portraits = {
+				civilian = {
+					large = GFX_portrait_JAP_ando_teruzo_ishin_large
+				}
+			}
+		}
+		every_state = {
+			remove_core_of = PREV
+		}
+		set_politics = {
+			ruling_party = national_populist
+		}
+		set_party_name = {
+			ideology = national_populist
+			name = JAP_KDH_nanking_party
+			long_name = JAP_KDH_nanking_party_long
+		}
+		set_capital = {
+			state = 613
+			remember_old_capital = no
+		}
+		set_popularities = {
+			totalist = 2
+			radical_socialist = 1
+			syndicalist = 0
+			social_democrat = 2
+			social_liberal = 3
+			market_liberal = 2
+			social_conservative = 5
+			authoritarian_democrat = 11
+			paternal_autocrat = 21
+			national_populist = 53
+		}
+		country_event = { id = SZCDEBUG.6 }
+	}
+}

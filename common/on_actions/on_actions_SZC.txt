@@ -16,6 +16,15 @@ on_actions = {
 					country_event = { id = NKRsichuan.142 }
 				}
 			}
+			if = {
+				limit = {
+					tag = SZC
+					FROM = {
+						tag = KDH
+					}
+				}
+				country_event = { id = NKRsichuanCollabCrisis.30 }
+			}
 		}
 	}
 
