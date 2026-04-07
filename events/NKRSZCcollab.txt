@@ -1732,8 +1732,7 @@ country_event = {#革新政府第一届民选政府就职
 		mark_focus_tree_layout_dirty = yes
 	}
 }
-
-country_event = {
+country_event = { #和平建国军现代化
 	id = NKRsichuanCollab.83
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.83" }
 	title = NKRsichuanCollab.83.t
@@ -1741,12 +1740,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #军事现代化必须进行！
 		name = NKRsichuanCollab.83.a
 	}
 }
 
-country_event = {
+country_event = { #共荣圈军事体系
 	id = NKRsichuanCollab.84
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.84" }
 	title = NKRsichuanCollab.84.t
@@ -1754,12 +1753,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #前路漫漫。
 		name = NKRsichuanCollab.84.a
 	}
 }
 
-country_event = {
+country_event = { #士官派遗产
 	id = NKRsichuanCollab.85
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.85" }
 	title = NKRsichuanCollab.85.t
@@ -1767,12 +1766,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #陆士！
 		name = NKRsichuanCollab.85.a
 	}
 }
 
-country_event = {
+country_event = { #谈判开始...
 	id = NKRsichuanCollab.86
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.86" }
 	title = NKRsichuanCollab.86.t
@@ -1780,12 +1779,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #希望这些日本人能知书达理...
 		name = NKRsichuanCollab.86.a
 	}
 }
 
-country_event = {
+country_event = { #质疑
 	id = NKRsichuanCollab.87
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.87" }
 	title = NKRsichuanCollab.87.t
@@ -1793,12 +1792,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #一定要让他们理解哦我们的诉求！
 		name = NKRsichuanCollab.87.a
 	}
 }
 
-country_event = {
+country_event = { #神来之笔
 	id = NKRsichuanCollab.88
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.88" }
 	title = NKRsichuanCollab.88.t
@@ -1806,12 +1805,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #代价是什么呢？但至少我们成功了。
 		name = NKRsichuanCollab.88.a
 	}
 }
 
-country_event = {
+country_event = { #回绝
 	id = NKRsichuanCollab.89
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.89" }
 	title = NKRsichuanCollab.89.t
@@ -1819,12 +1818,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #那，没办法了...
 		name = NKRsichuanCollab.89.a
 	}
 }
 
-country_event = {
+country_event = { #《关于治安肃正之军事协定》之修订
 	id = NKRsichuanCollab.90
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.90" }
 	title = NKRsichuanCollab.90.t
@@ -1832,12 +1831,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #至少是好事。
 		name = NKRsichuanCollab.90.a
 	}
 }
 
-country_event = {
+country_event = { #治安扩大化
 	id = NKRsichuanCollab.91
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.91" }
 	title = NKRsichuanCollab.91.t
@@ -1845,12 +1844,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #永恒的治安军...
 		name = NKRsichuanCollab.91.a
 	}
 }
 
-country_event = {
+country_event = { #飞机与枪刺
 	id = NKRsichuanCollab.92
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.92" }
 	title = NKRsichuanCollab.92.t
@@ -1858,12 +1857,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #哭笑不得。
 		name = NKRsichuanCollab.92.a
 	}
 }
 
-country_event = {
+country_event = { #大中华民国——军阀
 	id = NKRsichuanCollab.93
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.93" }
 	title = NKRsichuanCollab.93.t
@@ -1871,12 +1870,15 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #人在屋檐下...
 		name = NKRsichuanCollab.93.a
+	}
+	option = { #总得干点实事！
+		name = NKRsichuanCollab.93.b
 	}
 }
 
-country_event = {
+country_event = { #国防真谛
 	id = NKRsichuanCollab.94
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.94" }
 	title = NKRsichuanCollab.94.t
@@ -1884,12 +1886,15 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #主义第一！
 		name = NKRsichuanCollab.94.a
+	}
+	option = { #第一次北伐不就是主义兵被打得丢盔卸甲？
+		name = NKRsichuanCollab.94.b
 	}
 }
 
-country_event = {
+country_event = { #大亚细亚教育
 	id = NKRsichuanCollab.95
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.95" }
 	title = NKRsichuanCollab.95.t
@@ -1897,12 +1902,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #审批通过。
 		name = NKRsichuanCollab.95.a
 	}
 }
 
-country_event = {
+country_event = { #外来资本
 	id = NKRsichuanCollab.96
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.96" }
 	title = NKRsichuanCollab.96.t
@@ -1910,12 +1915,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #今天是三井，明天是住友...
 		name = NKRsichuanCollab.96.a
 	}
 }
 
-country_event = {
+country_event = { #险棋
 	id = NKRsichuanCollab.97
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.97" }
 	title = NKRsichuanCollab.97.t
@@ -1923,12 +1928,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #一大步。
 		name = NKRsichuanCollab.97.a
 	}
 }
 
-country_event = {
+country_event = { #当日圆滚滚而来
 	id = NKRsichuanCollab.98
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.98" }
 	title = NKRsichuanCollab.98.t
@@ -1936,12 +1941,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #钱，钱，钱！
 		name = NKRsichuanCollab.98.a
 	}
 }
 
-country_event = {
+country_event = { #法团主义实践
 	id = NKRsichuanCollab.99
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.99" }
 	title = NKRsichuanCollab.99.t
@@ -1949,12 +1954,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #法团主义的优越性。
 		name = NKRsichuanCollab.99.a
 	}
 }
 
-country_event = {
+country_event = { #军备现代方向
 	id = NKRsichuanCollab.100
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.100" }
 	title = NKRsichuanCollab.100.t
@@ -1962,12 +1967,22 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #现代军队不应该冗杂。
 		name = NKRsichuanCollab.100.a
+		add_political_power = -50
+		custom_effect_tooltip = SZC_collab_modify_peace_army_status_tt
+		add_to_variable = { SZC_collab_peace_army_status_max_training = 0.15 tooltip = max_training_tt }
+		add_to_variable = { SZC_collab_peace_army_status_army_org_factor = 0.05 tooltip = army_org_factor_tt }
+		add_to_variable = { SZC_collab_peace_army_status_army_strength_factor = 0.05 tooltip = army_strength_factor_tt }
+		add_to_variable = { SZC_collab_peace_army_status_conscription_factor = -0.1 tooltip = conscription_factor_tt }
+	}
+	option = { #一支规模小的军队可守不住中华的疆土！
+		name = NKRsichuanCollab.100.b
+		add_political_power = 25
 	}
 }
 
-country_event = {
+country_event = { #军队国家化
 	id = NKRsichuanCollab.101
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.101" }
 	title = NKRsichuanCollab.101.t
@@ -1975,12 +1990,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #重要的一步。
 		name = NKRsichuanCollab.101.a
 	}
 }
 
-country_event = {
+country_event = { #觥筹交错
 	id = NKRsichuanCollab.102
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.102" }
 	title = NKRsichuanCollab.102.t
@@ -1988,12 +2003,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #干杯。
 		name = NKRsichuanCollab.102.a
 	}
 }
 
-country_event = {
+country_event = { #海行兮
 	id = NKRsichuanCollab.103
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.103" }
 	title = NKRsichuanCollab.103.t
@@ -2001,12 +2016,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #海行八万里。
 		name = NKRsichuanCollab.103.a
 	}
 }
 
-country_event = {
+country_event = { #亚细亚之军，和平建国之军
 	id = NKRsichuanCollab.104
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.104" }
 	title = NKRsichuanCollab.104.t
@@ -2014,12 +2029,12 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #亚细亚，前进！
 		name = NKRsichuanCollab.104.a
 	}
 }
 
-country_event = {
+country_event = { #新经济地位...
 	id = NKRsichuanCollab.105
 	immediate = { log = "[GetDateText]: [Root.GetName]: event NKRsichuanCollab.105" }
 	title = NKRsichuanCollab.105.t
@@ -2027,10 +2042,11 @@ country_event = {
 	picture = GFX_report_event_SZC_YCP
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
+	option = { #不同的愿景。
 		name = NKRsichuanCollab.105.a
 	}
 }
+
 
 country_event = {
 	id = NKRsichuanCollab.106

@@ -1,0 +1,63 @@
+
+
+SZC_collab_peace_army_status_mod = { #和平建国军
+	icon = "GFX_idea_SZC_collab_peace_army_status_mod"
+	#SZC.SZC_collab_peace_army_status_
+	army_attack_factor = SZC.SZC_collab_peace_army_status_army_attack_factor
+	army_attack_speed_factor = SZC.SZC_collab_peace_army_status_army_attack_speed_factor
+	army_defence_factor = SZC.SZC_collab_peace_army_status_army_defence_factor
+	army_morale_factor = SZC.SZC_collab_peace_army_status_army_morale_factor
+	army_org_factor = SZC.SZC_collab_peace_army_status_army_org_factor
+	army_speed_factor = SZC.SZC_collab_peace_army_status_army_speed_factor
+	breakthrough_factor = SZC.SZC_collab_peace_army_status_breakthrough_factor
+	coordination_bonus = SZC.SZC_collab_peace_army_status_coordination_bonus
+	army_armor_attack_factor = SZC.SZC_collab_peace_army_status_army_armor_attack_factor
+	army_armor_speed_factor = SZC.SZC_collab_peace_army_status_army_armor_speed_factor
+	army_armor_defence_factor = SZC.SZC_collab_peace_army_status_army_armor_defence_factor
+	army_artillery_attack_factor = SZC.SZC_collab_peace_army_status_army_artillery_attack_factor
+	army_artillery_defence_factor = SZC.SZC_collab_peace_army_status_army_artillery_defence_factor
+	max_planning_factor = SZC.SZC_collab_peace_army_status_max_planning_factor
+	planning_speed = SZC.SZC_collab_peace_army_status_planning_speed
+	land_night_attack = SZC.SZC_collab_peace_army_status_land_night_attack
+	max_training = SZC.SZC_collab_peace_army_status_max_training
+	pocket_penalty = SZC.SZC_collab_peace_army_status_pocket_penalty
+	army_strength_factor = SZC.SZC_collab_peace_army_status_army_strength_factor
+	assign_army_leader_cp_cost = SZC.SZC_collab_peace_army_status_assign_army_leader_cp_cost
+	experience_gain_army_factor = SZC.SZC_collab_peace_army_status_experience_gain_army_factor
+	max_command_power_mult = SZC.SZC_collab_peace_army_status_max_command_power_mult
+	recon_factor = SZC.SZC_collab_peace_army_status_recon_factor
+	required_garrison_factor = SZC.SZC_collab_peace_army_status_required_garrison_factor
+	resistance_damage_to_garrison = SZC.SZC_collab_peace_army_status_resistance_damage_to_garrison
+	resistance_decay = SZC.SZC_collab_peace_army_status_resistance_decay
+	resistance_growth = SZC.SZC_collab_peace_army_status_resistance_growth	
+	conscription = SZC.SZC_collab_peace_army_status_conscription
+	conscription_factor = SZC.SZC_collab_peace_army_status_conscription_factor
+}
+
+SZC_collab_economy_status_mod = { #经济现状
+	icon = "GFX_idea_SZC_collab_economy_status_mod"
+	#SZC.SZC_collab_economy_status_
+	base_fuel_gain_factor = SZC.SZC_collab_economy_status_base_fuel_gain_factor
+	civilian_factory_use = SZC.SZC_collab_economy_status_civilian_factory_use
+	industrial_capacity_factory = SZC.SZC_collab_economy_status_industrial_capacity_factory
+	industrial_capacity_dockyard = SZC.SZC_collab_economy_status_industrial_capacity_dockyard
+	industry_repair_factor = SZC.SZC_collab_economy_status_industry_repair_factor
+	political_power_gain = SZC.SZC_collab_economy_status_political_power_gain
+	production_factory_efficiency_gain_factor = SZC.SZC_collab_economy_status_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = SZC.SZC_collab_economy_status_production_factory_max_efficiency_factor
+	production_lack_of_resource_penalty_factor = SZC.SZC_collab_economy_status_production_lack_of_resource_penalty_factor
+	production_speed_buildings_factor = SZC.SZC_collab_economy_status_production_speed_buildings_factor
+	research_speed_factor = SZC.SZC_collab_economy_status_research_speed_factor
+	stability_factor = SZC.SZC_collab_economy_status_stability_factor
+	consumer_goods_factor = SZC.SZC_collab_economy_status_consumer_goods_factor
+	min_export = SZC.SZC_collab_economy_status_min_export
+	resource_trade_cost_bonus_per_factory = SZC.SZC_collab_economy_status_resource_trade_cost_bonus_per_factory
+	monthly_population = SZC.SZC_collab_economy_status_monthly_population
+}
+
+SZC_collab_zhongzhen_monopoly = {
+	icon = GFX_decision_railroad
+	disable_strategic_redeployment_for_controller = 1
+	local_supplies_for_controller = -0.1
+	local_resources = 0.1
+}

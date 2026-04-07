@@ -4270,3 +4270,139 @@ SZC_KMD_bingfa_category = {
 		}
 	}
 }
+
+
+SZC_YCP_collab_road_east_category = {
+	
+	SZC_YCP_collab_asian_industrial_reborn_act = { #兴亚产业振兴条例
+		allowed = { tag = SZC }
+
+		visible = {
+			# has_country_flag = SZC_YCP_can_unite_someone
+			always = yes
+		}
+
+		available = {
+			NOT = { has_country_flag = ROC_has_law_voting }
+		}
+		fire_only_once = yes
+		icon = GFX_decision_peace_dove
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_YCP_collab_asian_industrial_reborn_act"
+			
+		}
+	}
+	
+	SZC_YCP_collab_national_capital_integrate_act = { #国家资本整理条例
+		allowed = { tag = SZC }
+
+		visible = {
+			# has_country_flag = SZC_YCP_can_unite_someone
+			always = yes
+		}
+
+		available = {
+			NOT = { has_country_flag = ROC_has_law_voting }
+		}
+		fire_only_once = yes
+		icon = GFX_decision_peace_dove
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_YCP_collab_national_capital_integrate_act_act"
+			
+		}
+	}
+	
+	SZC_YCP_collab_central_reserve_bank_regulations = { #中央储备银行条例
+		allowed = { tag = SZC }
+
+		visible = {
+			# has_country_flag = SZC_YCP_can_unite_someone
+			always = yes
+		}
+
+		available = {
+			NOT = { has_country_flag = ROC_has_law_voting }
+		}
+		fire_only_once = yes
+		icon = GFX_decision_peace_dove
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_YCP_collab_central_reserve_bank_regulations"
+			
+		}
+	}
+	
+	SZC_YCP_collab_national_energy_law = { #国家能源法
+		allowed = { tag = SZC }
+
+		visible = {
+			# has_country_flag = SZC_YCP_can_unite_someone
+			always = yes
+		}
+
+		available = {
+			NOT = { has_country_flag = ROC_has_law_voting }
+		}
+		fire_only_once = yes
+		icon = GFX_decision_peace_dove
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_YCP_collab_national_energy_law"
+			
+		}
+	}
+	
+	SZC_YCP_collab_science_and_technology_incentive_law = { #科学技术鼓励法
+		allowed = { tag = SZC }
+
+		visible = {
+			# has_country_flag = SZC_YCP_can_unite_someone
+			always = yes
+		}
+
+		available = {
+			NOT = { has_country_flag = ROC_has_law_voting }
+		}
+		fire_only_once = yes
+		icon = GFX_decision_peace_dove
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_YCP_collab_science_and_technology_incentive_law"
+			
+		}
+	}
+	
+	SZC_YCP_collab_farmland_consolidation_regulations = { #农地整理条例
+		allowed = { tag = SZC }
+
+		visible = {
+			# has_country_flag = SZC_YCP_can_unite_someone
+			always = yes
+		}
+
+		available = {
+			NOT = { has_country_flag = ROC_has_law_voting }
+		}
+		fire_only_once = yes
+		icon = GFX_decision_peace_dove
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete SZC_YCP_collab_farmland_consolidation_regulations"
+			
+		}
+	}
+}

@@ -1348,3 +1348,18 @@ ROC_coalition_available_trigger = {
 		}
 	}
 }
+
+ROC_trigger_the_law_passed = {
+	#use temp_the_law_var
+	custom_override_tooltip = {
+		tooltip = ROC_trigger_the_law_passed_tt
+		meta_trigger = {
+			text = {
+				check_variable = {
+					ROC_law_the_status_[base] = 1
+				}
+			}
+			base = "[?temp_the_law_var]"
+		}
+	}
+}

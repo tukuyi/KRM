@@ -496,6 +496,9 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_modernization_of_peace_army"
 			custom_effect_tooltip = SZC_YCP_collab_modernization_of_peace_army_tt
 			army_experience = 50
+			add_dynamic_modifier = { modifier = SZC_collab_peace_army_status_mod }
+			set_variable = { SZC_collab_peace_army_status_max_planning_factor = 0.05 tooltip = max_planning_factor_tt }
+			set_variable = { SZC_collab_peace_army_status_max_training = 0.1 tooltip = max_training_tt }
 			if = {
 				limit = { check_variable = { CHN_military_disarray_fixes_needed_var > 0 } }
 				subtract_from_variable = { CHN_military_disarray_fixes_needed_var = 1 }
@@ -567,6 +570,9 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = NKRsichuanCollab.84 days = 1 }
 			}
+			custom_effect_tooltip = SZC_collab_modify_peace_army_status_tt
+			add_to_variable = { SZC_collab_peace_army_status_planning_speed = 0.1 tooltip = planning_speed_tt }
+			add_to_variable = { SZC_collab_peace_army_status_coordination_bonus = 0.05 tooltip = coordination_bonus_tt }
 		}
 	}
 
@@ -653,7 +659,14 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_role_of_our_army_in_geacps"
 			custom_effect_tooltip = SZC_YCP_collab_role_of_our_army_in_geacps_tt
 			army_experience = -50
-			#idea
+			custom_effect_tooltip = SZC_collab_modify_peace_army_status_tt
+			add_to_variable = { SZC_collab_peace_army_status_max_training = 0.1 tooltip = max_training_tt }
+			add_to_variable = { SZC_collab_peace_army_status_max_command_power_mult = 0.2 tooltip = max_command_power_mult_tt }
+			add_to_variable = { SZC_collab_peace_army_status_recon_factor = 0.1 tooltip = recon_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_breakthrough_factor = 0.1 tooltip = breakthrough_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_army_org_factor = 0.07 tooltip = army_org_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_army_strength_factor = 0.08 tooltip = army_strength_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_conscription_factor = -0.25 tooltip = conscription_factor_tt }
 			hidden_effect = {
 				country_event = { id = NKRsichuanCollab.90 days = 1 }
 			}
@@ -679,7 +692,14 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_continue_as_peace_keeper"
-			#idea
+			custom_effect_tooltip = SZC_collab_modify_peace_army_status_tt
+			add_to_variable = { SZC_collab_peace_army_status_max_training = -0.15 tooltip = max_training_tt }
+			add_to_variable = { SZC_collab_peace_army_status_army_org_factor = 0.05 tooltip = army_org_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_recon_factor = 0.05 tooltip = recon_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_required_garrison_factor = -0.2 tooltip = required_garrison_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_resistance_damage_to_garrison = -0.15 tooltip = resistance_damage_to_garrison_tt }
+			add_to_variable = { SZC_collab_peace_army_status_resistance_decay = -0.05 tooltip = resistance_decay_tt }
+			add_to_variable = { SZC_collab_peace_army_status_resistance_growth = -0.1 tooltip = resistance_growth_tt }
 			hidden_effect = {
 				country_event = { id = NKRsichuanCollab.91 days = 1 }
 			}
@@ -729,6 +749,10 @@ focus_tree = {
 				country_event = { id = NKRsichuanCollab.92 days = 1 }
 				country_event = { id = NKRsichuanCollabCrisis.1 days = 60 }
 			}
+			custom_effect_tooltip = SZC_collab_modify_peace_army_status_tt
+			add_to_variable = { SZC_collab_peace_army_status_planning_speed = 0.1 tooltip = planning_speed_tt }
+			add_to_variable = { SZC_collab_peace_army_status_army_speed_factor = 0.05 tooltip = army_speed_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_army_morale_factor = 0.05 tooltip = army_morale_factor_tt }
 		}
 	}
 
@@ -754,6 +778,7 @@ focus_tree = {
 				subtract_from_variable = { CHN_military_disarray_fixes_needed_var = 1 }
 				CHN_improve_military_disarray_effect = yes
 			}
+			remove_ideas = { SZC_YCP_collab_unwilling_army_2_idea }
 			every_unit_leader = {
 				limit = { has_trait = politically_connected }
 				add_timed_unit_leader_trait = {
@@ -786,6 +811,10 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = NKRsichuanCollab.94 days = 1 }
 			}
+			custom_effect_tooltip = SZC_collab_modify_peace_army_status_tt
+			add_to_variable = { SZC_collab_peace_army_status_pocket_penalty = -0.1 tooltip = pocket_penalty_tt }
+			add_to_variable = { SZC_collab_peace_army_status_experience_gain_army_factor = 0.1 tooltip = experience_gain_army_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_assign_army_leader_cp_cost = -15 tooltip = assign_army_leader_cp_cost_tt }
 		}
 	}
 
@@ -910,7 +939,8 @@ focus_tree = {
 		relative_position_id = SZC_YCP_collab_modernization_of_peace_army
 
 		available = {
-			has_completed_focus = SZC_YCP_collab_organic_corporatism
+			set_temp_variable = { temp_the_law_var = 1 }
+			ROC_trigger_the_law_passed = yes
 		}
 
 		mutually_exclusive = {
@@ -960,6 +990,10 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = NKRsichuanCollab.100 days = 1 }
 			}
+			custom_effect_tooltip = SZC_collab_modify_peace_army_status_tt
+			add_to_variable = { SZC_collab_peace_army_status_army_armor_attack_factor = 0.1 tooltip = army_armor_attack_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_army_armor_speed_factor = 0.15 tooltip = army_armor_speed_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_army_armor_defence_factor = 0.05 tooltip = army_armor_defence_factor_tt }
 		}
 	}
 
@@ -992,6 +1026,10 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = NKRsichuanCollab.101 days = 1 }
 			}
+			custom_effect_tooltip = SZC_collab_modify_peace_army_status_tt
+			add_to_variable = { SZC_collab_peace_army_status_army_attack_factor = 0.05 tooltip = army_attack_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_army_attack_speed_factor = 0.1 tooltip = army_attack_speed_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_army_defence_factor = 0.05 tooltip = army_defence_factor_tt }
 		}
 	}
 
@@ -1015,10 +1053,15 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_share_with_friends"
-			
+			add_political_power = 150
+			add_stability = 0.05
 			hidden_effect = {
 				country_event = { id = NKRsichuanCollab.102 days = 1 }
 			}
+			custom_effect_tooltip = SZC_collab_modify_peace_army_status_tt
+			add_to_variable = { SZC_collab_peace_army_status_army_attack_factor = 0.02 tooltip = army_attack_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_conscription = 0.01 tooltip = conscription_tt }
+			add_to_variable = { SZC_collab_peace_army_status_army_defence_factor = 0.02 tooltip = army_defence_factor_tt }
 		}
 	}
 
@@ -1088,6 +1131,12 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = NKRsichuanCollab.104 days = 1 }
 			}
+			custom_effect_tooltip = SZC_collab_modify_peace_army_status_tt
+			add_to_variable = { SZC_collab_peace_army_status_land_night_attack = 0.05 tooltip = land_night_attack_tt }
+			add_to_variable = { SZC_collab_peace_army_status_recon_factor = 0.05 tooltip = recon_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_breakthrough_factor = 0.05 tooltip = breakthrough_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_army_artillery_attack_factor = 0.05 tooltip = army_artillery_attack_factor_tt }
+			add_to_variable = { SZC_collab_peace_army_status_max_planning_factor = 0.05 tooltip = max_planning_factor_tt }
 		}
 	}
 
@@ -1106,7 +1155,12 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_china_new_economy"
-			
+			custom_effect_tooltip = SZC_YCP_collab_china_new_economy_tt
+			SZC_collab_economy_status_mod_setup = yes
+			set_variable = { SZC_collab_economy_balance_status = 10 }
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.105 days = 1 }
+			}
 		}
 	}
 
@@ -1125,7 +1179,13 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_pan_asianist_economy_policy"
-			
+			custom_effect_tooltip = SZC_collab_modify_peconomy_status_mod_tt
+			add_to_variable = { SZC_collab_economy_status_political_power_gain = -0.05 tooltip = political_power_gain_tt }
+			add_to_variable = { SZC_collab_economy_status_civilian_factory_use = 2 tooltip = civilian_factory_use_tt }
+			add_to_variable = { SZC_collab_economy_status_consumer_goods_factor = -0.08 tooltip = consumer_goods_factor_tt }
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.106 days = 1 }
+			}
 		}
 	}
 
@@ -1138,13 +1198,25 @@ focus_tree = {
 		y = 2
 		relative_position_id = SZC_YCP_collab_china_new_economy
 
+		select_effect = {
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.107 days = 3 }
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_collab_pan_asianist_economy_policy
 		}
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_industrialization_first"
-			
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.110 days = 1 }
+			}
 		}
 	}
 
@@ -1163,7 +1235,22 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_our_duty_to_japan"
-			
+			hidden_effect = {
+				JAP_fukuda_takeo = { SZC_recruit_character_effect = yes }
+				JAP_suga_hikojiro = { SZC_recruit_character_effect = yes }
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = JAP_fukuda_takeo_advisor
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = JAP_suga_hikojiro_navy_chief
+			add_political_power = -50
+			JAP = {
+				add_political_power = 50
+			}
+			unlock_decision_tooltip = SZC_YCP_collab_asian_industrial_reborn_act
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.111 days = 1 }
+			}
 		}
 	}
 
@@ -1182,7 +1269,8 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_organic_corporatism"
-			
+			#law
+			unlock_decision_tooltip = SZC_YCP_collab_national_capital_integrate_act
 		}
 	}
 
@@ -1201,7 +1289,11 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_agricultural_modernization_attempt"
-			
+			china_generic_land_reform_setup = yes
+			unlock_decision_tooltip = SZC_YCP_collab_farmland_consolidation_regulations
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.112 days = 1 }
+			}
 		}
 	}
 
@@ -1260,12 +1352,19 @@ focus_tree = {
 		y = 1
 		relative_position_id = SZC_YCP_collab_china_new_economy
 
+		available = {
+			JAP_fukuda_takeo = {
+				is_hired_as_advisor = yes
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_collab_china_new_economy
 		}
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_fiscal_reform"
+			unlock_decision_tooltip = SZC_YCP_collab_central_reserve_bank_regulations
 			
 		}
 	}
@@ -1279,6 +1378,10 @@ focus_tree = {
 		y = 2
 		relative_position_id = SZC_YCP_collab_china_new_economy
 
+		available = {
+			has_completed_focus = SZC_YCP_collab_pan_asianist_education
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_collab_fiscal_reform
 			focus = SZC_YCP_collab_pan_asianist_economy_policy
@@ -1286,6 +1389,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_introduce_modern_technology"
+			unlock_decision_tooltip = SZC_YCP_collab_science_and_technology_incentive_law
 			
 		}
 	}

@@ -548,6 +548,17 @@ characters = {
 				large = GFX_portrait_JAP_fukuda_takeo_large
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_fukuda_takeo_advisor
+			traits = { SZC_collab_fiscal_overseer }
+			on_add = {
+				ROOT = {
+					custom_effect_tooltip = JAP_fukuda_takeo_advisor_hire_tt
+				}
+			}
+			cost = 150
+		}
 	}
 	#尾崎秀实
 	JAP_ozaki_hotsumi = {
@@ -587,6 +598,12 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 2
 		}
+		advisor = {
+			slot = high_command
+			idea_token = JAP_hiroshi_nemoto_high_command
+			traits = { SZC_collab_iron_advisor }
+			cost = 150
+		}
 	}
 	#和知鹰二
 	JAP_wachi_takaji = {
@@ -616,6 +633,17 @@ characters = {
 				large = GFX_portrait_JAP_kagesa_sadaaki_large
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_kagesa_sadaaki_advisor
+			traits = { SZC_collab_kikan_mastermind }
+			on_add = {
+				ROOT = {
+					custom_effect_tooltip = JAP_kagesa_sadaaki_advisor_hire_tt
+				}
+			}
+			cost = 150
+		}
 	}
 	#须贺彦次郎
 	JAP_suga_hikojiro = {
@@ -625,6 +653,17 @@ characters = {
 				small = GFX_portrait_JAP_suga_hikojiro_small
 				large = GFX_portrait_JAP_suga_hikojiro_large
 			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = JAP_suga_hikojiro_navy_chief
+			traits = { SZC_collab_naval_kikan_chief }
+			on_add = {
+				ROOT = {
+					custom_effect_tooltip = JAP_suga_hikojiro_advisor_hire_tt
+				}
+			}
+			cost = 150
 		}
 	}
 	#安藤辉三

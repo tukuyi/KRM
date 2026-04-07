@@ -703,5 +703,37 @@ leader_traits = {
 		special_forces_attack_factor = 0.05
 		max_planning = 0.05
 	}
+	SZC_collab_kikan_mastermind = { #机关主使
+		random = no
+        stability_factor = 0.05
+        war_support_factor = 0.05
+        political_power_gain = -0.05
+		crypto_strength = 0.2
+		encryption_factor = 0.1
+        resistance_damage_to_garrison = -0.15
+        resistance_growth_speed = -0.15
+	}
+	SZC_collab_naval_kikan_chief = { #舰旗密探
+		random = no
+		spotting_chance = 0.05
+		naval_coordination = 0.05
+		trade_opinion_factor = 0.20
+	}
+	SZC_collab_iron_advisor = { #酒是老英雄
+		random = no
+		planning_speed = 0.10
+		max_planning = 0.05
+		army_org_regain = 0.05
+		land_reinforce_rate = 0.05
+		coordination_bonus = 0.05
+	}
+	SZC_collab_fiscal_overseer = { #改革总设计师
+		random = no
+		political_power_gain = -0.05
+		industrial_capacity_factory = 0.05
+		production_speed_buildings_factor = 0.2
+		consumer_goods_factor = -0.03
+		stability_factor = -0.05
+	}
 }
 	
