@@ -1306,6 +1306,10 @@ focus_tree = {
 		y = 4
 		relative_position_id = SZC_YCP_collab_china_new_economy
 
+		available = {
+			always = no
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_collab_organic_corporatism
 		}
@@ -1316,7 +1320,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_the_megacorp"
-			
+			custom_effect_tooltip = SZC_YCP_collab_the_megacorp_tt
 		}
 	}
 
@@ -1329,6 +1333,12 @@ focus_tree = {
 		y = 4
 		relative_position_id = SZC_YCP_collab_china_new_economy
 
+		select_effect = {
+			hidden_effect = {
+				country_event = { id = NKRsichuanCollab.113 days = 1 }
+			}
+		}
+
 		prerequisite = {
 			focus = SZC_YCP_collab_organic_corporatism
 		}
@@ -1339,7 +1349,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_renegotiation_with_the_HRA"
-			
+			custom_effect_tooltip = SZC_YCP_collab_renegotiation_with_the_HRA_tt
 		}
 	}
 

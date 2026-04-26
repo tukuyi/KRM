@@ -32,7 +32,7 @@ ROC_register_parties = {
 
 	set_variable = { ROC_seats_max = 800 }
 	
-	# ROC_collab_start_register_parties = yes
+	ROC_collab_start_register_parties = yes
 
 	#parliament_gui_status - 1执政 2联合 3在野
 
@@ -2593,4 +2593,96 @@ ROC_election_calculate = {
  
     ROC_parliament_reorder_parties = yes
     ROC_parliament_update = yes
+}
+
+# set_temp_variable = { temp_the_law_var = xxx }
+# ROC_law_show_effect_if_pass = yes
+ROC_law_show_effect_if_pass = {
+	custom_effect_tooltip = ROC_law_sign_show_effect_if_pass
+	effect_tooltip = {
+		meta_effect = {
+			text = {
+				[effect] = yes
+			}
+			effect = "ROC_law_the_[?temp_the_law_var]_effect"
+		}
+	}
+}
+
+ROC_law_init_setup = {
+	set_variable = { ROC_current_law = var:temp_the_law_var }
+	custom_effect_tooltip = ROC_the_law_will_be_voted_tt
+	hidden_effect = {
+		set_temp_variable = { tempc = 0 }
+		
+		for_each_loop = {
+			array = ROC_party_tokens
+			value = roc_cur_token
+			
+		    ROOT = {
+		        set_variable = { tempc = roc_cur_token }
+		    }
+		    meta_effect = {
+		        text = {
+		            every_character = {
+		                limit = { is_character = [tokenbase] }
+						if = {
+							limit = {
+								check_variable = {
+									THIS.parliament_gui_status = 1
+								}
+							}
+							set_temp_variable = { temp_seats = THIS.parliament_gui_seats }
+							set_temp_variable_to_random = {
+								var = seats_roll
+								min = 0.95
+								max = 1
+							}
+							multiply_temp_variable = { temp_seats = var:seats_roll }
+							round_temp_variable = temp_seats
+							log = "114"
+							set_variable = { parliament_gui_seats_supporter = var:temp_seats }
+						}
+						else_if = {
+							limit = {
+								check_variable = {
+									THIS.parliament_gui_status = 2
+								}
+							}
+							set_temp_variable = { temp_seats = THIS.parliament_gui_seats }
+							multiply_temp_variable = { temp_seats = 0.8 }
+							set_temp_variable_to_random = {
+								var = seats_roll
+								min = 0.95
+								max = 1
+							}
+							multiply_temp_variable = { temp_seats = var:seats_roll }
+							round_temp_variable = temp_seats
+							set_variable = { parliament_gui_seats_supporter = var:temp_seats }
+						}
+						else_if = {
+							limit = {
+								check_variable = {
+									THIS.parliament_gui_status = 3
+								}
+							}
+							set_temp_variable = { temp_seats = THIS.parliament_gui_seats }
+							multiply_temp_variable = { temp_seats = 0.025 }
+							set_temp_variable_to_random = {
+								var = seats_roll
+								min = 0.2
+								max = 1
+							}
+							multiply_temp_variable = { temp_seats = var:seats_roll }
+							round_temp_variable = temp_seats
+							set_variable = { parliament_gui_seats_supporter = var:temp_seats }
+						}
+		            }
+		        }
+		        tokenbase = "[?ROOT.tempc.GetTokenKey]"
+		    }
+		}
+		clear_variable = ROOT.tempc
+	}
+
 }

@@ -291,7 +291,7 @@ scripted_gui = {
 				}
 				else = {
 					set_country_flag = roc_law_sign_interacted
-					sound_effect = "pen1"
+					hidden_effect = { sound_effect = "pen1" }
 					meta_effect = {
 						text = {
 							[effect] = yes

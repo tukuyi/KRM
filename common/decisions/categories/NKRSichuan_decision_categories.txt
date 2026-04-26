@@ -148,7 +148,7 @@ ROC_parliament_vote_category = {
 	icon = GFX_decision_category_qing_hall
 	allowed = { original_tag = SZC }
 	visible = { 
-		# has_country_flag = SZC_YCP_collab_road_east
+		# NOT = { check_variable = { ROC_current_law = 0 } }
 		always = yes
 	}
 	priority = 1145

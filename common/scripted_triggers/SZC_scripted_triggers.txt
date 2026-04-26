@@ -1363,3 +1363,24 @@ ROC_trigger_the_law_passed = {
 		}
 	}
 }
+
+ROC_law_pass_trigger = {
+	set_temp_variable = { temp_supporters_all_seats = 0 }
+	all_of = {
+		array = ROC_party_tokens
+		value = roc_cur_token
+		meta_trigger = {
+			text = {
+				[tokenbase] = {
+					add_to_temp_variable = {
+						temp_supporters_all_seats = THIS.parliament_gui_seats_supporter
+					}
+				}
+			}
+			tokenbase = "[?roc_cur_token.GetTokenKey]"
+		}
+	}
+	set_temp_variable = { temp_half_seats = var:ROC_seats_max }
+	divide_temp_variable = { temp_half_seats = 2 }
+	check_variable = { temp_supporters_all_seats > var:temp_half_seats }
+}
