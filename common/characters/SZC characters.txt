@@ -219,6 +219,13 @@ characters = {
 			}
 			traits = { KR_army_chief_planning_2 }
 			cost = 100
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 500
+					has_completed_focus = SZC_preparing_sichuan_for_federalism
+				}
+			}
 		}
 	}
 	#但懋辛
@@ -319,6 +326,13 @@ characters = {
 			ledger = army
 			traits = { KR_MHC_army_regrouping_2 }
 			cost = 100
+			ai_will_do = {
+				base = 10
+				modifier = {
+					factor = 5
+					has_war = yes
+				}
+			}
 		}
 	}
 	#蕭毅肅
@@ -383,6 +397,13 @@ characters = {
 			ledger = army
 			traits = { KR_MHC_infantry_2 }
 			cost = 100
+			ai_will_do = {
+				base = 10
+				modifier = {
+					factor = 100
+					has_war = yes
+				}
+			}
 		}
 	}
 	#李蔚如
@@ -399,6 +420,13 @@ characters = {
 			ledger = army
 			traits = { KR_MHC_irregular_2 }
 			cost = 100
+			ai_will_do = {
+				base = 10
+				modifier = {
+					factor = 100
+					has_war = yes
+				}
+			}
 		}
 	}
 	#劉光烈
@@ -493,6 +521,7 @@ characters = {
 				is_country_leader = no
 			}
 			traits = { KR_army_chief_morale_3 }
+			cost = 150
 			on_add = {
 				ROOT = {
 					if = {
@@ -579,6 +608,17 @@ characters = {
 			}
 			traits = { KR_MHC_irregular_2 }
 			cost = 100
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					factor = 100
+					OR = {
+						has_war = yes
+						has_idea = SZC_recovering_from_the_famine_1
+						has_idea = SZC_recovering_from_the_famine_2
+					}
+				}
+			}
 		}
 		advisor = {
 			slot = political_advisor
@@ -756,6 +796,13 @@ characters = {
 				}
 			}
 			traits = { KR_army_chief_old_guard }
+			ai_will_do = {
+				factor = 500
+				modifier = {
+					factor = 0
+					NOT = { has_completed_focus = SZC_Rule_of_the_Officers }
+				}
+			}
 		}
 	}
 
@@ -1391,6 +1438,9 @@ characters = {
 			slot = political_advisor
 			idea_token = SZC_liu_wencai_advisor
 			desc = SZC_liu_wencai_sic_desc
+			available = {
+				not_already_hired_except_as = political_advisor
+			}
 			traits = { KR_powerful_landlord }
 			on_add = {
 				ROOT = {
@@ -1785,6 +1835,13 @@ characters = {
 				not_already_hired_except_as = political_advisor
 			}
 			traits = { KR_the_zhili_connection }
+			ai_will_do = {
+				base = 1
+				modifier = {
+					add = 200
+					tag = QIE
+				}
+			}
 		}
 		advisor = {
 			slot = high_command
@@ -1819,6 +1876,13 @@ characters = {
 			slot = army_chief
 			idea_token = SZC_guo_rudong_army_chief
 			traits = { KR_army_chief_manoeuvre_2 }
+			ai_will_do = {
+				factor = 500
+				modifier = {
+					factor = 0
+					NOT = { has_completed_focus = SZC_Chengdu_Holds_On }
+				}
+			}
 		}
 	}
 	#杨汉域
@@ -1863,6 +1927,13 @@ characters = {
 			}
 			traits = { KR_MHC_infantry_2 }
 			cost = 100
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 500
+					has_war = yes
+				}
+			}
 		}
 		advisor = {
 			slot = second_in_command
@@ -1900,6 +1971,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SZC_mu_zibin_advisor
 			traits = { KR_war_propagandist }
+			ai_will_do = { factor = 0 }
 		}
 	}
 
@@ -1915,6 +1987,13 @@ characters = {
 			slot = political_advisor
 			idea_token = SZC_liu_xianying_advisor
 			traits = { KR_elder_aristocrat }
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 100
+					has_war = yes
+				}
+			}
 		}
 	}
 
@@ -1945,8 +2024,8 @@ characters = {
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
 		}
 	}
 	#潘文華
@@ -2108,6 +2187,7 @@ characters = {
 			idea_token = SZC_wang_lingji_army_chief
 			traits = { KR_army_chief_offensive_2 }
 			cost = 100
+			ai_will_do = { factor = 500 }
 		}
 	}
 	#王纘緒
@@ -2137,19 +2217,30 @@ characters = {
 		}
 	}
 	#許紹宗
-	SZC_xu_shaozhong = {
-		name = SZC_xu_shaozhong
+	SZC_xu_shaozong = {
+		name = SZC_xu_shaozong
 		portraits = {
 			army = {
-				small = GFX_portrait_SZC_xu_shaozhong_army_small
+				small = GFX_portrait_SZC_xu_shaozong_army_small
 			}
 		}
 		advisor = {
 			slot = high_command
-			idea_token = SZC_xu_shaozhong_high_command
+			idea_token = SZC_xu_shaozong_high_command
 			ledger = army
 			traits = { KR_MHC_infantry_2 }
 			cost = 100
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 500
+					OR = {
+						has_completed_focus = SZC_A_Grandiose_Plan
+						has_completed_focus = SZC_Form_The_National_Protection_Alliance
+						has_war = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -2210,6 +2301,13 @@ characters = {
 			slot = political_advisor
 			idea_token = SZC_deng_hanxiang_advisor
 			traits = { KR_silent_workhorse }
+			ai_will_do = {
+				base = 0
+				modifier = {
+					factor = 200
+					has_political_power > 140
+				}
+			}
 		}
 	}
 
@@ -2278,6 +2376,7 @@ characters = {
 			slot = political_advisor
 			idea_token = SZC_wen_shaohe_advisor
 			traits = { KR_captain_of_industry }
+			ai_will_do = { factor = 0 }
 		}
 	}
 

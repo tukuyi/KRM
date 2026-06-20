@@ -923,10 +923,20 @@ foreign_politics = {
 			}
 		}
 
+		visible = {
+			is_subject = no
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+					owns_state = 858 #Tawang
+					owns_state = 897 #Aksai Chin
+				}
+			}
+		}
+
 		cancel_trigger = {
 			OR = {
-				is_subject = yes
-				NOT = { can_declare_war_on = FROM }
+				has_war = yes
 				has_non_aggression_pact_with = FROM
 				has_truce_with = FROM
 				if = {
@@ -949,21 +959,27 @@ foreign_politics = {
 				else = {
 					hidden_trigger = { always = no }
 				}
-				FROM = {
-					NOT = { owns_state = 858 } #Tawang
-					NOT = { owns_state = 897 } #Aksai Chin
-				}
 			}
 		}
 
+		target_root_trigger = {
+			is_subject = no
+		}
 		target_trigger = {
+			FROM = {
+				OR = {
+					owns_state = 858 #Tawang
+					owns_state = 897 #Aksai Chin
+				}
+			}
 			can_declare_war_on = FROM
 		}
 
 		cost = 20
 		days_remove = 30
 		fire_only_once = yes
-		war_with_target_on_complete = yes
+		cancel_if_not_visible = yes
+		war_with_target_on_remove = yes
 
 		ai_will_do = {
 			factor = 10
@@ -1928,10 +1944,16 @@ chinese_unification = {
 			CHN_scientist_transfer_effect = yes
 			if = {
 				limit = {
-					is_subject = yes
 					NOT = { tag = FNG }
 				}
-				log = "KR_Event_Logging;CHINA UNITED BY A Non-Fengtian Puppet"
+				log = "KR_Event_Logging;CHINA UNITED BY Japan (Non-FNG puppet)"
+			}
+			else_if = {
+				limit = {
+					is_subject = yes
+					NOT = { is_subject_of = JAP }
+				}
+				log = "KR_Event_Logging;CHINA UNITED BY A Non-Japanese Puppet"
 			}
 			#Must be a separate "if" trigger otherwise you'll mess up the non-logging lines.
 			if = {
@@ -2197,11 +2219,11 @@ chinese_unification = {
 			else_if = {
 				limit = { tag = YUN }
 				if = {
-					limit = { is_subject = no }
-					log = "KR_Event_Logging;CHINA UNITED BY Left-KMT"
-				}
-				if = {
 					limit = { china_alignment_left_kuomintang = yes }
+					if = {
+						limit = { is_subject = no }
+						log = "KR_Event_Logging;CHINA UNITED BY Left-KMT"
+					}
 					log = "KR_Event_Logging;YUN GAME PROGRESS - YUN KMT Unification"
 					set_cosmetic_tag = LKT_united_china
 					hidden_effect = { news_event = china_events.308 }
@@ -2806,6 +2828,8 @@ chinese_unification = {
 						NOT = { original_tag = QIE }
 						NOT = { original_tag = CHI }
 						NOT = { original_tag = SHX }
+						NOT = { original_tag = FNG }
+						NOT = { original_tag = LEP }
 						SZC_zhili_in_exile = no
 						SZC_federalists_in_exile = no
 						NOT = {
@@ -2926,6 +2950,19 @@ chinese_unification = {
 						}
 					}
 				}
+			}
+			NOT = {
+				has_non_aggression_pact_with = FROM
+				has_truce_with = FROM
+				is_in_faction_with = FROM
+			}
+		}
+
+		cancel_trigger = {
+			OR = {
+				has_non_aggression_pact_with = FROM
+				has_truce_with = FROM
+				is_in_faction_with = FROM
 			}
 		}
 
@@ -3098,6 +3135,18 @@ chinese_unification = {
 					}
 				}
 			}
+			NOT = {
+				has_non_aggression_pact_with = FROM
+				has_truce_with = FROM
+				is_in_faction_with = FROM
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				has_non_aggression_pact_with = FROM
+				has_truce_with = FROM
+				is_in_faction_with = FROM
+			}
 		}
 		target_root_trigger = {
 			if = {
@@ -3192,8 +3241,6 @@ chinese_unification = {
 			}
 		}
 		available = {
-			NOT = { has_non_aggression_pact_with = FROM }
-			NOT = { has_truce_with = FROM }
 			NOT = { has_wargoal_against = FROM }
 			can_declare_war_on = FROM
 			has_war = no
@@ -3209,6 +3256,18 @@ chinese_unification = {
 						}
 					}
 				}
+			}
+			NOT = {
+				has_non_aggression_pact_with = FROM
+				has_truce_with = FROM
+				is_in_faction_with = FROM
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				has_non_aggression_pact_with = FROM
+				has_truce_with = FROM
+				is_in_faction_with = FROM
 			}
 		}
 		target_root_trigger = {
@@ -3291,6 +3350,21 @@ chinese_unification = {
 					}
 				}
 			}
+			modifier = {
+				factor = 0
+				tag = YUN
+				has_game_rule = { rule = YUN_forpol option = DEFAULT }
+				OR = {
+					AND = {
+						china_alignment_federalists = yes
+						FROM = { china_alignment_federalists = yes }
+					}
+					AND = {
+						china_alignment_right_kuomintang = yes
+						FROM = { china_alignment_right_kuomintang = yes }
+					}
+				}
+			}
 		}
 		days_remove = 30
 
@@ -3328,8 +3402,6 @@ chinese_unification = {
 			NOT = { owns_state = 613 } #Nanjing
 		}
 		available = {
-			NOT = { has_non_aggression_pact_with = FROM }
-			NOT = { has_truce_with = FROM }
 			NOT = { has_wargoal_against = FROM }
 			can_declare_war_on = FROM
 			has_war = no
@@ -3345,6 +3417,18 @@ chinese_unification = {
 						}
 					}
 				}
+			}
+			NOT = {
+				has_non_aggression_pact_with = FROM
+				has_truce_with = FROM
+				is_in_faction_with = FROM
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				has_non_aggression_pact_with = FROM
+				has_truce_with = FROM
+				is_in_faction_with = FROM
 			}
 		}
 		target_root_trigger = {
@@ -3414,8 +3498,6 @@ chinese_unification = {
 			NOT = { owns_state = 1048 } #Wuhan
 		}
 		available = {
-			NOT = { has_non_aggression_pact_with = FROM }
-			NOT = { has_truce_with = FROM }
 			NOT = { has_wargoal_against = FROM }
 			can_declare_war_on = FROM
 			has_war = no
@@ -3431,6 +3513,18 @@ chinese_unification = {
 						}
 					}
 				}
+			}
+			NOT = {
+				has_non_aggression_pact_with = FROM
+				has_truce_with = FROM
+				is_in_faction_with = FROM
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				has_non_aggression_pact_with = FROM
+				has_truce_with = FROM
+				is_in_faction_with = FROM
 			}
 		}
 		target_root_trigger = {
@@ -3722,6 +3816,23 @@ chinese_unification = {
 					}
 				}
 				NOT = { has_war_with = QIE } #Follow this logic only if not already at war with QIE
+				NOT = {
+					OR = {
+						AND = {
+							tag = SZC #Follow this logic as Fed Exile to unlock war with Beijing, and as Liu Xiang to achieve Grandiose Plan
+							has_war = no
+							FROM = {
+								OR = {
+									original_tag = YUN
+									original_tag = HNN
+									original_tag = GXC
+									controls_state = 592
+								}
+								has_war = yes
+							}
+						}
+					}
+				}
 			}
 			modifier = {
 				factor = 0
@@ -3829,10 +3940,6 @@ chinese_unification = {
 							progress > 0
 						}
 					}
-					AND = {
-						has_country_leader = { character = SZC_liu_xiang }
-						NOT = { has_country_flag = SZC_opium_crisis_solved }
-					}
 				}
 			}
 			modifier = {
@@ -3867,6 +3974,14 @@ chinese_unification = {
 							progress > 0
 						}
 					}
+					AND = {
+						FROM = {
+							original_tag = QIE
+							has_war = no
+						}
+						date < 1938.1.1
+					}
+					# removed Liu Xiang because removing opium through monopoly system takes a very long time
 				}
 			}
 			modifier = {
@@ -4131,6 +4246,20 @@ chinese_unification = {
 						}
 					}
 					FROM = { china_is_aligned_with_manchu = yes }
+				}
+			}
+			modifier = {
+				factor = 25
+				original_tag = SZC
+				has_war = no
+				FROM = {
+					OR = {
+						original_tag = YUN
+						original_tag = HNN
+						original_tag = GXC
+						original_tag = QIE
+					}
+					has_war = yes
 				}
 			}
 		}
@@ -4432,6 +4561,9 @@ chinese_unification = {
 							GXC = { has_country_flag = CHN_SCW_neutral_flag }
 						}
 						CHN_south_china_war_over_trigger = yes
+						date > 1938.1.1
+						ROOT = { tag = HNN }
+						ROOT = { tag = YUN }
 					}
 				}
 				else_if = {
@@ -4445,6 +4577,8 @@ chinese_unification = {
 						date > 1938.1.1
 						YUN = { is_subject = yes }
 						GXC = { is_subject = yes }
+						ROOT = { tag = GXC }
+						ROOT = { tag = YUN }
 					}
 				}
 				else_if = {
@@ -4463,6 +4597,12 @@ chinese_unification = {
 				else_if = {
 					limit = { tag = YUN }
 					YUN_is_phase_1_trigger = no
+					OR = {
+						CHN_south_china_war_over_trigger = yes
+						date > 1938.1.1
+						ROOT = { tag = GXC }
+						ROOT = { tag = HNN }
+					}
 				}
 			}
 			CHN_has_revolted = no
@@ -4763,13 +4903,8 @@ chinese_unification = {
 									tag = HNN	# SocDem HNN refers LKT -> RKT -> UPC -> NPA
 									has_country_leader = { character = HNN_tang_shengzhi }
 									has_completed_focus = HNN_victory_of_the_united_front
-									any_country = {
-										OR = {
-											original_tag = CHI
-											original_tag = GXC
-											original_tag = YUN
-											original_tag = SZC
-										}
+									any_country_of = {
+										target = { CHI GXC YUN SZC }
 										china_is_aligned_with_southern_republicans = yes
 										exists = yes
 										is_subject = no
@@ -4807,13 +4942,8 @@ chinese_unification = {
 								tag = HNN	# SocDem HNN refers LKT -> RKT -> UPC -> NPA
 								has_country_leader = { character = HNN_tang_shengzhi }
 								has_completed_focus = HNN_victory_of_the_united_front
-								any_country = {
-									OR = {
-										original_tag = CHI
-										original_tag = GXC
-										original_tag = YUN
-										original_tag = SZC
-									}
+								any_country_of = {
+									target = { CHI GXC YUN SZC }
 									china_is_aligned_with_southern_republicans = yes
 									exists = yes
 									is_subject = no
@@ -5442,13 +5572,8 @@ chinese_unification = {
 				has_country_leader = { character = HNN_tang_shengzhi }
 				has_completed_focus = HNN_victory_of_the_united_front
 				NOT = {
-					any_country = {
-						OR = {
-							original_tag = CHI
-							original_tag = GXC
-							original_tag = YUN
-							original_tag = SZC
-						}
+					any_country_of = {
+						target = { CHI GXC YUN SZC }
 						china_is_aligned_with_southern_republicans = yes
 						exists = yes
 						is_subject = no
@@ -5998,12 +6123,8 @@ chinese_unification = {
 				factor = 0
 				tag = SZC	#SZC will only join AGJ if Feds are dead and Opium is resolved
 				OR = {
-					any_country = {
-						OR = {
-							tag = GXC
-							tag = HNN
-							tag = YUN
-						}
+					any_country_of = {
+						target = { GXC HNN YUN }
 						china_is_aligned_with_federalists = yes
 						exists = yes
 						is_subject = no
@@ -6091,13 +6212,8 @@ chinese_unification = {
 						has_country_leader = { character = HNN_tang_shengzhi }
 						has_completed_focus = HNN_victory_of_the_united_front
 						NOT = {	# Tang Shengzhi will join UPC if KMT can't exist
-							any_country = {
-								OR = {
-									original_tag = CHI
-									original_tag = GXC
-									original_tag = YUN
-									original_tag = SZC
-								}
+							any_country_of = {
+								target = { CHI GXC YUN SZC }
 								china_is_aligned_with_kmt = yes
 								exists = yes
 								is_subject = no
@@ -6462,13 +6578,8 @@ chinese_unification = {
 				factor = 0
 				tag = HNN	# SocDem HNN refers LKT -> RKT -> UPC -> NPA
 				has_country_leader = { character = HNN_tang_shengzhi }
-				any_country = {
-					OR = {
-						original_tag = CHI
-						original_tag = GXC
-						original_tag = YUN
-						original_tag = SZC
-					}
+				any_country_of = {
+					target = { CHI GXC YUN SZC }
 					china_is_aligned_with_left_kmt = yes
 					exists = yes
 					is_subject = no
@@ -6907,7 +7018,6 @@ chinese_unification = {
 
 		fire_only_once = yes
 		state_target = yes
-		cancel_if_not_visible = yes
 		cost = 0
 
 		highlight_states = {
@@ -7138,7 +7248,6 @@ chinese_unification = {
 		}
 
 		fire_only_once = yes
-		cancel_if_not_visible = yes
 		cost = 50
 		target_non_existing = yes
 
@@ -7805,8 +7914,7 @@ china_league_collapse_decisions = {
 		days_mission_timeout = 25
 		timeout_effect = {
 			log = "[GetLogRoot]: Decision timeout china_take_nanjing"
-			set_temp_variable = { change_league_war_morale_by = -8 }
-			add_to_temp_variable = { change_league_war_morale_by = china_morale_collapse_rate }
+			set_temp_variable = { change_league_war_morale_by = { value = -8 add = china_morale_collapse_rate } }
 			add_to_variable = { china_morale_collapse_rate = -1 }
 			china_update_morale = yes
 			custom_effect_tooltip = china_league_war_mission_loop
@@ -10918,7 +11026,14 @@ china_land_reform_decisions = {
 						#Defaults to boosting Rad Socs, except for Hu Hanmin's and I guess the Nat Pops paths.
 						if = {
 							limit = {
-								ROOT = { has_country_leader = { character = GXC_hu_hanmin } }
+								ROOT = {
+									OR = {
+										has_country_leader = { character = GXC_hu_hanmin }
+										has_country_leader = { character = YUN_dai_jitao }
+										has_country_leader = { character = YUN_chen_lifu }
+										has_country_leader = { character = YUN_he_yingqin }
+									}
+								}
 							}
 							if = {
 								limit = { NOT = { has_government = authoritarian_democrat } }
@@ -10939,10 +11054,7 @@ china_land_reform_decisions = {
 						else_if = {
 							limit = {
 								ROOT = {
-									OR = {
-										has_country_leader = { character = YUN_he_yingqin }
-										has_country_leader = { character = YUN_teng_jie }
-									}
+									has_country_leader = { character = YUN_teng_jie }
 								}
 							}
 							if = {
