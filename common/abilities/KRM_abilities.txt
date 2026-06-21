@@ -34,20 +34,15 @@ ability = {
 		cost = 0.25
 		duration = 168
 
-		one_time_effect = {
-			add_temporary_buff_to_units = {
-				combat_offense = 2
-				combat_breakthrough = 2
-				combat_defense = 2
-				combat_entrenchment = 2
-				org_damage_multiplier = -1.0
-				str_damage_multiplier = 10
-				war_support_reduction_on_damage = 1
-				cannot_retreat_while_attacking = 1.0
-
-				days = 7
-				tooltip = ABILITY_FORCE_ZIWENGUITIAN_TOOLTIP
-			}
+		unit_modifiers = {
+			combat_offense = 2
+			combat_breakthrough = 2
+			combat_defense = 2
+			combat_entrenchment = 2
+			org_damage_multiplier = -1.0
+			str_damage_multiplier = 10
+			war_support_reduction_on_damage = 1
+			cannot_retreat_while_attacking = 1.0
 		}
 	}
 	fireball = {
@@ -88,16 +83,14 @@ ability = {
 		cost = 0.1
 		duration = 168
 
-		one_time_effect = {
-			add_temporary_buff_to_units = {
-				combat_offense = 0.3
-				combat_breakthrough = 3
-				combat_entrenchment = 1
-				org_damage_multiplier = -0.5
+		unit_modifiers = {
+			combat_offense = 0.3
+			combat_breakthrough = 3
+			combat_entrenchment = 1
+			org_damage_multiplier = -0.5
+		}
 
-				days = 7
-				tooltip = ABILITY_FIREBALL_TOOLTIP
-			}
+		one_time_effect = {
 			add_equipment_to_stockpile = {
 				type = fireball_equipment_1
 				amount = -1

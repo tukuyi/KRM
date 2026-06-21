@@ -57,12 +57,10 @@ scripted_gui = {
 				meta_effect = {
 					text = {
 						[KMD_GOD] = {
-							add_temporary_buff_to_units = {
-								combat_offense = 0.35
-								combat_breakthrough = 0.35
-								war_support_reduction_on_damage = -0.5
+							add_timed_unit_leader_trait = {
+								trait = KMD_god_stronger_trait
 								days = 90
-							}	
+							}
 						}
 					}
 					KMD_GOD = "[?SZC_KMD_chosen_god.GetTokenKey]"
