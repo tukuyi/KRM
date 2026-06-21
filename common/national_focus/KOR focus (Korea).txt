@@ -3605,7 +3605,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_long_live_kongmeng
-		icon = GFX_focus_KOR_long_live_kongmeng
+		icon = GFX_goal_KOR_long_live_kongmeng
 		cost = 3
 
 		relative_position_id = KOR_free_at_long_last
@@ -3643,7 +3643,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_push_religion_awake
-		icon = GFX_focus_KOR_push_religion_awake
+		icon = GFX_goal_KOR_push_religion_awake
 		cost = 3
 
 		relative_position_id = KOR_long_live_kongmeng
@@ -3654,12 +3654,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_push_religion_awake"
+			add_political_power = 600
+			add_stability = -0.15
+			add_war_support = 0.3
 		}
 	}
 
 	focus = {
 		id = KOR_lord_and_people
-		icon = GFX_focus_KOR_lord_and_people
+		icon = GFX_goal_KOR_lord_and_people
 		cost = 3
 
 		relative_position_id = KOR_long_live_kongmeng
@@ -3670,12 +3673,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_lord_and_people"
+			
+			every_owned_state = {
+				limit = { is_controlled_by = ROOT }
+				add_extra_state_shared_building_slots = 2
+			}
 		}
 	}
 
 	focus = {
 		id = KOR_justice_and_righteousness
-		icon = GFX_focus_KOR_justice_and_righteousness
+		icon = GFX_goal_KOR_justice_and_righteousness
 		cost = 3
 
 		relative_position_id = KOR_long_live_kongmeng
@@ -3686,12 +3694,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_justice_and_righteousness"
+			add_research_slot_until_five = yes
 		}
 	}
 
 	focus = {
 		id = KOR_reintegrate_old_guard
-		icon = GFX_focus_KOR_reintegrate_old_guard
+		icon = GFX_goal_KOR_reintegrate_old_guard
 		cost = 3
 
 		relative_position_id = KOR_long_live_kongmeng
@@ -3702,12 +3711,25 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_reintegrate_old_guard"
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.1
+			}
+			add_stability = 0.15
 		}
 	}
 
 	focus = {
 		id = KOR_our_realm_the_korea
-		icon = GFX_focus_KOR_our_realm_the_korea
+		icon = GFX_goal_KOR_our_realm_the_korea
 		cost = 3
 
 		relative_position_id = KOR_long_live_kongmeng
@@ -3720,12 +3742,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_our_realm_the_korea"
+			KOR_improve_legitimacy_effect = yes
 		}
 	}
 
 	focus = {
 		id = KOR_old_suzerain
-		icon = GFX_focus_KOR_old_suzerain
+		icon = GFX_goal_KOR_old_suzerain
 		cost = 3
 
 		relative_position_id = KOR_long_live_kongmeng
@@ -3734,6 +3757,13 @@ focus_tree = {
 
 		prerequisite = { focus = KOR_our_realm_the_korea }
 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KOR_lp_lcx_tt
+				has_country_leader = { character = KOR_yi_wu }
+			}
+		}
+
 		mutually_exclusive = {
 			focus = KOR_the_republic_in_awake
 			focus = KOR_all_under_heaven
@@ -3741,12 +3771,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_old_suzerain"
+			swap_ideas = {
+				remove_idea = KOR_legitimacy_idea_3
+				add_idea = KOR_legitimacy_KMD
+			}
+			add_popularity = { ideology = social_conservative popularity = 0.1 }
 		}
 	}
 
 	focus = {
 		id = KOR_unhyeongung_legacy
-		icon = GFX_focus_KOR_unhyeongung_legacy
+		icon = GFX_goal_KOR_unhyeongung_legacy
 		cost = 3
 
 		relative_position_id = KOR_old_suzerain
@@ -3758,12 +3793,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_unhyeongung_legacy"
+			add_stability = 0.15
 		}
 	}
 
 	focus = {
 		id = KOR_constitutionalist_goal
-		icon = GFX_focus_KOR_constitutionalist_goal
+		icon = GFX_goal_KOR_constitutionalist_goal
 		cost = 3
 
 		relative_position_id = KOR_old_suzerain
@@ -3776,12 +3812,19 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_constitutionalist_goal"
+			set_temp_variable = { coalition_partner_var = token:social_democrat }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:market_liberal }
+			add_to_coalition = yes
+			add_stability = 0.1
 		}
 	}
 
 	focus = {
 		id = KOR_rebuild_old_ties
-		icon = GFX_focus_KOR_rebuild_old_ties
+		icon = GFX_goal_KOR_rebuild_old_ties
 		cost = 3
 
 		relative_position_id = KOR_old_suzerain
@@ -3793,12 +3836,21 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_rebuild_old_ties"
+			SZC = {
+				add_stability = 0.1
+				add_war_support = 0.1
+				add_political_power = 50
+			}
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 		}
 	}
 
 	focus = {
 		id = KOR_the_republic_in_awake
-		icon = GFX_focus_KOR_the_republic_in_awake
+		icon = GFX_goal_KOR_the_republic_in_awake
 		cost = 3
 
 		relative_position_id = KOR_long_live_kongmeng
@@ -3807,6 +3859,13 @@ focus_tree = {
 
 		prerequisite = { focus = KOR_our_realm_the_korea }
 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KOR_lp_jsp_tt
+				has_country_leader = { character = KOR_so_taesan }
+			}
+		}
+
 		mutually_exclusive = {
 			focus = KOR_old_suzerain
 			focus = KOR_all_under_heaven
@@ -3814,12 +3873,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_the_republic_in_awake"
+			swap_ideas = {
+				remove_idea = KOR_legitimacy_idea_3
+				add_idea = KOR_legitimacy_KMD
+			}
+			add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
 		}
 	}
 
 	focus = {
 		id = KOR_destroy_old_chains
-		icon = GFX_focus_KOR_destroy_old_chains
+		icon = GFX_goal_KOR_destroy_old_chains
 		cost = 3
 
 		relative_position_id = KOR_the_republic_in_awake
@@ -3833,12 +3897,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_destroy_old_chains"
+			add_stability = 0.15
 		}
 	}
 
 	focus = {
 		id = KOR_spirit_continues
-		icon = GFX_focus_KOR_spirit_continues
+		icon = GFX_goal_KOR_spirit_continues
 		cost = 3
 
 		relative_position_id = KOR_the_republic_in_awake
@@ -3852,12 +3917,16 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_spirit_continues"
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.15
+			}
 		}
 	}
 
 	focus = {
 		id = KOR_cooperative_movement
-		icon = GFX_focus_KOR_cooperative_movement
+		icon = GFX_goal_KOR_cooperative_movement
 		cost = 3
 
 		relative_position_id = KOR_the_republic_in_awake
@@ -3874,12 +3943,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_cooperative_movement"
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 		}
 	}
 
 	focus = {
 		id = KOR_reclaim_minjujuui
-		icon = GFX_focus_KOR_reclaim_minjujuui
+		icon = GFX_goal_KOR_reclaim_minjujuui
 		cost = 3
 
 		relative_position_id = KOR_the_republic_in_awake
@@ -3894,12 +3969,33 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_reclaim_minjujuui"
+			add_stability = 0.1
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.8
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.8
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.8
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.8
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.8
+			}
 		}
 	}
 
 	focus = {
 		id = KOR_the_greatest_honor
-		icon = GFX_focus_KOR_the_greatest_honor
+		icon = GFX_goal_KOR_the_greatest_honor
 		cost = 3
 
 		relative_position_id = KOR_old_suzerain
@@ -3919,17 +4015,32 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_the_greatest_honor"
+			swap_ideas = {
+				remove_idea = KOR_legitimacy_KMD
+				add_idea = KOR_legitimacy_LCX
+			}
 		}
 	}
 
 	focus = {
 		id = KOR_revenge_for_1910
-		icon = GFX_focus_KOR_revenge_for_1910
+		icon = GFX_goal_KOR_revenge_for_1910
 		cost = 3
 
 		relative_position_id = KOR_old_suzerain
 		x = 0
 		y = 4
+
+		available = {
+			OR = {
+				JAP = {
+					exists = no
+				}
+				JAP = {
+					is_puppet_of = SZC
+				}
+			}
+		}
 
 		prerequisite = {
 			focus = KOR_the_greatest_honor
@@ -3938,12 +4049,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_revenge_for_1910"
+			SZC = {
+				country_event = { id = NKRsichuanpuppet.74 }
+			}
 		}
 	}
 
 	focus = {
 		id = KOR_universal_truth
-		icon = GFX_focus_KOR_universal_truth
+		icon = GFX_goal_KOR_universal_truth
 		cost = 3
 
 		relative_position_id = KOR_the_republic_in_awake
@@ -3960,12 +4074,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_universal_truth"
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.15
+			}
+			add_research_slot_until_five = yes
+			add_political_power = 200
 		}
 	}
 
 	focus = {
 		id = KOR_korean_cooperatism
-		icon = GFX_focus_KOR_korean_cooperatism
+		icon = GFX_goal_KOR_korean_cooperatism
 		cost = 3
 
 		relative_position_id = KOR_the_republic_in_awake
@@ -3979,17 +4099,26 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_universal_truth"
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_stability = 0.2
+			add_ideas = { KOR_korean_corporatism_idea }
 		}
 	}
 
 	focus = {
 		id = KOR_peace_for_all_humanity
-		icon = GFX_focus_KOR_peace_for_all_humanity
+		icon = GFX_goal_KOR_peace_for_all_humanity
 		cost = 3
 
 		relative_position_id = KOR_the_republic_in_awake
 		x = 0
 		y = 4
+
+		available = {
+			has_completed_focus = KOR_korean_cooperatism
+		}
 
 		prerequisite = {
 			focus = KOR_universal_truth
@@ -3998,12 +4127,16 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_peace_for_all_humanity"
+			swap_ideas = {
+				remove_idea = KOR_legitimacy_KMD
+				add_idea = KOR_legitimacy_JSP
+			}
 		}
 	}
 
 	focus = {
 		id = KOR_all_under_heaven
-		icon = GFX_focus_KOR_all_under_heaven
+		icon = GFX_goal_KOR_all_under_heaven
 		cost = 3
 
 		relative_position_id = KOR_long_live_kongmeng
@@ -4012,6 +4145,13 @@ focus_tree = {
 
 		prerequisite = { focus = KOR_our_realm_the_korea }
 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = KOR_lp_lcy_tt
+				has_country_leader = { character = KOR_cha_yunhong }
+			}
+		}
+
 		mutually_exclusive = {
 			focus = KOR_old_suzerain
 			focus = KOR_the_republic_in_awake
@@ -4019,12 +4159,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_all_under_heaven"
+			
+			swap_ideas = {
+				remove_idea = KOR_legitimacy_idea_3
+				add_idea = KOR_legitimacy_KMD
+			}
+			add_popularity = { ideology = national_populist popularity = 0.1 }
 		}
 	}
 
 	focus = {
 		id = KOR_salvation_for_our_nation
-		icon = GFX_focus_KOR_salvation_for_our_nation
+		icon = GFX_goal_KOR_salvation_for_our_nation
 		cost = 3
 
 		relative_position_id = KOR_all_under_heaven
@@ -4035,12 +4181,16 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_salvation_for_our_nation"
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.1
+			}
 		}
 	}
 
 	focus = {
 		id = KOR_heaven_and_earth
-		icon = GFX_focus_KOR_heaven_and_earth
+		icon = GFX_goal_KOR_heaven_and_earth
 		cost = 3
 
 		relative_position_id = KOR_all_under_heaven
@@ -4051,12 +4201,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_heaven_and_earth"
+			add_stability = 0.2
+			add_war_support = 0.2
 		}
 	}
 
 	focus = {
 		id = KOR_pure_heart
-		icon = GFX_focus_KOR_pure_heart
+		icon = GFX_goal_KOR_pure_heart
 		cost = 3
 
 		relative_position_id = KOR_all_under_heaven
@@ -4068,12 +4220,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_pure_heart"
+			add_manpower = -1000
+			add_popularity = {
+				ideology = national_populist
+				popularity = 1
+			}
 		}
 	}
 
 	focus = {
 		id = KOR_friendly_coexistence
-		icon = GFX_focus_KOR_friendly_coexistence
+		icon = GFX_goal_KOR_friendly_coexistence
 		cost = 3
 
 		relative_position_id = KOR_all_under_heaven
@@ -4085,12 +4242,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_friendly_coexistence"
+			add_manpower = -1000
+			add_war_support = 1
 		}
 	}
 
 	focus = {
 		id = KOR_generous_spirit
-		icon = GFX_focus_KOR_generous_spirit
+		icon = GFX_goal_KOR_generous_spirit
 		cost = 3
 
 		relative_position_id = KOR_all_under_heaven
@@ -4102,12 +4261,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_generous_spirit"
+			add_manpower = -1000
+			add_political_power = 10000
 		}
 	}
 
 	focus = {
 		id = KOR_ward_off_illness
-		icon = GFX_focus_KOR_ward_off_illness
+		icon = GFX_goal_KOR_ward_off_illness
 		cost = 3
 
 		relative_position_id = KOR_all_under_heaven
@@ -4119,12 +4280,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_ward_off_illness"
+			add_manpower = -1000
+			add_stability = 1
 		}
 	}
 
 	focus = {
 		id = KOR_sixty_squares_as_one
-		icon = GFX_focus_KOR_sixty_squares_as_one
+		icon = GFX_goal_KOR_sixty_squares_as_one
 		cost = 3
 
 		relative_position_id = KOR_all_under_heaven
@@ -4138,12 +4301,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_sixty_squares_as_one"
+			add_ideas = { KOR_sixty_as_one_idea }
 		}
 	}
 
 	focus = {
 		id = KOR_as_jade_emperor_should_be
-		icon = GFX_focus_KOR_as_jade_emperor_should_be
+		icon = GFX_goal_KOR_as_jade_emperor_should_be
 		cost = 3
 
 		relative_position_id = KOR_all_under_heaven
@@ -4154,6 +4318,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_as_jade_emperor_should_be"
+			
+			swap_ideas = {
+				remove_idea = KOR_legitimacy_KMD
+				add_idea = KOR_legitimacy_LCY
+			}
 		}
 	}
 }
