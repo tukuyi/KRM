@@ -1,16 +1,14 @@
 SZC_recruit_character_effect = {#招募
+	
 	if = {
 		limit = {
 			NOT = {
 				THIS = { has_character_flag = is_dead }
+				SZC = { has_character = PREV }
 			}
 		}
-		if = {
-			limit = { THIS = { is_army_leader = yes } }
-			demote_to_general = yes
-			remove_trait = { trait = recently_promoted }
-		}
 		set_nationality = SZC
+		demote_to_general = yes
 	}
 }
 
