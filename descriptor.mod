@@ -21,5 +21,5 @@ dependencies={
 }
 name="Kaiserreich: 命运新生"
 picture="Thumbnail.png"
-supported_version="1.17.*"
+supported_version="1.19.*"
 remote_file_id="3654510042"
