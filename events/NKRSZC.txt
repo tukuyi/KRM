@@ -11255,6 +11255,13 @@ country_event = { #中国青年党的终结
 		SZC_xia_taosheng = {
 			promote_character = market_liberal_subtype
 		}
+		SZC_assorted_leaders = {
+			promote_character = social_conservative_subtype
+			promote_character = authoritarian_democrat_subtype
+			promote_character = paternal_autocrat_subtype
+			promote_character = national_populist_subtype
+			promote_character = social_liberal_subtype
+		}
 		activate_advisor = SZC_lei_zhen_sic
 		set_politics = {
 			ruling_party = market_liberal
@@ -20955,7 +20962,9 @@ country_event = { #昆仑万国
 			}
 			every_state = {
 				limit = {
-					is_on_continent = africa
+					OR = {
+						is_on_continent = africa
+					}
 				}
 				add_claim_by = TZN
 				TZN = {
@@ -25948,6 +25957,11 @@ country_event = { #
 		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:USA_liu_chengxun }
 		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:JAP_liu_chengxun }
 		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:PRU_liu_chengxun }
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:ARG_liu_chengxun }
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:AFR_liu_chengxun }
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:MEX_liu_chengxun }
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:COL_liu_chengxun }
+		is_in_array = { ROOT.SZC_KMD_chengxun_clothes = token:BRA_liu_chengxun }
 	}
 	fire_only_once = yes
 	

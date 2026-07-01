@@ -35657,7 +35657,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 100
+			add = 0
 			tag = SZC
 		}
 	}
@@ -38092,11 +38092,11 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_cheers_for_justice_wins
 
-		# allow_branch = {
-		# 	has_global_flag = china_united
-		# 	has_country_flag = SZC_KMD_phase_3
-		# 	has_country_flag = SZC_KMD_chengxun_path
-		# }
+		allow_branch = {
+			has_global_flag = china_united
+			has_country_flag = SZC_KMD_phase_3
+			has_country_flag = SZC_KMD_chengxun_path
+		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_dahan_reunited"
