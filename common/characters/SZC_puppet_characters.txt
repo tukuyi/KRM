@@ -567,7 +567,7 @@ characters = {
 		}
 		country_leader = {
 			desc = FRA_liu_chengxun_desc
-			ideology = social_conservative_national_conservative_subtype
+			ideology = paternal_autocrat_aristocratic_conservative_subtype
 			traits = { }
 		}
 	}
@@ -615,7 +615,7 @@ characters = {
 		}
 		country_leader = {
 			desc = ENG_liu_chengxun_desc
-			ideology = social_conservative_national_conservative_subtype
+			ideology = paternal_autocrat_aristocratic_conservative_subtype
 			traits = { }
 		}
 	}
@@ -678,7 +678,7 @@ characters = {
 		}
 		country_leader = {
 			desc = GRU_liu_chengxun_desc
-			ideology = social_conservative_national_conservative_subtype
+			ideology = paternal_autocrat_aristocratic_conservative_subtype
 			traits = { }
 		}
 	}
@@ -758,7 +758,7 @@ characters = {
 		}
 		country_leader = {
 			desc = JAP_liu_chengxun_desc
-			ideology = social_conservative_national_conservative_subtype
+			ideology = paternal_autocrat_aristocratic_conservative_subtype
 			traits = { }
 		}
 	}
@@ -822,7 +822,7 @@ characters = {
 		}
 		country_leader = {
 			desc = KOR_yi_wu_desc
-			ideology = social_conservative_national_conservative_subtype
+			ideology = paternal_autocrat_aristocratic_conservative_subtype
 			traits = { }
 		}
 	}
@@ -886,7 +886,7 @@ characters = {
 		}
 		country_leader = {
 			desc = RSA_liu_chengxun_desc
-			ideology = social_conservative_national_conservative_subtype
+			ideology = paternal_autocrat_aristocratic_conservative_subtype
 			traits = { }
 		}
 	}
@@ -902,7 +902,7 @@ characters = {
 		}
 		country_leader = {
 			desc = TUR_liu_chengxun_desc
-			ideology = social_conservative_national_conservative_subtype
+			ideology = paternal_autocrat_aristocratic_conservative_subtype
 			traits = { }
 		}
 	}
@@ -950,7 +950,7 @@ characters = {
 		}
 		country_leader = {
 			desc = USA_liu_chengxun_desc
-			ideology = social_conservative_national_conservative_subtype
+			ideology = paternal_autocrat_aristocratic_conservative_subtype
 			traits = { }
 		}
 	}
@@ -998,7 +998,87 @@ characters = {
 		}
 		country_leader = {
 			desc = PRU_liu_chengxun_desc
-			ideology = social_conservative_national_conservative_subtype
+			ideology = paternal_autocrat_aristocratic_conservative_subtype
+			traits = { }
+		}
+	}
+
+	#刘成勋
+	BRA_liu_chengxun = {
+		name = BRA_liu_chengxun
+		portraits = {
+			civilian = {
+				small = GFX_portrait_BRA_liu_chengxun_small
+				large = GFX_portrait_BRA_liu_chengxun_large
+			}
+		}
+		country_leader = {
+			desc = BRA_liu_chengxun_desc
+			ideology = paternal_autocrat_aristocratic_conservative_subtype
+			traits = { }
+		}
+	}
+
+	#刘成勋
+	MEX_liu_chengxun = {
+		name = MEX_liu_chengxun
+		portraits = {
+			civilian = {
+				small = GFX_portrait_MEX_liu_chengxun_small
+				large = GFX_portrait_MEX_liu_chengxun_large
+			}
+		}
+		country_leader = {
+			desc = MEX_liu_chengxun_desc
+			ideology = paternal_autocrat_aristocratic_conservative_subtype
+			traits = { }
+		}
+	}
+
+	#刘成勋
+	COL_liu_chengxun = {
+		name = COL_liu_chengxun
+		portraits = {
+			civilian = {
+				small = GFX_portrait_COL_liu_chengxun_small
+				large = GFX_portrait_COL_liu_chengxun_large
+			}
+		}
+		country_leader = {
+			desc = COL_liu_chengxun_desc
+			ideology = paternal_autocrat_aristocratic_conservative_subtype
+			traits = { }
+		}
+	}
+
+	#刘成勋
+	ARG_liu_chengxun = {
+		name = ARG_liu_chengxun
+		portraits = {
+			civilian = {
+				small = GFX_portrait_ARG_liu_chengxun_small
+				large = GFX_portrait_ARG_liu_chengxun_large
+			}
+		}
+		country_leader = {
+			desc = ARG_liu_chengxun_desc
+			ideology = paternal_autocrat_aristocratic_conservative_subtype
+			traits = { }
+		}
+	}
+
+	#刘成勋
+	AFR_liu_chengxun = {
+		name = AFR_liu_chengxun
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AFR_liu_chengxun_small
+				large = GFX_portrait_AFR_liu_chengxun_large
+			}
+		}
+		country_leader = {
+			desc = AFR_liu_chengxun_desc
+			ideology = paternal_autocrat_aristocratic_conservative_subtype
 			traits = { }
 		}
 	}

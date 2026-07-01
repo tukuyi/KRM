@@ -32653,8 +32653,9 @@ focus_tree = {
 					exists = yes
 					has_democratic_government = no
 				}
-				
-				activate_targeted_decision = { target = PREV decision = SZC_YCP_liberation_war_decision } 
+				ROOT = {
+					activate_targeted_decision = { target = PREV decision = SZC_YCP_liberation_war_decision } 
+				}
 			}
 			
 		}
@@ -35656,7 +35657,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 100
 			tag = SZC
 		}
 	}
@@ -38091,11 +38092,11 @@ focus_tree = {
 
 		relative_position_id = SZC_KMD_cheers_for_justice_wins
 
-		allow_branch = {
-			has_global_flag = china_united
-			has_country_flag = SZC_KMD_phase_3
-			has_country_flag = SZC_KMD_chengxun_path
-		}
+		# allow_branch = {
+		# 	has_global_flag = china_united
+		# 	has_country_flag = SZC_KMD_phase_3
+		# 	has_country_flag = SZC_KMD_chengxun_path
+		# }
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_dahan_reunited"
@@ -38520,9 +38521,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_appoint_hu_ying_cabinet"
-			set_politics = {
-				ruling_party = social_conservative
-			}
+			custom_effect_tooltip = SZC_KMD_appoint_hu_ying_cabinet_tt
+			set_country_leader_ideology = paternal_autocrat_aristocratic_conservative_subtype
 			HNN_hu_ying = {
 				add_advisor_role = {
 					advisor = {
@@ -38535,7 +38535,7 @@ focus_tree = {
 				}
 			}
 			set_party_name = {
-				ideology = social_conservative
+				ideology = paternal_autocrat
 				name = SZC_KMD_hu_ying_cabinet_party
 				long_name = SZC_KMD_hu_ying_cabinet_party_long
 			}
@@ -38574,7 +38574,7 @@ focus_tree = {
 				ideology = paternal_autocrat
 				popularity = 0.03
 			}
-			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+			set_temp_variable = { coalition_partner_var = token:social_conservative}
 			add_to_coalition = yes
 			hidden_effect = {
 				country_event = {
@@ -38696,6 +38696,12 @@ focus_tree = {
 					ideology = social_conservative_national_conservative_subtype
 					trait = SZC_KMD_constitutiional_tianzi_trait
 				}
+				hidden_effect = {
+					add_trait = {
+						ideology = paternal_autocrat_subtype
+						trait = SZC_KMD_constitutiional_tianzi_trait
+					}
+				}
 			}
 			hidden_effect = {
 				country_event = {
@@ -38724,6 +38730,10 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_planning_and_moderate_social_reform"
 			add_popularity = {
 				ideology = social_conservative
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
 				popularity = 0.03
 			}
 			china_generic_land_reform_setup = yes

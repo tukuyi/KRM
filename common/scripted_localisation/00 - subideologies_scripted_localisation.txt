@@ -50,7 +50,7 @@ defined_text = {
 	text = { trigger = { has_country_leader_ideology = social_conservative_statist_subtype } localization_key = social_conservative_statist_subtype }#国家主义-社保
 	text = { trigger = { has_country_leader_ideology = social_conservative_orthodox_tridemist_subtype } localization_key = social_conservative_orthodox_tridemist_subtype }#正统三民主义
 	text = { trigger = { has_country_leader_ideology = social_conservative_anarchist_statist_subtype } localization_key = social_conservative_anarchist_statist_subtype }#无政府国家主义
-	text = { trigger = { has_country_leader_ideology = social_conservative_national_conservative_subtype } localization_key = social_conservative_national_conservative_subtype }#民族保守主义
+	text = { trigger = { has_country_leader_ideology = social_conservative_paternalistic_conservative_subtype } localization_key = social_conservative_paternalistic_conservative_subtype }#家长制保守主义
 
 	#Authoritarian Democrat
 	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_statist_subtype } localization_key = authoritarian_democrat_statist_subtype }#国家主义-威民
@@ -69,6 +69,8 @@ defined_text = {
 	text = { trigger = { has_country_leader_ideology = paternal_autocrat_stratocracy_subtype } localization_key = paternal_autocrat_stratocracy_subtype }#军政体制
 	text = { trigger = { has_country_leader_ideology = paternal_autocrat_military_trotskyist_subtype } localization_key = paternal_autocrat_military_trotskyist_subtype }#军政托洛茨基主义
 	text = { trigger = { has_country_leader_ideology = paternal_autocrat_new_people_statist_subtype } localization_key = paternal_autocrat_new_people_statist_subtype }#新民国家主义
+	text = { trigger = { has_country_leader_ideology = paternal_autocrat_national_conservative_subtype } localization_key = paternal_autocrat_national_conservative_subtype }#民族保守主义
+	text = { trigger = { has_country_leader_ideology = paternal_autocrat_aristocratic_conservative_subtype } localization_key = paternal_autocrat_aristocratic_conservative_subtype }#贵族保守主义
 
 	#National Populist
 	text = { trigger = { has_country_leader_ideology = national_populist_british_israelist_subtype } localization_key = national_populist_british_israelist_subtype }#英式以色列主义
