@@ -18804,6 +18804,7 @@ country_event = { #泰西大秦
 				set_cosmetic_tag = FRA_LCX
 				FRA_liu_chengxun = {
 					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					set_character_as_monarch = yes
 				}
 				set_country_leader_as_monarch = yes
 				set_politics = {
@@ -19049,6 +19050,7 @@ country_event = { #大汉的联合王国
 			GBP = {
 				ENG_liu_chengxun = {
 					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					set_character_as_monarch = yes
 				}
 				set_country_leader_as_monarch = yes
 				set_cosmetic_tag = ENG_LCX
@@ -19282,6 +19284,7 @@ country_event = { #神圣德意志han
 			var:tag_to_release = {
 				GRU_liu_chengxun = {
 					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					set_character_as_monarch = yes
 				}
 				set_cosmetic_tag = GRU_LCX
 				set_politics = {
@@ -20135,6 +20138,7 @@ country_event = { #极北皇冠
 			RSA = {
 				RSA_liu_chengxun = {
 					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					set_character_as_monarch = yes
 				}
 				set_cosmetic_tag = RUS_LCX
 				set_politics = {
@@ -20430,6 +20434,7 @@ country_event = { #华盛顿未竟之事
 			USA = {
 				USA_liu_chengxun = {
 					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					set_character_as_monarch = yes
 				}
 				set_cosmetic_tag = USA_LCX
 				set_politics = {
@@ -20841,6 +20846,7 @@ country_event = { #太阳之子与汉家天子
 				set_cosmetic_tag = PRU_LCX
 				PRU_liu_chengxun = {
 					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					set_character_as_monarch = yes
 				}
 				set_politics = {
 					ruling_party = paternal_autocrat
@@ -20883,7 +20889,7 @@ country_event = { #汉城来电
 	id = NKRsichuanpuppet.74
 	title = NKRsichuanpuppet.74.t
 	desc = NKRsichuanpuppet.74.d
-	picture = GFX_report_event_SZC_dongdalu
+	picture = GFX_report_event_SZC_han
 
 	is_triggered_only = yes
 	
@@ -20913,99 +20919,514 @@ country_event = { #汉城来电
 	}
 }
 
-country_event = { #
+country_event = { #昆仑万国
 	id = NKRsichuanpuppet.75
 	title = NKRsichuanpuppet.75.t
 	desc = NKRsichuanpuppet.75.d
-	picture = GFX_report_event_SZC_dongdalu
+	picture = GFX_report_event_SZC_han
 
 	is_triggered_only = yes
-	
+
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				if = {
+					limit = { is_azania = yes }
+					add_core_of = TZN
+				}
+				else = {
+					remove_core_of = TZN
+				}
+				remove_claim_by = TZN
+			}
+			annexations_create_mittelafrika_event_target = yes
+			if = {
+				limit = { original_tag = MAF }
+				save_event_target_as = can_annex
+			}
+			every_state = {
+				limit = {
+					OR = {
+						region = 188 #Lake Victoria
+						state = 892 #Jubaland
+					}
+				}
+				remove_claim_and_add_core_of_target = yes
+			}
+			every_state = {
+				limit = {
+					is_on_continent = africa
+				}
+				add_claim_by = TZN
+				TZN = {
+					PREV = {
+						enable_state_integration_80_compliance = yes
+					}
+				}
+			}
+		}
+	}
 	
 
-	option = {#
+	option = {#同沐王化。
 		log = "[GetLogInfo]: event NKRsichuanpuppet.75 option NKRsichuanpuppet.75.a"
 		name = NKRsichuanpuppet.75.a
+		custom_effect_tooltip = KMD_chengxun_clothe_unlock
+		add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:AFR_liu_chengxun }
+		hidden_effect = {
+			AFR_liu_chengxun = {
+				set_nationality = TZN
+			}
+			set_temp_variable = { tag_to_release = TZN }
+			release_targeted_tag = yes
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+					is_claimed_by = TZN
+				}
+				transfer_state_to = TZN
+			}
+			TZN = {
+				set_cosmetic_tag = AFR_LCX
+				AFR_liu_chengxun = {
+					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					set_character_as_monarch = yes
+				}
+				set_politics = {
+					ruling_party = paternal_autocrat
+				}
+				set_party_name = {
+					ideology = paternal_autocrat
+					name = AFR_LCX_party
+					long_name = AFR_LCX_party_long
+				}
+				set_autonomy = {
+					autonomy_state = crownland
+					end_wars = no
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #潘帕斯银河
 	id = NKRsichuanpuppet.76
 	title = NKRsichuanpuppet.76.t
 	desc = NKRsichuanpuppet.76.d
-	picture = GFX_report_event_SZC_dongdalu
+	picture = GFX_report_event_SZC_han
 
 	is_triggered_only = yes
 	
 	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { country_exists = FOP } }
+				every_state = {
+					if = {
+						limit = { is_argentina = no }
+						remove_core_of = ARG
+					}
+					else = {
+						add_core_of = ARG
+					}
+					remove_claim_by = ARG
+					remove_core_of = FOP
+					remove_claim_by = FOP
+				}
+			}
+			else = {
+				every_state = {
+					if = {
+						limit = { is_argentina = no }
+						remove_core_of = ARG
+					}
+					else = {
+						add_core_of = ARG
+					}
+					remove_claim_by = ARG
+				}
+			}
+			FOP_clear_araucania = yes
+			299 = { retain_state = yes } #Falkland Islands
+			720 = { retain_state = yes } #South Georgia
+			901 = { retain_state = yes } #Southern Chaco
+			1028 = { retain_state = yes } #Tierra del Fuego
+			1074 = { retain_state = yes } #Misiones
+			if = {
+				limit = {
+					FOP = {
+						ROOT_can_grant_land = yes
+						has_socialist_government = yes
+					}
+				}
+				FOP = { save_event_target_as = patagonia add_to_array = { ROOT.potential_grant_targets = THIS } }
+			}
+		}
+	}
 
-	option = {#
+
+	option = {#金金金金金银银银银银
 		log = "[GetLogInfo]: event NKRsichuanpuppet.76 option NKRsichuanpuppet.76.a"
 		name = NKRsichuanpuppet.76.a
+		custom_effect_tooltip = KMD_chengxun_clothe_unlock
+		add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:ARG_liu_chengxun }
+		hidden_effect = {
+			ARG_liu_chengxun = {
+				set_nationality = ARG
+			}
+			set_temp_variable = { tag_to_release = ARG }
+			release_targeted_tag = yes
+			hidden_effect = {
+				var:tag_to_release = { ARG_puppet_setup = yes }
+			}
+			PAR_give_chile_wargoal_if_argentina_occupied = yes
+			ARG = {
+				set_cosmetic_tag = ARG_LCX
+				ARG_liu_chengxun = {
+					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					set_character_as_monarch = yes
+				}
+				set_politics = {
+					ruling_party = paternal_autocrat
+				}
+				set_party_name = {
+					ideology = paternal_autocrat
+					name = ARG_LCX_party
+					long_name = ARG_LCX_party_long
+				}
+				set_autonomy = {
+					autonomy_state = crownland
+					end_wars = no
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_paraguay = yes
+						state = 300
+					}
+				}
+				add_claim_by = ARG
+				ARG = {
+					PREV = {
+						enable_state_integration_80_compliance = yes
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+					is_claimed_by = ARG
+				}
+				transfer_state_to = ARG
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #咖啡与牛奶
 	id = NKRsichuanpuppet.77
 	title = NKRsichuanpuppet.77.t
 	desc = NKRsichuanpuppet.77.d
-	picture = GFX_report_event_SZC_dongdalu
+	picture = GFX_report_event_SZC_han
 
 	is_triggered_only = yes
 	
+	immediate = {
+		hidden_effect = {
+			annexations_reset_brazilian_tags = yes
+			add_to_temp_array = { brazil_grant_targets = 499.id } #Bahia
+			add_to_temp_array = { brazil_grant_targets = 501.id } #São Paulo
+			add_to_temp_array = { brazil_grant_targets = 505.id } #Goyaz
+			annexations_create_brazilian_event_targets = yes
+		}
+	}
 	
 
-	option = {#
+	option = {#寡头新时代。
 		log = "[GetLogInfo]: event NKRsichuanpuppet.77 option NKRsichuanpuppet.77.a"
 		name = NKRsichuanpuppet.77.a
+		custom_effect_tooltip = KMD_chengxun_clothe_unlock
+		add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:BRA_liu_chengxun }
+		hidden_effect = {
+			annexations_release_brazil = yes
+			BRA_liu_chengxun = {
+				set_nationality = BRA
+			}
+			BRA = {
+				set_cosmetic_tag = BRA_LCX
+				BRA_liu_chengxun = {
+					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					set_character_as_monarch = yes
+				}
+				set_politics = {
+					ruling_party = paternal_autocrat
+				}
+				set_party_name = {
+					ideology = paternal_autocrat
+					name = BRA_LCX_party
+					long_name = BRA_LCX_party_long
+				}
+				set_autonomy = {
+					autonomy_state = crownland
+					end_wars = no
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_east_guyana = yes
+						is_suriname = yes
+					}
+				}
+				add_claim_by = BRA
+				BRA = {
+					PREV = {
+						enable_state_integration_80_compliance = yes
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+					is_claimed_by = BRA
+				}
+				transfer_state_to = BRA
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #羽蛇神新朝
 	id = NKRsichuanpuppet.78
 	title = NKRsichuanpuppet.78.t
 	desc = NKRsichuanpuppet.78.d
-	picture = GFX_report_event_SZC_dongdalu
+	picture = GFX_report_event_SZC_han
 
 	is_triggered_only = yes
-	
-	
 
-	option = {#
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				if = {
+					limit = { is_mexico = no }
+					remove_core_of = MEX
+				}
+				else = {
+					add_core_of = MEX
+				}
+				remove_claim_by = MEX
+			}
+			474 = { retain_state = yes } #Yucatan
+		}
+	}
+
+	option = {#龙脉西渐。
 		log = "[GetLogInfo]: event NKRsichuanpuppet.78 option NKRsichuanpuppet.78.a"
 		name = NKRsichuanpuppet.78.a
+		custom_effect_tooltip = KMD_chengxun_clothe_unlock
+		add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:MEX_liu_chengxun }		set_temp_variable = { tag_to_release = MEX }
+		release_targeted_tag = yes
+		hidden_effect = {
+			MEX_liu_chengxun = {
+				set_nationality = MEX
+			}
+			MEX_puppet_setup = yes
+			MEX_puppet_teardown_decisions = yes
+			MEX = {
+				set_cosmetic_tag = MEX_LCX
+				MEX_liu_chengxun = {
+					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					set_character_as_monarch = yes
+				}
+				set_politics = {
+					ruling_party = paternal_autocrat
+				}
+				set_party_name = {
+					ideology = paternal_autocrat
+					name = MEX_LCX_party
+					long_name = MEX_LCX_party_long
+				}
+				set_autonomy = {
+					autonomy_state = crownland
+					end_wars = no
+				}
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #黄金国
 	id = NKRsichuanpuppet.79
 	title = NKRsichuanpuppet.79.t
 	desc = NKRsichuanpuppet.79.d
-	picture = GFX_report_event_SZC_dongdalu
+	picture = GFX_report_event_SZC_han
 
 	is_triggered_only = yes
 	
-	
+	immediate = {
+		hidden_effect = {
+			COL = {
+				drop_cosmetic_tag = yes
+			}
+			854 = { retain_state = yes } #Putumayo
+			if = {
+				limit = {
+					OR = {
+						original_tag = VEN
+						original_tag = ECU
+					}
+				}
+				save_event_target_as = can_annex
+			}
+		}
+	}
 
-	option = {#
+	option = {#黄金国不在传说，而在朝贡。
 		log = "[GetLogInfo]: event NKRsichuanpuppet.79 option NKRsichuanpuppet.79.a"
 		name = NKRsichuanpuppet.79.a
+		custom_effect_tooltip = KMD_chengxun_clothe_unlock
+		add_to_array = { ROOT.SZC_KMD_chengxun_clothes = token:COL_liu_chengxun }
+		hidden_effect = {
+			COL_liu_chengxun = {
+				set_nationality = COL
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_gran_colombia = yes
+						is_guyana = yes
+					}
+				}
+				add_claim_by = COL
+				COL = {
+					PREV = {
+						enable_state_integration_80_compliance = yes
+					}
+				}
+			}
+			set_temp_variable = { tag_to_release = COL }
+			release_targeted_tag = yes
+			COL = {
+				set_cosmetic_tag = COL_LCX
+				COL_liu_chengxun = {
+					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					set_character_as_monarch = yes
+				}
+				set_politics = {
+					ruling_party = paternal_autocrat
+				}
+				set_party_name = {
+					ideology = paternal_autocrat
+					name = COL_LCX_party
+					long_name = COL_LCX_party_long
+				}
+				set_autonomy = {
+					autonomy_state = crownland
+					end_wars = no
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+					is_claimed_by = COL
+				}
+				transfer_state_to = COL
+			}
+		}
 	}
 }
 
-country_event = { #
+country_event = { #是的，我们有香蕉！
 	id = NKRsichuanpuppet.80
 	title = NKRsichuanpuppet.80.t
 	desc = NKRsichuanpuppet.80.d
-	picture = GFX_report_event_SZC_dongdalu
+	picture = GFX_report_event_SZC_han
 
 	is_triggered_only = yes
-	
+
+	immediate = {
+		hidden_effect = {
+			annexations_reset_central_american_tags = yes
+			GXC = {
+				GXC_chen_lianbo = {
+					set_portraits = {
+						civilian = {
+							large = GFX_portrait_GUA_chen_lianbo_large
+						}
+					}
+					add_country_leader_role = {
+						country_leader = {
+							desc = GXC_chen_lianbo_desc
+							ideology = market_liberal_clientelist_subtype
+						}
+					}
+					SZC_recruit_character_effect = yes
+				}
+			}
+		}
+	}
 	
 
-	option = {#
+	option = {#大麦克？大廉伯！
 		log = "[GetLogInfo]: event NKRsichuanpuppet.80 option NKRsichuanpuppet.80.a"
 		name = NKRsichuanpuppet.80.a
+		hidden_effect = {
+			annexations_release_united_central_america = yes
+			GXC_chen_lianbo = {
+				set_nationality = var:tag_to_release
+				# promote_character = market_liberal_clientelist_subtype
+			}
+			var:tag_to_release = {
+				set_cosmetic_tag = GUA_LCX
+				GXC_chen_lianbo = {
+					promote_character = market_liberal_clientelist_subtype
+				}
+				set_politics = {
+					ruling_party = market_liberal
+				}
+				set_party_name = {
+					ideology = market_liberal
+					name = GUA_LCX_party
+					long_name = GUA_LCX_party_long
+				}
+				set_autonomy = {
+					autonomy_state = chinese_suzerainty
+					end_wars = no
+				}
+				load_focus_tree = generic_focus
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_west_indies = yes
+						is_cuba = yes
+						is_haiti = yes
+						is_dominican_republic = yes
+						is_belize = yes
+						is_costa_rica = yes
+						state = 689
+						state = 686
+						state = 694
+						state = 691
+					}
+				}
+				add_claim_by = var:tag_to_release
+				var:tag_to_release = {
+					PREV = {
+						enable_state_integration_80_compliance = yes
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+					is_claimed_by = var:tag_to_release
+				}
+				transfer_state_to = var:tag_to_release
+			}
+		}
 	}
 }
 
@@ -28635,6 +29056,7 @@ country_event = { #最卑劣的刺杀
 			name = NKRsichuanKMD.107.a
 			set_cosmetic_tag = SZC_KMD_han_united
 			SZC_liu_chengxun = {
+				set_character_as_monarch = yes
 				set_portraits = {
 					civilian = {
 						large = GFX_portrait_SZC_liu_chengxun_tianzi_large

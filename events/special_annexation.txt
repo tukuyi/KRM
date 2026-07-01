@@ -623,7 +623,7 @@ country_event = { #特殊吞并 - 秘鲁
 	}
 }
 
-country_event = { #特殊吞并 - 日本
+country_event = { #特殊吞并 - 阿根廷
 	id = annexation_events.9016
 	title = annexation_events.9016.t
 	desc = annexation_events.9016.d
@@ -635,7 +635,7 @@ country_event = { #特殊吞并 - 日本
 	option = {#实行
 		log = "[GetLogInfo]: event annexation_events.9016 option annexation_events.9016.a"
 		name = annexation_events.9016.a
-		country_event = { id = NKRsichuanpuppet. }
+		country_event = { id = NKRsichuanpuppet.76 }
 	}
 	option = {#搁置
 		log = "[GetLogInfo]: event annexation_events.9016 option annexation_events.9016.b"
@@ -647,7 +647,7 @@ country_event = { #特殊吞并 - 日本
 	}
 }
 
-country_event = { #特殊吞并 - 日本
+country_event = { #特殊吞并 - 巴西
 	id = annexation_events.9017
 	title = annexation_events.9017.t
 	desc = annexation_events.9017.d
@@ -659,7 +659,7 @@ country_event = { #特殊吞并 - 日本
 	option = {#实行
 		log = "[GetLogInfo]: event annexation_events.9017 option annexation_events.9017.a"
 		name = annexation_events.9017.a
-		country_event = { id = NKRsichuanpuppet. }
+		country_event = { id = NKRsichuanpuppet.77 }
 	}
 	option = {#搁置
 		log = "[GetLogInfo]: event annexation_events.9017 option annexation_events.9017.b"
@@ -671,7 +671,7 @@ country_event = { #特殊吞并 - 日本
 	}
 }
 
-country_event = { #特殊吞并 - 日本
+country_event = { #特殊吞并 - 加拿大
 	id = annexation_events.9018
 	title = annexation_events.9018.t
 	desc = annexation_events.9018.d
@@ -683,11 +683,58 @@ country_event = { #特殊吞并 - 日本
 	option = {#实行
 		log = "[GetLogInfo]: event annexation_events.9018 option annexation_events.9018.a"
 		name = annexation_events.9018.a
+		trigger = {
+			always = no
+		}
 		country_event = { id = NKRsichuanpuppet. }
 	}
-	option = {#搁置
+	option = {#交予青丘帝国管辖！
 		log = "[GetLogInfo]: event annexation_events.9018 option annexation_events.9018.b"
 		name = annexation_events.9018.b
+		trigger = {
+			USA = {
+				is_puppet_of = ROOT
+				has_country_leader = { character = USA_liu_chengxun }
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_canada = yes
+			}
+			add_claim_by = USA
+			transfer_state_to = USA
+			USA = {
+				PREV = {
+					enable_state_integration_80_compliance = yes
+				}
+			}
+		}
+	}
+	option = {#交予伦敦直辖！
+		log = "[GetLogInfo]: event annexation_events.9018 option annexation_events.9018.c"
+		name = annexation_events.9018.c
+		trigger = {
+			GBP = {
+				is_puppet_of = ROOT
+				has_country_leader = { character = ENG_liu_chengxun }
+			}
+		}
+		every_owned_state = {
+			limit = {
+				is_canada = yes
+			}
+			add_claim_by = GBP
+			transfer_state_to = GBP
+			GBP = {
+				PREV = {
+					enable_state_integration_80_compliance = yes
+				}
+			}
+		}
+	}
+	option = {#搁置
+		log = "[GetLogInfo]: event annexation_events.9018 option annexation_events.9018.e"
+		name = annexation_events.9018.e
 		ai_chance = { base = 0 }
 	}
 	after = {
@@ -695,7 +742,7 @@ country_event = { #特殊吞并 - 日本
 	}
 }
 
-country_event = { #特殊吞并 - 日本
+country_event = { #特殊吞并 - 中美洲
 	id = annexation_events.9019
 	title = annexation_events.9019.t
 	desc = annexation_events.9019.d
@@ -707,7 +754,7 @@ country_event = { #特殊吞并 - 日本
 	option = {#实行
 		log = "[GetLogInfo]: event annexation_events.9019 option annexation_events.9019.a"
 		name = annexation_events.9019.a
-		country_event = { id = NKRsichuanpuppet. }
+		country_event = { id = NKRsichuanpuppet.80 }
 	}
 	option = {#搁置
 		log = "[GetLogInfo]: event annexation_events.9019 option annexation_events.9019.b"
@@ -719,7 +766,7 @@ country_event = { #特殊吞并 - 日本
 	}
 }
 
-country_event = { #特殊吞并 - 日本
+country_event = { #特殊吞并 - 非洲
 	id = annexation_events.9020
 	title = annexation_events.9020.t
 	desc = annexation_events.9020.d
@@ -731,7 +778,7 @@ country_event = { #特殊吞并 - 日本
 	option = {#实行
 		log = "[GetLogInfo]: event annexation_events.9020 option annexation_events.9020.a"
 		name = annexation_events.9020.a
-		country_event = { id = NKRsichuanpuppet. }
+		country_event = { id = NKRsichuanpuppet.75 }
 	}
 	option = {#搁置
 		log = "[GetLogInfo]: event annexation_events.9020 option annexation_events.9020.b"
@@ -743,7 +790,7 @@ country_event = { #特殊吞并 - 日本
 	}
 }
 
-country_event = { #特殊吞并 - 日本
+country_event = { #特殊吞并 - 哥伦比亚
 	id = annexation_events.9021
 	title = annexation_events.9021.t
 	desc = annexation_events.9021.d
@@ -755,7 +802,7 @@ country_event = { #特殊吞并 - 日本
 	option = {#实行
 		log = "[GetLogInfo]: event annexation_events.9021 option annexation_events.9021.a"
 		name = annexation_events.9021.a
-		country_event = { id = NKRsichuanpuppet. }
+		country_event = { id = NKRsichuanpuppet.79 }
 	}
 	option = {#搁置
 		log = "[GetLogInfo]: event annexation_events.9021 option annexation_events.9021.b"
@@ -767,7 +814,7 @@ country_event = { #特殊吞并 - 日本
 	}
 }
 
-country_event = { #特殊吞并 - 日本
+country_event = { #特殊吞并 - 墨西哥
 	id = annexation_events.9022
 	title = annexation_events.9022.t
 	desc = annexation_events.9022.d
@@ -779,7 +826,7 @@ country_event = { #特殊吞并 - 日本
 	option = {#实行
 		log = "[GetLogInfo]: event annexation_events.9022 option annexation_events.9022.a"
 		name = annexation_events.9022.a
-		country_event = { id = NKRsichuanpuppet. }
+		country_event = { id = NKRsichuanpuppet.78 }
 	}
 	option = {#搁置
 		log = "[GetLogInfo]: event annexation_events.9022 option annexation_events.9022.b"

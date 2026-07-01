@@ -257,142 +257,318 @@ on_actions = {
 						set_variable = { annexation_event = 9015 }
 					}
 				}
+				if = { #墨西哥
+					limit = {
+						FROM.FROM = { state = 277 } #Mexico
+						ROOT = {
+							OR = {
+								AND = {
+									has_country_leader = { character = SZC_liu_chengxun }
+									SZC_jiang_shangpu = { is_second_in_command = no }
+								}
+							}
+						}
+					}
+					277 = { #Mexico
+						set_variable = { annexation_event = 9022 }
+					}
+				}
+				if = { #危地马拉
+					limit = {
+						FROM.FROM = { state = 313 } #Guatemala
+						ROOT = {
+							OR = {
+								AND = {
+									has_country_leader = { character = SZC_liu_chengxun }
+									# SZC_jiang_shangpu = { is_second_in_command = no }
+								}
+							}
+						}
+					}
+					313 = { #Guatemala
+						set_variable = { annexation_event = 9019 }
+					}
+				}
+				if = { #加拿大
+					limit = {
+						FROM.FROM = { state = 739 } #Ottawa
+						ROOT = {
+							OR = {
+								AND = {
+									has_country_leader = { character = SZC_liu_chengxun }
+									SZC_jiang_shangpu = { is_second_in_command = no }
+								}
+							}
+						}
+					}
+					739 = { #Ottawa
+						set_variable = { annexation_event = 9018 }
+					}
+				}
+				if = { #巴西
+					limit = {
+						FROM.FROM = { state = 500 } #Rio de Janeiro
+						ROOT = {
+							OR = {
+								AND = {
+									has_country_leader = { character = SZC_liu_chengxun }
+									SZC_jiang_shangpu = { is_second_in_command = no }
+								}
+							}
+						}
+					}
+					500 = { #Rio de Janeiro
+						set_variable = { annexation_event = 9017 }
+					}
+				}
+				if = { #哥伦比亚
+					limit = {
+						FROM.FROM = { state = 306 } #Cundinamarca
+						ROOT = {
+							OR = {
+								AND = {
+									has_country_leader = { character = SZC_liu_chengxun }
+									SZC_jiang_shangpu = { is_second_in_command = no }
+								}
+							}
+						}
+					}
+					306 = { #Cundinamarca
+						set_variable = { annexation_event = 9021 }
+					}
+				}
+				if = { #阿根廷
+					limit = {
+						FROM.FROM = { state = 278 } #Buenos Aires
+						ROOT = {
+							OR = {
+								AND = {
+									has_country_leader = { character = SZC_liu_chengxun }
+									SZC_jiang_shangpu = { is_second_in_command = no }
+								}
+							}
+						}
+					}
+					278 = { #Buenos Aires
+						set_variable = { annexation_event = 9016 }
+					}
+				}
+				if = { #非洲
+					limit = {
+						FROM.FROM = { state = 965 } #Dar-es-Salaam
+						ROOT = {
+							OR = {
+								AND = {
+									has_country_leader = { character = SZC_liu_chengxun }
+									SZC_jiang_shangpu = { is_second_in_command = no }
+								}
+							}
+						}
+					}
+					965 = { #Dar-es-Salaam
+						set_variable = { annexation_event = 9020 }
+					}
+				}
 			}
-			# if = {
-			# 	limit = {
-			# 		NOT = {
-			# 			tag = SZC
-			# 		}
-			# 	}
-			# 	if = { #日本
-			# 		limit = {
-			# 			FROM.FROM = { state = 282 } #Kanto
-			# 		}
-			# 		282 = { #Kanto
-			# 			set_variable = { annexation_event = 3018 }
-			# 		}
-			# 	}
-			# 	if = { #朝鲜
-			# 		limit = {
-			# 			FROM.FROM = { state = 525 } #Gyeonggi
-			# 		}
-			# 		282 = { #Kanto
-			# 			set_variable = { annexation_event = 3018 }
-			# 		}
-			# 	}
-			# 	if = { #法国
-			# 		limit = {
-			# 			FROM.FROM = { state = 16 } #Ile-de-France
-			# 		}
-			# 		16 = { #Ile-de-France
-			# 			set_variable = { annexation_event = 1041 }
-			# 		}
-			# 	}
-			# 	if = { #德国 - 勃兰登堡
-			# 		limit = {
-			# 			FROM.FROM = { state = 64 } #Brandenburg
-			# 		}
-			# 		64 = { #Brandenburg
-			# 			set_variable = { annexation_event = 1006 }
-			# 		}
-			# 	}
-			# 	if = { #德国 - 汉诺威
-			# 		limit = {
-			# 			FROM.FROM = { state = 64 } #Brandenburg
-			# 		}
-			# 		59 = { #Hanover
-			# 			set_variable = { annexation_event = 1004 }
-			# 		}
-			# 	}
-			# 	if = { #德国 - 巴伐利亚
-			# 		limit = {
-			# 			FROM.FROM = { state = 64 } #Brandenburg
-			# 		}
-			# 		52 = { #Upper Bavaria
-			# 			set_variable = { annexation_event = 1013 }
-			# 		}
-			# 	}
-			# 	if = { #意大利
-			# 		limit = {
-			# 			FROM.FROM = { state = 2 } #Latium
-			# 		}
-			# 		2 = { #Latium
-			# 			set_variable = { annexation_event = 1100 }
-			# 		}
-			# 	}
-			# 	if = { #西班牙
-			# 		limit = {
-			# 			FROM.FROM = { state = 41 } #Madrid
-			# 		}
-			# 		41 = { #Madrid
-			# 			set_variable = { annexation_event = 1084 }
-			# 		}
-			# 	}
-			# 	if = { #土耳其
-			# 		limit = {
-			# 			FROM.FROM = { state = 49 } #Ankara
-			# 		}
-			# 		49 = { #Ankara
-			# 			set_variable = { annexation_event = 4002 }
-			# 		}
-			# 	}
-			# 	if = { #俄罗斯
-			# 		limit = {
-			# 			FROM.FROM = { state = 219 } #Moscow
-			# 		}
-			# 		219 = { #Moscow
-			# 			set_variable = { annexation_event = 1065 }
-			# 		}
-			# 	}
-			# 	if = { #英国
-			# 		limit = {
-			# 			FROM.FROM = { state = 126 } #Greater London
-			# 		}
-			# 		126 = { #Greater London
-			# 			set_variable = { annexation_event = 1044 }
-			# 		}
-			# 	}
-			# 	if = { #捷克
-			# 		limit = {
-			# 			FROM.FROM = { state = 9 } #Bohemia
-			# 		}
-			# 		9 = { #Bohemia
-			# 			set_variable = { annexation_event = 1021 }
-			# 		}
-			# 	}
-			# 	if = { #波兰
-			# 		limit = {
-			# 			FROM.FROM = { state = 10 } #Warsaw
-			# 		}
-			# 		10 = { #Warsaw
-			# 			set_variable = { annexation_event = 1014 }
-			# 		}
-			# 	}
-			# 	if = { #美国
-			# 		limit = {
-			# 			FROM.FROM = { state = 361 } #Maryland
-			# 		}
-			# 		361 = { #Maryland
-			# 			set_variable = { annexation_event = 2000 }
-			# 		}
-			# 	}
-			# 	if = { #夏威夷
-			# 		limit = {
-			# 			FROM.FROM = { state = 629 } #Hawaii
-			# 		}
-			# 		629 = { #Hawaii
-			# 			set_variable = { annexation_event = 3061 }
-			# 		}
-			# 	}
-			# 	if = { #越南
-			# 		limit = {
-			# 			FROM.FROM = { state = 827 } #Annam
-			# 		}
-			# 		827 = { #Annam
-			# 			set_variable = { annexation_event = 3023 }
-			# 		}
-			# 	}
-			# }
+			else = {
+				limit = {
+					NOT = {
+						tag = SZC
+					}
+				}
+				if = { #日本
+					limit = {
+						FROM.FROM = { state = 282 } #Kanto
+					}
+					282 = { #Kanto
+						set_variable = { annexation_event = 3018 }
+					}
+				}
+				if = { #朝鲜
+					limit = {
+						FROM.FROM = { state = 525 } #Gyeonggi
+					}
+					282 = { #Kanto
+						set_variable = { annexation_event = 3018 }
+					}
+				}
+				if = { #法国
+					limit = {
+						FROM.FROM = { state = 16 } #Ile-de-France
+					}
+					16 = { #Ile-de-France
+						set_variable = { annexation_event = 1041 }
+					}
+				}
+				if = { #德国 - 勃兰登堡
+					limit = {
+						FROM.FROM = { state = 64 } #Brandenburg
+					}
+					64 = { #Brandenburg
+						set_variable = { annexation_event = 1006 }
+					}
+				}
+				if = { #德国 - 汉诺威
+					limit = {
+						FROM.FROM = { state = 64 } #Brandenburg
+					}
+					59 = { #Hanover
+						set_variable = { annexation_event = 1004 }
+					}
+				}
+				if = { #德国 - 巴伐利亚
+					limit = {
+						FROM.FROM = { state = 64 } #Brandenburg
+					}
+					52 = { #Upper Bavaria
+						set_variable = { annexation_event = 1013 }
+					}
+				}
+				if = { #意大利
+					limit = {
+						FROM.FROM = { state = 2 } #Latium
+					}
+					2 = { #Latium
+						set_variable = { annexation_event = 1100 }
+					}
+				}
+				if = { #西班牙
+					limit = {
+						FROM.FROM = { state = 41 } #Madrid
+					}
+					41 = { #Madrid
+						set_variable = { annexation_event = 1084 }
+					}
+				}
+				if = { #土耳其
+					limit = {
+						FROM.FROM = { state = 49 } #Ankara
+					}
+					49 = { #Ankara
+						set_variable = { annexation_event = 4002 }
+					}
+				}
+				if = { #俄罗斯
+					limit = {
+						FROM.FROM = { state = 219 } #Moscow
+					}
+					219 = { #Moscow
+						set_variable = { annexation_event = 1065 }
+					}
+				}
+				if = { #英国
+					limit = {
+						FROM.FROM = { state = 126 } #Greater London
+					}
+					126 = { #Greater London
+						set_variable = { annexation_event = 1044 }
+					}
+				}
+				if = { #捷克
+					limit = {
+						FROM.FROM = { state = 9 } #Bohemia
+					}
+					9 = { #Bohemia
+						set_variable = { annexation_event = 1021 }
+					}
+				}
+				if = { #波兰
+					limit = {
+						FROM.FROM = { state = 10 } #Warsaw
+					}
+					10 = { #Warsaw
+						set_variable = { annexation_event = 1014 }
+					}
+				}
+				if = { #美国
+					limit = {
+						FROM.FROM = { state = 361 } #Maryland
+					}
+					361 = { #Maryland
+						set_variable = { annexation_event = 2000 }
+					}
+				}
+				if = { #夏威夷
+					limit = {
+						FROM.FROM = { state = 629 } #Hawaii
+					}
+					629 = { #Hawaii
+						set_variable = { annexation_event = 3061 }
+					}
+				}
+				if = { #越南
+					limit = {
+						FROM.FROM = { state = 827 } #Annam
+					}
+					827 = { #Annam
+						set_variable = { annexation_event = 3023 }
+					}
+				}
+				if = { #秘鲁
+					limit = {
+						FROM.FROM = { state = 303 } #Lima
+					}
+					303 = { #Lima
+						set_variable = { annexation_event = 2022 }
+					}
+				}
+				if = { #墨西哥
+					limit = {
+						FROM.FROM = { state = 277 } #Mexico
+					}
+					277 = { #Mexico
+						set_variable = { annexation_event = 2004 }
+					}
+				}
+				if = { #危地马拉
+					limit = {
+						FROM.FROM = { state = 313 } #Guatemala
+					}
+					313 = { #Guatemala
+						set_variable = { annexation_event = 2006 }
+					}
+				}
+				if = { #加拿大
+					limit = {
+						FROM.FROM = { state = 739 } #Ottawa
+					}
+					739 = { #Ottawa
+						set_variable = { annexation_event = 2003 }
+					}
+				}
+				if = { #巴西
+					limit = {
+						FROM.FROM = { state = 500 } #Rio de Janeiro
+					}
+					500 = { #Rio de Janeiro
+						set_variable = { annexation_event = 2034 }
+					}
+				}
+				if = { #哥伦比亚
+					limit = {
+						FROM.FROM = { state = 306 } #Cundinamarca
+					}
+					306 = { #Cundinamarca
+						set_variable = { annexation_event = 2025 }
+					}
+				}
+				if = { #阿根廷
+					limit = {
+						FROM.FROM = { state = 278 } #Buenos Aires
+					}
+					278 = { #Buenos Aires
+						set_variable = { annexation_event = 2045 }
+					}
+				}
+				if = { #非洲
+					limit = {
+						FROM.FROM = { state = 965 } #Dar-es-Salaam
+					}
+					965 = { #Dar-es-Salaam
+						set_variable = { annexation_event = 5032 }
+					}
+				}
+			}
 		}
 	}
 
