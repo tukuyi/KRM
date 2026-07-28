@@ -24853,24 +24853,8 @@ country_event = { #全民政府的成功？
 	
 
 	option = {#
-		log = "[GetLogInfo]: event NKRsichuanflavor.29 option NKRsichuanflavor.29.a"
-		name = NKRsichuanflavor.29.a
-	}
-}
-
-country_event = { #东南归顺
-	id = NKRsichuanflavor.30
-	title = NKRsichuanflavor.30.t
-	desc = NKRsichuanflavor.30.d
-	picture = GFX_report_event_SZC_PWH_rock
-
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-
-	option = {#
 		log = "[GetLogInfo]: event NKRsichuanflavor.30 option NKRsichuanflavor.30.a"
-		name = NKRsichuanflavor.30.a
+		name = NKRsichuanflavor.29.a
 		ai_chance = {
 			base = 30
 			modifier = { #Measure Military Strength
@@ -24911,7 +24895,7 @@ country_event = { #东南归顺
 		}
 		effect_tooltip = { FROM = { china_puppet_ROOT_effect = yes } }
 		hidden_effect = {
-			FROM = { country_event = { id = NKRsichuanflavor.31 days = 3 } } 
+			FROM = { country_event = { id = NKRsichuanflavor.30 days = 3 } } 
 			every_subject_country = {
 				SZC = {
 					china_puppet_PREV_effect = yes
@@ -24923,7 +24907,7 @@ country_event = { #东南归顺
 
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanflavor.30 option NKRsichuanflavor.30.b"
-		name = NKRsichuanflavor.30.b
+		name = NKRsichuanflavor.29.b
 		ai_chance = {
 			base = 70
 			modifier = { #Measure Military Strength
@@ -24958,9 +24942,25 @@ country_event = { #东南归顺
 			modifier = KR_outraged
 		}
 		add_war_support = -0.10
-		FROM = { hidden_effect = { country_event = { id = NKRsichuanflavor.32 days = 3 } } } #
+		FROM = { hidden_effect = { country_event = { id = NKRsichuanflavor.31 days = 3 } } } #
 
 	}
+}
+
+country_event = { #东南归顺
+	id = NKRsichuanflavor.30
+	title = NKRsichuanflavor.30.t
+	desc = NKRsichuanflavor.30.d
+	picture = GFX_report_event_SZC_PWH_rock
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanflavor.30 option NKRsichuanflavor.30.a"
+		name = NKRsichuanflavor.30.a
+	}
+
 }
 
 country_event = { #背叛
