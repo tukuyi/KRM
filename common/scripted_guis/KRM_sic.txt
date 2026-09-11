@@ -12,11 +12,8 @@ scripted_gui = {
 
 		properties = {
 			sic_portrait = {
-				image = "GFX_portrait_[?gui_sic.GetTokenKey]_large"
+				image = "[GetSICPortrait]"
 			}
-			# second_in_command_name = {
-			# 	text = "[GetSICName]"
-			# }
 		}
 
 		triggers = {
@@ -46,11 +43,69 @@ scripted_gui = {
 		}
 		
 		visible = {
-			always = yes
+			# always = yes
+			any_character = {
+				is_second_in_command = yes
+				NOT = {
+					check_variable = {
+						SICtoken = 0
+					}
+				}
+			}
 		}
 	}
 
 
+	second_in_command_FP_container = {
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+		window_name = "second_in_command_FP_container"
+
+		ai_check = {
+			always = no
+		}
+
+		properties = {
+			sic_portrait = {
+				image = "[GetSICPortrait]"
+			}
+		}
+
+		triggers = {
+			sic_portrait_visible = {
+				has_country_flag = is_checking_sic
+			}
+			sic_frame_visible = {
+				has_country_flag = is_checking_sic
+			}
+		}
+
+		effects = {
+			sic_button_click = {
+				if = {
+					limit = {
+						has_country_flag = is_checking_sic
+					}
+					clr_country_flag = is_checking_sic
+				}
+				else = {
+					set_country_flag = is_checking_sic
+				}
+			}
+		}
+		
+		visible = {
+			# always = yes
+			any_character = {
+				is_second_in_command = yes
+				NOT = {
+					check_variable = {
+						SICtoken = 0
+					}
+				}
+			}
+		}
+	}
 
 }
 

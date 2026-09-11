@@ -3,33 +3,130 @@ defined_text = {
 
 	text = {
 		trigger = {
-			all_character = {
-				if = {
-					limit = {
-						AND = {
-							has_advisor_role = second_in_command
-							is_hired_as_advisor = yes
-						}
-					}
-					meta_trigger = {
-						text = {
-							set_temp_variable = {
-								temp_trans_sic = token:[TOKEN]
-							}
-						}
-						TOKEN = "[?THIS.GetToken]"
-					}
-					log = "114514 [?temp_trans_sic]"
-					PREV = {
-						set_temp_variable = {
-							gui_sic = var:temp_trans_sic
-						}
+			any_character = {
+				is_second_in_command = yes
+				set_temp_variable = {
+					temp_trans_sic = var:SICtoken
+				}
+				PREV = {
+					set_temp_variable = {
+						gui_sic = var:temp_trans_sic
 					}
 				}
 			}
 			# log = "114514 [?gui_sic]"
 		}
-		localization_key = "[?gui_sic]"
+		localization_key = "[?gui_sic.GetTokenLocalizedKey]"
+	}
+
+}
+
+defined_text = { 
+	name = GetSICPortrait
+
+	text = {
+		trigger = {
+			any_character = {
+				is_second_in_command = yes
+				set_temp_variable = {
+					temp_trans_sic = var:SICtoken
+				}
+				PREV = {
+					set_temp_variable = {
+						gui_sic = var:temp_trans_sic
+					}
+				}
+			}
+			log = "114514 [?gui_sic]"
+		}
+		localization_key = "GFX_portrait_[?gui_sic.GetTokenKey]_large"
+	}
+
+}
+
+defined_text = { 
+	name = GetSICDesc
+
+	text = {
+		trigger = {
+			any_character = {
+				is_second_in_command = yes
+				set_temp_variable = {
+					temp_trans_sic = var:SICtoken
+				}
+				PREV = {
+					set_temp_variable = {
+						gui_sic = var:temp_trans_sic
+					}
+				}
+			}
+			log = "114514 [?gui_sic]"
+		}
+		localization_key = "[?gui_sic.GetTokenKey]_sic_desc"
+	}
+
+}
+
+defined_text = { 
+	name = GetHOSTittle
+
+	text = {
+		trigger = {
+			any_character = {
+				is_country_leader = yes
+				NOT = {
+					check_variable = {
+						SICtittle = 0
+					}
+				}
+				set_temp_variable = {
+					temp_tittle_sic = var:SICtittle
+				}
+				PREV = {
+					set_temp_variable = {
+						gui_t_hos = var:temp_tittle_sic
+					}
+				}
+			}
+		}
+		localization_key = "KRM_sic_tittle_[?gui_t_hos]"
+	}
+
+	text = {
+		trigger = {}
+		localization_key = "KRM_sic_tittle_0"
+	}
+
+}
+
+defined_text = { 
+	name = GetSICTittle
+
+	text = {
+		trigger = {
+			any_character = {
+				is_second_in_command = yes
+				NOT = {
+					check_variable = {
+						SICtittle = 0
+					}
+				}
+				set_temp_variable = {
+					temp_tittle_sic = var:SICtittle
+				}
+				PREV = {
+					set_temp_variable = {
+						gui_t_sic = var:temp_tittle_sic
+					}
+				}
+			}
+		}
+		localization_key = "KRM_sic_tittle_[?gui_t_sic]"
+	}
+
+	text = {
+		trigger = {}
+		localization_key = "KRM_sic_tittle_1"
 	}
 
 }

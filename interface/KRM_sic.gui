@@ -9,6 +9,8 @@ guiTypes = {
 			name = "sic_portrait"
 			position = { x = 18 y = 58 }
 			spriteType = "GFX_leader_unknown"
+			pdx_tooltip = KRM_sic_tooltip
+			pdx_tooltip_delayed = KRM_sic_tooltip_delayed
 		}
 
 
@@ -28,14 +30,42 @@ guiTypes = {
 			maxHeight = 36
 			format = center
 			vertical_alignment = center
+			alwaystransparent = yes
 		}
 
 		buttonType = {
 			name = "sic_button"
 			position = { x = 152 y = 265 }
 			spriteType = "GFX_YCP_sign_icon"
-			pdx_tooltip = "second_in_command_button_tooltip"
+			pdx_tooltip = "KRM_sic_button"
 			scale = 0.8
+		}
+	}
+	
+}
+
+guiTypes = {
+	
+	containerWindowType = {
+		name = "second_in_command_FP_container"
+		position = { x = 0 y = 110 }
+
+			
+		iconType = {
+			name = "sic_portrait"
+			position = { x = 23 y = 10 }
+			spriteType = "GFX_leader_unknown"
+			pdx_tooltip = KRM_sic_tooltip
+			pdx_tooltip_delayed = KRM_sic_tooltip_delayed
+			scale = 0.72
+		}
+
+		buttonType = {
+			name = "sic_button"
+			position = { x = 120 y = 145 }
+			spriteType = "GFX_YCP_sign_icon"
+			pdx_tooltip = "KRM_sic_button"
+			scale = 0.65
 		}
 	}
 	
