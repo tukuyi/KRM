@@ -1,0 +1,42 @@
+guiTypes = {
+	
+	containerWindowType = {
+		name = "second_in_command_container"
+		position = { x = 0 y = 0 }
+
+			
+		iconType = {
+			name = "sic_portrait"
+			position = { x = 18 y = 58 }
+			spriteType = "GFX_leader_unknown"
+		}
+
+
+		iconType = {
+			name = "sic_frame"
+			spriteType = "GFX_pol_leader_frame"
+			position = { x = 10 y = 44 }
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "second_in_command_name"
+			position = { x = 18 y = 262 }
+			font = "hoi_18mbs"
+			text = "[GetSICName]"
+			maxWidth = 155
+			maxHeight = 36
+			format = center
+			vertical_alignment = center
+		}
+
+		buttonType = {
+			name = "sic_button"
+			position = { x = 152 y = 265 }
+			spriteType = "GFX_YCP_sign_icon"
+			pdx_tooltip = "second_in_command_button_tooltip"
+			scale = 0.8
+		}
+	}
+	
+}

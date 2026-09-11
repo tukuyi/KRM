@@ -1,0 +1,21 @@
+defined_text = { 
+	name = GetSICName
+
+	text = {
+		trigger = {
+			ROOT = {
+				any_character = {
+					is_second_in_command = yes
+					PREV = {
+						set_temp_variable = {
+							gui_sic = THIS
+						}
+					}
+				}
+				log = "114514 [?gui_sic.GetTokenLocalizedKey]"
+			}
+		}
+		localization_key = "[?gui_sic.GetTokenLocalizedKey]"
+	}
+
+}

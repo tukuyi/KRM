@@ -1,0 +1,56 @@
+scripted_gui = {
+	
+
+	second_in_command_container = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "second_in_command_container"
+
+		ai_check = {
+			always = no
+		}
+
+		properties = {
+			sic_portrait = {
+				image = "GFX_portrait_[?gui_sic.GetTokenKey]_large"
+			}
+			# second_in_command_name = {
+			# 	text = "[GetSICName]"
+			# }
+		}
+
+		triggers = {
+			sic_portrait_visible = {
+				has_country_flag = is_checking_sic
+			}
+			sic_frame_visible = {
+				has_country_flag = is_checking_sic
+			}
+			second_in_command_name_visible = {
+				has_country_flag = is_checking_sic
+			}
+		}
+
+		effects = {
+			sic_button_click = {
+				if = {
+					limit = {
+						has_country_flag = is_checking_sic
+					}
+					clr_country_flag = is_checking_sic
+				}
+				else = {
+					set_country_flag = is_checking_sic
+				}
+			}
+		}
+		
+		visible = {
+			always = yes
+		}
+	}
+
+
+
+}
+
