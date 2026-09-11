@@ -2585,7 +2585,7 @@ country_event = { #Governor Xiao invades Enshi (SZC)
 		hidden_effect = {
 			if = {
 				limit = {
-					NOT = { has_country_leader = { character = SZC_liu_Xiang } }
+					NOT = { has_country_leader = { character = SZC_liu_xiang } }
 				}
 				add_popularity = {
 					ideology = social_conservative
@@ -2624,7 +2624,7 @@ country_event = { #Governor Xiao invades Enshi (SZC)
 		name = sichuan_events.102.b
 		ai_chance = { base = 30 }
 		if = {
-			limit = { NOT = { has_country_leader = { character = SZC_liu_Xiang } } }
+			limit = { NOT = { has_country_leader = { character = SZC_liu_xiang } } }
 			add_popularity = {
 				ideology = authoritarian_democrat
 				popularity = -0.05
