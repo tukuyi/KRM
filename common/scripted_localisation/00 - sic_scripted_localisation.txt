@@ -6,13 +6,21 @@ defined_text = {
 			ROOT = {
 				any_character = {
 					is_second_in_command = yes
-					PREV = {
-						set_temp_variable = {
-							gui_sic = THIS
+					meta_trigger = {
+						text = {
+							set_temp_variable = {
+								temp_trans_sic = [sic_character]
+							}
+							log = "[?temp_trans_sic]"
 						}
+						sic_character = "[?THIS.GetTokenKey]"
 					}
+					# log = "114514 [?temp_trans_sic]"
 				}
-				log = "114514 [?gui_sic.GetTokenLocalizedKey]"
+				set_temp_variable = {
+					gui_sic = var:temp_trans_sic
+				}
+				# log = "114514 [?gui_sic.GetTokenLocalizedKey]"
 			}
 		}
 		localization_key = "[?gui_sic.GetTokenLocalizedKey]"
