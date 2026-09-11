@@ -3,27 +3,33 @@ defined_text = {
 
 	text = {
 		trigger = {
-			ROOT = {
-				any_character = {
-					is_second_in_command = yes
+			all_character = {
+				if = {
+					limit = {
+						AND = {
+							has_advisor_role = second_in_command
+							is_hired_as_advisor = yes
+						}
+					}
 					meta_trigger = {
 						text = {
 							set_temp_variable = {
-								temp_trans_sic = [sic_character]
+								temp_trans_sic = token:[TOKEN]
 							}
-							log = "[?temp_trans_sic]"
 						}
-						sic_character = "[?THIS.GetTokenKey]"
+						TOKEN = "[?THIS.GetToken]"
 					}
-					# log = "114514 [?temp_trans_sic]"
+					log = "114514 [?temp_trans_sic]"
+					PREV = {
+						set_temp_variable = {
+							gui_sic = var:temp_trans_sic
+						}
+					}
 				}
-				set_temp_variable = {
-					gui_sic = var:temp_trans_sic
-				}
-				# log = "114514 [?gui_sic.GetTokenLocalizedKey]"
 			}
+			# log = "114514 [?gui_sic]"
 		}
-		localization_key = "[?gui_sic.GetTokenLocalizedKey]"
+		localization_key = "[?gui_sic]"
 	}
 
 }
