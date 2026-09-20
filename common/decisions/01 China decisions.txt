@@ -6996,6 +6996,8 @@ chinese_unification = {
 		fixed_random_seed = no		
 	}
 
+	
+
 	CHN_join_FROM_decision = {
 		icon = GFX_decision_eng_trade_unions_support
 		allowed = {
@@ -7011,12 +7013,32 @@ chinese_unification = {
 				FROM = { any_neighbor_country = { is_subject_of = ROOT } }
 				FROM = { any_subject_country = { is_neighbor_of = ROOT } }
 			}
+			#if = {
+			#	limit = { tag = HNN }
+			#	FROM = { has_country_leader = { character = SHX_yan_xishan } }
+			#	OR = {
+			#		has_global_flag = CHN_south_china_war_started
+			#		date > 1937.7.1
+			#	}
+			#}
+			#Going to experiment with locking the Southern Chinese factions from joining factions until after 1938 so they have a fair chance of conquering each other.
 			if = {
-				limit = { tag = HNN }
-				FROM = { has_country_leader = { character = SHX_yan_xishan } }
+				limit = {
+					OR = {
+						tag = GXC
+						tag = HNN
+						tag = YUN
+					}
+				}
 				OR = {
-					has_global_flag = CHN_south_china_war_started
-					date > 1937.7.1
+					date > 1938.1.1
+					FROM = {
+						OR = {
+							tag = GXC
+							tag = HNN
+							tag = YUN
+						}
+					}
 				}
 			}
 			CHN_has_revolted = no
@@ -7052,6 +7074,9 @@ chinese_unification = {
 		}
 		fixed_random_seed = no
 	}
+
+
+
 
 	### Dealing with the Outskirts ###
 	china_demand_annexation = {
