@@ -37364,7 +37364,7 @@ focus_tree = {
 				HNN_hu_ying = {
 					set_portraits = {
 						civilian = {
-							large = GFX_portrait_SZC_hu_ying_largs
+							large = GFX_portrait_HNN_hu_ying_large
 						}
 					}
 					SZC_recruit_character_effect = yes
@@ -38243,6 +38243,13 @@ focus_tree = {
 			set_politics = {
 				ruling_party = authoritarian_democrat
 			}
+			SZC_liu_chengxun = {
+				set_variable = { SICtittle = 19 }
+			}
+			SZC_jiang_shangpu = {
+				set_variable = { SICtoken = token:SZC_jiang_shangpu }
+				set_variable = { SICtittle = 17 }
+			}
 			add_popularity = {
 				ideology = authoritarian_democrat
 				popularity = 0.08
@@ -38523,7 +38530,12 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_KMD_appoint_hu_ying_cabinet"
 			custom_effect_tooltip = SZC_KMD_appoint_hu_ying_cabinet_tt
 			set_country_leader_ideology = paternal_autocrat_aristocratic_conservative_subtype
+			SZC_liu_chengxun = {
+				set_variable = { SICtittle = 19 }
+			}
 			HNN_hu_ying = {
+				set_variable = { SICtoken = token:HNN_hu_ying }
+				set_variable = { SICtittle = 17 }
 				add_advisor_role = {
 					advisor = {
 						slot = second_in_command

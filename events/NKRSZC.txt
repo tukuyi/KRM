@@ -29474,6 +29474,15 @@ country_event = { #最卑劣的刺杀
 			}
 			add_political_power = -50
 			custom_effect_tooltip = NKRsichuanKMD.129.b.tt
+			activate_advisor = SZC_qian_mu_sic
+			SZC_qian_mu = {
+				set_variable = {
+					SICtoken = token:SZC_qian_mu
+				}
+				set_variable = {
+					SICtittle = 17
+				}
+			}
 			set_country_leader_ideology = paternal_autocrat_national_conservative_subtype
 		}
 	}

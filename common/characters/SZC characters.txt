@@ -5310,10 +5310,24 @@ characters = {
 			traits = { SZC_KMD_master_of_national_history_trait }
 			cost = 150
 			desc = SZC_qian_mu_desc
+			available = {
+				SZC_qian_mu = {
+					is_second_in_command = no
+				}
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = SZC_qian_mu_sic
+			ledger = civilian
+			traits = { SZC_KMD_master_of_national_history_trait }
+			cost = 0
+			can_be_fired = no
+			desc = SZC_qian_mu_desc
 		}
 	}
 
-	#钱穆
+	#凯恩斯
 	SZC_john_keynes = {
 		name = SZC_john_keynes
 		portraits = {
