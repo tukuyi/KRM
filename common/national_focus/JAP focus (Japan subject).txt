@@ -198,13 +198,13 @@ focus_tree = {
 				IDEOLOGY = totalist_coloured
 			}
 			#Lose Stability Proportionate to Difference between 100% and Totalist Party Popularity, reused a CHN tooltip
-			set_temp_variable = { JAP_stability_loss_temp_var = ROOT.party_popularity@totalist }
-			subtract_from_temp_variable = { JAP_stability_loss_temp_var = 1 }
-			multiply_temp_variable = { JAP_stability_loss_temp_var = 0.25 }
-			clamp_temp_variable = {
-				var = JAP_stability_loss_temp_var
-				min = -1
-				max = 0
+			set_temp_variable = {
+				JAP_stability_loss_temp_var = {
+					value = party_popularity@totalist
+					subtract = 1
+					multiply = 0.25
+					clamp = { min = -1 max = 0 }
+				}
 			}
 			add_stability = JAP_stability_loss_temp_var
 			custom_effect_tooltip = tooltip_white_line
@@ -593,6 +593,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed JAP_white_dawn_eclipses_red_sun"
+			hidden_effect = {
+				set_cosmetic_tag = JAP_republic
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -751,7 +754,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed JAP_promote_the_workers_rights"
 			JAP_shattered_people_effect = yes
-			add_popularity = { ideology = syndicalist popularity = 0.05 }
+			set_temp_variable = { ideology_change_var = 0.05 }
+			change_ruling_party_popularity = yes
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -824,6 +828,22 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = JAP_shattered_people_idea4
 				add_idea = 	JAP_sister_republic_idea
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_socialist_government = no }
+					add_popularity = { ideology = syndicalist popularity = -0.5 }
+					add_popularity = { ideology = totalist popularity = -0.5 }
+					add_popularity = { ideology = radical_socialist popularity = -0.5 }
+				}
+				if = {
+					limit = { has_socialist_government = yes }
+					add_popularity = { ideology = authoritarian_democrat popularity = -0.5 }
+					add_popularity = { ideology = national_populist popularity = -0.5 }
+					add_popularity = { ideology = paternal_autocrat popularity = -0.5 }
+					add_popularity = { ideology = social_conservative popularity = -0.5 }
+					add_popularity = { ideology = market_liberal popularity = -0.5 }
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1173,15 +1193,13 @@ focus_tree = {
 	focus = {
 		id = JAP_subject_pol_start_focus
 		icon = {
-			trigger = { has_country_flag = JAP_showa_tree }
-			value = GFX_goal_NFA_end_parliamentarism
-		}
-		icon = {
-			trigger = { has_country_flag = JAP_dem_tree }
-			value = GFX_goal_treaty_fails
-		}
-		icon = {
-			value = GFX_goal_JAP_toseiha
+			GFX_goal_NFA_end_parliamentarism = {
+				has_country_flag = JAP_showa_tree
+			}
+			GFX_goal_treaty_fails = {
+				has_country_flag = JAP_dem_tree
+			}
+			GFX_goal_JAP_toseiha = yes
 		}
 
 		cost = 5

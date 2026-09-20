@@ -181,7 +181,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_xiong_kewu_sic_desc
-			traits = { politically_connected infantry_officer CHN_GRA_officer }
+			traits = { war_hero politically_connected infantry_officer CHN_GRA_officer }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 3
@@ -257,7 +257,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_dan_maoxin_sic_desc
-			traits = { politically_connected organizer irregulars_officer CHN_GRA_officer }
+			traits = { politically_connected war_hero organizer irregulars_officer CHN_GRA_officer }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
@@ -592,7 +592,7 @@ characters = {
 		}
 		corps_commander = {
 			desc = SZC_lai_xinhui_high_command_desc
-			traits = { career_officer artillery_specialist trickster trait_cautious CHN_SZC_officer }
+			traits = { career_officer war_hero artillery_specialist trickster trait_cautious CHN_SZC_officer }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
@@ -806,7 +806,7 @@ characters = {
 		}
 	}
 
-######################################
+	######################################
 	### Baoding Department - Deng side ###
 	######################################
 	#鄧錫侯
@@ -1122,25 +1122,6 @@ characters = {
 		}
 	}
 
-	#陳書農
-	SZC_chen_shunong = {
-		name = SZC_chen_shunong
-		portraits = {
-			army = {
-				small = GFX_portrait_SZC_chen_shunong_army_small
-				large = GFX_portrait_SZC_chen_shunong_army_large
-			}
-		}
-		corps_commander = {
-			desc = SZC_chen_shunong_commander_desc
-			traits = { career_officer light_infantry_officer CHN_SZC_officer }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
-		}
-	}
 	#胡临聪
 	SZC_hu_lincong = {
 		name = SZC_hu_lincong
@@ -1307,7 +1288,6 @@ characters = {
 		name = SZC_liu_yuanxuan
 		portraits = {
 			army = {
-				large = GFX_portrait_SZC_liu_yuanxuan_large
 				small = GFX_portrait_SZC_liu_yuanxuan_army_small
 			}
 		}
@@ -1326,12 +1306,6 @@ characters = {
 					}
 				}
 			}
-		}
-		country_leader = {
-			desc = SZC_liu_yuanxuan_leader_desc
-			ideology = social_conservative_subtype
-			traits = { CHN_southern_republican_aligned }
-			
 		}
 	}
 	#吴景伯
@@ -1786,15 +1760,9 @@ characters = {
 			# Placeholder leader, doesn't need desc
 			ideology = social_liberal_subtype
 		}
-		country_leader = {
-			# Placeholder leader, doesn't need desc
-			ideology = authoritarian_democrat_paoge_federalist_subtype
-			desc = SZC_fan_shaozeng_leader_desc
-			traits = { CHN_federalist_aligned }
-		}
 		corps_commander = {
 			desc = SZC_fan_shaozeng_high_command_desc
-			traits = { war_hero trickster trait_reckless irregulars_officer CHN_SZC_officer }
+			traits = { trickster trait_reckless irregulars_officer CHN_SZC_officer }
 			skill = 2
 			attack_skill = 1
 			defense_skill = 2
@@ -1974,7 +1942,6 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-
 	#劉咸滎
 	SZC_liu_xianying = {
 		name = SZC_liu_xianying
@@ -2008,10 +1975,6 @@ characters = {
 				small = GFX_portrait_SZC_liu_xiang_army_small
 				large = GFX_portrait_SZC_liu_xiang_army_large
 			}
-			civilian = {
-				small = GFX_portrait_SZC_liu_xiang_civilian_small
-				large = GFX_portrait_SZC_liu_xiang_civilian_large
-			}
 		}
 		country_leader = {
 			desc = SZC_liu_xiang_leader_desc
@@ -2020,7 +1983,7 @@ characters = {
 		}
 		field_marshal = {
 			desc = SZC_liu_xiang_commander_desc
-			traits = { harsh_leader infantry_officer infantry_leader trickster fast_planner CHN_SZC_officer }
+			traits = { politically_connected brilliant_strategist harsh_leader thorough_planner aggressive_assaulter CHN_SZC_officer }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -2050,7 +2013,7 @@ characters = {
 			slot = army_chief
 			idea_token = SZC_pan_wenhua_army_chief
 			ledger = army
-			traits = { KR_army_chief_morale_2 }
+			traits = { KR_MHC_army_regrouping_2 }
 			cost = 100
 		}
 		advisor = {
@@ -2241,13 +2204,12 @@ characters = {
 			}
 		}
 	}
-
 	#潘昌猷
 	SZC_pan_changyou = {
 		name = SZC_pan_changyou
 		portraits = {
-			civilian = {
-				small = GFX_portrait_SZC_pan_changyou_small
+			army = {
+				small = GFX_portrait_SZC_pan_changyou_army_small
 			}
 		}
 		advisor = {
@@ -2521,7 +2483,7 @@ characters = {
 			traits = { light_infantry_officer trickster trait_reckless irregulars_officer war_hero rising_star }
 			skill = 2
 			attack_skill = 2
-			defense_skill = 1
+			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 2
 		}
@@ -2546,8 +2508,6 @@ characters = {
 			desc = SZC_liu_bocheng_high_command_desc
 		}
 	}
-
-	
 
 	#鮮英
 	SZC_xian_ying = {

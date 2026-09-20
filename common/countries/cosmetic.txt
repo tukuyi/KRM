@@ -182,8 +182,8 @@ BUL_empire = {
 	color_ui = rgb { 0 77 0 }
 }
 CHT_state = {
-	color = rgb { 90 80 110 }
-	color_ui = rgb { 90 80 110 }
+	color = rgb { 68 59 85 }
+	color_ui = rgb { 68 59 85 }
 }
 FRP_spa_kingdom = {
 	color = rgb { 232 197 122 }
@@ -263,11 +263,27 @@ SPA_socialist = {
 	color = rgb { 204 0 0 }
 	color_ui = rgb { 204 0 0 }
 }
+SPA_socialist_civil_war = {
+	color = rgb { 204 0 0 }
+	color_ui = rgb { 204 0 0 }
+}
+SPA_socialist_radical_socialist = {
+	color = rgb { 204 0 0 }
+	color_ui = rgb { 204 0 0 }
+}
+SPA_socialist_syndicalist = {
+	color = rgb { 204 0 0 }
+	color_ui = rgb { 204 0 0 }
+}
 SPA_socialist_iberia = {
 	color = rgb { 204 0 0 }
 	color_ui = rgb { 204 0 0 }
 }
-SPA_socialist_civil_war = {
+SPA_socialist_iberia_radical_socialist = {
+	color = rgb { 204 0 0 }
+	color_ui = rgb { 204 0 0 }
+}
+SPA_socialist_iberia_syndicalist = {
 	color = rgb { 204 0 0 }
 	color_ui = rgb { 204 0 0 }
 }
@@ -550,6 +566,14 @@ SZH_united_china = {
 	color_ui = rgb { 255 198 0 }
 }
 SZH_government_nanjing_cosmetic = {
+	color = rgb { 248 198 0 }
+	color_ui = rgb { 255 198 0 }
+}
+SZH_government_guangzhou_cosmetic = {
+	color = rgb { 248 198 0 }
+	color_ui = rgb { 255 198 0 }
+}
+SZH_government_kunming_cosmetic = {
 	color = rgb { 248 198 0 }
 	color_ui = rgb { 255 198 0 }
 }
@@ -940,270 +964,4 @@ SZC_KMD = {
 SZC_KMD_CSG = {
 	color = rgb { 41 6 7 }
 	color_ui = rgb { 41 6 7 }
-}
-
-SZC_KMD_hanzhong = {
-	color = rgb { 136 0 21 }
-	color_ui = rgb { 136 0 21 }
-}
-
-SZC_KMD_han_united = {
-	color = rgb { 136 0 21 }
-	color_ui = rgb { 136 0 21 }
-}
-
-SZC_KMD_tianguo = {
-	color = rgb { 40 8 8 }
-	color_ui = rgb { 40 8 8}
-}
-
-SZC_KMD_NAZ = {
-	color = rgb { 46 48 48 }
-	color_ui = rgb { 46 48 48 }
-}
-SZC_KMD_NAZ_united = {
-	color = rgb { 46 48 48 }
-	color_ui = rgb { 46 48 48 }
-}
-SZC_KMD_NSR = {
-	color = rgb { 222 87 28 }
-	color_ui = rgb { 222 87 28 }
-}
-SZC_KMD_NSR_united = {
-	color = rgb { 222 87 28 }
-	color_ui = rgb { 222 87 28 }
-}
-
-SZC_KMD_QNN = {
-	color = rgb { 34 66 23 }
-	color_ui = rgb { 34 66 23 }
-}
-
-SZC_KMD_XIK = {
-	color = rgb { 156 134 102 }
-	color_ui = rgb { 156 134 102 }
-}
-
-SZC_KMD_CSP = {
-	color = rgb { 135 28 14 }
-	color_ui = rgb { 135 28 14 }
-}
-
-SZC_KMD_NYCP = {
-	color = rgb { 219 206 65 }
-	color_ui = rgb { 219 206 65 }
-}
-
-SZC_KMD_JBL = {
-	color = rgb { 60 68 102 }
-	color_ui = rgb { 60 68 102 }
-}
-
-SZC_KMD_BS = {
-	color = rgb { 145 45 63 }
-	color_ui = rgb { 145 45 63 }
-}
-
-SZC_KMD_KKK = {
-	color = rgb { 169 181 189 }
-	color_ui = rgb { 169 181 189 }
-}
-
-SZC_KMD_KKK_united = {
-	color = rgb { 169 181 189 }
-	color_ui = rgb { 169 181 189 }
-}
-
-SZC_KMD_anh = {
-	color = rgb { 181 143 70 }
-	color_ui = rgb { 181 143 70 }
-}
-
-SZC_KMD_DYD = {
-	color = rgb { 84 40 40 }
-	color_ui = rgb { 84 40 40 }
-}
-
-SZC_KMD_DYD_united = {
-	color = rgb { 84 40 40 }
-	color_ui = rgb { 84 40 40 }
-}
-
-SZC_KMD_OAA = {
-	color = rgb { 31 7 89 }
-	color_ui = rgb { 31 7 89 }
-}
-
-GXC_gui = {
-	color = rgb { 52 71 41 }
-	color_ui = rgb { 52 71 41 }
-}
-
-SHX_authoritarian_democrat = {
-	color = rgb { 42 89 189 }
-	color_ui = rgb { 42 89 189 }
-}
-
-YUN_TJY = {
-	color = rgb { 131 14 189 }
-	color_ui = rgb { 131 14 189 }
-}
-
-YUN_ANC = {
-	color = rgb { 212 44 55 }
-	color_ui = rgb { 212 44 55 }
-}
-
-HNN_ANC = {
-	color = rgb { 212 91 25 }
-	color_ui = rgb { 212 91 25 }
-}
-
-SHX_CAT = {
-	color = rgb { 212 203 129 }
-	color_ui = rgb { 212 203 129 }
-}
-
-ENG_JSP = {
-	color = rgb { 161 0 22 }
-	color_ui = rgb { 161 0 22 }
-}
-ENG_LCX = {
-	color = rgb { 161 0 22 }
-	color_ui = rgb { 161 0 22 }
-}
-ENG_LCY = {
-	color = rgb { 48 7 7 }
-	color_ui = rgb { 48 7 7 }
-}
-ENG_LCY_2 = {
-	color = rgb { 48 7 7 }
-	color_ui = rgb { 48 7 7 }
-}
-FRA_JSP = {
-	color = rgb { 39 119 155 }
-	color_ui = rgb { 39 119 155 }
-}
-FRA_LCX = {
-	color = rgb { 173 13 13 }
-	color_ui = rgb { 173 13 13 }
-}
-FRA_LCY = {
-	color = rgb { 5 26 45 }
-	color_ui = rgb { 5 26 45 }
-}
-GRU_JSP = {
-	color = rgb { 108 123 139 }
-	color_ui = rgb { 119 133 130 }
-}
-GRU_LCX = {
-	color = rgb { 106 100 95 }
-	color_ui = rgb { 106 100 95 }
-}
-GRU_LCY = {
-	color = rgb { 47 49 49 }
-	color_ui = rgb { 47 49 49 }
-}
-ITA_JSP = {
-	color = rgb { 59 148 65 }
-	color_ui = rgb { 74 186 82 }
-}
-ITA_LCY = {
-	color = rgb { 23 35 31 }
-	color_ui = rgb { 23 35 31 }
-}
-JAP_JSP = {
-	color = rgb { 252 201 185 }
-	color_ui = rgb { 252 201 185 }
-}
-JAP_LCX = {
-	color = rgb { 252 201 185 }
-	color_ui = rgb { 252 201 185 }
-}
-JAP_LCY = {
-	color = rgb { 140 104 165 }
-	color_ui = rgb { 140 104 165 }
-}
-KOR_LCY = {
-	color = rgb { 16 25 53 }
-	color_ui = rgb { 16 25 53 }
-}
-RUS_JSP = {
-	color = rgb { 39 118 81 }
-	color_ui = rgb { 39 118 81 }
-}
-RUS_LCX = {
-	color = rgb { 39 118 81 }
-	color_ui = rgb { 39 118 81 }
-}
-RUS_LCY = {
-	color = rgb { 26 41 14 }
-	color_ui = rgb { 26 41 14 }
-}
-RUS_LCY_2 = {
-	color = rgb { 26 41 14 }
-	color_ui = rgb { 26 41 14 }
-}
-TUR_LCX = {
-	color = rgb { 123 0 0 }
-	color_ui = rgb { 123 0 0 }
-}
-USA_JSP = {
-	color = rgb { 0 87 190 }
-	color_ui = rgb { 0 87 190 }
-}
-USA_LCX = {
-	color = rgb { 0 87 190 }
-	color_ui = rgb { 0 87 190 }
-}
-USA_LCY = {
-	color = rgb { 185 139 59 }
-	color_ui = rgb { 185 139 59 }
-}
-VIN_JSP = {
-	color = rgb { 255 204 0 }
-	color_ui = rgb { 255 204 0 }
-}
-VIN_LCY = {
-	color = rgb { 24 30 35 }
-	color_ui = rgb { 24 30 35 }
-}
-PRU_LCX = {
-	color = rgb { 179 30 19 }
-	color_ui = rgb { 179 30 19 }
-}
-AFR_LCX = {
-	color = rgb { 188 187 120 }
-	color_ui = rgb { 188 187 120 }
-}
-ARG_LCX = {
-	color = rgb { 44 54 109 }
-	color_ui = rgb { 44 54 109 }
-}
-BRA_LCX = {
-	color = rgb { 63 122 22 }
-	color_ui = rgb { 63 122 22 }
-}
-MEX_LCX = {
-	color = rgb { 109 172 90 }
-	color_ui = rgb { 109 172 90 }
-}
-COL_LCX = {
-	color = rgb { 211 183 50 }
-	color_ui = rgb { 211 183 50 }
-}
-GUA_LCX = {
-	color = rgb { 117 196 242 }
-	color_ui = rgb { 117 196 242 }
-}
-
-
-
-
-
-
-
-
-
-
 }
