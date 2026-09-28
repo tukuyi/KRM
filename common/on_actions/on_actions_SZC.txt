@@ -15,6 +15,13 @@ on_actions = {
 					}
 					country_event = { id = NKRsichuan.142 }
 				}
+				if = {
+					limit = {
+						has_country_leader = { character = SZC_zhang_guotao }
+						owns_state =  276
+					}
+					country_event = { id = NKRsichuanFP.67 }
+				}
 			}
 		}
 	}
