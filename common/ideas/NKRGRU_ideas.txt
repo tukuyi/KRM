@@ -1,0 +1,193 @@
+##############
+#   NKRGRU   #
+##############
+# German Republic (GRU) 激进民主分支专属国家精神
+# 由 common/national_focus/GRU focus (German Republic).txt 中
+# GRU_RDP ~ GRU_frankreich_proposal 一段焦点解锁
+
+ideas = {
+	country = {
+
+### 三党根基 ###
+		GRU_radical_democracy = {
+			picture = generic_democratic_drift_bonus
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		GRU_national_party = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		GRU_national_union = {
+			picture = generic_manpower_bonus
+			allowed = { always = no }
+			modifier = {
+				war_support_factor = 0.10
+				conscription_factor = 0.05
+				army_morale_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+
+### 激进民主主线 ###
+		GRU_freedom_for_all = {
+			picture = generic_constitutional_guarantees
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.05
+				social_liberal_drift = 0.02
+			}
+		}
+
+		GRU_working_class_charter = {
+			picture = HOL_welfare_state
+			allowed = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				monthly_population = 0.10
+			}
+		}
+
+		GRU_radicalism_spirit_idea = {
+			picture = FRA_communard_spirit
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.10
+				war_support_factor = 0.10
+				army_org_factor = 0.05
+			}
+		}
+
+		GRU_economy_democracy_idea = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_factory_start_efficiency_factor = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				consumer_goods_factor = -0.10
+			}
+		}
+
+### 自由派系（DStP 一侧） ###
+		GRU_srg_swr_united = {
+			picture = generic_syndicalism_drift_bonus
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		GRU_liberal_volkspartei_idea = {
+			picture = generic_democratic_drift_bonus
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_speed_buildings_factor = 0.10
+				stability_factor = 0.05
+			}
+		}
+
+		GRU_nation_economy_cooperation = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_factory_max_efficiency_factor = 0.05
+				global_building_slots_factor = 0.05
+			}
+		}
+
+		GRU_legacy_1848_idea = {
+			picture = generic_constitutional_guarantees
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.10
+				social_liberal_drift = 0.03
+			}
+		}
+
+		GRU_european_radicalism = {
+			picture = generic_neutrality_drift_bonus
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.10
+				consumer_goods_factor = -0.10
+				army_core_attack_factor = -0.10
+				stability_factor = -0.05
+			}
+		}
+
+### 民族派系（VNR 一侧） ###
+		GRU_anti_party_system = {
+			picture = triumphant_will
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = -0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		GRU_good_neighbourhood = {
+			picture = generic_neutrality_drift_bonus
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.10
+				stability_factor = 0.05
+				global_building_slots_factor = 0.05
+			}
+		}
+
+		GRU_voluntary_service_idea = {
+			picture = generic_manpower_bonus
+			allowed = { always = no }
+			modifier = {
+				conscription_factor = 0.05
+				training_time_army_factor = -0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		GRU_volksstaat_idea = {
+			picture = triumphant_will
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				global_building_slots_factor = 0.10
+			}
+		}
+
+		GRU_frankreich_overture = {
+			picture = generic_neutrality_drift_bonus
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+			}
+		}
+
+	}
+}
