@@ -399,3 +399,49 @@ NKR_amusing_ourselves_to_death_achievement = {
 		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
 	}
 }
+NKR_two_superpowers_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_two_superpowers_achievement_tt
+				AND = {
+					OR = {
+						has_cosmetic_tag = SZC_PAF
+						has_cosmetic_tag = SZC_YCP_PAF
+					}
+				}
+				event_target:DDPGRU = {
+					has_cosmetic_tag = GRU_paneuropa
+				}
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
+NKR_charlemagne_approvement_achievement = {
+	possible = {
+		OR = {
+			tag = SZC
+		}
+	}
+
+	happened = {
+		if = {
+			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
+			custom_override_tooltip = {
+				tooltip = NKR_charlemagne_approvement_achievement_tt
+				event_target:DDPGRU = {
+					has_cosmetic_tag = GRU_frankish
+				}
+			}
+		}
+		else = { custom_override_tooltip = { tooltip = achievements_disabled	always = no } }
+	}
+}
