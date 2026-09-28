@@ -41,10 +41,13 @@ defined_text = {
 	text = { trigger = { has_country_leader_ideology = social_liberal_liberal_socialist_subtype } localization_key = social_liberal_liberal_socialist_subtype }#自由社会主义
 	text = { trigger = { has_country_leader_ideology = social_liberal_constitutional_statist_subtype } localization_key = social_liberal_constitutional_statist_subtype }#宪政国家主义
 	text = { trigger = { has_country_leader_ideology = social_liberal_liberal_technocracy_subtype } localization_key = social_liberal_liberal_technocracy_subtype }#自由技官主义
+	text = { trigger = { has_country_leader_ideology = social_liberal_radical_liberal_subtype } localization_key = social_liberal_radical_liberal_subtype }#激进自由主义
 
 	#Market Liberal
 	text = { trigger = { has_country_leader_ideology = market_liberal_clientelist_subtype } localization_key = market_liberal_clientelist_subtype }#庇护主义
 	text = { trigger = { has_country_leader_ideology = market_liberal_scheme_statist_subtype } localization_key = market_liberal_scheme_statist_subtype }#传销国家主义
+	text = { trigger = { has_country_leader_ideology = market_liberal_national_liberal_subtype } localization_key = market_liberal_national_liberal_subtype }#民族自由主义
+	text = { trigger = { has_country_leader_ideology = market_liberal_liberal_corporatist_subtype } localization_key = market_liberal_liberal_corporatist_subtype }#自由法团主义
 
 	#Social Conservative
 	text = { trigger = { has_country_leader_ideology = social_conservative_statist_subtype } localization_key = social_conservative_statist_subtype }#国家主义-社保
@@ -60,6 +63,7 @@ defined_text = {
 	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_moral_sovereign_democracy_subtype } localization_key = authoritarian_democrat_moral_sovereign_democracy_subtype }#道德主权民主主义
 	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_paoge_federalist_subtype } localization_key = authoritarian_democrat_paoge_federalist_subtype }#袍哥联省主义
 	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_reform_statist_subtype } localization_key = authoritarian_democrat_reform_statist_subtype }#革新国家主义
+	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_jungliberaldemokratie_subtype } localization_key = authoritarian_democrat_jungliberaldemokratie_subtype }#青年自由民主主义
 
 	#Paternal Autocrat
 	text = { trigger = { has_country_leader_ideology = paternal_autocrat_pan_asianist_subtype } localization_key = paternal_autocrat_pan_asianist_subtype }#家独泛亚

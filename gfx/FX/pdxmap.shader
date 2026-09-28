@@ -397,11 +397,11 @@ PixelShader =
 			DebugReturn(vOut, lightingProperties, fShadowTerm);
 
 			// Kongmeng Power!!!
-			// Trigger color: rgb { 7 3 9 } -> cosmetic tag
-			float3 rlSichuanActiveColor = float3(7.0/255.0, 3.0/255.0, 9.0/255.0);
+			// Trigger color: rgb { 15 0 4 } -> cosmetic tag
+			float3 rlSichuanActiveColor = float3(7.0/255.0, 0.0/255.0, 4.0/255.0);
 			float3 rlColorTest = tex2D(GradientBorderChannel1, float2(Input.uv.x, 1.0 - (Input.uv.y * 0.5))).xyz;
 			float3 rlDelta = abs(rlColorTest - rlSichuanActiveColor);
-			if (rlDelta.r < 0.02 && rlDelta.g < 0.02 && rlDelta.b < 0.04 ) {
+			if (rlDelta.r < 0.01 && rlDelta.g < 0.01 && rlDelta.b < 0.01 ) {
 
 				// 圆心，根据实际地图坐标调整
 				float2 rlCenter = float2(0.79, 0.55);

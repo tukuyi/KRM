@@ -7,14 +7,14 @@ focus_tree = {
 	id = German_Puppet_focus
 	country = {
 		factor = 0
-		# modifier = {
-		# 	add = 10
-		# 	original_tag = GRU
-		# }
 		modifier = {
-			add = 114
-			original_tag = SZC
+			add = 10
+			original_tag = GRU
 		}
+		# modifier = {
+		# 	add = 114
+		# 	original_tag = SZC
+		# }
 	}
 	default = no
 	continuous_focus_position = { x = 200 y = 1400 }
@@ -1741,6 +1741,10 @@ focus_tree = {
 			focus = GRU_semi_presidential
 		}
 
+		bypass = {
+			has_country_flag = GRU_DDP_bros_focus
+		}
+
 		ai_will_do = { base = 50 }
 
 		on_uncomplete = {
@@ -1802,6 +1806,10 @@ focus_tree = {
 		available = {
 			is_monarchy = no
 			has_democratic_government = yes
+		}
+
+		bypass = {
+			has_country_flag = GRU_DDP_bros_focus
 		}
 
 		prerequisite = { focus = GRU_democratic_constitution }
@@ -1888,7 +1896,16 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed GRU_free_elections"
 			if = {
-				limit = { is_monarchy = no }
+				limit = { 
+					is_monarchy = no
+					NOT = {
+						OR = {
+							has_country_leader = { character = GRU_artur_mahraun }
+							has_country_leader = { character = GRU_hermann_dietrich }
+							has_country_leader = { character = GRU_anton_erkelenz }
+						}
+					}
+				}
 				GER = {
 					GER_franz_von_papen = {
 						set_nationality = ROOT
@@ -1897,6 +1914,17 @@ focus_tree = {
 				}
 			}
 			if = {
+				limit = {
+					OR = {
+						has_country_leader = GRU_artur_mahraun
+						has_country_leader = GRU_hermann_dietrich
+						has_country_leader = GRU_anton_erkelenz
+					}
+				}
+				custom_effect_tooltip = GRU_free_elections_tt
+				#啥都不变哈哈哈
+			}
+			else_if = {
 				limit = { is_subject = yes }
 				custom_effect_tooltip = GRU_free_elections_tt
 				hidden_effect = {
@@ -1943,6 +1971,15 @@ focus_tree = {
 		y = 1
 
 		available_if_capitulated = yes
+
+		allow_branch = {
+			NOT = {
+				tag =SZC
+			}
+			NOT = {
+				has_country_flag = GRU_DDP_bros_focus
+			}
+		}
 
 		available = { has_government = social_democrat }
 
@@ -2150,6 +2187,15 @@ focus_tree = {
 		x = -1
 		y = 1
 
+		allow_branch = {
+			NOT = {
+				tag =SZC
+			}
+			NOT = {
+				has_country_flag = GRU_DDP_bros_focus
+			}
+		}
+
 		available_if_capitulated = yes
 
 		available = { has_government = social_liberal }
@@ -2313,6 +2359,15 @@ focus_tree = {
 		relative_position_id = GRU_free_elections
 		x = 1
 		y = 1
+
+		allow_branch = {
+			NOT = {
+				tag =SZC
+			}
+			NOT = {
+				has_country_flag = GRU_DDP_bros_focus
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2482,6 +2537,15 @@ focus_tree = {
 		x = 5
 		y = 1
 
+		allow_branch = {
+			NOT = {
+				tag =SZC
+			}
+			NOT = {
+				has_country_flag = GRU_DDP_bros_focus
+			}
+		}
+
 		available_if_capitulated = yes
 
 		available = { has_government = authoritarian_democrat }
@@ -2549,6 +2613,12 @@ focus_tree = {
 		allow_branch = {
 			has_socialist_government = no
 			is_monarchy = no
+			NOT = {
+				tag =SZC
+			}
+			NOT = {
+				has_country_flag = GRU_DDP_bros_focus
+			}
 		}
 
 		prerequisite = {
@@ -2587,6 +2657,12 @@ focus_tree = {
 		allow_branch = {
 			has_socialist_government = no
 			is_monarchy = no
+			NOT = {
+				tag =SZC
+			}
+			NOT = {
+				has_country_flag = GRU_DDP_bros_focus
+			}
 		}
 		available = {
 			OVERLORD = { has_authoritarian_government = yes }
@@ -2768,6 +2844,15 @@ focus_tree = {
 		x = 3
 		y = 1
 
+		allow_branch = {
+			NOT = {
+				tag =SZC
+			}
+			NOT = {
+				has_country_flag = GRU_DDP_bros_focus
+			}
+		}
+
 		available_if_capitulated = yes
 
 		available = { has_government = market_liberal }
@@ -2917,8 +3002,15 @@ focus_tree = {
 		cost = 6
 
 		relative_position_id = GRU_free_elections
-		x = -11
+		x = -2
 		y = 1
+
+		allow_branch = {
+			OR = {
+				tag = SZC
+				has_country_flag = GRU_DDP_bros_focus
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -2947,6 +3039,13 @@ focus_tree = {
 		x = 2
 		y = 0
 
+		allow_branch = {
+			OR = {
+				tag = SZC
+				has_country_flag = GRU_DDP_bros_focus
+			}
+		}
+
 		available_if_capitulated = yes
 
 		available = { has_government = social_democrat }
@@ -2973,6 +3072,13 @@ focus_tree = {
 		relative_position_id = GRU_RDP
 		x = 4
 		y = 0
+
+		allow_branch = {
+			OR = {
+				tag = SZC
+				has_country_flag = GRU_DDP_bros_focus
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -3120,6 +3226,11 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_a_europe_towards_radical_democracy"
 			add_popularity = { ideology = social_liberal popularity = 0.03 }
 			add_ideas = GRU_european_radicalism	
+			OVERLORD = {
+				country_event = {
+					id = NKRsichuanpuppet.81
+				}
+			}
 		}
 	}
 
@@ -3349,6 +3460,14 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		available = {
+			OVERLORD = {
+				16 = {
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+
 		mutually_exclusive = {
 			focus = GRU_ein_volksstaat_fur_das_volk
 		}
@@ -3362,6 +3481,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed GRU_frankreich_proposal"
 			add_ideas = GRU_frankreich_overture
+			OVERLORD = {
+				country_event = {
+					id = NKRsichuanpuppet.82
+				}
+			}
+		}
 	}
 
 ### Autocratic ###

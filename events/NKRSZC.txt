@@ -21439,35 +21439,154 @@ country_event = { #是的，我们有香蕉！
 	}
 }
 
-country_event = { #
+country_event = { #泛欧设想？
 	id = NKRsichuanpuppet.81
 	title = NKRsichuanpuppet.81.t
 	desc = NKRsichuanpuppet.81.d
-	picture = GFX_report_event_SZC_dongdalu
+	picture = GFX_report_event_SZC_1848
 
 	is_triggered_only = yes
 	
 	
 
-	option = {#
+	option = {#世界格局就是如此：无数的泛区域大国将崛起！
 		log = "[GetLogInfo]: event NKRsichuanpuppet.81 option NKRsichuanpuppet.81.a"
 		name = NKRsichuanpuppet.81.a
+		every_subject_country = {
+			limit = {
+				is_german_tag = yes
+			}
+			save_event_target_as = DDPGRU
+		}
+		every_collection_element = {
+			input = {
+				input = constant:state_groups.russia_starting_states
+				name = collection_russia_starting_states
+			}
+			THIS = { set_state_flag = fuck_russia }
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 213
+					state = 215
+					state = 216
+					state = 218
+					state = 234
+					state = 242
+					state = 243
+					state = 329
+					state = 537
+					state = 577
+					state = 722
+					state = 755
+					state = 880
+					state = 1006
+					is_core_of = MNR
+				}
+			}
+			THIS = { clr_state_flag = fuck_russia }
+			
+		}
+		event_target:DDPGRU = {
+			set_cosmetic_tag = GRU_paneuropa
+			every_state = {
+				limit = {
+					OR = {
+						AND = {
+							is_on_continent = europe
+							NOT = {
+								has_state_flag = fuck_russia
+							}
+						}
+						is_core_of = GEO
+					}
+				}
+				add_claim_by = PREV
+				enable_state_integration_50_compliance = yes
+			}
+		}
+		ROOT = {
+			every_state = {
+				limit = {
+					is_on_continent = europe
+					NOT = {
+						has_state_flag = fuck_russia
+					}
+					is_owned_and_controlled_by_ROOT_or_subject = yes
+				}
+				transfer_state_to = event_target:DDPGRU
+			}
+		}
+		every_collection_element = {
+			input = {
+				input = constant:state_groups.russia_starting_states
+				name = collection_russia_starting_states
+			}
+			THIS = { clr_state_flag = fuck_russia }
+		}
+	}
+	option = {#看起来不太安全呢...
+		log = "[GetLogInfo]: event NKRsichuanpuppet.81 option NKRsichuanpuppet.81.b"
+		name = NKRsichuanpuppet.81.b
 	}
 }
 
-country_event = { #
+country_event = { #法兰克提议？
 	id = NKRsichuanpuppet.82
 	title = NKRsichuanpuppet.82.t
 	desc = NKRsichuanpuppet.82.d
-	picture = GFX_report_event_SZC_dongdalu
+	picture = GFX_report_event_SZC_1848
 
 	is_triggered_only = yes
 	
 	
 
-	option = {#
+	option = {#多么伟大的跨民族构想！
 		log = "[GetLogInfo]: event NKRsichuanpuppet.82 option NKRsichuanpuppet.82.a"
 		name = NKRsichuanpuppet.82.a
+		every_subject_country = {
+			limit = {
+				is_german_tag = yes
+			}
+			save_event_target_as = DDPGRU
+		}
+		event_target:DDPGRU = {
+			set_cosmetic_tag = GRU_frankish
+			every_state = {
+				limit = {
+					is_france = yes
+				}
+				add_claim_by = PREV
+				enable_state_integration_50_compliance = yes
+			}
+			ROOT = {
+				if = {
+					FRP = {
+						limit = {
+							is_subject_of = ROOT
+						}
+						event_target:DDPGRU = {
+							annex_country = {
+								target = FRP
+								transfer_troops = yes
+							}
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						is_france = yes
+						is_owned_and_controlled_by_ROOT_or_subject = yes
+					}
+					transfer_state_to = event_target:DDPGRU
+				}
+			}
+		}
+	}
+	option = {#我怎么能凭你的一言之词撮合这种...奇特国家？
+		log = "[GetLogInfo]: event NKRsichuanpuppet.82 option NKRsichuanpuppet.82.b"
+		name = NKRsichuanpuppet.82.b
 	}
 }
 
@@ -21596,6 +21715,283 @@ country_event = { #
 	option = {#
 		log = "[GetLogInfo]: event NKRsichuanpuppet.90 option NKRsichuanpuppet.90.a"
 		name = NKRsichuanpuppet.90.a
+	}
+}
+
+country_event = { #激进民主党
+	id = NKRsichuanpuppet.91
+	title = NKRsichuanpuppet.91.t
+	desc = NKRsichuanpuppet.91.d
+	picture = GFX_report_event_SZC_1848
+
+	is_triggered_only = yes
+	
+
+	immediate = {
+		hidden_effect = {
+			annexations_reset_german_tags = yes
+			if = {
+				limit = {
+					OR = {
+						is_german_unifier_tag = yes
+						AND = {
+							64 = { is_claim_or_core_of_ROOT = yes } #Brandenburg
+							owns_state = 147 #Prussian Saxony
+						}
+						AND = {
+							AUS_can_form_germany = yes
+							OR = {
+								has_subject = BAY
+								any_owned_state = {
+									is_south_germany = yes
+									state_strategic_value > 89
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_german_event_targets = yes
+			if = {
+				limit = {
+					annexations_germany_is_independent_ally_or_puppet_of_ROOT = no
+					PRE = { ROOT_can_grant_land = yes }
+				}
+				PRE = { save_event_target_as = prussia add_to_array = { ROOT.potential_grant_targets = THIS } }
+			}
+			58 = { retain_state = yes } #Schleswig-Holstein
+		}
+	}
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.91 option NKRsichuanpuppet.91.a"
+		name = NKRsichuanpuppet.91.a
+		annexations_release_republican_germany = yes
+		hidden_effect = {
+			GRU_anton_erkelenz = {
+				set_nationality = var:tag_to_release
+			}
+			var:tag_to_release = {
+				set_country_flag = GRU_DDP_bros_focus
+				GRU_anton_erkelenz = {
+					promote_character = social_liberal_radical_liberal_subtype
+				}
+				set_cosmetic_tag = GRU_YCP
+				set_politics = {
+					ruling_party = social_liberal
+				}
+				set_party_name = {
+					ideology = social_liberal
+					name = GRU_RDP_party
+					long_name = GRU_RDP_party_long
+				}
+				set_party_name = {
+					ideology = social_democrat
+					name = GRU_RDP_party
+					long_name = GRU_RDP_party_long
+				}
+			}
+		}
+	}
+}
+
+country_event = { #德意志国家党
+	id = NKRsichuanpuppet.92
+	title = NKRsichuanpuppet.92.t
+	desc = NKRsichuanpuppet.92.d
+	picture = GFX_report_event_SZC_1848
+
+	is_triggered_only = yes
+	
+
+	immediate = {
+		hidden_effect = {
+			annexations_reset_german_tags = yes
+			if = {
+				limit = {
+					OR = {
+						is_german_unifier_tag = yes
+						AND = {
+							64 = { is_claim_or_core_of_ROOT = yes } #Brandenburg
+							owns_state = 147 #Prussian Saxony
+						}
+						AND = {
+							AUS_can_form_germany = yes
+							OR = {
+								has_subject = BAY
+								any_owned_state = {
+									is_south_germany = yes
+									state_strategic_value > 89
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_german_event_targets = yes
+			if = {
+				limit = {
+					annexations_germany_is_independent_ally_or_puppet_of_ROOT = no
+					PRE = { ROOT_can_grant_land = yes }
+				}
+				PRE = { save_event_target_as = prussia add_to_array = { ROOT.potential_grant_targets = THIS } }
+			}
+			58 = { retain_state = yes } #Schleswig-Holstein
+		}
+	}
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.92 option NKRsichuanpuppet.92.a"
+		name = NKRsichuanpuppet.92.a
+		annexations_release_republican_germany = yes
+		hidden_effect = {
+			GRU_hermann_dietrich = {
+				set_nationality = var:tag_to_release
+			}
+			var:tag_to_release = {
+				set_country_flag = GRU_DDP_bros_focus
+				GRU_hermann_dietrich = {
+					promote_character = market_liberal_national_liberal_subtype
+				}
+				set_cosmetic_tag = GRU_artur
+				set_politics = {
+					ruling_party = market_liberal
+				}
+				set_party_name = {
+					ideology = market_liberal
+					name = GRU_DStP_party
+					long_name = GRU_DStP_party_long
+				}
+				set_party_name = {
+					ideology = social_liberal
+					name = GRU_DStP_party
+					long_name = GRU_DStP_party_long
+				}
+			}
+		}
+	}
+	# 迪特里希（民族自由主义）／马赫劳恩（自由法团主义）两个选项的细节你自己加
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.93 option NKRsichuanpuppet.93.a"
+		name = NKRsichuanpuppet.92.b
+		annexations_release_republican_germany = yes
+		hidden_effect = {
+			GRU_artur_mahraun = {
+				set_nationality = var:tag_to_release
+			}
+			var:tag_to_release = {
+				set_country_flag = GRU_DDP_bros_focus
+				GRU_artur_mahraun = {
+					promote_character = authoritarian_democrat_jungliberaldemokratie_subtype
+				}
+				GRU_artur_mahraun = {
+					promote_character = market_liberal_liberal_corporatist_subtype
+				}
+				set_cosmetic_tag = GRU_artur
+				set_politics = {
+					ruling_party = market_liberal
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = GRU_DStP_party
+					long_name = GRU_DStP_party_long
+				}
+				set_party_name = {
+					ideology = market_liberal
+					name = GRU_DStP_party
+					long_name = GRU_DStP_party_long
+				}
+			}
+		}
+	}
+}
+
+country_event = { #民族人民国家会
+	id = NKRsichuanpuppet.93
+	title = NKRsichuanpuppet.93.t
+	desc = NKRsichuanpuppet.93.d
+	picture = GFX_report_event_SZC_1848
+
+	is_triggered_only = yes
+	
+
+	immediate = {
+		hidden_effect = {
+			annexations_reset_german_tags = yes
+			if = {
+				limit = {
+					OR = {
+						is_german_unifier_tag = yes
+						AND = {
+							64 = { is_claim_or_core_of_ROOT = yes } #Brandenburg
+							owns_state = 147 #Prussian Saxony
+						}
+						AND = {
+							AUS_can_form_germany = yes
+							OR = {
+								has_subject = BAY
+								any_owned_state = {
+									is_south_germany = yes
+									state_strategic_value > 89
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = can_annex
+			}
+			annexations_create_german_event_targets = yes
+			if = {
+				limit = {
+					annexations_germany_is_independent_ally_or_puppet_of_ROOT = no
+					PRE = { ROOT_can_grant_land = yes }
+				}
+				PRE = { save_event_target_as = prussia add_to_array = { ROOT.potential_grant_targets = THIS } }
+			}
+			58 = { retain_state = yes } #Schleswig-Holstein
+		}
+	}
+
+	option = {#
+		log = "[GetLogInfo]: event NKRsichuanpuppet.93 option NKRsichuanpuppet.93.a"
+		name = NKRsichuanpuppet.93.a
+		annexations_release_republican_germany = yes
+		hidden_effect = {
+			GRU_artur_mahraun = {
+				set_portraits = {
+					civilian = {
+						large = GFX_portrait_GRU_artur_mahraun_uniform_large
+					}
+				}
+				set_nationality = var:tag_to_release
+			}
+			var:tag_to_release = {
+				set_country_flag = GRU_DDP_bros_focus
+				GRU_artur_mahraun = {
+					promote_character = authoritarian_democrat_jungliberaldemokratie_subtype
+				}
+				GRU_artur_mahraun = {
+					promote_character = market_liberal_liberal_corporatist_subtype
+				}
+				set_cosmetic_tag = GRU_artur
+				set_politics = {
+					ruling_party = authoritarian_democrat
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = GRU_VNR_party
+					long_name = GRU_VNR_party_long
+				}
+				set_party_name = {
+					ideology = market_liberal
+					name = GRU_VNR_party
+					long_name = GRU_VNR_party_long
+				}
+			}
+		}
 	}
 }
 

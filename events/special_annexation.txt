@@ -141,7 +141,31 @@ country_event = { #特殊吞并 - 德国
 			limit = {
 				SZC_normal_ycp_path = yes
 			}
-			country_event = { id = NKRsichuanpuppet.30 }
+			if = {
+				limit = {
+					OR = {
+						has_government = social_liberal
+						has_government = social_democrat
+					}
+				}
+				country_event = { id = NKRsichuanpuppet.91 }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_government = authoritarian_democrat
+						has_government = paternal_autocrat
+					}
+					NOT = {
+						has_country_leader = SZC_chen_qitian
+					}
+				}
+				country_event = { id = NKRsichuanpuppet.93 }
+			}
+			else = {
+				country_event = { id = NKRsichuanpuppet.92 }
+			}
+			# country_event = { id = NKRsichuanpuppet.30 }
 		}
 		else_if = {
 			limit = {
