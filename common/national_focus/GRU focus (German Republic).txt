@@ -3225,11 +3225,13 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed GRU_a_europe_towards_radical_democracy"
 			add_popularity = { ideology = social_liberal popularity = 0.03 }
-			add_ideas = GRU_european_radicalism	
 			OVERLORD = {
 				country_event = {
 					id = NKRsichuanpuppet.81
 				}
+			}
+			effect_tooltip = {
+				add_ideas = GRU_european_radicalism	
 			}
 		}
 	}
@@ -3480,11 +3482,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed GRU_frankreich_proposal"
-			add_ideas = GRU_frankreich_overture
 			OVERLORD = {
 				country_event = {
 					id = NKRsichuanpuppet.82
 				}
+			}
+			effect_tooltip = {
+				add_ideas = GRU_frankreich_overture
 			}
 		}
 	}

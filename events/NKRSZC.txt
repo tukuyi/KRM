@@ -21489,6 +21489,7 @@ country_event = { #泛欧设想？
 			
 		}
 		event_target:DDPGRU = {
+			add_ideas = GRU_european_radicalism	
 			set_cosmetic_tag = GRU_paneuropa
 			every_state = {
 				limit = {
@@ -21529,6 +21530,20 @@ country_event = { #泛欧设想？
 	option = {#看起来不太安全呢...
 		log = "[GetLogInfo]: event NKRsichuanpuppet.81 option NKRsichuanpuppet.81.b"
 		name = NKRsichuanpuppet.81.b
+		every_subject_country = {
+			limit = {
+				is_german_tag = yes
+			}
+			save_event_target_as = DDPGRU
+		}
+		event_target:DDPGRU = {
+			uncomplete_national_focus = {
+				focus = GRU_a_europe_towards_radical_democracy
+			}
+			complete_national_focus = {
+				focus = GRU_legacy_of_1848
+			}
+		}
 	}
 }
 
@@ -21552,6 +21567,7 @@ country_event = { #法兰克提议？
 			save_event_target_as = DDPGRU
 		}
 		event_target:DDPGRU = {
+			add_ideas = GRU_frankreich_overture
 			set_cosmetic_tag = GRU_frankish
 			every_state = {
 				limit = {
@@ -21587,6 +21603,20 @@ country_event = { #法兰克提议？
 	option = {#我怎么能凭你的一言之词撮合这种...奇特国家？
 		log = "[GetLogInfo]: event NKRsichuanpuppet.82 option NKRsichuanpuppet.82.b"
 		name = NKRsichuanpuppet.82.b
+		every_subject_country = {
+			limit = {
+				is_german_tag = yes
+			}
+			save_event_target_as = DDPGRU
+		}
+		event_target:DDPGRU = {
+			uncomplete_national_focus = {
+				focus = GRU_frankreich_proposal
+			}
+			complete_national_focus = {
+				focus = GRU_ein_volksstaat_fur_das_volk
+			}
+		}
 	}
 }
 
