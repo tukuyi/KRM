@@ -7283,13 +7283,13 @@ focus_tree = {
 			every_owned_state = {
 				limit = {
 					OR = {
-						has_state_flag = fujian_province_state
-						has_state_flag = zhejiang_province_state
-						has_state_flag = hubei_province_state
-						has_state_flag = jiangxi_province_state
-						has_state_flag = yunnan_province_state
-						has_state_flag = hunan_province_state
-						has_state_flag = sichuan_province_state
+						check_variable = { chinese_province_state = 595 } #fujian
+						check_variable = { chinese_province_state = 596 } #zhejiang
+						check_variable = { chinese_province_state = 1048 } #hubei
+						check_variable = { chinese_province_state = 600 } #jiangxi
+						check_variable = { chinese_province_state = 325 } #yunnan
+						check_variable = { chinese_province_state = 602 } #hunan
+						check_variable = { chinese_province_state = 605 } #sichuan
 					}
 				}
 				add_dynamic_modifier = {
@@ -8209,10 +8209,10 @@ focus_tree = {
 			every_controlled_state = {
 				limit = {
 					OR = {
-						has_state_flag = ningxia_province_state
-						has_state_flag = gansu_province_state
-						has_state_flag = qinghai_province_state
-						has_state_flag = sichuan_province_state
+						check_variable = { chinese_province_state = 348 } #ningxia
+						check_variable = { chinese_province_state = 283 } #gansu
+						check_variable = { chinese_province_state = 353 } #qinghai
+						check_variable = { chinese_province_state = 605 } #sichuan
 						china_is_chinese_frontier_trigger = yes
 					}
 				}
@@ -14773,7 +14773,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_expand_local_elections"
 			
 			every_owned_state = {
-				limit = { has_state_flag = sichuan_province_state }
+				limit = { check_variable = { chinese_province_state = 605 } #sichuan }
 				add_dynamic_modifier = {
 					modifier = SZC_local_parliament_democracy
 					scope = THIS
@@ -15586,7 +15586,7 @@ focus_tree = {
 			}
 			
 			every_owned_state = {
-				limit = { has_state_flag = sichuan_province_state }
+				limit = { check_variable = { chinese_province_state = 605 } #sichuan }
 				add_dynamic_modifier = {
 					modifier = SZC_local_parliament_democracy
 					scope = THIS
@@ -17891,11 +17891,11 @@ focus_tree = {
 						is_claimed_by = ROOT
 					}
 					OR = {
-						has_state_flag = guangxi_province_state
-						has_state_flag = guangdong_province_state
-						has_state_flag = sichuan_province_state
-						has_state_flag = hunan_province_state
-						has_state_flag = guizhou_province_state
+						check_variable = { chinese_province_state = 594 } #guangxi
+						check_variable = { chinese_province_state = 592 } #guangdong
+						check_variable = { chinese_province_state = 605 } #sichuan
+						check_variable = { chinese_province_state = 602 } #hunan
+						check_variable = { chinese_province_state = 1051 } #guizhou
 					}
 				}
 				add_claim_by = ROOT
@@ -18356,7 +18356,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_push_sichuan_democratic_model"
 			add_political_power = 200
 			every_owned_state = {
-				limit = { has_state_flag = sichuan_province_state }
+				limit = { check_variable = { chinese_province_state = 605 } #sichuan }
 				add_dynamic_modifier = {
 					modifier = SZC_local_peoples_democracy
 					scope = THIS

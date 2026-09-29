@@ -1031,10 +1031,10 @@ chinese_unification = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SZC_expand_local_peoples_democracy_decision target: [From.GetName]"
 			if = {
-				limit = { FROM = { has_state_flag = guangxi_province_state } } #Nanning
+				limit = { FROM = { check_variable = { chinese_province_state = 594 } #guangxi } } #Nanning
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = guangxi_province_state }
+						limit = { check_variable = { chinese_province_state = 594 } #guangxi }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1043,10 +1043,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = yunnan_province_state } } #Kunming
+				limit = { FROM = { check_variable = { chinese_province_state = 325 } #yunnan } } #Kunming
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = yunnan_province_state }
+						limit = { check_variable = { chinese_province_state = 325 } #yunnan }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1055,10 +1055,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = guizhou_province_state } } #Guixi
+				limit = { FROM = { check_variable = { chinese_province_state = 1051 } #guizhou } } #Guixi
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = guizhou_province_state }
+						limit = { check_variable = { chinese_province_state = 1051 } #guizhou }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1067,10 +1067,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = hunan_province_state } } #Changsha
+				limit = { FROM = { check_variable = { chinese_province_state = 602 } #hunan } } #Changsha
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = hunan_province_state }
+						limit = { check_variable = { chinese_province_state = 602 } #hunan }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1079,10 +1079,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = hubei_province_state } } #Wuhan
+				limit = { FROM = { check_variable = { chinese_province_state = 1048 } #hubei } } #Wuhan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = hubei_province_state }
+						limit = { check_variable = { chinese_province_state = 1048 } #hubei }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1091,10 +1091,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = jiangxi_province_state } } #nanchang
+				limit = { FROM = { check_variable = { chinese_province_state = 600 } #jiangxi } } #nanchang
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = jiangxi_province_state }
+						limit = { check_variable = { chinese_province_state = 600 } #jiangxi }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1103,10 +1103,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = zhejiang_province_state } } #Hangzhou
+				limit = { FROM = { check_variable = { chinese_province_state = 596 } #zhejiang } } #Hangzhou
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = zhejiang_province_state }
+						limit = { check_variable = { chinese_province_state = 596 } #zhejiang }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1115,10 +1115,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = jiangsu_province_state } } #Nanjing
+				limit = { FROM = { check_variable = { chinese_province_state = 613 } #jiangsu } } #Nanjing
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = jiangsu_province_state }
+						limit = { check_variable = { chinese_province_state = 613 } #jiangsu }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1127,10 +1127,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = anhui_province_state } } #hefei
+				limit = { FROM = { check_variable = { chinese_province_state = 606 } #anhui } } #hefei
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = anhui_province_state }
+						limit = { check_variable = { chinese_province_state = 606 } #anhui }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1139,10 +1139,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = shandong_province_state } } #jinan
+				limit = { FROM = { check_variable = { chinese_province_state = 597 } #shandong } } #jinan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = shandong_province_state }
+						limit = { check_variable = { chinese_province_state = 597 } #shandong }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1151,10 +1151,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = henan_province_state } } #zhengzhou
+				limit = { FROM = { check_variable = { chinese_province_state = 607 } #henan } } #zhengzhou
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = henan_province_state }
+						limit = { check_variable = { chinese_province_state = 607 } #henan }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1163,10 +1163,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = zhili_province_state } } #beijing
+				limit = { FROM = { check_variable = { chinese_province_state = 608 } #zhili } } #beijing
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = zhili_province_state }
+						limit = { check_variable = { chinese_province_state = 608 } #zhili }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1175,10 +1175,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = shanxi_province_state } } #taiyuan
+				limit = { FROM = { check_variable = { chinese_province_state = 1072 } #shanxi } } #taiyuan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = shanxi_province_state }
+						limit = { check_variable = { chinese_province_state = 1072 } #shanxi }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1187,10 +1187,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = shannxi_province_state } } #xian
+				limit = { FROM = { check_variable = { chinese_province_state = 622 } #shannxi } } #xian
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = shannxi_province_state }
+						limit = { check_variable = { chinese_province_state = 622 } #shannxi }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1199,10 +1199,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = fengtian_province_state } } #shengyang
+				limit = { FROM = { check_variable = { chinese_province_state = 716 } #fengtian } } #shengyang
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = fengtian_province_state }
+						limit = { check_variable = { chinese_province_state = 716 } #fengtian }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1211,10 +1211,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = jilin_province_state } } #changchun
+				limit = { FROM = { check_variable = { chinese_province_state = 886 } #jilin } } #changchun
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = jilin_province_state }
+						limit = { check_variable = { chinese_province_state = 886 } #jilin }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1223,10 +1223,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = heilongjiang_province_state } } #qiqihaer
+				limit = { FROM = { check_variable = { chinese_province_state = 714 } #heilongjiang } } #qiqihaer
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = heilongjiang_province_state }
+						limit = { check_variable = { chinese_province_state = 714 } #heilongjiang }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1235,10 +1235,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = chahaer_province_state } } #xilinhaote
+				limit = { FROM = { check_variable = { chinese_province_state = 611 } #chahaer } } #xilinhaote
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = chahaer_province_state }
+						limit = { check_variable = { chinese_province_state = 611 } #chahaer }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1247,10 +1247,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = gansu_province_state } } #lanzhou
+				limit = { FROM = { check_variable = { chinese_province_state = 283 } #gansu } } #lanzhou
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = gansu_province_state }
+						limit = { check_variable = { chinese_province_state = 283 } #gansu }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1259,10 +1259,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = ningxia_province_state } } #yinchuan
+				limit = { FROM = { check_variable = { chinese_province_state = 348 } #ningxia } } #yinchuan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = ningxia_province_state }
+						limit = { check_variable = { chinese_province_state = 348 } #ningxia }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1271,10 +1271,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = qinghai_province_state } } #xining
+				limit = { FROM = { check_variable = { chinese_province_state = 353 } #qinghai } } #xining
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = qinghai_province_state }
+						limit = { check_variable = { chinese_province_state = 353 } #qinghai }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1283,10 +1283,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = xinjiang_province_state } } #dihua
+				limit = { FROM = { check_variable = { chinese_province_state = 617 } #xinjiang } } #dihua
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = xinjiang_province_state }
+						limit = { check_variable = { chinese_province_state = 617 } #xinjiang }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1295,10 +1295,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = suiyuan_province_state } } #guisui
+				limit = { FROM = { check_variable = { chinese_province_state = 621 } #suiyuan } } #guisui
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = suiyuan_province_state }
+						limit = { check_variable = { chinese_province_state = 621 } #suiyuan }
 						add_dynamic_modifier = {
 							modifier = SZC_local_peoples_democracy
 							scope = THIS
@@ -1351,10 +1351,10 @@ chinese_unification = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SZC_expand_local_parliament_democracy_decision target: [From.GetName]"
 			if = {
-				limit = { FROM = { has_state_flag = guangxi_province_state } } #Nanning
+				limit = { FROM = { check_variable = { chinese_province_state = 594 } #guangxi } } #Nanning
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = guangxi_province_state }
+						limit = { check_variable = { chinese_province_state = 594 } #guangxi }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1363,10 +1363,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = yunnan_province_state } } #Kunming
+				limit = { FROM = { check_variable = { chinese_province_state = 325 } #yunnan } } #Kunming
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = yunnan_province_state }
+						limit = { check_variable = { chinese_province_state = 325 } #yunnan }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1375,10 +1375,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = guizhou_province_state } } #Guixi
+				limit = { FROM = { check_variable = { chinese_province_state = 1051 } #guizhou } } #Guixi
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = guizhou_province_state }
+						limit = { check_variable = { chinese_province_state = 1051 } #guizhou }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1387,10 +1387,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = hunan_province_state } } #Changsha
+				limit = { FROM = { check_variable = { chinese_province_state = 602 } #hunan } } #Changsha
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = hunan_province_state }
+						limit = { check_variable = { chinese_province_state = 602 } #hunan }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1399,10 +1399,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = hubei_province_state } } #Wuhan
+				limit = { FROM = { check_variable = { chinese_province_state = 1048 } #hubei } } #Wuhan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = hubei_province_state }
+						limit = { check_variable = { chinese_province_state = 1048 } #hubei }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1411,10 +1411,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = jiangxi_province_state } } #nanchang
+				limit = { FROM = { check_variable = { chinese_province_state = 600 } #jiangxi } } #nanchang
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = jiangxi_province_state }
+						limit = { check_variable = { chinese_province_state = 600 } #jiangxi }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1423,10 +1423,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = zhejiang_province_state } } #Hangzhou
+				limit = { FROM = { check_variable = { chinese_province_state = 596 } #zhejiang } } #Hangzhou
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = zhejiang_province_state }
+						limit = { check_variable = { chinese_province_state = 596 } #zhejiang }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1435,10 +1435,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = jiangsu_province_state } } #Nanjing
+				limit = { FROM = { check_variable = { chinese_province_state = 613 } #jiangsu } } #Nanjing
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = jiangsu_province_state }
+						limit = { check_variable = { chinese_province_state = 613 } #jiangsu }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1447,10 +1447,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = anhui_province_state } } #hefei
+				limit = { FROM = { check_variable = { chinese_province_state = 606 } #anhui } } #hefei
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = anhui_province_state }
+						limit = { check_variable = { chinese_province_state = 606 } #anhui }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1459,10 +1459,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = shandong_province_state } } #jinan
+				limit = { FROM = { check_variable = { chinese_province_state = 597 } #shandong } } #jinan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = shandong_province_state }
+						limit = { check_variable = { chinese_province_state = 597 } #shandong }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1471,10 +1471,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = henan_province_state } } #zhengzhou
+				limit = { FROM = { check_variable = { chinese_province_state = 607 } #henan } } #zhengzhou
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = henan_province_state }
+						limit = { check_variable = { chinese_province_state = 607 } #henan }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1483,10 +1483,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = zhili_province_state } } #beijing
+				limit = { FROM = { check_variable = { chinese_province_state = 608 } #zhili } } #beijing
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = zhili_province_state }
+						limit = { check_variable = { chinese_province_state = 608 } #zhili }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1495,10 +1495,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = shanxi_province_state } } #taiyuan
+				limit = { FROM = { check_variable = { chinese_province_state = 1072 } #shanxi } } #taiyuan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = shanxi_province_state }
+						limit = { check_variable = { chinese_province_state = 1072 } #shanxi }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1507,10 +1507,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = shannxi_province_state } } #xian
+				limit = { FROM = { check_variable = { chinese_province_state = 622 } #shannxi } } #xian
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = shannxi_province_state }
+						limit = { check_variable = { chinese_province_state = 622 } #shannxi }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1519,10 +1519,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = fengtian_province_state } } #shengyang
+				limit = { FROM = { check_variable = { chinese_province_state = 716 } #fengtian } } #shengyang
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = fengtian_province_state }
+						limit = { check_variable = { chinese_province_state = 716 } #fengtian }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1531,10 +1531,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = jilin_province_state } } #changchun
+				limit = { FROM = { check_variable = { chinese_province_state = 886 } #jilin } } #changchun
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = jilin_province_state }
+						limit = { check_variable = { chinese_province_state = 886 } #jilin }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1543,10 +1543,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = heilongjiang_province_state } } #qiqihaer
+				limit = { FROM = { check_variable = { chinese_province_state = 714 } #heilongjiang } } #qiqihaer
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = heilongjiang_province_state }
+						limit = { check_variable = { chinese_province_state = 714 } #heilongjiang }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1555,10 +1555,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = chahaer_province_state } } #xilinhaote
+				limit = { FROM = { check_variable = { chinese_province_state = 611 } #chahaer } } #xilinhaote
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = chahaer_province_state }
+						limit = { check_variable = { chinese_province_state = 611 } #chahaer }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1567,10 +1567,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = gansu_province_state } } #lanzhou
+				limit = { FROM = { check_variable = { chinese_province_state = 283 } #gansu } } #lanzhou
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = gansu_province_state }
+						limit = { check_variable = { chinese_province_state = 283 } #gansu }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1579,10 +1579,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = ningxia_province_state } } #yinchuan
+				limit = { FROM = { check_variable = { chinese_province_state = 348 } #ningxia } } #yinchuan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = ningxia_province_state }
+						limit = { check_variable = { chinese_province_state = 348 } #ningxia }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1591,10 +1591,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = qinghai_province_state } } #xining
+				limit = { FROM = { check_variable = { chinese_province_state = 353 } #qinghai } } #xining
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = qinghai_province_state }
+						limit = { check_variable = { chinese_province_state = 353 } #qinghai }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1603,10 +1603,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = xinjiang_province_state } } #dihua
+				limit = { FROM = { check_variable = { chinese_province_state = 617 } #xinjiang } } #dihua
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = xinjiang_province_state }
+						limit = { check_variable = { chinese_province_state = 617 } #xinjiang }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1615,10 +1615,10 @@ chinese_unification = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = suiyuan_province_state } } #guisui
+				limit = { FROM = { check_variable = { chinese_province_state = 621 } #suiyuan } } #guisui
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = suiyuan_province_state }
+						limit = { check_variable = { chinese_province_state = 621 } #suiyuan }
 						add_dynamic_modifier = {
 							modifier = SZC_local_parliament_democracy
 							scope = THIS
@@ -1744,10 +1744,10 @@ SZC_YCP_party_issues_category = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SZC_YCP_expand_popular_revolution_decision target: [From.GetName]"
 			if = {
-				limit = { FROM = { has_state_flag = guangxi_province_state } } #Nanning
+				limit = { FROM = { check_variable = { chinese_province_state = 594 } #guangxi } } #Nanning
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = guangxi_province_state }
+						limit = { check_variable = { chinese_province_state = 594 } #guangxi }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1756,10 +1756,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = yunnan_province_state } } #Kunming
+				limit = { FROM = { check_variable = { chinese_province_state = 325 } #yunnan } } #Kunming
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = yunnan_province_state }
+						limit = { check_variable = { chinese_province_state = 325 } #yunnan }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1768,10 +1768,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = guizhou_province_state } } #Guixi
+				limit = { FROM = { check_variable = { chinese_province_state = 1051 } #guizhou } } #Guixi
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = guizhou_province_state }
+						limit = { check_variable = { chinese_province_state = 1051 } #guizhou }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1780,10 +1780,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = hunan_province_state } } #Changsha
+				limit = { FROM = { check_variable = { chinese_province_state = 602 } #hunan } } #Changsha
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = hunan_province_state }
+						limit = { check_variable = { chinese_province_state = 602 } #hunan }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1792,10 +1792,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = hubei_province_state } } #Wuhan
+				limit = { FROM = { check_variable = { chinese_province_state = 1048 } #hubei } } #Wuhan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = hubei_province_state }
+						limit = { check_variable = { chinese_province_state = 1048 } #hubei }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1804,10 +1804,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = jiangxi_province_state } } #nanchang
+				limit = { FROM = { check_variable = { chinese_province_state = 600 } #jiangxi } } #nanchang
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = jiangxi_province_state }
+						limit = { check_variable = { chinese_province_state = 600 } #jiangxi }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1816,10 +1816,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = zhejiang_province_state } } #Hangzhou
+				limit = { FROM = { check_variable = { chinese_province_state = 596 } #zhejiang } } #Hangzhou
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = zhejiang_province_state }
+						limit = { check_variable = { chinese_province_state = 596 } #zhejiang }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1828,10 +1828,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = jiangsu_province_state } } #Nanjing
+				limit = { FROM = { check_variable = { chinese_province_state = 613 } #jiangsu } } #Nanjing
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = jiangsu_province_state }
+						limit = { check_variable = { chinese_province_state = 613 } #jiangsu }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1840,10 +1840,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = anhui_province_state } } #hefei
+				limit = { FROM = { check_variable = { chinese_province_state = 606 } #anhui } } #hefei
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = anhui_province_state }
+						limit = { check_variable = { chinese_province_state = 606 } #anhui }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1852,10 +1852,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = shandong_province_state } } #jinan
+				limit = { FROM = { check_variable = { chinese_province_state = 597 } #shandong } } #jinan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = shandong_province_state }
+						limit = { check_variable = { chinese_province_state = 597 } #shandong }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1864,10 +1864,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = henan_province_state } } #zhengzhou
+				limit = { FROM = { check_variable = { chinese_province_state = 607 } #henan } } #zhengzhou
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = henan_province_state }
+						limit = { check_variable = { chinese_province_state = 607 } #henan }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1876,10 +1876,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = zhili_province_state } } #beijing
+				limit = { FROM = { check_variable = { chinese_province_state = 608 } #zhili } } #beijing
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = zhili_province_state }
+						limit = { check_variable = { chinese_province_state = 608 } #zhili }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1888,10 +1888,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = shanxi_province_state } } #taiyuan
+				limit = { FROM = { check_variable = { chinese_province_state = 1072 } #shanxi } } #taiyuan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = shanxi_province_state }
+						limit = { check_variable = { chinese_province_state = 1072 } #shanxi }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1900,10 +1900,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = shannxi_province_state } } #xian
+				limit = { FROM = { check_variable = { chinese_province_state = 622 } #shannxi } } #xian
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = shannxi_province_state }
+						limit = { check_variable = { chinese_province_state = 622 } #shannxi }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1912,10 +1912,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = fengtian_province_state } } #shengyang
+				limit = { FROM = { check_variable = { chinese_province_state = 716 } #fengtian } } #shengyang
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = fengtian_province_state }
+						limit = { check_variable = { chinese_province_state = 716 } #fengtian }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1924,10 +1924,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = jilin_province_state } } #changchun
+				limit = { FROM = { check_variable = { chinese_province_state = 886 } #jilin } } #changchun
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = jilin_province_state }
+						limit = { check_variable = { chinese_province_state = 886 } #jilin }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1936,10 +1936,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = heilongjiang_province_state } } #qiqihaer
+				limit = { FROM = { check_variable = { chinese_province_state = 714 } #heilongjiang } } #qiqihaer
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = heilongjiang_province_state }
+						limit = { check_variable = { chinese_province_state = 714 } #heilongjiang }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1948,10 +1948,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = chahaer_province_state } } #xilinhaote
+				limit = { FROM = { check_variable = { chinese_province_state = 611 } #chahaer } } #xilinhaote
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = chahaer_province_state }
+						limit = { check_variable = { chinese_province_state = 611 } #chahaer }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1960,10 +1960,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = gansu_province_state } } #lanzhou
+				limit = { FROM = { check_variable = { chinese_province_state = 283 } #gansu } } #lanzhou
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = gansu_province_state }
+						limit = { check_variable = { chinese_province_state = 283 } #gansu }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1972,10 +1972,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = ningxia_province_state } } #yinchuan
+				limit = { FROM = { check_variable = { chinese_province_state = 348 } #ningxia } } #yinchuan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = ningxia_province_state }
+						limit = { check_variable = { chinese_province_state = 348 } #ningxia }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1984,10 +1984,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = qinghai_province_state } } #xining
+				limit = { FROM = { check_variable = { chinese_province_state = 353 } #qinghai } } #xining
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = qinghai_province_state }
+						limit = { check_variable = { chinese_province_state = 353 } #qinghai }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -1996,10 +1996,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = xinjiang_province_state } } #dihua
+				limit = { FROM = { check_variable = { chinese_province_state = 617 } #xinjiang } } #dihua
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = xinjiang_province_state }
+						limit = { check_variable = { chinese_province_state = 617 } #xinjiang }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -2008,10 +2008,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = suiyuan_province_state } } #guisui
+				limit = { FROM = { check_variable = { chinese_province_state = 621 } #suiyuan } } #guisui
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = suiyuan_province_state }
+						limit = { check_variable = { chinese_province_state = 621 } #suiyuan }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_popular_revolution_mod
 							scope = THIS
@@ -2063,10 +2063,10 @@ SZC_YCP_party_issues_category = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SZC_YCP_expand_province_constitution_decision target: [From.GetName]"
 			if = {
-				limit = { FROM = { has_state_flag = guangxi_province_state } } #Nanning
+				limit = { FROM = { check_variable = { chinese_province_state = 594 } #guangxi } } #Nanning
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = guangxi_province_state }
+						limit = { check_variable = { chinese_province_state = 594 } #guangxi }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2075,10 +2075,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = yunnan_province_state } } #Kunming
+				limit = { FROM = { check_variable = { chinese_province_state = 325 } #yunnan } } #Kunming
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = yunnan_province_state }
+						limit = { check_variable = { chinese_province_state = 325 } #yunnan }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2087,10 +2087,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = guizhou_province_state } } #Guixi
+				limit = { FROM = { check_variable = { chinese_province_state = 1051 } #guizhou } } #Guixi
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = guizhou_province_state }
+						limit = { check_variable = { chinese_province_state = 1051 } #guizhou }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2099,10 +2099,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = hunan_province_state } } #Changsha
+				limit = { FROM = { check_variable = { chinese_province_state = 602 } #hunan } } #Changsha
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = hunan_province_state }
+						limit = { check_variable = { chinese_province_state = 602 } #hunan }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2111,10 +2111,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = hubei_province_state } } #Wuhan
+				limit = { FROM = { check_variable = { chinese_province_state = 1048 } #hubei } } #Wuhan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = hubei_province_state }
+						limit = { check_variable = { chinese_province_state = 1048 } #hubei }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2123,10 +2123,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = jiangxi_province_state } } #nanchang
+				limit = { FROM = { check_variable = { chinese_province_state = 600 } #jiangxi } } #nanchang
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = jiangxi_province_state }
+						limit = { check_variable = { chinese_province_state = 600 } #jiangxi }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2135,10 +2135,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = zhejiang_province_state } } #Hangzhou
+				limit = { FROM = { check_variable = { chinese_province_state = 596 } #zhejiang } } #Hangzhou
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = zhejiang_province_state }
+						limit = { check_variable = { chinese_province_state = 596 } #zhejiang }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2147,10 +2147,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = jiangsu_province_state } } #Nanjing
+				limit = { FROM = { check_variable = { chinese_province_state = 613 } #jiangsu } } #Nanjing
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = jiangsu_province_state }
+						limit = { check_variable = { chinese_province_state = 613 } #jiangsu }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2159,10 +2159,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = anhui_province_state } } #hefei
+				limit = { FROM = { check_variable = { chinese_province_state = 606 } #anhui } } #hefei
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = anhui_province_state }
+						limit = { check_variable = { chinese_province_state = 606 } #anhui }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2171,10 +2171,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = shandong_province_state } } #jinan
+				limit = { FROM = { check_variable = { chinese_province_state = 597 } #shandong } } #jinan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = shandong_province_state }
+						limit = { check_variable = { chinese_province_state = 597 } #shandong }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2183,10 +2183,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = henan_province_state } } #zhengzhou
+				limit = { FROM = { check_variable = { chinese_province_state = 607 } #henan } } #zhengzhou
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = henan_province_state }
+						limit = { check_variable = { chinese_province_state = 607 } #henan }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2195,10 +2195,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = zhili_province_state } } #beijing
+				limit = { FROM = { check_variable = { chinese_province_state = 608 } #zhili } } #beijing
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = zhili_province_state }
+						limit = { check_variable = { chinese_province_state = 608 } #zhili }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2207,10 +2207,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = shanxi_province_state } } #taiyuan
+				limit = { FROM = { check_variable = { chinese_province_state = 1072 } #shanxi } } #taiyuan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = shanxi_province_state }
+						limit = { check_variable = { chinese_province_state = 1072 } #shanxi }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2219,10 +2219,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = shannxi_province_state } } #xian
+				limit = { FROM = { check_variable = { chinese_province_state = 622 } #shannxi } } #xian
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = shannxi_province_state }
+						limit = { check_variable = { chinese_province_state = 622 } #shannxi }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2231,10 +2231,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = fengtian_province_state } } #shengyang
+				limit = { FROM = { check_variable = { chinese_province_state = 716 } #fengtian } } #shengyang
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = fengtian_province_state }
+						limit = { check_variable = { chinese_province_state = 716 } #fengtian }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2243,10 +2243,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = jilin_province_state } } #changchun
+				limit = { FROM = { check_variable = { chinese_province_state = 886 } #jilin } } #changchun
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = jilin_province_state }
+						limit = { check_variable = { chinese_province_state = 886 } #jilin }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2255,10 +2255,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = heilongjiang_province_state } } #qiqihaer
+				limit = { FROM = { check_variable = { chinese_province_state = 714 } #heilongjiang } } #qiqihaer
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = heilongjiang_province_state }
+						limit = { check_variable = { chinese_province_state = 714 } #heilongjiang }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2267,10 +2267,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = chahaer_province_state } } #xilinhaote
+				limit = { FROM = { check_variable = { chinese_province_state = 611 } #chahaer } } #xilinhaote
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = chahaer_province_state }
+						limit = { check_variable = { chinese_province_state = 611 } #chahaer }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2279,10 +2279,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = gansu_province_state } } #lanzhou
+				limit = { FROM = { check_variable = { chinese_province_state = 283 } #gansu } } #lanzhou
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = gansu_province_state }
+						limit = { check_variable = { chinese_province_state = 283 } #gansu }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2291,10 +2291,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = ningxia_province_state } } #yinchuan
+				limit = { FROM = { check_variable = { chinese_province_state = 348 } #ningxia } } #yinchuan
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = ningxia_province_state }
+						limit = { check_variable = { chinese_province_state = 348 } #ningxia }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2303,10 +2303,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = qinghai_province_state } } #xining
+				limit = { FROM = { check_variable = { chinese_province_state = 353 } #qinghai } } #xining
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = qinghai_province_state }
+						limit = { check_variable = { chinese_province_state = 353 } #qinghai }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2315,10 +2315,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = xinjiang_province_state } } #dihua
+				limit = { FROM = { check_variable = { chinese_province_state = 617 } #xinjiang } } #dihua
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = xinjiang_province_state }
+						limit = { check_variable = { chinese_province_state = 617 } #xinjiang }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
@@ -2327,10 +2327,10 @@ SZC_YCP_party_issues_category = {
 				}
 			}
 			else_if = {
-				limit = { FROM = { has_state_flag = suiyuan_province_state } } #guisui
+				limit = { FROM = { check_variable = { chinese_province_state = 621 } #suiyuan } } #guisui
 				ROOT = {
 					every_owned_state = {
-						limit = { has_state_flag = suiyuan_province_state }
+						limit = { check_variable = { chinese_province_state = 621 } #suiyuan }
 						add_dynamic_modifier = {
 							modifier = SZC_YCP_province_constitution_mod
 							scope = THIS
