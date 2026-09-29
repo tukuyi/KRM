@@ -1916,9 +1916,9 @@ focus_tree = {
 			if = {
 				limit = {
 					OR = {
-						has_country_leader = GRU_artur_mahraun
-						has_country_leader = GRU_hermann_dietrich
-						has_country_leader = GRU_anton_erkelenz
+						has_country_leader = { character = GRU_artur_mahraun }
+						has_country_leader = { character = GRU_hermann_dietrich }
+						has_country_leader = { character = GRU_anton_erkelenz }
 					}
 				}
 				custom_effect_tooltip = GRU_free_elections_tt

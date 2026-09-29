@@ -14773,7 +14773,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_expand_local_elections"
 			
 			every_owned_state = {
-				limit = { check_variable = { chinese_province_state = 605 } #sichuan }
+				limit = { check_variable = { chinese_province_state = 605 }  } #sichuan
 				add_dynamic_modifier = {
 					modifier = SZC_local_parliament_democracy
 					scope = THIS
@@ -15586,7 +15586,7 @@ focus_tree = {
 			}
 			
 			every_owned_state = {
-				limit = { check_variable = { chinese_province_state = 605 } #sichuan }
+				limit = { check_variable = { chinese_province_state = 605 }  }
 				add_dynamic_modifier = {
 					modifier = SZC_local_parliament_democracy
 					scope = THIS
@@ -18356,7 +18356,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_push_sichuan_democratic_model"
 			add_political_power = 200
 			every_owned_state = {
-				limit = { check_variable = { chinese_province_state = 605 } #sichuan }
+				limit = { check_variable = { chinese_province_state = 605 }  }
 				add_dynamic_modifier = {
 					modifier = SZC_local_peoples_democracy
 					scope = THIS
