@@ -204,7 +204,7 @@ SZC_debug_category = {
 			}
 			SZC_lai_yongqing = {
 				SZC_recruit_character_effect = yes
-				promote_character = market_liberal_scheme_statist_subtype
+				promote_character = market_liberal_scheme_statism_subtype
 			}
 			set_party_name = {
 				ideology = market_liberal
@@ -350,25 +350,25 @@ SZC_debug_category = {
 				}
 			}
 			SZC_li_huang = {
-				promote_character = authoritarian_democrat_statist_subtype
+				promote_character = authoritarian_democrat_statism_subtype
 			}
 			SZC_zeng_qi = {
-				promote_character = paternal_autocrat_statist_subtype
+				promote_character = paternal_autocrat_statism_subtype
 			}
 			SZC_zhang_bolun = {
 				promote_character = market_liberal_subtype
 			}
 			SZC_xia_taosheng = {
 				SZC_recruit_character_effect = yes
-				promote_character = social_conservative_statist_subtype
+				promote_character = social_conservative_statism_subtype
 			}
 			SZC_jiang_yungang = {
 				SZC_recruit_character_effect = yes
-				promote_character = national_populist_strum_drang_statist_subtype
+				promote_character = national_populist_strum_drang_statism_subtype
 			}
 			SZC_zuo_shunsheng = {
 				SZC_recruit_character_effect = yes
-				promote_character = social_liberal_constitutional_statist_subtype
+				promote_character = social_liberal_constitutional_statism_subtype
 			}
 			set_politics = {
 				ruling_party = paternal_autocrat
@@ -3087,13 +3087,13 @@ foreign_politics = {
 					set_politics = {
 						ruling_party = syndicalist
 					}
-					set_country_leader_ideology = syndicalist_revolutionary_tridemist_subtype
+					set_country_leader_ideology = syndicalist_revolutionary_tridemism_subtype
 				}
 				else = {
 					set_politics = {
 						ruling_party = radical_socialist
 					}
-					set_country_leader_ideology = radical_socialist_revolutionary_tridemist_subtype
+					set_country_leader_ideology = radical_socialist_revolutionary_tridemism_subtype
 				}
 			}
 		}
@@ -3415,7 +3415,7 @@ foreign_politics = {
 				set_politics = {
 					ruling_party = syndicalist
 				}
-				set_country_leader_ideology = syndicalist_yellow_syndicalist_subtype
+				set_country_leader_ideology = syndicalist_yellow_syndicalism_subtype
 				set_country_flag = YELLOW_SYNDICALIZED
 			}
 		}

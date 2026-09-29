@@ -666,25 +666,25 @@ country_event = { #中国青年党浮出水面
 		log = "[GetLogInfo]: event NKRsichuan.31 option NKRsichuan.31.a"
 		name = NKRsichuan.31.a
 		SZC_li_huang = {
-			promote_character = authoritarian_democrat_statist_subtype
+			promote_character = authoritarian_democrat_statism_subtype
 		}
 		SZC_zeng_qi = {
-			promote_character = paternal_autocrat_statist_subtype
+			promote_character = paternal_autocrat_statism_subtype
 		}
 		SZC_zhang_bolun = {
 			promote_character = market_liberal_subtype
 		}
 		SZC_xia_taosheng = {
 			SZC_recruit_character_effect = yes
-			promote_character = social_conservative_statist_subtype
+			promote_character = social_conservative_statism_subtype
 		}
 		SZC_jiang_yungang = {
 			SZC_recruit_character_effect = yes
-			promote_character = national_populist_strum_drang_statist_subtype
+			promote_character = national_populist_strum_drang_statism_subtype
 		}
 		SZC_zuo_shunsheng = {
 			SZC_recruit_character_effect = yes
-			promote_character = social_liberal_constitutional_statist_subtype
+			promote_character = social_liberal_constitutional_statism_subtype
 		}
 		set_politics = {
 			ruling_party = paternal_autocrat
@@ -1140,7 +1140,7 @@ country_event = { #新蜀报
 			popularity = 0.05
 		}
 		SZC_qi_nanxun = {
-			promote_character = syndicalist_revolutionary_tridemist_subtype
+			promote_character = syndicalist_revolutionary_tridemism_subtype
 		}
 	}
 }
@@ -1392,7 +1392,7 @@ country_event = { #刘伯承掌控局势
 		log = "[GetLogInfo]: event NKRsichuan.120 option NKRsichuan.120.a"
 		name = NKRsichuan.120.a
 		SZC_liu_bocheng = {
-			promote_character = syndicalist_revolutionary_tridemist_subtype
+			promote_character = syndicalist_revolutionary_tridemism_subtype
 		}
 		set_politics = {
 			ruling_party = syndicalist
@@ -1517,7 +1517,7 @@ country_event = { #赤红的四川
 		log = "[GetLogInfo]: event NKRsichuan.125 option NKRsichuan.125.a"
 		name = NKRsichuan.125.a
 		SZC_qi_nanxun = {
-			promote_character = syndicalist_revolutionary_tridemist_subtype
+			promote_character = syndicalist_revolutionary_tridemism_subtype
 			china_set_character_alignment_left_kuomintang = yes
 		}
 		set_country_flag = NKRSZC_crisis_done
@@ -2437,7 +2437,7 @@ country_event = { #革命志士
 		}
 		hidden_effect = {
 			SZC_pan_wenhua = {
-				promote_character = radical_socialist_revolutionary_tridemist_subtype
+				promote_character = radical_socialist_revolutionary_tridemism_subtype
 			}
 			end_coalition = yes
 			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
@@ -2681,7 +2681,7 @@ country_event = { #善意的建议
 		hidden_effect = {
 			end_coalition = yes
 			SZC_xie_chi = {
-				promote_character = social_conservative_orthodox_tridemist_subtype
+				promote_character = social_conservative_orthodox_tridemism_subtype
 			}
 		}
 		set_politics = {
@@ -5494,7 +5494,7 @@ country_event = { #解散民盟
 		GXC_zhang_junmai = {
 			promote_character = social_democrat_subtype
 		}
-		set_country_leader_ideology = social_democrat_national_socialist_subtype
+		set_country_leader_ideology = social_democrat_national_socialism_subtype
 		add_popularity = {
 			ideology = social_democrat
 			popularity = 0.15
@@ -9113,7 +9113,7 @@ country_event = { #党章修改通过！
 	option = {#党的转向...
 		log = "[GetLogInfo]: event NKRsichuan.477 option NKRsichuan.477.a"
 		name = NKRsichuan.477.a
-		set_country_leader_ideology = paternal_autocrat_revolutionary_statist_subtype
+		set_country_leader_ideology = paternal_autocrat_revolutionary_statism_subtype
 		add_popularity = {
 			ideology = paternal_autocrat
 			popularity = 0.1
@@ -9151,7 +9151,7 @@ country_event = { #曾琦驳回党章修改
 			add_popularity = { ideology = paternal_autocrat popularity = YCP_neg_pataut_popularity_temp_var }
 			add_popularity = { ideology = authoritarian_democrat popularity = YCP_pataut_popularity_temp_var }
 			SZC_zeng_qi = {
-				promote_character = authoritarian_democrat_statist_subtype
+				promote_character = authoritarian_democrat_statism_subtype
 			}
 			set_politics = {
 				ruling_party = authoritarian_democrat
@@ -9472,7 +9472,7 @@ country_event = { #出乎意料的橄榄枝
 		}
 		SZC_zhang_guotao = {
 			SZC_recruit_character_effect = yes
-			promote_character = syndicalist_yellow_syndicalist_subtype
+			promote_character = syndicalist_yellow_syndicalism_subtype
 		}
 	}
 }
@@ -10728,7 +10728,7 @@ country_event = { #顺利交接
 			ruling_party = authoritarian_democrat
 		}
 		SZC_chen_qitian = {
-			promote_character = authoritarian_democrat_new_legalist_statist_subtype
+			promote_character = authoritarian_democrat_new_legalist_statism_subtype
 		}
 		activate_advisor = SZC_chang_yansheng_sic
 		set_party_name = {
@@ -10768,7 +10768,7 @@ country_event = { #领导层更迭
 			ruling_party = authoritarian_democrat
 		}
 		SZC_chen_qitian = {
-			promote_character = authoritarian_democrat_new_legalist_statist_subtype
+			promote_character = authoritarian_democrat_new_legalist_statism_subtype
 		}
 		activate_advisor = SZC_chang_yansheng_sic
 		set_party_name = {
@@ -10812,7 +10812,7 @@ country_event = { #丢人现眼
 			ruling_party = authoritarian_democrat
 		}
 		SZC_chen_qitian = {
-			promote_character = authoritarian_democrat_new_legalist_statist_subtype
+			promote_character = authoritarian_democrat_new_legalist_statism_subtype
 		}
 		activate_advisor = SZC_chang_yansheng_sic
 		set_party_name = {
@@ -12046,7 +12046,7 @@ country_event = { #新生的意大利
 			}
 			ITA = {
 				ITA_peppino_garibaldi = {
-					promote_character = authoritarian_democrat_statist_subtype
+					promote_character = authoritarian_democrat_statism_subtype
 				}
 				set_cosmetic_tag = ITA_YCP
 				set_politics = {
@@ -12082,7 +12082,7 @@ country_event = { #青年民主的演化
 			add_popularity = { ideology = authoritarian_democrat popularity = YCP_neg_authdem_popularity_temp_var }
 			add_popularity = { ideology = social_conservative popularity = YCP_authdem_popularity_temp_var }
 			SZC_li_huang = {
-				promote_character = social_conservative_statist_subtype
+				promote_character = social_conservative_statism_subtype
 			}
 			set_party_name = {
 				ideology = social_conservative
@@ -13421,7 +13421,7 @@ country_event = { #保守革命的遗产
 			}
 			GRU = {
 				GRU_edgar_jung = {
-					promote_character = national_populist_strum_drang_statist_subtype
+					promote_character = national_populist_strum_drang_statism_subtype
 				}
 				set_cosmetic_tag = GRU_HRR
 				set_politics = {
@@ -13795,7 +13795,7 @@ country_event = { #至高权力
 			}
 		}
 		activate_advisor = QIE_hu_shih_sic
-		set_country_leader_ideology = market_liberal_clientelist_subtype
+		set_country_leader_ideology = market_liberal_clientelism_subtype
 		if = {
 			limit = {
 				has_idea = SZC_YCP_progress_constitution
@@ -13867,7 +13867,7 @@ country_event = { #不可能的胜利
 		log = "[GetLogInfo]: event NKRsichuan.697 option NKRsichuan.697.a"
 		name = NKRsichuan.697.a
 		custom_effect_tooltip = NKRsichuan.697_tt
-		set_country_leader_ideology = social_conservative_anarchist_statist_subtype
+		set_country_leader_ideology = social_conservative_anarchist_statism_subtype
 		set_country_flag = NKRSZC_YCPpath_phase3
 		mark_focus_tree_layout_dirty = yes
 	}
@@ -14527,7 +14527,7 @@ country_event = { #政变
 			}
 			SZC_assorted_leaders_unique = {
 				SZC_recruit_character_effect = yes
-				promote_character = syndicalist_yellow_syndicalist_subtype
+				promote_character = syndicalist_yellow_syndicalism_subtype
 			}
 		}
 	}
@@ -15426,7 +15426,7 @@ country_event = { #516革命-革命三民
 			}
 			KOR = {
 				SZC_park_chunghee = {
-					promote_character = radical_socialist_revolutionary_tridemist_subtype
+					promote_character = radical_socialist_revolutionary_tridemism_subtype
 				}
 				set_politics = {
 					ruling_party = radical_socialist
@@ -15544,7 +15544,7 @@ country_event = { #516革命-国家主义
 			}
 			KOR = {
 				SZC_park_chunghee = {
-					promote_character = authoritarian_democrat_statist_subtype
+					promote_character = authoritarian_democrat_statism_subtype
 				}
 				set_politics = {
 					ruling_party = authoritarian_democrat
@@ -15603,7 +15603,7 @@ country_event = { #516革命-正统三民
 			}
 			KOR = {
 				SZC_park_chunghee = {
-					promote_character = social_conservative_orthodox_tridemist_subtype
+					promote_character = social_conservative_orthodox_tridemism_subtype
 				}
 				set_politics = {
 					ruling_party = paternal_autocrat
@@ -15662,7 +15662,7 @@ country_event = { #516革命-狂飙
 			}
 			KOR = {
 				SZC_park_chunghee = {
-					promote_character = national_populist_strum_drang_statist_subtype
+					promote_character = national_populist_strum_drang_statism_subtype
 				}
 				set_politics = {
 					ruling_party = national_populist
@@ -15735,7 +15735,7 @@ country_event = { #516革命-革命国家主义
 					ideology = paternal_autocrat
 					popularity = 0.3
 				}
-				set_country_leader_ideology = paternal_autocrat_revolutionary_statist_subtype
+				set_country_leader_ideology = paternal_autocrat_revolutionary_statism_subtype
 			}
 		}
 	}
@@ -16305,16 +16305,16 @@ country_event = { #青年德意志的复兴
 			}
 			var:tag_to_release = {
 				GRU_dolf_sternberger = {
-					promote_character = social_democrat_new_legalist_state_socialist_subtype
+					promote_character = social_democrat_new_legalist_state_socialism_subtype
 				}
 				GRU_dolf_sternberger = {
-					promote_character = social_liberal_constitutional_statist_subtype
+					promote_character = social_liberal_constitutional_statism_subtype
 				}
 				GRU_dolf_sternberger = {
-					promote_character = social_conservative_statist_subtype
+					promote_character = social_conservative_statism_subtype
 				}
 				GRU_dolf_sternberger = {
-					promote_character = authoritarian_democrat_statist_subtype
+					promote_character = authoritarian_democrat_statism_subtype
 				}
 				set_cosmetic_tag = GRU_YCP
 				set_politics = {
@@ -16387,16 +16387,16 @@ country_event = { #新不列颠
 			}
 			GBP = {
 				ENG_john_macmurray = {
-					promote_character = social_democrat_new_legalist_state_socialist_subtype
+					promote_character = social_democrat_new_legalist_state_socialism_subtype
 				}
 				ENG_john_macmurray = {
-					promote_character = social_liberal_constitutional_statist_subtype
+					promote_character = social_liberal_constitutional_statism_subtype
 				}
 				ENG_john_macmurray = {
-					promote_character = social_conservative_statist_subtype
+					promote_character = social_conservative_statism_subtype
 				}
 				ENG_john_macmurray = {
-					promote_character = authoritarian_democrat_statist_subtype
+					promote_character = authoritarian_democrat_statism_subtype
 				}
 				set_cosmetic_tag = ENG_YCP
 				set_politics = {
@@ -16516,16 +16516,16 @@ country_event = { #民主党转变
 			}
 			USA = {
 				USA_hebert_agar = {
-					promote_character = social_democrat_new_legalist_state_socialist_subtype
+					promote_character = social_democrat_new_legalist_state_socialism_subtype
 				}
 				USA_hebert_agar = {
-					promote_character = social_liberal_constitutional_statist_subtype
+					promote_character = social_liberal_constitutional_statism_subtype
 				}
 				USA_hebert_agar = {
-					promote_character = social_conservative_statist_subtype
+					promote_character = social_conservative_statism_subtype
 				}
 				USA_hebert_agar = {
-					promote_character = authoritarian_democrat_statist_subtype
+					promote_character = authoritarian_democrat_statism_subtype
 				}
 				set_cosmetic_tag = USA_YCP
 				set_politics = {
@@ -16663,16 +16663,16 @@ country_event = { #青年波兰复兴
 			}
 			POL = {
 				POL_tadeusz_pruszkowski = {
-					promote_character = social_democrat_new_legalist_state_socialist_subtype
+					promote_character = social_democrat_new_legalist_state_socialism_subtype
 				}
 				POL_tadeusz_pruszkowski = {
-					promote_character = social_liberal_constitutional_statist_subtype
+					promote_character = social_liberal_constitutional_statism_subtype
 				}
 				POL_tadeusz_pruszkowski = {
-					promote_character = social_conservative_statist_subtype
+					promote_character = social_conservative_statism_subtype
 				}
 				POL_tadeusz_pruszkowski = {
-					promote_character = authoritarian_democrat_statist_subtype
+					promote_character = authoritarian_democrat_statism_subtype
 				}
 				set_cosmetic_tag = POL_YCP
 				set_politics = {
@@ -16773,13 +16773,13 @@ country_event = { #新社会革命党
 			}
 			RSA = {
 				RSA_nikolai_kondratiev = {
-					promote_character = social_liberal_constitutional_statist_subtype
+					promote_character = social_liberal_constitutional_statism_subtype
 				}
 				RSA_nikolai_kondratiev = {
-					promote_character = social_conservative_statist_subtype
+					promote_character = social_conservative_statism_subtype
 				}
 				RSA_nikolai_kondratiev = {
-					promote_character = authoritarian_democrat_statist_subtype
+					promote_character = authoritarian_democrat_statism_subtype
 				}
 				set_cosmetic_tag = RUS_YCP
 				set_politics = {
@@ -16919,16 +16919,16 @@ country_event = { #起源之地
 			}
 			FRP = {
 				FRA_gaston_riou = {
-					promote_character = social_democrat_new_legalist_state_socialist_subtype
+					promote_character = social_democrat_new_legalist_state_socialism_subtype
 				}
 				FRA_gaston_riou = {
-					promote_character = social_liberal_constitutional_statist_subtype
+					promote_character = social_liberal_constitutional_statism_subtype
 				}
 				FRA_gaston_riou = {
-					promote_character = social_conservative_statist_subtype
+					promote_character = social_conservative_statism_subtype
 				}
 				FRA_gaston_riou = {
-					promote_character = authoritarian_democrat_statist_subtype
+					promote_character = authoritarian_democrat_statism_subtype
 				}
 				set_cosmetic_tag = FRA_YCP
 				set_politics = {
@@ -17005,16 +17005,16 @@ country_event = { #半岛之上
 			}
 			SPA = {
 				SPA_jose_ortega_y_gasset = {
-					promote_character = social_democrat_new_legalist_state_socialist_subtype
+					promote_character = social_democrat_new_legalist_state_socialism_subtype
 				}
 				SPA_jose_ortega_y_gasset = {
-					promote_character = social_liberal_constitutional_statist_subtype
+					promote_character = social_liberal_constitutional_statism_subtype
 				}
 				SPA_jose_ortega_y_gasset = {
-					promote_character = social_conservative_statist_subtype
+					promote_character = social_conservative_statism_subtype
 				}
 				SPA_jose_ortega_y_gasset = {
-					promote_character = authoritarian_democrat_statist_subtype
+					promote_character = authoritarian_democrat_statism_subtype
 				}
 				set_cosmetic_tag = SPA_YCP
 				set_politics = {
@@ -17136,13 +17136,13 @@ country_event = { #中欧书生
 			}
 			CZE = {
 				CZE_frantisek_langer = {
-					promote_character = social_liberal_constitutional_statist_subtype
+					promote_character = social_liberal_constitutional_statism_subtype
 				}
 				CZE_frantisek_langer = {
-					promote_character = social_conservative_statist_subtype
+					promote_character = social_conservative_statism_subtype
 				}
 				CZE_frantisek_langer = {
-					promote_character = authoritarian_democrat_statist_subtype
+					promote_character = authoritarian_democrat_statism_subtype
 				}
 				set_cosmetic_tag = CZE_YCP
 				set_politics = {
@@ -17286,16 +17286,16 @@ country_event = { #扫除异端
 			}
 			TUR = {
 				TUR_resat_nuri_guntekin = {
-					promote_character = social_democrat_new_legalist_state_socialist_subtype
+					promote_character = social_democrat_new_legalist_state_socialism_subtype
 				}
 				TUR_resat_nuri_guntekin = {
-					promote_character = social_liberal_constitutional_statist_subtype
+					promote_character = social_liberal_constitutional_statism_subtype
 				}
 				TUR_resat_nuri_guntekin = {
-					promote_character = social_conservative_statist_subtype
+					promote_character = social_conservative_statism_subtype
 				}
 				TUR_resat_nuri_guntekin = {
-					promote_character = authoritarian_democrat_statist_subtype
+					promote_character = authoritarian_democrat_statism_subtype
 				}
 				set_cosmetic_tag = TUR_YCP
 				set_politics = {
@@ -17439,7 +17439,7 @@ country_event = { #起源之地-姜人
 			}
 			FRP = {
 				FRA_robert_brasillach = {
-					promote_character = national_populist_strum_drang_statist_subtype
+					promote_character = national_populist_strum_drang_statism_subtype
 				}
 				set_cosmetic_tag = FRA_YCP_SD
 				set_politics = {
@@ -17497,7 +17497,7 @@ country_event = { #不列颠尼亚
 			}
 			GBP = {
 				ENG_henry_williamson = {
-					promote_character = national_populist_strum_drang_statist_subtype
+					promote_character = national_populist_strum_drang_statism_subtype
 				}
 				set_cosmetic_tag = ENG_YCP_SD
 				set_politics = {
@@ -17560,7 +17560,7 @@ country_event = { #啊，西班牙！
 			}
 			SPA = {
 				SPA_jose_maria_peman = {
-					promote_character = national_populist_strum_drang_statist_subtype
+					promote_character = national_populist_strum_drang_statism_subtype
 				}
 				set_cosmetic_tag = SPA_YCP_SD
 				set_politics = {
@@ -17613,7 +17613,7 @@ country_event = { #罗马重生
 			}
 			ITA = {
 				ITA_julius_evola = {
-					promote_character = national_populist_strum_drang_statist_subtype
+					promote_character = national_populist_strum_drang_statism_subtype
 				}
 				set_cosmetic_tag = ITA_YCP_SD
 				set_politics = {
@@ -17746,7 +17746,7 @@ country_event = { #大月即别
 			}
 			TUR = {
 				TUR_alparslan_turkes = {
-					promote_character = national_populist_strum_drang_statist_subtype
+					promote_character = national_populist_strum_drang_statism_subtype
 				}
 				set_cosmetic_tag = TUR_YCP_SD
 				set_politics = {
@@ -17841,7 +17841,7 @@ country_event = { #帝权
 			}
 			USA = {
 				USA_francis_parker_yockey = {
-					promote_character = national_populist_strum_drang_statist_subtype
+					promote_character = national_populist_strum_drang_statism_subtype
 				}
 				set_cosmetic_tag = USA_YCP_SD
 				set_politics = {
@@ -17934,7 +17934,7 @@ country_event = { #保卫同盟的合作者
 					}
 					add_country_leader_role = {
 						country_leader = {
-							ideology = national_populist_strum_drang_statist_subtype
+							ideology = national_populist_strum_drang_statism_subtype
 						}
 					}
 					set_nationality = RSA
@@ -17942,7 +17942,7 @@ country_event = { #保卫同盟的合作者
 			}
 			RSA = {
 				RUS_alisa_berkova = {
-					promote_character = national_populist_strum_drang_statist_subtype
+					promote_character = national_populist_strum_drang_statism_subtype
 				}
 				set_cosmetic_tag = RUS_YCP_SD
 				set_politics = {
@@ -18105,12 +18105,12 @@ country_event = { #共和演说的遗产
 						}
 						add_country_leader_role = {
 							country_leader = {
-								ideology = national_populist_strum_drang_statist_subtype
+								ideology = national_populist_strum_drang_statism_subtype
 								traits = { JAP_reluctant_president }
 								desc = JAP_ozaki_yukio_desc_natpop
 							}
 						}
-						promote_character = national_populist_strum_drang_statist_subtype
+						promote_character = national_populist_strum_drang_statism_subtype
 					}
 					set_party_name = {
 						ideology = national_populist
@@ -18147,12 +18147,12 @@ country_event = { #共和演说的遗产
 						}
 						add_country_leader_role = {
 							country_leader = {
-								ideology = paternal_autocrat_revolutionary_statist_subtype
+								ideology = paternal_autocrat_revolutionary_statism_subtype
 								traits = { JAP_reluctant_president }
 								desc = JAP_ozaki_yukio_desc_pataut
 							}
 						}
-						promote_character = paternal_autocrat_revolutionary_statist_subtype
+						promote_character = paternal_autocrat_revolutionary_statism_subtype
 					}
 					set_party_name = {
 						ideology = paternal_autocrat
@@ -18327,7 +18327,7 @@ country_event = { #邝友良的提案
 				target = HAW
 			}
 			HAW_yau_leongfong = {
-				promote_character = social_liberal_constitutional_statist_subtype
+				promote_character = social_liberal_constitutional_statism_subtype
 			}
 			set_party_name = {
 				ideology = social_liberal
@@ -18417,7 +18417,7 @@ country_event = { #大越民族党
 			}
 			VIN = {
 				VIN_nguyen_tuongtam = {
-					promote_character = authoritarian_democrat_statist_subtype
+					promote_character = authoritarian_democrat_statism_subtype
 				}
 				set_party_name = {
 					ideology = authoritarian_democrat
@@ -21368,7 +21368,7 @@ country_event = { #是的，我们有香蕉！
 					add_country_leader_role = {
 						country_leader = {
 							desc = GXC_chen_lianbo_desc
-							ideology = market_liberal_clientelist_subtype
+							ideology = market_liberal_clientelism_subtype
 						}
 					}
 					SZC_recruit_character_effect = yes
@@ -21385,12 +21385,12 @@ country_event = { #是的，我们有香蕉！
 			annexations_release_united_central_america = yes
 			GXC_chen_lianbo = {
 				set_nationality = var:tag_to_release
-				# promote_character = market_liberal_clientelist_subtype
+				# promote_character = market_liberal_clientelism_subtype
 			}
 			var:tag_to_release = {
 				set_cosmetic_tag = GUA_LCX
 				GXC_chen_lianbo = {
-					promote_character = market_liberal_clientelist_subtype
+					promote_character = market_liberal_clientelism_subtype
 				}
 				set_politics = {
 					ruling_party = market_liberal
@@ -21924,7 +21924,7 @@ country_event = { #德意志国家党
 					promote_character = authoritarian_democrat_jungliberaldemokratie_subtype
 				}
 				GRU_artur_mahraun = {
-					promote_character = market_liberal_liberal_corporatist_subtype
+					promote_character = market_liberal_liberal_corporatism_subtype
 				}
 				set_cosmetic_tag = GRU_artur
 				set_politics = {
@@ -22013,7 +22013,7 @@ country_event = { #民族人民国家会
 					promote_character = authoritarian_democrat_jungliberaldemokratie_subtype
 				}
 				GRU_artur_mahraun = {
-					promote_character = market_liberal_liberal_corporatist_subtype
+					promote_character = market_liberal_liberal_corporatism_subtype
 				}
 				set_cosmetic_tag = GRU_artur
 				set_politics = {
@@ -30980,39 +30980,39 @@ country_event = { #DEBUG-意识形态切换
 
 	option = {#
 		name = SZCDEBUG.1.a
-		set_country_leader_ideology = social_liberal_constitutional_statist_subtype
+		set_country_leader_ideology = social_liberal_constitutional_statism_subtype
 	}
 	option = {#
 		name = SZCDEBUG.1.b
-		set_country_leader_ideology = social_conservative_statist_subtype
+		set_country_leader_ideology = social_conservative_statism_subtype
 	}
 	option = {#
 		name = SZCDEBUG.1.c
-		set_country_leader_ideology = social_conservative_anarchist_statist_subtype
+		set_country_leader_ideology = social_conservative_anarchist_statism_subtype
 	}
 	option = {#
 		name = SZCDEBUG.1.e
-		set_country_leader_ideology = authoritarian_democrat_statist_subtype
+		set_country_leader_ideology = authoritarian_democrat_statism_subtype
 	}
 	option = {#
 		name = SZCDEBUG.1.f
-		set_country_leader_ideology = authoritarian_democrat_new_legalist_statist_subtype
+		set_country_leader_ideology = authoritarian_democrat_new_legalist_statism_subtype
 	}
 	option = {#
 		name = SZCDEBUG.1.g
-		set_country_leader_ideology = paternal_autocrat_statist_subtype
+		set_country_leader_ideology = paternal_autocrat_statism_subtype
 	}
 	option = {#
 		name = SZCDEBUG.1.h
-		set_country_leader_ideology = paternal_autocrat_revolutionary_statist_subtype
+		set_country_leader_ideology = paternal_autocrat_revolutionary_statism_subtype
 	}
 	option = {#
 		name = SZCDEBUG.1.i
-		set_country_leader_ideology = national_populist_strum_drang_statist_subtype
+		set_country_leader_ideology = national_populist_strum_drang_statism_subtype
 	}
 	option = {#
 		name = SZCDEBUG.1.j
-		set_country_leader_ideology = national_populist_national_reconstructist_subtype
+		set_country_leader_ideology = national_populist_national_reconstructism_subtype
 	}
 }
 

@@ -2,88 +2,82 @@ defined_text = {
 	name = GetSubIdeologyName
 
 	#Totalist
-	text = { trigger = { has_country_leader_ideology = totalist_ayaist_subtype } localization_key =  totalist_ayaist_subtype }#天狗主义
+	text = { trigger = { has_country_leader_ideology = totalist_ayaism_subtype } localization_key =  totalist_ayaism_subtype }#天狗主义
 	text = { trigger = { has_country_leader_ideology = totalist_juche_subtype } localization_key =  totalist_juche_subtype }#主体思想
-	text = { trigger = { has_country_leader_ideology = totalist_technocracy_subtype } localization_key = totalist_technocracy_subtype }#技官主义
-	text = { trigger = { has_country_leader_ideology = totalist_sorelian_marketist_subtype } localization_key = totalist_sorelian_marketist_subtype }#市场索雷尔主义
-	text = { trigger = { has_country_leader_ideology = totalist_kleptocracy_subtype } localization_key = totalist_kleptocracy_subtype }#极权强盗政府
-	text = { trigger = { has_country_leader_ideology = totalist_socialist_security_subtype } localization_key = totalist_socialist_security_subtype }#社会主义安保国家
-	text = { trigger = { has_country_leader_ideology = totalist_veperedist_subtype } localization_key = totalist_veperedist_subtype }#前进主义
-	text = { trigger = { has_country_leader_ideology = totalist_social_futurist_subtype } localization_key = totalist_social_futurist_subtype }#社会未来主义
+	text = { trigger = { has_country_leader_ideology = totalist_social_futurism_subtype } localization_key = totalist_social_futurism_subtype }#社会未来主义
 
 	#Syndicalist
-	text = { trigger = { has_country_leader_ideology = syndicalist_market_syndicalist_subtype } localization_key = syndicalist_market_syndicalist_subtype }#市场工团主义
-	text = { trigger = { has_country_leader_ideology = syndicalist_yellow_syndicalist_subtype } localization_key = syndicalist_yellow_syndicalist_subtype }#黄色工团主义
+	text = { trigger = { has_country_leader_ideology = syndicalist_market_syndicalism_subtype } localization_key = syndicalist_market_syndicalism_subtype }#市场工团主义
+	text = { trigger = { has_country_leader_ideology = syndicalist_yellow_syndicalism_subtype } localization_key = syndicalist_yellow_syndicalism_subtype }#黄色工团主义
 	text = { trigger = { has_country_leader_ideology = syndicalist_peoples_democracy_subtype } localization_key = syndicalist_peoples_democracy_subtype }#人民民主
-	text = { trigger = { has_country_leader_ideology = syndicalist_revolutionary_tridemist_subtype } localization_key = syndicalist_revolutionary_tridemist_subtype }#革命三民主义
-	text = { trigger = { has_country_leader_ideology = syndicalist_anarcho_tridemist_subtype } localization_key = syndicalist_anarcho_tridemist_subtype }#无政府三民主义
-	text = { trigger = { has_country_leader_ideology = syndicalist_anarcho_communist_subtype } localization_key = syndicalist_anarcho_communist_subtype }#无政府共产主义
+	text = { trigger = { has_country_leader_ideology = syndicalist_revolutionary_tridemism_subtype } localization_key = syndicalist_revolutionary_tridemism_subtype }#革命三民主义
+	text = { trigger = { has_country_leader_ideology = syndicalist_anarcho_tridemism_subtype } localization_key = syndicalist_anarcho_tridemism_subtype }#无政府三民主义
+	text = { trigger = { has_country_leader_ideology = syndicalist_anarcho_communism_subtype } localization_key = syndicalist_anarcho_communism_subtype }#无政府共产主义
 	
 	#Radical Socialist
-	text = { trigger = { has_country_leader_ideology = radical_socialist_revolutionary_tridemist_subtype } localization_key = radical_socialist_revolutionary_tridemist_subtype }#革命三民主义
-	text = { trigger = { has_country_leader_ideology = radical_socialist_birdcage_vanguardist_subtype } localization_key = radical_socialist_birdcage_vanguardist_subtype }#鸟笼先锋队主义
+	text = { trigger = { has_country_leader_ideology = radical_socialist_revolutionary_tridemism_subtype } localization_key = radical_socialist_revolutionary_tridemism_subtype }#革命三民主义
 	text = { trigger = { has_country_leader_ideology = radical_socialist_mao_zedong_thought_subtype } localization_key = radical_socialist_mao_zedong_thought_subtype }#毛泽东思想
-	text = { trigger = { has_country_leader_ideology = radical_socialist_utopian_technocracy_subtype } localization_key = radical_socialist_utopian_technocracy_subtype }#乌托邦技官主义
-	text = { trigger = { has_country_leader_ideology = radical_socialist_qian_xuesen_thought_subtype } localization_key = radical_socialist_qian_xuesen_thought_subtype }#钱学森思想
 	text = { trigger = { has_country_leader_ideology = radical_socialist_lu_xun_thought_subtype } localization_key = radical_socialist_lu_xun_thought_subtype }#鲁迅思想
-	text = { trigger = { has_country_leader_ideology = radical_socialist_marxist_statist_subtype } localization_key = radical_socialist_marxist_statist_subtype }#马克思国家主义
-	text = { trigger = { has_country_leader_ideology = radical_socialist_neosocialist_subtype } localization_key = radical_socialist_neosocialist_subtype }#新社会主义
+	text = { trigger = { has_country_leader_ideology = radical_socialist_marxist_statism_subtype } localization_key = radical_socialist_marxist_statism_subtype }#马克思国家主义
+	text = { trigger = { has_country_leader_ideology = radical_socialist_neosocialism_subtype } localization_key = radical_socialist_neosocialism_subtype }#新社会主义
 
 	
 	#Social Democrat
-	text = { trigger = { has_country_leader_ideology = social_democrat_democratic_socialist_subtype } localization_key = social_democrat_democratic_socialist_subtype }#民主社会主义
-	text = { trigger = { has_country_leader_ideology = social_democrat_national_socialist_subtype } localization_key = social_democrat_national_socialist_subtype }#国家社会主义
-	text = { trigger = { has_country_leader_ideology = social_democrat_centrist_marxist_subtype } localization_key = social_democrat_centrist_marxist_subtype }#中间马克思主义
-	text = { trigger = { has_country_leader_ideology = social_democrat_new_legalist_state_socialist_subtype } localization_key = social_democrat_new_legalist_state_socialist_subtype }#新法家国家社会主义
+	text = { trigger = { has_country_leader_ideology = social_democrat_democratic_socialism_subtype } localization_key = social_democrat_democratic_socialism_subtype }#民主社会主义
+	text = { trigger = { has_country_leader_ideology = social_democrat_national_socialism_subtype } localization_key = social_democrat_national_socialism_subtype }#国家社会主义
+	text = { trigger = { has_country_leader_ideology = social_democrat_centrist_marxism_subtype } localization_key = social_democrat_centrist_marxism_subtype }#中间马克思主义
+	text = { trigger = { has_country_leader_ideology = social_democrat_new_legalist_state_socialism_subtype } localization_key = social_democrat_new_legalist_state_socialism_subtype }#新法家国家社会主义
 	
 	#Social Liberal
 	text = { trigger = { has_country_leader_ideology = social_liberal_lu_xun_thought_subtype } localization_key = social_liberal_lu_xun_thought_subtype }#鲁迅思想
-	text = { trigger = { has_country_leader_ideology = social_liberal_liberal_socialist_subtype } localization_key = social_liberal_liberal_socialist_subtype }#自由社会主义
-	text = { trigger = { has_country_leader_ideology = social_liberal_constitutional_statist_subtype } localization_key = social_liberal_constitutional_statist_subtype }#宪政国家主义
+	text = { trigger = { has_country_leader_ideology = social_liberal_liberal_socialism_subtype } localization_key = social_liberal_liberal_socialism_subtype }#自由社会主义
+	text = { trigger = { has_country_leader_ideology = social_liberal_constitutional_statism_subtype } localization_key = social_liberal_constitutional_statism_subtype }#宪政国家主义
 	text = { trigger = { has_country_leader_ideology = social_liberal_liberal_technocracy_subtype } localization_key = social_liberal_liberal_technocracy_subtype }#自由技官主义
 	text = { trigger = { has_country_leader_ideology = social_liberal_radical_liberal_subtype } localization_key = social_liberal_radical_liberal_subtype }#激进自由主义
 
 	#Market Liberal
-	text = { trigger = { has_country_leader_ideology = market_liberal_clientelist_subtype } localization_key = market_liberal_clientelist_subtype }#庇护主义
-	text = { trigger = { has_country_leader_ideology = market_liberal_scheme_statist_subtype } localization_key = market_liberal_scheme_statist_subtype }#传销国家主义
+	text = { trigger = { has_country_leader_ideology = market_liberal_clientelism_subtype } localization_key = market_liberal_clientelism_subtype }#庇护主义
+	text = { trigger = { has_country_leader_ideology = market_liberal_scheme_statism_subtype } localization_key = market_liberal_scheme_statism_subtype }#传销国家主义
+	text = { trigger = { has_country_leader_ideology = market_liberal_oligarchy_liberalism_subtype } localization_key = market_liberal_oligarchy_liberalism_subtype }#寡头自由主义
 	text = { trigger = { has_country_leader_ideology = market_liberal_national_liberal_subtype } localization_key = market_liberal_national_liberal_subtype }#民族自由主义
-	text = { trigger = { has_country_leader_ideology = market_liberal_liberal_corporatist_subtype } localization_key = market_liberal_liberal_corporatist_subtype }#自由法团主义
+	text = { trigger = { has_country_leader_ideology = market_liberal_liberal_corporatism_subtype } localization_key = market_liberal_liberal_corporatism_subtype }#自由法团主义
 
 	#Social Conservative
-	text = { trigger = { has_country_leader_ideology = social_conservative_statist_subtype } localization_key = social_conservative_statist_subtype }#国家主义-社保
-	text = { trigger = { has_country_leader_ideology = social_conservative_orthodox_tridemist_subtype } localization_key = social_conservative_orthodox_tridemist_subtype }#正统三民主义
-	text = { trigger = { has_country_leader_ideology = social_conservative_anarchist_statist_subtype } localization_key = social_conservative_anarchist_statist_subtype }#无政府国家主义
+	text = { trigger = { has_country_leader_ideology = social_conservative_statism_subtype } localization_key = social_conservative_statism_subtype }#国家主义-社保
+	text = { trigger = { has_country_leader_ideology = social_conservative_orthodox_tridemism_subtype } localization_key = social_conservative_orthodox_tridemism_subtype }#正统三民主义
+	text = { trigger = { has_country_leader_ideology = social_conservative_anarchist_statism_subtype } localization_key = social_conservative_anarchist_statism_subtype }#无政府国家主义
 	text = { trigger = { has_country_leader_ideology = social_conservative_paternalistic_conservative_subtype } localization_key = social_conservative_paternalistic_conservative_subtype }#家长制保守主义
+	text = { trigger = { has_country_leader_ideology = social_conservative_free_market_conservatism_subtype } localization_key = social_conservative_free_market_conservatism_subtype }#自由市场保守主义
 
 	#Authoritarian Democrat
-	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_statist_subtype } localization_key = authoritarian_democrat_statist_subtype }#国家主义-威民
-	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_new_legalist_statist_subtype } localization_key = authoritarian_democrat_new_legalist_statist_subtype }#新法家国家主义
+	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_statism_subtype } localization_key = authoritarian_democrat_statism_subtype }#国家主义-威民
+	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_new_legalist_statism_subtype } localization_key = authoritarian_democrat_new_legalist_statism_subtype }#新法家国家主义
 	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_spectral_state_subtype } localization_key = authoritarian_democrat_spectral_state_subtype }#幽灵国家
 	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_dominant_party_system_subtype } localization_key = authoritarian_democrat_dominant_party_system_subtype }#一党独大制
 	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_moral_sovereign_democracy_subtype } localization_key = authoritarian_democrat_moral_sovereign_democracy_subtype }#道德主权民主主义
-	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_paoge_federalist_subtype } localization_key = authoritarian_democrat_paoge_federalist_subtype }#袍哥联省主义
-	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_reform_statist_subtype } localization_key = authoritarian_democrat_reform_statist_subtype }#革新国家主义
+	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_paoge_federalism_subtype } localization_key = authoritarian_democrat_paoge_federalism_subtype }#袍哥联省主义
+	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_reform_statism_subtype } localization_key = authoritarian_democrat_reform_statism_subtype }#革新国家主义
 	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_jungliberaldemokratie_subtype } localization_key = authoritarian_democrat_jungliberaldemokratie_subtype }#青年自由民主主义
 
 	#Paternal Autocrat
-	text = { trigger = { has_country_leader_ideology = paternal_autocrat_pan_asianist_subtype } localization_key = paternal_autocrat_pan_asianist_subtype }#家独泛亚
-	text = { trigger = { has_country_leader_ideology = paternal_autocrat_statist_subtype } localization_key = paternal_autocrat_statist_subtype }#国家主义-家独
-	text = { trigger = { has_country_leader_ideology = paternal_autocrat_revolutionary_statist_subtype } localization_key = paternal_autocrat_revolutionary_statist_subtype }#革命国家主义
+	text = { trigger = { has_country_leader_ideology = paternal_autocrat_pan_asianism_subtype } localization_key = paternal_autocrat_pan_asianism_subtype }#家独泛亚
+	text = { trigger = { has_country_leader_ideology = paternal_autocrat_statism_subtype } localization_key = paternal_autocrat_statism_subtype }#国家主义-家独
+	text = { trigger = { has_country_leader_ideology = paternal_autocrat_revolutionary_statism_subtype } localization_key = paternal_autocrat_revolutionary_statism_subtype }#革命国家主义
 	text = { trigger = { has_country_leader_ideology = paternal_autocrat_spectral_state_subtype } localization_key = paternal_autocrat_spectral_state_subtype }#幽灵国家
 	text = { trigger = { has_country_leader_ideology = paternal_autocrat_stratocracy_subtype } localization_key = paternal_autocrat_stratocracy_subtype }#军政体制
-	text = { trigger = { has_country_leader_ideology = paternal_autocrat_military_trotskyist_subtype } localization_key = paternal_autocrat_military_trotskyist_subtype }#军政托洛茨基主义
-	text = { trigger = { has_country_leader_ideology = paternal_autocrat_new_people_statist_subtype } localization_key = paternal_autocrat_new_people_statist_subtype }#新民国家主义
+	text = { trigger = { has_country_leader_ideology = paternal_autocrat_military_trotskyism_subtype } localization_key = paternal_autocrat_military_trotskyism_subtype }#军政托洛茨基主义
+	text = { trigger = { has_country_leader_ideology = paternal_autocrat_new_people_statism_subtype } localization_key = paternal_autocrat_new_people_statism_subtype }#新民国家主义
 	text = { trigger = { has_country_leader_ideology = paternal_autocrat_national_conservative_subtype } localization_key = paternal_autocrat_national_conservative_subtype }#民族保守主义
 	text = { trigger = { has_country_leader_ideology = paternal_autocrat_aristocratic_conservative_subtype } localization_key = paternal_autocrat_aristocratic_conservative_subtype }#贵族保守主义
 
 	#National Populist
-	text = { trigger = { has_country_leader_ideology = national_populist_british_israelist_subtype } localization_key = national_populist_british_israelist_subtype }#英式以色列主义
-	text = { trigger = { has_country_leader_ideology = national_populist_pan_asianist_subtype } localization_key = national_populist_pan_asianist_subtype }#民粹泛亚
-	text = { trigger = { has_country_leader_ideology = national_populist_strum_drang_statist_subtype } localization_key = national_populist_strum_drang_statist_subtype }#狂飙国家主义
-	text = { trigger = { has_country_leader_ideology = national_populist_national_reconstructist_subtype } localization_key = national_populist_national_reconstructist_subtype }#民族重建主义
+	text = { trigger = { has_country_leader_ideology = national_populist_british_israelism_subtype } localization_key = national_populist_british_israelism_subtype }#英式以色列主义
+	text = { trigger = { has_country_leader_ideology = national_populist_pan_asianism_subtype } localization_key = national_populist_pan_asianism_subtype }#民粹泛亚
+	text = { trigger = { has_country_leader_ideology = national_populist_strum_drang_statism_subtype } localization_key = national_populist_strum_drang_statism_subtype }#狂飙国家主义
+	text = { trigger = { has_country_leader_ideology = national_populist_national_reconstructism_subtype } localization_key = national_populist_national_reconstructism_subtype }#民族重建主义
 	text = { trigger = { has_country_leader_ideology = national_populist_kongmengdao_subtype } localization_key = national_populist_kongmengdao_subtype }#孔孟先天大道
 	text = { trigger = { has_country_leader_ideology = national_populist_nationalsozialismus_subtype } localization_key = national_populist_nationalsozialismus_subtype }#新民族社会主义
-	text = { trigger = { has_country_leader_ideology = national_populist_klansmanist_subtype } localization_key = national_populist_klansmanist_subtype }#三K民族主义
+	text = { trigger = { has_country_leader_ideology = national_populist_klansmanism_subtype } localization_key = national_populist_klansmanism_subtype }#三K民族主义
 
 	
 

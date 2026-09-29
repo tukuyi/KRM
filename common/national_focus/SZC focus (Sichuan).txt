@@ -15279,7 +15279,7 @@ focus_tree = {
 				id = NKRsichuan.352
 			}
 			custom_effect_tooltip = SZC_pan_restore_centrist_marxism_tt
-			set_country_leader_ideology = social_democrat_centrist_marxist_subtype
+			set_country_leader_ideology = social_democrat_centrist_marxism_subtype
 			custom_effect_tooltip = SZC_fan_piaozhai_improved
 			hidden_effect = {
 				remove_trait = {
@@ -18650,7 +18650,7 @@ focus_tree = {
 			SZC_qi_nanxun = {
 				add_trait = {
 					trait = SZC_PAN_great_anti_imperialist
-					ideology = syndicalist_revolutionary_tridemist_subtype
+					ideology = syndicalist_revolutionary_tridemism_subtype
 				}
 			}
 		}
@@ -19011,7 +19011,7 @@ focus_tree = {
 				SZC_pan_wenhua = {
 					add_trait = {
 						trait = SZC_PAN_second_cai_e
-						ideology = radical_socialist_revolutionary_tridemist_subtype
+						ideology = radical_socialist_revolutionary_tridemism_subtype
 					}
 				}
 				SZC_pan_wenhua = {
@@ -19541,7 +19541,7 @@ focus_tree = {
 			SZC_xie_chi = {
 				add_trait = {
 					trait = SZC_PAN_listen_to_nations_father
-					ideology = social_conservative_orthodox_tridemist_subtype
+					ideology = social_conservative_orthodox_tridemism_subtype
 				}
 			}
 		}
@@ -24808,20 +24808,20 @@ focus_tree = {
 			SZC_zeng_qi = {
 				add_trait = {
 					trait = SZC_YCP_literati_in_20C
-					ideology = paternal_autocrat_statist_subtype
+					ideology = paternal_autocrat_statism_subtype
 				}
 			}
 			hidden_effect = {
 				SZC_zeng_qi = {
 					add_trait = {
 						trait = SZC_YCP_literati_in_20C
-						ideology = paternal_autocrat_revolutionary_statist_subtype
+						ideology = paternal_autocrat_revolutionary_statism_subtype
 					}
 				}
 				SZC_zeng_qi = {
 					add_trait = {
 						trait = SZC_YCP_literati_in_20C
-						ideology = authoritarian_democrat_statist_subtype
+						ideology = authoritarian_democrat_statism_subtype
 					}
 				}
 			}
@@ -24903,14 +24903,14 @@ focus_tree = {
 			SZC_zeng_qi = {
 				add_trait = {
 					trait = SZC_YCP_machiavelli_today
-					ideology = paternal_autocrat_statist_subtype
+					ideology = paternal_autocrat_statism_subtype
 				}
 			}
 			hidden_effect = {
 				SZC_zeng_qi = {
 					add_trait = {
 						trait = SZC_YCP_machiavelli_today
-						ideology = paternal_autocrat_revolutionary_statist_subtype
+						ideology = paternal_autocrat_revolutionary_statism_subtype
 					}
 				}
 			}
@@ -25068,14 +25068,14 @@ focus_tree = {
 			SZC_zeng_qi = {
 				add_trait = {
 					trait = SZC_YCP_the_great_leader
-					ideology = paternal_autocrat_statist_subtype
+					ideology = paternal_autocrat_statism_subtype
 				}
 			}
 			hidden_effect = {
 				SZC_zeng_qi = {
 					add_trait = {
 						trait = SZC_YCP_the_great_leader
-						ideology = paternal_autocrat_revolutionary_statist_subtype
+						ideology = paternal_autocrat_revolutionary_statism_subtype
 					}
 				}
 			}
@@ -25510,14 +25510,14 @@ focus_tree = {
 			SZC_li_huang = {
 				add_trait = {
 					trait = SZC_YCP_democratic_protector
-					ideology = authoritarian_democrat_statist_subtype
+					ideology = authoritarian_democrat_statism_subtype
 				}
 			}
 			hidden_effect = {
 				SZC_li_huang = {
 					add_trait = {
 						trait = SZC_YCP_democratic_protector
-						ideology = social_conservative_statist_subtype
+						ideology = social_conservative_statism_subtype
 					}
 				}
 			}
@@ -25621,7 +25621,7 @@ focus_tree = {
 			SZC_zuo_shunsheng = {
 				add_trait = {
 					trait = SZC_YCP_liberal_fighter
-					ideology = social_liberal_constitutional_statist_subtype
+					ideology = social_liberal_constitutional_statism_subtype
 				}
 			}
 			add_popularity = {
@@ -26216,7 +26216,7 @@ focus_tree = {
 			SZC_chen_qitian = {
 				add_trait = {
 					trait = SZC_YCP_hanfeizi_today
-					ideology = authoritarian_democrat_new_legalist_statist_subtype
+					ideology = authoritarian_democrat_new_legalist_statism_subtype
 				}
 			}
 			add_political_power = 100
@@ -26224,7 +26224,7 @@ focus_tree = {
 				SZC_chen_qitian = {
 					add_trait = {
 						trait = SZC_YCP_hanfeizi_today
-						ideology = social_democrat_new_legalist_state_socialist_subtype
+						ideology = social_democrat_new_legalist_state_socialism_subtype
 					}
 				}
 			}
@@ -26410,7 +26410,7 @@ focus_tree = {
 			country_event = {
 				id = NKRsichuan.557
 			}
-				set_country_leader_ideology = social_conservative_anarchist_statist_subtype
+				set_country_leader_ideology = social_conservative_anarchist_statism_subtype
 		}
 	}
 
@@ -28010,7 +28010,7 @@ focus_tree = {
 			SZC_li_huang = {
 				add_trait = {
 					trait = SZC_YCP_connect_people
-					ideology = social_conservative_statist_subtype
+					ideology = social_conservative_statism_subtype
 				}
 			}
 		}
@@ -28895,7 +28895,7 @@ focus_tree = {
 			set_temp_variable = { coalition_partner_var = token:social_democrat }
 			add_to_coalition = yes
 			SZC_chen_qitian = {
-				promote_character = social_democrat_new_legalist_state_socialist_subtype
+				promote_character = social_democrat_new_legalist_state_socialism_subtype
 			}
 		}
 	}
@@ -29297,14 +29297,14 @@ focus_tree = {
 			SZC_chen_qitian = {
 				add_trait = {
 					trait = SZC_YCP_new_legalist_helmsman
-					ideology = authoritarian_democrat_new_legalist_statist_subtype
+					ideology = authoritarian_democrat_new_legalist_statism_subtype
 				}
 			}
 			hidden_effect = {
 				SZC_chen_qitian = {
 					add_trait = {
 						trait = SZC_YCP_new_legalist_helmsman
-						ideology = social_democrat_new_legalist_state_socialist_subtype
+						ideology = social_democrat_new_legalist_state_socialism_subtype
 					}
 				}
 			}
@@ -29676,7 +29676,7 @@ focus_tree = {
 			SZC_jiang_yungang = {
 				add_trait = {
 					trait = SZC_YCP_eastern_spengler
-					ideology = national_populist_strum_drang_statist_subtype
+					ideology = national_populist_strum_drang_statism_subtype
 				}
 			}
 		}
@@ -31336,7 +31336,7 @@ focus_tree = {
 				SZC_zhang_guotao = {
 					add_trait = {
 						trait= SZC_YCP_supreme_marshall
-						ideology = syndicalist_yellow_syndicalist_subtype
+						ideology = syndicalist_yellow_syndicalism_subtype
 					}
 				}
 			}
@@ -33250,7 +33250,7 @@ focus_tree = {
 			SZC_jiang_yungang = {
 				add_trait = {
 					trait = SZC_YCP_all_under_the_heaven_trait
-					ideology = national_populist_strum_drang_statist_subtype
+					ideology = national_populist_strum_drang_statism_subtype
 				}
 			}
 			
