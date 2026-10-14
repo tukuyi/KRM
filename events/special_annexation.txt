@@ -157,7 +157,7 @@ country_event = { #特殊吞并 - 德国
 						has_government = paternal_autocrat
 					}
 					NOT = {
-						has_country_leader = SZC_chen_qitian
+						has_country_leader = { character = SZC_chen_qitian }
 					}
 				}
 				country_event = { id = NKRsichuanpuppet.93 }

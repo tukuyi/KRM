@@ -417,7 +417,8 @@ NKR_two_superpowers_achievement = {
 						has_cosmetic_tag = SZC_YCP_PAF
 					}
 				}
-				event_target:DDPGRU = {
+				any_subject_country = {
+					is_german_tag = yes
 					has_cosmetic_tag = GRU_paneuropa
 				}
 			}
@@ -437,7 +438,8 @@ NKR_charlemagne_approvement_achievement = {
 			limit = { NOT = { has_global_flag = disallow_achievements_flag } }
 			custom_override_tooltip = {
 				tooltip = NKR_charlemagne_approvement_achievement_tt
-				event_target:DDPGRU = {
+				any_subject_country = {
+					is_german_tag = yes
 					has_cosmetic_tag = GRU_frankish
 				}
 			}

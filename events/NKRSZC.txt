@@ -21578,15 +21578,15 @@ country_event = { #法兰克提议？
 			}
 			ROOT = {
 				if = {
-					FRP = {
-						limit = {
+					limit = {
+						FRP = {
 							is_subject_of = ROOT
 						}
-						event_target:DDPGRU = {
-							annex_country = {
-								target = FRP
-								transfer_troops = yes
-							}
+					}
+					event_target:DDPGRU = {
+						annex_country = {
+							target = FRP
+							transfer_troops = yes
 						}
 					}
 				}
