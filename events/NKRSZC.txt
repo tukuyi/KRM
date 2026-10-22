@@ -18810,7 +18810,7 @@ country_event = { #泰西大秦
 			FRP = {
 				set_cosmetic_tag = FRA_LCX
 				FRA_liu_chengxun = {
-					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 					set_character_as_monarch = yes
 				}
 				set_country_leader_as_monarch = yes
@@ -19056,7 +19056,7 @@ country_event = { #大汉的联合王国
 			}
 			GBP = {
 				ENG_liu_chengxun = {
-					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 					set_character_as_monarch = yes
 				}
 				set_country_leader_as_monarch = yes
@@ -19290,7 +19290,7 @@ country_event = { #神圣德意志han
 			}
 			var:tag_to_release = {
 				GRU_liu_chengxun = {
-					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 					set_character_as_monarch = yes
 				}
 				set_cosmetic_tag = GRU_LCX
@@ -19838,7 +19838,7 @@ country_event = { #邪马台
 			mark_focus_tree_layout_dirty = yes
 			set_cosmetic_tag = JAP_LCX
 			JAP_liu_chengxun = {
-				promote_character = paternal_autocrat_aristocratic_conservative_subtype
+				promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 			}
 			set_politics = {
 				ruling_party = paternal_autocrat
@@ -20144,7 +20144,7 @@ country_event = { #极北皇冠
 			}
 			RSA = {
 				RSA_liu_chengxun = {
-					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 					set_character_as_monarch = yes
 				}
 				set_cosmetic_tag = RUS_LCX
@@ -20440,7 +20440,7 @@ country_event = { #华盛顿未竟之事
 			}
 			USA = {
 				USA_liu_chengxun = {
-					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 					set_character_as_monarch = yes
 				}
 				set_cosmetic_tag = USA_LCX
@@ -20774,7 +20774,7 @@ country_event = { #崇高国度
 			}
 			set_cosmetic_tag = TUR_LCX
 			TUR_liu_chengxun = {
-				promote_character = paternal_autocrat_aristocratic_conservative_subtype
+				promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 			}
 			set_politics = {
 				ruling_party = paternal_autocrat
@@ -20852,7 +20852,7 @@ country_event = { #太阳之子与汉家天子
 			var:tag_to_release = {
 				set_cosmetic_tag = PRU_LCX
 				PRU_liu_chengxun = {
-					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 					set_character_as_monarch = yes
 				}
 				set_politics = {
@@ -20998,7 +20998,7 @@ country_event = { #昆仑万国
 			TZN = {
 				set_cosmetic_tag = AFR_LCX
 				AFR_liu_chengxun = {
-					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 					set_character_as_monarch = yes
 				}
 				set_politics = {
@@ -21093,7 +21093,7 @@ country_event = { #潘帕斯银河
 			ARG = {
 				set_cosmetic_tag = ARG_LCX
 				ARG_liu_chengxun = {
-					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 					set_character_as_monarch = yes
 				}
 				set_politics = {
@@ -21166,7 +21166,7 @@ country_event = { #咖啡与牛奶
 			BRA = {
 				set_cosmetic_tag = BRA_LCX
 				BRA_liu_chengxun = {
-					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 					set_character_as_monarch = yes
 				}
 				set_politics = {
@@ -21246,7 +21246,7 @@ country_event = { #羽蛇神新朝
 			MEX = {
 				set_cosmetic_tag = MEX_LCX
 				MEX_liu_chengxun = {
-					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 					set_character_as_monarch = yes
 				}
 				set_politics = {
@@ -21320,7 +21320,7 @@ country_event = { #黄金国
 			COL = {
 				set_cosmetic_tag = COL_LCX
 				COL_liu_chengxun = {
-					promote_character = paternal_autocrat_aristocratic_conservative_subtype
+					promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 					set_character_as_monarch = yes
 				}
 				set_politics = {
@@ -21805,7 +21805,7 @@ country_event = { #激进民主党
 			var:tag_to_release = {
 				set_country_flag = GRU_DDP_bros_focus
 				GRU_anton_erkelenz = {
-					promote_character = social_liberal_radical_liberal_subtype
+					promote_character = social_liberal_radical_liberalism_subtype
 				}
 				set_cosmetic_tag = GRU_YCP
 				set_politics = {
@@ -21886,7 +21886,7 @@ country_event = { #德意志国家党
 			var:tag_to_release = {
 				set_country_flag = GRU_DDP_bros_focus
 				GRU_hermann_dietrich = {
-					promote_character = market_liberal_national_liberal_subtype
+					promote_character = market_liberal_national_liberalism_subtype
 				}
 				set_cosmetic_tag = GRU_artur
 				set_politics = {
@@ -29515,7 +29515,7 @@ country_event = { #最卑劣的刺杀
 						small = GFX_portrait_SZC_liu_chengxun_tianzi_small
 					}
 				}
-				promote_character = paternal_autocrat_aristocratic_conservative_subtype
+				promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 				promote_character = authoritarian_democrat_moral_sovereign_democracy_subtype
 				add_country_leader_role = {
 					country_leader = {
@@ -29921,7 +29921,7 @@ country_event = { #最卑劣的刺杀
 					SICtittle = 17
 				}
 			}
-			set_country_leader_ideology = paternal_autocrat_national_conservative_subtype
+			set_country_leader_ideology = paternal_autocrat_national_conservatism_subtype
 		}
 	}
 
@@ -31106,7 +31106,7 @@ country_event = { #DEBUG-lcydebug
 	option = {#
 		name = SZCDEBUG.4.a
 		SZC_liu_chengxun = {
-			promote_character = paternal_autocrat_aristocratic_conservative_subtype
+			promote_character = paternal_autocrat_aristocratic_conservatism_subtype
 		}
 	}
 

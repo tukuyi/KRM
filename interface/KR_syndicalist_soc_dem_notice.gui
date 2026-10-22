@@ -1,19 +1,35 @@
 guiTypes = {
-	
 	containerWindowType = {
-		name = "subideology_container"
-		position = { x = 171 y = 211 }
+		name = "subideology_container_pol"
+		position = { x = 170 y = 205 }
 		
 		instantTextboxType = {
-			name = "subideology_name"
-			position = { x = 9 y = 23 }
+			name = "subideology_name_pol"
+			position = { x = 10 y = 16 }
 			font = "hoi_16mbs"
 			text = "[GetSubIdeologyName]"
 			pdx_tooltip = "[GetSubIdeologyName]"
 			maxWidth = 155
 			maxHeight = 20
 			fixedsize = yes
-			format = centre
+			format = center
+			alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "subideology_container_dip"
+		position = { x = 250 y = 100 }
+		
+		instantTextboxType = {
+			name = "ideology"
+			position = { x = 13 y = 45 }
+			font = "hoi_16mbs"
+			text = "[GetSubIdeologyName]"
+			pdx_tooltip = "[GetSubIdeologyName]"
+			maxWidth = 155
+			maxHeight = 20
+			fixedsize = yes
+			format = left
 			alwaystransparent = yes
 		}
 	}
