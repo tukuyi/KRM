@@ -4983,7 +4983,7 @@ focus_tree = {
 			}
 					
 			activate_targeted_decision = { target = GEA decision = SZC_KMT_liberation_war_decision }
-			activate_targeted_decision = { target = INC decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = VIN decision = SZC_KMT_liberation_war_decision }
 			activate_targeted_decision = { target = VIN decision = SZC_KMT_liberation_war_decision }
 			activate_targeted_decision = { target = LAO decision = SZC_KMT_liberation_war_decision }
 			activate_targeted_decision = { target = CAM decision = SZC_KMT_liberation_war_decision }
@@ -5023,7 +5023,7 @@ focus_tree = {
 				limit = {
 					var:827.owner = {
 						NOT = {
-							tag = INC
+							tag = VIN
 							tag = VIN
 							tag = ROOT
 							tag = GEA
@@ -5640,7 +5640,7 @@ focus_tree = {
 						CAM = { is_ally_with = SZC }
 						LAO = { is_ally_with = SZC }
 					}
-					INC = { is_ally_with = SZC }
+					VIN = { is_ally_with = SZC }
 				}
 				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
 				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
@@ -5901,7 +5901,7 @@ focus_tree = {
 						CAM = { is_ally_with = SZC }
 						LAO = { is_ally_with = SZC }
 					}
-					INC = { is_ally_with = SZC }
+					VIN = { is_ally_with = SZC }
 				}
 				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
 				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
@@ -8554,7 +8554,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_pan_FORPOL_march_into_indochina"
 					
 			activate_targeted_decision = { target = GEA decision = SZC_KMT_liberation_war_decision }
-			activate_targeted_decision = { target = INC decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = VIN decision = SZC_KMT_liberation_war_decision }
 			activate_targeted_decision = { target = VIN decision = SZC_KMT_liberation_war_decision }
 			activate_targeted_decision = { target = LAO decision = SZC_KMT_liberation_war_decision }
 			activate_targeted_decision = { target = CAM decision = SZC_KMT_liberation_war_decision }
@@ -8594,7 +8594,7 @@ focus_tree = {
 				limit = {
 					var:827.owner = {
 						NOT = {
-							tag = INC
+							tag = VIN
 							tag = VIN
 							tag = ROOT
 							tag = GEA
@@ -8824,7 +8824,7 @@ focus_tree = {
 						CAM = { is_ally_with = SZC }
 						LAO = { is_ally_with = SZC }
 					}
-					INC = { is_ally_with = SZC }
+					VIN = { is_ally_with = SZC }
 				}
 				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
 				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
@@ -9310,12 +9310,6 @@ focus_tree = {
 					trait = KR_mmic_2
 				}
 			}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = CHI_MMIC_idea
-					add_idea = CHI_MMIC_2_idea
-				}
-			}
 		}
 	}
 
@@ -9397,7 +9391,7 @@ focus_tree = {
 						CAM = { is_ally_with = SZC }
 						LAO = { is_ally_with = SZC }
 					}
-					INC = { is_ally_with = SZC }
+					VIN = { is_ally_with = SZC }
 				}
 				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
 				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
@@ -9643,7 +9637,7 @@ focus_tree = {
 						CAM = { is_ally_with = SZC }
 						LAO = { is_ally_with = SZC }
 					}
-					INC = { is_ally_with = SZC }
+					VIN = { is_ally_with = SZC }
 				}
 				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
 				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
@@ -9907,7 +9901,7 @@ focus_tree = {
 						CAM = { is_ally_with = SZC }
 						LAO = { is_ally_with = SZC }
 					}
-					INC = { is_ally_with = SZC }
+					VIN = { is_ally_with = SZC }
 				}
 				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
 				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
@@ -20680,7 +20674,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_FORPOL_march_into_indochina"
 					
 			activate_targeted_decision = { target = GEA decision = SZC_YCP_liberation_war_decision }
-			activate_targeted_decision = { target = INC decision = SZC_YCP_liberation_war_decision }
+			activate_targeted_decision = { target = VIN decision = SZC_YCP_liberation_war_decision }
 			activate_targeted_decision = { target = VIN decision = SZC_YCP_liberation_war_decision }
 			activate_targeted_decision = { target = LAO decision = SZC_YCP_liberation_war_decision }
 			activate_targeted_decision = { target = CAM decision = SZC_YCP_liberation_war_decision }
@@ -20720,7 +20714,7 @@ focus_tree = {
 				limit = {
 					var:827.owner = {
 						NOT = {
-							tag = INC
+							tag = VIN
 							tag = VIN
 							tag = ROOT
 							tag = GEA
@@ -20951,7 +20945,7 @@ focus_tree = {
 						CAM = { is_ally_with = SZC }
 						LAO = { is_ally_with = SZC }
 					}
-					INC = { is_ally_with = SZC }
+					VIN = { is_ally_with = SZC }
 				}
 				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
 				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
@@ -21179,7 +21173,7 @@ focus_tree = {
 						CAM = { is_ally_with = SZC }
 						LAO = { is_ally_with = SZC }
 					}
-					INC = { is_ally_with = SZC }
+					VIN = { is_ally_with = SZC }
 				}
 				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
 				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
@@ -21570,7 +21564,7 @@ focus_tree = {
 						CAM = { is_ally_with = SZC }
 						LAO = { is_ally_with = SZC }
 					}
-					INC = { is_ally_with = SZC }
+					VIN = { is_ally_with = SZC }
 				}
 				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
 				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
@@ -22031,7 +22025,7 @@ focus_tree = {
 						CAM = { is_ally_with = SZC }
 						LAO = { is_ally_with = SZC }
 					}
-					INC = { is_ally_with = SZC }
+					VIN = { is_ally_with = SZC }
 				}
 				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
 				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
@@ -22174,7 +22168,7 @@ focus_tree = {
 						CAM = { is_ally_with = SZC }
 						LAO = { is_ally_with = SZC }
 					}
-					INC = { is_ally_with = SZC }
+					VIN = { is_ally_with = SZC }
 				}
 				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
 				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
@@ -22456,7 +22450,7 @@ focus_tree = {
 						CAM = { is_ally_with = SZC }
 						LAO = { is_ally_with = SZC }
 					}
-					INC = { is_ally_with = SZC }
+					VIN = { is_ally_with = SZC }
 				}
 				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
 				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
@@ -29861,7 +29855,7 @@ focus_tree = {
 			}
 					
 			activate_targeted_decision = { target = GEA decision = SZC_KMT_liberation_war_decision }
-			activate_targeted_decision = { target = INC decision = SZC_KMT_liberation_war_decision }
+			activate_targeted_decision = { target = VIN decision = SZC_KMT_liberation_war_decision }
 			activate_targeted_decision = { target = VIN decision = SZC_KMT_liberation_war_decision }
 			activate_targeted_decision = { target = LAO decision = SZC_KMT_liberation_war_decision }
 			activate_targeted_decision = { target = CAM decision = SZC_KMT_liberation_war_decision }
@@ -29901,7 +29895,7 @@ focus_tree = {
 				limit = {
 					var:827.owner = {
 						NOT = {
-							tag = INC
+							tag = VIN
 							tag = VIN
 							tag = ROOT
 							tag = GEA
@@ -30175,7 +30169,7 @@ focus_tree = {
 						CAM = { is_ally_with = SZC }
 						LAO = { is_ally_with = SZC }
 					}
-					INC = { is_ally_with = SZC }
+					VIN = { is_ally_with = SZC }
 				}
 				408 = { is_owned_by_ROOT_or_ally = yes } #Vladivostok
 				336 = { is_owned_by_ROOT_or_ally = yes } #Singapore

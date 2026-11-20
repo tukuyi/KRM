@@ -164,14 +164,6 @@ KOR_return_of_the_provisional_government = {
 			KOR = {
 				set_cosmetic_tag = KOR_LCX
 				set_country_flag = monarchy_KOR
-				uncomplete_national_focus = {
-					focus = KOR_figurehead_of_the_nation
-					uncomplete_children = yes
-				}
-				uncomplete_national_focus = {
-					focus = KOR_sponser_ilminist_groups
-					uncomplete_children = yes
-				}
 				KOR_yi_wu = { promote_character = paternal_autocrat_aristocratic_conservatism_subtype }
 				KOR_yi_wu = { promote_character = social_conservative_paternalistic_conservatism_subtype }
 				set_politics = {

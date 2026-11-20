@@ -45,9 +45,9 @@ SZC_KMT_FROM_has_compatible_government_trigger = {
 		AND = {
 			OR = {
 				tag = VIN
-				tag = INC
+				tag = VIN
 			}
-			INC_has_VNQDD_government_trigger = yes
+			VIN_has_VNQDD_government_trigger = yes
 		}
 
 		#Middle East
