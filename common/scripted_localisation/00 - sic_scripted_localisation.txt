@@ -14,7 +14,6 @@ defined_text = {
 					}
 				}
 			}
-			# log = "114514 [?gui_sic]"
 		}
 		localization_key = "[?gui_sic.GetTokenLocalizedKey]"
 	}
@@ -23,6 +22,28 @@ defined_text = {
 
 defined_text = { 
 	name = GetSICPortrait
+
+	text = {
+		trigger = {
+			any_character = {
+				is_second_in_command = yes
+				NOT = {
+					check_variable = {
+						SICportrait = 0
+					}
+				}
+				set_temp_variable = {
+					temp_trans_sic = var:SICportrait
+				}
+				PREV = {
+					set_temp_variable = {
+						gui_sic = var:temp_trans_sic
+					}
+				}
+			}
+		}
+		localization_key = "GFX_portrait_[?gui_sic.GetTokenKey]_large"
+	}
 
 	text = {
 		trigger = {
