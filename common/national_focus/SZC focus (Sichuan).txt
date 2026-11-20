@@ -1890,6 +1890,7 @@ focus_tree = {
 				QIE = { country_event = qing_foreign_policy_events.101 }
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1930,6 +1931,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1966,6 +1968,7 @@ focus_tree = {
 			}
 			SZC_political_recovery = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1999,6 +2002,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2021,6 +2025,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_Yang_Sens_Ambition"
 			custom_effect_tooltip = unlock_focuses
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2150,6 +2155,7 @@ focus_tree = {
 			change_ruling_party_popularity = yes
 			china_add_research_slots = yes
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -2324,6 +2330,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_Liu_Cunhous_Tradition"
 			custom_effect_tooltip = unlock_focuses
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2498,6 +2505,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_Confucian_Schooling"
 			china_add_research_slots = yes
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 ### Baoding Department Political Tree ###
@@ -2523,6 +2531,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_A_Victory_From_Baoding"
 			custom_effect_tooltip = SZC_A_Victory_From_Baoding_tooltip
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2564,6 +2573,7 @@ focus_tree = {
 			SZC_reduce_famine_medium = yes
 			SZC_political_recovery = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2591,6 +2601,7 @@ focus_tree = {
 			}
 			SZC_political_recovery = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2656,6 +2667,7 @@ focus_tree = {
 				custom_effect_tooltip = SZC_The_Lord_Of_Sichuan_tooltip
 			}
 		}
+		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	}
 
 	focus = {
@@ -2675,6 +2687,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_A_Model_Province"
 			custom_effect_tooltip = SZC_A_Model_Province_tooltip
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2996,6 +3009,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_The_University_Of_Chengdu"
 			china_add_research_slots = yes
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -3015,6 +3029,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_A_Modern_Province"
 			custom_effect_tooltip = SZC_A_Modern_Province_tooltip
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3321,6 +3336,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_Chongqing_Victory"
 			custom_effect_tooltip = SZC_Chongqing_Victory_tooltip
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3347,6 +3363,7 @@ focus_tree = {
 				country_event = NKRsichuan.1
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3470,6 +3487,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_Famine_Relief_Corps"
 			SZC_reduce_famine_medium = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3800,6 +3818,7 @@ focus_tree = {
 				custom_effect_tooltip = china_can_core_through_compliance
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	
 	focus = {
@@ -3830,6 +3849,7 @@ focus_tree = {
 				id = NKRsichuan.14
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 ### Officer Department Focus Tree ###
@@ -3855,6 +3875,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_Republican_Triumph"
 			custom_effect_tooltip = SZC_Republican_Triumph_tooltip
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3888,6 +3909,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3917,6 +3939,7 @@ focus_tree = {
 				add_ideas = SZC_preparing_for_federalism_1
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -3953,6 +3976,7 @@ focus_tree = {
 				SZC_bian_zhishan = { set_nationality = PREV }
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -3986,6 +4010,7 @@ focus_tree = {
 				add_idea = SZC_preparing_for_federalism_4
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -4028,6 +4053,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -4063,6 +4089,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -4101,6 +4128,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4130,6 +4158,7 @@ focus_tree = {
 				add_idea = SZC_preparing_for_federalism_9
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -4162,6 +4191,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -4203,6 +4233,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -4275,6 +4306,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -4307,6 +4339,7 @@ focus_tree = {
 				SZC_zhou_conghua = { set_nationality = PREV }
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -4336,6 +4369,7 @@ focus_tree = {
 				SZC_kuang_jixun = { set_nationality = PREV }
 			}
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -4361,6 +4395,7 @@ focus_tree = {
 				custom_effect_tooltip = SZC_The_Lord_Of_Sichuan_tooltip
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4405,6 +4440,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -4432,6 +4468,7 @@ focus_tree = {
 			SZC_reduce_famine_medium = yes
 			SZC_political_recovery = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = SZC_new_sichuans_14_points
@@ -4457,6 +4494,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			SZC_political_recovery = yes
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -4488,6 +4526,7 @@ focus_tree = {
 				uses = 1
 			}
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -4516,6 +4555,7 @@ focus_tree = {
 			add_one_random_military_factory = yes
 			add_one_random_military_factory = yes
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -4635,6 +4675,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -4672,6 +4713,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4715,6 +4757,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -4741,6 +4784,7 @@ focus_tree = {
 			}
 			china_add_research_slots = yes
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
 		id = SZC_solving_the_trade_issue
@@ -4773,6 +4817,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -7137,6 +7182,7 @@ focus_tree = {
 			add_stability = SZC_STA_opposition_influence_var
 			army_experience = 100
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 	#GRA tree
 	focus = {
@@ -7184,6 +7230,7 @@ focus_tree = {
 			army_experience = 50
 			add_political_power = 50
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -7213,6 +7260,7 @@ focus_tree = {
 			UPC_YCP_small_effect = yes
 			UPC_GRA_small_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -7249,6 +7297,7 @@ focus_tree = {
 				UPC_DCP_joins_governing_coalition_effect = yes
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -7277,6 +7326,7 @@ focus_tree = {
 			UPC_REG_medium_effect = yes
 			UPC_STA_small_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -7329,6 +7379,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -7374,6 +7425,7 @@ focus_tree = {
 				SZC_dan_maoxin = { add_trait_to_all_country_leader_roles = yes }
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -7409,6 +7461,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			UPC_democratic_backsliding_blocked_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -7443,6 +7496,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -7486,6 +7540,7 @@ focus_tree = {
 				QIE = { QIE_yu_xuezhong = { CHN_recruit_character_effect = yes } }
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -7528,6 +7583,7 @@ focus_tree = {
 				days = 300
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -7557,6 +7613,7 @@ focus_tree = {
 				country_event = { id = sichuan_events.631 days = 3 } #Democracy Eternally Remembered
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	#CDL tree
@@ -7604,6 +7661,7 @@ focus_tree = {
 			add_stability = SZC_CDL_opposition_influence_var
 			add_political_power = 50
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -7631,6 +7689,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			SZC_the_wisdom_of_west_and_east_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -7651,6 +7710,7 @@ focus_tree = {
 			add_political_power = 100
 			china_generic_land_reform_setup = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -7699,6 +7759,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -7734,6 +7795,7 @@ focus_tree = {
 				SZC_zhang_lan = { add_trait_to_all_country_leader_roles = yes }
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -7763,6 +7825,7 @@ focus_tree = {
 				add_idea = SZC_crafting_talent_of_the_new_generation_2
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -7802,6 +7865,7 @@ focus_tree = {
 				days = 300
 			}
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -7841,6 +7905,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			UPC_election_ban_REG_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -7894,6 +7959,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -7923,6 +7989,7 @@ focus_tree = {
 				country_event = { id = sichuan_events.632 days = 3 } #Benevolence and Righteousness
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	### Liu Wenhui Authdem
@@ -8037,6 +8104,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -8082,6 +8150,7 @@ focus_tree = {
 				SZC_wang_mingzhang = { CHN_recruit_character_effect = yes }
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -8113,6 +8182,7 @@ focus_tree = {
 				SZC_dong_songheng = { CHN_recruit_character_effect = yes }
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -8156,6 +8226,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -8186,6 +8257,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			SZC_the_push_for_efficiency_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -8238,6 +8310,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -8281,6 +8354,7 @@ focus_tree = {
 				target_province = 9843
 			}
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -8322,6 +8396,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -8359,6 +8434,7 @@ focus_tree = {
 			add_stability = 0.10
 			add_war_support = 0.10
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -8388,6 +8464,7 @@ focus_tree = {
 				country_event = { id = sichuan_events.630 days = 3 } #The Old Dispensation
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	### GRA - STA shared focuses
@@ -8454,6 +8531,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			SZC_to_seek_prosperity_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -8485,6 +8563,7 @@ focus_tree = {
 			custom_effect_tooltip = GXC_democratic_literati_effect_tt
 			SZC_new_style_education_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -8573,6 +8652,7 @@ focus_tree = {
 				NUMBER = 25%
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -8609,6 +8689,7 @@ focus_tree = {
 				add_war_support = 0.06
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	### CDL - STA shared focuses
@@ -8656,6 +8737,7 @@ focus_tree = {
 				category = naval_doctrine
 			}
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
 		id = SZC_specialised_practical_schools
@@ -8686,6 +8768,7 @@ focus_tree = {
 			custom_effect_tooltip = SZC_specialised_practical_schools_effect_tt
 			SZC_specialised_practical_schools_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
 		id = SZC_appeal_to_the_disenfranchised
@@ -8709,6 +8792,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			SZC_improve_federalist_goverment_legitimacy = yes
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 	focus = {
 		id = SZC_develop_the_industrial_stepstones
@@ -8754,6 +8838,7 @@ focus_tree = {
 				UPC_RAD_small_effect = yes
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 ### Zhili Remnant Tree ###
@@ -8779,6 +8864,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_The_Zhilis_Last_Stand"
 			custom_effect_tooltip = SZC_the_zhilis_last_stand_tooltip
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -8864,6 +8950,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = SZC_friends_of_many_enemy_of_one_tooltip
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -8924,6 +9011,7 @@ focus_tree = {
 				category = support_tech
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -9273,6 +9361,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -9355,6 +9444,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -9421,6 +9511,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -9650,6 +9741,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -10287,6 +10379,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			china_enable_non_main_government_demand_submission_decisions = yes
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -10471,6 +10564,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -10560,6 +10654,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -10758,6 +10853,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -10854,6 +10950,7 @@ focus_tree = {
 			add_war_support = 0.05
 			china_enable_concession_decisions = yes
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -10923,6 +11020,7 @@ focus_tree = {
 				add_state_claim = 1042
 			}
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -11000,6 +11098,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_immediate_effect_upon_focus_start
 			effect_tooltip = { country_event = { id = sichuan_events.279 days = 2 } }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {

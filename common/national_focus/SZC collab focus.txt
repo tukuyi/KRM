@@ -34,6 +34,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_start_the_negotiation"
 			custom_effect_tooltip = SZC_YCP_collab_start_the_negotiation_tooltip
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -52,6 +53,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_start_peace_propaganda"
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -70,6 +72,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_collab_stablize_the_hardliner"
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -93,6 +96,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed SZC_YCP_constitutional_democracy_under_sun"
 			custom_effect_tooltip = constitutional_democracy_under_sun_tt
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 }

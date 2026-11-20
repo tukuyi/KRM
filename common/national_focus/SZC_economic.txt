@@ -118,6 +118,7 @@ shared_focus = {
 		custom_effect_tooltip = tooltip_white_line
 		add_one_random_civilian_factory = yes
 	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
 
 shared_focus = {
@@ -595,6 +596,7 @@ shared_focus = {
 		custom_effect_tooltip = available_industrial_concern
 		show_ideas_tooltip = tianfu_mines
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 }
 
 shared_focus = {
@@ -712,6 +714,7 @@ shared_focus = {
 		}
 		add_one_random_infrastructure = yes
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -734,6 +737,7 @@ shared_focus = {
 		log = "[GetLogRoot]: Focus Completed SZC_Western_China_Academy_Of_Sciences"
 		china_add_research_slots = yes
 	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 }
 
 shared_focus = {

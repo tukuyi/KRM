@@ -30,6 +30,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_free_at_long_last"
 			add_political_power = 100
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 ## Democracy/China Tree
@@ -68,6 +69,7 @@ focus_tree = {
 			KOR_improve_legitimacy_effect = yes
 			add_popularity = { ideology = social_conservative popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -90,6 +92,7 @@ focus_tree = {
 			add_war_support = 0.05
 			add_popularity = { ideology = social_conservative popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -107,6 +110,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_education_for_the_masses"
 			add_research_slot_until_five = yes
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -127,6 +131,7 @@ focus_tree = {
 			add_popularity = { ideology = market_liberal popularity = 0.05 }
 			add_popularity = { ideology = social_conservative popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -146,6 +151,7 @@ focus_tree = {
 			add_popularity = { ideology = paternal_autocrat popularity = -0.05 }
 			add_popularity = { ideology = national_populist popularity = -0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -170,6 +176,7 @@ focus_tree = {
 			add_to_coalition = yes
 			add_stability = 0.1
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -195,6 +202,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			KOR_improve_legitimacy_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -213,6 +221,7 @@ focus_tree = {
 			add_stability = -0.05
 			add_war_support = 0.05
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -230,6 +239,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_fulfilling_the_promises_of_shanghai"
 			add_stability = 0.05
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -261,6 +271,7 @@ focus_tree = {
 			country_event = korea_events.2
 			add_popularity = { ideology = social_conservative popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -283,6 +294,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_promoting_an_apolitical_military_force"
 			add_ideas = KOR_civilian_rule
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -346,6 +358,7 @@ focus_tree = {
 				add_popularity = { ideology = social_conservative popularity = 0.05 }
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -368,6 +381,7 @@ focus_tree = {
 			set_temp_variable = { coalition_partner_var = token:social_liberal }
 			add_to_coalition = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -412,6 +426,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -447,6 +462,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = social_liberal popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -467,6 +483,7 @@ focus_tree = {
 			set_temp_variable = { coalition_partner_var = token:social_conservative }
 			add_to_coalition = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -488,6 +505,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = social_liberal popularity = 0.1 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -508,6 +526,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_foundations_for_the_welfare_state"
 			add_ideas = KOR_welfare_state
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -543,6 +562,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = market_liberal popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -560,6 +580,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_emulating_western_democracy"
 			add_ideas = KOR_westernising_state
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -581,6 +602,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = market_liberal popularity = 0.1 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -616,6 +638,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = social_democrat popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -633,6 +656,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_aiding_koreas_impoverished"
 			add_ideas = KOR_working_class
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -654,6 +678,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = social_democrat popularity = 0.1 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 ## Authoritarian Korea
@@ -694,6 +719,7 @@ focus_tree = {
 			set_temp_variable = { ideology_change_var = 0.05 }
 			change_ruling_party_popularity = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -727,6 +753,7 @@ focus_tree = {
 			KOR_lee_eung_jun = { set_nationality = KOR }
 			KOR_hong_sa_ik = { set_nationality = KOR }
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -746,6 +773,7 @@ focus_tree = {
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 			add_popularity = { ideology = national_populist popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -767,6 +795,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_hanguk_free_from_socialist_anarchy"
 			add_ideas = KOR_antisocialist
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -788,6 +817,7 @@ focus_tree = {
 			add_popularity = { ideology = social_conservative popularity = -0.05 }
 			add_political_power = 100
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -808,6 +838,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -829,6 +860,7 @@ focus_tree = {
 			add_war_support = 0.1
 			add_popularity = { ideology = social_conservative popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -850,6 +882,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			KOR_improve_legitimacy_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -883,6 +916,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -941,6 +975,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -972,6 +1007,7 @@ focus_tree = {
 			set_temp_variable = { ideology_change_var = 0.05 }
 			change_ruling_party_popularity = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -992,6 +1028,7 @@ focus_tree = {
 			add_popularity = { ideology = market_liberal popularity = -0.05 }
 			add_popularity = { ideology = social_conservative popularity = -0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1017,6 +1054,7 @@ focus_tree = {
 			}
 			activate_advisor = KOR_lee_gap_seong_sic
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1037,6 +1075,7 @@ focus_tree = {
 			set_temp_variable = { coalition_partner_var = token:social_liberal }
 			add_to_coalition = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1058,6 +1097,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1082,6 +1122,7 @@ focus_tree = {
 			add_to_coalition = yes
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1099,6 +1140,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_the_autarkic_state"
 			add_ideas = KOR_autarkic_state
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1122,6 +1164,7 @@ focus_tree = {
 				add_opinion_modifier = { target = ROOT modifier = KR_outraged }
 			}
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -1143,6 +1186,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1166,6 +1210,7 @@ focus_tree = {
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 			add_popularity = { ideology = national_populist popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1199,6 +1244,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1217,6 +1263,7 @@ focus_tree = {
 			add_popularity = { ideology = authoritarian_democrat popularity = -0.1 }
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1240,6 +1287,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -1259,6 +1307,7 @@ focus_tree = {
 			add_ideas = KOR_third_way
 			add_popularity = { ideology = paternal_autocrat popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1295,6 +1344,7 @@ focus_tree = {
 			set_temp_variable = { coalition_partner_var = token:national_populist }
 			add_to_coalition = yes
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -1312,6 +1362,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_freedom_from_patriarchy_and_nobility"
 			add_ideas = KOR_universal_suffrage
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1333,6 +1384,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1354,6 +1406,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_korean_stratocracy"
 			add_ideas = KOR_stratocracy
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1387,6 +1440,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1408,6 +1462,7 @@ focus_tree = {
 			add_popularity = { ideology = radical_socialist popularity = -0.05 }
 			add_popularity = { ideology = social_democrat popularity = -0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1426,6 +1481,7 @@ focus_tree = {
 			add_stability = 0.1
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -1450,6 +1506,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1470,6 +1527,7 @@ focus_tree = {
 			add_popularity = { ideology = social_liberal popularity = 0.05 }
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1491,6 +1549,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 ## Revolutionary Korea
@@ -1533,6 +1592,7 @@ focus_tree = {
 			set_temp_variable = { ideology_change_var = 0.05 }
 			change_ruling_party_popularity = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1559,6 +1619,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -1577,6 +1638,7 @@ focus_tree = {
 			add_war_support = 0.15
 			add_stability = -0.05
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -1595,6 +1657,7 @@ focus_tree = {
 			add_ideas = KOR_universal_suffrage
 			add_war_support = 0.15
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -1614,6 +1677,7 @@ focus_tree = {
 			set_temp_variable = { ideology_change_var = 0.05 }
 			change_ruling_party_popularity = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1636,6 +1700,7 @@ focus_tree = {
 			add_popularity = { ideology = market_liberal popularity = -0.05 }
 			add_popularity = { ideology = social_conservative popularity = -0.05 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1655,6 +1720,7 @@ focus_tree = {
 			increase_economic_mobilisation = yes
 			increase_economic_mobilisation = yes
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -1676,6 +1742,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			KOR_improve_legitimacy_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1709,6 +1776,7 @@ focus_tree = {
 				add_idea = KOR_legitimacy_revolutionary
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1737,6 +1805,7 @@ focus_tree = {
 				popularity = 0.1
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1754,6 +1823,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_koreas_unique_path_to_socialism"
 			add_ideas = KOR_unique_socialism
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1775,6 +1845,7 @@ focus_tree = {
 				popularity = -0.1
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -1799,6 +1870,7 @@ focus_tree = {
 				popularity = 0.1
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1836,6 +1908,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1853,6 +1926,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_lessons_from_longyan"
 			add_ideas = KOR_longyan
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1879,6 +1953,7 @@ focus_tree = {
 			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
 			add_to_coalition = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1928,6 +2003,7 @@ focus_tree = {
 				reverse_add_opinion_modifier = { target = SRI modifier = KR_close_allies }
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -1952,6 +2028,7 @@ focus_tree = {
 				popularity = 0.1
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1990,6 +2067,7 @@ focus_tree = {
 			set_temp_variable = { ideology_change_var = 0.05 }
 			change_ruling_party_popularity = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2028,6 +2106,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2052,6 +2131,7 @@ focus_tree = {
 				popularity = -0.15
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2076,6 +2156,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2114,6 +2195,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2145,6 +2227,7 @@ focus_tree = {
 			set_temp_variable = { coalition_partner_var = token:social_liberal }
 			add_to_coalition = yes
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -2169,6 +2252,7 @@ focus_tree = {
 				popularity = 0.1
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2190,6 +2274,7 @@ focus_tree = {
 			add_ideas = KOR_tutelage
 			add_stability = 0.05
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -2209,6 +2294,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_establishing_korean_national_capitalism"
 			KOR_establishing_korean_national_capitalism_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2284,6 +2370,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2321,6 +2408,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2366,6 +2454,7 @@ focus_tree = {
 			add_to_coalition = yes
 			add_stability = -0.15
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -2386,6 +2475,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_the_vanguard_of_pan_asianism"
 			add_ideas = KOR_revolutionary_vanguard
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2403,6 +2493,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_all_for_germanys_destruction"
 			add_ideas = KOR_germany
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2420,6 +2511,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_bringing_the_working_class_to_heel"
 			add_ideas = KOR_corporatism
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2446,6 +2538,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			add_stability = -0.15
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -2470,6 +2563,7 @@ focus_tree = {
 				popularity = 0.1
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 ## Military Tree
@@ -2525,6 +2619,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -2572,6 +2667,7 @@ focus_tree = {
 				category = armor
 			}
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -2597,6 +2693,7 @@ focus_tree = {
 			add_one_random_dockyard = yes
 			add_one_random_dockyard = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2639,6 +2736,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -2669,6 +2767,7 @@ focus_tree = {
 				add_ideas = KOR_kaic_no_lar
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2686,6 +2785,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_inoculation_from_the_sun"
 			KOR_improve_military_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2709,6 +2809,7 @@ focus_tree = {
 				category = land_doctrine
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2726,6 +2827,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_developing_the_general_plan_office"
 			add_ideas = KOR_office
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2757,6 +2859,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -2774,6 +2877,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_might_of_koreas_new_marines_corps"
 			KOR_improve_military_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2791,6 +2895,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_theory_of_the_lightning_war"
 			add_ideas = KOR_lightning_war
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2808,6 +2913,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_scars_of_the_exile"
 			KOR_improve_military_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2825,6 +2931,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_korean_eliteheer"
 			add_ideas = KOR_eliteheer
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2848,6 +2955,7 @@ focus_tree = {
 				category = infantry_weapons
 			}
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -2865,6 +2973,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_in_the_footsteps_of_whampoa"
 			add_dynamic_modifier = { modifier = KOR_whampoa_dynamic_modifier }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2882,6 +2991,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_loyalty_solely_to_the_state"
 			add_ideas = KOR_loyalty
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2900,6 +3010,7 @@ focus_tree = {
 			KOR_forts_effect = yes
 			KOR_coastal_forts_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2943,6 +3054,7 @@ focus_tree = {
 				add_dynamic_modifier = { modifier = KOR_final_army_modifier }
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 ## Econ Tree
@@ -2964,6 +3076,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			KOR_improve_economy_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2997,6 +3110,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3041,6 +3155,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3075,6 +3190,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3105,6 +3221,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3130,6 +3247,7 @@ focus_tree = {
 				increase_state_category_by_one_level = yes
 			}
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -3174,6 +3292,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3219,6 +3338,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3249,6 +3369,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3274,6 +3395,7 @@ focus_tree = {
 				increase_state_category_by_one_level = yes
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3324,6 +3446,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -3352,6 +3475,7 @@ focus_tree = {
 			add_war_support = -0.05
 			add_stability = 0.1
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3381,6 +3505,7 @@ focus_tree = {
 			add_stability = -0.05
 			add_war_support = 0.05
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3414,6 +3539,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3468,6 +3594,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3503,6 +3630,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3560,6 +3688,7 @@ focus_tree = {
 				custom_effect_tooltip = KOR_railways_tt
 			}
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -3595,6 +3724,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	
@@ -3635,6 +3765,7 @@ focus_tree = {
 			set_temp_variable = { ideology_change_var = 0.05 }
 			change_ruling_party_popularity = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3654,6 +3785,7 @@ focus_tree = {
 			add_stability = -0.15
 			add_war_support = 0.3
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3675,6 +3807,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3692,6 +3825,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_justice_and_righteousness"
 			add_research_slot_until_five = yes
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -3721,6 +3855,7 @@ focus_tree = {
 			}
 			add_stability = 0.15
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3740,6 +3875,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_our_realm_the_korea"
 			KOR_improve_legitimacy_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3773,6 +3909,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = paternal_autocrat popularity = 0.1 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3791,6 +3928,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_unhyeongung_legacy"
 			add_stability = 0.15
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3818,6 +3956,7 @@ focus_tree = {
 			add_to_coalition = yes
 			add_stability = 0.1
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3844,6 +3983,7 @@ focus_tree = {
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3877,6 +4017,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.1 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3897,6 +4038,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_destroy_old_chains"
 			add_stability = 0.15
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3920,6 +4062,7 @@ focus_tree = {
 				popularity = 0.15
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3948,6 +4091,7 @@ focus_tree = {
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3989,6 +4133,7 @@ focus_tree = {
 				popularity = 0.8
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4018,6 +4163,7 @@ focus_tree = {
 				add_idea = KOR_legitimacy_LCX
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4051,6 +4197,7 @@ focus_tree = {
 				country_event = { id = NKRsichuanpuppet.74 }
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -4079,6 +4226,7 @@ focus_tree = {
 			add_research_slot_until_five = yes
 			add_political_power = 200
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -4103,6 +4251,7 @@ focus_tree = {
 			add_stability = 0.2
 			add_ideas = { KOR_korean_corporatism_idea }
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -4130,6 +4279,7 @@ focus_tree = {
 				add_idea = KOR_legitimacy_JSP
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4164,6 +4314,7 @@ focus_tree = {
 			}
 			add_popularity = { ideology = national_populist popularity = 0.1 }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4184,6 +4335,7 @@ focus_tree = {
 				popularity = 0.1
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4202,6 +4354,7 @@ focus_tree = {
 			add_stability = 0.2
 			add_war_support = 0.2
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -4224,6 +4377,7 @@ focus_tree = {
 				popularity = 1
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -4243,6 +4397,7 @@ focus_tree = {
 			add_manpower = -1000
 			add_war_support = 1
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -4262,6 +4417,7 @@ focus_tree = {
 			add_manpower = -1000
 			add_political_power = 10000
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4281,6 +4437,7 @@ focus_tree = {
 			add_manpower = -1000
 			add_stability = 1
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -4301,6 +4458,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed KOR_sixty_squares_as_one"
 			add_ideas = { KOR_sixty_as_one_idea }
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4322,5 +4480,6 @@ focus_tree = {
 				add_idea = KOR_legitimacy_LCY
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 }

@@ -45,6 +45,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_risen_from_ruins"
 			add_political_power = 100
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -70,6 +71,7 @@ focus_tree = {
 			add_stability = 0.1
 			custom_effect_tooltip = GRU_begin_GCC_tt
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -96,6 +98,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_rehab_unions"
 			add_ideas = GRU_revolutionary_unions
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -129,6 +132,7 @@ focus_tree = {
 				popularity = -0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -167,6 +171,7 @@ focus_tree = {
 				popularity = 0.10
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -301,6 +306,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = GRU_KAPD_election_tt
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 ### Socialist Branch ###
@@ -331,6 +337,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -355,6 +362,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_implement_syndicalism"
 			add_ideas = GRU_local_syndicalism
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -382,6 +390,7 @@ focus_tree = {
 			set_temp_variable = { coalition_partner_var = token:syndicalist }
 			add_to_coalition = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -415,6 +424,7 @@ focus_tree = {
 				add_idea = GRU_socialist_government_1
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -440,6 +450,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_bodenreform"
 			add_ideas = GRU_socialist_land_reform
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 ### Councilist Branch ###
@@ -470,6 +481,7 @@ focus_tree = {
 				popularity = 0.10
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -495,6 +507,7 @@ focus_tree = {
 			}
 			add_stability = 0.10
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -522,6 +535,7 @@ focus_tree = {
 				add_idea = GRU_councilist_government_1
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -546,6 +560,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_destroy_landowners"
 			add_ideas = GRU_councilist_land_reform
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -574,6 +589,7 @@ focus_tree = {
 				add_idea = GRU_farming_cooperatives
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 ### Comunist Branch ###
@@ -604,6 +620,7 @@ focus_tree = {
 				popularity = 0.20
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -658,6 +675,7 @@ focus_tree = {
 			}
 			## add one for English Sorelians as well
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -693,6 +711,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -718,6 +737,7 @@ focus_tree = {
 			add_ideas = GRU_german_national_energy
 			add_war_support = 0.10
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -756,6 +776,7 @@ focus_tree = {
 				add_idea = GRU_nationalist_government_1
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -781,6 +802,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_land_redistribution"
 			add_ideas = GRU_communist_land_reform
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -808,6 +830,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_councilism_supreme"
 			add_ideas = GRU_councilist_orthodoxy
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -846,6 +869,7 @@ focus_tree = {
 				add_ideas = GRU_land_socialization
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 ######################
@@ -889,6 +913,7 @@ focus_tree = {
 				add_idea = GRU_volkswehrmacht_1
 			}
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -910,6 +935,7 @@ focus_tree = {
 			add_one_random_military_factory = yes
 			add_one_random_military_factory = yes
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -941,6 +967,7 @@ focus_tree = {
 				add_ideas = GRU_abwehr_1_no_lar
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -969,6 +996,7 @@ focus_tree = {
 				add_idea = GRU_volkswehrmacht_2
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -994,6 +1022,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_red_mitte"
 			add_ideas = GRU_industrial_heart
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1039,6 +1068,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1066,6 +1096,7 @@ focus_tree = {
 				add_idea = GRU_volkswehrmacht_3
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1123,6 +1154,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -1228,6 +1260,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -1254,6 +1287,7 @@ focus_tree = {
 			}
 			remove_ideas = GRU_lingering_reactionary_influence_2
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1284,6 +1318,7 @@ focus_tree = {
 				days = 500
 			}
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -1341,6 +1376,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -1381,6 +1417,7 @@ focus_tree = {
 				add_idea = GRU_reunification_conplete
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1421,6 +1458,7 @@ focus_tree = {
 				add_idea = GRU_volkswehrmacht_4
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1451,6 +1489,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_request_independence"
 			overlord = { country_event = germany_puppet_events.3 }
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -1502,6 +1541,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -1553,6 +1593,7 @@ focus_tree = {
 				add_stability = 0.25
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 ####################
@@ -1581,6 +1622,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_facing_the_future"
 			add_political_power = 100
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1618,6 +1660,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1654,6 +1697,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1688,6 +1732,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -1720,6 +1765,7 @@ focus_tree = {
 				add_idea = GRU_democratic_government
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1790,6 +1836,7 @@ focus_tree = {
 				name = GRU_national_populist_democratic_party
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1871,6 +1918,7 @@ focus_tree = {
 				name = GRU_national_populist_democratic_party
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1959,6 +2007,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1998,6 +2047,7 @@ focus_tree = {
 				add_idea = GRU_leftist_government_1
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -2027,6 +2077,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_combat_homlessness"
 			add_ideas = GRU_spd_employment
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2060,6 +2111,7 @@ focus_tree = {
 				add_idea = GRU_leftist_government_2
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2107,6 +2159,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2141,6 +2194,7 @@ focus_tree = {
 				add_idea = GRU_spd_welfare_2
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2176,6 +2230,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2215,6 +2270,7 @@ focus_tree = {
 				add_idea = GRU_liberal_government_1
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -2244,6 +2300,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_liberal_welfare"
 			add_ideas = GRU_liberal_welfare_1
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2268,6 +2325,7 @@ focus_tree = {
 			add_one_random_military_factory = yes
 			add_one_random_military_factory = yes
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -2299,6 +2357,7 @@ focus_tree = {
 				add_idea = GRU_liberal_government_2
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2349,6 +2408,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2388,6 +2448,7 @@ focus_tree = {
 				add_idea = GRU_centrist_government_1
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -2420,6 +2481,7 @@ focus_tree = {
 			}
 			add_political_power = 50
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2449,6 +2511,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_christian_unionism"
 			add_ideas = GRU_christian_unions
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2482,6 +2545,7 @@ focus_tree = {
 				add_idea = GRU_centrist_government_2
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2526,6 +2590,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2571,6 +2636,7 @@ focus_tree = {
 				promote_character = paternal_autocrat_subtype
 			}
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -2597,6 +2663,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_living_in_faith"
 			add_ideas = GRU_pietism
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2641,6 +2708,7 @@ focus_tree = {
 			set_cosmetic_tag = GRU_empire
 			GER_create_wilhelm_iv = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2719,6 +2787,7 @@ focus_tree = {
 				add_political_power = 50
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2758,6 +2827,7 @@ focus_tree = {
 			}
 			add_ideas = GRU_nationalist_landreform_idea
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2833,6 +2903,7 @@ focus_tree = {
 				add_political_power = 50
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2872,6 +2943,7 @@ focus_tree = {
 				add_idea = GRU_conservative_government_1
 			}
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -2929,6 +3001,7 @@ focus_tree = {
 				add_to_coalition = yes
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2958,6 +3031,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_end_monopolies"
 			add_ideas = GRU_anti_trust_laws
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2994,6 +3068,7 @@ focus_tree = {
 			}
 			add_war_support = 0.10
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -3028,6 +3103,7 @@ focus_tree = {
 			add_stability = 0.10
 			add_ideas = GRU_radical_democracy
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3062,6 +3138,7 @@ focus_tree = {
 			add_stability = 0.10
 			add_ideas = GRU_national_party
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3096,6 +3173,7 @@ focus_tree = {
 			add_stability = 0.10
 			add_ideas = GRU_national_union
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3122,6 +3200,7 @@ focus_tree = {
 			add_popularity = { ideology = social_liberal popularity = 0.05 }
 			add_ideas = GRU_freedom_for_all		
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3149,6 +3228,7 @@ focus_tree = {
 			set_temp_variable = { coalition_partner_var = token:social_democrat }
 			add_to_coalition = yes	
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3177,6 +3257,7 @@ focus_tree = {
 			add_war_support = 0.10
 			add_popularity = { ideology = radical_socialist popularity = 0.03 }
 			add_ideas = GRU_radicalism_spirit_idea		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -3199,6 +3280,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed GRU_economy_democracy"
 			add_ideas = GRU_economy_democracy_idea		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3234,6 +3316,7 @@ focus_tree = {
 				add_ideas = GRU_european_radicalism	
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -3261,6 +3344,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_a_liberal_volkspartei"
 			add_popularity = { ideology = market_liberal popularity = 0.05 }
 			add_ideas = GRU_liberal_volkspartei_idea		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3284,6 +3368,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_cooperation_between_nation_and_economy"
 			add_ideas = GRU_nation_economy_cooperation		
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3318,6 +3403,7 @@ focus_tree = {
 			add_political_power = 200
 			add_ideas = GRU_legacy_1848_idea		
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3342,6 +3428,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_unite_of_SRG_and_SWR"
 			add_popularity = { ideology = market_liberal popularity = 0.05 }
 			add_ideas = GRU_srg_swr_united		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3365,6 +3452,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_fight_against_party_system"
 			add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 			add_ideas = GRU_anti_party_system		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3389,6 +3477,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_nachbarschaft"
 			add_stability = 0.05
 			add_ideas = GRU_good_neighbourhood		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3416,6 +3505,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_voluntary_service"
 			add_ideas = GRU_voluntary_service_idea
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3449,6 +3539,7 @@ focus_tree = {
 			add_stability = 0.10
 			add_war_support = 0.05
 			add_ideas = GRU_volksstaat_idea		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -3491,6 +3582,7 @@ focus_tree = {
 				add_ideas = GRU_frankreich_overture
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 ### Autocratic ###
@@ -3535,6 +3627,7 @@ focus_tree = {
 				add_idea = GRU_burgeoning_government
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3563,6 +3656,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_pacification_campaign"
 			add_ideas = GRU_pacification_campaign_ongoing
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -3587,6 +3681,7 @@ focus_tree = {
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3622,6 +3717,7 @@ focus_tree = {
 				add_ideas = GRU_abwehr_1_no_lar
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -3653,6 +3749,7 @@ focus_tree = {
 				add_idea = GRU_authoritarian_governemnt
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -3684,6 +3781,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3723,6 +3821,7 @@ focus_tree = {
 				popularity = 0.10
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3756,6 +3855,7 @@ focus_tree = {
 				popularity = -0.10
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3790,6 +3890,7 @@ focus_tree = {
 				add_idea = GRU_loyal_officers
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -3826,6 +3927,7 @@ focus_tree = {
 				add_idea = GRU_corpratist_governemnt
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -3861,6 +3963,7 @@ focus_tree = {
 				add_idea = GRU_government_military
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3903,6 +4006,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -3938,6 +4042,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 ##########################
@@ -3993,6 +4098,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = GRU_look_to_reformists
@@ -4027,6 +4133,7 @@ focus_tree = {
 				add_idea = GRU_reformist_army
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = GRU_rehab_die_fronde
@@ -4064,6 +4171,7 @@ focus_tree = {
 				add_idea = GRU_fronde_army
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = GRU_new_german_spirit
@@ -4089,6 +4197,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_new_german_spirit"
 			add_ideas = GRU_nationalist_fervour
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = GRU_rebuild_panzer_corps
@@ -4118,6 +4227,7 @@ focus_tree = {
 				category = armor
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 	focus = {
 		id = GRU_anti_socialism
@@ -4146,6 +4256,7 @@ focus_tree = {
 				add_idea = GRU_anti_socialist_fervor
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = GRU_anti_nationalism
@@ -4177,6 +4288,7 @@ focus_tree = {
 				add_idea = GRU_anti_nationalist_fervor
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = GRU_peoples_war
@@ -4205,6 +4317,7 @@ focus_tree = {
 				add_idea = GRU_volkswehr
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = GRU_prepare_industry
@@ -4227,6 +4340,7 @@ focus_tree = {
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {
 		id = GRU_import_modern_arms
@@ -4258,6 +4372,7 @@ focus_tree = {
 				category = land_doctrine
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = GRU_request_for_independence
@@ -4284,6 +4399,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GRU_request_for_independence"
 			overlord = { country_event = germany_puppet_events.3 }
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	focus = {
 		id = GRU_pursue_unification
@@ -4331,5 +4447,6 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 }

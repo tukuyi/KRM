@@ -1047,6 +1047,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed JAP_form_transitional_government"
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1099,6 +1100,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1117,6 +1119,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed JAP_price_and_inflation_controls"
 			JAP_shattered_people_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1139,6 +1142,7 @@ focus_tree = {
 				days = 100
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -1188,6 +1192,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -1259,6 +1264,7 @@ focus_tree = {
 				add_stability = 0.1
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1285,6 +1291,7 @@ focus_tree = {
 			JAP_puppet_economy_reconstruction_effect = yes
 			activate_advisor = JAP_ikeda_shigeaki_advisor
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -1305,6 +1312,7 @@ focus_tree = {
 			change_ruling_party_popularity = yes
 			add_ideas = JAP_dem_puppet_anti_zaibatsu_idea1
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -1346,6 +1354,7 @@ focus_tree = {
 				add_one_random_civilian_factory = yes
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -1382,6 +1391,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -1419,6 +1429,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -1437,6 +1448,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed JAP_ramp_up_relief_efforts_for_peasants"
 			JAP_puppet_economy_reconstruction_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -1471,6 +1483,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1498,6 +1511,7 @@ focus_tree = {
 			## zaibatsu big time
 			add_ideas = JAP_dem_puppet_pro_zaibatsu_idea1
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -1535,6 +1549,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -1585,6 +1600,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -1603,6 +1619,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed JAP_adapt_the_new_labor_standards_act_to_the_zaibatsu"
 			JAP_shattered_people_effect = yes
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1639,6 +1656,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -1666,6 +1684,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1691,6 +1710,7 @@ focus_tree = {
 				add_idea = JAP_traditionalist_state_idea
 			}
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1740,6 +1760,7 @@ focus_tree = {
 				}
 			}
 		}
+		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -1777,6 +1798,7 @@ focus_tree = {
 				add_ideas = JAP_railway_expansion_idea
 			}
 		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
 	focus = {
@@ -1796,6 +1818,7 @@ focus_tree = {
 			JAP_shattered_people_effect = yes
 			add_ideas = JAP_emancipation_of_women_idea
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1815,6 +1838,7 @@ focus_tree = {
 			add_research_slot_until_five = yes
 			add_ideas = JAP_independency_from_foreign_research_idea
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -1834,6 +1858,7 @@ focus_tree = {
 			add_war_support = -0.15
 			add_political_power = 150
 		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 #######################
